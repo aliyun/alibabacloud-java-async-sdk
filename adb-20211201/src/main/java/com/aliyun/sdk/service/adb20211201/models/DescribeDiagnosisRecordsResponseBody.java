@@ -106,7 +106,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -119,9 +119,12 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong> (default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +136,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried SQL statements.</p>
+         * <p>The list of SQL statement details.</p>
          */
         public Builder querys(java.util.List<Querys> querys) {
             this.querys = querys;
@@ -152,7 +155,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +224,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>max_select_items_count</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -229,7 +235,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -606,9 +615,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total execution duration. Unit: milliseconds.</p>
+             * <p>The total execution duration of the query. Unit: milliseconds.</p>
              * <blockquote>
-             * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+             * <p>This duration is the sum of <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -620,7 +629,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database on which the SQL statement is executed.</p>
+             * <p>The name of the database where the SQL statement is executed.</p>
              * 
              * <strong>example:</strong>
              * <p>adb_demo</p>
@@ -631,7 +640,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows written to the table by an extract-transform-load (ETL) job.</p>
+             * <p>The number of rows written to a table in an ETL task.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -642,7 +651,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration. Unit: milliseconds.</p>
+             * <p>The execution duration of the query. Unit: milliseconds (ms).</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -664,7 +673,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned.</p>
+             * <p>The number of returned rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -675,7 +684,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PatternId.
+             * <p>The ID of the SQL pattern.</p>
+             * <blockquote>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/612503.html">DescribePatternPerformance</a> operation to view the detailed execution metrics of the SQL pattern within a specified time range.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>-5575924945138******</p>
              */
             public Builder patternId(String patternId) {
                 this.patternId = patternId;
@@ -705,9 +720,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query properties.</p>
+             * <p>The list of properties that are in effect for the current query.</p>
              * <blockquote>
-             * <p> For information about common properties, see <a href="https://help.aliyun.com/document_detail/408955.html">Config and hint configuration parameters</a>.</p>
+             * <p>For a list of common properties, see <a href="https://help.aliyun.com/document_detail/408955.html">Config and Hint configuration parameters</a>.</p>
              * </blockquote>
              */
             public Builder queryProperties(java.util.List<QueryProperties> queryProperties) {
@@ -716,7 +731,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time that is consumed for queuing. Unit: milliseconds.</p>
+             * <p>The amount of time that the query waited in a queue before execution. Unit: milliseconds (ms).</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -727,7 +742,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+             * <p>The IP address and port number of the AnalyticDB for MySQL frontend node that is used to execute the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX:3004</p>
@@ -738,9 +753,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration rank of operators that are used in the SQL statement.</p>
+             * <p>The ranking of the execution duration of an operator in the SQL statement.</p>
              * <blockquote>
-             * <p> This parameter is returned only for SQL statements whose <code>Status</code> parameter is <code>running</code>.</p>
+             * <p>This parameter is returned only for SQL statements that are in the <code>running</code> state.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -752,7 +767,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group to which the SQL statement belongs.</p>
+             * <p>The resource pool to which the SQL statement belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>user_default</p>
@@ -763,9 +778,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried SQL statement.</p>
+             * <p>The details of the SQL statement.</p>
              * <blockquote>
-             * <p> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+             * <p>For performance, an SQL statement can be up to 5,120 characters long. Longer statements are truncated. Call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the summary information of SQL statements that meet the specified conditions, including the complete SQL statements.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -777,10 +792,12 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+             * <p>Indicates whether the length of the query result exceeds the threshold. If the length exceeds the threshold, the query result is truncated. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: The length of the query result exceeds the threshold.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The length of the query result does not exceed the threshold.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -792,7 +809,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum length of the SQL statement. 5120 is returned. Unit: characters. SQL statements that exceed this limit are truncated.</p>
+             * <p>The truncation threshold for the SQL statement. The value is fixed at 5,120 characters. SQL statements that exceed this limit are truncated.</p>
              * 
              * <strong>example:</strong>
              * <p>5120</p>
@@ -803,7 +820,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows scanned.</p>
+             * <p>The number of scanned rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -825,7 +842,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time of the SQL execution. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1632933704000</p>
@@ -838,9 +855,12 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             /**
              * <p>The state of the SQL statement. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong></li>
-             * <li><strong>finished</strong></li>
-             * <li><strong>failed</strong></li>
+             * <li><p><strong>running</strong>: The statement is running.</p>
+             * </li>
+             * <li><p><strong>finished</strong>: The statement is complete.</p>
+             * </li>
+             * <li><p><strong>failed</strong>: The statement failed to be executed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -852,7 +872,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time that is consumed to generate an execution plan. Unit: milliseconds.</p>
+             * <p>The amount of time that was required to generate the execution plan. Unit: milliseconds (ms).</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -863,7 +883,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of stages generated.</p>
+             * <p>The total number of stages generated for the query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -874,7 +894,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username that is used to execute the SQL statements.</p>
+             * <p>The username used to execute the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>test_user</p>

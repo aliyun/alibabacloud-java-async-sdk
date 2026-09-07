@@ -105,6 +105,10 @@ public class CheckFormationSchemaExistsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +121,11 @@ public class CheckFormationSchemaExistsRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable prefix mode. Valid values:</p>
+         * <ul>
+         * <li>true: Enable prefix mode.</li>
+         * <li>false: Disable prefix mode.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

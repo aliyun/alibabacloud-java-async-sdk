@@ -88,7 +88,8 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +102,12 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the cluster. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * <li><p><strong>AnalyticDB</strong> (Default): AnalyticDB for MySQL.</p>
+         * </li>
+         * <li><p><strong>ClickHouse</strong>: a wide table engine.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

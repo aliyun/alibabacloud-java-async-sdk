@@ -114,7 +114,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

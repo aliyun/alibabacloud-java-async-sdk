@@ -109,7 +109,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
          * <p>The available elastic AnalyticDB compute units (ACUs).</p>
          * 
          * <strong>example:</strong>
-         * <p>512ACU</p>
+         * <p>512 ACU</p>
          */
         public Builder elasticACU(String elasticACU) {
             this.elasticACU = elasticACU;
@@ -131,7 +131,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
          * <p>The available reserved computing resources.</p>
          * 
          * <strong>example:</strong>
-         * <p>48ACU</p>
+         * <p>48 ACU</p>
          */
         public Builder reserverdCompteACU(String reserverdCompteACU) {
             this.reserverdCompteACU = reserverdCompteACU;
@@ -142,7 +142,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
          * <p>The available reserved storage resources.</p>
          * 
          * <strong>example:</strong>
-         * <p>24ACU</p>
+         * <p>24 ACU</p>
          */
         public Builder reserverdStorageACU(String reserverdStorageACU) {
             this.reserverdStorageACU = reserverdStorageACU;

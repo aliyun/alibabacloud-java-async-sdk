@@ -267,7 +267,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
              * <p>The ID of the Spark application.</p>
              * 
              * <strong>example:</strong>
-             * <p>s202302051515shfa865f80003691</p>
+             * <p>s202302051515shfa865f8000****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -278,7 +278,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
              * <p>The attempt ID of the Spark application.</p>
              * 
              * <strong>example:</strong>
-             * <p>s202301061000hz57d797b0000201-0001</p>
+             * <p>s202301061000hz57d797b0000201-****</p>
              */
             public Builder attemptId(String attemptId) {
                 this.attemptId = attemptId;

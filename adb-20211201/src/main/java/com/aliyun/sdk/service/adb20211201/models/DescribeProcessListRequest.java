@@ -216,6 +216,10 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID of the AnalyticDB for MySQL Data Lakehouse Edition.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view details of all AnalyticDB for MySQL Data Lakehouse Edition clusters in the destination region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +232,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>Filter keyword. Currently, only <strong>SELECT</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -237,7 +244,16 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>Sort by the specified field in JSON format, <code>[{&quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },{ &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</code>. Values:</p>
+         * <ul>
+         * <li><p><strong>Field</strong>: The name of the field to sort by. Supports Time, User, Host, and DB fields.</p>
+         * </li>
+         * <li><p><strong>Type</strong>: Sort type. <strong>Desc</strong> for descending order, <strong>Asc</strong> for ascending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },  { &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -264,7 +280,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number. Must be a positive integer. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -273,7 +292,18 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page. Values:</p>
+         * <ul>
+         * <li><p><strong>30</strong> (Default value)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -300,7 +330,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * RunningTime.
+         * <p>Filter by running time. Displays queries that have run longer than the specified time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder runningTime(Integer runningTime) {
             this.putQueryParameter("RunningTime", runningTime);
@@ -309,7 +342,19 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * ShowFull.
+         * <p>Specifies whether to display the full SQL statement. Values:</p>
+         * <ul>
+         * <li><p><strong>True</strong>: Displays the full SQL statement.</p>
+         * </li>
+         * <li><p><strong>False</strong>: Displays only the first 100 characters of the SQL statement.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: False.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder showFull(Boolean showFull) {
             this.putQueryParameter("ShowFull", showFull);
@@ -318,7 +363,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * User.
+         * <p>The database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

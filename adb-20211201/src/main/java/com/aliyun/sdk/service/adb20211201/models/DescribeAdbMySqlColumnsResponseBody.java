@@ -143,7 +143,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the columns.</p>
+         * <p>The column information.</p>
          */
         public Builder columns(java.util.List<Columns> columns) {
             this.columns = columns;
@@ -151,10 +151,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the operation. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong> is returned if the operation is successful.</li>
-         * <li>An error message is returned if the operation fails.</li>
+         * <li>If the request was successful, <strong>Success</strong> is returned. </li>
+         * <li>If the request failed, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A9F013CD-0222-595E-8157-445969B97F03</p>
@@ -177,7 +177,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -188,10 +188,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><strong>true</strong>: The operation is successful.</li>
-         * <li><strong>false</strong>: The operation fails.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -285,7 +285,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comments of the column.</p>
+             * <p>The column comment.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -296,7 +296,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the column.</p>
+             * <p>The column name.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>

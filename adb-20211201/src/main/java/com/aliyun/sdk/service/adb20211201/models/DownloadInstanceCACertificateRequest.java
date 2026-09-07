@@ -115,10 +115,10 @@ public class DownloadInstanceCACertificateRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the cluster. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: wide table engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class DownloadInstanceCACertificateRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

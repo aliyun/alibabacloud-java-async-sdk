@@ -174,7 +174,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The name of the database account whose privileges you want to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The columns that you want to query. You can use this parameter to query the permissions of the database account on specific columns. This parameter is available only if the PrivilegeType parameter is set to Column.</p>
+         * <p>Filters the results by column name. This parameter is used only when <code>PrivilegeType</code> is set to <code>Column</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>col1</p>
@@ -199,7 +199,8 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +213,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The databases that you want to query. You can use this parameter to query the permissions of the database account on specific databases. This parameter is available only if the PrivilegeType parameter is set to Database, Table, or Column.</p>
+         * <p>Filters the results by database name. This parameter is used only when <code>PrivilegeType</code> is set to <code>Database</code>, <code>Table</code>, or <code>Column</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>db1</p>
@@ -224,7 +225,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start at 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -236,7 +237,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -248,7 +249,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The permission level that you want to query. You can call the <code>DescribeEnabledPrivileges</code> operation to query the permission level of the database account.</p>
+         * <p>The privilege level to query. To obtain the valid values for this parameter, call the <code>DescribeEnabledPrivileges</code> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Global</p>
@@ -260,7 +261,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +274,7 @@ public class DescribeAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The tables that you want to query. You can use this parameter to query the permissions of the database account on specific tables. This parameter can be used together with the DatabasePrivilegeObject parameter. This parameter is available only if the PrivilegeType parameter is set to Table or Column.</p>
+         * <p>Filters the results by table name. You can use this parameter with <code>DatabasePrivilegeObject</code> to refine the search. This parameter is used only when <code>PrivilegeType</code> is set to <code>Table</code> or <code>Column</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>

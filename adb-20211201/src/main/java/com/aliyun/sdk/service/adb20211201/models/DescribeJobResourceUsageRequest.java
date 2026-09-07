@@ -132,7 +132,8 @@ public class DescribeJobResourceUsageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,7 @@ public class DescribeJobResourceUsageRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,10 @@ public class DescribeJobResourceUsageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +171,16 @@ public class DescribeJobResourceUsageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +198,7 @@ public class DescribeJobResourceUsageRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

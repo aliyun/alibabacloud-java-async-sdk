@@ -131,7 +131,7 @@ public class ApplyAdviceByIdRequest extends Request {
         } 
 
         /**
-         * <p>The date on which you want to apply the suggestion. Format: yyyyMMdd.</p>
+         * <p>The date when the suggestion was generated. Format: yyyyMMdd.</p>
          * 
          * <strong>example:</strong>
          * <p>20221101</p>
@@ -155,7 +155,10 @@ public class ApplyAdviceByIdRequest extends Request {
         }
 
         /**
-         * ApplyType.
+         * <p>The adoption type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DROP_INDEX</p>
          */
         public Builder applyType(String applyType) {
             this.putQueryParameter("ApplyType", applyType);
@@ -164,7 +167,10 @@ public class ApplyAdviceByIdRequest extends Request {
         }
 
         /**
-         * BuildImmediately.
+         * <p>Specifies whether to immediately start the build task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder buildImmediately(Boolean buildImmediately) {
             this.putQueryParameter("BuildImmediately", buildImmediately);

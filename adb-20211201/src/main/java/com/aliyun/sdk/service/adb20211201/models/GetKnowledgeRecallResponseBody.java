@@ -67,7 +67,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,10 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +181,10 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The prompt message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>recall 5 files</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -186,7 +192,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The recall results.</p>
              */
             public Builder results(java.util.List<java.util.Map<String, ?>> results) {
                 this.results = results;
@@ -194,7 +200,10 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The Tracing Analysis ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qf_c41fc27697d3</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;

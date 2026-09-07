@@ -498,7 +498,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
              * <p>The progress.</p>
              * 
              * <strong>example:</strong>
-             * <p>30: The progress is 30%.</p>
+             * <p>30: progress 30%</p>
              */
             public Builder projress(String projress) {
                 this.projress = projress;

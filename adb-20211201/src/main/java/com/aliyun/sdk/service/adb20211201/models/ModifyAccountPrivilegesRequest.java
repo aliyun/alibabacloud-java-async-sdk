@@ -173,7 +173,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The permissions that you want to grant to the database account.</p>
+         * <p>The list of granted permissions.</p>
          */
         public Builder accountPrivileges(java.util.List<AccountPrivileges> accountPrivileges) {
             String accountPrivilegesShrink = shrink(accountPrivileges, "AccountPrivileges", "json");
@@ -183,7 +183,8 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +320,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             } 
 
             /**
-             * <p>The columns on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Column.</p>
+             * <p>The column to which permissions are granted. This parameter is required when the privilege level is column.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -330,7 +331,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The databases on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Database, Table, or Column.</p>
+             * <p>The database to which permissions are granted. This parameter is required when the privilege level is database, table, or column.</p>
              * 
              * <strong>example:</strong>
              * <p>tsdb1</p>
@@ -341,7 +342,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The tables on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Table or Column.</p>
+             * <p>The table to which permissions are granted. This parameter is required when the privilege level is table or column.</p>
              * 
              * <strong>example:</strong>
              * <p>table1</p>
@@ -424,7 +425,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             } 
 
             /**
-             * <p>The objects on which you want to grant permissions, including databases, tables, and columns.</p>
+             * <p>The privilege object, which is a tuple of database, table, and column.</p>
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -432,7 +433,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The permission level that you want to assign to the database account. You can call the <code>DescribeEnabledPrivileges</code> operation to query the permission level that can be assigned to the database account.</p>
+             * <p>The privilege level, obtained from the <code>DescribeEnabledPrivileges</code> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>Global</p>
@@ -443,7 +444,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * <p>The permissions that you want to grant to the database account.</p>
+             * <p>The list of granted permissions.</p>
              */
             public Builder privileges(java.util.List<String> privileges) {
                 this.privileges = privileges;

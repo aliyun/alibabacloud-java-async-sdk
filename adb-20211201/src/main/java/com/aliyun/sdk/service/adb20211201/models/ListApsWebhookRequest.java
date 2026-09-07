@@ -102,7 +102,7 @@ public class ListApsWebhookRequest extends Request {
         }
 
         /**
-         * <p><strong>JobType</strong><br>Job type. SLS or OSS Export Task: ResultExport.</p>
+         * <p><strong>JobType</strong><br>The task type. Set this parameter to ResultExport for SLS or OSS export tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>ResultExport</p>

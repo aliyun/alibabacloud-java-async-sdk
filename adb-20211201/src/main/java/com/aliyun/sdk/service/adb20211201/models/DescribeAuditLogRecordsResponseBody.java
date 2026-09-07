@@ -119,7 +119,8 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-t4nj8619bz2w3****</p>
@@ -130,7 +131,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried SQL audit logs.</p>
+         * <p>The list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -171,7 +172,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6974</p>
@@ -381,7 +382,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database on which the SQL statement was executed.</p>
+             * <p>The name of the database on which the SQL statement is executed.</p>
              * 
              * <strong>example:</strong>
              * <p>adb_demo</p>
@@ -392,7 +393,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+             * <p>The execution start time of the SQL statement in local time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-12 10:10:00</p>
@@ -403,7 +404,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTimestamp.
+             * <p>The execution start time of the SQL statement. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774600396584</p>
              */
             public Builder executeTimestamp(Long executeTimestamp) {
                 this.executeTimestamp = executeTimestamp;
@@ -411,7 +415,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HasDiagnosticInfo.
+             * <p>Indicates whether diagnostic information is included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasDiagnosticInfo(Boolean hasDiagnosticInfo) {
                 this.hasDiagnosticInfo = hasDiagnosticInfo;
@@ -419,7 +426,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+             * <p>The IP address and port number of the client that executes the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>100.104.XX.XX:43908</p>
@@ -441,7 +448,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement.</p>
+             * <p>The details of the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM adb_hdfs_import_source</p>
@@ -463,10 +470,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
+             * <p>Indicates whether the SQL statement is executed successfully. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Executed successfully.</li>
+             * <li><strong>false</strong>: Execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -478,7 +485,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+             * <p>The execution duration of the SQL statement. Unit: milliseconds (ms).</p>
              * 
              * <strong>example:</strong>
              * <p>216</p>
@@ -489,7 +496,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username that is used to execute the SQL statement.</p>
+             * <p>The username that executes the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

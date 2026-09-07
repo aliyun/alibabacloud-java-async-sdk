@@ -67,7 +67,7 @@ public class GetLogSyncToSLSResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetLogSyncToSLSResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,14 @@ public class GetLogSyncToSLSResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The log synchronization status. Valid values:</p>
+             * <ul>
+             * <li>on: Synchronization is enabled.</li>
+             * <li>off: Synchronization is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -162,7 +172,10 @@ public class GetLogSyncToSLSResponseBody extends TeaModel {
             }
 
             /**
-             * TargetLogStore.
+             * <p>The Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbmysql-audit-log</p>
              */
             public Builder targetLogStore(String targetLogStore) {
                 this.targetLogStore = targetLogStore;
@@ -170,7 +183,10 @@ public class GetLogSyncToSLSResponseBody extends TeaModel {
             }
 
             /**
-             * TargetProject.
+             * <p>The Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-service-****-cn-shenzhen</p>
              */
             public Builder targetProject(String targetProject) {
                 this.targetProject = targetProject;

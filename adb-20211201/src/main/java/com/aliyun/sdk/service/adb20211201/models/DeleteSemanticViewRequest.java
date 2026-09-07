@@ -90,6 +90,7 @@ public class DeleteSemanticViewRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ADB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

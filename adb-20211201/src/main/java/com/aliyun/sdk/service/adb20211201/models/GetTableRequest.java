@@ -103,7 +103,7 @@ public class GetTableRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dbName</p>
@@ -128,7 +128,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the cluster resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name to query.</p>
          * 
          * <strong>example:</strong>
          * <p>tableName</p>

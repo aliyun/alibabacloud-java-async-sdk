@@ -158,7 +158,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the Spark job that executes the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s20240122jsdx****</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -166,7 +169,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The text of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT 100</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +180,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The execution end timestamp of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723521767000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -182,7 +191,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>The error message for the SQL statement execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table is not found</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -190,7 +202,15 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The execution result of the SQL statement. The content is in the response format of the <code>DataFrame Show</code> statement in Spark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+---+-----+
+         * |age| name|
+         * +---+-----+
+         * | 14|  Tom|
+         * | 23|Alice|
+         * +---+-----+</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -198,7 +218,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * ResultUri.
+         * <p>The Object Storage Service (OSS) location where the execution results of the SQL statement are stored. If you do not specify a storage location, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://yourbucket/result.json</p>
          */
         public Builder resultUri(String resultUri) {
             this.resultUri = resultUri;
@@ -206,7 +229,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The execution start timestamp of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723521767000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -214,7 +240,17 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The execution status of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li>FAILED</li>
+         * <li>RUNNING</li>
+         * <li>CANCELED</li>
+         * <li>PENDING</li>
+         * <li>FINISHED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -222,7 +258,10 @@ public class SparkBatchSQLStatement extends TeaModel {
         }
 
         /**
-         * StatementId.
+         * <p>The ID of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sq1723521767****-0001</p>
          */
         public Builder statementId(String statementId) {
             this.statementId = statementId;

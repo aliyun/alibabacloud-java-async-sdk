@@ -119,7 +119,10 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. OK is returned if the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>642F3512-C628-5D0C-8815-F6670CEA00D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,14 @@ public class UpdateFormationCrawlerScheduleStateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

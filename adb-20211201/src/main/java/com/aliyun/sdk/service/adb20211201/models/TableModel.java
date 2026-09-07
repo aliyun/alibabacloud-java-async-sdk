@@ -691,7 +691,10 @@ public class TableModel extends TeaModel {
         } 
 
         /**
-         * ArchiveType.
+         * <p>The archive type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ArchiveType</p>
          */
         public Builder archiveType(String archiveType) {
             this.archiveType = archiveType;
@@ -699,7 +702,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * BlockSize.
+         * <p>The block size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder blockSize(Long blockSize) {
             this.blockSize = blockSize;
@@ -707,7 +713,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Bucket.
+         * <p>The bucket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder bucket(Long bucket) {
             this.bucket = bucket;
@@ -715,7 +724,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * BucketCount.
+         * <p>The number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder bucketCount(Long bucketCount) {
             this.bucketCount = bucketCount;
@@ -723,7 +735,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Cols.
+         * <p>The column information.</p>
          */
         public Builder cols(java.util.List<FieldSchemaModel> cols) {
             this.cols = cols;
@@ -731,7 +743,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Comment.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -739,7 +754,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Compression.
+         * <p>The compression method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Compression</p>
          */
         public Builder compression(String compression) {
             this.compression = compression;
@@ -747,7 +765,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -771,7 +792,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * CurrentVersion.
+         * <p>The current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentVersion(Long currentVersion) {
             this.currentVersion = currentVersion;
@@ -779,7 +803,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * DbName.
+         * <p>The name of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -787,7 +814,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * DictEncode.
+         * <p>Indicates whether the dictionary is encrypted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dictEncode(Boolean dictEncode) {
             this.dictEncode = dictEncode;
@@ -795,7 +825,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * DistributeColumns.
+         * <p>The distribution columns.</p>
          */
         public Builder distributeColumns(java.util.List<FieldSchemaModel> distributeColumns) {
             this.distributeColumns = distributeColumns;
@@ -803,7 +833,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * DistributeType.
+         * <p>The distribution type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DistributeType</p>
          */
         public Builder distributeType(String distributeType) {
             this.distributeType = distributeType;
@@ -811,7 +844,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * EnableDfs.
+         * <p>Indicates whether DFS is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDfs(Boolean enableDfs) {
             this.enableDfs = enableDfs;
@@ -819,7 +855,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * HotPartitionCount.
+         * <p>The number of hot partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder hotPartitionCount(Long hotPartitionCount) {
             this.hotPartitionCount = hotPartitionCount;
@@ -827,7 +866,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Indexes.
+         * <p>The indexes.</p>
          */
         public Builder indexes(java.util.List<CstoreIndexModel> indexes) {
             this.indexes = indexes;
@@ -835,7 +874,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * IsAllIndex.
+         * <p>Indicates whether the index is a full index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAllIndex(Boolean isAllIndex) {
             this.isAllIndex = isAllIndex;
@@ -843,7 +885,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * IsFulltextDict.
+         * <p>Indicates whether the table is a full-text index dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isFulltextDict(Boolean isFulltextDict) {
             this.isFulltextDict = isFulltextDict;
@@ -851,7 +896,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * MaxColumnId.
+         * <p>The maximum column ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxColumnId</p>
          */
         public Builder maxColumnId(Long maxColumnId) {
             this.maxColumnId = maxColumnId;
@@ -859,7 +907,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The parameters.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -867,7 +915,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PartitionColumn.
+         * <p>The information about the partition key column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>colName</p>
          */
         public Builder partitionColumn(String partitionColumn) {
             this.partitionColumn = partitionColumn;
@@ -875,7 +926,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PartitionCount.
+         * <p>The number of partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder partitionCount(Long partitionCount) {
             this.partitionCount = partitionCount;
@@ -883,7 +937,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PartitionKeys.
+         * <p>The partition keys.</p>
          */
         public Builder partitionKeys(java.util.List<FieldSchemaModel> partitionKeys) {
             this.partitionKeys = partitionKeys;
@@ -891,7 +945,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PartitionType.
+         * <p>The partition type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PartitionType</p>
          */
         public Builder partitionType(String partitionType) {
             this.partitionType = partitionType;
@@ -899,7 +956,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PhysicalDatabaseName.
+         * <p>The name of the physical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>physicalDatabaseName</p>
          */
         public Builder physicalDatabaseName(String physicalDatabaseName) {
             this.physicalDatabaseName = physicalDatabaseName;
@@ -907,7 +967,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PhysicalTableName.
+         * <p>The name of the physical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>physicalTableName</p>
          */
         public Builder physicalTableName(String physicalTableName) {
             this.physicalTableName = physicalTableName;
@@ -915,7 +978,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * PreviousVersion.
+         * <p>The previous version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder previousVersion(Long previousVersion) {
             this.previousVersion = previousVersion;
@@ -923,7 +989,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RawTableName.
+         * <p>The raw table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RawTableName</p>
          */
         public Builder rawTableName(String rawTableName) {
             this.rawTableName = rawTableName;
@@ -931,7 +1000,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RouteColumns.
+         * <p>The routing columns.</p>
          */
         public Builder routeColumns(java.util.List<FieldSchemaModel> routeColumns) {
             this.routeColumns = routeColumns;
@@ -939,7 +1008,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RouteEffectiveColumn.
+         * <p>The effective routing column.</p>
          */
         public Builder routeEffectiveColumn(FieldSchemaModel routeEffectiveColumn) {
             this.routeEffectiveColumn = routeEffectiveColumn;
@@ -947,7 +1016,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RouteType.
+         * <p>The routing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routeType</p>
          */
         public Builder routeType(String routeType) {
             this.routeType = routeType;
@@ -955,7 +1027,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RtEngineType.
+         * <p>The routing engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RtEngineType</p>
          */
         public Builder rtEngineType(String rtEngineType) {
             this.rtEngineType = rtEngineType;
@@ -963,7 +1038,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RtIndexAll.
+         * <p>Indicates whether to route all indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rtIndexAll(Boolean rtIndexAll) {
             this.rtIndexAll = rtIndexAll;
@@ -971,7 +1049,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * RtModeType.
+         * <p>The routing mode type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RtModeType</p>
          */
         public Builder rtModeType(String rtModeType) {
             this.rtModeType = rtModeType;
@@ -979,7 +1060,7 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Sd.
+         * <p>The description of the storage.</p>
          */
         public Builder sd(StorageDescriptorModel sd) {
             this.sd = sd;
@@ -987,7 +1068,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * StoragePolicy.
+         * <p>The storage policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StoragePolicy</p>
          */
         public Builder storagePolicy(String storagePolicy) {
             this.storagePolicy = storagePolicy;
@@ -995,7 +1079,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * SubpartitionColumn.
+         * <p>The information about the subpartition column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SubpartitionColumn</p>
          */
         public Builder subpartitionColumn(String subpartitionColumn) {
             this.subpartitionColumn = subpartitionColumn;
@@ -1003,7 +1090,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * SubpartitionCount.
+         * <p>The number of subpartitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder subpartitionCount(Long subpartitionCount) {
             this.subpartitionCount = subpartitionCount;
@@ -1011,7 +1101,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * SubpartitionType.
+         * <p>The subpartition type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SubpartitionColumn</p>
          */
         public Builder subpartitionType(String subpartitionType) {
             this.subpartitionType = subpartitionType;
@@ -1019,7 +1112,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * TableEngineName.
+         * <p>The name of the table engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder tableEngineName(String tableEngineName) {
             this.tableEngineName = tableEngineName;
@@ -1027,7 +1123,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The name of the logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -1035,7 +1134,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>The table type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>external_table</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -1043,7 +1145,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * TblId.
+         * <p>The table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder tblId(Long tblId) {
             this.tblId = tblId;
@@ -1051,7 +1156,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * Temporary.
+         * <p>Indicates whether the table is a temporary table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder temporary(Boolean temporary) {
             this.temporary = temporary;
@@ -1059,7 +1167,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the table was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -1067,7 +1178,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * ViewExpandedText.
+         * <p>The normalized SQL statement that is used to create the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ViewExpandedText</p>
          */
         public Builder viewExpandedText(String viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
@@ -1075,7 +1189,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * ViewOriginalText.
+         * <p>The SQL statement used to create the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ViewOriginalText</p>
          */
         public Builder viewOriginalText(String viewOriginalText) {
             this.viewOriginalText = viewOriginalText;
@@ -1083,7 +1200,10 @@ public class TableModel extends TeaModel {
         }
 
         /**
-         * ViewSecurityMode.
+         * <p>The security mode of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ViewSecurityMode</p>
          */
         public Builder viewSecurityMode(String viewSecurityMode) {
             this.viewSecurityMode = viewSecurityMode;

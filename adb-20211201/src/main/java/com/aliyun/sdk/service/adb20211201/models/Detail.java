@@ -249,7 +249,10 @@ public class Detail extends TeaModel {
         } 
 
         /**
-         * AppType.
+         * <p>The type of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BATCH</p>
          */
         public Builder appType(String appType) {
             this.appType = appType;
@@ -257,7 +260,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the cluster that runs the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -265,7 +271,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The configuration content of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;name&quot;: &quot;SparkPi&quot;,     &quot;file&quot;: &quot;local:///tmp/spark-examples.jar&quot;,     &quot;className&quot;: &quot;org.apache.spark.examples.SparkPi&quot;,     &quot;args&quot;: [         &quot;1000000&quot;     ],     &quot;conf&quot;: {         &quot;spark.driver.resourceSpec&quot;: &quot;small&quot;,         &quot;spark.executor.instances&quot;: 1,         &quot;spark.executor.resourceSpec&quot;: &quot;small&quot;     } }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -273,7 +282,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * DurationInMillis.
+         * <p>The execution duration of the Spark application, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder durationInMillis(Long durationInMillis) {
             this.durationInMillis = durationInMillis;
@@ -281,7 +293,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * EstimateExecutionCpuTimeInSeconds.
+         * <p>The CPU time consumed by the Spark application, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder estimateExecutionCpuTimeInSeconds(Long estimateExecutionCpuTimeInSeconds) {
             this.estimateExecutionCpuTimeInSeconds = estimateExecutionCpuTimeInSeconds;
@@ -289,7 +304,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * ExecutionDurationInMillis.
+         * <p>The execution duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36000</p>
          */
         public Builder executionDurationInMillis(Long executionDurationInMillis) {
             this.executionDurationInMillis = executionDurationInMillis;
@@ -297,7 +315,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * LastAttemptId.
+         * <p>The ID of the last retry of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202204291426hzpre60****-0003</p>
          */
         public Builder lastAttemptId(String lastAttemptId) {
             this.lastAttemptId = lastAttemptId;
@@ -305,7 +326,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * LastUpdatedTimeInMillis.
+         * <p>The time when the Spark application was last updated. This value is a UNIX timestamp, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651213645200</p>
          */
         public Builder lastUpdatedTimeInMillis(Long lastUpdatedTimeInMillis) {
             this.lastUpdatedTimeInMillis = lastUpdatedTimeInMillis;
@@ -313,7 +337,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * LogRootPath.
+         * <p>The storage path of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://<bucket-name>/logs/driver</p>
          */
         public Builder logRootPath(String logRootPath) {
             this.logRootPath = logRootPath;
@@ -321,7 +348,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the job resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-rg</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
@@ -329,7 +359,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * ResourceProvisioningDurationInMillis.
+         * <p>The duration of resource provisioning for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36000</p>
          */
         public Builder resourceProvisioningDurationInMillis(Long resourceProvisioningDurationInMillis) {
             this.resourceProvisioningDurationInMillis = resourceProvisioningDurationInMillis;
@@ -337,7 +370,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * RunningStartTimeInMillis.
+         * <p>The timestamp when the job started running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36000</p>
          */
         public Builder runningStartTimeInMillis(Long runningStartTimeInMillis) {
             this.runningStartTimeInMillis = runningStartTimeInMillis;
@@ -345,7 +381,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * StartedTimeInMillis.
+         * <p>The time when the Spark application was created. This value is a UNIX timestamp, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651213645010</p>
          */
         public Builder startedTimeInMillis(Long startedTimeInMillis) {
             this.startedTimeInMillis = startedTimeInMillis;
@@ -353,7 +392,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * SubmittedTimeInMillis.
+         * <p>The time when the Spark application was submitted. This value is a UNIX timestamp, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651213645000</p>
          */
         public Builder submittedTimeInMillis(Long submittedTimeInMillis) {
             this.submittedTimeInMillis = submittedTimeInMillis;
@@ -361,7 +403,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * TerminatedTimeInMillis.
+         * <p>The time when the Spark application was terminated. This value is a UNIX timestamp, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651213645300</p>
          */
         public Builder terminatedTimeInMillis(Long terminatedTimeInMillis) {
             this.terminatedTimeInMillis = terminatedTimeInMillis;
@@ -369,7 +414,10 @@ public class Detail extends TeaModel {
         }
 
         /**
-         * WebUiAddress.
+         * <p>The Web UI address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>
          */
         public Builder webUiAddress(String webUiAddress) {
             this.webUiAddress = webUiAddress;

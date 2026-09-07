@@ -790,7 +790,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
              * <p>Allowed operation information. When used specifically, matches operation Action based on currentStepName+status in this information. If no Action is matched, represents task current status does not support operations.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</p>
+             * <p>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -979,7 +979,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
              * <p>The task details.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;callerUid&quot;:&quot;test&quot;}</p>
+             * <p>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</p>
              */
             public Builder taskDetail(String taskDetail) {
                 this.taskDetail = taskDetail;

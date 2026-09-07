@@ -103,6 +103,7 @@ public class StartFormationCrawlerRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class StartFormationCrawlerRequest extends Request {
         }
 
         /**
-         * CrawlerTaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-crawler-dbname</p>
          */
         public Builder crawlerTaskName(String crawlerTaskName) {
             this.putBodyParameter("CrawlerTaskName", crawlerTaskName);
@@ -124,7 +128,10 @@ public class StartFormationCrawlerRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1pke2pcfavw****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -133,6 +140,10 @@ public class StartFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

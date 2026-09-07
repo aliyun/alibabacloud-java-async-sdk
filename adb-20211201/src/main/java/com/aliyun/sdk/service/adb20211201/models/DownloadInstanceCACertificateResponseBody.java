@@ -67,7 +67,7 @@ public class DownloadInstanceCACertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The OSS URL of the downloaded certificate.</p>
+         * <p>The certificate download path.</p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;

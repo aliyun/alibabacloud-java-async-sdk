@@ -183,7 +183,7 @@ public class DescribeTablePartitionDiagnoseRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Field&quot;:&quot;TotalSize&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
+         * <p>[{\&quot;Field\&quot;:\&quot;TotalSize\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);

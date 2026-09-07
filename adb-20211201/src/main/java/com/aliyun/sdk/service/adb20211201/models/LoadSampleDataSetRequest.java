@@ -67,7 +67,7 @@ public class LoadSampleDataSetRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>amv-2ze0z517o1mgp66a</p>
+         * <p>amv-2ze0z517o1mg****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

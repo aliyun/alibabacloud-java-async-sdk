@@ -54,7 +54,7 @@ public class DeleteSemanticViewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3A8F6106-6AFD-5A34-9C80-8DE2C42D06E8</p>

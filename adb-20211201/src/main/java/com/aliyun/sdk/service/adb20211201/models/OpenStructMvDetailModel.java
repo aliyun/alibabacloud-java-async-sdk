@@ -262,7 +262,7 @@ public class OpenStructMvDetailModel extends TeaModel {
         } 
 
         /**
-         * BaseTableInfos.
+         * <p>All direct parent base tables of the materialized view.</p>
          */
         public Builder baseTableInfos(java.util.List<BaseTableInfos> baseTableInfos) {
             this.baseTableInfos = baseTableInfos;
@@ -270,7 +270,7 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * BaseTableNames.
+         * <p>All direct parent base tables of the materialized view.</p>
          */
         public Builder baseTableNames(java.util.List<java.util.List<String>> baseTableNames) {
             this.baseTableNames = baseTableNames;
@@ -278,7 +278,16 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * EnableDelayAlert.
+         * <p>Indicates whether to enable alerting for refresh latency. Valid values:</p>
+         * <ul>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDelayAlert(Integer enableDelayAlert) {
             this.enableDelayAlert = enableDelayAlert;
@@ -286,7 +295,16 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * EnableFailureAlert.
+         * <p>Indicates whether to enable alerting for refresh task failures. Valid values:</p>
+         * <ul>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableFailureAlert(Integer enableFailureAlert) {
             this.enableFailureAlert = enableFailureAlert;
@@ -294,7 +312,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * ExplicitHit.
+         * <p>The total number of explicit query hits in the last 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder explicitHit(Long explicitHit) {
             this.explicitHit = explicitHit;
@@ -302,7 +323,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * FirstRefreshTime.
+         * <p>The time of the first refresh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01 09:00:00</p>
          */
         public Builder firstRefreshTime(String firstRefreshTime) {
             this.firstRefreshTime = firstRefreshTime;
@@ -310,7 +334,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * ImplicitHit.
+         * <p>The total number of implicit query hits in the last 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder implicitHit(Long implicitHit) {
             this.implicitHit = implicitHit;
@@ -318,7 +345,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * IsInactive.
+         * <p>Indicates whether the materialized view has not been accessed by explicit or implicit queries for more than 30 days since its creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isInactive(Boolean isInactive) {
             this.isInactive = isInactive;
@@ -326,7 +356,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * LatencyTolerance.
+         * <p>The refresh latency toleration, in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder latencyTolerance(Integer latencyTolerance) {
             this.latencyTolerance = latencyTolerance;
@@ -334,7 +367,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * LocalSize.
+         * <p>The disk space that the materialized view occupies for hot data, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder localSize(Long localSize) {
             this.localSize = localSize;
@@ -342,7 +378,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * QueryRewriteEnabled.
+         * <p>Whether query rewrite is enabled for the materialized view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryRewriteEnabled(Boolean queryRewriteEnabled) {
             this.queryRewriteEnabled = queryRewriteEnabled;
@@ -350,7 +389,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * RefreshInterval.
+         * <p>The refresh interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(now() + INTERVAL \&quot;10\&quot; SECOND)</p>
          */
         public Builder refreshInterval(String refreshInterval) {
             this.refreshInterval = refreshInterval;
@@ -358,7 +400,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * RefreshState.
+         * <p>The refresh model of the materialized view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAST</p>
          */
         public Builder refreshState(String refreshState) {
             this.refreshState = refreshState;
@@ -366,7 +411,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * RemoteSize.
+         * <p>The disk space that the materialized view occupies for cold data, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder remoteSize(Long remoteSize) {
             this.remoteSize = remoteSize;
@@ -374,7 +422,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * ResourceGroup.
+         * <p>The resource group on which the refresh depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -382,7 +433,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * TableEngine.
+         * <p>The table engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XUANWU</p>
          */
         public Builder tableEngine(String tableEngine) {
             this.tableEngine = tableEngine;
@@ -390,7 +444,10 @@ public class OpenStructMvDetailModel extends TeaModel {
         }
 
         /**
-         * UpdatedAt.
+         * <p>The time of the last refresh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01 10:00:00</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -482,7 +539,10 @@ public class OpenStructMvDetailModel extends TeaModel {
             } 
 
             /**
-             * BaseTableIsMv.
+             * <p>Whether the base table is a materialized view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder baseTableIsMv(Boolean baseTableIsMv) {
                 this.baseTableIsMv = baseTableIsMv;
@@ -490,7 +550,10 @@ public class OpenStructMvDetailModel extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -498,7 +561,10 @@ public class OpenStructMvDetailModel extends TeaModel {
             }
 
             /**
-             * TableEngine.
+             * <p>The table engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XUANWU</p>
              */
             public Builder tableEngine(String tableEngine) {
                 this.tableEngine = tableEngine;
@@ -506,7 +572,10 @@ public class OpenStructMvDetailModel extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tbl</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

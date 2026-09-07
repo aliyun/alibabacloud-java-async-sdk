@@ -145,6 +145,7 @@ public class AddKnowledgeFileRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
+         * <p>The file location. Currently, only OSS paths are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * FileType.
+         * <p>The file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdf</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -178,7 +183,10 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * IsDir.
+         * <p>Specifies whether the path is a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDir(Boolean isDir) {
             this.putQueryParameter("IsDir", isDir);
@@ -187,7 +195,7 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The confidence level or weight of the file.</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -196,7 +204,10 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The file tags in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;game&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -205,7 +216,10 @@ public class AddKnowledgeFileRequest extends Request {
         }
 
         /**
-         * UploadUser.
+         * <p>The user who uploads the knowledge base file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder uploadUser(String uploadUser) {
             this.putQueryParameter("UploadUser", uploadUser);

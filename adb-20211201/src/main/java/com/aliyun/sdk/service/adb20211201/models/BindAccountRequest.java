@@ -103,7 +103,7 @@ public class BindAccountRequest extends Request {
         } 
 
         /**
-         * <p>The standard account of the cluster.</p>
+         * <p>A standard database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>ID of the cluster. Applies to Enterprise Edition, Basic Edition, or Data Lakehouse Edition clusters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RAM user.</p>
+         * <p>ID of the Alibaba Cloud RAM user to bind.</p>
          * 
          * <strong>example:</strong>
          * <p>1444832459****</p>
@@ -141,7 +141,7 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * RamUserList.
+         * <p>List of Alibaba Cloud RAM user IDs to bind. You can bind only one RAM user at a time. If you specify this parameter, the RamUser parameter is ignored.</p>
          */
         public Builder ramUserList(java.util.List<String> ramUserList) {
             String ramUserListShrink = shrink(ramUserList, "RamUserList", "json");

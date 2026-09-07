@@ -67,7 +67,7 @@ public class GenerateSqlBySemanticSqlResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class GenerateSqlBySemanticSqlResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the task fails to be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to rewrite semantic SQL: Ambiguous path from \&quot;lineitem\&quot; to \&quot;nation\&quot;. Multiple paths found</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -165,7 +168,10 @@ public class GenerateSqlBySemanticSqlResponseBody extends TeaModel {
             }
 
             /**
-             * GeneratedSql.
+             * <p>The generated executable SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select sum(amount) from orders</p>
              */
             public Builder generatedSql(String generatedSql) {
                 this.generatedSql = generatedSql;
@@ -173,7 +179,14 @@ public class GenerateSqlBySemanticSqlResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the generation request was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Successful.</li>
+             * <li><strong>false</strong>: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

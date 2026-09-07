@@ -67,7 +67,7 @@ public class ListSemanticViewNamesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class ListSemanticViewNamesResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The annotation of the semantic view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个定义销售额相关指标的视图</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -165,7 +168,10 @@ public class ListSemanticViewNamesResponseBody extends TeaModel {
             }
 
             /**
-             * ViewName.
+             * <p>The name of the semantic view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>revenue_analysis</p>
              */
             public Builder viewName(String viewName) {
                 this.viewName = viewName;
@@ -173,7 +179,10 @@ public class ListSemanticViewNamesResponseBody extends TeaModel {
             }
 
             /**
-             * ViewSchema.
+             * <p>The schema in which the semantic view resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sales_db</p>
              */
             public Builder viewSchema(String viewSchema) {
                 this.viewSchema = viewSchema;

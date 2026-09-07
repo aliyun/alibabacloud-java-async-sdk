@@ -185,7 +185,10 @@ public class DescribeMVRecommendResultsRequest extends Request {
         } 
 
         /**
-         * <p>Fixed system value (non-modifiable).</p>
+         * <p>A static value. This parameter cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modification is not supported.</p>
          */
         public Builder actionInner(String actionInner) {
             this.putQueryParameter("ActionInner", actionInner);
@@ -206,7 +209,10 @@ public class DescribeMVRecommendResultsRequest extends Request {
         }
 
         /**
-         * <p>Fixed system value (non-modifiable).</p>
+         * <p>A static value. This parameter cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modification is not supported.</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -239,7 +245,7 @@ public class DescribeMVRecommendResultsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -263,7 +269,10 @@ public class DescribeMVRecommendResultsRequest extends Request {
         }
 
         /**
-         * SubQueryId.
+         * <p>The subquery ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder subQueryId(Long subQueryId) {
             this.putQueryParameter("SubQueryId", subQueryId);

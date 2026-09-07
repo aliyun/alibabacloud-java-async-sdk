@@ -115,8 +115,9 @@ public class CreateLakeStorageRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -128,7 +129,7 @@ public class CreateLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL cluster with which you want to associate the lake storage.</p>
+         * <p>The instance ID of the ADB instance attached to the lake storage.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-******</p>
@@ -152,7 +153,7 @@ public class CreateLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>The permissions that you want to grant on the lake storage to the Alibaba Cloud account besides the permissions that are automatically granted to the Resource Access Management (RAM) user or the Alibaba Cloud account.</p>
+         * <p>When lake storage is created, permissions are automatically granted to the Resource Access Management (RAM) users performing the operation and the Alibaba Cloud account. You can increase additional Alibaba Cloud account authorizations here.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -167,7 +168,7 @@ public class CreateLakeStorageRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>RegionId</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -277,7 +278,7 @@ public class CreateLakeStorageRequest extends Request {
             }
 
             /**
-             * <p>The read permissions.</p>
+             * <p>The read permission.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -303,7 +304,7 @@ public class CreateLakeStorageRequest extends Request {
             }
 
             /**
-             * <p>The write permissions.</p>
+             * <p>The write permission.</p>
              * 
              * <strong>example:</strong>
              * <ul>

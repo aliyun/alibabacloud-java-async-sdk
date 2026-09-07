@@ -119,14 +119,14 @@ public class CreateSparkTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The application type. Valid values:</p>
+         * <p>The templatetype of the application. Valid values:</p>
          * <ul>
-         * <li><strong>SQL</strong></li>
-         * <li><strong>STREAMING</strong></li>
-         * <li><strong>BATCH</strong></li>
+         * <li><strong>SQL</strong>: SQL application</li>
+         * <li><strong>STREAMING</strong>: streaming application</li>
+         * <li><strong>BATCH</strong>: batch application</li>
          * </ul>
          * <blockquote>
-         * <p> You do not need to specify this parameter when Type is set to folder.</p>
+         * <p>You do not need to configure this parameter when the application template type is folder.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,8 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,9 +166,9 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory to which the application template belongs.</p>
+         * <p>The ID of the folder to which the application template belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/456218.html">GetSparkTemplateFolderTree</a> operation to query the directory ID.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/456218.html">GetSparkTemplateFolderTree</a> operation to query the folder ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -181,10 +182,10 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * <p>The type of the application template. Valid values:</p>
+         * <p>The templatetype of the application template. Valid values:</p>
          * <ul>
-         * <li><strong>folder</strong>: directory.</li>
-         * <li><strong>file</strong>: application.</li>
+         * <li><strong>folder</strong>: folder</li>
+         * <li><strong>file</strong>: application</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

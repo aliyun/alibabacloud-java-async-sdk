@@ -197,7 +197,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
              * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>amv-clusterxxx</p>
+             * <p>amv-bp1bg858bo8c****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;

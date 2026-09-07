@@ -146,7 +146,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dbName</p>
@@ -195,7 +195,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -207,7 +207,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The data link task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * <p>The type of the job.</p>
+         * <p>The task type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

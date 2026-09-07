@@ -93,7 +93,10 @@ public class SerDeInfoModel extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The name of the serialization or deserialization information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -101,7 +104,7 @@ public class SerDeInfoModel extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The serialization or deserialization configuration parameter.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -109,7 +112,10 @@ public class SerDeInfoModel extends TeaModel {
         }
 
         /**
-         * SerDeId.
+         * <p>The ID of the serialization or deserialization information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder serDeId(Long serDeId) {
             this.serDeId = serDeId;
@@ -117,7 +123,10 @@ public class SerDeInfoModel extends TeaModel {
         }
 
         /**
-         * SerializationLib.
+         * <p>The library that is used for serialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</p>
          */
         public Builder serializationLib(String serializationLib) {
             this.serializationLib = serializationLib;

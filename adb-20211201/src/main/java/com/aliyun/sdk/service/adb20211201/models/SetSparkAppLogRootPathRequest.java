@@ -92,7 +92,7 @@ public class SetSparkAppLogRootPathRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>am-dbclusterid</p>
+         * <p>amv-bp169ea59k****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -104,7 +104,7 @@ public class SetSparkAppLogRootPathRequest extends Request {
          * <p>The path of Object Storage Service (OSS) logs.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://path/to/log</p>
+         * <p>oss://testBucketname/to/log</p>
          */
         public Builder ossLogPath(String ossLogPath) {
             this.putBodyParameter("OssLogPath", ossLogPath);

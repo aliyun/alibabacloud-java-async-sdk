@@ -132,7 +132,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * FreeBackupSize.
+         * <p>The free backup space. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder freeBackupSize(Long freeBackupSize) {
             this.freeBackupSize = freeBackupSize;
@@ -140,7 +143,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried backup sets.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -159,7 +162,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of backup sets on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -181,7 +184,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalBackupSize.
+         * <p>The total size of the backup sets. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64953700</p>
          */
         public Builder totalBackupSize(Long totalBackupSize) {
             this.totalBackupSize = totalBackupSize;
@@ -189,7 +195,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -375,10 +381,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-06-02T16:00Z</p>
+             * BackupEndTime.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -394,10 +397,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup set ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>32732****</p>
+             * BackupId.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -405,10 +405,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup method. Snapshot is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Snapshot</p>
+             * BackupMethod.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -424,10 +421,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup set. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2167808</p>
+             * BackupSize.
              */
             public Builder backupSize(Integer backupSize) {
                 this.backupSize = backupSize;
@@ -435,10 +429,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-06-01T16:00Z</p>
+             * BackupStartTime.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -454,14 +445,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type. Valid values:</p>
-             * <ul>
-             * <li><strong>FullBackup</strong></li>
-             * <li><strong>IncrementalBackup</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>FullBackup</p>
+             * BackupType.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -469,10 +453,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>am-bp11q28kvl688****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;

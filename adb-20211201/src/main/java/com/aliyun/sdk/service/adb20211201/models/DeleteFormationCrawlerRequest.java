@@ -105,6 +105,7 @@ public class DeleteFormationCrawlerRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class DeleteFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class DeleteFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class DeleteFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

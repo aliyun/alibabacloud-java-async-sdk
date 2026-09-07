@@ -78,7 +78,7 @@ public class DescribeDBClusterStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried cluster states.</p>
+         * <p>The cluster status list.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.status = status;

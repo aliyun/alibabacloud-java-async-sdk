@@ -384,7 +384,7 @@ public class CreateDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * AtmConfig.
+         * <p>The PromQL resource group configuration.</p>
          */
         public Builder atmConfig(AtmConfig atmConfig) {
             String atmConfigShrink = shrink(atmConfig, "AtmConfig", "json");
@@ -394,7 +394,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * AutoStopInterval.
+         * <p>The auto-stop interval, in minutes (m).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5m</p>
          */
         public Builder autoStopInterval(String autoStopInterval) {
             this.putQueryParameter("AutoStopInterval", autoStopInterval);
@@ -403,7 +406,16 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * Classification.
+         * <p>The classification of the resource group. Valid values:</p>
+         * <ul>
+         * <li>SQL</li>
+         * <li>SparkSQL</li>
+         * <li>MultiCluster</li>
+         * <li>AI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder classification(String classification) {
             this.putQueryParameter("Classification", classification);
@@ -412,10 +424,12 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>A reserved parameter (not applicable).</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -424,10 +438,12 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>A reserved parameter (not applicable).</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder clusterSizeResource(String clusterSizeResource) {
             this.putQueryParameter("ClusterSizeResource", clusterSizeResource);
@@ -436,7 +452,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,10 +465,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:</p>
+         * <p>Specifies whether to enable the spot instance feature for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong></li>
-         * <li><strong>False</strong></li>
+         * <li><strong>True</strong>: Enables the spot instance feature.</li>
+         * <li><strong>False</strong>: Disables the spot instance feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -465,7 +481,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>SparkWarehouse</strong>: the SparkWarehouse engine.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SparkWarehouse</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -474,7 +497,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * EngineParams.
+         * <p>The engine configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
          */
         public Builder engineParams(java.util.Map<String, ?> engineParams) {
             String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
@@ -484,7 +510,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * GpuElasticPlan.
+         * <p>The GPU time-based elastic plan.</p>
          */
         public Builder gpuElasticPlan(GpuElasticPlan gpuElasticPlan) {
             String gpuElasticPlanShrink = shrink(gpuElasticPlan, "GpuElasticPlan", "json");
@@ -497,8 +523,8 @@ public class CreateDBResourceGroupRequest extends Request {
          * <p>The name of the resource group.</p>
          * <ul>
          * <li>The name can be up to 255 characters in length.</li>
-         * <li>The name must start with a letter or a digit.</li>
-         * <li>The name can contain letters, digits, hyphens (<em>), and underscores (</em>).</li>
+         * <li>The name must start with a digit, an uppercase letter, or a lowercase letter.</li>
+         * <li>The name can contain digits, uppercase letters, lowercase letters, hyphens (-), and underscores (_).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -515,11 +541,11 @@ public class CreateDBResourceGroupRequest extends Request {
          * <p>The type of the resource group. Valid values:</p>
          * <ul>
          * <li><strong>Interactive</strong></li>
-         * <li><strong>Job</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+         * <li><strong>Job</strong><blockquote>
+         * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Introduction to resource groups (Data Lakehouse Edition)</a>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -532,10 +558,12 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>A reserved parameter (not applicable).</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder maxClusterCount(Integer maxClusterCount) {
             this.putQueryParameter("MaxClusterCount", maxClusterCount);
@@ -544,10 +572,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum reserved computing resources.</p>
+         * <p>The maximum reserved computing resources, in ACUs.</p>
          * <ul>
-         * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
-         * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
+         * <li>If the resource group type is Interactive, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 16 ACUs.</li>
+         * <li>If the resource group type is Job, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 8 ACUs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -560,7 +588,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The maximum number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxGpuQuantity(Integer maxGpuQuantity) {
             this.putQueryParameter("MaxGpuQuantity", maxGpuQuantity);
@@ -569,10 +600,12 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>A reserved parameter (not applicable).</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder minClusterCount(Integer minClusterCount) {
             this.putQueryParameter("MinClusterCount", minClusterCount);
@@ -581,10 +614,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The minimum reserved computing resources.</p>
+         * <p>The minimum reserved computing resources, in ACUs.</p>
          * <ul>
-         * <li>When GroupType is set to Interactive, set this parameter to 16ACU.</li>
-         * <li>When GroupType is set to Job, set this parameter to 0ACU.</li>
+         * <li>If the resource group type is Interactive, the minimum reserved computing resources are 16 ACUs.</li>
+         * <li>If the resource group type is Job, the minimum reserved computing resources are 0 ACUs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -597,7 +630,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The minimum number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minGpuQuantity(Integer minGpuQuantity) {
             this.putQueryParameter("MinGpuQuantity", minGpuQuantity);
@@ -606,7 +642,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * RayConfig.
+         * <p>The Ray configuration information.</p>
+         * <blockquote>
+         * <p>This parameter is required when the resource group is an AI resource group and the corresponding engine is RayCluster.</p>
+         * </blockquote>
          */
         public Builder rayConfig(RayConfig rayConfig) {
             String rayConfigShrink = shrink(rayConfig, "RayConfig", "json");
@@ -616,9 +655,9 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region IDs of AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -631,7 +670,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The job resubmission rules.</p>
+         * <p>The job routing rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -641,7 +680,15 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * ScalePolicy.
+         * <p>The scaling policy of the resource group. Valid values:</p>
+         * <ul>
+         * <li>AutoScaling: enables the AutoScaling auto-scaling policy.</li>
+         * <li>Disable: disables auto-scaling.</li>
+         * <li>MultiCluster: enables the MultiCluster auto-scaling policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoScaling</p>
          */
         public Builder scalePolicy(String scalePolicy) {
             this.putQueryParameter("ScalePolicy", scalePolicy);
@@ -650,7 +697,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The specification name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADB.MLLarge.2</p>
          */
         public Builder specName(String specName) {
             this.putQueryParameter("SpecName", specName);
@@ -659,7 +709,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The name of the destination resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder targetResourceGroupName(String targetResourceGroupName) {
             this.putQueryParameter("TargetResourceGroupName", targetResourceGroupName);
@@ -844,7 +897,10 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * AuthNodeNum.
+             * <p>The number of authentication nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder authNodeNum(Integer authNodeNum) {
                 this.authNodeNum = authNodeNum;
@@ -852,7 +908,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * AuthNodeSpec.
+             * <p>The authentication node specification ([0-9+]ACU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ACU</p>
              */
             public Builder authNodeSpec(String authNodeSpec) {
                 this.authNodeSpec = authNodeSpec;
@@ -860,7 +919,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * InsertNodeNum.
+             * <p>The number of insert nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder insertNodeNum(Integer insertNodeNum) {
                 this.insertNodeNum = insertNodeNum;
@@ -868,7 +930,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * InsertNodeSpec.
+             * <p>The insert node specification ([0-9+]ACU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ACU</p>
              */
             public Builder insertNodeSpec(String insertNodeSpec) {
                 this.insertNodeSpec = insertNodeSpec;
@@ -876,7 +941,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * SelectNodeCacheSize.
+             * <p>The cache size of query nodes (GB).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder selectNodeCacheSize(Integer selectNodeCacheSize) {
                 this.selectNodeCacheSize = selectNodeCacheSize;
@@ -884,7 +952,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * SelectNodeNum.
+             * <p>The number of query nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder selectNodeNum(Integer selectNodeNum) {
                 this.selectNodeNum = selectNodeNum;
@@ -892,7 +963,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * SelectNodeSpec.
+             * <p>The query node specification ([0-9+]ACU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ACU</p>
              */
             public Builder selectNodeSpec(String selectNodeSpec) {
                 this.selectNodeSpec = selectNodeSpec;
@@ -900,7 +974,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * StorageNodeDiskSize.
+             * <p>The disk size of storage nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder storageNodeDiskSize(Integer storageNodeDiskSize) {
                 this.storageNodeDiskSize = storageNodeDiskSize;
@@ -908,7 +985,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * StorageNodeDiskType.
+             * <p>The disk type of storage nodes (essd_pl1, essd_pl2).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>essd_pl1</p>
              */
             public Builder storageNodeDiskType(String storageNodeDiskType) {
                 this.storageNodeDiskType = storageNodeDiskType;
@@ -916,7 +996,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * StorageNodeNum.
+             * <p>The number of storage nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder storageNodeNum(Integer storageNodeNum) {
                 this.storageNodeNum = storageNodeNum;
@@ -924,7 +1007,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * StorageNodeSpec.
+             * <p>The storage node specification ([0-9+]ACU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ACU</p>
              */
             public Builder storageNodeSpec(String storageNodeSpec) {
                 this.storageNodeSpec = storageNodeSpec;
@@ -991,7 +1077,10 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * EndCronExpression.
+             * <p>The end time as a cron expression. The interval must be at least 1 hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 3 * * ?</p>
              */
             public Builder endCronExpression(String endCronExpression) {
                 this.endCronExpression = endCronExpression;
@@ -999,7 +1088,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * StartCronExpression.
+             * <p>The start time as a cron expression. The interval must be at least 1 hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 2 * * ?</p>
              */
             public Builder startCronExpression(String startCronExpression) {
                 this.startCronExpression = startCronExpression;
@@ -1066,7 +1158,14 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the elastic plan immediately after creation. Valid values:</p>
+             * <ul>
+             * <li>true: Enables the elastic plan immediately.</li>
+             * <li>false: Does not enable the elastic plan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1074,7 +1173,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The job resubmission rules.</p>
+             * <p>The list of rules.</p>
              */
             public Builder rules(java.util.List<GpuElasticPlanRules> rules) {
                 this.rules = rules;
@@ -1302,7 +1401,10 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * AllocateUnit.
+             * <p>The allocation unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allocateUnit(String allocateUnit) {
                 this.allocateUnit = allocateUnit;
@@ -1310,16 +1412,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of the resource group.</p>
-             * <ul>
-             * <li>The name can be up to 255 characters in length.</li>
-             * <li>The name must start with a letter or a digit.</li>
-             * <li>The name can contain letters, digits, hyphens (<em>), and underscores (</em>).</li>
-             * </ul>
-             * <p>This parameter is required.</p>
+             * <p>The name of the worker group.</p>
              * 
              * <strong>example:</strong>
-             * <p>test_group</p>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1327,7 +1423,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * MaxWorkerQuantity.
+             * <p>The maximum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxWorkerQuantity(Integer maxWorkerQuantity) {
                 this.maxWorkerQuantity = maxWorkerQuantity;
@@ -1335,7 +1434,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * MinWorkerQuantity.
+             * <p>The minimum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minWorkerQuantity(Integer minWorkerQuantity) {
                 this.minWorkerQuantity = minWorkerQuantity;
@@ -1343,7 +1445,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * WorkerDiskCapacity.
+             * <p>The disk size of the worker node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100G</p>
              */
             public Builder workerDiskCapacity(String workerDiskCapacity) {
                 this.workerDiskCapacity = workerDiskCapacity;
@@ -1351,7 +1456,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * WorkerSpecName.
+             * <p>The specification of the worker node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder workerSpecName(String workerSpecName) {
                 this.workerSpecName = workerSpecName;
@@ -1359,7 +1467,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * WorkerSpecType.
+             * <p>The resource type of the worker node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GPU</p>
              */
             public Builder workerSpecType(String workerSpecType) {
                 this.workerSpecType = workerSpecType;
@@ -1517,7 +1628,16 @@ public class CreateDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>The Ray cluster type. Valid values:</p>
+             * <ul>
+             * <li><p>BASIC: the basic type, which is non-highly available.</p>
+             * </li>
+             * <li><p>HIGH_AVAILABILITY: the highly available type.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1525,7 +1645,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * EnableUserEni.
+             * <p>Specifies whether to enable user Elastic Network Interface (ENI) connectivity.</p>
              */
             public Builder enableUserEni(Boolean enableUserEni) {
                 this.enableUserEni = enableUserEni;
@@ -1533,7 +1653,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * HeadAllocateUnit.
+             * <p>The allocation unit of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder headAllocateUnit(String headAllocateUnit) {
                 this.headAllocateUnit = headAllocateUnit;
@@ -1541,7 +1664,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * HeadDiskCapacity.
+             * <p>The disk size of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100G</p>
              */
             public Builder headDiskCapacity(String headDiskCapacity) {
                 this.headDiskCapacity = headDiskCapacity;
@@ -1549,7 +1675,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * HeadSpec.
+             * <p>The specification of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder headSpec(String headSpec) {
                 this.headSpec = headSpec;
@@ -1557,7 +1686,10 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * HeadSpecType.
+             * <p>The resource type of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder headSpecType(String headSpecType) {
                 this.headSpecType = headSpecType;
@@ -1581,7 +1713,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * WorkerGroups.
+             * <p>The list of Ray worker group configurations.</p>
              */
             public Builder workerGroups(java.util.List<WorkerGroups> workerGroups) {
                 this.workerGroups = workerGroups;
@@ -1664,8 +1796,8 @@ public class CreateDBResourceGroupRequest extends Request {
              * <p>The name of the resource group.</p>
              * <ul>
              * <li>The name can be up to 255 characters in length.</li>
-             * <li>The name must start with a letter or digit.</li>
-             * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
+             * <li>The name must start with a digit, an uppercase letter, or a lowercase letter.</li>
+             * <li>The name can contain digits, uppercase letters, lowercase letters, hyphens (-), and underscores (_).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1677,7 +1809,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * <p>The query execution time threshold, in milliseconds (ms).</p>
              * 
              * <strong>example:</strong>
              * <p>180000</p>
@@ -1688,7 +1820,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of the resource group to which you want to resubmit the query job.</p>
+             * <p>The name of the destination resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>job</p>

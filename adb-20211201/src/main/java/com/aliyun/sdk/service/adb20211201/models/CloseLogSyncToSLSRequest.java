@@ -89,6 +89,7 @@ public class CloseLogSyncToSLSRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,15 @@ public class CloseLogSyncToSLSRequest extends Request {
         }
 
         /**
-         * LogType.
+         * <p>The log type. Valid values:</p>
+         * <ul>
+         * <li><strong>ADBMYSQL_AUDIT_LOG</strong></li>
+         * <li><strong>ADBMYSQL_INSERT_LOG</strong></li>
+         * </ul>
+         * <p>Default value: <code>ADBMYSQL_AUDIT_LOG</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADBMYSQL_AUDIT_LOG</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -110,6 +119,7 @@ public class CloseLogSyncToSLSRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -132,7 +132,10 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the request is processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. A value of OK indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F3BE7-E8FA-3DC5-8EE7-501A90B5A54D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,14 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +202,10 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The operation result. A value of true indicates that the task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>241</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

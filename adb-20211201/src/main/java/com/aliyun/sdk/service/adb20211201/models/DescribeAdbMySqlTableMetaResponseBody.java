@@ -453,7 +453,7 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
              * <p>The partition key column.</p>
              * 
              * <strong>example:</strong>
-             * <p>DATE_FORMAT(login_time, &quot;%Y%m%d&quot;)</p>
+             * <p>DATE_FORMAT(login_time, \&quot;%Y%m%d\&quot;)</p>
              */
             public Builder partitionColumn(String partitionColumn) {
                 this.partitionColumn = partitionColumn;

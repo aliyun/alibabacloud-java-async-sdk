@@ -119,7 +119,7 @@ public class CreateApsWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code returned for the request.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class CreateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -163,7 +163,7 @@ public class CreateApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890abcdef</p>

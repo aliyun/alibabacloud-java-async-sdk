@@ -88,7 +88,7 @@ public class CancelSparkWarehouseBatchSQLRequest extends Request {
         } 
 
         /**
-         * <p>The name of the client, which can be up to 16 characters in length. Specify a descriptive name that makes it easy to identify.</p>
+         * <p>The client name for auxiliary recording. The value is a meaningful string of up to 16 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>DMS</p>
@@ -112,7 +112,7 @@ public class CancelSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * <p>The query ID of the Spark SQL statement.</p>
+         * <p>The execution ID of the Spark SQL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -293,7 +293,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
              * <p>The name of the detection item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Oversized non-partitioned tables</p>
+             * <p>Oversized non-partitioned table</p>
              */
             public Builder name(String name) {
                 this.name = name;

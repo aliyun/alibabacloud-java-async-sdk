@@ -106,9 +106,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
+         * <p>The end time of the query. The time is in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-11T15:01Z</p>
@@ -131,7 +131,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried performance metrics.</p>
+         * <p>The list of cluster performance metrics.</p>
          */
         public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
@@ -150,7 +150,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-10T23:56Z</p>
@@ -245,7 +245,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the performance metric value. For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</p>
+             * <p>The name of the performance metric (monitoring metric value name). For more information, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>AnalyticDB_Storage_CPU_Avg_Usage_Percentage</p>
@@ -256,7 +256,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the cluster.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>{instance_name: &quot;am-***&quot;}</p>
@@ -267,7 +267,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * TranslateKey.
+             * <p>The key used for internationalization translation. You can ignore this parameter in most cases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AnalyticDB_RP_WaitTime</p>
              */
             public Builder translateKey(String translateKey) {
                 this.translateKey = translateKey;
@@ -275,7 +278,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the performance metric at different points in time.</p>
+             * <p>The performance values at different points in time.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -366,7 +369,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried performance metric data.</p>
+             * <p>The list of performance data.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;
@@ -374,7 +377,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the performance metric.</p>
+             * <p>The unit of the monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>%</p>

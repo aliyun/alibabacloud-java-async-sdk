@@ -67,7 +67,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried cluster.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -144,13 +144,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/179253.html">TagResources</a> operation to add tags to a cluster.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>tag1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,10 +152,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,10 +325,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-03-10T10:28:34Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -345,10 +333,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-03-10T09:28:34Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -356,10 +341,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the job step.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Prepare resources</p>
+             * StepDesc.
              */
             public Builder stepDesc(String stepDesc) {
                 this.stepDesc = stepDesc;
@@ -367,10 +349,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job step.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PrepareResources</p>
+             * StepName.
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -378,10 +357,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the job step. Unit: %.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * StepProgress.
              */
             public Builder stepProgress(String stepProgress) {
                 this.stepProgress = stepProgress;
@@ -389,15 +365,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job step. Valid values:</p>
-             * <ul>
-             * <li>NOT_RUN</li>
-             * <li>RUNNING</li>
-             * <li>SUCCEED</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RUNNING</p>
+             * StepStatus.
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;
@@ -544,10 +512,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the job.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ScaleUpDBCluster</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -555,10 +520,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the job. Unit: %.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -566,15 +528,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
-             * <ul>
-             * <li>NOT_RUN</li>
-             * <li>RUNNING</li>
-             * <li>SUCCEED</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RUNNING</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -582,7 +536,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job steps.</p>
+             * StepList.
              */
             public Builder stepList(TaskInfoStepList stepList) {
                 this.stepList = stepList;
@@ -1263,10 +1217,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * ClickhouseEngineCacheSize.
              */
             public Builder clickhouseEngineCacheSize(Integer clickhouseEngineCacheSize) {
                 this.clickhouseEngineCacheSize = clickhouseEngineCacheSize;
@@ -1274,14 +1225,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ClickHouse wide table engine is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ClickhouseEngineEnabled.
              */
             public Builder clickhouseEngineEnabled(Boolean clickhouseEngineEnabled) {
                 this.clickhouseEngineEnabled = clickhouseEngineEnabled;
@@ -1289,14 +1233,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>ads</strong>: pay-as-you-go.</li>
-             * <li><strong>ads_pre</strong>: subscription.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ads_pre</p>
+             * CommodityCode.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -1304,10 +1241,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16ACU</p>
+             * ComputeResource.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -1315,10 +1249,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of computing resources in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>48ACU</p>
+             * ComputeResourceTotal.
              */
             public Builder computeResourceTotal(String computeResourceTotal) {
                 this.computeResourceTotal = computeResourceTotal;
@@ -1326,10 +1257,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint that is used to connect to the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-wz9509beptiz****.ads.aliyuncs.com</p>
+             * ConnectionString.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -1337,10 +1265,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-07-01T09:50:18Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1348,10 +1273,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adb_test</p>
+             * DBClusterDescription.
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -1359,10 +1281,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-wz9509beptiz****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -1370,10 +1289,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. <strong>VPC</strong> is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * DBClusterNetworkType.
              */
             public Builder DBClusterNetworkType(String DBClusterNetworkType) {
                 this.DBClusterNetworkType = DBClusterNetworkType;
@@ -1381,21 +1297,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Preparing</strong></li>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Running</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * <li><strong>Restoring</strong></li>
-             * <li><strong>ClassChanging</strong></li>
-             * <li><strong>NetAddressCreating</strong></li>
-             * <li><strong>NetAddressDeleting</strong></li>
-             * <li><strong>NetAddressModifying</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * DBClusterStatus.
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -1403,10 +1305,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. By default, <strong>Common</strong> is returned, which indicates a common cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Common</p>
+             * DBClusterType.
              */
             public Builder DBClusterType(String DBClusterType) {
                 this.DBClusterType = DBClusterType;
@@ -1414,10 +1313,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. <strong>5.0</strong> is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5.0</p>
+             * DBVersion.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -1433,10 +1329,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine of the cluster. <strong>AnalyticDB</strong> is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AnalyticDB</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1444,10 +1337,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor version of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3.1.16</p>
+             * EngineVersion.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -1455,14 +1345,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster expires.</p>
-             * <ul>
-             * <li>If the billing method of the cluster is subscription, the actual expiration time is returned.</li>
-             * <li>If the billing method of the cluster is pay-as-you-go, null is returned.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-10-01T09:50:18Z</p>
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1470,22 +1353,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the subscription cluster has expired. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * <blockquote>
-             * </blockquote>
-             * <ul>
-             * <li><p>If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see <a href="https://help.aliyun.com/document_detail/135248.html">Renewal policy</a>.</p>
-             * </li>
-             * <li><p>This parameter is not returned for pay-as-you-go clusters.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -1493,13 +1361,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the key that is used to encrypt disk data.</p>
-             * <blockquote>
-             * <p> This parameter is returned only when disk encryption is enabled.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>e1935511-cf88-1123-a0f8-1be8d251****</p>
+             * KmsId.
              */
             public Builder kmsId(String kmsId) {
                 this.kmsId = kmsId;
@@ -1507,15 +1369,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock mode of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Unlock</strong>: The cluster is not locked.</li>
-             * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
-             * <li><strong>LockByExpiration</strong>: The cluster is automatically locked due to cluster expiration.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ManualLock</p>
+             * LockMode.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1523,13 +1377,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the cluster is locked.</p>
-             * <blockquote>
-             * <p> This parameter is returned only when the cluster was locked. <strong>instance_expire</strong> is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>instance_expire</p>
+             * LockReason.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1537,13 +1385,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maintenance window of the cluster. The time is displayed in the <code>HH:mmZ-HH:mmZ</code> format in UTC.</p>
-             * <blockquote>
-             * <p> For more information about maintenance windows, see <a href="https://help.aliyun.com/document_detail/122569.html">Configure a maintenance window</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>04:00Z-05:00Z</p>
+             * MaintainTime.
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -1551,10 +1393,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of the cluster. By default, <strong>flexible</strong> is returned, which indicates that the cluster is in elastic mode.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>flexible</p>
+             * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1562,14 +1401,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-             * <li><strong>Prepaid</strong>: subscription.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Prepaid</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1577,10 +1409,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used to connect to the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3306</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1588,10 +1417,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * ProductForm.
              */
             public Builder productForm(String productForm) {
                 this.productForm = productForm;
@@ -1599,14 +1425,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>BasicVersion</strong>: Basic Edition.</li>
-             * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>BasicVersion</p>
+             * ProductVersion.
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -1614,10 +1433,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1625,10 +1441,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24ACU</p>
+             * ReservedACU.
              */
             public Builder reservedACU(String reservedACU) {
                 this.reservedACU = reservedACU;
@@ -1636,10 +1449,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * ReservedNodeCount.
              */
             public Builder reservedNodeCount(Integer reservedNodeCount) {
                 this.reservedNodeCount = reservedNodeCount;
@@ -1647,10 +1457,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * ReservedNodeSize.
              */
             public Builder reservedNodeSize(String reservedNodeSize) {
                 this.reservedNodeSize = reservedNodeSize;
@@ -1658,10 +1465,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmyiu4ekp****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1685,10 +1489,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24ACU</p>
+             * StorageResource.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;
@@ -1696,10 +1497,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of storage resources in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24ACU</p>
+             * StorageResourceTotal.
              */
             public Builder storageResourceTotal(String storageResourceTotal) {
                 this.storageResourceTotal = storageResourceTotal;
@@ -1707,7 +1505,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved parameters.</p>
+             * SupportedFeatures.
              */
             public Builder supportedFeatures(java.util.Map<String, String> supportedFeatures) {
                 this.supportedFeatures = supportedFeatures;
@@ -1715,7 +1513,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the cluster.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1723,7 +1521,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job information.</p>
+             * TaskInfo.
              */
             public Builder taskInfo(TaskInfo taskInfo) {
                 this.taskInfo = taskInfo;
@@ -1731,14 +1529,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Elastic Network Interface (ENI) is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * UserENIStatus.
              */
             public Builder userENIStatus(Boolean userENIStatus) {
                 this.userENIStatus = userENIStatus;
@@ -1746,10 +1537,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch connected to the ENI. Separate multiple vSwitches with commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-rj9ixufmywqq98z******,vsw-rj95ij6wcz656v7******</p>
+             * UserENIVSwitchOptions.
              */
             public Builder userENIVSwitchOptions(String userENIVSwitchOptions) {
                 this.userENIVSwitchOptions = userENIVSwitchOptions;
@@ -1757,10 +1545,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC information of the ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-rj9hnedlfm645uj******</p>
+             * UserENIVpcId.
              */
             public Builder userENIVpcId(String userENIVpcId) {
                 this.userENIVpcId = userENIVpcId;
@@ -1768,10 +1553,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone associated with the ENI. Separate multiple zones with commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-k,cn-hangzhou-h</p>
+             * UserENIZoneOptions.
              */
             public Builder userENIZoneOptions(String userENIZoneOptions) {
                 this.userENIZoneOptions = userENIZoneOptions;
@@ -1779,10 +1561,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp13h7uzhulpu****</p>
+             * VPCId.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -1790,10 +1569,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-uf629gydd54ld****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1801,10 +1577,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -460,7 +460,8 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         } 
 
         /**
-         * <p>The Resource Access Management (RAM) role that is created for the trusted Alibaba Cloud account. For more information, see Create a RAM role for a trusted Alibaba Cloud account. The ARN of the RAM role that grants AnalyticDB for MySQL permission to access resources in the source account. Required for cross-account data ingestion.</p>
+         * <p>The RAM role of a trusted entity that is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
+         * The Alibaba Cloud account that owns the AnalyticDB for MySQL cluster must be added as a trusted account to the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>aps</p>
@@ -472,7 +473,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the source Kafka belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the source Kafka instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123************</p>
@@ -484,7 +485,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The advanced configurations.</p>
+         * <p>The advanced configuration.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -511,7 +512,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in the destination region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -525,7 +526,10 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * DataFormatType.
+         * <p>The Kafka message type. Valid values: json, general_canal_json, mongo_canal_json, dataworks_json, and shareplex_json.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json</p>
          */
         public Builder dataFormatType(String dataFormatType) {
             this.putBodyParameter("DataFormatType", dataFormatType);
@@ -534,7 +538,9 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>Enumeration value and description. Single: The source is a single-row JSON record. Multi: source is a JSON array. Output a single JSON record.</p>
+         * <p>The valid values and their descriptions are as follows:
+         * Single: The source is a single-line JSON record.
+         * Multi: The source is a JSON array. A single JSON record is returned as the output.</p>
          * 
          * <strong>example:</strong>
          * <p>Single</p>
@@ -558,7 +564,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the user-defined database.</p>
+         * <p>The user-defined name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -571,7 +577,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The full synchronization configuration.</p>
+         * <p>The configuration for full synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>2ACU</p>
@@ -583,7 +589,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The HUDI configuration of the destination.</p>
+         * <p>The Hudi configuration for the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>hoodie.keep.min.commits=20</p>
@@ -595,7 +601,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The incremental synchronization configuration.</p>
+         * <p>The configuration for incremental synchronization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -608,7 +614,13 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The number of layers that are parsed for nested JSON fields. Valid values: 0: Nested JSON fields are not parsed. 1: parses one layer. 2: Two layers are parsed. 3: Three layers are parsed. 4: Four layers are parsed. By default, one layer is parsed. For more information about how nested JSON fields are parsed, see the Examples of schema fields parsed with different numbers of layers section of this topic.</p>
+         * <p>The number of nested JSON layers to parse. Valid values:
+         * 0: No parsing is performed.
+         * 1: One layer is parsed.
+         * 2: Two layers are parsed.
+         * 3: Three layers are parsed.
+         * 4: Four layers are parsed.
+         * By default, one layer is parsed. For more information about the JSON parsing policy for nested data, see JSON parsing levels and schema field inference examples.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -620,7 +632,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Apache Kafka instance. You can get it in the Kafka console.</p>
+         * <p>The ID of the Kafka instance. Obtain the ID from the Kafka console.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -632,7 +644,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>Kafka Topic ID. You can get it in the Kafka console.</p>
+         * <p>The ID of the Kafka topic. Obtain the ID from the Kafka console.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -656,7 +668,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to fetch in a single batch.</p>
+         * <p>The number of entries to consume in a single batch.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -668,7 +680,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</p>
+         * <p>The destination lakehouse address. This must be a complete OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-xx-zzz/yyy/</p>
@@ -680,7 +692,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The format of the output data.</p>
+         * <p>The output data format.</p>
          * 
          * <strong>example:</strong>
          * <p>HUDI</p>
@@ -702,7 +714,16 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The primary key settings. Contains the uuid policy and mapping policy. The explanation is as follows. Uuid policy: &quot;Strategy&quot;: &quot;uuid&quot;. Mapping policy: &quot;Strategy&quot;: &quot;mapping&quot;, &quot;Values&quot;:[ &quot;f1&quot;, &quot;f2&quot; ], &quot;RecordVersionField&quot;,&quot;xxx&quot; The meaning of the RecordVersionField is the HUDI record version.</p>
+         * <p>The primary key settings. This parameter supports the UUID policy and the mapping policy. The policies are described as follows.
+         * UUID policy: &quot;Strategy&quot;: &quot;uuid&quot;.
+         * Mapping policy:
+         * &quot;Strategy&quot;: &quot;mapping&quot;,
+         * &quot;Values&quot;:[
+         * &quot;f1&quot;,
+         * &quot;f2&quot;
+         * ],
+         * &quot;RecordVersionField&quot;,&quot;xxx&quot;
+         * \<code>RecordVersionField\\</code> specifies the Hudi record version.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;Strategy&quot;: &quot;mapping&quot;</p>
@@ -714,7 +735,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -727,7 +748,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -740,7 +761,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>地域ID。</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -752,7 +773,10 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies the position from which to start consuming messages. Valid values: begin_cursor/end_cursor/timestamp Each corresponds to the earliest /latest /specified time respectively.</p>
+         * <p>The initial consumer offset for Kafka.
+         * Valid values:
+         * begin_cursor, end_cursor, and timestamp.
+         * These values correspond to the earliest offset, the latest offset, and a specified time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -765,7 +789,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the user-defined table.</p>
+         * <p>The user-defined name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -778,7 +802,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The rules for generating the destination database.</p>
+         * <p>The generation rule for the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -790,7 +814,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
         }
 
         /**
-         * <p>The destination type.</p>
+         * <p>The type of the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -900,7 +924,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
             } 
 
             /**
-             * <p>The name of the partition column in the destination table.</p>
+             * <p>The name of the destination field.</p>
              * 
              * <strong>example:</strong>
              * <p>b</p>
@@ -911,7 +935,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
             }
 
             /**
-             * <p>The desired format for the destination partition column.</p>
+             * <p>The type of the destination field.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -922,7 +946,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
             }
 
             /**
-             * <p>The name of the source column to use for partitioning.</p>
+             * <p>The name of the source field.</p>
              * 
              * <strong>example:</strong>
              * <p>a</p>
@@ -933,7 +957,7 @@ public class CreateApsKafkaHudiJobRequest extends Request {
             }
 
             /**
-             * <p>The format of the source field. See the table below for valid values.</p>
+             * <p>The type of the source field.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>

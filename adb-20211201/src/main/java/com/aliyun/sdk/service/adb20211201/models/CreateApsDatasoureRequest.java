@@ -244,7 +244,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the Databricks data source.</p>
+         * <p>The Databricks data source information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -259,7 +259,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The description of the data source.</p>
+         * <p>The data source description.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -271,7 +271,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The data source type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the Hive data source.</p>
+         * <p>The Hive data source information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -312,7 +312,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the source Apache Kafka instance.</p>
+         * <p>The Kafka information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -339,7 +339,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the source PolarDB for MySQL cluster.</p>
+         * <p>The PolarDB for MySQL data source information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -354,7 +354,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the source PolarDB-X instance.</p>
+         * <p>The PolarDB-X data source information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -369,7 +369,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the source ApsaraDB RDS for MySQL instance.</p>
+         * <p>The ApsaraDB RDS for MySQL data source information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -397,7 +397,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The information about the source Simple Log Service (SLS) instance or cluster.</p>
+         * <p>The Simple Log Service (SLS) information for the data source to be created.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -471,7 +471,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>The token that is used to access Databricks.</p>
+             * <p>The access token.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -482,7 +482,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The URL of the workspace.</p>
+             * <p>The workspace URL.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxx</p>
@@ -591,7 +591,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -602,7 +602,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the host.</p>
+             * <p>The host configuration.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -613,7 +613,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The URL of the Hive Metastore.</p>
+             * <p>The MetaStore endpoint.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -624,7 +624,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-uf*******h</p>
@@ -705,7 +705,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the Apache Kafka instance.</p>
+             * <p>The Kafka instance ID.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -716,7 +716,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The topic of the Apache Kafka instance.</p>
+             * <p>The assigned Kafka topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -877,10 +877,10 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the data source is a cross-account resource. Valid values:</p>
+             * <p>Specifies whether cross-account access is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The current network instance is a cross-account resource.</li>
+             * <li><strong>false</strong>: The current network instance is a resource within the current account.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -892,7 +892,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The name of the cross-account role.</p>
+             * <p>The cross-account role.</p>
              * 
              * <strong>example:</strong>
              * <p>test-role</p>
@@ -903,7 +903,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The cross-account UID.</p>
+             * <p>The UID of the cross-account.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789*</p>
@@ -914,7 +914,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The URL used to connect to the custom ApsaraDB RDS for MySQL instance.</p>
+             * <p>The custom RDS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -958,7 +958,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-******</p>
@@ -969,7 +969,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The username used to access the instance.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>test-user-name</p>
@@ -1026,7 +1026,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The OceanBase cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1150,7 +1150,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>The URL used to connect to the read-only instance.</p>
+             * <p>The read-only instance endpoint.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1172,7 +1172,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The password of the database account of the instance.</p>
+             * <p>The password.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1194,7 +1194,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-******</p>
@@ -1205,10 +1205,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The name of the database account of the instance.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <p>user</p>
+             * <p>Username.</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1327,7 +1327,7 @@ public class CreateApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the data source is a cross-account resource.</p>
+             * <p>Specifies whether cross-account access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1338,7 +1338,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The name of the cross-account role.</p>
+             * <p>The role name for cross-account access.</p>
              * 
              * <strong>example:</strong>
              * <p>yyy</p>
@@ -1349,7 +1349,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The cross-account UID.</p>
+             * <p>The UID of the cross-account.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -1360,7 +1360,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The SLS project.</p>
+             * <p>The Simple Log Service (SLS) project.</p>
              * 
              * <strong>example:</strong>
              * <p>test-project</p>
@@ -1371,7 +1371,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The region ID of the source cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1382,7 +1382,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>The name of the SLS Logstore.</p>
+             * <p>sls logstore。</p>
              * 
              * <strong>example:</strong>
              * <p>test-store</p>

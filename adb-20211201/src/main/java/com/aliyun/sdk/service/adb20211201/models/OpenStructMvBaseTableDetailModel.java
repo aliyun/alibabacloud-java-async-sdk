@@ -93,7 +93,10 @@ public class OpenStructMvBaseTableDetailModel extends TeaModel {
         } 
 
         /**
-         * DataVolumn.
+         * <p>The data volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321233</p>
          */
         public Builder dataVolumn(String dataVolumn) {
             this.dataVolumn = dataVolumn;
@@ -101,7 +104,10 @@ public class OpenStructMvBaseTableDetailModel extends TeaModel {
         }
 
         /**
-         * EnableBinlog.
+         * <p>Indicates whether binary logging is enabled for the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBinlog(Boolean enableBinlog) {
             this.enableBinlog = enableBinlog;
@@ -109,7 +115,10 @@ public class OpenStructMvBaseTableDetailModel extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -117,7 +126,10 @@ public class OpenStructMvBaseTableDetailModel extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;

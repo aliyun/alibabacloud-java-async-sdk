@@ -189,7 +189,10 @@ public class GetDatabaseObjectsRequest extends Request {
          * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DatabaseName&quot;}.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DbName&quot;}</p>
+         * <p>{
+         *       &quot;Type&quot;: &quot;Desc&quot;,
+         *       &quot;Field&quot;: &quot;DatabaseName&quot;
+         * }</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);

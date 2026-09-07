@@ -82,7 +82,7 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
         /**
          * <p>The details about the access denial.</p>
          * <blockquote>
-         * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * <p>This field is returned only when RAM authentication fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,11 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The delete status.</p>
+         * <p>The deletion result. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: Succeeded.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

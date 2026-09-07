@@ -106,7 +106,10 @@ public class SparkAttemptInfo extends TeaModel {
         } 
 
         /**
-         * AttemptId.
+         * <p>The attempt ID of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202207151211hz****-0001</p>
          */
         public Builder attemptId(String attemptId) {
             this.attemptId = attemptId;
@@ -114,7 +117,7 @@ public class SparkAttemptInfo extends TeaModel {
         }
 
         /**
-         * Detail.
+         * <p>The information about the Spark application.</p>
          */
         public Builder detail(Detail detail) {
             this.detail = detail;
@@ -122,7 +125,10 @@ public class SparkAttemptInfo extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The alert message returned, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WARN: Disk is full</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class SparkAttemptInfo extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The attempt priority of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder priority(String priority) {
             this.priority = priority;
@@ -138,7 +147,23 @@ public class SparkAttemptInfo extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The state of the Spark application. Valid values:</p>
+         * <ul>
+         * <li><strong>SUBMITTED</strong></li>
+         * <li><strong>STARTING</strong></li>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>FAILING</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * <li><strong>KILLING</strong></li>
+         * <li><strong>KILLED</strong></li>
+         * <li><strong>SUCCEEDING</strong></li>
+         * <li><strong>COMPLETED</strong></li>
+         * <li><strong>FATAL</strong></li>
+         * <li><strong>UNKNOWN</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUBMITTED</p>
          */
         public Builder state(String state) {
             this.state = state;

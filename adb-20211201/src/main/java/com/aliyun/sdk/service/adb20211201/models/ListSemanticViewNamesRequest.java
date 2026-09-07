@@ -74,6 +74,7 @@ public class ListSemanticViewNamesRequest extends Request {
         } 
 
         /**
+         * <p>The ADB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class ListSemanticViewNamesRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The name of the schema to which the semantic view belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);

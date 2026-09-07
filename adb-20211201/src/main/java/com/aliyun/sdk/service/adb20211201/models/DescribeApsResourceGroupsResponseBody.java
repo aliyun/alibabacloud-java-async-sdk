@@ -106,7 +106,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried resource groups.</p>
+         * <p>The information about the resource groups.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,12 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Additional information about the call. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li><p>Success is returned if the request is successful.</p>
+         * </li>
+         * <li><p>An error code is returned if the request fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,8 +155,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>True</strong></p>
+         * </li>
+         * <li><p><strong>False</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,8 +295,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the resource group is available. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>True</strong></p>
+             * </li>
+             * <li><p><strong>False</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -304,7 +310,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CuOptions.
+             * <p>The resource gradient values.</p>
              */
             public Builder cuOptions(java.util.List<Long> cuOptions) {
                 this.cuOptions = cuOptions;
@@ -325,11 +331,13 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             /**
              * <p>The type of the resource group. Valid values:</p>
              * <ul>
-             * <li><strong>Interactive</strong></li>
-             * <li><strong>Job</strong></li>
+             * <li><p><strong>Interactive</strong></p>
+             * </li>
+             * <li><p><strong>Job</strong></p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+             * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -341,7 +349,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of remaining computing resources. Unit: ACUs.</p>
+             * <p>The remaining computing resources, in ACU.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -352,10 +360,12 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
+             * <p>The maximum reserved computing resources, in ACU.</p>
              * <ul>
-             * <li>If the value of GroupType is <strong>Interactive</strong>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 16 ACUs.</li>
-             * <li>If the value of GroupType is <strong>Job</strong>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 8 ACUs.</li>
+             * <li><p>If GroupType is <strong>Interactive</strong>, the maximum reserved computing resources are the current unallocated resources of the cluster, and the step size is 16 ACU.</p>
+             * </li>
+             * <li><p>If GroupType is <strong>Job</strong>, the maximum reserved computing resources are the current unallocated resources of the cluster, and the step size is 8 ACU.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -367,10 +377,12 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum amount of reserved computing resources. Unit: ACUs.</p>
+             * <p>The minimum reserved computing resources, in ACU.</p>
              * <ul>
-             * <li>If the value of GroupType is <strong>Interactive</strong>, 16 is returned.</li>
-             * <li>If the value of GroupType is <strong>Job</strong>, 0 is returned.</li>
+             * <li><p>If GroupType is <strong>Interactive</strong>, the minimum reserved computing resources are 16 ACU.</p>
+             * </li>
+             * <li><p>If GroupType is <strong>Job</strong>, the minimum reserved computing resources are 0 ACU.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -441,7 +453,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried resource groups.</p>
+             * <p>The resource groups.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -449,10 +461,12 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step size of resources. Unit: AnalyticDB compute units (ACUs).</p>
+             * <p>The step size of the resource group, in ACU.</p>
              * <ul>
-             * <li>If the value of GroupType is <strong>Interactive</strong>, 16 is returned.</li>
-             * <li>If the value of GroupType is <strong>Job</strong>, 8 is returned.</li>
+             * <li><p>If GroupType is <strong>Interactive</strong>, the step size is 16 ACU.</p>
+             * </li>
+             * <li><p>If GroupType is <strong>Job</strong>, the step size is 8 ACU.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

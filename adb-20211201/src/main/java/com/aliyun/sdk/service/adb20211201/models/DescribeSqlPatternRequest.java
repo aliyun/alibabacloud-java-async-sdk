@@ -285,7 +285,7 @@ public class DescribeSqlPatternRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2022-08-30T12:10:00Z</p>
+         * <p>2022-08-30</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

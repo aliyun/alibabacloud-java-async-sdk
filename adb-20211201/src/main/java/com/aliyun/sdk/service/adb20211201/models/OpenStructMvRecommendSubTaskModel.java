@@ -158,7 +158,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-16 16:56</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -166,7 +169,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * MinRewriteQueryCount.
+         * <p>The minimum number of slow queries that match the pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minRewriteQueryCount(Integer minRewriteQueryCount) {
             this.minRewriteQueryCount = minRewriteQueryCount;
@@ -174,7 +180,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * MinRewriteQueryPattern.
+         * <p>The number of minimum acceleration patterns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder minRewriteQueryPattern(Integer minRewriteQueryPattern) {
             this.minRewriteQueryPattern = minRewriteQueryPattern;
@@ -182,7 +191,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * ScanQueriesCount.
+         * <p>The number of queries scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder scanQueriesCount(Long scanQueriesCount) {
             this.scanQueriesCount = scanQueriesCount;
@@ -190,7 +202,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * SlowQueryThreshold.
+         * <p>The wait threshold for slow queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder slowQueryThreshold(Integer slowQueryThreshold) {
             this.slowQueryThreshold = slowQueryThreshold;
@@ -198,7 +213,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-16 16:55</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -206,7 +224,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Current execution status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -214,7 +235,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * SubQueriesCount.
+         * <p>The number of newly generated MV recommendations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder subQueriesCount(Long subQueriesCount) {
             this.subQueriesCount = subQueriesCount;
@@ -222,7 +246,10 @@ public class OpenStructMvRecommendSubTaskModel extends TeaModel {
         }
 
         /**
-         * SubtaskId.
+         * <p>The record ID of the task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder subtaskId(Long subtaskId) {
             this.subtaskId = subtaskId;

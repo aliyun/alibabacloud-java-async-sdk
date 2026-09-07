@@ -105,6 +105,7 @@ public class CreateSemanticViewRequest extends Request {
         } 
 
         /**
+         * <p>ADB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class CreateSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>YAML definition of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class CreateSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>Schema name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class CreateSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>Semantic view name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -171,7 +171,7 @@ public class DescribeViewJobsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp1ub9grke1****</p>
@@ -183,7 +183,7 @@ public class DescribeViewJobsRequest extends Request {
         }
 
         /**
-         * <p>The owner of the view.</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -195,7 +195,7 @@ public class DescribeViewJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the view.</p>
+         * <p>The view name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_mv</p>
@@ -207,11 +207,13 @@ public class DescribeViewJobsRequest extends Request {
         }
 
         /**
-         * <p>The type of the view.</p>
+         * <p>The view type.</p>
          * <p>Valid values:</p>
-         * <p>-VIRTUAL_VIEW</p>
-         * <p>-MATERIALIZED_VIEW</p>
-         * <p>This parameter is empty by default.</p>
+         * <ul>
+         * <li>VIRTUAL_VIEW</li>
+         * <li>MATERIALIZED_VIEW</li>
+         * </ul>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>MATERIALIZED_VIEW</p>
@@ -223,20 +225,21 @@ public class DescribeViewJobsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. Valid values for Type:</p>
+         * <p>The sort field.</p>
+         * <p>Valid values for the sort order:</p>
          * <ul>
-         * <li>Asc.</li>
-         * <li>Desc.</li>
+         * <li>Asc</li>
+         * <li>Desc</li>
          * </ul>
-         * <p>Valid values for Field:</p>
+         * <p>Valid values for the sort field:</p>
          * <ul>
-         * <li>StartTime.</li>
-         * <li>EndTime;</li>
-         * <li>ScheduledStartTime;</li>
+         * <li>StartTime</li>
+         * <li>EndTime</li>
+         * <li>ScheduledStartTime</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
+         * <p>{\&quot;Field\&quot;:\&quot;StartTime\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -257,7 +260,7 @@ public class DescribeViewJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

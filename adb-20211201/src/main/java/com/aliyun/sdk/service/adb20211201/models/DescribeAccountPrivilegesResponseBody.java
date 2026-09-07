@@ -106,7 +106,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the permissions.</p>
+         * <p>A list of privilege details.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number. This value matches the <code>PageNumber</code> input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page. This value matches the <code>PageSize</code> input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DA32480A-E3E5-1BE7-BA98-724551DC04C8</p>
@@ -147,7 +147,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count of privileges at the specified privilege level.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -242,7 +242,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the column.</p>
+             * <p>The column name.</p>
              * 
              * <strong>example:</strong>
              * <p>column1</p>
@@ -253,7 +253,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>db1</p>
@@ -264,7 +264,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission object.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>a test column</p>
@@ -275,7 +275,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>tabl1</p>
@@ -358,7 +358,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The objects on which the permission takes effect, including databases, tables, columns, and additional descriptions.</p>
+             * <p>The privilege object, which specifies the database, table, column, and description.</p>
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -366,7 +366,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission level of the permission. Valid values: <code>Global</code>, <code>Database</code>, <code>Table</code>, and <code>Column</code>. You can call the <code>DescribeEnabledPrivileges</code> parameter to query the permission level of a specific permission.</p>
+             * <p>The privilege level. Valid values: <code>Global</code>, <code>Database</code>, <code>Table</code>, and <code>Column</code>. The <code>DescribeEnabledPrivileges</code> API returns this value.</p>
              * 
              * <strong>example:</strong>
              * <p>Column</p>
@@ -377,7 +377,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission. You can call the <code>DescribeEnabledPrivileges</code> operation to query the name of the permission.</p>
+             * <p>A list of privileges.</p>
              */
             public Builder privileges(java.util.List<String> privileges) {
                 this.privileges = privileges;

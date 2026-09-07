@@ -316,7 +316,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
              * <p>The detection result.</p>
              * 
              * <strong>example:</strong>
-             * <p>OK</p>
+             * <p>Multiple tables are detected with excessive primary keys.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -327,7 +327,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
              * <p>The name of the detection item.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Excessive primary keys detection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -499,7 +499,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
              * <p>The queried primary key fields.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>id,date</p>
              */
             public Builder primaryKeyColumns(String primaryKeyColumns) {
                 this.primaryKeyColumns = primaryKeyColumns;
@@ -510,7 +510,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
              * <p>The number of primary key fields.</p>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>2</p>
              */
             public Builder primaryKeyCount(Integer primaryKeyCount) {
                 this.primaryKeyCount = primaryKeyCount;

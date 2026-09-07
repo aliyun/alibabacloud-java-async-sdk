@@ -184,7 +184,10 @@ public class ColDetailModel extends TeaModel {
         } 
 
         /**
-         * ColumnName.
+         * <p>The logical name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder columnName(String columnName) {
             this.columnName = columnName;
@@ -192,7 +195,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the column was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05\&quot;T\&quot;13:17:55\&quot;Z\&quot;</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -200,7 +206,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -208,7 +217,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * DistributeKey.
+         * <p>Indicates whether the column is the distribution key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder distributeKey(Boolean distributeKey) {
             this.distributeKey = distributeKey;
@@ -216,7 +228,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * Nullable.
+         * <p>Indicates whether the column can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder nullable(Boolean nullable) {
             this.nullable = nullable;
@@ -224,7 +239,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * PartitionKey.
+         * <p>Indicates whether the column is the partition key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder partitionKey(Boolean partitionKey) {
             this.partitionKey = partitionKey;
@@ -232,7 +250,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * PrimaryKey.
+         * <p>Indicates whether the column is the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder primaryKey(Boolean primaryKey) {
             this.primaryKey = primaryKey;
@@ -240,7 +261,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>The logical name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaName</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -248,7 +272,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The logical name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -256,7 +283,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The data type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -264,7 +294,10 @@ public class ColDetailModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the column was updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05\&quot;T\&quot;13:17:55\&quot;Z\&quot;</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

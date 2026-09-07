@@ -119,7 +119,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code or the error code.</p>
+         * <p>The API status or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -130,7 +130,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The usage details of cluster resources.</p>
+         * <p>The resource usage details of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +141,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code returned. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the operation is asynchronously implemented, the job ID is returned.</p>
+         * <p>If the creation operation is implemented asynchronously, a specific JobId is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -163,7 +163,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -174,10 +174,10 @@ public class CreateLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

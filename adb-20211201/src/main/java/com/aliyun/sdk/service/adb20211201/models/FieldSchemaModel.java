@@ -392,7 +392,10 @@ public class FieldSchemaModel extends TeaModel {
         } 
 
         /**
-         * AutoIncrement.
+         * <p>Indicates whether the column is auto-incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoIncrement(Boolean autoIncrement) {
             this.autoIncrement = autoIncrement;
@@ -400,7 +403,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * ColumnRawName.
+         * <p>The original name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ColumnRawName</p>
          */
         public Builder columnRawName(String columnRawName) {
             this.columnRawName = columnRawName;
@@ -408,7 +414,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Comment.
+         * <p>The description of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -416,7 +425,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * CompressFloatUseShort.
+         * <p>Indicates whether FLOAT data is compressed to SHORT data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder compressFloatUseShort(Boolean compressFloatUseShort) {
             this.compressFloatUseShort = compressFloatUseShort;
@@ -424,7 +436,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Compression.
+         * <p>The compression method of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compression</p>
          */
         public Builder compression(String compression) {
             this.compression = compression;
@@ -432,7 +447,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the column was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -440,7 +458,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>long</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -448,7 +469,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * DatabaseName.
+         * <p>The logical name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>databaseName</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -456,7 +480,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * DefaultValue.
+         * <p>The default value of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -464,7 +491,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Delimiter.
+         * <p>The delimiter of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>delimiter</p>
          */
         public Builder delimiter(String delimiter) {
             this.delimiter = delimiter;
@@ -472,7 +502,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Encode.
+         * <p>The encryption method of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>encode</p>
          */
         public Builder encode(String encode) {
             this.encode = encode;
@@ -480,7 +513,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * IsPartitionKey.
+         * <p>Indicates whether the column is the partition key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPartitionKey(Boolean isPartitionKey) {
             this.isPartitionKey = isPartitionKey;
@@ -488,7 +524,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * MappedName.
+         * <p>The mapping name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mappedName</p>
          */
         public Builder mappedName(String mappedName) {
             this.mappedName = mappedName;
@@ -496,7 +535,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -504,7 +546,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Nullable.
+         * <p>Indicates whether the column can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nullable(Boolean nullable) {
             this.nullable = nullable;
@@ -512,7 +557,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * OnUpdate.
+         * <p>The update condition of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>onUpdate</p>
          */
         public Builder onUpdate(String onUpdate) {
             this.onUpdate = onUpdate;
@@ -520,7 +568,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * OrdinalPosition.
+         * <p>The location of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder ordinalPosition(Long ordinalPosition) {
             this.ordinalPosition = ordinalPosition;
@@ -528,7 +579,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * PhysicalColumnName.
+         * <p>The physical name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PhysicalColumnName</p>
          */
         public Builder physicalColumnName(String physicalColumnName) {
             this.physicalColumnName = physicalColumnName;
@@ -536,7 +590,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * PkPosition.
+         * <p>The location of the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder pkPosition(Long pkPosition) {
             this.pkPosition = pkPosition;
@@ -544,7 +601,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Precision.
+         * <p>The precision of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder precision(Long precision) {
             this.precision = precision;
@@ -552,7 +612,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Primarykey.
+         * <p>Indicates whether the column is the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder primarykey(Boolean primarykey) {
             this.primarykey = primarykey;
@@ -560,7 +623,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Scale.
+         * <p>The scale of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scale(Long scale) {
             this.scale = scale;
@@ -568,7 +634,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The logical name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -576,7 +645,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Tokenizer.
+         * <p>The token of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tokenizer</p>
          */
         public Builder tokenizer(String tokenizer) {
             this.tokenizer = tokenizer;
@@ -584,7 +656,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>long</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -592,7 +667,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the index was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -600,7 +678,10 @@ public class FieldSchemaModel extends TeaModel {
         }
 
         /**
-         * ValueType.
+         * <p>The value type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valueType</p>
          */
         public Builder valueType(String valueType) {
             this.valueType = valueType;

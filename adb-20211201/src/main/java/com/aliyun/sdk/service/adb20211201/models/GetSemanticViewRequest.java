@@ -90,6 +90,7 @@ public class GetSemanticViewRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

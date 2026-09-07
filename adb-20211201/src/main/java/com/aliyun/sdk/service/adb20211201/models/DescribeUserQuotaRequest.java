@@ -78,7 +78,7 @@ public class DescribeUserQuotaRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>amv-bp1qjt3o18d86987</p>
+         * <p>amv-bp1qjt3o18d8****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

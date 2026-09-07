@@ -189,7 +189,11 @@ public class CreatePerformanceViewRequest extends Request {
         } 
 
         /**
-         * <p>The type of the view.</p>
+         * <p>The type of the original monitoring dashboard from which the current monitoring dashboard is copied. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: basic dashboard.</li>
+         * <li><strong>Advanced</strong>: advanced dashboard.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Basic</p>
@@ -201,9 +205,10 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -217,7 +222,7 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+         * <p>Specifies whether to populate the keys from the original monitoring dashboard when viewing the monitoring dashboard. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -253,7 +258,7 @@ public class CreatePerformanceViewRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -285,7 +290,7 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * <p>The information about the monitoring view.</p>
+         * <p>The details of the monitoring dashboard.</p>
          * <p>This parameter is required.</p>
          */
         public Builder viewDetail(ViewDetail viewDetail) {
@@ -296,11 +301,11 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * <p>The name of the view.</p>
+         * <p>The name of the monitoring dashboard.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>viewname</p>
+         * <p>Custom-All metrics-2 columns-Linked</p>
          */
         public Builder viewName(String viewName) {
             this.putQueryParameter("ViewName", viewName);
@@ -368,7 +373,7 @@ public class CreatePerformanceViewRequest extends Request {
             } 
 
             /**
-             * <p>The name of the metric.</p>
+             * <p>The key of the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>AnalyticDB_CPU</p>
@@ -379,7 +384,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to select the metric. Valid values:</p>
+             * <p>Specifies whether the metric is selected. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong></li>
@@ -455,10 +460,10 @@ public class CreatePerformanceViewRequest extends Request {
             /**
              * <p>The name of the metric category. Valid values:</p>
              * <ul>
-             * <li><strong>Node</strong></li>
-             * <li><strong>DiskData</strong></li>
-             * <li><strong>WorkLoad</strong></li>
-             * <li><strong>ResourceGroup</strong></li>
+             * <li><strong>Node</strong>: node resource metrics.</li>
+             * <li><strong>DiskData</strong>: disk metrics.</li>
+             * <li><strong>WorkLoad</strong>: workload metrics.</li>
+             * <li><strong>ResourceGroup</strong>: resource group metrics.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -470,7 +475,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * <p>The metrics.</p>
+             * <p>The list of metrics.</p>
              */
             public Builder keys(java.util.List<Keys> keys) {
                 this.keys = keys;
@@ -550,7 +555,7 @@ public class CreatePerformanceViewRequest extends Request {
             } 
 
             /**
-             * <p>The metric categories.</p>
+             * <p>The list of metric categories.</p>
              */
             public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
@@ -558,7 +563,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the filter interaction feature. Valid values:</p>
+             * <p>Indicates whether the linkage chart is enabled. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong></li>
@@ -573,7 +578,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * <p>The number of charts to display in each row.</p>
+             * <p>The number of charts displayed per row.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

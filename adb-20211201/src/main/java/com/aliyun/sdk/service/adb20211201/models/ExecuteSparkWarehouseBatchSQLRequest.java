@@ -163,7 +163,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
          * <p>The name of the client.</p>
          * 
          * <strong>example:</strong>
-         * <p>DataWorks</p>
+         * <p>Dataworks。</p>
          */
         public Builder agency(String agency) {
             this.putBodyParameter("Agency", agency);
@@ -214,7 +214,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
          * 
          * <strong>example:</strong>
          * <p>CREATE TABLE user(id INT, name STRING);
-         * INSERT INTO t VALUE(1, &quot;Bob&quot;);
+         * INSERT INTO t VALUE(1, \&quot;Bob\&quot;);
          * SELECT * FROM t;</p>
          */
         public Builder query(String query) {

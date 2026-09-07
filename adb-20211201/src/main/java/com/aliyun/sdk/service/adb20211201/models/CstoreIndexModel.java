@@ -158,7 +158,7 @@ public class CstoreIndexModel extends TeaModel {
         } 
 
         /**
-         * ColumnOrds.
+         * <p>The order of index columns.</p>
          */
         public Builder columnOrds(java.util.List<String> columnOrds) {
             this.columnOrds = columnOrds;
@@ -166,7 +166,10 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the index was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -174,7 +177,10 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * DatabaseName.
+         * <p>The logical name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleDatabase</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -182,7 +188,7 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * IndexColumns.
+         * <p>The index columns.</p>
          */
         public Builder indexColumns(java.util.List<FieldSchemaModel> indexColumns) {
             this.indexColumns = indexColumns;
@@ -190,7 +196,10 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * IndexName.
+         * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>indexName</p>
          */
         public Builder indexName(String indexName) {
             this.indexName = indexName;
@@ -198,7 +207,10 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * IndexType.
+         * <p>The type of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder indexType(String indexType) {
             this.indexType = indexType;
@@ -206,7 +218,7 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>The properties.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -214,7 +226,10 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * PhysicalTableName.
+         * <p>The physical name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>physicalDatabase</p>
          */
         public Builder physicalTableName(String physicalTableName) {
             this.physicalTableName = physicalTableName;
@@ -222,7 +237,10 @@ public class CstoreIndexModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the index was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

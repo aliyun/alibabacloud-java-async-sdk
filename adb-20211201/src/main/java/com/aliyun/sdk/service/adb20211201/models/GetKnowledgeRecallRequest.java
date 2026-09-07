@@ -103,6 +103,7 @@ public class GetKnowledgeRecallRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class GetKnowledgeRecallRequest extends Request {
         }
 
         /**
+         * <p>The question for knowledge base recall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class GetKnowledgeRecallRequest extends Request {
         }
 
         /**
-         * Topk.
+         * <p>The top K number of related files to recall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder topk(Integer topk) {
             this.putQueryParameter("Topk", topk);
@@ -136,7 +141,10 @@ public class GetKnowledgeRecallRequest extends Request {
         }
 
         /**
-         * User.
+         * <p>The username. Only files that this user has permission to access are recalled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_name1</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

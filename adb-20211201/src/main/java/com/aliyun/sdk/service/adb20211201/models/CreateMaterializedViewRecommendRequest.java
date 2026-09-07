@@ -284,7 +284,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>Pattern匹配的最少慢查询个数</p>
+         * <p>The minimum number of slow queries matched by a pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -296,7 +296,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>最小可加速的Pattern数量</p>
+         * <p>The minimum number of patterns that can be accelerated.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -356,7 +356,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>The time range for scanning data. Unit: days. Default value: 3.</p>
+         * <p>The scan time range. Unit: days. Default value: 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -368,7 +368,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>This parameter is valid only when SchedulingPolicy is set to weekly. Valid values:</p>
+         * <p>Valid only when SchedulingPolicy is set to weekly. Valid values:</p>
          * <ul>
          * <li>Monday</li>
          * <li>Tuesday</li>
@@ -378,7 +378,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
          * <li>Saturday</li>
          * <li>Sunday</li>
          * </ul>
-         * <p>Separate multiple days with commas (,).</p>
+         * <p>Separate multiple days with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>Monday;Wednesday</p>
@@ -390,9 +390,9 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>The scheduling policy of the recommendation task. Valid values:</p>
-         * <p>daily</p>
-         * <p>weekly</p>
+         * <p>The recommendation policy. Valid values:</p>
+         * <p>daily: scheduled on a daily basis.</p>
+         * <p>weekly: scheduled on a weekly basis.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -405,7 +405,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>慢查询阈值</p>
+         * <p>The slow query threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -417,7 +417,7 @@ public class CreateMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * <p>The execution time of the recommendation task. Specify the time in the HH:MM:SS format.</p>
+         * <p>The execution time of the task. Format: HH:MM:SS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

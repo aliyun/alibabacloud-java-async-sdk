@@ -80,7 +80,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The authentication failure message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication failed.</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +91,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried download tasks.</p>
+         * <p>A list of download tasks.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -204,7 +207,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The download job ID.</p>
+             * <p>The ID of the download task.</p>
              * 
              * <strong>example:</strong>
              * <p>636890</p>
@@ -215,7 +218,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned if the download job failed.</p>
+             * <p>The exception message returned if the download task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>The query result is empty.</p>
@@ -237,11 +240,14 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the download job. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong></li>
-             * <li><strong>finished</strong></li>
-             * <li><strong>failed</strong></li>
+             * <li><p><strong>running</strong>: The task is in progress.</p>
+             * </li>
+             * <li><p><strong>finished</strong>: The task is complete.</p>
+             * </li>
+             * <li><p><strong>failed</strong>: The task failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -253,7 +259,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the file.</p>
+             * <p>The download URL of the result file.</p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -1,0 +1,131 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.adb20211201.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link AddKnowledgeUploadUserResponse} extends {@link TeaModel}
+ *
+ * <p>AddKnowledgeUploadUserResponse</p>
+ */
+public class AddKnowledgeUploadUserResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private AddKnowledgeUploadUserResponseBody body;
+
+    private AddKnowledgeUploadUserResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static AddKnowledgeUploadUserResponse create() {
+        return new BuilderImpl().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public AddKnowledgeUploadUserResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<AddKnowledgeUploadUserResponse, Builder> {
+
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(AddKnowledgeUploadUserResponseBody body);
+
+        @Override
+        AddKnowledgeUploadUserResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<AddKnowledgeUploadUserResponse, Builder>
+            implements Builder {
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
+        private AddKnowledgeUploadUserResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(AddKnowledgeUploadUserResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(AddKnowledgeUploadUserResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public AddKnowledgeUploadUserResponse build() {
+            return new AddKnowledgeUploadUserResponse(this);
+        } 
+
+    } 
+
+}

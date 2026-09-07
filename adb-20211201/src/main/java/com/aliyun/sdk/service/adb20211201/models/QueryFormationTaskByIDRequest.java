@@ -105,6 +105,7 @@ public class QueryFormationTaskByIDRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class QueryFormationTaskByIDRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class QueryFormationTaskByIDRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class QueryFormationTaskByIDRequest extends Request {
         }
 
         /**
+         * <p>The task type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

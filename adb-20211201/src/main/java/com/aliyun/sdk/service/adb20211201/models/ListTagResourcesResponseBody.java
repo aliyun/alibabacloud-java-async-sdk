@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried clusters and tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -194,10 +194,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-bp1l20nxxxxxxxxxx</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -205,10 +202,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dbclusterlakeversion</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -216,10 +210,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testkey1</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +218,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testvalue1</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

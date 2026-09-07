@@ -119,7 +119,10 @@ public class OpenStructMVRecommendResultModel extends TeaModel {
         } 
 
         /**
-         * AcceleratedQueriesCount.
+         * <p>The number of accelerated queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder acceleratedQueriesCount(Long acceleratedQueriesCount) {
             this.acceleratedQueriesCount = acceleratedQueriesCount;
@@ -127,7 +130,7 @@ public class OpenStructMVRecommendResultModel extends TeaModel {
         }
 
         /**
-         * BaseTables.
+         * <p>The base table associated with the subquery.</p>
          */
         public Builder baseTables(java.util.List<OpenStructMvBaseTableDetailModel> baseTables) {
             this.baseTables = baseTables;
@@ -135,7 +138,10 @@ public class OpenStructMVRecommendResultModel extends TeaModel {
         }
 
         /**
-         * SavedScanbytes.
+         * <p>Estimated bytes scanned reduction by current materialized view from correlated parent queries (posterior calculation).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321321223</p>
          */
         public Builder savedScanbytes(Long savedScanbytes) {
             this.savedScanbytes = savedScanbytes;
@@ -143,7 +149,10 @@ public class OpenStructMVRecommendResultModel extends TeaModel {
         }
 
         /**
-         * Subquery.
+         * <p>The extracted public subquery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM demo.tbl</p>
          */
         public Builder subquery(String subquery) {
             this.subquery = subquery;
@@ -151,7 +160,10 @@ public class OpenStructMVRecommendResultModel extends TeaModel {
         }
 
         /**
-         * SubqueryId.
+         * <p>The ID of the subquery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subqueryId(Long subqueryId) {
             this.subqueryId = subqueryId;
@@ -159,7 +171,10 @@ public class OpenStructMVRecommendResultModel extends TeaModel {
         }
 
         /**
-         * SupportIncrementalRefresh.
+         * <p>Whether the current subquery supports incremental refresh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportIncrementalRefresh(Boolean supportIncrementalRefresh) {
             this.supportIncrementalRefresh = supportIncrementalRefresh;

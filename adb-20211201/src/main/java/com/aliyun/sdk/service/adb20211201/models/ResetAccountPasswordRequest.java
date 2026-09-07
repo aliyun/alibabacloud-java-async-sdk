@@ -132,7 +132,7 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * <p>The description of the database account.</p>
+         * <p>The description of the account.</p>
          * <ul>
          * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>The description must be 2 to 256 characters in length.</li>
@@ -148,9 +148,9 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The database account.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the information about database accounts of an AnalyticDB for MySQL cluster, including database account names.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the database account information of a specified cluster, including the database account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -167,7 +167,7 @@ public class ResetAccountPasswordRequest extends Request {
          * <p>The password of the database account.</p>
          * <ul>
          * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code></li>
          * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -182,7 +182,8 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +196,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the cluster. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
          * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
          * <li><strong>Clickhouse</strong>: the wide table engine.</li>

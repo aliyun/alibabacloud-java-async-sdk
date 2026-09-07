@@ -219,7 +219,7 @@ public class SubmitResultExportJobRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>SELECT * FROM <code>fotor_com_datastore_resource</code>.<code>fotor_ai_create_task</code> where <code>date</code> = &quot;2023-05-13&quot; LIMIT 10;</p>
+         * <p>SELECT * FROM <code>fotor_com_datastore_resource</code>.<code>fotor_ai_create_task</code> where <code>date</code> = \&quot;2023-05-13\&quot; LIMIT 10;</p>
          */
         public Builder SQL(String SQL) {
             this.putBodyParameter("SQL", SQL);

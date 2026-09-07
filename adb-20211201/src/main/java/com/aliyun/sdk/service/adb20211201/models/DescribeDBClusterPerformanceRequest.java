@@ -131,9 +131,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster in Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * <p>You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -147,9 +148,9 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>The end time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
          * <blockquote>
-         * <p>The end time must be later than the start time. The maximum time range that can be specified is two days.</p>
+         * <p>The end time must be later than the start time, and the interval between the start time and end time cannot exceed two days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,7 +163,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The key of the performance metric that you want to query. Separate multiple keys with commas (,). For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</p>
+         * <p>The name of the performance metric (metric key) to query. Separate multiple values with commas (,). For more information about supported metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>AnalyticDB_CPU_Usage_Percentage</p>
@@ -174,9 +175,9 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -190,7 +191,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>user_default</p>
@@ -202,7 +203,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-10T23:56Z</p>

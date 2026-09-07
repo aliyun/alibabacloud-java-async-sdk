@@ -106,7 +106,7 @@ public class GetViewObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetViewObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value is a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,9 +127,9 @@ public class GetViewObjectsResponseBody extends TeaModel {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><strong>30</strong> (default).</li>
+         * <li><strong>50</strong>.</li>
+         * <li><strong>100</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class GetViewObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+             * <p>The page number. The value is a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -260,9 +260,9 @@ public class GetViewObjectsResponseBody extends TeaModel {
             /**
              * <p>The number of entries per page. Valid values:</p>
              * <ul>
-             * <li><strong>30</strong> (default)</li>
-             * <li><strong>50</strong></li>
-             * <li><strong>100</strong></li>
+             * <li><strong>30</strong> (default).</li>
+             * <li><strong>50</strong>.</li>
+             * <li><strong>100</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class GetViewObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried views.</p>
+             * <p>The result array.</p>
              */
             public Builder tableSummaryModels(java.util.List<TableSummaryModel> tableSummaryModels) {
                 this.tableSummaryModels = tableSummaryModels;

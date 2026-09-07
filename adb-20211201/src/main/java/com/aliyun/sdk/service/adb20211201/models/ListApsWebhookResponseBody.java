@@ -119,7 +119,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>API status or POP error code.</p>
+         * <p>The API status code or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -152,7 +152,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleRequestId</p>
@@ -174,7 +174,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of webhooks.</p>
+         * <p>The webhook array.</p>
          */
         public Builder webhook(java.util.List<Webhook> webhook) {
             this.webhook = webhook;
@@ -279,7 +279,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Signing key</p>
+             * <p>The signing key.</p>
              * 
              * <strong>example:</strong>
              * <p>your_secret_key</p>
@@ -290,7 +290,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the webhook.</p>
+             * <p>The webhook name.</p>
              * 
              * <strong>example:</strong>
              * <p>webhook_name</p>
@@ -312,7 +312,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the webhook that you want to delete.</p>
+             * <p>The webhook ID.</p>
              * 
              * <strong>example:</strong>
              * <p><strong>35</strong>*</p>
@@ -323,7 +323,7 @@ public class ListApsWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Webhook type.</p>
+             * <p>The webhook type.</p>
              * 
              * <strong>example:</strong>
              * <p>dingtalk</p>

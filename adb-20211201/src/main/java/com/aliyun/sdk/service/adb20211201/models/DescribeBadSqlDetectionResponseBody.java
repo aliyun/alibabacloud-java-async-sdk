@@ -553,7 +553,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>SELECT * FROM device WHERE product_key = &quot;h66zXfxet2X&quot; AND name = &quot;device@zntbtfptv5_9237117&quot;</p>
+             * <p>SELECT * FROM device WHERE product_key = \&quot;h66zXfxet2X\&quot; AND name = \&quot;device@zntbtfptv5_9237117\&quot;</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;

@@ -106,10 +106,10 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The message returned for the operation. Valid values:</p>
+         * <p>The additional information about the call result. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong> is returned if the operation is successful.</li>
-         * <li>An error message is returned if the operation fails.</li>
+         * <li>If the request was successful, <strong>Success</strong> is returned. </li>
+         * <li>If the request failed, a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</p>
@@ -132,7 +132,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -143,10 +143,10 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The operation is successful.</li>
-         * <li><strong>false</strong>: The operation fails.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The names of tables.</p>
+         * <p>The table information.</p>
          */
         public Builder tables(java.util.List<String> tables) {
             this.tables = tables;

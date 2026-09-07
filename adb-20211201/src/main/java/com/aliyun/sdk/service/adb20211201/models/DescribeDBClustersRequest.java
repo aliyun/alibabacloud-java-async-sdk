@@ -186,10 +186,12 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * <p>The description of the cluster.</p>
+         * <p>The cluster description.</p>
          * <ul>
-         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description must be 2 to 256 characters in length</li>
+         * <li><p>Cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </li>
+         * <li><p>The description must be 2 to 256 characters long.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,8 +204,8 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * <p>If you do not specify this parameter, the information about all clusters that reside in the region is returned.</p>
+         * <p>The cluster ID.</p>
+         * <p>If you omit this parameter, the operation returns information about all clusters in the specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1r053byu48p****</p>
@@ -215,17 +217,26 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The status of the cluster. Valid values:</p>
+         * <p>The cluster status. Valid values:</p>
          * <ul>
-         * <li><strong>Preparing</strong></li>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Restoring</strong></li>
-         * <li><strong>ClassChanging</strong></li>
-         * <li><strong>NetAddressCreating</strong></li>
-         * <li><strong>NetAddressDeleting</strong></li>
-         * <li><strong>NetAddressModifying</strong></li>
+         * <li><p><strong>Preparing</strong>: The cluster is preparing.</p>
+         * </li>
+         * <li><p><strong>Creating</strong>: The cluster is being created.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: The cluster is running.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The cluster is being deleted.</p>
+         * </li>
+         * <li><p><strong>Restoring</strong>: The cluster is being restored from a backup.</p>
+         * </li>
+         * <li><p><strong>ClassChanging</strong>: The cluster specifications are changing.</p>
+         * </li>
+         * <li><p><strong>NetAddressCreating</strong>: A network connection is being created for the cluster.</p>
+         * </li>
+         * <li><p><strong>NetAddressDeleting</strong>: The network connection of the cluster is being deleted.</p>
+         * </li>
+         * <li><p><strong>NetAddressModifying</strong>: The network connection of the cluster is being modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,11 +249,14 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The version number corresponding to the edition of the cluster. Valid values:</p>
+         * <p>The cluster version. Valid values:</p>
          * <ul>
-         * <li><strong>3.0</strong>: Data Warehouse Edition.</li>
-         * <li><strong>5.0</strong> (default): includes Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
-         * <li><strong>All</strong>: all editions, including Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+         * <li><p><strong>3.0</strong>: Data Warehouse edition.</p>
+         * </li>
+         * <li><p><strong>5.0</strong> (default): Includes the Lakehouse, Enterprise, and Basic editions.</p>
+         * </li>
+         * <li><p><strong>All</strong>: All editions, including the Data Warehouse, Lakehouse, Enterprise, and Basic editions.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +269,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,11 +281,14 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values:</p>
+         * <p>The number of entries to return on each page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong> (default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,13 +301,15 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The edition of the cluster. Valid values:</p>
+         * <p>The product version. Valid values:</p>
          * <ul>
-         * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
-         * <li><strong>BasicVersion</strong>: Basic Edition.</li>
+         * <li><p><strong>EnterpriseVersion</strong>: Enterprise edition.</p>
+         * </li>
+         * <li><p><strong>BasicVersion</strong>: Basic edition.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you leave this parameter empty, the information about clusters of all editions is returned.</p>
+         * <p>If you omit this parameter, the operation returns clusters of all product versions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -303,9 +322,9 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the IDs of available regions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -319,7 +338,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. If you do not specify this parameter, the information about all resource groups in the cluster is returned.</p>
+         * <p>The ID of the resource group. If you omit this parameter, the operation returns information about clusters in all resource groups.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-4690g37929****</p>
@@ -331,7 +350,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the cluster.</p>
+         * <p>The tags to filter clusters by.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

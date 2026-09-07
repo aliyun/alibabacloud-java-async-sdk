@@ -171,7 +171,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the refresh task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-15 10:12:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -179,7 +182,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The materialized view name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_mv</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -187,7 +193,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * Processid.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025103010xxxxxxx</p>
          */
         public Builder processid(String processid) {
             this.processid = processid;
@@ -195,7 +204,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * RefreshInterval.
+         * <p>The refresh interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30s</p>
          */
         public Builder refreshInterval(String refreshInterval) {
             this.refreshInterval = refreshInterval;
@@ -203,7 +215,14 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * RefreshModel.
+         * <p>The refresh model.</p>
+         * <ul>
+         * <li>FAST</li>
+         * <li>COMPLETE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAST</p>
          */
         public Builder refreshModel(String refreshModel) {
             this.refreshModel = refreshModel;
@@ -211,7 +230,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * ResourceGroup.
+         * <p>The resource group used for the refresh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -219,7 +241,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * ScheduledStartTime.
+         * <p>The scheduled start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-15 10:11:00</p>
          */
         public Builder scheduledStartTime(String scheduledStartTime) {
             this.scheduledStartTime = scheduledStartTime;
@@ -227,7 +252,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -235,7 +263,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The actual start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-15 10:11:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -243,7 +274,10 @@ public class OpenStructRefreshJobModel extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the queried refresh task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;

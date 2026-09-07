@@ -80,7 +80,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The API status or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried resource usage.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -207,7 +207,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of ACUs for the elastic resources.</p>
+             * <p>The number of elastic ACU resources.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -218,7 +218,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ACUs for the reserved resources.</p>
+             * <p>The number of reserved ACU resources.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -229,7 +229,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of spot ACUs.</p>
+             * <p>The number of spot instance ACU resources.</p>
              * 
              * <strong>example:</strong>
              * <p>16ACU</p>
@@ -240,7 +240,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percent of spot ACUs.</p>
+             * <p>The percentage of spot instance resources in the total elastic resources.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>
@@ -251,7 +251,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of ACUs.</p>
+             * <p>The total number of ACU resources.</p>
              * 
              * <strong>example:</strong>
              * <p>32ACU</p>
@@ -386,7 +386,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ACU usage.</p>
+             * <p>The ACU resource usage details.</p>
              */
             public Builder acuUsageDetail(AcuUsageDetail acuUsageDetail) {
                 this.acuUsageDetail = acuUsageDetail;
@@ -394,7 +394,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The end time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-23T16:00:00Z</p>
@@ -416,7 +416,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The start time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-22T16:00:00Z</p>
@@ -446,7 +446,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * UseCachePool.
+             * <p>Indicates whether the hot pool is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useCachePool(Boolean useCachePool) {
                 this.useCachePool = useCachePool;
@@ -578,7 +581,8 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+             * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-clusterxxx</p>
@@ -589,7 +593,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The end time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-23T16:00:00Z</p>
@@ -600,7 +604,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AnalyticDB compute unit (ACU) usage of the job resource group.</p>
+             * <p>The ACU usage of the job resource group.</p>
              */
             public Builder jobAcuUsage(java.util.List<JobAcuUsage> jobAcuUsage) {
                 this.jobAcuUsage = jobAcuUsage;
@@ -608,7 +612,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -616,7 +623,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -624,7 +634,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The start time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-22T16:00:00Z</p>
@@ -635,7 +645,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

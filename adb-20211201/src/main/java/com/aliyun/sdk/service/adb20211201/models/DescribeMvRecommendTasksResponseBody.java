@@ -106,7 +106,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -136,7 +136,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -147,7 +147,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -242,7 +242,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of recommended tasks for materialized views.</p>
+             * <p>The list of materialized view recommendation tasks.</p>
              */
             public Builder mvRecommendTaskModels(java.util.List<OpenStructMvRecommendTaskModel> mvRecommendTaskModels) {
                 this.mvRecommendTaskModels = mvRecommendTaskModels;
@@ -261,7 +261,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -272,7 +272,7 @@ public class DescribeMvRecommendTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that are returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

@@ -125,7 +125,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -136,7 +136,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -147,7 +147,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -242,7 +242,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of recommended tasks to be executed.</p>
+             * <p>The list of materialized view recommendation task executions.</p>
              */
             public Builder mvRecommendSubTaskModels(java.util.List<OpenStructMvRecommendSubTaskModel> mvRecommendSubTaskModels) {
                 this.mvRecommendSubTaskModels = mvRecommendSubTaskModels;
@@ -261,7 +261,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -272,7 +272,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

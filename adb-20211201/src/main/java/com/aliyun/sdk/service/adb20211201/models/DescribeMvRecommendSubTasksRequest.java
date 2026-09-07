@@ -171,7 +171,10 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         } 
 
         /**
-         * <p>Fixed system value (non-modifiable).</p>
+         * <p>A static value. This parameter cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modification is not supported.</p>
          */
         public Builder actionInner(String actionInner) {
             this.putQueryParameter("ActionInner", actionInner);
@@ -192,7 +195,10 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>Fixed system value (non-modifiable).</p>
+         * <p>A static value. This parameter cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modification is not supported.</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -201,19 +207,24 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>The sorting field. Valid values for Type:</p>
+         * <p>The sorting criteria.
+         * Valid values for \<code>Type\\</code>:</p>
          * <ul>
-         * <li>Asc.</li>
-         * <li>Desc.</li>
+         * <li><p>Asc</p>
+         * </li>
+         * <li><p>Desc</p>
+         * </li>
          * </ul>
-         * <p>Valid values for Field:</p>
+         * <p>Valid values for \<code>Field\\</code>:</p>
          * <ul>
-         * <li>StartTime;</li>
-         * <li>EndTime;</li>
+         * <li><p>StartTime</p>
+         * </li>
+         * <li><p>EndTime</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Type&quot;: &quot;ASC&quot;, &quot;Field&quot;: &quot;StartTime&quot;}</p>
+         * <p>{\&quot;Type\&quot;: \&quot;ASC\&quot;, \&quot;Field\&quot;: \&quot;StartTime\&quot;}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -234,7 +245,7 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -270,7 +281,7 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
         }
 
         /**
-         * <p>The name of the recommendation task.</p>
+         * <p>The name of the materialized view recommendation task.</p>
          * 
          * <strong>example:</strong>
          * <p>my_task_1</p>

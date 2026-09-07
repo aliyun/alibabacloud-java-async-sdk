@@ -67,7 +67,7 @@ public class SearchSemanticViewsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>A list of semantic view objects.</p>
          */
         public Builder data(java.util.List<SemanticViewModel> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class SearchSemanticViewsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

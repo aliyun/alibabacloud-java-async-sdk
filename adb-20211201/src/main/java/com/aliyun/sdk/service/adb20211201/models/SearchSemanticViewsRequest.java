@@ -88,6 +88,7 @@ public class SearchSemanticViewsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class SearchSemanticViewsRequest extends Request {
         }
 
         /**
-         * QueryText.
+         * <p>The search query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>销售额</p>
          */
         public Builder queryText(String queryText) {
             this.putQueryParameter("QueryText", queryText);
@@ -109,7 +113,10 @@ public class SearchSemanticViewsRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>The number of the most relevant semantic views to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder topK(Integer topK) {
             this.putQueryParameter("TopK", topK);

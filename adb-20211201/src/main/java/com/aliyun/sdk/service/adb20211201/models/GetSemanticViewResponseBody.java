@@ -67,7 +67,10 @@ public class GetSemanticViewResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details of the semantic view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         public Builder data(SemanticViewModel data) {
             this.data = data;
@@ -75,7 +78,7 @@ public class GetSemanticViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

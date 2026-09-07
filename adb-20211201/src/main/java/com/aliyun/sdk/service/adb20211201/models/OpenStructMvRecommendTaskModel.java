@@ -158,7 +158,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         } 
 
         /**
-         * CreatedTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-12 23:59</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -166,7 +169,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task desc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -174,7 +180,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * LastRunAt.
+         * <p>Last execution time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-13 00:10</p>
          */
         public Builder lastRunAt(String lastRunAt) {
             this.lastRunAt = lastRunAt;
@@ -182,7 +191,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * MinRewriteQueryCount.
+         * <p>The minimum number of slow queries that match the pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minRewriteQueryCount(Integer minRewriteQueryCount) {
             this.minRewriteQueryCount = minRewriteQueryCount;
@@ -190,7 +202,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * MinRewriteQueryPattern.
+         * <p>The number of minimum acceleration patterns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder minRewriteQueryPattern(Integer minRewriteQueryPattern) {
             this.minRewriteQueryPattern = minRewriteQueryPattern;
@@ -198,7 +213,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * ScanQueriesRange.
+         * <p>The time range for scanning data. Unit: days. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder scanQueriesRange(Integer scanQueriesRange) {
             this.scanQueriesRange = scanQueriesRange;
@@ -206,7 +224,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * SchedulingSettings.
+         * <p>The execution schedule of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The 12:30 every day</p>
          */
         public Builder schedulingSettings(String schedulingSettings) {
             this.schedulingSettings = schedulingSettings;
@@ -214,7 +235,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * SlowQueryThreshold.
+         * <p>The wait threshold for slow queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder slowQueryThreshold(Integer slowQueryThreshold) {
             this.slowQueryThreshold = slowQueryThreshold;
@@ -222,7 +246,10 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the recommendation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mv_task1</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

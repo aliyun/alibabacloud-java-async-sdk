@@ -119,7 +119,10 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,17 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;id&quot;: 123,
+         *     &quot;taskName&quot;: &quot;sale_db&quot;,
+         *     &quot;scheduleState&quot;: &quot;NORMAL&quot;,
+         *     &quot;frequency&quot;: {&quot;type&quot;: &quot;custom&quot;, &quot;cron&quot;: &quot;0 0/1 * * * ?&quot;},
+         *     &quot;failedCount&quot;: 0,
+         *     &quot;lastTaskInstContent&quot;: &quot;{\&quot;task_inst_id\&quot;:67890,\&quot;state\&quot;:\&quot;SUCCESS\&quot;}&quot;
+         *   }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +148,10 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +159,10 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +170,10 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DC10091-348D-12B1-906D-AB49D658012E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +181,14 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

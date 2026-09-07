@@ -104,6 +104,7 @@ public class UpdateFormationCrawlerRequest extends Request {
         } 
 
         /**
+         * <p>The JSON string that contains the complete configuration of the crawler. This is the most important parameter. For more information about the internal JSON structure, see the CrawlerInfo structure definition section.</p>
          * <p>This parameter is required.</p>
          */
         public Builder crawlerInfo(String crawlerInfo) {
@@ -113,7 +114,10 @@ public class UpdateFormationCrawlerRequest extends Request {
         }
 
         /**
-         * CrawlerTaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder crawlerTaskId(String crawlerTaskId) {
             this.putBodyParameter("CrawlerTaskId", crawlerTaskId);
@@ -122,6 +126,7 @@ public class UpdateFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +139,10 @@ public class UpdateFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

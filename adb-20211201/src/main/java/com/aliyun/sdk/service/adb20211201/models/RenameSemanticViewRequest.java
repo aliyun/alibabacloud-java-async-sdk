@@ -120,6 +120,7 @@ public class RenameSemanticViewRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class RenameSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The new schema name in which the semantic view resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class RenameSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The new name of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class RenameSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The original schema name in which the semantic view resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class RenameSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The original name of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

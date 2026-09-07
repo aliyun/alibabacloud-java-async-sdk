@@ -143,7 +143,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried table statistics.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -187,7 +187,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
          * <p>The names of databases.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;adb_platform&quot;, &quot;adb_ai&quot;, &quot;adb_data&quot;]</p>
+         * <p>[\&quot;adb_platform\&quot;, \&quot;adb_ai\&quot;, \&quot;adb_data\&quot;]</p>
          */
         public Builder schemaNames(String schemaNames) {
             this.schemaNames = schemaNames;
@@ -394,13 +394,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of cold data. Unit: bytes.</p>
-             * <blockquote>
-             * <p> This parameter is supported only for AnalyticDB for MySQL clusters of V3.1.3.4 or later.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>4428120064</p>
+             * ColdDataSize.
              */
             public Builder coldDataSize(Long coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -408,10 +402,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data size of the table. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>15592</p>
+             * DataSize.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -419,10 +410,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of hot data. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1048576</p>
+             * HotDataSize.
              */
             public Builder hotDataSize(Long hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -430,10 +418,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data size of indexes. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3076</p>
+             * IndexSize.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -441,10 +426,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data size of other data. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1048576</p>
+             * OtherSize.
              */
             public Builder otherSize(Long otherSize) {
                 this.otherSize = otherSize;
@@ -452,10 +434,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partitions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PartitionCount.
              */
             public Builder partitionCount(Long partitionCount) {
                 this.partitionCount = partitionCount;
@@ -463,10 +442,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data size of the primary key index. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16340</p>
+             * PrimaryKeyIndexSize.
              */
             public Builder primaryKeyIndexSize(Long primaryKeyIndexSize) {
                 this.primaryKeyIndexSize = primaryKeyIndexSize;
@@ -474,10 +450,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows in the table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * RowCount.
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -485,10 +458,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test_schema</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -496,13 +466,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the table size. Unit: %.</p>
-             * <blockquote>
-             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>66.23</p>
+             * SpaceRatio.
              */
             public Builder spaceRatio(Double spaceRatio) {
                 this.spaceRatio = spaceRatio;
@@ -510,10 +474,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test_table</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -521,17 +482,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total data size of the table. Unit: bytes.</p>
-             * <blockquote>
-             * <p> The following formulas can be used to calculate the total data size:</p>
-             * </blockquote>
-             * <ul>
-             * <li>Formula 1: Total data size = Hot data size + Cold data size.</li>
-             * <li>Formula 2: Total data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1577</p>
+             * TotalSize.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

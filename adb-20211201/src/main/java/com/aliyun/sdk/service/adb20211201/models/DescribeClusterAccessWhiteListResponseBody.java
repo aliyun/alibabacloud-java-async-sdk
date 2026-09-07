@@ -67,7 +67,7 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried IP address whitelists.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -157,13 +157,7 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attribute of the IP address whitelist.</p>
-             * <blockquote>
-             * <p> The IP address whitelists that have the <strong>hidden</strong> attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>hidden</p>
+             * DBClusterIPArrayAttribute.
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -171,11 +165,7 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IP address whitelist.</p>
-             * <p>Each cluster supports up to 50 IP address whitelists.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DBClusterIPArrayName.
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -183,10 +173,7 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses in the IP address whitelist. Up to 500 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127.0.xx.xx</p>
+             * SecurityIPList.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;

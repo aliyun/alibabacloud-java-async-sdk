@@ -106,7 +106,7 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * <p>The status code. A value of 200 indicates that the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,10 +128,12 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. Valid values:</p>
+         * <p>The response message.</p>
          * <ul>
-         * <li>If the request was successful, a success message is returned.****</li>
-         * <li>If the request failed, an error message is returned.</li>
+         * <li><p>Returns <strong>Success</strong> if the request succeeds.</p>
+         * </li>
+         * <li><p>Returns a specific error code if the request fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,7 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E03F0806-A67B-5B24-8562-9589F20DEEB5</p>
@@ -154,10 +156,12 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The call succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

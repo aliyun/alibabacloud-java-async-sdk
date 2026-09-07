@@ -105,6 +105,7 @@ public class ReplaceSemanticViewRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ReplaceSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The definition of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ReplaceSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ReplaceSemanticViewRequest extends Request {
         }
 
         /**
+         * <p>The name of the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

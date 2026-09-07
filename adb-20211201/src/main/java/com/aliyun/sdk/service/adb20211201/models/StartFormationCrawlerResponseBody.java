@@ -93,7 +93,10 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +104,10 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,14 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,10 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1564657730</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

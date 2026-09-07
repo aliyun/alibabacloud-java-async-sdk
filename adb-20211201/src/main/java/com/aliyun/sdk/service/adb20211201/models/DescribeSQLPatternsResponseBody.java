@@ -119,7 +119,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * <p>Details about the access denial. This parameter is returned only if RAM authentication fails.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -160,7 +160,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried SQL patterns.</p>
+         * <p>A list of SQL patterns.</p>
          */
         public Builder patternDetails(java.util.List<PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
@@ -171,7 +171,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>F3174013-5B7A-5A47-9FE0-6B5D397BD86B</p>
+         * <p>F3174013-5B7A-5A47-9FE0-6B5D397BD86A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -179,7 +179,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -625,7 +625,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the SQL client that commits the SQL pattern.</p>
+             * <p>The client IP address used to submit the queries.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.xx.xx</p>
@@ -636,7 +636,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * <p>The average execution time of queries matching this pattern. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>234.78</p>
@@ -647,7 +647,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * AverageOperatorCost.
+             * <p>The average CPU cost for queries that match this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder averageOperatorCost(Double averageOperatorCost) {
                 this.averageOperatorCost = averageOperatorCost;
@@ -655,7 +658,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+             * <p>The average peak memory usage of queries matching this pattern. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>234.22</p>
@@ -666,7 +669,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * <p>The average duration of queries matching this pattern. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -677,7 +680,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * AverageScanCost.
+             * <p>The average scan time for queries that match this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder averageScanCost(Double averageScanCost) {
                 this.averageScanCost = averageScanCost;
@@ -685,7 +691,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+             * <p>The average amount of data scanned by queries matching this pattern. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>234149.23</p>
@@ -696,13 +702,15 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the execution of the SQL pattern can be intercepted. Valid values:</p>
+             * <p>Indicates whether queries that match this pattern can be blocked. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: The queries can be blocked.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The queries cannot be blocked.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> Only SELECT and INSERT statements can be intercepted.</p>
+             * <p>Currently, AnalyticDB for MySQL allows you to block only SELECT and INSERT statements.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -714,7 +722,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of failed queries executed in association with the SQL pattern within the query time range.</p>
+             * <p>The number of failed queries that match this pattern.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -725,7 +733,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * <p>The maximum execution time of a query matching this pattern. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2142</p>
@@ -736,7 +744,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxOperatorCost.
+             * <p>The maximum CPU cost for a query that matches this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxOperatorCost(Double maxOperatorCost) {
                 this.maxOperatorCost = maxOperatorCost;
@@ -744,7 +755,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+             * <p>The maximum peak memory usage of a query matching this pattern. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>234149</p>
@@ -755,7 +766,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * <p>The maximum duration of a query matching this pattern. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2341</p>
@@ -766,7 +777,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScanCost.
+             * <p>The maximum scan time for a query that matches this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxScanCost(Double maxScanCost) {
                 this.maxScanCost = maxScanCost;
@@ -774,7 +788,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+             * <p>The maximum amount of data scanned by a query matching this pattern. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>32212254</p>
@@ -785,7 +799,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCostPercentage.
+             * <p>The total CPU cost of queries matching this pattern as a percentage of the total CPU cost for all queries. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder operatorCostPercentage(Double operatorCostPercentage) {
                 this.operatorCostPercentage = operatorCostPercentage;
@@ -793,7 +810,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCostSum.
+             * <p>The total CPU cost for all queries that match this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder operatorCostSum(Double operatorCostSum) {
                 this.operatorCostSum = operatorCostSum;
@@ -801,7 +821,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest commit time of the SQL pattern within the query time range.</p>
+             * <p>The submission time of the first query that matches this pattern within the specified time range.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06 05:06:00</p>
@@ -823,7 +843,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemoryPercentage.
+             * <p>The total peak memory usage of queries matching this pattern as a percentage of the total peak memory usage for all queries. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder peakMemoryPercentage(Double peakMemoryPercentage) {
                 this.peakMemoryPercentage = peakMemoryPercentage;
@@ -831,7 +854,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemorySum.
+             * <p>The sum of the peak memory usage for all queries that match this pattern. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder peakMemorySum(Double peakMemorySum) {
                 this.peakMemorySum = peakMemorySum;
@@ -839,7 +865,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of queries executed in association with the SQL pattern within the query time range.</p>
+             * <p>The number of executed queries that match this pattern.</p>
              * 
              * <strong>example:</strong>
              * <p>345</p>
@@ -850,7 +876,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimePercentage.
+             * <p>The total query time of queries matching this pattern as a percentage of the total query time for all queries. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder queryTimePercentage(Double queryTimePercentage) {
                 this.queryTimePercentage = queryTimePercentage;
@@ -858,7 +887,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeSum.
+             * <p>The total query duration for all queries that match this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder queryTimeSum(Double queryTimeSum) {
                 this.queryTimeSum = queryTimeSum;
@@ -866,7 +898,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statement of the SQL pattern.</p>
+             * <p>The SQL pattern.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</p>
@@ -877,7 +909,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanCostPercentage.
+             * <p>The total scan cost of queries matching this pattern as a percentage of the total scan cost for all queries. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder scanCostPercentage(Double scanCostPercentage) {
                 this.scanCostPercentage = scanCostPercentage;
@@ -885,7 +920,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanCostSum.
+             * <p>The total scan cost for all queries that match this pattern. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder scanCostSum(Double scanCostSum) {
                 this.scanCostSum = scanCostSum;
@@ -893,7 +931,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanSizePercentage.
+             * <p>The total amount of data scanned by queries matching this pattern as a percentage of the total data scanned by all queries. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder scanSizePercentage(Double scanSizePercentage) {
                 this.scanSizePercentage = scanSizePercentage;
@@ -901,7 +942,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanSizeSum.
+             * <p>The total amount of data scanned by all queries that match this pattern. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder scanSizeSum(Double scanSizeSum) {
                 this.scanSizeSum = scanSizeSum;
@@ -909,7 +953,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tables scanned based on the SQL pattern.</p>
+             * <p>The tables scanned by the SQL pattern.</p>
              * 
              * <strong>example:</strong>
              * <p>tpch.orders</p>
@@ -920,7 +964,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account that is used to commit the SQL pattern.</p>
+             * <p>The name of the database user who submitted the matching SQL statements.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

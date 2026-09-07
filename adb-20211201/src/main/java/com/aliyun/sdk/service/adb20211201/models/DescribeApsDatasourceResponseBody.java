@@ -376,7 +376,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
              * <p>The topic of the Kafka instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;value&quot;: &quot;hongxian_test&quot;}]</p>
+             * <p>[{\&quot;value\&quot;: \&quot;hongxian_test\&quot;}]</p>
              */
             public Builder kafkaTopic(String kafkaTopic) {
                 this.kafkaTopic = kafkaTopic;

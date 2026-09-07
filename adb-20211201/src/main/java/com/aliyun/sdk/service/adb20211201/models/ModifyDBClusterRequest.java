@@ -204,9 +204,9 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+         * <p>The compute reserved resources. Valid values: 0 ACU to 4096 ACU, in increments of 16. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
          * <blockquote>
-         * <p> This parameter must be specified with a unit.</p>
+         * <p>Include the unit when you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -219,9 +219,9 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID of a Data Lakehouse Edition cluster.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -235,10 +235,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</p>
+         * <p>Specifies whether to allocate all compute reserved resources to the default resource group (user_default). Valid values:</p>
          * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
+         * <li>true (default): All compute reserved resources are allocated to the default resource group.</li>
+         * <li>false: Not all compute reserved resources are allocated to the default resource group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ProductForm.
+         * <p>The product form. Valid values:</p>
+         * <ul>
+         * <li><strong>IntegrationForm</strong>: integrated form.</li>
+         * <li><strong>LegacyForm</strong>: Data Lakehouse Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LegacyForm</p>
          */
         public Builder productForm(String productForm) {
             this.putQueryParameter("ProductForm", productForm);
@@ -260,9 +267,9 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -275,7 +282,17 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ReservedNodeCount.
+         * <p>The number of reserved nodes. </p>
+         * <ul>
+         * <li>Enterprise Edition: The default value is 3. The value increases in increments of 3.</li>
+         * <li>Basic Edition: The default value is 1.<blockquote>
+         * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder reservedNodeCount(Integer reservedNodeCount) {
             this.putQueryParameter("ReservedNodeCount", reservedNodeCount);
@@ -284,7 +301,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ReservedNodeSize.
+         * <p>The node specifications of storage reserved resources. Valid values: 8ACU, 12ACU, and 16ACU.</p>
+         * <blockquote>
+         * <p>Include the unit when you specify this parameter. This parameter is required only when ProductForm is set to IntegrationForm.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8ACU</p>
          */
         public Builder reservedNodeSize(String reservedNodeSize) {
             this.putQueryParameter("ReservedNodeSize", reservedNodeSize);
@@ -293,9 +316,9 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+         * <p>The storage reserved resources. Valid values: 0 ACU to 2064 ACU, in increments of 24. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
          * <blockquote>
-         * <p> This parameter must be specified with a unit.</p>
+         * <p>Include the unit when you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

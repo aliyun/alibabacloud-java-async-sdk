@@ -171,7 +171,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-adbxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -179,7 +182,7 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The analysis result of the task.</p>
          */
         public Builder result(LogAnalyzeResult result) {
             this.result = result;
@@ -187,7 +190,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * RuleMatched.
+         * <p>Indicates whether the task matched a rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ruleMatched(Boolean ruleMatched) {
             this.ruleMatched = ruleMatched;
@@ -195,7 +201,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * StartedTimeInMillis.
+         * <p>The time when the task was started. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672123543000</p>
          */
         public Builder startedTimeInMillis(Long startedTimeInMillis) {
             this.startedTimeInMillis = startedTimeInMillis;
@@ -203,7 +212,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * SubmittedTimeInMillis.
+         * <p>The time when the task was submitted. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672123543000</p>
          */
         public Builder submittedTimeInMillis(Long submittedTimeInMillis) {
             this.submittedTimeInMillis = submittedTimeInMillis;
@@ -211,7 +223,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * TaskErrMsg.
+         * <p>The error message returned if the task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Driver log not found</p>
          */
         public Builder taskErrMsg(String taskErrMsg) {
             this.taskErrMsg = taskErrMsg;
@@ -219,7 +234,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the Spark log analysis task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -227,7 +245,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * TaskState.
+         * <p>The state of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAITING</p>
          */
         public Builder taskState(String taskState) {
             this.taskState = taskState;
@@ -235,7 +256,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * TerminatedTimeInMillis.
+         * <p>The time when the task was terminated. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672123543000</p>
          */
         public Builder terminatedTimeInMillis(Long terminatedTimeInMillis) {
             this.terminatedTimeInMillis = terminatedTimeInMillis;
@@ -243,7 +267,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user who submitted the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13719918xxx</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

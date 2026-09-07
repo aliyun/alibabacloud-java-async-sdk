@@ -158,7 +158,10 @@ public class StorageDescriptorModel extends TeaModel {
         } 
 
         /**
-         * Compressed.
+         * <p>Indicates whether the storage description is compressed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder compressed(Boolean compressed) {
             this.compressed = compressed;
@@ -166,7 +169,10 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * InputFormat.
+         * <p>The input format of the storage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
          */
         public Builder inputFormat(String inputFormat) {
             this.inputFormat = inputFormat;
@@ -174,7 +180,10 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The location of the storage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://**************</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -182,7 +191,10 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * NumBuckets.
+         * <p>The number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder numBuckets(Long numBuckets) {
             this.numBuckets = numBuckets;
@@ -190,7 +202,10 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * OutputFormat.
+         * <p>The output format of the storage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.outputFormat = outputFormat;
@@ -198,7 +213,7 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The storage configuration parameter.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -206,7 +221,10 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * SdId.
+         * <p>The ID of the storage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sdId(Long sdId) {
             this.sdId = sdId;
@@ -214,7 +232,7 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * SerDeInfo.
+         * <p>The information about serialization or deserialization.</p>
          */
         public Builder serDeInfo(SerDeInfoModel serDeInfo) {
             this.serDeInfo = serDeInfo;
@@ -222,7 +240,10 @@ public class StorageDescriptorModel extends TeaModel {
         }
 
         /**
-         * StoredAsSubDirectories.
+         * <p>Indicates whether the storage description is stored in subdirectories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder storedAsSubDirectories(Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;

@@ -89,6 +89,7 @@ public class GenerateSqlBySemanticSqlRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ADB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class GenerateSqlBySemanticSqlRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -110,6 +114,7 @@ public class GenerateSqlBySemanticSqlRequest extends Request {
         }
 
         /**
+         * <p>The SQL statement that queries the semantic view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

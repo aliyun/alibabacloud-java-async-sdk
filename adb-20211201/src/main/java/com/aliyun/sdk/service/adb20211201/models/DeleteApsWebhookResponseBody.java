@@ -177,6 +177,9 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation succeeded</p>
          */
         public Builder message(String message) {
             this.message = message;

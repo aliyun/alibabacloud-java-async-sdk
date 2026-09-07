@@ -80,7 +80,10 @@ public class LogAnalyzeResult extends TeaModel {
         } 
 
         /**
-         * AppErrorAdvice.
+         * <p>The solution for the error log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please increase cpu quota for your resource group</p>
          */
         public Builder appErrorAdvice(String appErrorAdvice) {
             this.appErrorAdvice = appErrorAdvice;
@@ -88,7 +91,10 @@ public class LogAnalyzeResult extends TeaModel {
         }
 
         /**
-         * AppErrorCode.
+         * <p>The error type if an analysis error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXCEEDED_QUOTA</p>
          */
         public Builder appErrorCode(String appErrorCode) {
             this.appErrorCode = appErrorCode;
@@ -96,7 +102,10 @@ public class LogAnalyzeResult extends TeaModel {
         }
 
         /**
-         * AppErrorLog.
+         * <p>The error log of the Spark log analysis task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exception: cpu is exceeded limits 12/10</p>
          */
         public Builder appErrorLog(String appErrorLog) {
             this.appErrorLog = appErrorLog;

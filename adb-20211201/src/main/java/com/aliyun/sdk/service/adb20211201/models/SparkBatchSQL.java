@@ -197,7 +197,10 @@ public class SparkBatchSQL extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp17s73f016****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -205,7 +208,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message for the query execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema is not found</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -213,7 +219,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * Query.
+         * <p>The text of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM db.tb</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -221,7 +230,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * QueryEndTime.
+         * <p>The execution end timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723521767000</p>
          */
         public Builder queryEndTime(Long queryEndTime) {
             this.queryEndTime = queryEndTime;
@@ -229,7 +241,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * QueryId.
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sq172352176****</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -237,7 +252,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * QueryStartTime.
+         * <p>The execution start timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723521767000</p>
          */
         public Builder queryStartTime(Long queryStartTime) {
             this.queryStartTime = queryStartTime;
@@ -245,7 +263,18 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * QueryState.
+         * <p>The execution status of the query. Valid values:</p>
+         * <ul>
+         * <li>FAILED</li>
+         * <li>RUNNING</li>
+         * <li>CANCELED</li>
+         * <li>PENDING</li>
+         * <li>SUBMITTED</li>
+         * <li>FINISHED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder queryState(String queryState) {
             this.queryState = queryState;
@@ -253,7 +282,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * QuerySubmissionTime.
+         * <p>The submission timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723521767000</p>
          */
         public Builder querySubmissionTime(Long querySubmissionTime) {
             this.querySubmissionTime = querySubmissionTime;
@@ -261,7 +293,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark_rg</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
@@ -269,7 +304,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * Schema.
+         * <p>The name of the database for the query execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schema(String schema) {
             this.schema = schema;
@@ -277,7 +315,7 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * Statements.
+         * <p>The execution results of the SQL statements.</p>
          */
         public Builder statements(java.util.List<SparkBatchSQLStatement> statements) {
             this.statements = statements;
@@ -285,7 +323,10 @@ public class SparkBatchSQL extends TeaModel {
         }
 
         /**
-         * Uid.
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2198002412336****</p>
          */
         public Builder uid(Long uid) {
             this.uid = uid;

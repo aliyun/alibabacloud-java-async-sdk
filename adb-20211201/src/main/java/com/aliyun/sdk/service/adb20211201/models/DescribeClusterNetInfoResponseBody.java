@@ -80,7 +80,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The network type of the cluster. Only the Virtual Private Cloud (VPC) network type is supported. <strong>VPC</strong> is returned.</p>
+         * <p>The network type of the cluster. The value is always <strong>VPC</strong>, as this is the only supported network type.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -91,7 +91,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried network information about the cluster.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -168,10 +168,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3306</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -179,16 +176,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
-             * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>http</strong></li>
-             * <li><strong>https</strong></li>
-             * <li><strong>mysql</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>mysql</p>
+             * Protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -387,14 +375,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the cluster.</p>
-             * <ul>
-             * <li>If NetType is set to VPC, the VPC endpoint of the cluster is returned.</li>
-             * <li>If NetType is set to Public, the public endpoint of the cluster is returned.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-wz9dqvn0o7****.ads.aliyuncs.com</p>
+             * ConnectionString.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -402,14 +383,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix of the endpoint.</p>
-             * <ul>
-             * <li>If NetType is set to VPC, the prefix of the VPC endpoint is returned.</li>
-             * <li>If NetType is set to Public, the prefix of the public endpoint is returned.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-wz9dqvn0o7****</p>
+             * ConnectionStringPrefix.
              */
             public Builder connectionStringPrefix(String connectionStringPrefix) {
                 this.connectionStringPrefix = connectionStringPrefix;
@@ -417,14 +391,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the endpoint.</p>
-             * <ul>
-             * <li>If NetType is set to VPC, the private IP address of the cluster is returned.</li>
-             * <li>If NetType is set to Public, the public IP address of the cluster is returned.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xx.xx</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -432,14 +399,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Public</strong>: Internet.</li>
-             * <li><strong>VPC</strong>: VPC.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetType.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -447,10 +407,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used to connect to the cluster. <strong>3306</strong> is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3306</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -458,7 +415,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports.</p>
+             * Ports.
              */
             public Builder ports(AddressPorts ports) {
                 this.ports = ports;
@@ -466,13 +423,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
-             * <blockquote>
-             * <p> If NetType is set to Public, an empty string is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-8vbhucmd5b****</p>
+             * VPCId.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -480,13 +431,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID of the cluster.</p>
-             * <blockquote>
-             * <p> If NetType is set to Public, an empty string is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp1syh8vvw8yec****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

@@ -88,9 +88,10 @@ public class DescribeClusterNetInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of clusters in a specific region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -104,10 +105,12 @@ public class DescribeClusterNetInfoRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the cluster. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</p>
+         * </li>
+         * <li><p><strong>ClickHouse</strong>: the wide table engine.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

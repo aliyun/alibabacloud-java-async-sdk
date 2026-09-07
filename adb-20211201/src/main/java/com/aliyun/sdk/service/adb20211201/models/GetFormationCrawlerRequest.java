@@ -103,7 +103,10 @@ public class GetFormationCrawlerRequest extends Request {
         } 
 
         /**
-         * CrawlerTaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>247</p>
          */
         public Builder crawlerTaskId(Long crawlerTaskId) {
             this.putBodyParameter("CrawlerTaskId", crawlerTaskId);
@@ -112,7 +115,10 @@ public class GetFormationCrawlerRequest extends Request {
         }
 
         /**
-         * CrawlerTaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-crawler-dbname</p>
          */
         public Builder crawlerTaskName(String crawlerTaskName) {
             this.putBodyParameter("CrawlerTaskName", crawlerTaskName);
@@ -121,6 +127,7 @@ public class GetFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,10 @@ public class GetFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

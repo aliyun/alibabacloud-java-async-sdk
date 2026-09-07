@@ -244,7 +244,7 @@ public class ModifyPerformanceViewRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Basic</p>
+         * <p>Custom-All metrics-2 columns-Linked</p>
          */
         public Builder viewName(String viewName) {
             this.putQueryParameter("ViewName", viewName);

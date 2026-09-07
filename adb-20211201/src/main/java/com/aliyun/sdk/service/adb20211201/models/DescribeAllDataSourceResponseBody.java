@@ -93,7 +93,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried columns.</p>
+         * Columns.
          */
         public Builder columns(Columns columns) {
             this.columns = columns;
@@ -112,7 +112,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried databases.</p>
+         * Schemas.
          */
         public Builder schemas(Schemas schemas) {
             this.schemas = schemas;
@@ -120,7 +120,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried tables.</p>
+         * Tables.
          */
         public Builder tables(Tables tables) {
             this.tables = tables;
@@ -251,14 +251,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoIncrementColumn.
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -266,10 +259,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the column.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>id</p>
+             * ColumnName.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -277,10 +267,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-bp1pke2pcfavw****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -288,14 +275,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * PrimaryKey.
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -303,10 +283,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adb_demo</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -314,10 +291,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical name of the table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -325,10 +299,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the column.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bigint</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -449,10 +420,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-bp1pke2pcfavw****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -460,10 +428,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adb_demo</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -597,10 +562,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>amv-bp1pke2pcfavw****</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -608,10 +570,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adb_demo</p>
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -619,10 +578,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical name of the table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

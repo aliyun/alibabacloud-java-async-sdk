@@ -64,7 +64,7 @@ public class GetSparkConfigLogPathRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>am-adsdxxxx</p>
+         * <p>amv-bp19lm077co*****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);

@@ -210,7 +210,10 @@ public class TableDetailModel extends TeaModel {
         } 
 
         /**
-         * Catalog.
+         * <p>External data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder catalog(String catalog) {
             this.catalog = catalog;
@@ -218,7 +221,7 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * Columns.
+         * <p>Column information.</p>
          */
         public Builder columns(java.util.List<ColDetailModel> columns) {
             this.columns = columns;
@@ -226,7 +229,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -250,7 +256,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -266,7 +275,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>Owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -282,7 +294,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>Logical database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaName</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -290,7 +305,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>Logical table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -298,7 +316,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>Table type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHYSICAL_SCHEMA_NAME</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -306,7 +327,10 @@ public class TableDetailModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

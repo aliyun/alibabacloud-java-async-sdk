@@ -119,7 +119,10 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidInput</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,14 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the task is deleted. Valid values:</p>
+         * <ul>
+         * <li>true: The task is deleted.</li>
+         * <li>false: The task failed to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -135,7 +145,10 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +156,10 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +167,10 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8DA77FA-FF0F-5516-A551-86C6E2D4BE92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +178,10 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -119,7 +119,7 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Same as HTTP status code.</p>
+         * <p>The same as the HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the ID of the created task.</p>
+         * <p>The ID of the created task.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -141,7 +141,7 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -163,7 +163,7 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1A943417-5B0E-1DB9-A8**-A566****C3</p>
@@ -174,7 +174,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. true: The request is successful. false: The message group failed to be unmuted.</p>
+         * <p>Indicates whether the request was successful.
+         * True: The request was successful. False: The request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

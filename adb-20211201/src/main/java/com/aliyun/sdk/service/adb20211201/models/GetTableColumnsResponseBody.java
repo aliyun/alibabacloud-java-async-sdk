@@ -114,7 +114,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries in the result.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -247,7 +247,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number. Pages start from page 1. Default value: 1.</p>
+             * <p>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -274,7 +274,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the table.</p>
+             * <p>The details of the table.</p>
              */
             public Builder table(TableDetailModel table) {
                 this.table = table;
@@ -282,7 +282,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries in the result.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>

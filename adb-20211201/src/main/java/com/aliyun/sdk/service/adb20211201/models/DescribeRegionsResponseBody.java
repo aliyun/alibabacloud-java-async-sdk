@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried regions.</p>
+         * Regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -157,10 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Hangzhou Zone H</p>
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -168,14 +165,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * VpcEnabled.
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -183,10 +173,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -333,10 +320,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>China (Hangzhou)</p>
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -344,10 +328,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adb.aliyuncs.com</p>
+             * RegionEndpoint.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -355,10 +336,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,7 +344,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried zones.</p>
+             * Zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

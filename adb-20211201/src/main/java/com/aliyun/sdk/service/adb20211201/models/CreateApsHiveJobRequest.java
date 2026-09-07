@@ -233,7 +233,7 @@ public class CreateApsHiveJobRequest extends Request {
         } 
 
         /**
-         * <p>The advanced configurations.</p>
+         * <p>The advanced configuration.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -247,12 +247,12 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The policy to handle tables with the same name in the destination cluster.</p>
+         * <p>The policy for handling databases and tables with the same name at the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>Intercept: reports error and aborts.
-         * Ignore: ignores and continues migrating the relevant tables.
-         * Skip: skips related tables and only migrates other tables.</p>
+         * Ignore: ignores and continues.
+         * Skip: skips relevant tables.</p>
          */
         public Builder conflictStrategy(String conflictStrategy) {
             this.putBodyParameter("ConflictStrategy", conflictStrategy);
@@ -261,7 +261,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * <p>The AnalyticDB for MySQL cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The number of AnalyticDB compute units (ACUs) required for data migration.</p>
+         * <p>The number of AnalyticDB compute units (ACUs) required for the migration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</p>
+         * <p>The destination lakehouse address, which is a full OSS path.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ossLocation(String ossLocation) {
@@ -309,7 +309,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The number of tasks that are allowed in parallel.</p>
+         * <p>The number of parallel tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -321,9 +321,9 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the O&amp;M event.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -350,7 +350,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The expression that allows objects to be synchronized.</p>
+         * <p>The expression that specifies the objects allowed for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -364,7 +364,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The expression that denies objects to be synchronized.</p>
+         * <p>The expression that specifies the objects allowed for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -388,7 +388,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the workload.</p>
+         * <p>The workload name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

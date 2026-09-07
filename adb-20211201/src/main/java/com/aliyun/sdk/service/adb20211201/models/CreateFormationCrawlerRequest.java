@@ -90,7 +90,32 @@ public class CreateFormationCrawlerRequest extends Request {
         } 
 
         /**
+         * <p>The JSON string that contains the complete crawler configuration. This is the most important parameter. For the internal JSON structure, see the CrawlerInfo structure definition section.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;sourceType&quot;: &quot;OSSWAREHOUSE&quot;,
+         *   &quot;dbName&quot;: &quot;your_target_db&quot;,
+         *   &quot;sourceInfo&quot;: {
+         *     &quot;ossSourceInfo&quot;: {
+         *       &quot;sourceMode&quot;: &quot;WAREHOUSE&quot;,
+         *       &quot;ossLocations&quot;: [&quot;oss://your-bucket/your-path/&quot;],
+         *       &quot;exclusions&quot;: [],
+         *       &quot;inclusions&quot;: []
+         *     }
+         *   },
+         *   &quot;classifiers&quot;: [&quot;csv&quot;],
+         *   &quot;schemaChangePolicy&quot;: {
+         *     &quot;updateRule&quot;: &quot;ONLY_ADD_COLUMN&quot;,
+         *     &quot;deleteRule&quot;: &quot;IGNORE&quot;
+         *   },
+         *   &quot;frequency&quot;: {
+         *     &quot;type&quot;: &quot;monthly&quot;,
+         *     &quot;cron&quot;: &quot;0+00+00+1+<em>+?+</em>&quot;
+         *   },
+         *   &quot;configuration&quot;: &quot;adb.crawler.csv.columns.specify.delimiter.char=auto\nadb.crawler.csv.columns.specify.quote.char=auto\n&quot;
+         * }</p>
          */
         public Builder crawlerInfo(String crawlerInfo) {
             this.putBodyParameter("CrawlerInfo", crawlerInfo);
@@ -99,6 +124,7 @@ public class CreateFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The ADB instance ID. This specifies the resource-level scope of the operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +137,7 @@ public class CreateFormationCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

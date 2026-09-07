@@ -67,7 +67,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried database accounts.</p>
+         * AccountList.
          */
         public Builder accountList(AccountList accountList) {
             this.accountList = accountList;
@@ -477,10 +477,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test_accout_des</p>
+             * AccountDescription.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -488,10 +485,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test_accout</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -499,15 +493,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the database account. Valid values:</p>
-             * <ul>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Available</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * AccountStatus.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -515,14 +501,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database account. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: standard account.</li>
-             * <li><strong>Super</strong>: privileged account.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * AccountType.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -530,14 +509,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>AnalyticDB</strong>: the AnalyticDB for MySQL engine.</li>
-             * <li><strong>Clickhouse</strong>: the wide table engine.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Clickhouse</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -577,10 +549,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Resource Access Management (RAM) user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1958134230****</p>
+             * RamUsers.
              */
             public Builder ramUsers(String ramUsers) {
                 this.ramUsers = ramUsers;

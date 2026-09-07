@@ -119,7 +119,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. OK is returned if the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -355,7 +374,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-08 17:05:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +385,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * LastTaskInstCostTime.
+             * <p>The execution duration of the most recent task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder lastTaskInstCostTime(String lastTaskInstCostTime) {
                 this.lastTaskInstCostTime = lastTaskInstCostTime;
@@ -371,7 +396,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * LastTaskInstID.
+             * <p>The instance ID of the most recent task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46872</p>
              */
             public Builder lastTaskInstID(String lastTaskInstID) {
                 this.lastTaskInstID = lastTaskInstID;
@@ -379,7 +407,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * LastTaskInstMessage.
+             * <p>The error message of the most recent task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder lastTaskInstMessage(String lastTaskInstMessage) {
                 this.lastTaskInstMessage = lastTaskInstMessage;
@@ -387,7 +418,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * LastTaskInstState.
+             * <p>The instance status of the most recent node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder lastTaskInstState(String lastTaskInstState) {
                 this.lastTaskInstState = lastTaskInstState;
@@ -395,7 +429,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleState.
+             * <p>The scheduling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STOP</p>
              */
             public Builder scheduleState(String scheduleState) {
                 this.scheduleState = scheduleState;
@@ -403,7 +440,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sales_db</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -411,7 +451,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSWAREHOUSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -419,7 +462,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * SyncTime.
+             * <p>The scheduling frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;cron\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;run_on_demand\&quot;}</p>
              */
             public Builder syncTime(String syncTime) {
                 this.syncTime = syncTime;
@@ -427,7 +473,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -435,7 +484,7 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -443,7 +492,10 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CRAWLER</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

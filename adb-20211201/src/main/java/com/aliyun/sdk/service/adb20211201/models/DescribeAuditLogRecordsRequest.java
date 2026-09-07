@@ -343,9 +343,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -359,7 +360,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database on which the SQL statement was executed.</p>
+         * <p>The name of the database on which the SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -371,15 +372,13 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The end time must be later than the start time.</p>
-         * </li>
-         * <li><p>The maximum time range that can be specified is 24 hours.</p>
-         * </li>
+         * <li>The end time must be later than the start time.</li>
+         * <li>The interval between the start time and the end time cannot exceed 24 hours.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-08-12T17:08Z</p>
@@ -391,7 +390,15 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li>XIHE: audit logs of the default compute engine.</li>
+         * <li>AGENT_SERVERLESS: audit logs of the Serverless analytics feature.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the default value is XIHE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XIHE</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -400,7 +407,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+         * <p>The IP address and port number of the client that executes the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>100.104.XX.XX:43908</p>
@@ -412,24 +419,24 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The order in which to sort the retrieved entries by field. Specify this parameter in the JSON format. The value is an ordered array that uses the order of the input array and contains <code>Field</code> and <code>Type</code>. Example: <code>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Fields:</p>
+         * <p>The sorting order based on specified fields. The value is in JSON format and is an ordered JSON array. Compound sorting is performed in the order of the input array. The array contains the <code>Field</code> and <code>Type</code> fields. Example: <code>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
          * <ul>
-         * <li><p><code>Field</code>: the field that is used to sort the retrieved entries. Valid values:</p>
+         * <li><p><code>Field</code> specifies the field name for sorting. Valid values:</p>
          * <ul>
-         * <li><strong>HostAddress</strong>: the IP address of the client that is used to connect to the database.</li>
+         * <li><strong>HostAddress</strong>: the address of the client that connects to the database.</li>
          * <li><strong>UserName</strong>: the username.</li>
-         * <li><strong>ExecutionStartTime</strong>: the start time of the query execution.</li>
-         * <li><strong>QueryTime</strong>: the amount of time consumed to execute the SQL statement.</li>
-         * <li><strong>PeakMemoryUsage</strong>: the maximum memory usage when the SQL statement is executed.</li>
-         * <li><strong>ScanRows</strong>: the number of rows to be scanned from a data source in the task.</li>
-         * <li><strong>ScanSize</strong>: the amount of data to be scanned.</li>
-         * <li><strong>ScanTime</strong>: the total amount of time consumed to scan data.</li>
-         * <li><strong>PlanningTime</strong>: the amount of time consumed to generate execution plans.</li>
-         * <li><strong>WallTime</strong>: the accumulated CPU Time values of all operators in the query on each node.</li>
+         * <li><strong>ExecutionStartTime</strong>: the execution start time of the SQL statement.</li>
+         * <li><strong>QueryTime</strong>: the execution duration of the SQL statement.</li>
+         * <li><strong>PeakMemoryUsage</strong>: the peak memory usage during the execution of the SQL statement.</li>
+         * <li><strong>ScanRows</strong>: the number of rows scanned by tasks with data sources.</li>
+         * <li><strong>ScanSize</strong>: the amount of scanned data.</li>
+         * <li><strong>ScanTime</strong>: the total time consumed for scanning data.</li>
+         * <li><strong>PlanningTime</strong>: the time consumed for generating the execution plan.</li>
+         * <li><strong>WallTime</strong>: the cumulative CPU time of all operators across all nodes in the query.</li>
          * <li><strong>ProcessID</strong>: the process ID.</li>
          * </ul>
          * </li>
-         * <li><p><code>Type</code>: the sorting type of the retrieved entries. Valid values:</p>
+         * <li><p><code>Type</code> specifies the sorting type. Valid values:</p>
          * <ul>
          * <li><strong>Desc</strong>: descending order.</li>
          * <li><strong>Asc</strong>: ascending order.</li>
@@ -447,10 +454,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order of the retrieved entries. Valid values:</p>
+         * <p>The order in which the results are sorted by SQL execution time. Valid values:</p>
          * <ul>
-         * <li><strong>asc</strong>: sorts the retrieved entries by time in ascending order.</li>
-         * <li><strong>desc</strong>: sorts the retrieved entries by time in descending order.</li>
+         * <li><strong>asc</strong>: ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -481,7 +488,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -523,7 +530,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>None</p>
          */
         public Builder proxyUser(String proxyUser) {
             this.putQueryParameter("ProxyUser", proxyUser);
@@ -532,7 +539,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword based on which audit logs are queried. You can set this parameter to a value of the STRING type.</p>
+         * <p>The keyword used to search the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>adb</p>
@@ -544,9 +551,9 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the cluster.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -589,7 +596,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
          * <li><strong>CREATE</strong></li>
          * </ul>
          * <blockquote>
-         * <p> You can query only a single type of SQL statements at a time. If you leave this parameter empty, all types of SQL statements are queried.</p>
+         * <p>Only one type can be specified per request. If this parameter is not specified, all types are queried by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -602,9 +609,9 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The beginning of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
          * <blockquote>
-         * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.</p>
+         * <p>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only logs generated after re-enabling can be queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -617,10 +624,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the execution of the SQL statement succeeds. Valid values:</p>
+         * <p>Specifies whether the SQL statement is executed successfully. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Executed successfully.</li>
+         * <li><strong>false</strong>: Execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -633,7 +640,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The username that is used to execute the SQL statement.</p>
+         * <p>The username that executes the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

@@ -197,7 +197,10 @@ public class TableSummaryModel extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -221,7 +224,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>descrtiption</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -237,7 +243,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>Owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -245,7 +254,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * SQL.
+         * <p>SQL for creating the table or view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create table(a varchar)</p>
          */
         public Builder SQL(String SQL) {
             this.SQL = SQL;
@@ -253,7 +265,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>Logical database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaName</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -261,7 +276,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>Logical table name or logical view name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -269,7 +287,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * TableSize.
+         * <p>Table size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder tableSize(Long tableSize) {
             this.tableSize = tableSize;
@@ -277,7 +298,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>Table or view type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHYSICAL_SCHEMA_NAME</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -285,7 +309,10 @@ public class TableSummaryModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

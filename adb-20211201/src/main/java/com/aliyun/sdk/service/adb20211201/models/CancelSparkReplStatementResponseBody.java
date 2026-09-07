@@ -337,7 +337,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>StackOverflow Exception:</p>
+             * <p>StackOverflow Exception：</p>
              */
             public Builder error(String error) {
                 this.error = error;

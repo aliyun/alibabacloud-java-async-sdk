@@ -145,6 +145,8 @@ public class RunMaterializedViewRecommendRequest extends Request {
         } 
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of a Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +177,10 @@ public class RunMaterializedViewRecommendRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The Region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,6 +207,7 @@ public class RunMaterializedViewRecommendRequest extends Request {
         }
 
         /**
+         * <p>The name of the recommendation task. To run tasks in a batch, separate their names with a comma.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

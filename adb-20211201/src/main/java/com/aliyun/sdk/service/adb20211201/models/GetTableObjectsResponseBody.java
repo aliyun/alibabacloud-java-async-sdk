@@ -106,7 +106,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value is a positive integer. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,11 +125,11 @@ public class GetTableObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong></li>
+         * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><strong>100</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>863D51B7-5321-41D8-A0B6-A088B0******</p>
@@ -152,7 +152,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +247,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the returned page. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+             * <p>The page number. The value is a positive integer. Default value: <strong>1</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -258,11 +258,11 @@ public class GetTableObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+             * <p>The number of entries per page. Valid values:</p>
              * <ul>
-             * <li><strong>30</strong></li>
+             * <li><strong>30</strong> (default)</li>
              * <li><strong>50</strong></li>
-             * <li><strong>100</strong></li>
+             * <li><strong>100</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the tables.</p>
+             * <p>The result array.</p>
              */
             public Builder tableSummaryModels(java.util.List<TableSummaryModel> tableSummaryModels) {
                 this.tableSummaryModels = tableSummaryModels;
@@ -282,7 +282,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

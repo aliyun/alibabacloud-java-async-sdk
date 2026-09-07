@@ -158,7 +158,10 @@ public class DatabaseSummaryModel extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -190,7 +193,10 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -206,7 +212,10 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>Owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -214,7 +223,10 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>logical database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchema</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -222,7 +234,10 @@ public class DatabaseSummaryModel extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05 13:17:55</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
