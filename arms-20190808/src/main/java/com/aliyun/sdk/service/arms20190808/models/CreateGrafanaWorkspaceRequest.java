@@ -245,7 +245,17 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * AccountNumber.
+         * <p>Account quantity.  </p>
+         * <p><strong>Value description:</strong>  </p>
+         * <ul>
+         * <li>If GrafanaWorkspaceEdition is <strong>standard</strong>, this parameter is invalid.  </li>
+         * <li>If GrafanaWorkspaceEdition is <strong>personal_edition</strong>, this parameter is invalid. Default Value: 1.  </li>
+         * <li>If GrafanaWorkspaceEdition is <strong>experts_edition</strong>, valid values are 10, 30, or 50. Default Value: 10.  </li>
+         * <li>If GrafanaWorkspaceEdition is <strong>advanced_edition</strong>, this parameter is invalid. Default Value: 100.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder accountNumber(String accountNumber) {
             this.putQueryParameter("AccountNumber", accountNumber);
@@ -270,7 +280,15 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Whether auto-renewal is enabled. Valid values:  </p>
+         * <ul>
+         * <li>true: Auto-renewal is enabled.  </li>
+         * <li>false: Auto-renewal is disabled.</li>
+         * </ul>
+         * <p>Default Value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -279,7 +297,17 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * CustomAccountNumber.
+         * <p>Additional custom account quantity for the User.  </p>
+         * <p><strong>Value description:</strong>  </p>
+         * <ul>
+         * <li>If GrafanaWorkspaceEdition is <strong>standard</strong>, this parameter is invalid.  </li>
+         * <li>If GrafanaWorkspaceEdition is <strong>personal_edition</strong>, this parameter is invalid.  </li>
+         * <li>If GrafanaWorkspaceEdition is <strong>experts_edition</strong>, this parameter is invalid.  </li>
+         * <li>If GrafanaWorkspaceEdition is <strong>advanced_edition</strong>, the value range is 0 to 2000 and must be a multiple of 10. Default Value: 0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder customAccountNumber(String customAccountNumber) {
             this.putQueryParameter("CustomAccountNumber", customAccountNumber);
@@ -300,7 +328,15 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Subscription duration of the instance. Valid values:  </p>
+         * <ul>
+         * <li>If PricingCycle is <strong>Month</strong>, indicating monthly billing, the value range is <strong>1</strong> to <strong>9</strong>.  </li>
+         * <li>If PricingCycle is <strong>Year</strong>, indicating yearly billing, the value range is <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * <p>Default Value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -309,6 +345,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>Grafana version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -354,7 +391,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () &quot; ~ ! @ # $ % ^ &amp; * - _ + =.</p>
+         * <p>The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () \&quot; ~ ! @ # $ % ^ &amp; \* - _ + =.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456!</p>

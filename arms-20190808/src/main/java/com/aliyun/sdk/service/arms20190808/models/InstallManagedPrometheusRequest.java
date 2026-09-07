@@ -285,7 +285,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -320,7 +323,12 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * VcExtraInfo.
+         * <p>Extension information for the Flink VC cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder vcExtraInfo(String vcExtraInfo) {
             this.putQueryParameter("VcExtraInfo", vcExtraInfo);

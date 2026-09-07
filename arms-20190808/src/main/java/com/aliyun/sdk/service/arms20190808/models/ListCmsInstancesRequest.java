@@ -89,6 +89,7 @@ public class ListCmsInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class ListCmsInstancesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,10 +115,12 @@ public class ListCmsInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud service integration. Valid values:</p>
+         * <p>The type of integrated cloud service. Valid values:</p>
          * <ul>
-         * <li>direct: self-monitoring</li>
-         * <li>cms: Hybrid Cloud Monitoring</li>
+         * <li><p><code>direct</code>: An integration for cloud products that are monitored by the product itself.</p>
+         * </li>
+         * <li><p><code>cms</code>: An integration with CloudMonitor.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

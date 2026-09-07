@@ -149,7 +149,7 @@ public class GetStackRequest extends Request {
          * <p>The exit timestamp of the method call. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1653641800</p>
+         * <p>1728355143000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -211,7 +211,7 @@ public class GetStackRequest extends Request {
          * <p>The entry timestamp of the method call. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1653555396</p>
+         * <p>1728351543000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

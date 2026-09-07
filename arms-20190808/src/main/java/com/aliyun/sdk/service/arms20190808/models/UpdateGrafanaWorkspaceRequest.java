@@ -130,6 +130,9 @@ public class UpdateGrafanaWorkspaceRequest extends Request {
 
         /**
          * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>线上生产环境Grafana</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

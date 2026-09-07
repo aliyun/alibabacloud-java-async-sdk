@@ -198,7 +198,7 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
              * <p>Indicates whether targets are matched.</p>
              * 
              * <strong>example:</strong>
-             * <p>Match successful.</p>
+             * <p>匹配成功。</p>
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;

@@ -109,7 +109,7 @@ public class ChangeAlarmSeverityRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>155</p>
+         * <p>184723093</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);

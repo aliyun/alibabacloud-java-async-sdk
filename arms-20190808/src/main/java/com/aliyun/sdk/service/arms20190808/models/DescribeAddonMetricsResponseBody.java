@@ -232,7 +232,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
              * <p>The description of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</p>
+             * <p>大小为PAGE_SIZE的B树页面被成功压缩的次数。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -468,7 +468,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
              * <p>The description of the metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</p>
+             * <p>大小为PAGE_SIZE的B树页面被成功压缩的次数。</p>
              */
             public Builder description(String description) {
                 this.description = description;

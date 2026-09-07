@@ -94,7 +94,7 @@ public class ClaimAlarmRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>30</p>
+         * <p>184723093</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);

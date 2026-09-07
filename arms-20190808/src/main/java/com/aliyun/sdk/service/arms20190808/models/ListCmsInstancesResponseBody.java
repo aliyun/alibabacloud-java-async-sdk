@@ -67,7 +67,7 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7A04B0D-E2CA-59BB-8A9D-D5D349C22BF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,12 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Descr.
+             * <p>The product description.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder descr(String descr) {
                 this.descr = descr;
@@ -253,7 +261,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20210</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -261,7 +272,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudserver</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -269,7 +283,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the integrated cloud product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologres</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -277,7 +294,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Prod.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>face</p>
              */
             public Builder prod(String prod) {
                 this.prod = prod;
@@ -285,7 +305,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -293,7 +316,16 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The integration status of the product.</p>
+             * <ul>
+             * <li><p><code>true</code>: Integrated.</p>
+             * </li>
+             * <li><p><code>false</code>: Not integrated.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -301,7 +333,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The creation timestamp of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647852021000</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -309,7 +344,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The product type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOLOGRES</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -317,7 +355,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The complete URL of the Grafana dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://g.console.aliyun.com/d/1098370038733503-35894-565/cms-hologres?orgId%5C%5Cu003d9%5C%5Cu0026refresh%5C%5Cu003d60s">https://g.console.aliyun.com/d/1098370038733503-35894-565/cms-hologres?orgId\\u003d9\\u0026refresh\\u003d60s</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -384,7 +425,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableTag.
+             * <p>Indicates whether tag collection for the cloud product is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTag(Boolean enableTag) {
                 this.enableTag = enableTag;
@@ -392,7 +436,7 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Products.
+             * <p>The list of cloud products.</p>
              */
             public Builder products(java.util.List<Products> products) {
                 this.products = products;

@@ -93,7 +93,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>状态码。说明 200表示成功。</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the array object.</p>
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回结果的提示信息。</p>
+         * <p>The message returned for the result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
@@ -208,7 +208,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
              * <p>The list of instances that failed to be added.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;sourceName&quot;: &quot;Data source name- ArmsPrometheus&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;userId&quot;:&quot;UserID&quot;,&quot;clusterId&quot;:&quot;ClusterId&quot;,}]</p>
+             * <p>[{&quot;sourceName&quot;: &quot;数据源名称- ArmsPrometheus&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;userId&quot;:&quot;UserID&quot;,&quot;clusterId&quot;:&quot;ClusterId&quot;,}]</p>
              */
             public Builder failedInstances(String failedInstances) {
                 this.failedInstances = failedInstances;
@@ -216,7 +216,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the global aggregation instance.</p>
+             * <p>The aggregation instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>global-v2-cn-1483223059272121-jmjjfznz</p>
@@ -311,6 +311,9 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
 
             /**
              * <p>The Info-level information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{regionId: 实例所属region, globalViewClusterId: 实例Id, failedInstances: 数据源JSON list中，添加失败的单个JSON的list}</p>
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -318,7 +321,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional information.</p>
+             * <p>The additional description.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -329,10 +332,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <p>Indicates whether the query was successful.</p>
              * <ul>
-             * <li><code>true</code></li>
-             * <li><code>false</code></li>
+             * <li><code>true</code>: Successful.</li>
+             * <li><code>false</code>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

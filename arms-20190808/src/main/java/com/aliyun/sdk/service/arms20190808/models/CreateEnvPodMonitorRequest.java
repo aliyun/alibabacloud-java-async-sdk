@@ -134,7 +134,7 @@ public class CreateEnvPodMonitorRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Refer to supplementary instructions.</p>
+         * <p>参见补充说明。</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);

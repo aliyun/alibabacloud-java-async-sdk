@@ -223,7 +223,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
          * <p>The type of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom</p>
+         * <p>自定义</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

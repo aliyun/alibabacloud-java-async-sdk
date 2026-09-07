@@ -137,7 +137,7 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>查询成功</p>
          */
         public Builder message(String message) {
             this.message = message;

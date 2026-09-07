@@ -206,7 +206,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>p_dev</p>
+             * <p>p_运维</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -852,7 +852,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              * <p>The ID of the Grafana workspace.</p>
              * 
              * <strong>example:</strong>
-             * <p>grafana-cn-27a3m8eem0a</p>
+             * <p>grafana-cn-i7m2qn9xa01</p>
              */
             public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
                 this.grafanaWorkspaceId = grafanaWorkspaceId;

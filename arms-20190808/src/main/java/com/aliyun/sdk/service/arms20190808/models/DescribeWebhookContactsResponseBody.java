@@ -221,7 +221,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
              * <p>The alert notification template.</p>
              * 
              * <strong>example:</strong>
-             * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
+             * <p>{ &quot;告警名称&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;集群名称&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;应用名称&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;通知策略&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;告警时间&quot;:&quot;{{ .startTime }}&quot;, &quot;告警内容&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -247,7 +247,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
              * <p>The notification template for clearing alerts.</p>
              * 
              * <strong>example:</strong>
-             * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
+             * <p>{ &quot;告警名称&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;集群名称&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;应用名称&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;通知策略&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;恢复时间&quot;:&quot;{{ .endTime }}&quot;, &quot;告警内容&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
              */
             public Builder recoverBody(String recoverBody) {
                 this.recoverBody = recoverBody;
@@ -360,7 +360,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
              * <p>The name of the webhook alert contact.</p>
              * 
              * <strong>example:</strong>
-             * <p>Webhook name</p>
+             * <p>webhook名称</p>
              */
             public Builder webhookName(String webhookName) {
                 this.webhookName = webhookName;

@@ -747,7 +747,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;src&quot;:&quot;211.154.166.174&quot;}]</p>
+             * <p>[{\&quot;src\&quot;:\&quot;211.154.166.174\&quot;}]</p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -881,7 +881,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             /**
              * <p>The day on which synthetic monitoring is performed. Valid values:</p>
              * <ul>
-             * <li>-1: every day</li>
+             * <li>\-1: every day</li>
              * <li>0: Sunday</li>
              * <li>1: Monday</li>
              * <li>2: Tuesday</li>
@@ -1051,7 +1051,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              * <p>The city code.</p>
              * 
              * <strong>example:</strong>
-             * <p>110100</p>
+             * <p>11011XX</p>
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -1062,7 +1062,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              * <p>The type of the detection point.</p>
              * 
              * <strong>example:</strong>
-             * <p>IDC</p>
+             * <p>1</p>
              */
             public Builder monitorType(Long monitorType) {
                 this.monitorType = monitorType;
@@ -1073,7 +1073,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              * <p>The ID of the network service.</p>
              * 
              * <strong>example:</strong>
-             * <p>12001</p>
+             * <p>12</p>
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -1084,7 +1084,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              * <p>The number of times that the system sends detection requests.</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>2</p>
              */
             public Builder sendCount(Long sendCount) {
                 this.sendCount = sendCount;

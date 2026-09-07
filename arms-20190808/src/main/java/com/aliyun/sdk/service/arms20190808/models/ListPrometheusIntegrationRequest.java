@@ -94,7 +94,7 @@ public class ListPrometheusIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c77f6f2397ea74672872acf5e31374a27</p>
+         * <p>c77f6f2397ea74672872acf5e31******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class ListPrometheusIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
+         * <p>kafka</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);

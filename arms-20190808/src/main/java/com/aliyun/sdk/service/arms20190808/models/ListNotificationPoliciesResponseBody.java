@@ -766,7 +766,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert notification sent by email.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} &lt;a href=&quot;{{.generatorURL}}&quot; &gt;Link&lt;/a&gt; {{end}} {{end}}</p>
+             * <p>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 告警时间：{{ .startTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }}  {{if .generatorURL }}  <a href="{{.generatorURL}}" > 详情链接</a>  {{ end }} {{ end }}</p>
              */
             public Builder emailContent(String emailContent) {
                 this.emailContent = emailContent;
@@ -777,7 +777,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert resolution notification sent by email.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} &lt;a href=&quot;{{.generatorURL}}&quot; &gt;Link&lt;/a&gt; {{end}} {{end}}</p>
+             * <p>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 恢复时间：{{ .endTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }}  {{if .generatorURL }} <a href="{{.generatorURL}}" > 详情链接</a>  {{ end }} {{ end }}</p>
              */
             public Builder emailRecoverContent(String emailRecoverContent) {
                 this.emailRecoverContent = emailRecoverContent;
@@ -810,7 +810,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert notification sent by an IM chatbot.</p>
              * 
              * <strong>example:</strong>
-             * <p>{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }}&gt; {{.annotations.message}} {{if .generatorURL }} [Link]({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}</p>
+             * <p>{{if .commonLabels.clustername }}   &gt;  集群名称：{{ .commonLabels.clustername }}    {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}   &gt;  应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }}    {{ end }}{{ for .alerts }} &gt;  {{ .annotations.message }} {{if .generatorURL }} <a href="%7B%7B.generatorURL%7D%7D">详情链接</a> {{end}} {{if  eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} （疑似噪音） {{end}}  {{end}}</p>
              */
             public Builder robotContent(String robotContent) {
                 this.robotContent = robotContent;
@@ -821,7 +821,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert notification sent by text message.</p>
              * 
              * <strong>example:</strong>
-             * <p>&lt;SmsContent&gt;Notification on the occurrence of a {{ .level }} alert. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/SmsContent&gt;</p>
+             * <p>发生{{ .level }}告警 告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 告警时间：{{ .startTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
              */
             public Builder smsContent(String smsContent) {
                 this.smsContent = smsContent;
@@ -832,7 +832,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert resolution notification sent by text message.</p>
              * 
              * <strong>example:</strong>
-             * <p>&lt;SmsRecoverContent&gt;Alert resolution notification. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/SmsRecoverContent&gt;</p>
+             * <p>告警已经恢复 告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 恢复时间：{{ .endTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
              */
             public Builder smsRecoverContent(String smsRecoverContent) {
                 this.smsRecoverContent = smsRecoverContent;
@@ -843,7 +843,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert notification sent by phone.</p>
              * 
              * <strong>example:</strong>
-             * <p>&lt;TtsContent&gt;Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/TtsContent&gt;</p>
+             * <p>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 告警时间：{{ .startTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
              */
             public Builder ttsContent(String ttsContent) {
                 this.ttsContent = ttsContent;
@@ -854,7 +854,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <p>The content of the alert resolution notification sent by phone.</p>
              * 
              * <strong>example:</strong>
-             * <p>&lt;TtsRecoverContent&gt;Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/TtsRecoverContent&gt;</p>
+             * <p>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 恢复时间：{{ .endTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
              */
             public Builder ttsRecoverContent(String ttsRecoverContent) {
                 this.ttsRecoverContent = ttsRecoverContent;

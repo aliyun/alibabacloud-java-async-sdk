@@ -93,7 +93,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The status code. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned struct.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>message</p>
@@ -123,7 +123,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
@@ -192,7 +192,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of discarded metrics. Separate multiple metrics with line feeds.</p>
+             * <p>The metrics to be dropped. Metrics are separated by line breaks.</p>
              * 
              * <strong>example:</strong>
              * <p>kube_pod_created</p>
@@ -203,7 +203,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the discarded metric rule.</p>
+             * <p>The name of the metric drop rule.</p>
              * 
              * <strong>example:</strong>
              * <p>ruleName1</p>

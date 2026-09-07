@@ -264,7 +264,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
              * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段。</p>
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;

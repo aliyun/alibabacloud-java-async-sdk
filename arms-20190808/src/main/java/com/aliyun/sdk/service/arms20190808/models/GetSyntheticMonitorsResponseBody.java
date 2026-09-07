@@ -321,7 +321,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
              * <p>The city.</p>
              * 
              * <strong>example:</strong>
-             * <p>Beijing</p>
+             * <p>北京市</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -354,7 +354,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
              * <p>The country.</p>
              * 
              * <strong>example:</strong>
-             * <p>China</p>
+             * <p>中国</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -376,7 +376,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
              * <p>The carrier.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud</p>
+             * <p>阿里云</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -398,7 +398,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
              * <p>The region.</p>
              * 
              * <strong>example:</strong>
-             * <p>Beijing</p>
+             * <p>浙江</p>
              */
             public Builder region(String region) {
                 this.region = region;

@@ -131,7 +131,7 @@ public class DescribeIMRobotsRequest extends Request {
          * <p>The name of the IM chatbot.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chatbot name</p>
+         * <p>robot名称</p>
          */
         public Builder robotName(String robotName) {
             this.putQueryParameter("RobotName", robotName);

@@ -152,7 +152,7 @@ public class GetRumAppsResponseBody extends TeaModel {
          * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal error, please contact customer service.</p>
+         * <p>内部错误，请联系客服。</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -273,7 +273,7 @@ public class GetRumAppsResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -675,7 +675,7 @@ public class GetRumAppsResponseBody extends TeaModel {
              * <p>The description of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEST</p>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -708,7 +708,7 @@ public class GetRumAppsResponseBody extends TeaModel {
              * <p>The application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>home page</p>
+             * <p>门户首页。</p>
              */
             public Builder name(String name) {
                 this.name = name;

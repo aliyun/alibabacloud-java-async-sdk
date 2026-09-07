@@ -309,7 +309,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
              * <p>The total number of returned entries.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>2</p>
              */
             public Builder total(String total) {
                 this.total = total;

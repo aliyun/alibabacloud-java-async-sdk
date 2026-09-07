@@ -106,7 +106,8 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.<br><strong>Valid values:</strong></p>
+         * <p>The HTTP status code.\
+         * <strong>Valid values:</strong></p>
          * <ul>
          * <li>2xx: The request was successful.</li>
          * <li>3xx: The request was redirected.</li>
@@ -132,6 +133,9 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>探针类型错误</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +154,8 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.<br><strong>Valid values:</strong></p>
+         * <p>Indicates whether the request was successful.\
+         * <strong>Valid values:</strong></p>
          * <ul>
          * <li>true</li>
          * <li>false</li>

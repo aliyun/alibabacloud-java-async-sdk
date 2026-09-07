@@ -365,7 +365,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
              * <p>The last error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Get &quot;<a href="http://172.16.0.86:9104/metrics%5C">http://172.16.0.86:9104/metrics\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
+             * <p>Get \&quot;<a href="http://172.16.0.86:9104/metrics%5C%5C">http://172.16.0.86:9104/metrics\\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
              */
             public Builder lastError(String lastError) {
                 this.lastError = lastError;
@@ -632,7 +632,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
              * <p>The last error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Get &quot;<a href="http://172.16.0.86:9104/metrics%5C">http://172.16.0.86:9104/metrics\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
+             * <p>Get \&quot;<a href="http://172.16.0.86:9104/metrics%5C%5C">http://172.16.0.86:9104/metrics\\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
              */
             public Builder lastError(String lastError) {
                 this.lastError = lastError;

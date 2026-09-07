@@ -70,7 +70,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>49C82193-E991-5F6A-AF3E-1664D8D05CA3</p>
+         * <p>49C82193-E991-5F6A-AF3E-1664D8******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

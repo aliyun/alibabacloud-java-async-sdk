@@ -93,7 +93,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         } 
 
         /**
-         * <p>Indicates whether the custom configuration is used.</p>
+         * <p>Indicates whether to use a custom configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -104,7 +104,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * <p>The custom configuration.</p>
+         * <p>The custom configuration items.</p>
          */
         public Builder customConfig(java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue> customConfig) {
             this.customConfig = customConfig;
@@ -115,7 +115,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
          * <p>The description of the version configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>1.1.0版本配置</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -123,7 +123,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * <p>The time when the version configuration was updated.</p>
+         * <p>The update time of the version configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1721112372055</p>

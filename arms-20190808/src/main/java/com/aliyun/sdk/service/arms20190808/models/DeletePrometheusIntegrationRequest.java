@@ -133,7 +133,7 @@ public class DeletePrometheusIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kafka and mysql.</p>
+         * <p>kafka、mysql等。</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);

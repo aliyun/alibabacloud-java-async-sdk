@@ -314,7 +314,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, &quot;pod_name&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (pod_name))&gt;75</p>
+         * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, \&quot;pod_name\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (pod_name))&gt;75</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -339,7 +339,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
+         * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -350,8 +350,10 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         /**
          * <p>The method that is used to send alert notifications. Valid values:</p>
          * <ul>
-         * <li><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center. This is the default value.</li>
-         * <li><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</li>
+         * <li><p><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center. This is the default value.</p>
+         * </li>
+         * <li><p><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,7 +391,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
          * <p>The type of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Kubernetes component alert</p>
+         * <p>Kubernetes组件告警</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -356,7 +356,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to check whether ARMS is available for commercial use in a region.</p>
+     * <p>Retrieves the commercial activation status of a product.</p>
      * 
      * @param request the request parameters of CheckCommercialStatus  CheckCommercialStatusRequest
      * @return CheckCommercialStatusResponse
@@ -493,6 +493,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</p>
+     * 
      * @param request the request parameters of CreateDispatchRule  CreateDispatchRuleRequest
      * @return CreateDispatchRuleResponse
      */
@@ -584,14 +587,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</p>
+     * <p>Ensure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/grafana/product-overview/billing-4?spm=openapi-amp.newDocPublishment.0.0.7453281fkrsWrp">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of the Managed Service for Grafana product before using this API.  </p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>To create workspaces, you must complete real-name verification.</li>
-     * <li>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <code>These editions charge fees.</code></li>
-     * <li>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <code>These editions do not charge fees.</code></li>
+     * <li>Identity verification is required to create a Managed Service for Grafana instance. &lt;props=&quot;china&quot;&gt;You can refer to the <a href="https://help.aliyun.com/zh/account/user-guide/individual-identities">Account Identity Verification</a> documentation to complete the verification.  </li>
+     * <li>Regular users can only create Developer, Expert, or Pro editions (<code>fees apply</code>).  </li>
+     * <li>Internal testing users can only create the internal testing edition (<code>free of charge</code>).</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateGrafanaWorkspace  CreateGrafanaWorkspaceRequest
      * @return CreateGrafanaWorkspaceResponse
@@ -605,6 +608,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateGrafanaWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateGrafanaWorkspaceAccount  CreateGrafanaWorkspaceAccountRequest
+     * @return CreateGrafanaWorkspaceAccountResponse
+     */
+    @Override
+    public CompletableFuture<CreateGrafanaWorkspaceAccountResponse> createGrafanaWorkspaceAccount(CreateGrafanaWorkspaceAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGrafanaWorkspaceAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGrafanaWorkspaceAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGrafanaWorkspaceAccountResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -773,6 +794,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>建议使用<a href="https://help.aliyun.com/document_detail/411960.html">CreateOrUpdateAlertRule</a>接口创建Prometheus告警规则。</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreatePrometheusAlertRule  CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
      */
@@ -865,7 +891,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</p>
+     * <p>This operation returns a presigned URL for uploading a file. For instructions, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload files by using URLs</a>.</p>
      * 
      * @param request the request parameters of CreateRumUploadFileUrl  CreateRumUploadFileUrlRequest
      * @return CreateRumUploadFileUrlResponse
@@ -903,6 +929,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of CreateTimingSyntheticTask  CreateTimingSyntheticTaskRequest
      * @return CreateTimingSyntheticTaskResponse
      */
@@ -921,6 +950,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateWebhookContact接口创建或修改Webhook告警联系人。</p>
+     * 
      * @param request the request parameters of CreateWebhook  CreateWebhookRequest
      * @return CreateWebhookResponse
      */
@@ -996,6 +1028,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的DeleteContactGroup接口删除告警联系人组。</p>
+     * 
      * @param request the request parameters of DeleteAlertContactGroup  DeleteAlertContactGroupRequest
      * @return DeleteAlertContactGroupResponse
      */
@@ -1126,6 +1161,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的DeleteNotificationPolicy接口删除指定ID的通知策略。</p>
+     * 
      * @param request the request parameters of DeleteDispatchRule  DeleteDispatchRuleRequest
      * @return DeleteDispatchRuleResponse
      */
@@ -1272,10 +1310,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <code>free of charge</code>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;&gt;</p>
+     * <blockquote>
      * <ul>
-     * <li>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</li>
+     * <li>This operation supports deletion only for beta (<code>free</code>) Grafana instances.</li>
+     * <li>Developer Edition, Pro Edition, and Advanced Edition instances do not support deletion. Go to <a href="https://usercenter2.aliyun.com/refund/refund">Expenses and Costs</a> to unsubscribe from the resource.
+     * &lt;props=&quot;intl&quot;&gt;
+     * This operation supports deletion only for beta (<code>free</code>) Grafana instances.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of DeleteGrafanaWorkspace  DeleteGrafanaWorkspaceRequest
      * @return DeleteGrafanaWorkspaceResponse
@@ -1289,6 +1332,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteGrafanaWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteGrafanaWorkspaceAccount  DeleteGrafanaWorkspaceAccountRequest
+     * @return DeleteGrafanaWorkspaceAccountResponse
+     */
+    @Override
+    public CompletableFuture<DeleteGrafanaWorkspaceAccountResponse> deleteGrafanaWorkspaceAccount(DeleteGrafanaWorkspaceAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteGrafanaWorkspaceAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGrafanaWorkspaceAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteGrafanaWorkspaceAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteGrafanaWorkspaceAccountRole  DeleteGrafanaWorkspaceAccountRoleRequest
+     * @return DeleteGrafanaWorkspaceAccountRoleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteGrafanaWorkspaceAccountRoleResponse> deleteGrafanaWorkspaceAccountRole(DeleteGrafanaWorkspaceAccountRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteGrafanaWorkspaceAccountRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGrafanaWorkspaceAccountRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteGrafanaWorkspaceAccountRoleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1480,7 +1559,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is currently available only in Hangzhou, Singapore, and Silicon Valley. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of DeleteRumUploadFile  DeleteRumUploadFileRequest
      * @return DeleteRumUploadFileResponse
@@ -1572,6 +1651,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of DeleteTimingSyntheticTask  DeleteTimingSyntheticTaskRequest
      * @return DeleteTimingSyntheticTaskResponse
      */
@@ -1698,6 +1780,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的ListNotificationPolicies接口查询通知策略信息。</p>
+     * 
      * @param request the request parameters of DescribeDispatchRule  DescribeDispatchRuleRequest
      * @return DescribeDispatchRuleResponse
      */
@@ -2398,7 +2483,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>User experience monitoring is available only in China (Hangzhou), Asia Pacific SE 1 (Singapore), and US West 1 (Silicon Valley). Select the correct endpoint.</p>
      * 
      * @param request the request parameters of GetRumAppInfo  GetRumAppInfoRequest
      * @return GetRumAppInfoResponse
@@ -2461,7 +2546,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of GetRumExceptionStack  GetRumExceptionStackRequest
      * @return GetRumExceptionStackResponse
@@ -2503,7 +2588,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of GetRumUploadFiles  GetRumUploadFilesRequest
      * @return GetRumUploadFilesResponse
@@ -2559,6 +2644,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of GetSyntheticMonitors  GetSyntheticMonitorsRequest
      * @return GetSyntheticMonitorsResponse
      */
@@ -2631,6 +2719,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of GetTimingSyntheticTask  GetTimingSyntheticTaskRequest
      * @return GetTimingSyntheticTaskResponse
      */
@@ -2702,6 +2793,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTraceAppConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GrafanaWorkspaceHttpApiProxy  GrafanaWorkspaceHttpApiProxyRequest
+     * @return GrafanaWorkspaceHttpApiProxyResponse
+     */
+    @Override
+    public CompletableFuture<GrafanaWorkspaceHttpApiProxyResponse> grafanaWorkspaceHttpApiProxy(GrafanaWorkspaceHttpApiProxyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GrafanaWorkspaceHttpApiProxy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GrafanaWorkspaceHttpApiProxyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GrafanaWorkspaceHttpApiProxyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2804,7 +2913,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI InstallManagedPrometheus is deprecated  * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
+     * @deprecated OpenAPI InstallManagedPrometheus is deprecated  * @description This applies only to ASK and ECS instances, and only if Alibaba Cloud Prometheus has not been previously installed on the cluster. The managed Prometheus instance will be installed on the cloud service side and will not be visible within the user\\"s cluster.
      * 
      * @param request the request parameters of InstallManagedPrometheus  InstallManagedPrometheusRequest
      * @return InstallManagedPrometheusResponse
@@ -2825,6 +2934,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is no longer maintained. Use the ListAlerts API of the new alert management system to query the alert sending history.</p>
+     * 
      * @param request the request parameters of ListActivatedAlerts  ListActivatedAlertsRequest
      * @return ListActivatedAlertsResponse
      */
@@ -3253,6 +3365,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListGrafanaWorkspaceAccount  ListGrafanaWorkspaceAccountRequest
+     * @return ListGrafanaWorkspaceAccountResponse
+     */
+    @Override
+    public CompletableFuture<ListGrafanaWorkspaceAccountResponse> listGrafanaWorkspaceAccount(ListGrafanaWorkspaceAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListGrafanaWorkspaceAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGrafanaWorkspaceAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGrafanaWorkspaceAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInsightsEvents  ListInsightsEventsRequest
      * @return ListInsightsEventsResponse
      */
@@ -3510,6 +3640,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州 region 提供服务，使用 SDK 或 OpenAPI 时请选择杭州 region 对应的服务接入点。</p>
+     * 
      * @param request the request parameters of ListSyntheticDetail  ListSyntheticDetailRequest
      * @return ListSyntheticDetailResponse
      */
@@ -3528,6 +3661,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of ListTimingSyntheticTasks  ListTimingSyntheticTasksRequest
      * @return ListTimingSyntheticTasksResponse
      */
@@ -4068,6 +4204,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is no longer maintained. Use the AlertStatus parameter of the CreateOrUpdateAlertRule API in the new alert management system to update the running status of an alert rule.</p>
+     * 
      * @param request the request parameters of StartAlert  StartAlertRequest
      * @return StartAlertResponse
      */
@@ -4086,6 +4225,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of StartTimingSyntheticTask  StartTimingSyntheticTaskRequest
      * @return StartTimingSyntheticTaskResponse
      */
@@ -4104,6 +4246,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理CreateOrUpdateAlertRule接口的AlertStatus参数更新告警规则运行状态。</p>
+     * 
      * @param request the request parameters of StopAlert  StopAlertRequest
      * @return StopAlertResponse
      */
@@ -4122,6 +4267,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of StopTimingSyntheticTask  StopTimingSyntheticTaskRequest
      * @return StopTimingSyntheticTaskResponse
      */
@@ -4273,6 +4421,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateContactGroup接口创建或修改告警联系人组。</p>
+     * 
      * @param request the request parameters of UpdateAlertContactGroup  UpdateAlertContactGroupRequest
      * @return UpdateAlertContactGroupResponse
      */
@@ -4291,6 +4442,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is no longer maintained. Use the CreateOrUpdateAlertRule API of the new alert management system to create or modify an alert rule.</p>
+     * 
      * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
      * @return UpdateAlertRuleResponse
      */
@@ -4309,6 +4463,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</p>
+     * 
      * @param request the request parameters of UpdateDispatchRule  UpdateDispatchRuleRequest
      * @return UpdateDispatchRuleResponse
      */
@@ -4435,6 +4592,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateGrafanaWorkspaceAccountRole  UpdateGrafanaWorkspaceAccountRoleRequest
+     * @return UpdateGrafanaWorkspaceAccountRoleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGrafanaWorkspaceAccountRoleResponse> updateGrafanaWorkspaceAccountRole(UpdateGrafanaWorkspaceAccountRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateGrafanaWorkspaceAccountRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGrafanaWorkspaceAccountRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGrafanaWorkspaceAccountRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
      * 
@@ -4493,6 +4668,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>UpdatePrometheusAlertRule 接口已不再维护，请使用 CreateOrUpdateAlertRule 接口创建或修改告警规则。</p>
+     * 
      * @param request the request parameters of UpdatePrometheusAlertRule  UpdatePrometheusAlertRuleRequest
      * @return UpdatePrometheusAlertRuleResponse
      */
@@ -4606,7 +4784,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of UpdateRumApp  UpdateRumAppRequest
      * @return UpdateRumAppResponse
@@ -4647,6 +4825,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of UpdateTimingSyntheticTask  UpdateTimingSyntheticTaskRequest
      * @return UpdateTimingSyntheticTaskResponse
      */

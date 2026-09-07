@@ -96,7 +96,7 @@ public class ListEnvironmentFeaturesRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>en</p>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);

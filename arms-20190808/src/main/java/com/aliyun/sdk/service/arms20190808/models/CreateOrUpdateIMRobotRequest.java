@@ -284,7 +284,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chatbot name</p>
+         * <p>robot名称</p>
          */
         public Builder robotName(String robotName) {
             this.putBodyParameter("RobotName", robotName);

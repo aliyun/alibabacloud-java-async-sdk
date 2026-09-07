@@ -522,7 +522,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>Reserved parameter</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -533,7 +533,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>Reserved parameter</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -3437,7 +3437,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
              * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>myweb</p>
+             * <p>p_运维</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3725,7 +3725,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
              * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
-             * <p>AlibabaCloud DNS Task</p>
+             * <p>拨测任务</p>
              */
             public Builder name(String name) {
                 this.name = name;

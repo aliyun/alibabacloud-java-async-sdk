@@ -244,7 +244,7 @@ public class CreateRumAppRequest extends Request {
          * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>Monitoring description</p>
+         * <p>用户体验监控前端</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

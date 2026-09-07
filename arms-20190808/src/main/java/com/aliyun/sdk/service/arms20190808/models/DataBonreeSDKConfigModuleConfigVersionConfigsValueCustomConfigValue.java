@@ -54,7 +54,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue
         } 
 
         /**
-         * <p>Indicates whether the configuration is enabled.</p>
+         * <p>The switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

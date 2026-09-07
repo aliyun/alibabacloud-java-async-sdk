@@ -226,7 +226,7 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
          * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

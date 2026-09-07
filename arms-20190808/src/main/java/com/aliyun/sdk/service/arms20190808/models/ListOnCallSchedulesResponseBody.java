@@ -160,7 +160,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
              * <p>The description of the scheduling policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test scheduling policy</p>
+             * <p>测试排班策略</p>
              */
             public Builder description(String description) {
                 this.description = description;

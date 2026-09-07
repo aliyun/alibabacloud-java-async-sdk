@@ -498,7 +498,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
              * <p>The YAML configuration string.</p>
              * 
              * <strong>example:</strong>
-             * <p>Refer to supplementary instructions.</p>
+             * <p>参见补充说明。</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;

@@ -137,21 +137,7 @@ public class UpdatePrometheusMonitoringRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>apiVersion: monitoring.coreos.com/v1
-         * kind: ServiceMonitor
-         * metadata:
-         *   name: tomcat-demo
-         *   namespace: default
-         * spec:
-         *   endpoints:
-         *     - interval: 30s
-         *       path: /metrics
-         *       port: tomcat-monitor
-         *   namespaceSelector:
-         *     any: true
-         *   selector:
-         *     matchLabels:
-         *       app: tomcat</p>
+         * <p>参见请求参数补充说明。</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -186,8 +172,8 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * <p>The type of the monitoring configuration. 
-         * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
+         * <p>The type of the monitoring configuration.
+         * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe.
          * Valid values for a Prometheus instance for ECS: customJob and probe.</p>
          * <p>This parameter is required.</p>
          * 

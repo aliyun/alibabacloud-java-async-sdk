@@ -232,7 +232,7 @@ public class ListAlertsRequest extends Request {
          * <p>The name of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test alert</p>
+         * <p>告警测试</p>
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -301,7 +301,7 @@ public class ListAlertsRequest extends Request {
          * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>张三</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);

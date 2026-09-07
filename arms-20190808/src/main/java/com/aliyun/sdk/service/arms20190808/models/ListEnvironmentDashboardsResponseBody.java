@@ -286,7 +286,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
              * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * <p>cn-hongkong</p>
              */
             public Builder region(String region) {
                 this.region = region;

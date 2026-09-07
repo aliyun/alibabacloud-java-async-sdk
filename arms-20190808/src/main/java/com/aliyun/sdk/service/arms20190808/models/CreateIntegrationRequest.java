@@ -150,7 +150,7 @@ public class CreateIntegrationRequest extends Request {
          * <p>The description of the alert integration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>测试</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -163,7 +163,7 @@ public class CreateIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CloudMonitor integration</p>
+         * <p>云监控集成</p>
          */
         public Builder integrationName(String integrationName) {
             this.putBodyParameter("IntegrationName", integrationName);

@@ -67,7 +67,7 @@ public class CheckCommercialStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned struct.</p>
+         * <p>The response struct.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -78,7 +78,7 @@ public class CheckCommercialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>

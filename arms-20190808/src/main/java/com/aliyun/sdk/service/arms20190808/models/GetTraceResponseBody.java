@@ -662,7 +662,7 @@ public class GetTraceResponseBody extends TeaModel {
              * <li>18: SOFARPC provision</li>
              * <li>11: Distributed Service Framework (DSF) call</li>
              * <li>12: DSF provision</li>
-             * <li>-1: unknown call</li>
+             * <li>\-1: unknown call</li>
              * </ul>
              * 
              * <strong>example:</strong>

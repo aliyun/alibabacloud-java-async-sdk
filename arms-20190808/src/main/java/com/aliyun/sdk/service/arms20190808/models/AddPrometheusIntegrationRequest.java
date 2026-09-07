@@ -122,7 +122,7 @@ public class AddPrometheusIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
+         * <p>kafka、mysql、redis、snmp、emr、nubela、tidb等</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);

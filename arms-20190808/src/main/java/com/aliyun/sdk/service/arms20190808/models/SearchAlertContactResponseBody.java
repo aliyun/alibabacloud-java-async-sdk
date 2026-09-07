@@ -299,7 +299,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
              * <p>The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).</p>
              * 
              * <strong>example:</strong>
-             * <p>Default Group | SRE Group</p>
+             * <p>默认分组|SRE分组</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -402,7 +402,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
              * <p>The information about the webhook.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;body&quot;:&quot;{   \&quot;msg_type\&quot;: \&quot;text\&quot;,   \&quot;content\&quot;: {     \&quot;text\&quot;: \&quot;$content\&quot;   } }&quot;,&quot;header&quot;:{&quot;Arms-Content-Type&quot;:&quot;json&quot;},&quot;method&quot;:&quot;post&quot;,&quot;params&quot;:{},&quot;url&quot;:&quot;https://<em><strong>&quot;,&quot;userId&quot;:&quot;1131971649</strong></em>&quot;}&quot;,</p>
+             * <p>{\&quot;body\&quot;:\&quot;{   \\\&quot;msg_type\\\&quot;: \\\&quot;text\\\&quot;,   \\\&quot;content\\\&quot;: {     \\\&quot;text\\\&quot;: \\\&quot;$content\\\&quot;   } }\&quot;,\&quot;header\&quot;:{\&quot;Arms-Content-Type\&quot;:\&quot;json\&quot;},\&quot;method\&quot;:\&quot;post\&quot;,\&quot;params\&quot;:{},\&quot;url\&quot;:\&quot;https://<em><strong>&quot;,\&quot;userId\&quot;:\&quot;1131971649</strong></em>\&quot;}&quot;,</p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

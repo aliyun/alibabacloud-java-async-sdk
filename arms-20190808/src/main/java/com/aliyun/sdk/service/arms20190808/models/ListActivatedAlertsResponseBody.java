@@ -80,7 +80,10 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The error message returned when the invocation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CurrentPage is mandatory for this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -179,7 +182,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <p>The name of the notification policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>NotificationPolicy1</p>
+             * <p>容器CPU使用率大于80%的通知策略</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -442,7 +445,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <p>The name of the alert rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Container CPU usage is greater than 80%</p>
+             * <p>容器CPU使用率大于80%</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -453,7 +456,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <p>The type of the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>PROMETHEUS_MONITORING_ALERT_RULE</p>
+             * <p>ARMS-Prometheus监控</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -508,6 +511,9 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <li>The tags that are created based on the alert rule.</li>
              * <li>The default tags of Application Real-Time Monitoring Service (ARMS).</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;severity&quot;: &quot;critical&quot;,           &quot;_aliyun_arms_alert_level&quot;: &quot;ERROR&quot;,           &quot;pod&quot;: &quot;night-test-group-1-1-5f5d6f4d84-pszns&quot;,           &quot;_aliyun_arms_alert_type&quot;: &quot;101&quot;,           &quot;_aliyun_arms_integration_name&quot;: &quot;测试集成-prometheus&quot;,           &quot;alertname&quot;: &quot;PodRestart_jiubiantestphp2&quot;,           &quot;_aliyun_arms_userid&quot;: &quot;1131971649496228&quot;,           &quot;_aliyun_arms_involvedObject_name&quot;: &quot;jiubiantestphp2&quot;,           &quot;_aliyun_arms_involvedObject_id&quot;: &quot;ccafb2763cfa7415eb2e2a60a74b1f825&quot;,           &quot;_aliyun_arms_region_id&quot;: &quot;cn-beijing&quot;,           &quot;_aliyun_arms_involvedObject_kind&quot;: &quot;cluster&quot;,           &quot;_aliyun_arms_product_type&quot;: &quot;PROMETHEUS&quot;,           &quot;namespace&quot;: &quot;default&quot;,           &quot;_aliyun_arms_integration_id&quot;: &quot;80&quot;,           &quot;_aliyun_arms_involvedObject_type&quot;: &quot;ManagedKubernetes&quot;,           &quot;_aliyun_arms_alert_rule_id&quot;: &quot;3612229&quot;</p>
              */
             public Builder expandFields(java.util.Map<String, ?> expandFields) {
                 this.expandFields = expandFields;
@@ -551,7 +557,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <p>The name of the service integration that generated the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test integration-prometheus</p>
+             * <p>测试集成-prometheus</p>
              */
             public Builder involvedObjectName(String involvedObjectName) {
                 this.involvedObjectName = involvedObjectName;
@@ -562,7 +568,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <p>The description of the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alarm name: PodRestart_testphp2,\n Pod night-test-group-1-1-5f5d6f4d84-pszns is restart, Value: 133.33%, 1.33%</p>
+             * <p>报警名称：PodRestart_testphp2，\n Pod night-test-group-1-1-5f5d6f4d84-pszns is restart, Value: 133.33%, 1.33%</p>
              */
             public Builder message(String message) {
                 this.message = message;

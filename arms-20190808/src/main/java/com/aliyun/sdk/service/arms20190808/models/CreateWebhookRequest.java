@@ -166,7 +166,7 @@ public class CreateWebhookRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;Alert Name&quot;: &quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster Name&quot;: &quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot; app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application Name&quot;: &quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification Policy&quot;: &quot;{{ .dispatchRuleName }}&quot;, &quot;Alarm Time&quot;: &quot;{{ .startTime }}&quot;, &quot;Alert Content&quot;: &quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
+         * <p>{ &quot;告警名称&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;集群名称&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;应用名称&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;通知策略&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;告警时间&quot;:&quot;{{ .startTime }}&quot;, &quot;告警内容&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -179,7 +179,7 @@ public class CreateWebhookRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>WebhookAlert</p>
+         * <p>Webhook告警</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -232,7 +232,7 @@ public class CreateWebhookRequest extends Request {
          * <p>The notification template that is sent when an alert is resolved. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;Alert Name&quot;: &quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster Name&quot;: &quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot; app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application Name&quot;: &quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification Policy&quot;: &quot;{{ .dispatchRuleName }}&quot;, &quot;Alarm Time&quot;: &quot;{{ .startTime }}&quot;, &quot;Alert Content&quot;: &quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
+         * <p>{ &quot;告警名称&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;集群名称&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;应用名称&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;通知策略&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;恢复时间&quot;:&quot;{{ .endTime }}&quot;, &quot;告警内容&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         public Builder recoverBody(String recoverBody) {
             this.putQueryParameter("RecoverBody", recoverBody);

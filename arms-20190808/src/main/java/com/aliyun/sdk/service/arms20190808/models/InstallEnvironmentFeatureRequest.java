@@ -161,7 +161,7 @@ public class InstallEnvironmentFeatureRequest extends Request {
          * <p>The metadata of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;continuous&quot;:true,&quot;dataRevision&quot;:2}</p>
+         * <p>{\&quot;continuous\&quot;:true,\&quot;dataRevision\&quot;:2}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

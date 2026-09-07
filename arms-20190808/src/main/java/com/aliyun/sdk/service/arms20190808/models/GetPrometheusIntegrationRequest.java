@@ -122,7 +122,7 @@ public class GetPrometheusIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2893</p>
+         * <p>28**</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -135,7 +135,7 @@ public class GetPrometheusIntegrationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
+         * <p>tidb</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);

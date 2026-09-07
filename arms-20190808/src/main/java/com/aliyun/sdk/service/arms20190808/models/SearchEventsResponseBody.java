@@ -288,7 +288,7 @@ public class SearchEventsResponseBody extends TeaModel {
              * <p>The condition of the alert rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;operator&quot;:&quot;&amp;&quot;,&quot;rules&quot;:[{&quot;aggregates&quot;:&quot;AVG&quot;,&quot;alias&quot;:&quot;JVM_线程总数&quot;,&quot;measure&quot;:&quot;appstat.jvm.ThreadCount&quot;,&quot;nValue&quot;:1,&quot;operator&quot;:&quot;HOH_DOWN&quot;,&quot;value&quot;:50.0}]}</p>
+             * <p>{\&quot;operator\&quot;:\&quot;&amp;\&quot;,\&quot;rules\&quot;:[{\&quot;aggregates\&quot;:\&quot;AVG\&quot;,\&quot;alias\&quot;:\&quot;JVM_线程总数\&quot;,\&quot;measure\&quot;:\&quot;appstat.jvm.ThreadCount\&quot;,\&quot;nValue\&quot;:1,\&quot;operator\&quot;:\&quot;HOH_DOWN\&quot;,\&quot;value\&quot;:50.0}]}</p>
              */
             public Builder alertRule(String alertRule) {
                 this.alertRule = alertRule;
@@ -361,7 +361,7 @@ public class SearchEventsResponseBody extends TeaModel {
              * <p>The event content. The parameter value is a JSON string. Each key indicates a dimension and each value indicates the alert content in the dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>unknow紧急报警\nip：172.27.XX.XX\n应用名 = test\nRegion = cn-shenzhen\n异常信息 = {&quot;timestamp&quot;：&quot;1615447972235&quot;}</p>
+             * <p>unknow紧急报警\nip：172.27.XX.XX\n应用名 = test\nRegion = cn-shenzhen\n异常信息 = {\&quot;timestamp\&quot;：\&quot;1615447972235\&quot;}</p>
              */
             public Builder message(String message) {
                 this.message = message;

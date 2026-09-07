@@ -122,7 +122,7 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{
          *   &quot;RequestId&quot;: &quot;41877338-646B-5DD6-BFBE-F89F1E7245AD&quot;,
-         *   &quot;Data&quot;: &quot;{&quot;clusterType&quot;:&quot;ManagedKubernetes&quot;,&quot;remoteWriteUrl&quot;:&quot;http:/&quot; }</p>
+         *   &quot;Data&quot;: &quot;{\&quot;clusterType\&quot;:\&quot;ManagedKubernetes\&quot;,\&quot;remoteWriteUrl\&quot;:\&quot;http:/&quot; }</p>
          */
         public Builder data(String data) {
             this.data = data;

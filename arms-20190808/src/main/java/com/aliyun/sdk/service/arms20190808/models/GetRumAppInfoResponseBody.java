@@ -119,7 +119,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code. A <code>200</code> status code indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application details.</p>
+         * <p>The details of the application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,10 +149,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned for a failed request.</p>
          * 
          * <strong>example:</strong>
-         * <p>StartTime is mandatory for this action.</p>
+         * <p>内部错误，请联系管理员。</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -160,7 +160,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
@@ -171,10 +171,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful.</p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +267,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the configuration is enabled.</p>
+             * <p>The master switch.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -276,7 +278,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version configurations of the application.</p>
+             * <p>The application version configurations.</p>
              */
             public Builder versionConfigs(java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs) {
                 this.versionConfigs = versionConfigs;
@@ -343,7 +345,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Sampling rate: between (0, 1000], a thousandth.</p>
+             * <p>The sampling rate, in parts per thousand. The value must be greater than 0 and less than or equal to 1,000.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -354,7 +356,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sampling type, currently only session random sampling is supported, that is, fixed transmission: 1.</p>
+             * <p>The sampling type. Only random session sampling is supported. You must set this parameter to <code>1</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -424,7 +426,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The module configuration.</p>
+             * <p>The feature switches for modules.</p>
              */
             public Builder moduleConfig(ModuleConfig moduleConfig) {
                 this.moduleConfig = moduleConfig;
@@ -432,7 +434,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sampling configuration.</p>
+             * <p>The sampling configuration.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -541,7 +543,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -560,7 +562,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.</p>
+             * <p>The list of trace pass-through protocols. This parameter is required when trace tracking is enabled.</p>
              */
             public Builder propagatorTypes(java.util.List<String> propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
@@ -568,7 +570,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling rate of a trace. Valid values: (0, 100].</p>
+             * <p>The trace sampling rate. Valid values: (0, 100].</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -579,10 +581,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:</p>
+             * <p>Indicates whether to enable trace tracking. You must activate Application Real-Time Monitoring Service (ARMS) OpenTelemetry Edition to use this feature. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.</li>
-             * <li><code>false</code>: disables the tracing analysis feature.</li>
+             * <li><p><code>true</code>: enables trace tracking. If you set this parameter to true, a related header is inserted into the request for this domain name.</p>
+             * </li>
+             * <li><p><code>false</code>: does not enable trace tracking.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -653,7 +657,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Label</p>
@@ -664,7 +668,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Value</p>
@@ -1007,7 +1011,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application configurations in the JSON format. This parameter is deprecated.</p>
+             * <p>This parameter is deprecated. The legacy application configuration in the JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiRequestOfH5&quot;:300,&quot;apiRequestOfOriginal&quot;:500,&quot;coldStart&quot;:5000,&quot;hotStart&quot;:3000,&quot;staticResourceLoad&quot;:300,&quot;stutter&quot;:1000,&quot;viewLoadOfH5&quot;:1000,&quot;viewLoadOfOriginal&quot;:2000}</p>
@@ -1018,7 +1022,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group to which the application belongs.</p>
+             * <p>The application group.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1029,7 +1033,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application type. Valid values: web, miniapp, ios, and android.</p>
+             * <p>The application type. Valid values: <code>web</code>, <code>miniapp</code>, <code>ios</code>, and <code>android</code>. <code>web</code> indicates Web and H5 applications, <code>miniapp</code> indicates mini programs.</p>
              * 
              * <strong>example:</strong>
              * <p>web</p>
@@ -1040,7 +1044,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the backend is deployed.</p>
+             * <p>The region where the back-end application is deployed. This parameter is used for end-to-end tracing.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1051,7 +1055,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection configurations.</p>
+             * <p>The data collection configurations for mobile applications.</p>
              */
             public Builder bonreeSDKConfig(BonreeSDKConfig bonreeSDKConfig) {
                 this.bonreeSDKConfig = bonreeSDKConfig;
@@ -1059,7 +1063,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the SDK.</p>
+             * <p>The SDK domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>b59xxxxxxxx-sdk.rum.aliyuncs.com/v2/browser-sdk.js</p>
@@ -1070,7 +1074,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created. The value is a timestamp. Unit: milliseconds.</p>
+             * <p>The creation time of the application. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683353594000</p>
@@ -1084,7 +1088,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
              * <p>The description of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>Portal home page.</p>
+             * <p>门户首页。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1092,7 +1096,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint that is used to report application data.</p>
+             * <p>The endpoint for reporting application data.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxxxx-default-cn.rum.aliyuncs.com</p>
@@ -1103,7 +1107,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application is subscribed. Valid values: true and false.</p>
+             * <p>Indicates whether the application is bookmarked. Valid values: <code>true</code> and <code>false</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1136,7 +1140,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application package.</p>
+             * <p>The application package name.</p>
              * 
              * <strong>example:</strong>
              * <p>com.alibaba.rum</p>
@@ -1169,7 +1173,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aek2vezare****</p>
@@ -1180,7 +1184,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of service domain configurations. Only mobile applications are supported.</p>
+             * <p>The list of service domain name configurations. This parameter is supported only for mobile applications.</p>
              */
             public Builder serviceDomainConfigs(java.util.List<ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;
@@ -1188,7 +1192,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple Log Service Logstore that stores application data.</p>
+             * <p>The name of the Log Service Logstore that is used to store application data.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore-rum</p>
@@ -1199,7 +1203,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple Log Service project that stores application data.</p>
+             * <p>The name of the Log Service project that is used to store application data.</p>
              * 
              * <strong>example:</strong>
              * <p>proj-xtrace-xxxxxxxxxxxxxxxxxxxxxxx-cn-hangzhou</p>
@@ -1210,7 +1214,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application. Valid values: created, running, and stopped.</p>
+             * <p>The application status. Valid values: <code>created</code>, <code>running</code>, and <code>stopped</code>. <code>stopped</code> indicates that data reporting is stopped.</p>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -1229,7 +1233,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application. Valid value: RUM.</p>
+             * <p>The application type. This parameter is a constant of <code>RUM</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>RUM</p>

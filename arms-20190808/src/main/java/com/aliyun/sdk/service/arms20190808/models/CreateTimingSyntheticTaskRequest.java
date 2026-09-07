@@ -773,7 +773,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -784,7 +784,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -3178,7 +3178,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
 
             /**
              * <p>If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.</p>
-             * <p>Format: &lt;domain name&gt;:&lt;objects&gt;. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+             * <p>Format: \<domain name>:\<objects>. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -3248,7 +3248,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * <p>The keyword that is used to identify hijacking. Asterisks (*) are allowed.</p>
+             * <p>The keyword that is used to identify hijacking. Asterisks (\*) are allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun</p>
@@ -3282,7 +3282,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
 
             /**
              * <p>Elements that are not included in the whitelist and appear on the page are tampered with. These elements can be pop-up ads, floating ads, and page redirection.</p>
-             * <p>Format: &lt;domain name&gt;:&lt;elements&gt;. The elements can be wildcard masks. Separate multiple elements with vertical bars (|). Example: <a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a>. It indicates that all elements that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except the basic documents, /cc/bb/a.gif, and /vv/bb/cc.jpg are tampered with.</p>
+             * <p>Format: \<domain name>:\<elements>. The elements can be wildcard masks. Separate multiple elements with vertical bars (|). Example: <a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a>. It indicates that all elements that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except the basic documents, /cc/bb/a.gif, and /vv/bb/cc.jpg are tampered with.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a></p>

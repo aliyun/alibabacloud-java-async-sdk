@@ -549,7 +549,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * <p>The authorization token.</p>
              * 
              * <strong>example:</strong>
-             * <p>ad32dxxxx</p>
+             * <p>GciOiJIUzI1NiJ9***</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -581,12 +581,18 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>remote-write: Prometheus instance for Remote Write</li>
-             * <li>ecs: Prometheus instances for ECS</li>
-             * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</li>
-             * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</li>
-             * <li>global-view: global aggregation instance</li>
-             * <li>aliyun-cs: Prometheus instance for Container Service</li>
+             * <li><p>remote-write: Prometheus instance for Remote Write</p>
+             * </li>
+             * <li><p>ecs: Prometheus instances for ECS</p>
+             * </li>
+             * <li><p>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</p>
+             * </li>
+             * <li><p>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</p>
+             * </li>
+             * <li><p>global-view: global aggregation instance</p>
+             * </li>
+             * <li><p>aliyun-cs: Prometheus instance for Container Service</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -612,7 +618,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * <p>The public URL for the HTTP API.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></p>
+             * <p><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></p>
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -623,7 +629,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * <p>The internal URL for the HTTP API.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></p>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></p>
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -633,8 +639,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>PREPAY: subscription</li>
-             * <li>POSTPAY: pay-as-you-go</li>
+             * <li><p>PREPAY: subscription</p>
+             * </li>
+             * <li><p>POSTPAY: pay-as-you-go</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,7 +657,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * <p>The public URL for Pushgateway.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
+             * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -704,7 +712,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * <p>The public URL for remote write.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
+             * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -759,7 +767,38 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>[ { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-hangzhou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c39a1048921e04fceb039db2fb****&quot;, &quot;sourceName&quot;: &quot;arms-luyao-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789****&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-beijing&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c6b6485496d5b400abde22cb47b5****&quot;, &quot;sourceName&quot;: &quot;agent-321-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789****&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c261a4f3200c446659133f1ade78****&quot;, &quot;sourceName&quot;: &quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789****&quot; } ]</p>
+             * <p>[
+             *   {
+             *     &quot;headers&quot;: {},
+             *     &quot;regionId&quot;: &quot;cn-hangzhou&quot;,
+             *     &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;,
+             *     &quot;extras&quot;: {},
+             *     &quot;clusterId&quot;: &quot;c39a1048921e04fceb039db2fb****&quot;,
+             *     &quot;sourceName&quot;: &quot;arms-luyao-test&quot;,
+             *     &quot;dataSource&quot;: &quot;&quot;,
+             *     &quot;userId&quot;: &quot;167275301789****&quot;
+             *   },
+             *   {
+             *     &quot;headers&quot;: {},
+             *     &quot;regionId&quot;: &quot;cn-beijing&quot;,
+             *     &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;,
+             *     &quot;extras&quot;: {},
+             *     &quot;clusterId&quot;: &quot;c6b6485496d5b400abde22cb47b5****&quot;,
+             *     &quot;sourceName&quot;: &quot;agent-321-测试&quot;,
+             *     &quot;dataSource&quot;: &quot;&quot;,
+             *     &quot;userId&quot;: &quot;167275301789****&quot;
+             *   },
+             *   {
+             *     &quot;headers&quot;: {},
+             *     &quot;regionId&quot;: &quot;cn-zhangjiakou&quot;,
+             *     &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;,
+             *     &quot;extras&quot;: {},
+             *     &quot;clusterId&quot;: &quot;c261a4f3200c446659133f1ade78****&quot;,
+             *     &quot;sourceName&quot;: &quot;zaifeng-cardinality-01&quot;,
+             *     &quot;dataSource&quot;: &quot;&quot;,
+             *     &quot;userId&quot;: &quot;167275301789****&quot;
+             *   }
+             * ]</p>
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;

@@ -152,7 +152,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
          * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
-         * <p>StartTime is mandatory for this action.</p>
+         * <p>内部错误，请联系管理员。</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -312,7 +312,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
              * <p>A reserved parameter. Ignore this parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段，请忽略。</p>
              */
             public Builder authentication(String authentication) {
                 this.authentication = authentication;
@@ -364,7 +364,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
              * <p>A reserved parameter. Ignore this parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段，请忽略。</p>
              */
             public Builder preference(String preference) {
                 this.preference = preference;

@@ -122,7 +122,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to check whether ARMS is available for commercial use in a region.</p>
+     * <p>Retrieves the commercial activation status of a product.</p>
      * 
      * @param request the request parameters of CheckCommercialStatus  CheckCommercialStatusRequest
      * @return CheckCommercialStatusResponse
@@ -175,6 +175,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAlertContactGroupResponse> createAlertContactGroup(CreateAlertContactGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</p>
+     * 
      * @param request the request parameters of CreateDispatchRule  CreateDispatchRuleRequest
      * @return CreateDispatchRuleResponse
      */
@@ -206,19 +209,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</p>
+     * <p>Ensure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/grafana/product-overview/billing-4?spm=openapi-amp.newDocPublishment.0.0.7453281fkrsWrp">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of the Managed Service for Grafana product before using this API.  </p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>To create workspaces, you must complete real-name verification.</li>
-     * <li>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <code>These editions charge fees.</code></li>
-     * <li>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <code>These editions do not charge fees.</code></li>
+     * <li>Identity verification is required to create a Managed Service for Grafana instance. &lt;props=&quot;china&quot;&gt;You can refer to the <a href="https://help.aliyun.com/zh/account/user-guide/individual-identities">Account Identity Verification</a> documentation to complete the verification.  </li>
+     * <li>Regular users can only create Developer, Expert, or Pro editions (<code>fees apply</code>).  </li>
+     * <li>Internal testing users can only create the internal testing edition (<code>free of charge</code>).</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateGrafanaWorkspace  CreateGrafanaWorkspaceRequest
      * @return CreateGrafanaWorkspaceResponse
      */
     CompletableFuture<CreateGrafanaWorkspaceResponse> createGrafanaWorkspace(CreateGrafanaWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of CreateGrafanaWorkspaceAccount  CreateGrafanaWorkspaceAccountRequest
+     * @return CreateGrafanaWorkspaceAccountResponse
+     */
+    CompletableFuture<CreateGrafanaWorkspaceAccountResponse> createGrafanaWorkspaceAccount(CreateGrafanaWorkspaceAccountRequest request);
 
     /**
      * @param request the request parameters of CreateIntegration  CreateIntegrationRequest
@@ -275,6 +284,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOrUpdateWebhookContactResponse> createOrUpdateWebhookContact(CreateOrUpdateWebhookContactRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>建议使用<a href="https://help.aliyun.com/document_detail/411960.html">CreateOrUpdateAlertRule</a>接口创建Prometheus告警规则。</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreatePrometheusAlertRule  CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
      */
@@ -307,7 +321,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</p>
+     * <p>This operation returns a presigned URL for uploading a file. For instructions, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload files by using URLs</a>.</p>
      * 
      * @param request the request parameters of CreateRumUploadFileUrl  CreateRumUploadFileUrlRequest
      * @return CreateRumUploadFileUrlResponse
@@ -321,12 +335,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSyntheticTaskResponse> createSyntheticTask(CreateSyntheticTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of CreateTimingSyntheticTask  CreateTimingSyntheticTaskRequest
      * @return CreateTimingSyntheticTaskResponse
      */
     CompletableFuture<CreateTimingSyntheticTaskResponse> createTimingSyntheticTask(CreateTimingSyntheticTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateWebhookContact接口创建或修改Webhook告警联系人。</p>
+     * 
      * @param request the request parameters of CreateWebhook  CreateWebhookRequest
      * @return CreateWebhookResponse
      */
@@ -354,6 +374,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAlertContactResponse> deleteAlertContact(DeleteAlertContactRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的DeleteContactGroup接口删除告警联系人组。</p>
+     * 
      * @param request the request parameters of DeleteAlertContactGroup  DeleteAlertContactGroupRequest
      * @return DeleteAlertContactGroupResponse
      */
@@ -400,6 +423,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteContactGroupResponse> deleteContactGroup(DeleteContactGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的DeleteNotificationPolicy接口删除指定ID的通知策略。</p>
+     * 
      * @param request the request parameters of DeleteDispatchRule  DeleteDispatchRuleRequest
      * @return DeleteDispatchRuleResponse
      */
@@ -450,15 +476,32 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <code>free of charge</code>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;&gt;</p>
+     * <blockquote>
      * <ul>
-     * <li>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</li>
+     * <li>This operation supports deletion only for beta (<code>free</code>) Grafana instances.</li>
+     * <li>Developer Edition, Pro Edition, and Advanced Edition instances do not support deletion. Go to <a href="https://usercenter2.aliyun.com/refund/refund">Expenses and Costs</a> to unsubscribe from the resource.
+     * &lt;props=&quot;intl&quot;&gt;
+     * This operation supports deletion only for beta (<code>free</code>) Grafana instances.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of DeleteGrafanaWorkspace  DeleteGrafanaWorkspaceRequest
      * @return DeleteGrafanaWorkspaceResponse
      */
     CompletableFuture<DeleteGrafanaWorkspaceResponse> deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGrafanaWorkspaceAccount  DeleteGrafanaWorkspaceAccountRequest
+     * @return DeleteGrafanaWorkspaceAccountResponse
+     */
+    CompletableFuture<DeleteGrafanaWorkspaceAccountResponse> deleteGrafanaWorkspaceAccount(DeleteGrafanaWorkspaceAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGrafanaWorkspaceAccountRole  DeleteGrafanaWorkspaceAccountRoleRequest
+     * @return DeleteGrafanaWorkspaceAccountRoleResponse
+     */
+    CompletableFuture<DeleteGrafanaWorkspaceAccountRoleResponse> deleteGrafanaWorkspaceAccountRole(DeleteGrafanaWorkspaceAccountRoleRequest request);
 
     /**
      * @param request the request parameters of DeleteIMRobot  DeleteIMRobotRequest
@@ -526,7 +569,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is currently available only in Hangzhou, Singapore, and Silicon Valley. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of DeleteRumUploadFile  DeleteRumUploadFileRequest
      * @return DeleteRumUploadFileResponse
@@ -558,6 +601,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSyntheticTaskResponse> deleteSyntheticTask(DeleteSyntheticTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of DeleteTimingSyntheticTask  DeleteTimingSyntheticTaskRequest
      * @return DeleteTimingSyntheticTaskResponse
      */
@@ -600,6 +646,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeContactsResponse> describeContacts(DescribeContactsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的ListNotificationPolicies接口查询通知策略信息。</p>
+     * 
      * @param request the request parameters of DescribeDispatchRule  DescribeDispatchRuleRequest
      * @return DescribeDispatchRuleResponse
      */
@@ -844,7 +893,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>User experience monitoring is available only in China (Hangzhou), Asia Pacific SE 1 (Singapore), and US West 1 (Silicon Valley). Select the correct endpoint.</p>
      * 
      * @param request the request parameters of GetRumAppInfo  GetRumAppInfoRequest
      * @return GetRumAppInfoResponse
@@ -871,7 +920,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of GetRumExceptionStack  GetRumExceptionStackRequest
      * @return GetRumExceptionStackResponse
@@ -889,7 +938,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of GetRumUploadFiles  GetRumUploadFilesRequest
      * @return GetRumUploadFilesResponse
@@ -909,6 +958,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetStackResponse> getStack(GetStackRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of GetSyntheticMonitors  GetSyntheticMonitorsRequest
      * @return GetSyntheticMonitorsResponse
      */
@@ -933,6 +985,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSyntheticTaskMonitorsResponse> getSyntheticTaskMonitors(GetSyntheticTaskMonitorsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of GetTimingSyntheticTask  GetTimingSyntheticTaskRequest
      * @return GetTimingSyntheticTaskResponse
      */
@@ -960,6 +1015,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTraceAppConfigResponse
      */
     CompletableFuture<GetTraceAppConfigResponse> getTraceAppConfig(GetTraceAppConfigRequest request);
+
+    /**
+     * @param request the request parameters of GrafanaWorkspaceHttpApiProxy  GrafanaWorkspaceHttpApiProxyRequest
+     * @return GrafanaWorkspaceHttpApiProxyResponse
+     */
+    CompletableFuture<GrafanaWorkspaceHttpApiProxyResponse> grafanaWorkspaceHttpApiProxy(GrafanaWorkspaceHttpApiProxyRequest request);
 
     /**
      * <b>description</b> :
@@ -998,7 +1059,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallEnvironmentFeatureResponse> installEnvironmentFeature(InstallEnvironmentFeatureRequest request);
 
     /**
-     * @deprecated OpenAPI InstallManagedPrometheus is deprecated  * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
+     * @deprecated OpenAPI InstallManagedPrometheus is deprecated  * @description This applies only to ASK and ECS instances, and only if Alibaba Cloud Prometheus has not been previously installed on the cluster. The managed Prometheus instance will be installed on the cloud service side and will not be visible within the user\\"s cluster.
      * 
      * @param request the request parameters of InstallManagedPrometheus  InstallManagedPrometheusRequest
      * @return InstallManagedPrometheusResponse
@@ -1007,6 +1068,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallManagedPrometheusResponse> installManagedPrometheus(InstallManagedPrometheusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API is no longer maintained. Use the ListAlerts API of the new alert management system to query the alert sending history.</p>
+     * 
      * @param request the request parameters of ListActivatedAlerts  ListActivatedAlertsRequest
      * @return ListActivatedAlertsResponse
      */
@@ -1159,6 +1223,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGrafanaWorkspaceResponse> listGrafanaWorkspace(ListGrafanaWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of ListGrafanaWorkspaceAccount  ListGrafanaWorkspaceAccountRequest
+     * @return ListGrafanaWorkspaceAccountResponse
+     */
+    CompletableFuture<ListGrafanaWorkspaceAccountResponse> listGrafanaWorkspaceAccount(ListGrafanaWorkspaceAccountRequest request);
+
+    /**
      * @param request the request parameters of ListInsightsEvents  ListInsightsEventsRequest
      * @return ListInsightsEventsResponse
      */
@@ -1248,12 +1318,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSilencePoliciesResponse> listSilencePolicies(ListSilencePoliciesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州 region 提供服务，使用 SDK 或 OpenAPI 时请选择杭州 region 对应的服务接入点。</p>
+     * 
      * @param request the request parameters of ListSyntheticDetail  ListSyntheticDetailRequest
      * @return ListSyntheticDetailResponse
      */
     CompletableFuture<ListSyntheticDetailResponse> listSyntheticDetail(ListSyntheticDetailRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of ListTimingSyntheticTasks  ListTimingSyntheticTasksRequest
      * @return ListTimingSyntheticTasksResponse
      */
@@ -1458,24 +1534,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetRetcodeShareStatusResponse> setRetcodeShareStatus(SetRetcodeShareStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API is no longer maintained. Use the AlertStatus parameter of the CreateOrUpdateAlertRule API in the new alert management system to update the running status of an alert rule.</p>
+     * 
      * @param request the request parameters of StartAlert  StartAlertRequest
      * @return StartAlertResponse
      */
     CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of StartTimingSyntheticTask  StartTimingSyntheticTaskRequest
      * @return StartTimingSyntheticTaskResponse
      */
     CompletableFuture<StartTimingSyntheticTaskResponse> startTimingSyntheticTask(StartTimingSyntheticTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理CreateOrUpdateAlertRule接口的AlertStatus参数更新告警规则运行状态。</p>
+     * 
      * @param request the request parameters of StopAlert  StopAlertRequest
      * @return StopAlertResponse
      */
     CompletableFuture<StopAlertResponse> stopAlert(StopAlertRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of StopTimingSyntheticTask  StopTimingSyntheticTaskRequest
      * @return StopTimingSyntheticTaskResponse
      */
@@ -1531,18 +1619,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAlertContactResponse> updateAlertContact(UpdateAlertContactRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateContactGroup接口创建或修改告警联系人组。</p>
+     * 
      * @param request the request parameters of UpdateAlertContactGroup  UpdateAlertContactGroupRequest
      * @return UpdateAlertContactGroupResponse
      */
     CompletableFuture<UpdateAlertContactGroupResponse> updateAlertContactGroup(UpdateAlertContactGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API is no longer maintained. Use the CreateOrUpdateAlertRule API of the new alert management system to create or modify an alert rule.</p>
+     * 
      * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
      * @return UpdateAlertRuleResponse
      */
     CompletableFuture<UpdateAlertRuleResponse> updateAlertRule(UpdateAlertRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</p>
+     * 
      * @param request the request parameters of UpdateDispatchRule  UpdateDispatchRuleRequest
      * @return UpdateDispatchRuleResponse
      */
@@ -1585,6 +1682,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGrafanaWorkspaceResponse> updateGrafanaWorkspace(UpdateGrafanaWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of UpdateGrafanaWorkspaceAccountRole  UpdateGrafanaWorkspaceAccountRoleRequest
+     * @return UpdateGrafanaWorkspaceAccountRoleResponse
+     */
+    CompletableFuture<UpdateGrafanaWorkspaceAccountRoleResponse> updateGrafanaWorkspaceAccountRole(UpdateGrafanaWorkspaceAccountRoleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
      * 
@@ -1607,6 +1710,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMetricDropResponse> updateMetricDrop(UpdateMetricDropRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>UpdatePrometheusAlertRule 接口已不再维护，请使用 CreateOrUpdateAlertRule 接口创建或修改告警规则。</p>
+     * 
      * @param request the request parameters of UpdatePrometheusAlertRule  UpdatePrometheusAlertRuleRequest
      * @return UpdatePrometheusAlertRuleResponse
      */
@@ -1648,7 +1754,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * <p>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * @param request the request parameters of UpdateRumApp  UpdateRumAppRequest
      * @return UpdateRumAppResponse
@@ -1665,6 +1771,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRumFileStatusResponse> updateRumFileStatus(UpdateRumFileStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</p>
+     * 
      * @param request the request parameters of UpdateTimingSyntheticTask  UpdateTimingSyntheticTaskRequest
      * @return UpdateTimingSyntheticTaskResponse
      */

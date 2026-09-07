@@ -148,7 +148,7 @@ public class UntagResourcesRequest extends Request {
          * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -180,7 +180,7 @@ public class UntagResourcesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>PROMETHEUS</p>
+         * <p>APPLICATION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -269,7 +269,7 @@ public class UntagResourcesRequest extends Request {
              * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestKey</p>
+             * <p>TestTag</p>
              */
             public Builder key(String key) {
                 this.key = key;

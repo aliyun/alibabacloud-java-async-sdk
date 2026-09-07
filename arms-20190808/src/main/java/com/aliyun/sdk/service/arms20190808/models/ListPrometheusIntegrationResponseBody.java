@@ -126,7 +126,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1F1D8840-5330-5804-A8DB-C3C5C5CED6BB</p>
+         * <p>1F1D8840-5330-5804-A8DB-C3C5C5******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -425,7 +425,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The ID of the Prometheus instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
+             * <p>c77f6f2397ea74672872acf5e31******</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -469,7 +469,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The ID of the exporter.</p>
              * 
              * <strong>example:</strong>
-             * <p>29374</p>
+             * <p>293**</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -491,7 +491,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
              * 
              * <strong>example:</strong>
-             * <p>Kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
+             * <p>kafka</p>
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -587,7 +587,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The monitored IP address.</p>
              * 
              * <strong>example:</strong>
-             * <p>121.40.62.240:3342</p>
+             * <p>121.40.XX.XX:3342</p>
              */
             public Builder target(String target) {
                 this.target = target;

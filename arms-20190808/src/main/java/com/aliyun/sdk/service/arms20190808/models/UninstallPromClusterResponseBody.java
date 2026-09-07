@@ -107,7 +107,7 @@ public class UninstallPromClusterResponseBody extends TeaModel {
          * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;

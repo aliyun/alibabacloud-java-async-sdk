@@ -116,7 +116,7 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * <p>The query statement that corresponds to the data source.</p>
+         * <p>The query statement for the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>{app=&quot;buy2&quot;}</p>
@@ -140,7 +140,7 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * <p>The type of the Grafana data source.</p>
+         * <p>The Grafana data source type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

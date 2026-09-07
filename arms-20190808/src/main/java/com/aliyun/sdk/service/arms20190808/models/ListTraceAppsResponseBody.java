@@ -614,7 +614,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
              * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>Resource group</p>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

@@ -90,7 +90,7 @@ public class SyncRecordingRulesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster whose aggregation rule you want to synchronize.</p>
+         * <p>The ID of the source cluster whose rules are to be synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class SyncRecordingRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. The destination region can be the same as the source region.</p>
+         * <p>The region ID. This can be the same as the region ID of the source cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class SyncRecordingRulesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of clusters to which you want to synchronize the aggregation rule.</p>
+         * <p>The IDs of the target clusters for batch synchronization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

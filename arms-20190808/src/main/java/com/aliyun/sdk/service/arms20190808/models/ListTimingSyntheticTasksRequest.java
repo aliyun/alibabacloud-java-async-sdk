@@ -285,7 +285,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
              * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>AlibabaCloud DNS Task</p>
+             * <p>拨测</p>
              */
             public Builder name(String name) {
                 this.name = name;

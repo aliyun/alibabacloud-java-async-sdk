@@ -117,7 +117,7 @@ public class InitEnvironmentRequest extends Request {
         } 
 
         /**
-         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * <p>The language. Valid values: zh and en. Default: zh.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -129,7 +129,7 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create a token to improve data security.</p>
+         * <p>Whether to create an authentication token for enhanced data security.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -154,11 +154,14 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Whether agents or exporters are managed. Valid values:</p>
+         * <p>The agent management mode. Valid values:</p>
          * <ul>
-         * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
-         * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
-         * <li>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+         * <li><p>none: unmanaged. Default for ACK clusters.</p>
+         * </li>
+         * <li><p>agent: managed agents only. Default for ASK, ACS, and ACK One clusters.</p>
+         * </li>
+         * <li><p>agent-exproter: managed agents and exporters. Default for cloud services.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

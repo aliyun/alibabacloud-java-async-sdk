@@ -355,7 +355,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
              * <p>The description of the alert integration.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -432,7 +432,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
              * <p>The name of the alert integration.</p>
              * 
              * <strong>example:</strong>
-             * <p>CloudMonitor integration</p>
+             * <p>云监控集成</p>
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;

@@ -119,7 +119,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The status code. 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the file is deleted. If the file is deleted, &quot;success&quot; is returned.</p>
+         * <p>Indicates whether the deletion was successful. The value success is returned if the deletion was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -155,7 +155,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal error, please contact the administrator.</p>
+         * <p>内部错误，请联系管理员。</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,7 +163,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
@@ -174,10 +174,10 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><code>true</code>: The operation was successful.</li>
+         * <li><code>false</code>: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

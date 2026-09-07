@@ -88,7 +88,7 @@ public class GetTimingSyntheticTaskRequest extends Request {
          * <p>The ID of the synthetic monitoring task.</p>
          * 
          * <strong>example:</strong>
-         * <p>856566a9cb2a4cafa05aa95ed0ec8f21</p>
+         * <p>856566a9cb2a4cafa05aa95ed0*******</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

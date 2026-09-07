@@ -392,7 +392,10 @@ public class GrafanaWorkspace extends TeaModel {
         } 
 
         /**
-         * commercial.
+         * <p>Indicates whether the workspace is commercialized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder commercial(Boolean commercial) {
             this.commercial = commercial;
@@ -400,7 +403,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * deployType.
+         * <p>The deployment mode of Grafana. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asi</p>
          */
         public Builder deployType(String deployType) {
             this.deployType = deployType;
@@ -408,7 +414,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Grafana for Production</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -416,7 +425,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The time when the workspace expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652803200000</p>
          */
         public Builder endTime(Float endTime) {
             this.endTime = endTime;
@@ -424,7 +436,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The time when the workspace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642079398000</p>
          */
         public Builder gmtCreate(Float gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -432,7 +447,33 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaVersion.
+         * <p>The version number of Grafana.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>8.2.x</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>10.0.x</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>9.0.x</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>9.0.x</p>
          */
         public Builder grafanaVersion(String grafanaVersion) {
             this.grafanaVersion = grafanaVersion;
@@ -440,7 +481,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaWorkspaceDomain.
+         * <p>The domain name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-grafana.grafana.aliyuncs.com:443</p>
          */
         public Builder grafanaWorkspaceDomain(String grafanaWorkspaceDomain) {
             this.grafanaWorkspaceDomain = grafanaWorkspaceDomain;
@@ -448,7 +492,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaWorkspaceDomainStatus.
+         * <p>status of workspace domain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder grafanaWorkspaceDomainStatus(String grafanaWorkspaceDomainStatus) {
             this.grafanaWorkspaceDomainStatus = grafanaWorkspaceDomainStatus;
@@ -456,7 +503,21 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaWorkspaceEdition.
+         * <p>The version.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>standard：Standard Edition</p>
+         * </li>
+         * <li><p>personal_deition：Developer Edition</p>
+         * </li>
+         * <li><p>experts_edition：Expert Edition</p>
+         * </li>
+         * <li><p>advanced_edition：Advanced Edition</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>personal_edition、experts_edition、advanced_edition、standard</p>
          */
         public Builder grafanaWorkspaceEdition(String grafanaWorkspaceEdition) {
             this.grafanaWorkspaceEdition = grafanaWorkspaceEdition;
@@ -464,7 +525,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaWorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-cn-4xl3g******</p>
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.grafanaWorkspaceId = grafanaWorkspaceId;
@@ -472,7 +536,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaWorkspaceIp.
+         * <p>The public IP address and port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.110.71.***:443</p>
          */
         public Builder grafanaWorkspaceIp(String grafanaWorkspaceIp) {
             this.grafanaWorkspaceIp = grafanaWorkspaceIp;
@@ -480,7 +547,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * grafanaWorkspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Grafana for Production</p>
          */
         public Builder grafanaWorkspaceName(String grafanaWorkspaceName) {
             this.grafanaWorkspaceName = grafanaWorkspaceName;
@@ -488,7 +558,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * maxAccount.
+         * <p>The maximum number of accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxAccount(String maxAccount) {
             this.maxAccount = maxAccount;
@@ -496,7 +569,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * ntmId.
+         * <p>The ID of the purchase order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-cn-4xl3g******</p>
          */
         public Builder ntmId(String ntmId) {
             this.ntmId = ntmId;
@@ -504,7 +580,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * personalDomain.
+         * <p>The personalized domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-grafana.grafana.aliyuncs.com:443</p>
          */
         public Builder personalDomain(String personalDomain) {
             this.personalDomain = personalDomain;
@@ -512,7 +591,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * personalDomainPrefix.
+         * <p>The prefix of the personalized domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-grafana</p>
          */
         public Builder personalDomainPrefix(String personalDomainPrefix) {
             this.personalDomainPrefix = personalDomainPrefix;
@@ -520,7 +602,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * privateDomain.
+         * <p>The private domain name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-grafana.grafana.aliyuncs.com:80</p>
          */
         public Builder privateDomain(String privateDomain) {
             this.privateDomain = privateDomain;
@@ -528,7 +613,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * privateIp.
+         * <p>The private IP address and port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         public Builder privateIp(String privateIp) {
             this.privateIp = privateIp;
@@ -536,7 +624,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http、https</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -544,7 +635,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -552,7 +646,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2f4vzrfs6cla</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -560,7 +657,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * shareSynced.
+         * <p>Indicates whether the migration guide for the shared edition is provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder shareSynced(Boolean shareSynced) {
             this.shareSynced = shareSynced;
@@ -568,7 +668,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * snatIp.
+         * <p>The outbound IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.110.71.***</p>
          */
         public Builder snatIp(String snatIp) {
             this.snatIp = snatIp;
@@ -576,7 +679,25 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>StartFailed：The workspace failed to be started</p>
+         * </li>
+         * <li><p>Stop：The workspace is stopped</p>
+         * </li>
+         * <li><p>Starting：The workspace is being started</p>
+         * </li>
+         * <li><p>DeleteFailed：The workspace failed to be deleted</p>
+         * </li>
+         * <li><p>Running：The workspace is running</p>
+         * </li>
+         * <li><p>DeleteSucceed：The workspace is deleted</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Starting、Running、Stop、DeleteSucceed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -584,7 +705,7 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -592,7 +713,7 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * upgradeVersion.
+         * <p>The versions that are available for upgrades.</p>
          */
         public Builder upgradeVersion(java.util.List<String> upgradeVersion) {
             this.upgradeVersion = upgradeVersion;
@@ -600,7 +721,10 @@ public class GrafanaWorkspace extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1412143830******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -666,7 +790,10 @@ public class GrafanaWorkspace extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -674,7 +801,10 @@ public class GrafanaWorkspace extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

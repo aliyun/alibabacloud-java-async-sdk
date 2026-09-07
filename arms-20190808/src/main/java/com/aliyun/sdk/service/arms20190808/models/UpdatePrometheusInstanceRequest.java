@@ -201,7 +201,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+         * <p>The number of days for automatic archiving after storage expires. Valid values: 60, 90, 180, and 365. A value of 0 indicates no archiving.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -213,7 +213,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</p>
+         * <p>The list of IP addresses for authentication-free read. CIDR notation is supported. Separate multiple IP addresses with line feeds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -225,7 +225,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</p>
+         * <p>The list of IP addresses for authentication-free write. CIDR notation is supported. Separate multiple IP addresses with line feeds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -237,7 +237,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Prometheus instance.</p>
+         * <p>The Prometheus instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable password-free read.</p>
+         * <p>Specifies whether to enable authentication-free read.</p>
          */
         public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
             this.putQueryParameter("EnableAuthFreeRead", enableAuthFreeRead);
@@ -259,7 +259,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable password-free write.</p>
+         * <p>Specifies whether to enable authentication-free write.</p>
          */
         public Builder enableAuthFreeWrite(Boolean enableAuthFreeWrite) {
             this.putQueryParameter("EnableAuthFreeWrite", enableAuthFreeWrite);
@@ -277,7 +277,11 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data.</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POSTPAY: Pay-as-you-go based on metric reporting volume.</li>
+         * <li>POSTPAY_GB: Pay-as-you-go based on metric write volume.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -302,7 +306,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Prometheus resource group.</p>
+         * <p>The resource group ID of the Prometheus instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxyexli2****</p>
@@ -314,7 +318,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The data storage duration. Unit: days.</p>
+         * <p>The data retention period, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>

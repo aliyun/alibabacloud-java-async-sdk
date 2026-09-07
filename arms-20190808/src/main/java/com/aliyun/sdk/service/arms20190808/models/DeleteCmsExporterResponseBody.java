@@ -67,7 +67,10 @@ public class DeleteCmsExporterResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Return Result information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DeleteCmsExporterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of this request. If a fault occurs, you can use this ID to troubleshoot the issue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

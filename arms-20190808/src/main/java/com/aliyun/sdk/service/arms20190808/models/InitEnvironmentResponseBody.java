@@ -93,7 +93,7 @@ public class InitEnvironmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The HTTP status code. 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class InitEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation.</p>
+         * <p>The operation result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class InitEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>message</p>

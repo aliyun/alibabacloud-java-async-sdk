@@ -106,7 +106,7 @@ public class GetExploreUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * <p>The HTTP status code. A value of 200 indicates success. Other values indicate errors.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response parameters</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -130,7 +130,7 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt information of the returned result.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,10 +152,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: the operation was successful</li>
-         * <li>false: the operation failed</li>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

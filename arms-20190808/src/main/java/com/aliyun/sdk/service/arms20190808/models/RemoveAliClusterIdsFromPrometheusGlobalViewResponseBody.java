@@ -208,7 +208,7 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
              * <p>The Info-level information.</p>
              * 
              * <strong>example:</strong>
-             * <p>{regionId: the region where the global aggregation instance resides. globalViewClusterId: the ID of the global aggregation instance. failedClusterIds: the IDs of the clusters that failed to be added. A cluster may fail to be added if the specified cluster ID is invalid.}</p>
+             * <p>{regionId: 实例所属region, globalViewClusterId: 实例Id, failedClusterIds: 添加失败的AliClusterId（一般是clusterId有误）}</p>
              */
             public Builder info(String info) {
                 this.info = info;

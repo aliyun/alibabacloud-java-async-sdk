@@ -121,7 +121,7 @@ public class ListIntegrationRequest extends Request {
          * <p>The name of the alert integration.</p>
          * 
          * <strong>example:</strong>
-         * <p>CloudMonitor integration</p>
+         * <p>云监控集成</p>
          */
         public Builder integrationName(String integrationName) {
             this.putQueryParameter("IntegrationName", integrationName);

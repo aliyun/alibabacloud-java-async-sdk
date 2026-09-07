@@ -106,12 +106,16 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned for the request. Valid values:</p>
+         * <p>The API call status.</p>
          * <ul>
-         * <li>2XX: The request is successful.</li>
-         * <li>3XX: A redirection message is returned.</li>
-         * <li>4XX: The request is invalid.</li>
-         * <li>5XX: A server error occurs.</li>
+         * <li><p>2xx: The request was successful.</p>
+         * </li>
+         * <li><p>3xx: The request was redirected.</p>
+         * </li>
+         * <li><p>4xx: A client-side error occurred.</p>
+         * </li>
+         * <li><p>5xx: A server-side error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,10 +127,10 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned struct.</p>
+         * <p>The returned object.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;408d5533&quot;: &quot;SELECT * FROM user_base_info&quot;}</p>
+         * <p>{\&quot;408d5533\&quot;: \&quot;SELECT * FROM user_base_info\&quot;}</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -134,7 +138,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -145,7 +149,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51877BAC-330C-5845-BDFD-C7859AD33FB7</p>
@@ -156,10 +160,12 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the query was successful.</p>
          * <ul>
-         * <li><code>true</code>: The call was successful.</li>
-         * <li><code>false</code>: The call failed.</li>
+         * <li><p><code>true</code>: The query was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The query failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

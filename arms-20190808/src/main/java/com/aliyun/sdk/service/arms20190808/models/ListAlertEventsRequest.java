@@ -162,7 +162,7 @@ public class ListAlertEventsRequest extends Request {
          * <p>The name of the alert.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test-triggered alert</p>
+         * <p>测试触发的告警</p>
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);

@@ -108,7 +108,7 @@ public class CloseAlarmRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>163</p>
+         * <p>184723093</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -145,7 +145,7 @@ public class CloseAlarmRequest extends Request {
          * <p>The alert solution.</p>
          * 
          * <strong>example:</strong>
-         * <p>Restart Repair</p>
+         * <p>重启修复</p>
          */
         public Builder solution(String solution) {
             this.putQueryParameter("Solution", solution);

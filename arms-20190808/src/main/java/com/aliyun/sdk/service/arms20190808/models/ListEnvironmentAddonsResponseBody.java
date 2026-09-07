@@ -106,7 +106,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>32940175-181B-4B93-966E-4BB69176****</p>
@@ -141,7 +147,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values are <code>true</code> if the operation succeeded and <code>false</code> if it failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,6 +230,9 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL监控大盘信息,监控了连接信息,使用信息等指标</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -322,7 +334,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster type.</p>
+             * <p>The required cluster types.</p>
              */
             public Builder clusterTypes(java.util.List<String> clusterTypes) {
                 this.clusterTypes = clusterTypes;
@@ -330,7 +342,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature that can be installed in the environment.</p>
+             * <p>The features available for installation in the environment.</p>
              */
             public Builder features(java.util.Map<String, Boolean> features) {
                 this.features = features;
@@ -338,7 +350,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The services.</p>
+             * <p>The dependent services.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -392,7 +404,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The PromQL statements.</p>
+             * <p>The PromQL query statements.</p>
              */
             public Builder promQL(java.util.List<String> promQL) {
                 this.promQL = promQL;
@@ -507,7 +519,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the protocol.</p>
+             * <p>The label of the protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>ARMS</p>
@@ -653,7 +665,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default alert status.</p>
+             * <p>The default status of the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -664,7 +676,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default installation status.</p>
+             * <p>Indicates whether the addon is installed by default in the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -675,7 +687,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a service account is enabled.</p>
+             * <p>Indicates whether a service account is enabled for the addon.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -686,7 +698,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric check rule.</p>
+             * <p>The rules for checking metric status.</p>
              */
             public Builder metricCheckRule(MetricCheckRule metricCheckRule) {
                 this.metricCheckRule = metricCheckRule;
@@ -694,7 +706,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart is required after the installation.</p>
+             * <p>Indicates whether a restart is required after the addon is installed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -705,7 +717,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported protocols.</p>
+             * <p>The list of supported protocols.</p>
              */
             public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
@@ -713,7 +725,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target name of the add-on.</p>
+             * <p>The target name of the addon.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud-rds-mysql</p>
@@ -835,7 +847,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dependencies of the environment.</p>
+             * <p>The dependencies of the addon within the environment.</p>
              */
             public Builder dependencies(Dependencies dependencies) {
                 this.dependencies = dependencies;
@@ -844,6 +856,9 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL 服务部署在 Kubernetes 集群中。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -851,7 +866,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature is enabled.</p>
+             * <p>Indicates whether the addon is supported in this environment.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -862,7 +877,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the environment.</p>
+             * <p>The label of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>容器环境</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -881,7 +899,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The control policies in the environment.</p>
+             * <p>The policies related to the addon in this environment.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -1104,7 +1122,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alias of the add-on.</p>
+             * <p>The alias of the addon.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -1115,7 +1133,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the add-on.</p>
+             * <p>The list of addon tags.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -1123,7 +1141,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dashboards.</p>
+             * <p>The list of dashboards.</p>
              */
             public Builder dashboards(java.util.List<Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -1131,7 +1149,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the add-on.</p>
+             * <p>The description of the addon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通过 MySQL Exporter 监控数据库指标</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1139,7 +1160,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported environments.</p>
+             * <p>The list of supported environments.</p>
              */
             public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
@@ -1147,7 +1168,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the icon.</p>
+             * <p>The URL of the addon icon.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxx">http://xxxx</a></p>
@@ -1158,7 +1179,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of keywords.</p>
+             * <p>The keywords for the addon.</p>
              */
             public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
@@ -1166,7 +1187,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language.</p>
+             * <p>The language of the addon metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>zh</p>
@@ -1177,7 +1198,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was last created.</p>
+             * <p>The creation time of the latest release of the addon.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-22T16:56:29+08:00</p>
@@ -1188,7 +1209,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the add-on.</p>
+             * <p>The name of the addon.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -1199,7 +1220,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the add-on can be installed only once.</p>
+             * <p>Indicates whether the addon can be installed only once per environment.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1210,7 +1231,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario.</p>
+             * <p>The application scenario of the addon.</p>
              * 
              * <strong>example:</strong>
              * <p>database</p>
@@ -1221,7 +1242,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the agent.</p>
+             * <p>The addon version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1</p>
@@ -1232,7 +1253,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight.</p>
+             * <p>The weight of the addon, which is used for sorting in the UI.</p>
              * 
              * <strong>example:</strong>
              * <p>857</p>
@@ -1315,7 +1336,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried add-ons.</p>
+             * <p>The list of addons.</p>
              */
             public Builder addons(java.util.List<Addons> addons) {
                 this.addons = addons;
@@ -1323,7 +1344,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainsV2Addon.
+             * <p>Indicates whether the list contains V2 addons.</p>
              */
             public Builder containsV2Addon(Boolean containsV2Addon) {
                 this.containsV2Addon = containsV2Addon;
@@ -1331,7 +1352,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -184,7 +184,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The name of the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test-triggered alert</p>
+             * <p>测试触发的告警</p>
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -292,7 +292,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The name of the notification policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>P1 alert notification policy</p>
+             * <p>P1告警通知策略</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -552,7 +552,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The name of the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test-triggered alert</p>
+             * <p>测试触发的告警</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -563,7 +563,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The annotations.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Name&quot;:&quot;annotation-a&quot;,&quot;Value&quot;:&quot;annotation a value&quot;}]</p>
+             * <p>[{\&quot;Name\&quot;:\&quot;annotation-a\&quot;,\&quot;Value\&quot;:\&quot;annotation a value\&quot;}]</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -574,7 +574,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The description of the alert event.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -607,7 +607,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The user who handled the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tom</p>
+             * <p>张三</p>
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -618,7 +618,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The name of the alert integration.</p>
              * 
              * <strong>example:</strong>
-             * <p>Custom integration</p>
+             * <p>自定义集成</p>
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -640,7 +640,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
              * <p>The tags.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;name&quot;:&quot;severity&quot;,&quot;value&quot;:&quot;error&quot;}]</p>
+             * <p>[{\&quot;name\&quot;:\&quot;severity\&quot;,\&quot;value\&quot;:\&quot;error\&quot;}]</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;

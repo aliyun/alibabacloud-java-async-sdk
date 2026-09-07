@@ -88,7 +88,7 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         } 
 
         /**
-         * <p>The date on which the shift ends. Format: <code>yyyy-MM-dd</code>.</p>
+         * <p>The end date of the query range in <code>yyyy-MM-dd</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-30</p>
@@ -100,7 +100,7 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scheduling policy.</p>
+         * <p>The ID of the on-call schedule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         }
 
         /**
-         * <p>The date from which the shift starts. Format: <code>yyyy-MM-dd</code>.</p>
+         * <p>The start date of the query range in <code>yyyy-MM-dd</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-01</p>

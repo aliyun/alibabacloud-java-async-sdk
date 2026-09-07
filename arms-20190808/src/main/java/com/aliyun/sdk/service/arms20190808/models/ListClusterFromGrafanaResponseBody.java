@@ -426,7 +426,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
              * <p>The extended fields. This parameter is a JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;app_id&quot;:&quot;bbd&quot;,&quot;task_id&quot;:&quot;4305ba5bf14942daa6e553ed91f46988&quot;}</p>
+             * <p>{\&quot;app_id\&quot;:\&quot;bbd\&quot;,\&quot;task_id\&quot;:\&quot;4305ba5bf14942daa6e553ed91f46988\&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -496,7 +496,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
              * <p>The custom parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Option&quot;: [&quot;betaTestApproved&quot;]}</p>
+             * <p>{\&quot;Option\&quot;: [\&quot;betaTestApproved\&quot;]}</p>
              */
             public Builder options(String options) {
                 this.options = options;

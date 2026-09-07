@@ -314,6 +314,9 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>网络质量</p>
              */
             public Builder taskTypeName(String taskTypeName) {
                 this.taskTypeName = taskTypeName;

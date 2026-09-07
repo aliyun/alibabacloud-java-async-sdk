@@ -144,7 +144,7 @@ public class DescribeWebhookContactsRequest extends Request {
          * <p>The name of the webhook alert contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>Webhook name</p>
+         * <p>webhook名称</p>
          */
         public Builder webhookName(String webhookName) {
             this.putQueryParameter("WebhookName", webhookName);

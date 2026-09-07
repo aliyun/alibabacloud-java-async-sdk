@@ -119,7 +119,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * <p>The status code. A value of 200 indicates success. Other values indicate exceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried files.</p>
+         * <p>The file list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,10 +149,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>内部错误，请联系管理员。</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -160,7 +160,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</p>
@@ -171,10 +171,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the query is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

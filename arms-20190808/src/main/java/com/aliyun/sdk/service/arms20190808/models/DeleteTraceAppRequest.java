@@ -258,7 +258,13 @@ public class DeleteTraceAppRequest extends Request {
              * <p>A description of the reason for removal.</p>
              * 
              * <strong>example:</strong>
-             * <p>The function is not perfect, and the root cause of the problem cannot be located.</p>
+             * <p>删除理由描述，ID和Name的对应关系：
+             * &quot;id&quot;:0,&quot;name&quot;:&quot;功能不完善，无法定位到问题根本原因。&quot;
+             * &quot;id&quot;:1,&quot;name&quot;:&quot;Agent不稳定，影响应用运行。&quot;
+             * &quot;id&quot;:2,&quot;name&quot;:&quot;服务不稳定，经常打不开界面。&quot;
+             * &quot;id&quot;:3,&quot;name&quot;:&quot;报警相关问题。&quot;
+             * &quot;id&quot;:4,&quot;name&quot;:&quot;价格太贵&quot;
+             * &quot;id&quot;:5,&quot;name&quot;:&quot;其他原因&quot;</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -336,7 +342,7 @@ public class DeleteTraceAppRequest extends Request {
              * <p>Additional remarks when none of the reasons for removal provided are met.</p>
              * 
              * <strong>example:</strong>
-             * <p>The business scenario cannot be satisfied.</p>
+             * <p>业务场景覆盖不全</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

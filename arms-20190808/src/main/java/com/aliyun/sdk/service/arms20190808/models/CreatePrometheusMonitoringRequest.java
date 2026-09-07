@@ -136,7 +136,7 @@ public class CreatePrometheusMonitoringRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Please refer to the supplementary explanation of the request parameters.</p>
+         * <p>参见请求参数补充说明。</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);

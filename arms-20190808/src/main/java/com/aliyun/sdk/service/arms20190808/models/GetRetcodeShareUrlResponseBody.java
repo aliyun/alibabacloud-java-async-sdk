@@ -70,7 +70,7 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
          * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>01FF8DD9-A09C-47A1-895A-B6E321******</p>
+         * <p>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

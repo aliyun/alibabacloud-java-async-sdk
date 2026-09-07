@@ -245,21 +245,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
              * <p>The monitoring configuration. The value is a YAML string.</p>
              * 
              * <strong>example:</strong>
-             * <p>apiVersion: monitoring.coreos.com/v1
-             * kind: ServiceMonitor
-             * metadata:
-             *   name: tomcat-demo
-             *   namespace: default
-             * spec:
-             *   endpoints:
-             *     - interval: 30s
-             *       path: /metrics
-             *       port: tomcat-monitor
-             *   namespaceSelector:
-             *     any: true
-             *   selector:
-             *     matchLabels:
-             *       app: tomcat</p>
+             * <p>参见返回参数补充说明。</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;

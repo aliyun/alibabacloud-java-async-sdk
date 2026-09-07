@@ -244,10 +244,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,10 +252,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -438,7 +432,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the task.</p>
+             * Tags.
              */
             public Builder tags(RetcodeAppDataBeanTags tags) {
                 this.tags = tags;

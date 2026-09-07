@@ -234,7 +234,7 @@ public class ApplyScenarioRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScenarioName</p>
+         * <p>测试POP业务监控</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -246,7 +246,7 @@ public class ApplyScenarioRequest extends Request {
          * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-zhangjaikou</p>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

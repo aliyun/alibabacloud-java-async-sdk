@@ -415,7 +415,7 @@ public class CreateSyntheticTaskRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Network synthetic monitoring task</p>
+         * <p>网络拨测任务</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -1125,7 +1125,7 @@ public class CreateSyntheticTaskRequest extends Request {
              * <p>The whitelist for DNS hijacking.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;src&quot;:&quot;211.154.166.174&quot;}]</p>
+             * <p>[{\&quot;src\&quot;:\&quot;211.154.166.174\&quot;}]</p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;

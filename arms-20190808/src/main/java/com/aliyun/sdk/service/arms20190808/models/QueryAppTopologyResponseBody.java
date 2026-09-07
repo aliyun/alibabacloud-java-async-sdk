@@ -157,7 +157,7 @@ public class QueryAppTopologyResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</p>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -134,7 +134,7 @@ public class ListScenarioRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pro-content</p>
+         * <p>测试业务监控</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

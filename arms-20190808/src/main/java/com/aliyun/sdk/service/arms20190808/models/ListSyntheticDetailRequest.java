@@ -582,7 +582,7 @@ public class ListSyntheticDetailRequest extends Request {
              * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段。</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -593,7 +593,7 @@ public class ListSyntheticDetailRequest extends Request {
              * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段。</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -604,7 +604,7 @@ public class ListSyntheticDetailRequest extends Request {
              * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>保留字段。</p>
              */
             public Builder value(Object value) {
                 this.value = value;

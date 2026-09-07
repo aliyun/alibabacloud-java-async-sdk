@@ -199,7 +199,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * <p>The type of the file. You can set this parameter to &quot;application/zip&quot;, &quot;text/plain&quot;, or an empty string.</p>
+         * <p>The file type. Valid values include <code>&quot;application/zip&quot;</code> and <code>&quot;text/plain&quot;</code>. You can also pass an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>text/plain</p>
@@ -224,7 +224,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * <p>The process ID (PID) of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>iioe7jcnuk@582846f37******</p>
@@ -258,7 +258,15 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * <p>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</p>
+         * <p>The file type. Valid values:</p>
+         * <ul>
+         * <li><p>source-map: a source map file</p>
+         * </li>
+         * <li><p>mapping: an Android symbol table file</p>
+         * </li>
+         * <li><p>dsym: an iOS dSYM file</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>source-map</p>
@@ -270,7 +278,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * <p>The file ID.</p>
+         * <p>The UUID of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>125bdb39-a415-4503-bd96-e293925fc64c</p>
@@ -282,7 +290,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * <p>The version number of the file.</p>
+         * <p>The file version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

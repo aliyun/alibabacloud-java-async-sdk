@@ -111,7 +111,8 @@ public class GetAgentDownloadUrlV2Request extends Request {
         }
 
         /**
-         * <p>The agent type.<br><strong>Valid values:</strong></p>
+         * <p>The agent type.\
+         * <strong>Valid values:</strong></p>
          * <ul>
          * <li><strong>JavaAgent</strong></li>
          * <li><strong>Instgo</strong></li>
@@ -128,7 +129,9 @@ public class GetAgentDownloadUrlV2Request extends Request {
         }
 
         /**
-         * <p>The architecture type of the environment where the agent is installed.<br>This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.<br><strong>Valid values:</strong></p>
+         * <p>The architecture type of the environment where the agent is installed.\
+         * This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.\
+         * <strong>Valid values:</strong></p>
          * <ul>
          * <li><strong>amd64</strong></li>
          * <li><strong>arm64</strong></li>
@@ -144,7 +147,9 @@ public class GetAgentDownloadUrlV2Request extends Request {
         }
 
         /**
-         * <p>The operating system of the environment where the agent is installed.<br>This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.<br><strong>Valid values:</strong></p>
+         * <p>The operating system of the environment where the agent is installed.\
+         * This parameter is required and valid only when <strong>AgentType</strong> is set to <strong>Instgo</strong>.\
+         * <strong>Valid values:</strong></p>
          * <ul>
          * <li><strong>linux</strong></li>
          * <li><strong>darwin</strong></li>

@@ -223,7 +223,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
              * <p>The description of the alert event.</p>
              * 
              * <strong>example:</strong>
-             * <p>The overall response time of the [HTTP] service of the application [sd] spikes at [2022-07-27 10:57:00]</p>
+             * <p>应用【sd】【HTTP】服务整体的响应时间在【2022-07-27 10:57:00】出现突增</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -267,7 +267,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
              * <p>The title of the event.</p>
              * 
              * <strong>example:</strong>
-             * <p>Average response-time spikes of application services</p>
+             * <p>应用服务整体平均响应时间突增</p>
              */
             public Builder title(String title) {
                 this.title = title;

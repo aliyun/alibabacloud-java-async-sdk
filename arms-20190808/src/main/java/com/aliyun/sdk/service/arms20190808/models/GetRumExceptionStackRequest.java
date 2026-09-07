@@ -171,7 +171,7 @@ public class GetRumExceptionStackRequest extends Request {
         } 
 
         /**
-         * <p>The binary images, which represent all executable files loaded into the process address space when a crash occurs.</p>
+         * <p>The binary images, which represent all executable files loaded into the process address space at the time of the crash.</p>
          * 
          * <strong>example:</strong>
          * <p>iOSDemo:arm64%3B1489F4D3-6DE2-300C-90E9-E1B869675351%3B0x0000000104064000\nAlibabaCloudRUM:arm64%3BAB7B3A8E-6CEE-325D-BCBB-8DA50E61804F%3B0x0000000106660000\nlibdispatch.dylib:arm</p>
@@ -183,7 +183,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * <p>The exception stack information. Set the value to a JSON string. call_stack.info represents the stack information, call_stack.thread.name represents the thread name, and call_stack.thread.id represents the thread ID. This parameter is exactly the same as the exception.stack parameter in the logstore-rum Logstore of Simple Log Service.</p>
+         * <p>The error stack information in JSON list format. Each list element contains three fields: call_stack.info, call_stack.thread.name, and call_stack.thread.id, which represent the stack information, thread name, and thread ID, respectively. This is identical to the exception.stack field in the Simple Log Service logstore-rum.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -201,7 +201,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * <p>The ID of the exception thread.</p>
+         * <p>The exception thread ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16643</p>
@@ -213,7 +213,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * <p>Extra information about iOS symbol tables. You can leave this parameter empty.</p>
+         * <p>The additional system symbol table information for iOS parsing. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>GraphicsServices:system/GraphicsServices/85419099-269B-336D-86B4-0D52D0FF6923/GraphicsServices;WebCore:system/WebCore/BF44A3F4-85D4-38C8-BF26-197F06ADE273/WebCore</p>
@@ -260,15 +260,15 @@ public class GetRumExceptionStackRequest extends Request {
         /**
          * <p>The parsing type. Valid values:</p>
          * <ul>
-         * <li>js: Parses JavaScript errors.</li>
-         * <li>sym: Parses PC errors.</li>
-         * <li>har: Parses HarmonyOS errors.</li>
-         * <li>dSYM: Parses iOS errors.</li>
-         * <li>so: Parses Android errors.</li>
+         * <li>js: JavaScript error parsing</li>
+         * <li>sym: PC parsing</li>
+         * <li>har: HarmonyOS parsing</li>
+         * <li>dSYM: iOS parsing</li>
+         * <li>so: Android parsing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>source-map</p>
+         * <p>js</p>
          */
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);

@@ -397,7 +397,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
              * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
-             * <p>Reserved field</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -408,7 +408,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
              * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
-             * <p>Reserved field</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -1145,7 +1145,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
              * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>AlibabaCloud DNS Task</p>
+             * <p>拨测任务</p>
              */
             public Builder name(String name) {
                 this.name = name;

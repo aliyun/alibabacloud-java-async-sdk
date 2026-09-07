@@ -158,7 +158,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
              * <p>The name of the notification policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>Notification policy test</p>
+             * <p>通知策略测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -397,7 +397,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
              * <p>The name of the IM chatbot.</p>
              * 
              * <strong>example:</strong>
-             * <p>Chatbot name</p>
+             * <p>robot名称</p>
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;

@@ -283,7 +283,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
              * <p>The name of the city to which the monitoring point belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Beijing</p>
+             * <p>北京市</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -320,7 +320,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
              * <p>The region to which the monitoring point belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Beijing</p>
+             * <p>北京</p>
              */
             public Builder district(String district) {
                 this.district = district;

@@ -264,7 +264,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
          * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>AlibabaCloud DNS Task</p>
+         * <p>拨测任务</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -712,7 +712,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>A reserved parameter.</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -723,7 +723,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>A reserved parameter.</p>
+             * <p>保留字段。</p>
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -3110,7 +3110,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
             /**
              * <p>If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.</p>
-             * <p>Format: &lt;domain name&gt;:&lt;objects&gt;. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+             * <p>Format: \<domain name>:\<objects>. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -3180,7 +3180,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * <p>The keyword that is used to identify hijacking. Asterisks (*) are allowed.</p>
+             * <p>The keyword that is used to identify hijacking. Asterisks (\*) are allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun</p>

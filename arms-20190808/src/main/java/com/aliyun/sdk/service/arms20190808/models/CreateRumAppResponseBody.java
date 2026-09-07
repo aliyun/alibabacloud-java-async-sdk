@@ -168,7 +168,7 @@ public class CreateRumAppResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>应用已存在。</p>
          */
         public Builder message(String message) {
             this.message = message;

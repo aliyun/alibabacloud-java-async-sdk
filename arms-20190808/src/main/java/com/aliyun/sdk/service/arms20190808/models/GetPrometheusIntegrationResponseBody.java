@@ -126,7 +126,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
          * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>9BEF2832-9D95-5E3E-9B10-74887CA17B94</p>
+         * <p>9BEF2832-9D95-5E3E-9B10-74887C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -412,7 +412,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The ID of the Prometheus instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
+             * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -456,7 +456,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The ID of the exporter.</p>
              * 
              * <strong>example:</strong>
-             * <p>2893</p>
+             * <p>28**</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -563,7 +563,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
              * <p>The monitored IP address.</p>
              * 
              * <strong>example:</strong>
-             * <p>127.0.0.1:3422</p>
+             * <p>127.0.XX.XX:3422</p>
              */
             public Builder target(String target) {
                 this.target = target;
