@@ -87,7 +87,10 @@ public class ChangeUserPasswordRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putBodyParameter("BusinessChannel", businessChannel);
@@ -96,7 +99,10 @@ public class ChangeUserPasswordRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The username of the convenience account whose password is to be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice***</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -105,7 +111,10 @@ public class ChangeUserPasswordRequest extends Request {
         }
 
         /**
-         * NewPassword.
+         * <p>The new password for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Admin@12***</p>
          */
         public Builder newPassword(String newPassword) {
             this.putBodyParameter("NewPassword", newPassword);

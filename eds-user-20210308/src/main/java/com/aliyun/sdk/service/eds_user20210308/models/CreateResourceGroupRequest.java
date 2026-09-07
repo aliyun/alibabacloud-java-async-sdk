@@ -152,7 +152,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -171,7 +174,7 @@ public class CreateResourceGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,12 +187,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p> Set the value to AliyunConsole.</p>
-         * </blockquote>
-         * <ul>
-         * <li>This parameter is not publicly available in other platforms.</li>
-         * </ul>
+         * <p>For WUYING Workspace Enterprise Edition, set this parameter to <code>AliyunConsole</code>. Other platforms are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunConsole</p>
@@ -211,6 +209,9 @@ public class CreateResourceGroupRequest extends Request {
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>部门A资源组</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

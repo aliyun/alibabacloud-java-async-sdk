@@ -67,7 +67,7 @@ public class LockUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the locking the convenience user.</p>
+         * <p>The result of the LockUsers operation.</p>
          */
         public Builder lockUsersResult(LockUsersResult lockUsersResult) {
             this.lockUsersResult = lockUsersResult;
@@ -75,7 +75,7 @@ public class LockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -157,10 +157,10 @@ public class LockUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the convenience user that failed to be locked.</p>
+             * <p>The username of the convenience account that failed to lock.</p>
              * 
              * <strong>example:</strong>
-             * <p>test123</p>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -249,7 +249,7 @@ public class LockUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The convenience users that failed to be locked.</p>
+             * <p>A list of convenience accounts that failed to lock.</p>
              */
             public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -257,7 +257,7 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The convenience users that were locked.</p>
+             * <p>A list of successfully locked convenience accounts.</p>
              */
             public Builder lockedUsers(java.util.List<String> lockedUsers) {
                 this.lockedUsers = lockedUsers;

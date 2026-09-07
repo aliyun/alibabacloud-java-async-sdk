@@ -87,7 +87,10 @@ public class DeleteResourceGroupRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);

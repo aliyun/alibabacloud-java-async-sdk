@@ -169,6 +169,9 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
 
             /**
              * <p>The name of the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>开发部</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;

@@ -80,7 +80,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK****</p>
@@ -91,7 +91,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The organizations.</p>
+         * <p>The list of organizations.</p>
          */
         public Builder orgs(java.util.List<Orgs> orgs) {
             this.orgs = orgs;
@@ -295,7 +295,11 @@ public class DescribeOrgsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessType.
+             * <p>The access type of the organization node. Valid values:</p>
+             * <ul>
+             * <li>MANAGEABLE: indicates a manageable node.</li>
+             * <li>PATH_ONLY: indicates a node used only to display the full path to the root organization.</li>
+             * </ul>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -306,7 +310,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
              * <p>The organization ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>org-****</p>
+             * <p>org-1mox****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -314,10 +318,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organizational unit.</p>
+             * <p>The organization name.</p>
              * 
              * <strong>example:</strong>
-             * <p>org****</p>
+             * <p>DesignDepartment****</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -336,7 +340,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
              * <p>The parent organization ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>org-****</p>
+             * <p>org-ezqr****</p>
              */
             public Builder parentOrgId(String parentOrgId) {
                 this.parentOrgId = parentOrgId;

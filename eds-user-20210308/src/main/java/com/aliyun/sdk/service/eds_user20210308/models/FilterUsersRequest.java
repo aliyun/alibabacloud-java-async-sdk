@@ -312,7 +312,10 @@ public class FilterUsersRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -321,7 +324,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of usernames to be precisely excluded.</p>
+         * <p>The usernames (<code>EndUserId</code>) to exclude by exact match.</p>
          */
         public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putQueryParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -330,10 +333,10 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (*) are supported for this parameter. For example, if you set this parameter to a*m, the usernames or an email addresses that start with a or end with m are returned.</p>
+         * <p>The string for a fuzzy search on the username (<code>EndUserId</code>) and email address (<code>Email</code>). The wildcard character (<code>*</code>) is supported. For example, if you set this parameter to <code>a*m</code>, the query returns all results where the username or email address starts with <code>a</code> and ends with <code>m</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>a*m</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -352,23 +355,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the number of cloud desktops that are assigned to the convenience user.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to return the number of cloud desktops that are assigned to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -380,23 +367,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the number of cloud desktop pools that are assigned to the convenience user.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to return the number of desktop groups that are assigned to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -417,7 +388,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the organization information.</p>
+         * <p>Specifies whether to include organization information in the response.</p>
          */
         public Builder includeOrgInfo(Boolean includeOrgInfo) {
             this.putQueryParameter("IncludeOrgInfo", includeOrgInfo);
@@ -426,7 +397,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the supported logon types.</p>
+         * <p>Specifies whether to include the supported logon types in the response.</p>
          */
         public Builder includeSupportIdps(Boolean includeSupportIdps) {
             this.putQueryParameter("IncludeSupportIdps", includeSupportIdps);
@@ -444,7 +415,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
+         * <p>The number of entries per page. If you specify a value greater than 100, the system automatically sets this parameter to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -456,10 +427,10 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the number of results exceeds the value of the <code>MaxResults</code> parameter, a <code>NextToken</code> is returned. You can use the <code>NextToken</code> to query the next page of results.</p>
          * 
          * <strong>example:</strong>
-         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -468,7 +439,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The parameter that might affect the sorting logic.</p>
+         * <p>The sorting parameters.</p>
          */
         public Builder orderParam(OrderParam orderParam) {
             String orderParamShrink = shrink(orderParam, "OrderParam", "json");
@@ -478,7 +449,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organization.</p>
+         * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>org-aliyun-wy-org-id</p>
@@ -490,12 +461,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The activation type of the convenience account.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CreateFromManager: administrator-activated.</li>
-         * <li>Normal: user-activated.</li>
-         * </ul>
+         * <p>The account activation type.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -507,7 +473,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of properties for fuzzy search.</p>
+         * <p>The user properties for a fuzzy search.</p>
          */
         public Builder propertyFilterParam(java.util.List<PropertyFilterParam> propertyFilterParam) {
             this.putQueryParameter("PropertyFilterParam", propertyFilterParam);
@@ -516,7 +482,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of property names and property values.</p>
+         * <p>The information about property keys and property values.</p>
          */
         public Builder propertyKeyValueFilterParam(java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
             this.putQueryParameter("PropertyKeyValueFilterParam", propertyKeyValueFilterParam);
@@ -534,7 +500,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The status.</p>
+         * <p>The user status by which to filter the results.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -605,13 +571,7 @@ public class FilterUsersRequest extends Request {
             } 
 
             /**
-             * <p>The field that you want to sort by.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>EndUserId: the username.</li>
-             * <li>id: the ID of the primary key.</li>
-             * <li>gmt_created: the creation time.</li>
-             * </ul>
+             * <p>The field by which to sort the results.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>
@@ -622,15 +582,10 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>The direction of the sort.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>ASC: the ascending order.</li>
-             * <li>DESC (default): the descending order.</li>
-             * </ul>
+             * <p>The sort order.</p>
              * 
              * <strong>example:</strong>
-             * <p>ASC</p>
+             * <p>DESC</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -697,10 +652,10 @@ public class FilterUsersRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the property.</p>
+             * <p>The property ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>123</p>
+             * <p>328</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -708,10 +663,10 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the property values.</p>
+             * <p>The property value ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>1255</p>
              */
             public Builder propertyValueIds(String propertyValueIds) {
                 this.propertyValueIds = propertyValueIds;
@@ -778,7 +733,7 @@ public class FilterUsersRequest extends Request {
             } 
 
             /**
-             * <p>The property name.</p>
+             * <p>The property key.</p>
              * 
              * <strong>example:</strong>
              * <p>job</p>
@@ -789,7 +744,7 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>The property values.</p>
+             * <p>The property value.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>

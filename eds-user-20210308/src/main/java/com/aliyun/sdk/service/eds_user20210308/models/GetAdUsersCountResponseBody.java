@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateGroupResponseBody} extends {@link TeaModel}
+ * {@link GetAdUsersCountResponseBody} extends {@link TeaModel}
  *
- * <p>CreateGroupResponseBody</p>
+ * <p>GetAdUsersCountResponseBody</p>
  */
-public class CreateGroupResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("GroupId")
-    private String groupId;
+public class GetAdUsersCountResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AdUserCount")
+    private Integer adUserCount;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateGroupResponseBody(Builder builder) {
-        this.groupId = builder.groupId;
+    private GetAdUsersCountResponseBody(Builder builder) {
+        this.adUserCount = builder.adUserCount;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +32,7 @@ public class CreateGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateGroupResponseBody create() {
+    public static GetAdUsersCountResponseBody create() {
         return builder().build();
     }
 
@@ -41,10 +41,10 @@ public class CreateGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return groupId
+     * @return adUserCount
      */
-    public String getGroupId() {
-        return this.groupId;
+    public Integer getAdUserCount() {
+        return this.adUserCount;
     }
 
     /**
@@ -55,41 +55,35 @@ public class CreateGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String groupId; 
+        private Integer adUserCount; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateGroupResponseBody model) {
-            this.groupId = model.groupId;
+        private Builder(GetAdUsersCountResponseBody model) {
+            this.adUserCount = model.adUserCount;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ug-eld7uv7vtgqsz****</p>
+         * AdUserCount.
          */
-        public Builder groupId(String groupId) {
-            this.groupId = groupId;
+        public Builder adUserCount(Integer adUserCount) {
+            this.adUserCount = adUserCount;
             return this;
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AA8D67CB-345D-5CDA-986E-FFAC7D0****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateGroupResponseBody build() {
-            return new CreateGroupResponseBody(this);
+        public GetAdUsersCountResponseBody build() {
+            return new GetAdUsersCountResponseBody(this);
         } 
 
     } 

@@ -30,10 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "eds-user";
         this.version = "2021-03-08";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shanghai", "eds-user.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eds-user.ap-southeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -44,7 +41,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</p>
+     * <p>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</p>
      * 
      * @param request the request parameters of BatchSetDesktopManager  BatchSetDesktopManagerRequest
      * @return BatchSetDesktopManagerResponse
@@ -100,9 +97,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Before you call the operation, you can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).</p>
-     * 
      * @param request the request parameters of CheckUsedPropertyValue  CheckUsedPropertyValueRequest
      * @return CheckUsedPropertyValueResponse
      */
@@ -157,6 +151,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </li>
+     * <li>You can add up to 50 different attribute values to a single property.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateProperty  CreatePropertyRequest
      * @return CreatePropertyResponse
      */
@@ -194,7 +194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
+     * &lt;props=&quot;intl&quot;&gt;
+     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</p>
      * 
      * @param request the request parameters of CreateUsers  CreateUsersRequest
      * @return CreateUsersResponse
@@ -232,9 +235,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.</p>
-     * 
      * @param request the request parameters of DeleteUserPropertyValue  DeleteUserPropertyValueRequest
      * @return DeleteUserPropertyValueResponse
      */
@@ -326,7 +326,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</p>
+     * <p>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
      * 
      * @param request the request parameters of DescribeOrgs  DescribeOrgsRequest
      * @return DescribeOrgsResponse
@@ -418,6 +418,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <blockquote>
+     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GetAdUsersCount  GetAdUsersCountRequest
+     * @return GetAdUsersCountResponse
+     */
+    @Override
+    public CompletableFuture<GetAdUsersCountResponse> getAdUsersCount(GetAdUsersCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAdUsersCount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAdUsersCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAdUsersCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetManagerInfoByAuthCode  GetManagerInfoByAuthCodeRequest
      * @return GetManagerInfoByAuthCodeResponse
      */
@@ -430,6 +454,30 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetManagerInfoByAuthCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <blockquote>
+     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GetUsersCount  GetUsersCountRequest
+     * @return GetUsersCountResponse
+     */
+    @Override
+    public CompletableFuture<GetUsersCountResponse> getUsersCount(GetUsersCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUsersCount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUsersCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUsersCountResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -491,7 +539,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the <a href="https://help.aliyun.com/document_detail/286534.html">UnlockMfaDevice</a> operation to unlock the virtual MFA device.</p>
+     * <p>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</p>
      * 
      * @param request the request parameters of LockMfaDevice  LockMfaDeviceRequest
      * @return LockMfaDeviceResponse
@@ -511,6 +559,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <code>Status</code> value in the response is 0 for unlocked accounts and 9 for locked accounts.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of LockUsers  LockUsersRequest
      * @return LockUsersResponse
      */
@@ -656,7 +710,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</p>
+     * <p>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</p>
      * 
      * @param request the request parameters of RemoveMfaDevice  RemoveMfaDeviceRequest
      * @return RemoveMfaDeviceResponse
@@ -838,6 +892,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </p>
+     * <blockquote>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <code>Status</code> in the returned data is 0, the convenience account is not locked. If the value of <code>Status</code> is 9, the convenience account is locked.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of UnlockUsers  UnlockUsersRequest
      * @return UnlockUsersResponse
      */

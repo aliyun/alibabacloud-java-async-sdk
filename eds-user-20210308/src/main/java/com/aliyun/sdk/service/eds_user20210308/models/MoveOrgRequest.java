@@ -89,7 +89,10 @@ public class MoveOrgRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putBodyParameter("BusinessChannel", businessChannel);

@@ -87,7 +87,10 @@ public class RemoveGroupRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -99,7 +102,7 @@ public class RemoveGroupRequest extends Request {
          * <p>The ID of the user group to be deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>ug-12341234****</p>
+         * <p>ug-dzjax1ez5qgph****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

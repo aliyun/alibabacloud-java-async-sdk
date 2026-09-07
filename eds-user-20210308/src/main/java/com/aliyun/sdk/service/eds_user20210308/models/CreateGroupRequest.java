@@ -129,7 +129,12 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <blockquote>
+         * <p>This parameter is not publicly available for use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -138,7 +143,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -159,7 +167,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开发组</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

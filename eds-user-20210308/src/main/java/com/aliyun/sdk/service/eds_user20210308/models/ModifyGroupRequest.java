@@ -103,7 +103,10 @@ public class ModifyGroupRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -128,7 +131,7 @@ public class ModifyGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ug-12341234****</p>
+         * <p>ug-dzjax1ez5qgph****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -139,6 +142,9 @@ public class ModifyGroupRequest extends Request {
         /**
          * <p>The name of the new user group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开发组</p>
          */
         public Builder newGroupName(String newGroupName) {
             this.putQueryParameter("NewGroupName", newGroupName);

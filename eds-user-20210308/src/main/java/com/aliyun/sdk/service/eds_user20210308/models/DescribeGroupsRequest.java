@@ -223,7 +223,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>是否排除已关联登录策略的用户组。</p>
+         * <p>Specifies whether to exclude user groups that have associated logon policies.</p>
          */
         public Builder excludeAttachedLoginPolicyGroups(Boolean excludeAttachedLoginPolicyGroups) {
             this.putQueryParameter("ExcludeAttachedLoginPolicyGroups", excludeAttachedLoginPolicyGroups);
@@ -232,10 +232,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user group.</p>
+         * <p>The user group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ug-12341234****</p>
+         * <p>ug-16nf7xxh4o9gc****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -244,7 +244,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the user group.</p>
+         * <p>The user group name.</p>
          * 
          * <strong>example:</strong>
          * <p>TestGroup</p>
@@ -265,7 +265,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>指定关联的登录策略筛选。</p>
+         * <p>Filters user groups by the specified associated logon policy.</p>
          */
         public Builder loginPolicyId(String loginPolicyId) {
             this.putQueryParameter("LoginPolicyId", loginPolicyId);
@@ -274,7 +274,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -286,7 +286,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -312,7 +312,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the file approval feature is enabled.</p>
+         * <p>Indicates whether file approval is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

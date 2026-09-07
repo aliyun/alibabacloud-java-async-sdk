@@ -93,7 +93,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The total number of users that meet the query conditions</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -101,7 +101,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * <p>The pagination token for the next query. An empty NextToken indicates that no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -112,7 +112,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -123,7 +123,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the convenience accounts.</p>
+         * <p>The collection of convenience account information.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -264,7 +264,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignedResourceCount.
+             * <p>The number of assigned cloud resources.</p>
              */
             public Builder assignedResourceCount(java.util.Map<String, ?> assignedResourceCount) {
                 this.assignedResourceCount = assignedResourceCount;
@@ -339,7 +339,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the user group.</p>
+             * <p>The user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ug-12341234****</p>
@@ -350,10 +350,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user group.</p>
+             * <p>The user group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>User Group 1</p>
+             * <p>UserGroup1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -433,7 +433,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The organization ID.</p>
+             * <p>The department ID.</p>
              * 
              * <strong>example:</strong>
              * <p>org-4mdgc1cocc59z****</p>
@@ -444,10 +444,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organization name.</p>
+             * <p>The department name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Organization 1</p>
+             * <p>Department1</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -522,7 +522,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Role</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -530,7 +533,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Student</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -870,7 +876,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The work address of the convenience user.</p>
+             * <p>The work address of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou ***</p>
@@ -881,7 +887,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The profile picture of the convenience user.</p>
+             * <p>The URL of the user\&quot;s profile picture.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cdn">https://cdn</a>.*****</p>
@@ -892,7 +898,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the convenience user.</p>
+             * <p>The email address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -903,7 +909,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enables the administrator permissions.</p>
+             * <p>Indicates whether administrator access permissions are enabled.</p>
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -911,7 +917,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the convenience user.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -922,7 +928,13 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalName.
+             * <p>The username imported from an external source.</p>
+             * <blockquote>
+             * <p>This field is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Ma**</p>
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -930,7 +942,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>The extended user information.</p>
              */
             public Builder extras(Extras extras) {
                 this.extras = extras;
@@ -938,7 +950,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user groups to which the convenience user belongs.</p>
+             * <p>The collection of user groups to which the convenience account belongs.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
@@ -946,7 +958,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the convenience user.</p>
+             * <p>The convenience account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4205**</p>
@@ -957,7 +969,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the convenience user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile number of the user administrator. For more information, see <a href="https://help.aliyun.com/document_detail/214472.html">Create a convenience user</a>.</p>
+             * <p>Indicates whether the user is a user administrator. If the convenience account is of the administrator-activated type, a user administrator must be specified. Notifications such as password resets initiated by end users through the client are sent to the user administrator\&quot;s email or phone. For more information, see <a href="https://help.aliyun.com/document_detail/214472.html">Create a convenience account</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -968,7 +980,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The employee number of the convenience user.</p>
+             * <p>The employee ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>A10000**</p>
@@ -979,10 +991,15 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the convenience user.</p>
+             * <p>The nickname of the user. The value is determined in the following order:</p>
+             * <ul>
+             * <li>RealNickName</li>
+             * <li>Remark</li>
+             * <li>EndUserId</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Lee</p>
+             * <p>Li**</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -990,9 +1007,9 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the organization to which the convenience user belongs.</p>
+             * <p>The department ID to which the convenience account belongs.</p>
              * <blockquote>
-             * <p> This parameter will be deprecated in the future.</p>
+             * <p>This parameter will be deprecated soon.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1004,7 +1021,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organizations to which the convenience user belongs.</p>
+             * <p>The collection of departments to which the convenience account belongs.</p>
              */
             public Builder orgs(java.util.List<Orgs> orgs) {
                 this.orgs = orgs;
@@ -1012,30 +1029,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the convenience account.</p>
+             * <p>The convenience account type, which includes:</p>
              * <ul>
-             * <li>Administrator-activated type: The administrator specifies the username and password of the convenience account. User notifications such as password reset notifications are sent to the email address or mobile number of the administrator.</li>
-             * <li>User-activated type: The administrator specifies the username and the email address or mobile number of a convenience user. Notifications such as activation notifications that contain the default password are sent to the email address or mobile number of the convenience user.</li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>CreateFromManager</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>administrator-activated</p>
-             * <!-- -->
-             * </li>
-             * <li><p>Normal</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>user-activated</p>
-             * <!-- --></li>
+             * <li>Administrator-activated type: The administrator sets the username and password. User notifications such as password resets are sent to the administrator\&quot;s email or phone.</li>
+             * <li>User-activated type: The administrator sets the username and the user\&quot;s email or phone for receiving notifications. User notifications such as cloud computer provisioning notifications (including the initial password) are sent to the user\&quot;s email or phone.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1063,7 +1060,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.</p>
+             * <p>The phone number. This parameter is not returned if it is not set.</p>
              * 
              * <strong>example:</strong>
              * <p>1381111****</p>
@@ -1074,7 +1071,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The user properties.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -1082,7 +1079,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RealNickName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li**</p>
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;
@@ -1090,10 +1090,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the convenience user.</p>
+             * <p>The remark of the convenience account.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestUser</p>
+             * <p>Test user.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1101,23 +1101,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the convenience user.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>0: The convenience user is normal.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>9: The convenience user is locked.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1128,7 +1112,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique ID of the convenience user.</p>
+             * <p>The globally unique ID of the convenience account.</p>
              * 
              * <strong>example:</strong>
              * <p>41fd1254d8f7****</p>

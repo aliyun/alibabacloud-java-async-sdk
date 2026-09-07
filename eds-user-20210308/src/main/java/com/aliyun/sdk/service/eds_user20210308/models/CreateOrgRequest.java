@@ -89,7 +89,10 @@ public class CreateOrgRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -100,6 +103,9 @@ public class CreateOrgRequest extends Request {
         /**
          * <p>The name of the organization.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>设计部门</p>
          */
         public Builder orgName(String orgName) {
             this.putQueryParameter("OrgName", orgName);

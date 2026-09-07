@@ -67,7 +67,10 @@ public class DescribeUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>User information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -167,7 +170,10 @@ public class DescribeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalId.
+             * <p>External User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oijjnabsf****</p>
              */
             public Builder externalId(String externalId) {
                 this.externalId = externalId;
@@ -175,7 +181,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalName.
+             * <p>External information name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alex</p>
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -183,7 +192,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * JobNumber.
+             * <p>Employee ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15412***</p>
              */
             public Builder jobNumber(String jobNumber) {
                 this.jobNumber = jobNumber;
@@ -191,7 +203,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * SsoType.
+             * <p>SSO logon type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OIDC</p>
              */
             public Builder ssoType(String ssoType) {
                 this.ssoType = ssoType;
@@ -258,7 +273,10 @@ public class DescribeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Attribute key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -266,7 +284,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>teacher</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -476,7 +497,10 @@ public class DescribeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>Mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alex@test-email.com">alex@test-email.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -484,7 +508,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alex</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -492,7 +519,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalInfo.
+             * <p>Associated external user information.</p>
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -500,7 +527,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>Extension information.</p>
              */
             public Builder extras(java.util.Map<String, String> extras) {
                 this.extras = extras;
@@ -508,7 +535,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 12:00:00</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -524,7 +554,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * OrgIds.
+             * <p>List of organization IDs.</p>
              */
             public Builder orgIds(java.util.List<String> orgIds) {
                 this.orgIds = orgIds;
@@ -532,7 +562,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * OrgPaths.
+             * <p>List of organizations.</p>
              */
             public Builder orgPaths(java.util.List<String> orgPaths) {
                 this.orgPaths = orgPaths;
@@ -540,7 +570,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * <p>Phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1888888****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -548,7 +581,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>User attributes.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -556,7 +589,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -564,7 +600,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>User status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -572,7 +611,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * WyId.
+             * <p>Unique ID of the Wuying user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aisdfumj****</p>
              */
             public Builder wyId(String wyId) {
                 this.wyId = wyId;

@@ -119,7 +119,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>System status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -316,7 +331,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131239236086****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -324,7 +342,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * CorpId.
+             * <p>The enterprise ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdrs948144195608****</p>
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -332,7 +353,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>Creation Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-30 07:50:42</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -340,7 +364,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The updated at time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-02 14:27:39</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -348,7 +375,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Auto increment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18500</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -356,7 +386,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * LatestBeginTime.
+             * <p>The latest start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-02 14:31:39</p>
              */
             public Builder latestBeginTime(String latestBeginTime) {
                 this.latestBeginTime = latestBeginTime;
@@ -364,7 +397,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * LatestEndTime.
+             * <p>The latest end time, regardless of whether the operation succeeded or failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-02 16:13:12</p>
              */
             public Builder latestEndTime(String latestEndTime) {
                 this.latestEndTime = latestEndTime;
@@ -372,7 +408,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * LatestSuccessTime.
+             * <p>The latest success time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-02 18:24:01</p>
              */
             public Builder latestSuccessTime(String latestSuccessTime) {
                 this.latestSuccessTime = latestSuccessTime;
@@ -380,7 +419,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The user synchronization status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

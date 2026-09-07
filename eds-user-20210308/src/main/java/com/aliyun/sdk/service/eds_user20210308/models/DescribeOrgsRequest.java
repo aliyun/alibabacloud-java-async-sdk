@@ -158,7 +158,10 @@ public class DescribeOrgsRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -176,7 +179,7 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * IsQueryAllSubOrgs.
+         * <p>Specifies whether to query all subordinate organizations when a parent organization is specified.</p>
          */
         public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
             this.putQueryParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
@@ -185,7 +188,7 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Valid values: 1 to 100.<br>Default value: 100.</p>
+         * <p>The maximum number of results to return. Valid values: 1 to 100.<br>Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +200,7 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK****</p>
@@ -209,10 +212,10 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * <p>The name of the organization.</p>
+         * <p>The organization name.</p>
          * 
          * <strong>example:</strong>
-         * <p>org****</p>
+         * <p>ProductDepartment</p>
          */
         public Builder orgName(String orgName) {
             this.putQueryParameter("OrgName", orgName);
@@ -224,7 +227,7 @@ public class DescribeOrgsRequest extends Request {
          * <p>The parent organization ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>org-****</p>
+         * <p>org-11fs****</p>
          */
         public Builder parentOrgId(String parentOrgId) {
             this.putQueryParameter("ParentOrgId", parentOrgId);

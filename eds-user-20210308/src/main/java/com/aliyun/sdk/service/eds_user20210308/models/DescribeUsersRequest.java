@@ -293,7 +293,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -302,7 +305,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The usernames that must be exactly matched.</p>
+         * <p>The list of usernames (EndUserId) for exact match.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
@@ -311,7 +314,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The usernames that must be exactly excluded.</p>
+         * <p>The list of usernames (EndUserId) to exclude exactly.</p>
          */
         public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putBodyParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -329,7 +332,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (*) are supported. For example, if you set this parameter to <code>a*m</code>, usernames or email addresses that start with <code>a</code> and end with <code>m</code> are returned.</p>
+         * <p>The fuzzy search string that supports matching by username (EndUserId) and email (Email). This field supports wildcards (*). For example, if you set this field to <code>a*m</code>, all results whose username or email starts with <code>a</code> and ends with <code>m</code> are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>a*m</p>
@@ -361,7 +364,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * FilterWithAssignedResources.
+         * <p>Filters users based on whether cloud resources are assigned.</p>
          */
         public Builder filterWithAssignedResources(java.util.Map<String, Boolean> filterWithAssignedResources) {
             String filterWithAssignedResourcesShrink = shrink(filterWithAssignedResources, "FilterWithAssignedResources", "json");
@@ -371,7 +374,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organization in which you want to query convenience users.</p>
+         * <p>Performs an exact match by user group ID and queries the list of accounts that belong to the specified user group.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-12341234****</p>
@@ -383,7 +386,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * IsQueryAllSubOrgs.
+         * <p>Specifies whether to query users in sub-organizations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
             this.putBodyParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
@@ -392,10 +398,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.  </p>
          * <ul>
-         * <li>Valid values: 1 to 500.</li>
-         * <li>Default value: 500.</li>
+         * <li>Valid values: 1 to 500.  </li>
+         * <li>Default value: 200.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,7 +414,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.<br>If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.</p>
+         * <p>The pagination token for the next query. You do not need to set this parameter for the first request. If not all results are returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent requests to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -420,7 +426,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organization in which you want to query users.</p>
+         * <p>Performs an exact match by organization ID and queries the list of accounts that belong to the specified organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org-4mdgc1cocc59z****</p>
@@ -432,7 +438,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * ShowExtras.
+         * <p>Queries extended user information.</p>
          */
         public Builder showExtras(java.util.Map<String, ?> showExtras) {
             String showExtrasShrink = shrink(showExtras, "ShowExtras", "json");

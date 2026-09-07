@@ -80,7 +80,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of the entries returned.</p>
+         * <p>The number of entries returned in the query result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user groups.</p>
+         * <p>The list of user groups.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -99,7 +99,10 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,6 +209,9 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DownloadNeedApproval")
+        private Boolean downloadNeedApproval;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
@@ -215,6 +221,9 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransferFileNeedApproval")
         private Boolean transferFileNeedApproval;
 
+        @com.aliyun.core.annotation.NameInMap("UploadNeedApproval")
+        private Boolean uploadNeedApproval;
+
         @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
@@ -223,9 +232,11 @@ public class DescribeGroupsResponseBody extends TeaModel {
             this.authedResources = builder.authedResources;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.downloadNeedApproval = builder.downloadNeedApproval;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
             this.transferFileNeedApproval = builder.transferFileNeedApproval;
+            this.uploadNeedApproval = builder.uploadNeedApproval;
             this.userCount = builder.userCount;
         }
 
@@ -266,6 +277,13 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return downloadNeedApproval
+         */
+        public Boolean getDownloadNeedApproval() {
+            return this.downloadNeedApproval;
+        }
+
+        /**
          * @return groupId
          */
         public String getGroupId() {
@@ -287,6 +305,13 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return uploadNeedApproval
+         */
+        public Boolean getUploadNeedApproval() {
+            return this.uploadNeedApproval;
+        }
+
+        /**
          * @return userCount
          */
         public Integer getUserCount() {
@@ -298,9 +323,11 @@ public class DescribeGroupsResponseBody extends TeaModel {
             private java.util.Map<String, String> authedResources; 
             private String createTime; 
             private String description; 
+            private Boolean downloadNeedApproval; 
             private String groupId; 
             private String groupName; 
             private Boolean transferFileNeedApproval; 
+            private Boolean uploadNeedApproval; 
             private Integer userCount; 
 
             private Builder() {
@@ -311,9 +338,11 @@ public class DescribeGroupsResponseBody extends TeaModel {
                 this.authedResources = model.authedResources;
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.downloadNeedApproval = model.downloadNeedApproval;
                 this.groupId = model.groupId;
                 this.groupName = model.groupName;
                 this.transferFileNeedApproval = model.transferFileNeedApproval;
+                this.uploadNeedApproval = model.uploadNeedApproval;
                 this.userCount = model.userCount;
             } 
 
@@ -326,7 +355,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource assigned to the user group.</p>
+             * <p>The list of assigned resources.</p>
              */
             public Builder authedResources(java.util.Map<String, String> authedResources) {
                 this.authedResources = authedResources;
@@ -334,7 +363,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user group is created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-07T13:40:40+08:00</p>
@@ -356,7 +385,18 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>Indicates whether download requires approval.</p>
+             */
+            public Builder downloadNeedApproval(Boolean downloadNeedApproval) {
+                this.downloadNeedApproval = downloadNeedApproval;
+                return this;
+            }
+
+            /**
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-2412ojkwtybd****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -364,7 +404,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user group.</p>
+             * <p>The user group name.</p>
              * 
              * <strong>example:</strong>
              * <p>TestGroup</p>
@@ -375,7 +415,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the file approval feature is enabled.</p>
+             * <p>Indicates whether file approval is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -386,7 +426,15 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of users in the user group.</p>
+             * <p>Indicates whether upload requires approval.</p>
+             */
+            public Builder uploadNeedApproval(Boolean uploadNeedApproval) {
+                this.uploadNeedApproval = uploadNeedApproval;
+                return this;
+            }
+
+            /**
+             * <p>The number of members in the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

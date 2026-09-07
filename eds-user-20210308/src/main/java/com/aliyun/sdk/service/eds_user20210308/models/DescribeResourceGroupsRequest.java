@@ -194,7 +194,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * AliyunResourceGroupIds.
+         * <p>The Alibaba Cloud resource group ID.</p>
          */
         public Builder aliyunResourceGroupIds(java.util.List<String> aliyunResourceGroupIds) {
             this.putQueryParameter("AliyunResourceGroupIds", aliyunResourceGroupIds);
@@ -203,7 +203,10 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>The channel tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -213,7 +216,7 @@ public class DescribeResourceGroupsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,7 +229,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -251,11 +254,11 @@ public class DescribeResourceGroupsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> Set the value to AliyunConsole.</p>
-         * </blockquote>
+         * <p>Fixed value: AliyunConsole.</p>
          * <ul>
-         * <li>This parameter is not publicly available on other platforms.</li>
+         * <li>For Elastic Desktop Service Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>AliyunConsole</p>
@@ -267,7 +270,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceClassification.
+         * <p>The resource classification within the resource group.</p>
          */
         public Builder resourceClassification(String resourceClassification) {
             this.putQueryParameter("ResourceClassification", resourceClassification);
@@ -276,7 +279,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the resource groups that you want to query.</p>
+         * <p>The list of resource group IDs.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -285,7 +288,10 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The resource group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DepartmentAResourceGroup</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

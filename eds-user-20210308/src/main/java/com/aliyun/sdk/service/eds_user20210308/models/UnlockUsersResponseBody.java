@@ -160,7 +160,7 @@ public class UnlockUsersResponseBody extends TeaModel {
              * <p>The ID of the convenience user that failed to be unlocked.</p>
              * 
              * <strong>example:</strong>
-             * <p>test123</p>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;

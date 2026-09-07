@@ -87,7 +87,10 @@ public class DescribeUserRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -96,7 +99,10 @@ public class DescribeUserRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alex</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -105,7 +111,7 @@ public class DescribeUserRequest extends Request {
         }
 
         /**
-         * RequireExtraAttributes.
+         * <p>List of attributes to query.</p>
          */
         public Builder requireExtraAttributes(java.util.List<String> requireExtraAttributes) {
             this.putQueryParameter("RequireExtraAttributes", requireExtraAttributes);

@@ -216,6 +216,9 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
             /**
              * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>开发组</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -426,7 +429,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
              * <p>The email address.</p>
              * 
              * <strong>example:</strong>
-             * <p>alex****@aliyun.com</p>
+             * <p>alex****@example.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -494,7 +497,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
              * <p>The mobile number.</p>
              * 
              * <strong>example:</strong>
-             * <p>188888****</p>
+             * <p>138****1111</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;

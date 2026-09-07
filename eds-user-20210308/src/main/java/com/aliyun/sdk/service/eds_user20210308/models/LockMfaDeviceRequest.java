@@ -90,7 +90,7 @@ public class LockMfaDeviceRequest extends Request {
          * <p>The domain of the Active Directory (AD) workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>pg-jifenn.com</p>
+         * <p>upower.vip</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -99,7 +99,10 @@ public class LockMfaDeviceRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);

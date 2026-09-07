@@ -119,7 +119,10 @@ public class SetUserPropertyValueRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>Channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putBodyParameter("BusinessChannel", businessChannel);
@@ -132,7 +135,7 @@ public class SetUserPropertyValueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>390</p>
+         * <p>240**</p>
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -145,7 +148,7 @@ public class SetUserPropertyValueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>978</p>
+         * <p>2251**</p>
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putBodyParameter("PropertyValueId", propertyValueId);
@@ -158,7 +161,7 @@ public class SetUserPropertyValueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>11</p>
+         * <p>111****</p>
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);
@@ -171,7 +174,7 @@ public class SetUserPropertyValueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>alice</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
