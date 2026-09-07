@@ -74,7 +74,7 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
+         * <p>This API supports batch modification of user roles. The value of the \<code>jsonStr\\</code> input parameter is a List type. Refer to the example value. See the detailed information below for the complete JSON string content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

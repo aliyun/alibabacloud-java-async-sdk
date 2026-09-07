@@ -93,7 +93,10 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. Use this field to identify failure causes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns <strong>successful</strong> if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
@@ -120,7 +126,10 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. true = success, false or null = failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

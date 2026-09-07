@@ -184,7 +184,10 @@ public class ListDataSetResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -192,7 +195,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -200,7 +206,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -216,7 +225,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -224,7 +236,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if an error occurs; &quot;successful&quot; on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -240,7 +255,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -248,7 +266,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -256,7 +277,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +288,10 @@ public class ListDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: true for success; false/null for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -887,7 +914,10 @@ public class ListDataSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Error details if an error occurs; &quot;successful&quot; on success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

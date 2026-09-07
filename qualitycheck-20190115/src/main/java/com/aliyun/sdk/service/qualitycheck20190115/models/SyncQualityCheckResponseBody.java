@@ -106,7 +106,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result status code. 200 indicates success. Other values indicate failure. The caller can determine the reason for failure using this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned result, including hit information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if an error occurs. &quot;successful&quot; if successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66E1ACB8-17B2-4BE8-8581-954A8*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. The caller can use this field to determine if the request succeeded: true for success; false/null for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * Cid.
+             * <p>Condition ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2312</p>
              */
             public Builder cid(Integer cid) {
                 this.cid = cid;
@@ -251,7 +266,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>Start position of the keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -259,7 +277,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * <p>Index value of the hit sentence in the entire conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -267,7 +288,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>End position of the keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -275,7 +299,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Val.
+             * <p>Keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder val(String val) {
                 this.val = val;
@@ -420,7 +447,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>Start time of this sentence relative to the entire conversation, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1230</p>
              */
             public Builder begin(Long begin) {
                 this.begin = begin;
@@ -428,7 +458,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionValue.
+             * <p>Emotional value of this sentence, 0-10. Higher values indicate stronger emotions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder emotionValue(Integer emotionValue) {
                 this.emotionValue = emotionValue;
@@ -436,7 +469,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>End time of this sentence relative to the entire conversation, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3440</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -444,7 +480,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>Deprecated field. Ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder identity(String identity) {
                 this.identity = identity;
@@ -452,7 +491,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role of this sentence. Valid values: customer service representative, customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -460,7 +502,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceDuration.
+             * <p>Deprecated field. Ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder silenceDuration(Integer silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -468,7 +513,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>Speech rate of this sentence, in characters per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>233</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -476,7 +524,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>Dialogue content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好请问有什么可以帮您的</p>
              */
             public Builder words(String words) {
                 this.words = words;
@@ -543,7 +594,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * HitKeyWords.
+             * <p>Keywords that met the condition.</p>
              */
             public Builder hitKeyWords(java.util.List<HitKeyWords> hitKeyWords) {
                 this.hitKeyWords = hitKeyWords;
@@ -551,7 +602,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Phrase.
+             * <p>Dialogue content that met the condition.</p>
              */
             public Builder phrase(Phrase phrase) {
                 this.phrase = phrase;
@@ -683,7 +734,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * Comments.
+             * <p>Rule remarks</p>
+             * 
+             * <strong>example:</strong>
+             * <p>邀约客户，客户不同意参加试听</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -691,7 +745,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>Rule importance level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -699,7 +756,13 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCategoryName.
+             * <p>Rule category name</p>
+             * <blockquote>
+             * <p>Notice: The requiredFields parameter must include &quot;ruleInfoBase.ruleCategoryName&quot;.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>服务规范</p>
              */
             public Builder ruleCategoryName(String ruleCategoryName) {
                 this.ruleCategoryName = ruleCategoryName;
@@ -707,7 +770,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreNum.
+             * <p>Score value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -715,7 +781,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreNumType.
+             * <p>Scoring type. 0: bonus/penalty points, 1: one-time score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -723,7 +792,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreType.
+             * <p>1 for bonus points, 3 for penalty points. Default is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -731,7 +803,13 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Rule type ID</p>
+             * <blockquote>
+             * <p>Notice: The requiredFields parameter must include &quot;ruleInfoBase&quot;.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -824,7 +902,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * Hit.
+             * <p>List of hit sentences. For this API, if a hit occurs, it is a single data entry.</p>
              */
             public Builder hit(java.util.List<Hit> hit) {
                 this.hit = hit;
@@ -832,7 +910,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>ID of the hit rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232232</p>
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -840,7 +921,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RuleInfoBase.
+             * <p>Rule basic information</p>
              */
             public Builder ruleInfoBase(RuleInfoBase ruleInfoBase) {
                 this.ruleInfoBase = ruleInfoBase;
@@ -848,7 +929,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>Name of the hit rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>禁用语</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -954,7 +1038,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>Time of recording and dialogue occurrence, in milliseconds since January 1, 1970, 00:00:00 UTC (UNIX timestamp in milliseconds, such as 1584535485856).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584535485856</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -962,7 +1049,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>List of hit rules. Each item is a rule. Only hit rule information and hit rule location information are returned.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -970,7 +1057,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>Final score, with a maximum of 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -978,7 +1068,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66E1ACB866E1ACB8</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -986,7 +1079,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Tid.
+             * <p>Unique identifier for the current conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20200876-66E1ACB8</p>
              */
             public Builder tid(String tid) {
                 this.tid = tid;

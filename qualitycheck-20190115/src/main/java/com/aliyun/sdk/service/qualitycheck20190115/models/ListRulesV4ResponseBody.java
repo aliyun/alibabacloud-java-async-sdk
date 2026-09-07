@@ -210,7 +210,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * BusinessType.
+         * <p>Business type. This field has no practical use. Ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder businessType(Integer businessType) {
             this.businessType = businessType;
@@ -218,7 +221,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> means success. Any other value means failure. Callers can use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -226,7 +232,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -234,7 +243,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -242,7 +254,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response data.</p>
          */
         public Builder data(java.util.List<RuleCountInfo> data) {
             this.data = data;
@@ -250,7 +262,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -258,7 +273,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns <strong>successful</strong> if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -266,7 +284,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>Error details if the request failed. Use this field when multiple messages are returned.</p>
          */
         public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
@@ -274,7 +292,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -282,7 +303,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of rows per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -290,7 +314,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +325,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Callers can use this field to determine success: true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -306,7 +336,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

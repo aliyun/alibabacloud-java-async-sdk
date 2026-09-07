@@ -73,7 +73,7 @@ public class RevertAssignedSessionGroupRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The ID of the baseMeAgent.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +82,10 @@ public class RevertAssignedSessionGroupRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>For more information, see the description of the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;isSchemeData&quot;:1,&quot;forceRevertSessionGroup&quot;:true,&quot;sessionGroupIdList&quot;:[&quot;1&quot;]}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

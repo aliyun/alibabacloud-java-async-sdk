@@ -74,7 +74,10 @@ public class UploadAudioDataRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The business space ID. In multi-business space scenarios, this parameter specifies the business space to use. Default value: the default business space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class UploadAudioDataRequest extends Request {
         }
 
         /**
+         * <p>The complete JSON string. For details about the content, see the following detailed information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

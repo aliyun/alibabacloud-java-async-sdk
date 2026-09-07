@@ -88,7 +88,10 @@ public class AddRuleV4Request extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -97,7 +100,10 @@ public class AddRuleV4Request extends Request {
         }
 
         /**
-         * IsCopy.
+         * <p>Specifies whether to copy the rule. Set this to \<code>true\\</code> to copy the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isCopy(Boolean isCopy) {
             this.putBodyParameter("IsCopy", isCopy);
@@ -106,7 +112,11 @@ public class AddRuleV4Request extends Request {
         }
 
         /**
+         * <p>For more information about JsonStrForRule, see <a href="https://help.aliyun.com/document_detail/453053.html"><code>Rule object description</code></a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder jsonStrForRule(String jsonStrForRule) {
             this.putBodyParameter("JsonStrForRule", jsonStrForRule);

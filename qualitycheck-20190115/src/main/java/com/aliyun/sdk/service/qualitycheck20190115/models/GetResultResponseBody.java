@@ -158,7 +158,10 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <code>200</code> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -182,7 +188,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCountId.
+         * <p>Reserved field. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         public Builder resultCountId(String resultCountId) {
             this.resultCountId = resultCountId;
@@ -222,7 +243,10 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -631,7 +655,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>条件ID</p>
+             * Cid.
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -639,7 +663,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>命中次数</p>
+             * Hit_time.
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -647,7 +671,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>位置</p>
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -714,7 +738,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>对话开始索引</p>
+             * From.
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -722,7 +746,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对话结束索引</p>
+             * To.
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -789,7 +813,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>对话开始索引</p>
+             * From.
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -797,7 +821,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对话结束索引</p>
+             * To.
              */
             public Builder to(Long to) {
                 this.to = to;
@@ -929,7 +953,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>false: 相对位置; 会结合anchor以及角色来决定句子位置</p>
+             * Absolute.
              */
             public Builder absolute(Boolean absolute) {
                 this.absolute = absolute;
@@ -937,7 +961,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>true: 每句话都必须满足条件；</p>
+             * AllSentencesSatisfy.
              */
             public Builder allSentencesSatisfy(Boolean allSentencesSatisfy) {
                 this.allSentencesSatisfy = allSentencesSatisfy;
@@ -945,7 +969,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>前置后置条件</p>
+             * Anchor.
              */
             public Builder anchor(Anchor anchor) {
                 this.anchor = anchor;
@@ -953,7 +977,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>相对范围</p>
+             * Range.
              */
             public Builder range(Range range) {
                 this.range = range;
@@ -961,7 +985,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对应 RoleType.type</p>
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -969,7 +993,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对应 RoleType.id</p>
+             * RoleId.
              */
             public Builder roleId(Integer roleId) {
                 this.roleId = roleId;
@@ -1111,7 +1135,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>节点id</p>
+             * NodeId.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -1119,7 +1143,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点匹配状态。</p>
+             * NodeMatchStatus.
              */
             public Builder nodeMatchStatus(Integer nodeMatchStatus) {
                 this.nodeMatchStatus = nodeMatchStatus;
@@ -1127,7 +1151,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>冗余的节点名称</p>
+             * NodeName.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -1194,7 +1218,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>意图模型ID</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1202,7 +1226,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>意图模型名称</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1323,7 +1347,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>引用的意图模型</p>
+             * Intents.
              */
             public Builder intents(Intents intents) {
                 this.intents = intents;
@@ -1331,7 +1355,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模型应用的场景 AGENT:客户场景、CUSTOMER:客服场景 (CUSTOMER: 客户场景, AGENT: 坐席场景)</p>
+             * ModelScene.
              */
             public Builder modelScene(String modelScene) {
                 this.modelScene = modelScene;
@@ -1803,7 +1827,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>语速检测，是否计算整个对话平均语速，默认false</p>
+             * Average.
              */
             public Builder average(Boolean average) {
                 this.average = average;
@@ -1811,7 +1835,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>时长算子，时长计算开始类型，录音开始，还是某句对话开始</p>
+             * BeginType.
              */
             public Builder beginType(String beginType) {
                 this.beginType = beginType;
@@ -1819,7 +1843,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>区分大小写</p>
+             * Case_sensitive.
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -1827,7 +1851,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>静音检测：要不要检测第一句话</p>
+             * CheckFirstSentence.
              */
             public Builder checkFirstSentence(Boolean checkFirstSentence) {
                 this.checkFirstSentence = checkFirstSentence;
@@ -1835,7 +1859,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>检测方式，1 相邻句能量波动 2 最大能量跨度 默认1</p>
+             * CheckType.
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -1843,7 +1867,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>大于，还是小于，gt/lt</p>
+             * CompareOperator.
              */
             public Builder compareOperator(String compareOperator) {
                 this.compareOperator = compareOperator;
@@ -1851,7 +1875,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否单句话匹配；</p>
+             * ContextChatMatch.
              */
             public Builder contextChatMatch(Boolean contextChatMatch) {
                 this.contextChatMatch = contextChatMatch;
@@ -1859,7 +1883,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>抢话算子 延时时长</p>
+             * DelayTime.
              */
             public Builder delayTime(Integer delayTime) {
                 this.delayTime = delayTime;
@@ -1867,7 +1891,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>时长算子，时长计算结束类型，录音结束，还是某句对话结束</p>
+             * EndType.
              */
             public Builder endType(String endType) {
                 this.endType = endType;
@@ -1875,7 +1899,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>上下文重复算子：排除掉某些对话</p>
+             * Excludes.
              */
             public Builder excludes(Excludes excludes) {
                 this.excludes = excludes;
@@ -1883,7 +1907,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>流程节点前置条件参数</p>
+             * FlowNodePrerequisiteParam.
              */
             public Builder flowNodePrerequisiteParam(FlowNodePrerequisiteParam flowNodePrerequisiteParam) {
                 this.flowNodePrerequisiteParam = flowNodePrerequisiteParam;
@@ -1891,7 +1915,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句</p>
+             * From.
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -1899,7 +1923,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>from_end</p>
+             * From_end.
              */
             public Builder fromEnd(Boolean fromEnd) {
                 this.fromEnd = fromEnd;
@@ -1907,7 +1931,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>上下文重复算子：重复几次</p>
+             * Hit_time.
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -1915,7 +1939,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>生效句子， true单个句子，false多个句子</p>
+             * In_sentence.
              */
             public Builder inSentence(Boolean inSentence) {
                 this.inSentence = inSentence;
@@ -1923,7 +1947,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>意图模型检查参数</p>
+             * IntentModelCheckParm.
              */
             public Builder intentModelCheckParm(IntentModelCheckParm intentModelCheckParm) {
                 this.intentModelCheckParm = intentModelCheckParm;
@@ -1931,7 +1955,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>interval代表区间范围开始</p>
+             * Interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1939,7 +1963,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>intervalEnd 代表区间范围结束</p>
+             * IntervalEnd.
              */
             public Builder intervalEnd(Integer intervalEnd) {
                 this.intervalEnd = intervalEnd;
@@ -1947,7 +1971,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关键字扩展</p>
+             * KeywordExtension.
              */
             public Builder keywordExtension(Integer keywordExtension) {
                 this.keywordExtension = keywordExtension;
@@ -1955,7 +1979,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>匹配到的关键字数量</p>
+             * KeywordMatchSize.
              */
             public Builder keywordMatchSize(Integer keywordMatchSize) {
                 this.keywordMatchSize = keywordMatchSize;
@@ -1963,7 +1987,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关键词</p>
+             * Keywords.
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -1971,7 +1995,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>能量值变化，默认3, 1~9</p>
+             * MaxEmotionChangeValue.
              */
             public Builder maxEmotionChangeValue(Integer maxEmotionChangeValue) {
                 this.maxEmotionChangeValue = maxEmotionChangeValue;
@@ -1979,7 +2003,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>句子中最少字数，小于此字数的句子不检查</p>
+             * MinWordSize.
              */
             public Builder minWordSize(Integer minWordSize) {
                 this.minWordSize = minWordSize;
@@ -1987,7 +2011,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>true表示取不同角色相邻的两句话，false表示取不同角色的第一句话比较响应时间（默认）</p>
+             * Near_dialogue.
              */
             public Builder nearDialogue(Boolean nearDialogue) {
                 this.nearDialogue = nearDialogue;
@@ -1995,7 +2019,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>排除的正则表达式</p>
+             * NotRegex.
              */
             public Builder notRegex(String notRegex) {
                 this.notRegex = notRegex;
@@ -2003,7 +2027,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>语句</p>
+             * Phrase.
              */
             public Builder phrase(String phrase) {
                 this.phrase = phrase;
@@ -2011,7 +2035,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>正则表达式</p>
+             * Regex.
              */
             public Builder regex(String regex) {
                 this.regex = regex;
@@ -2019,7 +2043,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>target</p>
+             * Target.
              */
             public Builder target(Integer target) {
                 this.target = target;
@@ -2027,7 +2051,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>阈值</p>
+             * Threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -2133,7 +2157,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>主键id</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2141,7 +2165,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子名</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2149,7 +2173,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>可能是主键id，也可能是前端生成的id</p>
+             * Oid.
              */
             public Builder oid(String oid) {
                 this.oid = oid;
@@ -2157,7 +2181,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子参数</p>
+             * Param.
              */
             public Builder param(Param param) {
                 this.param = param;
@@ -2165,7 +2189,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子类别</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2351,7 +2375,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>检测范围</p>
+             * Check_range.
              */
             public Builder checkRange(CheckRange checkRange) {
                 this.checkRange = checkRange;
@@ -2359,7 +2383,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
+             * Cid.
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -2367,7 +2391,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>排除</p>
+             * Exclusion.
              */
             public Builder exclusion(Integer exclusion) {
                 this.exclusion = exclusion;
@@ -2375,7 +2399,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>在db中的主键</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2383,7 +2407,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Lambda表达式：例如:a&amp;&amp;b</p>
+             * Lambda.
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -2391,7 +2415,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子列表</p>
+             * Operators.
              */
             public Builder operators(Operators operators) {
                 this.operators = operators;
@@ -2399,7 +2423,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>条件所属的规则id</p>
+             * Rid.
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -2507,7 +2531,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
+             * Cid.
              */
             public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
@@ -2600,7 +2624,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
+             * Cid.
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -2608,7 +2632,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句</p>
+             * From.
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -2616,7 +2640,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对话结束索引</p>
+             * To.
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -2808,7 +2832,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对应 RoleType.type</p>
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -2896,7 +2920,7 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
+             * Cid.
              */
             public Builder cid(Cid cid) {
                 this.cid = cid;
@@ -2912,7 +2936,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>语句</p>
+             * Phrase.
              */
             public Builder phrase(Phrase phrase) {
                 this.phrase = phrase;
@@ -3203,7 +3227,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子名</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3219,7 +3243,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>条件所属的规则id</p>
+             * Rid.
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -3251,7 +3275,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子类别</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -3974,7 +3998,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>在db中的主键</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -3982,7 +4006,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子名</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4532,7 +4556,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>算子类别</p>
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;

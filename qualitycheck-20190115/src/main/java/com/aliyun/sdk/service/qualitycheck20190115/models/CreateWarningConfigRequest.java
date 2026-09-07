@@ -74,7 +74,7 @@ public class CreateWarningConfigRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +83,11 @@ public class CreateWarningConfigRequest extends Request {
         }
 
         /**
+         * <p>Complete JSON string information. See the following details for specific content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ridList&quot;:[15670],&quot;configName&quot;:&quot;投诉预警&quot;,&quot;channels&quot;:[{&quot;type&quot;:1,&quot;url&quot;:&quot;<a href="https://xxx%22%7D%5D%7D">https://xxx&quot;}]}</a></p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

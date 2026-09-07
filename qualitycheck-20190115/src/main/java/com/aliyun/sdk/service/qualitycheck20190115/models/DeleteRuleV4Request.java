@@ -88,7 +88,7 @@ public class DeleteRuleV4Request extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -97,7 +97,10 @@ public class DeleteRuleV4Request extends Request {
         }
 
         /**
-         * ForceDelete.
+         * <p>Whether to delete the rule even if it is associated with quality inspection tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDelete(Boolean forceDelete) {
             this.putBodyParameter("ForceDelete", forceDelete);
@@ -106,6 +109,7 @@ public class DeleteRuleV4Request extends Request {
         }
 
         /**
+         * <p>Rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

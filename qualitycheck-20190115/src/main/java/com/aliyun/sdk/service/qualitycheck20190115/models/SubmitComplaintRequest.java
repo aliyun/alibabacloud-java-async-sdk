@@ -74,7 +74,10 @@ public class SubmitComplaintRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The business space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +86,11 @@ public class SubmitComplaintRequest extends Request {
         }
 
         /**
+         * <p>A JSON string that contains the complaint details. For more information, see the following table.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;ADCA1DE6-8117-472A-B3A1-352A248F90D0&quot;,&quot;fileId&quot;:&quot;653e563d-774f-4f01-a809-cb8bb920c3e6&quot;,&quot;rid&quot;:1346,&quot;comments&quot;:&quot;请重新判定&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

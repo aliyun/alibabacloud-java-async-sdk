@@ -73,7 +73,10 @@ public class DeleteCheckTypeToSchemeRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class DeleteCheckTypeToSchemeRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>A JSON string that contains the custom parameters for the operation. For more information, see the <strong>jsonStr properties</strong> section below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeId&quot;:&quot;1376&quot;,&quot;checkType&quot;:&quot;4&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

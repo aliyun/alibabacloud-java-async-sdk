@@ -210,7 +210,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -218,7 +221,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -226,7 +232,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -242,7 +251,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -250,7 +262,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LastDataId.
+         * <p>This field marks the data. When querying more than 10,000 entries using GetResult, include the \<code>lastDataId\\</code> of the last entry from the previous query in each request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder lastDataId(String lastDataId) {
             this.lastDataId = lastDataId;
@@ -258,7 +273,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Provides error details on failure. For success, it is <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -274,7 +292,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -282,7 +303,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Entries displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -290,7 +314,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +325,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCountId.
+         * <p>Internal field. Ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>忽略</p>
          */
         public Builder resultCountId(String resultCountId) {
             this.resultCountId = resultCountId;
@@ -306,7 +336,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: \<code>true\\</code> for success, \<code>false\\</code>/\<code>null\\</code> for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -1667,7 +1700,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Provides error details on failure. For success, it is <strong>successful</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

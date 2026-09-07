@@ -89,6 +89,9 @@ public class UpdateRuleV4Request extends Request {
 
         /**
          * <p>baseMeAgentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -97,7 +100,11 @@ public class UpdateRuleV4Request extends Request {
         }
 
         /**
+         * <p>For details about JsonStrForRule, see the document <a href="https://help.aliyun.com/document_detail/453053.html"><code>Rule Object Description</code></a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder jsonStrForRule(String jsonStrForRule) {
             this.putBodyParameter("JsonStrForRule", jsonStrForRule);
@@ -106,7 +113,10 @@ public class UpdateRuleV4Request extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>Rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

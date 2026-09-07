@@ -74,7 +74,7 @@ public class UpdateAsrVocabRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The ID of the workspace.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +83,11 @@ public class UpdateAsrVocabRequest extends Request {
         }
 
         /**
+         * <p>The request parameters that are configured as a JSON string. For more information, see the details below.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vocabId&quot;:&quot;指定热词Id&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

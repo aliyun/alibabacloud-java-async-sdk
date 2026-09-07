@@ -74,7 +74,10 @@ public class HandleComplaintRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The ID of the business space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +86,11 @@ public class HandleComplaintRequest extends Request {
         }
 
         /**
+         * <p>A JSON string that contains the request parameters. For details, see the following section.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;任务ID&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

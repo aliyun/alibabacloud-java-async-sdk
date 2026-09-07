@@ -132,7 +132,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. \<code>**200**\\</code> indicates that the request was successful. Other values indicate that the request failed. You can use this parameter to identify the cause of a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the new rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code> or \<code>null\\</code>: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +251,10 @@ public class AddRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

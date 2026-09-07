@@ -74,7 +74,7 @@ public class InvalidRuleRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class InvalidRuleRequest extends Request {
         }
 
         /**
+         * <p>Full JSON string information. See the following details for specific content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

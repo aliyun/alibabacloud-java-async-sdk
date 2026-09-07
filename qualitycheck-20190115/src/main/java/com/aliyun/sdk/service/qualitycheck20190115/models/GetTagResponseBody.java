@@ -106,7 +106,10 @@ public class GetTagResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetTagResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetTagResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message, if any.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,14 @@ public class GetTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +298,10 @@ public class GetTagResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildCount.
+             * <p>The number of direct child nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder childCount(Integer childCount) {
                 this.childCount = childCount;
@@ -293,7 +309,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the label was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748428991000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -301,7 +320,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用于归集售后服务相关的所有意图与 FAQ</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,7 +331,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the current node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -317,7 +342,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the label was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748428991000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -325,7 +353,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>售后问题</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -333,7 +364,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTagId.
+             * <p>The ID of the parent label node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentTagId(Long parentTagId) {
                 this.parentTagId = parentTagId;
@@ -341,7 +375,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder tagId(Long tagId) {
                 this.tagId = tagId;

@@ -73,7 +73,10 @@ public class UpdateRuleToSchemeRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232927</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class UpdateRuleToSchemeRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>Request JSON. For details, see the request parameter description below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeId&quot;:&quot;10&quot;,&quot;schemeRules&quot;:[{&quot;ruleId&quot;:229,&quot;checkType&quot;:0}]}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

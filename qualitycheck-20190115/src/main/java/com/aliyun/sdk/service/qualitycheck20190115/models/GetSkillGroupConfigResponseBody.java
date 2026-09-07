@@ -106,7 +106,13 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of <strong>200</strong> indicates a successful response.</p>
+         * <blockquote>
+         * <p>Other values indicate a failed response. You can use this field to identify the cause of the failure.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the skill group rule configuration.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. If the request is successful, a value of <strong>successful</strong> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,17 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <p>The caller can use this field to determine whether the request was successful:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p>false or <strong>null</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -696,7 +718,16 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AllContentQualityCheck.
+             * <p>Indicates whether to perform a full-text quality check after the real-time quality check is complete. Valid values:</p>
+             * <ul>
+             * <li><p>1: yes</p>
+             * </li>
+             * <li><p>0: no</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allContentQualityCheck(Integer allContentQualityCheck) {
                 this.allContentQualityCheck = allContentQualityCheck;
@@ -704,7 +735,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AllRids.
+             * <p>The ID of the rule used for the full-text quality check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223</p>
              */
             public Builder allRids(String allRids) {
                 this.allRids = allRids;
@@ -720,7 +754,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01T15:12Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -728,7 +765,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1212</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -736,7 +776,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>This is an internal parameter. You can ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -744,7 +787,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The language model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1321</p>
              */
             public Builder modelId(Long modelId) {
                 this.modelId = modelId;
@@ -752,7 +798,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The language model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -760,7 +809,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -768,7 +820,16 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * QualityCheckType.
+             * <p>The quality check type. Valid values:</p>
+             * <ul>
+             * <li><p>0: offline</p>
+             * </li>
+             * <li><p>1: real-time</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder qualityCheckType(Integer qualityCheckType) {
                 this.qualityCheckType = qualityCheckType;
@@ -776,7 +837,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>The quality check rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2332</p>
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -792,7 +856,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupFrom.
+             * <p>The source of the skill group. The value is fixed at 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder skillGroupFrom(Integer skillGroupFrom) {
                 this.skillGroupFrom = skillGroupFrom;
@@ -800,7 +867,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -808,7 +878,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>The skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -816,7 +889,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the configuration. Valid values: 0 (disabled) and 1 (enabled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -824,7 +900,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The configuration type. Valid values: 1 (custom configuration) and 0 (built-in configuration).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -832,7 +911,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the configuration was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01T19:28Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -840,7 +922,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VocabId.
+             * <p>The hotword ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder vocabId(Long vocabId) {
                 this.vocabId = vocabId;
@@ -848,7 +933,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VocabName.
+             * <p>The hotword name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vocabName(String vocabName) {
                 this.vocabName = vocabName;

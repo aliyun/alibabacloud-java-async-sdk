@@ -93,7 +93,10 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return Result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -199,7 +205,10 @@ public class ApplyWsTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionId.
+             * <p>Session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42e59bcd-7206-44c5-ad34-525d364687c4</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -207,7 +216,10 @@ public class ApplyWsTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>User access token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5607b21d1728700640</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -215,7 +227,10 @@ public class ApplyWsTokenResponseBody extends TeaModel {
             }
 
             /**
-             * WsEndpoint.
+             * <p>WebSocket connection domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wss://ws-gateway-real-voice.aliyuncs.com</p>
              */
             public Builder wsEndpoint(String wsEndpoint) {
                 this.wsEndpoint = wsEndpoint;

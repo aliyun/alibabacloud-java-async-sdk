@@ -106,7 +106,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message if the request fails. If the request succeeds, the value is <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Use this field to check the result:</p>
+         * <ul>
+         * <li><p><strong>true</strong> means success.</p>
+         * </li>
+         * <li><p>false or <strong>null</strong> means failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -2264,7 +2282,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -2272,7 +2293,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -2280,7 +2304,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

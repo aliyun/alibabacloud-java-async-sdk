@@ -73,7 +73,7 @@ public class UpdateCheckTypeToSchemeRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The baseMeAgentId.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +82,10 @@ public class UpdateCheckTypeToSchemeRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>Input parameter in JSON format. For more information, see the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeId&quot;:&quot;187&quot;,&quot;checkName&quot;:&quot;服务规范性检测2&quot;,&quot;sourceScore&quot;:20,&quot;checkType&quot;:0}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

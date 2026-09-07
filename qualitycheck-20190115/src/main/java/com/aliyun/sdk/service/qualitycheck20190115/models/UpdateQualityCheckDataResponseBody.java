@@ -93,7 +93,10 @@ public class UpdateQualityCheckDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. A value of 200 indicates success. Any other value indicates failure, and the caller can determine the cause of failure based on this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>When an error occurs, this field provides error details; when the operation succeeds, it returns &quot;successful&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class UpdateQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class UpdateQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. The caller can use this field to determine whether the request was successful: true indicates success; false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -132,7 +132,10 @@ public class TaskGraphFlow extends TeaModel {
         } 
 
         /**
-         * FlowRuleScoreType.
+         * <p>Flow scoring logic settings</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder flowRuleScoreType(Integer flowRuleScoreType) {
             this.flowRuleScoreType = flowRuleScoreType;
@@ -140,7 +143,10 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Canvas ID of the flow</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -148,7 +154,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * Nodes.
+         * <p>All nodes in the flow</p>
          */
         public Builder nodes(java.util.List<GraphFlowNode> nodes) {
             this.nodes = nodes;
@@ -156,7 +162,10 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * Rid.
+         * <p>Rule ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rid(Long rid) {
             this.rid = rid;
@@ -164,7 +173,10 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>Rule Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>违规</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -172,7 +184,10 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * ShowProperties.
+         * <p>Used for frontend display</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder showProperties(String showProperties) {
             this.showProperties = showProperties;
@@ -180,7 +195,10 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * SkipWhenFirstSessionNodeMiss.
+         * <p>Skip if the first session node is not hit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder skipWhenFirstSessionNodeMiss(Boolean skipWhenFirstSessionNodeMiss) {
             this.skipWhenFirstSessionNodeMiss = skipWhenFirstSessionNodeMiss;

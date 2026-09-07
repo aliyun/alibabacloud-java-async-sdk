@@ -119,7 +119,10 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Provides error details if an error occurs. If successful, the value is <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: true means success; false/null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +227,10 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Provides error details if an error occurs. If successful, the value is <strong>successful</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

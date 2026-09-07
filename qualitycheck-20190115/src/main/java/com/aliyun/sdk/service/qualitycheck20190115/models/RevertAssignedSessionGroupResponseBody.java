@@ -119,7 +119,10 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. Use this code to identify the cause of a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>If the request fails, this parameter provides error details. If the request succeeds, the value is \<code>successful\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,17 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <p>The caller can use this field to determine whether the request succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p>false or <strong>null</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +234,10 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>If the request fails, this parameter provides error details. If the request succeeds, the value is \<code>successful\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

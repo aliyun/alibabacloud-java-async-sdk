@@ -132,7 +132,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The detailed information about the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(RulesInfo data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. A value of successful is returned on success, and an error message is returned on failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>Details about the error. This parameter is used when multiple messages are returned.</p>
          */
         public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
@@ -172,7 +184,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class GetRuleByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. A value of true indicates success, and false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

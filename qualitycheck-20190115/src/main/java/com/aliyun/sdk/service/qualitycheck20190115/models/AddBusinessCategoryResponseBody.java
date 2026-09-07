@@ -106,7 +106,10 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Business category ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348193421</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F83F12</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -74,7 +74,10 @@ public class UploadDataV4Request extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The business space ID. Used to specify a business space in multi-business space scenarios. Default value: the default business space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class UploadDataV4Request extends Request {
         }
 
         /**
+         * <p>JsonStr is a JSON string that contains all custom parameters for this operation. For details, see the jsonStr property description below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

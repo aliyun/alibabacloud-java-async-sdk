@@ -1,0 +1,106 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.qualitycheck20190115.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListAgentMJobInfoRequest} extends {@link RequestModel}
+ *
+ * <p>ListAgentMJobInfoRequest</p>
+ */
+public class ListAgentMJobInfoRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JsonStr")
+    private String jsonStr;
+
+    private ListAgentMJobInfoRequest(Builder builder) {
+        super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
+        this.jsonStr = builder.jsonStr;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListAgentMJobInfoRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
+    }
+
+    /**
+     * @return jsonStr
+     */
+    public String getJsonStr() {
+        return this.jsonStr;
+    }
+
+    public static final class Builder extends Request.Builder<ListAgentMJobInfoRequest, Builder> {
+        private Long baseMeAgentId; 
+        private String jsonStr; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListAgentMJobInfoRequest request) {
+            super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
+            this.jsonStr = request.jsonStr;
+        } 
+
+        /**
+         * <p>The business space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
+
+        /**
+         * <p>The complete JSON string. For more information, see the following detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder jsonStr(String jsonStr) {
+            this.putBodyParameter("JsonStr", jsonStr);
+            this.jsonStr = jsonStr;
+            return this;
+        }
+
+        @Override
+        public ListAgentMJobInfoRequest build() {
+            return new ListAgentMJobInfoRequest(this);
+        } 
+
+    } 
+
+}

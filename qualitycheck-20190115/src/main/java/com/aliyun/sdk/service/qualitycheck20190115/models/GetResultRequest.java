@@ -74,7 +74,10 @@ public class GetResultRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class GetResultRequest extends Request {
         }
 
         /**
+         * <p>Full JSON string. See the detailed description below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

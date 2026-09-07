@@ -74,7 +74,7 @@ public class UpdateWarningConfigRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class UpdateWarningConfigRequest extends Request {
         }
 
         /**
+         * <p>The complete JSON string. For details, see the detailed information below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

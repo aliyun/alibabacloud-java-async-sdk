@@ -73,7 +73,10 @@ public class CreateTagRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The business space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete <strong>JSON string</strong> information. For more information, see the following details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

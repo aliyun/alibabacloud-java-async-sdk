@@ -74,7 +74,10 @@ public class SyncQualityCheckRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1244721</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class SyncQualityCheckRequest extends Request {
         }
 
         /**
+         * <p>Complete JSON string information. See the details below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

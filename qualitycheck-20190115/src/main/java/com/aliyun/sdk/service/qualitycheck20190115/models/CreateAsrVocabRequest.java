@@ -74,7 +74,7 @@ public class CreateAsrVocabRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +83,11 @@ public class CreateAsrVocabRequest extends Request {
         }
 
         /**
+         * <p>Full JSON string. See the details below.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;热词名称&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

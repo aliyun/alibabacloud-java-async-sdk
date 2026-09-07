@@ -106,7 +106,10 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6C2B68F-2311-4495-82AC-DAE86C9****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns &quot;successful&quot; on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00A044A2-D59B-4104-96BA-84060AE8345F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

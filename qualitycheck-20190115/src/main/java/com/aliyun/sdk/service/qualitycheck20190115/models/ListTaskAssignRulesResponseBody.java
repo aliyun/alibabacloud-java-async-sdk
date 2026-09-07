@@ -145,7 +145,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -169,7 +175,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if an error occurs. &quot;successful&quot; if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +186,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -185,7 +197,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -193,7 +208,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: true for success, false/null for failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

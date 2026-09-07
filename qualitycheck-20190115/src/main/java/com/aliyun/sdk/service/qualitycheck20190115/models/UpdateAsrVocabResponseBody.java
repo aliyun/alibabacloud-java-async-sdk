@@ -106,7 +106,10 @@ public class UpdateAsrVocabResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateAsrVocabResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the hotword vocabulary. This is the value of the <strong>vocabId</strong> that you specified in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71b1795ac8634bd8bdf4d3878480c7c2</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UpdateAsrVocabResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned. If the request is successful, <strong>successful</strong> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class UpdateAsrVocabResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class UpdateAsrVocabResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of <strong>false</strong> or <strong>null</strong> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

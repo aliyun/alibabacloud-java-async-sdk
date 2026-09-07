@@ -171,7 +171,7 @@ public class GraphFlowNode extends TeaModel {
         } 
 
         /**
-         * Conditions.
+         * <p>Operator information.</p>
          */
         public Builder conditions(java.util.List<ConditionBasicInfo> conditions) {
             this.conditions = conditions;
@@ -179,7 +179,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>Used for frontend display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -187,7 +190,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -195,7 +201,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>Index</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -203,7 +212,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Node name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开始节点</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -211,7 +223,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * NextNodes.
+         * <p>Child nodes</p>
          */
         public Builder nextNodes(java.util.List<NextNodes> nextNodes) {
             this.nextNodes = nextNodes;
@@ -219,7 +231,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>Node Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>startNode</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -227,7 +242,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>Node properties</p>
          */
         public Builder properties(Properties properties) {
             this.properties = properties;
@@ -235,7 +250,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * Rid.
+         * <p>Rule ID. \<code>rid\\</code> is empty if the rule is not persisted. If the rule is persisted, \<code>rid\\</code> equals \<code>ID\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rid(Long rid) {
             this.rid = rid;
@@ -243,7 +261,10 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * UseConditions.
+         * <p>Whether to use operator matching or legacy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useConditions(Boolean useConditions) {
             this.useConditions = useConditions;
@@ -361,7 +382,10 @@ public class GraphFlowNode extends TeaModel {
             } 
 
             /**
-             * CheckType.
+             * <p>Quality check dimension</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -369,7 +393,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Flow branch priority. A smaller value indicates higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -377,7 +404,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Lambda.
+             * <p>Lambda expression for the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -385,7 +415,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Conditional branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -393,7 +426,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * NextNodeId.
+             * <p>Next node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31533</p>
              */
             public Builder nextNodeId(Long nextNodeId) {
                 this.nextNodeId = nextNodeId;
@@ -401,7 +437,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Triggers.
+             * <p>Operators to follow.</p>
              */
             public Builder triggers(java.util.List<String> triggers) {
                 this.triggers = triggers;
@@ -624,7 +660,10 @@ public class GraphFlowNode extends TeaModel {
             } 
 
             /**
-             * AutoReview.
+             * <p>1: Do not auto-review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoReview(Integer autoReview) {
                 this.autoReview = autoReview;
@@ -632,7 +671,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * BranchJudge.
+             * <p>Enable branch judgment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder branchJudge(Boolean branchJudge) {
                 this.branchJudge = branchJudge;
@@ -640,7 +682,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * CheckMoreSize.
+             * <p>Maximum N sentences to check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkMoreSize(Integer checkMoreSize) {
                 this.checkMoreSize = checkMoreSize;
@@ -648,7 +693,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * <p>Quality check dimension</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -656,7 +704,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Lambda.
+             * <p>General operator logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -664,7 +715,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role when the type is \<code>single\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -672,7 +726,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * RuleScoreType.
+             * <p>Is scored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleScoreType(Integer ruleScoreType) {
                 this.ruleScoreType = ruleScoreType;
@@ -680,7 +737,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * SayType.
+             * <p>Indicates expression when the type is \<code>single\\</code>.</p>
              */
             public Builder sayType(String sayType) {
                 this.sayType = sayType;
@@ -688,7 +745,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * ScoreNum.
+             * <p>Score value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -696,7 +756,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * ScoreNumType.
+             * <p>0: Add or deduct points after the rule is triggered; 1: Score once after the rule is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -704,7 +767,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * ScoreRuleHitType.
+             * <p>0: Score when the node is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scoreRuleHitType(Integer scoreRuleHitType) {
                 this.scoreRuleHitType = scoreRuleHitType;
@@ -712,7 +778,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * ScoreType.
+             * <p>1: Add points; 3: Deduct points; default is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -720,7 +789,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Triggers.
+             * <p>Operators to follow.</p>
              */
             public Builder triggers(java.util.List<String> triggers) {
                 this.triggers = triggers;
@@ -728,7 +797,10 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Property type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder type(String type) {
                 this.type = type;

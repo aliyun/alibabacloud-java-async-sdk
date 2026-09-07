@@ -106,7 +106,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Quality inspection task ID.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details of the error if an error occurs. Otherwise, <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
@@ -141,7 +147,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -207,7 +216,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * FileType.
+             * <p>Generated file type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSV</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -215,7 +227,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>Generated file URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://vxxxcustomer-pop.oss-cn-shanghai.aliyuncs.com/100.csv">http://vxxxcustomer-pop.oss-cn-shanghai.aliyuncs.com/100.csv</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -321,7 +336,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * FilePath.
+             * <p>File path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.22.com/manager/static/login-back.jpg</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -329,7 +347,7 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * FilePathList.
+             * <p>List of returned file paths</p>
              */
             public Builder filePathList(java.util.List<FilePathList> filePathList) {
                 this.filePathList = filePathList;
@@ -337,7 +355,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * FilePathMd.
+             * <p>Markdown file path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.22.com/manager/static/login-back.md</p>
              */
             public Builder filePathMd(String filePathMd) {
                 this.filePathMd = filePathMd;
@@ -345,7 +366,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201231de3d34ec-40fa-4a55-8d27-76ea*****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -353,7 +377,10 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>Task status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

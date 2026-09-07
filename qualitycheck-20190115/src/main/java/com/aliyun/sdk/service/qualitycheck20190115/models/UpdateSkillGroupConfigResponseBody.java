@@ -93,7 +93,10 @@ public class UpdateSkillGroupConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of 200 indicates success. Other values indicate failure. Use this field to identify the reason for a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>If an error occurs, this field provides error details. If the request is successful, the value is \<code>successful\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class UpdateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38E7E948-0876-4FEE-B0AA-6*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class UpdateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

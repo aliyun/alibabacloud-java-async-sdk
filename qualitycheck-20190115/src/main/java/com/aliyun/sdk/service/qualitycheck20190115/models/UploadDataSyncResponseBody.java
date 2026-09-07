@@ -106,7 +106,10 @@ public class UploadDataSyncResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,10 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details when an error occurs. The value is <strong>successful</strong> when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4987D326-83D9-4A42-B9A5-0B27F9B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false/null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

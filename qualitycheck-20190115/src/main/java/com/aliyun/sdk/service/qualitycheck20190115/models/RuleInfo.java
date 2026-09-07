@@ -769,7 +769,10 @@ public class RuleInfo extends TeaModel {
         } 
 
         /**
-         * AutoReview.
+         * <p>The review option. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Manual review) and <code>3</code> (Automatic review).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoReview(Integer autoReview) {
             this.autoReview = autoReview;
@@ -777,7 +780,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * BusinessCategoryNameList.
+         * <p>A list of business category names.</p>
          */
         public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
@@ -785,7 +788,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * CheckType.
+         * <p>The check type. Valid values: <code>0</code> (Service compliance check), <code>1</code> (Service attitude check), <code>2</code> (Service professionalism check), <code>3</code> (Customer attitude check), and <code>4</code> (Service process correctness check).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder checkType(Long checkType) {
             this.checkType = checkType;
@@ -793,7 +799,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Comments.
+         * <p>Remarks on the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>违规</p>
          */
         public Builder comments(String comments) {
             this.comments = comments;
@@ -801,7 +810,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Simple condition configuration) and <code>2</code> (Advanced configuration). Default: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configType(Integer configType) {
             this.configType = configType;
@@ -809,7 +821,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * CreateEmpName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder createEmpName(String createEmpName) {
             this.createEmpName = createEmpName;
@@ -817,7 +832,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * CreateEmpid.
+         * <p>The employee ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder createEmpid(String createEmpid) {
             this.createEmpid = createEmpid;
@@ -825,7 +843,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641277321000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -833,7 +854,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Deny.
+         * <p>Indicates whether editing the rule is denied. Valid values: <code>1</code> (denied), <code>0</code> or <code>null</code> (allowed).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deny(Integer deny) {
             this.deny = deny;
@@ -841,7 +865,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Dialogues.
+         * <p>A list of test dialogues.</p>
          */
         public Builder dialogues(java.util.List<RuleTestDialogue> dialogues) {
             this.dialogues = dialogues;
@@ -849,7 +873,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Effective.
+         * <p>Indicates whether the rule is in effect. Valid values: <code>0</code> (No) and <code>1</code> (Yes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder effective(Integer effective) {
             this.effective = effective;
@@ -857,7 +884,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * EffectiveEndTime.
+         * <p>The effective end time of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OperationMode</p>
          */
         public Builder effectiveEndTime(String effectiveEndTime) {
             this.effectiveEndTime = effectiveEndTime;
@@ -865,7 +895,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * EffectiveStartTime.
+         * <p>The effective start time of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OperationMode</p>
          */
         public Builder effectiveStartTime(String effectiveStartTime) {
             this.effectiveStartTime = effectiveStartTime;
@@ -873,7 +906,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641277321000</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -881,7 +917,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ExternalProperty.
+         * <p>The external property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder externalProperty(Integer externalProperty) {
             this.externalProperty = externalProperty;
@@ -889,7 +928,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * FullCycle.
+         * <p>Indicates whether the rule is effective throughout its lifecycle. Valid values: <code>0</code> (No) and <code>1</code> (Yes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fullCycle(Integer fullCycle) {
             this.fullCycle = fullCycle;
@@ -897,7 +939,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * GraphFlow.
+         * <p>The graph flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder graphFlow(Object graphFlow) {
             this.graphFlow = graphFlow;
@@ -905,7 +950,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * IsDelete.
+         * <p>Indicates whether the rule is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isDelete(Integer isDelete) {
             this.isDelete = isDelete;
@@ -913,7 +961,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * IsOnline.
+         * <p>Indicates whether the rule is online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isOnline(Integer isOnline) {
             this.isOnline = isOnline;
@@ -921,7 +972,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Lambda.
+         * <p>The conditional expression, such as <code>a&amp;&amp;b</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a&amp;&amp;b</p>
          */
         public Builder lambda(String lambda) {
             this.lambda = lambda;
@@ -929,7 +983,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * LastUpdateEmpName.
+         * <p>The name of the employee who last updated the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder lastUpdateEmpName(String lastUpdateEmpName) {
             this.lastUpdateEmpName = lastUpdateEmpName;
@@ -937,7 +994,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * LastUpdateEmpid.
+         * <p>The ID of the employee who last updated the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lastUpdateEmpid(String lastUpdateEmpid) {
             this.lastUpdateEmpid = lastUpdateEmpid;
@@ -945,7 +1005,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * LastUpdateTime.
+         * <p>The last update time. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641277321000</p>
          */
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
@@ -953,7 +1016,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>The severity level of the rule. Valid values: <code>0</code> (Severe violation), <code>1</code> (Moderate violation), and <code>2</code> (Minor violation).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder level(Integer level) {
             this.level = level;
@@ -961,7 +1027,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Meet.
+         * <p>Indicates whether the conditions are met.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder meet(Integer meet) {
             this.meet = meet;
@@ -969,7 +1038,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ModifyType.
+         * <p>Indicates whether the rule has been modified within the quality check scheme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modifyType(Integer modifyType) {
             this.modifyType = modifyType;
@@ -977,7 +1049,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开头语规则</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -985,7 +1060,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * OperationMode.
+         * <p>The operation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder operationMode(Integer operationMode) {
             this.operationMode = operationMode;
@@ -1001,7 +1079,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * QualityCheckType.
+         * <p>The quality check type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (offline quality check) and <code>1</code> (real-time quality check).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder qualityCheckType(Integer qualityCheckType) {
             this.qualityCheckType = qualityCheckType;
@@ -1009,7 +1090,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Rid.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rid(String rid) {
             this.rid = rid;
@@ -1017,7 +1101,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * RuleCategoryName.
+         * <p>The name of the rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正向规则</p>
          */
         public Builder ruleCategoryName(String ruleCategoryName) {
             this.ruleCategoryName = ruleCategoryName;
@@ -1025,7 +1112,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * RuleScoreType.
+         * <p>Specifies whether to score the rule. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Do not score) and <code>3</code> (Score).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder ruleScoreType(Integer ruleScoreType) {
             this.ruleScoreType = ruleScoreType;
@@ -1033,7 +1123,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * RuleType.
+         * <p>The rule type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (Default) and <code>1</code> (User-created).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.ruleType = ruleType;
@@ -1041,7 +1134,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * SchemeCheckType.
+         * <p>The quality check dimension object.</p>
          */
         public Builder schemeCheckType(SchemeCheckType schemeCheckType) {
             this.schemeCheckType = schemeCheckType;
@@ -1049,7 +1142,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * SchemeId.
+         * <p>The ID of the quality check scheme to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder schemeId(Long schemeId) {
             this.schemeId = schemeId;
@@ -1057,7 +1153,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * SchemeName.
+         * <p>The name of the quality check scheme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通用方案</p>
          */
         public Builder schemeName(String schemeName) {
             this.schemeName = schemeName;
@@ -1065,7 +1164,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * SchemeRuleMappingId.
+         * <p>The mapping ID between the quality check scheme and the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder schemeRuleMappingId(Long schemeRuleMappingId) {
             this.schemeRuleMappingId = schemeRuleMappingId;
@@ -1073,7 +1175,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreDeleted.
+         * <p>Indicates whether the scoring item is deleted. A deleted item may be displayed as grayed out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scoreDeleted(Boolean scoreDeleted) {
             this.scoreDeleted = scoreDeleted;
@@ -1081,7 +1186,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreId.
+         * <p>The ID of the main scoring item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreId(Long scoreId) {
             this.scoreId = scoreId;
@@ -1089,7 +1197,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreName.
+         * <p>The name of the main scoring item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>违规</p>
          */
         public Builder scoreName(String scoreName) {
             this.scoreName = scoreName;
@@ -1097,7 +1208,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreNum.
+         * <p>The score value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreNum(Float scoreNum) {
             this.scoreNum = scoreNum;
@@ -1105,7 +1219,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreNumType.
+         * <p>The scoring method. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (Add/deduct points when the rule is triggered) and <code>1</code> (Assign a one-time score when the rule is triggered).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreNumType(Integer scoreNumType) {
             this.scoreNumType = scoreNumType;
@@ -1113,7 +1230,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreRuleHitType.
+         * <p>The scoring trigger. Valid values: <code>0</code> (Score when a node is hit).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder scoreRuleHitType(Integer scoreRuleHitType) {
             this.scoreRuleHitType = scoreRuleHitType;
@@ -1121,7 +1241,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreSubId.
+         * <p>The ID of the scoring subitem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreSubId(Long scoreSubId) {
             this.scoreSubId = scoreSubId;
@@ -1129,7 +1252,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreSubName.
+         * <p>The name of the scoring subitem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreSubName(String scoreSubName) {
             this.scoreSubName = scoreSubName;
@@ -1137,7 +1263,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * ScoreType.
+         * <p>Indicates whether to add or deduct points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreType(Integer scoreType) {
             this.scoreType = scoreType;
@@ -1145,7 +1274,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * SortIndex.
+         * <p>The sort order of the rule in the quality check dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortIndex(Integer sortIndex) {
             this.sortIndex = sortIndex;
@@ -1153,7 +1285,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641277321000</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -1161,7 +1296,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -1169,7 +1307,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * TargetType.
+         * <p>The rule category. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>10</code> (General rule for quality check schemes) and <code>11</code> (Flow rule for quality check schemes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder targetType(Integer targetType) {
             this.targetType = targetType;
@@ -1177,7 +1318,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * TaskFlowId.
+         * <p>The ID of the flowchart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111</p>
          */
         public Builder taskFlowId(Long taskFlowId) {
             this.taskFlowId = taskFlowId;
@@ -1185,7 +1329,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * TaskFlowType.
+         * <p>The type of the flowchart. This parameter is deprecated. The default value is <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskFlowType(Integer taskFlowType) {
             this.taskFlowType = taskFlowType;
@@ -1193,7 +1340,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Triggers.
+         * <p>A list of triggers.</p>
          */
         public Builder triggers(java.util.List<String> triggers) {
             this.triggers = triggers;
@@ -1201,7 +1348,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The rule category. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>2</code> (Public opinion monitoring) and <code>3</code> (Business).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder type(Integer type) {
             this.type = type;
@@ -1209,7 +1359,10 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * Weight.
+         * <p>The weight of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder weight(String weight) {
             this.weight = weight;
@@ -1262,7 +1415,10 @@ public class RuleInfo extends TeaModel {
             } 
 
             /**
-             * Rid.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rid(String rid) {
                 this.rid = rid;

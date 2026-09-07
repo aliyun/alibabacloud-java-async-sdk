@@ -106,7 +106,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details about the error if the call fails. Returns <strong>successful</strong> if the call succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,16 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Use this field to determine success:</p>
+         * <ul>
+         * <li><p><strong>true</strong> means success</p>
+         * </li>
+         * <li><p>false or <strong>null</strong> means failure</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -87,7 +87,10 @@ public class ExecuteAgentRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The ID of the business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
@@ -96,7 +99,10 @@ public class ExecuteAgentRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete JSON string. For more information, see the following detailed description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);
@@ -105,7 +111,10 @@ public class ExecuteAgentRequest extends Request {
         }
 
         /**
-         * Stream.
+         * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Set to true to enable SSE responses. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("Stream", stream);

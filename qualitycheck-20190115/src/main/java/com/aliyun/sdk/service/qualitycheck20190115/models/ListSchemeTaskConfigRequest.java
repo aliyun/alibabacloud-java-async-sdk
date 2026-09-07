@@ -82,7 +82,10 @@ public class ListSchemeTaskConfigRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>The request parameter JSON. For details, see the supplementary description of request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;sourceDataType&quot;:&quot;1&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

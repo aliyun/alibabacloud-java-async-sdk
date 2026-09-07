@@ -119,7 +119,7 @@ public class RulesInfo extends TeaModel {
         } 
 
         /**
-         * Conditions.
+         * <p>Rule condition information; conditions for multiple rules are all placed in a single list</p>
          */
         public Builder conditions(java.util.List<ConditionBasicInfo> conditions) {
             this.conditions = conditions;
@@ -127,7 +127,10 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total number of entries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -135,7 +138,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * Dialogues.
+         * <p>Testing copy</p>
          */
         public Builder dialogues(java.util.List<RuleTestDialogue> dialogues) {
             this.dialogues = dialogues;
@@ -143,7 +146,10 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -151,7 +157,10 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -159,7 +168,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>Basic rule information; multiple rules may exist</p>
          */
         public Builder rules(java.util.List<RuleInfo> rules) {
             this.rules = rules;

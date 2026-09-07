@@ -410,7 +410,7 @@ public class GetRulesCountListRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -419,7 +419,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * BusinessName.
+         * <p>Business name to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电话业务</p>
          */
         public Builder businessName(String businessName) {
             this.putBodyParameter("BusinessName", businessName);
@@ -428,7 +431,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * BusinessRange.
+         * <p>Broad business category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder businessRange(Integer businessRange) {
             this.putBodyParameter("BusinessRange", businessRange);
@@ -437,7 +443,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * CategoryName.
+         * <p>Category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分类名称A</p>
          */
         public Builder categoryName(String categoryName) {
             this.putBodyParameter("CategoryName", categoryName);
@@ -446,7 +455,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * CountTotal.
+         * <p>Whether to count the total number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder countTotal(Boolean countTotal) {
             this.putBodyParameter("CountTotal", countTotal);
@@ -455,7 +467,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * CreateEmpid.
+         * <p>Rule creator ID. Same as CreateUserId. Use either one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder createEmpid(String createEmpid) {
             this.putBodyParameter("CreateEmpid", createEmpid);
@@ -464,7 +479,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * CreateUserId.
+         * <p>Rule creator ID. Same as CreateEmpid. Use either one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder createUserId(Long createUserId) {
             this.putBodyParameter("CreateUserId", createUserId);
@@ -473,7 +491,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -482,7 +503,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Filter by creation time (start of range).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-08 23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -491,7 +515,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * LastUpdateEmpid.
+         * <p>Rule updater ID. Same as UpdateUserId. Use either one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder lastUpdateEmpid(String lastUpdateEmpid) {
             this.putBodyParameter("LastUpdateEmpid", lastUpdateEmpid);
@@ -500,7 +527,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the rule list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -509,7 +539,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -518,7 +551,7 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * RequireInfos.
+         * <p>Required fields.</p>
          */
         public Builder requireInfos(java.util.List<String> requireInfos) {
             this.putBodyParameter("RequireInfos", requireInfos);
@@ -527,7 +560,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * Rid.
+         * <p>Search by rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder rid(Long rid) {
             this.putBodyParameter("Rid", rid);
@@ -536,7 +572,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * RuleIdOrRuleName.
+         * <p>Search by rule ID or rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder ruleIdOrRuleName(String ruleIdOrRuleName) {
             this.putBodyParameter("RuleIdOrRuleName", ruleIdOrRuleName);
@@ -545,7 +584,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * RuleScoreSingleType.
+         * <p>Scoring type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleScoreSingleType(Integer ruleScoreSingleType) {
             this.putBodyParameter("RuleScoreSingleType", ruleScoreSingleType);
@@ -554,7 +596,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>Rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -563,7 +608,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * SchemeId.
+         * <p>Quality inspection scheme ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder schemeId(Long schemeId) {
             this.putBodyParameter("SchemeId", schemeId);
@@ -572,7 +620,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sourceType(Integer sourceType) {
             this.putBodyParameter("SourceType", sourceType);
@@ -581,7 +632,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Filter by creation time (end of range).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-07 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -590,7 +644,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Rule status:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -599,7 +656,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Type value of the rule category to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putBodyParameter("Type", type);
@@ -608,7 +668,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * TypeName.
+         * <p>Name of the rule category to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全部类别</p>
          */
         public Builder typeName(String typeName) {
             this.putBodyParameter("TypeName", typeName);
@@ -617,7 +680,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * UpdateEndTime.
+         * <p>Filter by update time (end of range).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-08 23:59:59</p>
          */
         public Builder updateEndTime(String updateEndTime) {
             this.putBodyParameter("UpdateEndTime", updateEndTime);
@@ -626,7 +692,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * UpdateStartTime.
+         * <p>Filter by update time (start of range).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-07 00:00:00</p>
          */
         public Builder updateStartTime(String updateStartTime) {
             this.putBodyParameter("UpdateStartTime", updateStartTime);
@@ -635,7 +704,10 @@ public class GetRulesCountListRequest extends Request {
         }
 
         /**
-         * UpdateUserId.
+         * <p>Rule updater ID. Same as LastUpdateEmpid. Use either one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder updateUserId(Long updateUserId) {
             this.putBodyParameter("UpdateUserId", updateUserId);

@@ -106,7 +106,10 @@ public class DeleteBusinessCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. Use this field to determine the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class DeleteBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>If the request fails, this parameter returns the error details. If the request is successful, this parameter returns <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DeleteBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,17 @@ public class DeleteBusinessCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <p>Use this field to determine whether the request was successful:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p>false or <strong>null</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

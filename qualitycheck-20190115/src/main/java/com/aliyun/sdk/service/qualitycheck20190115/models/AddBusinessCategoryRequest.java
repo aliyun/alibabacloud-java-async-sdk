@@ -74,7 +74,7 @@ public class AddBusinessCategoryRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +83,11 @@ public class AddBusinessCategoryRequest extends Request {
         }
 
         /**
+         * <p>A complete JSON string. For details, see the table below.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;适用业务名称&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

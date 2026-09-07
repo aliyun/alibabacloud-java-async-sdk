@@ -106,7 +106,10 @@ public class CreateTaskAssignRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>ID of the created rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request fails. Returns &quot;successful&quot; on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class CreateTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class CreateTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

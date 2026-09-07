@@ -106,7 +106,10 @@ public class UploadAudioDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task ID, which is used when retrieving task results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5***</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message when the request fails. The value is &quot;successful&quot; when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false/null: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

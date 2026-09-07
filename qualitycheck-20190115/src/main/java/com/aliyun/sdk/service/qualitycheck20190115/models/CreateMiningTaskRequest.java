@@ -115,7 +115,10 @@ public class CreateMiningTaskRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -124,7 +127,10 @@ public class CreateMiningTaskRequest extends Request {
         }
 
         /**
-         * CallbackUrl.
+         * <p>Webhook address</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxxk.com">https://xxxxxxxxk.com</a></p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putBodyParameter("CallbackUrl", callbackUrl);
@@ -133,7 +139,10 @@ public class CreateMiningTaskRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>File path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.22.com/11.csv</p>
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("FilePath", filePath);
@@ -142,7 +151,10 @@ public class CreateMiningTaskRequest extends Request {
         }
 
         /**
-         * Param.
+         * <p>Task parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;startDate&quot;:&quot;20250505&quot;}</p>
          */
         public Builder param(String param) {
             this.putBodyParameter("Param", param);
@@ -151,7 +163,10 @@ public class CreateMiningTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>Task type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demandMining</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("TaskType", taskType);

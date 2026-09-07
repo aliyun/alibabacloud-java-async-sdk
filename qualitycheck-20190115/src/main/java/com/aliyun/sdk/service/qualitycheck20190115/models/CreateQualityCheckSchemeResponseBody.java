@@ -132,7 +132,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. A value of 200 indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>ID of the created quality check plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. If the request succeeded, the value is <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. If true, the request succeeded. If false or null, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +251,10 @@ public class CreateQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Error details if the request failed. If the request succeeded, the value is <strong>successful</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

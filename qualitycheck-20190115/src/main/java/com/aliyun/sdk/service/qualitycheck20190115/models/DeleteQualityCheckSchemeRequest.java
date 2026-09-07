@@ -73,7 +73,7 @@ public class DeleteQualityCheckSchemeRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +82,10 @@ public class DeleteQualityCheckSchemeRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>JSON request body. For details, see the parameter description below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeId&quot;:191}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

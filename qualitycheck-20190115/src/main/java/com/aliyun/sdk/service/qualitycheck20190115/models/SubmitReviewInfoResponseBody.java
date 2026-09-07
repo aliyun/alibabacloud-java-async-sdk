@@ -106,7 +106,13 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. 200 indicates success.</p>
+         * <blockquote>
+         * <p>If the value is different, it indicates failure. Callers can use this field to determine the cause of failure.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,10 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returns the quality inspection score after review upon successful saving.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +131,10 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Indicates error details on failure, or <strong>successful</strong> on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +142,10 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +153,17 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <p>Callers can use this field to determine if the request was successful:</p>
+         * <ul>
+         * <li><p>true indicates success</p>
+         * </li>
+         * <li><p>false/null indicates failure</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

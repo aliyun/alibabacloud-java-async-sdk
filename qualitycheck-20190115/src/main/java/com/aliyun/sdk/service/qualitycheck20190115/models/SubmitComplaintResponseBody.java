@@ -106,7 +106,10 @@ public class SubmitComplaintResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class SubmitComplaintResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The current quality check score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class SubmitComplaintResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. If the request is successful, &quot;successful&quot; is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class SubmitComplaintResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class SubmitComplaintResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success, and a value of <code>false</code> or <code>null</code> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

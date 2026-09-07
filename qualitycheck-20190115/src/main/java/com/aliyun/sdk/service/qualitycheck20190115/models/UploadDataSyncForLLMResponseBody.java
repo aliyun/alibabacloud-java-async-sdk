@@ -106,7 +106,10 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,10 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message if the request fails. The value is <strong>successful</strong> if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false/null: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

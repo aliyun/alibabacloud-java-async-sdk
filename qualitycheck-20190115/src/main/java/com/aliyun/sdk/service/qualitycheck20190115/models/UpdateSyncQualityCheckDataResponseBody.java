@@ -106,7 +106,10 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The Result code. A value of 200 indicates Succeeded. Any other value indicates failed. The API caller can determine the cause of failure based on this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The complete response Content.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details of the error when an error occurs; &quot;successful&quot; when the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is the UUID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the Request succeeded. The API caller can use this field to determine whether the Request succeeded: true indicates success; false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123D8C-5BD9-42A7-B527-1235F8**</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -212,7 +227,10 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
             }
 
             /**
-             * Tid.
+             * <p>The UUID of the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20210101-1212121***</p>
              */
             public Builder tid(String tid) {
                 this.tid = tid;

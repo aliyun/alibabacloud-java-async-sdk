@@ -73,7 +73,7 @@ public class ListDataSetRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +82,10 @@ public class ListDataSetRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>Input parameter JSON string</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

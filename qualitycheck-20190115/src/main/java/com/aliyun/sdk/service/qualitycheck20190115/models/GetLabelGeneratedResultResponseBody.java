@@ -106,7 +106,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +255,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
             } 
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens for the LLM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7371</p>
              */
             public Builder inputTokens(Integer inputTokens) {
                 this.inputTokens = inputTokens;
@@ -254,7 +266,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCallNum.
+             * <p>The number of LLM calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder llmCallNum(Integer llmCallNum) {
                 this.llmCallNum = llmCallNum;
@@ -262,7 +277,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens for the LLM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>355</p>
              */
             public Builder outputTokens(Integer outputTokens) {
                 this.outputTokens = outputTokens;
@@ -270,7 +288,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResultFileUrl.
+             * <p>The pre-signed download URL of the result file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sca-eas-mining.oss-cn-beijing.aliyuncs.com/xxx.xlsx?Expires=">https://sca-eas-mining.oss-cn-beijing.aliyuncs.com/xxx.xlsx?Expires=</a>...</p>
              */
             public Builder resultFileUrl(String resultFileUrl) {
                 this.resultFileUrl = resultFileUrl;
@@ -278,7 +299,10 @@ public class GetLabelGeneratedResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the generation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260616-4955F615-A74E-171E-86ED-080F60C72EC9</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

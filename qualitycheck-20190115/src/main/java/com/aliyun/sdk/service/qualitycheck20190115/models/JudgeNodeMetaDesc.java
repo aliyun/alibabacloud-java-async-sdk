@@ -132,7 +132,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         } 
 
         /**
-         * ActualValue.
+         * <p>Actual value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder actualValue(String actualValue) {
             this.actualValue = actualValue;
@@ -140,7 +143,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataType(Integer dataType) {
             this.dataType = dataType;
@@ -156,7 +162,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * Field.
+         * <p>System field</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark1</p>
          */
         public Builder field(String field) {
             this.field = field;
@@ -164,7 +173,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * FieldType.
+         * <p>Field data source type: 1: System predefined field. 2: Quality inspection field for passed parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fieldType(Integer fieldType) {
             this.fieldType = fieldType;
@@ -172,7 +184,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * Symbol.
+         * <p>Expression</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder symbol(Integer symbol) {
             this.symbol = symbol;
@@ -180,7 +195,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Preset value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder value(String value) {
             this.value = value;

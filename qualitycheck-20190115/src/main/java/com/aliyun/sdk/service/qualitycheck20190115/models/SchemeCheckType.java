@@ -145,7 +145,10 @@ public class SchemeCheckType extends TeaModel {
         } 
 
         /**
-         * CheckName.
+         * <p>Check item name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流程规则</p>
          */
         public Builder checkName(String checkName) {
             this.checkName = checkName;
@@ -153,7 +156,10 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * CheckType.
+         * <p>Quality inspection dimension ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkType(Long checkType) {
             this.checkType = checkType;
@@ -161,7 +167,10 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * Enable.
+         * <p>Is enabled</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.enable = enable;
@@ -169,7 +178,10 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * SchemeId.
+         * <p>Quality inspection scheme ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder schemeId(Long schemeId) {
             this.schemeId = schemeId;
@@ -177,7 +189,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * SchemeScoreInfoList.
+         * <p>List of scoring items under the check item. See SchemeScoreInfo.</p>
          */
         public Builder schemeScoreInfoList(java.util.List<SchemeScoreInfoList> schemeScoreInfoList) {
             this.schemeScoreInfoList = schemeScoreInfoList;
@@ -185,7 +197,10 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * Score.
+         * <p>Final score</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder score(Integer score) {
             this.score = score;
@@ -193,7 +208,10 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * SourceScore.
+         * <p>Original score</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sourceScore(Integer sourceScore) {
             this.sourceScore = sourceScore;
@@ -201,7 +219,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * TaskFlowScoreInfoList.
+         * <p>List of scoring items under the check item. See TaskFlowScoreInfo.</p>
          */
         public Builder taskFlowScoreInfoList(java.util.List<TaskFlowScoreInfoList> taskFlowScoreInfoList) {
             this.taskFlowScoreInfoList = taskFlowScoreInfoList;
@@ -345,7 +363,10 @@ public class SchemeCheckType extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>Rule Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -353,7 +374,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>Rule ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -361,7 +385,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreNum.
+             * <p>Agent rating: default 0, [0, 100]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -369,7 +396,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreNumType.
+             * <p>0 – Add or subtract points after triggering a rule</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -377,7 +407,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreRuleHitType.
+             * <p>0 – Score when hitting an edge zone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scoreRuleHitType(Integer scoreRuleHitType) {
                 this.scoreRuleHitType = scoreRuleHitType;
@@ -385,7 +418,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreType.
+             * <p>1 for adding points, 3 for deducting points; default is 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -393,7 +429,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowId.
+             * <p>Flow ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -401,7 +440,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowName.
+             * <p>Flow name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder taskFlowName(String taskFlowName) {
                 this.taskFlowName = taskFlowName;
@@ -546,7 +588,10 @@ public class SchemeCheckType extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>Rule Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -554,7 +599,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>Rule ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -562,7 +610,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreNum.
+             * <p>Agent score: default is 0, range [0, 100]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -570,7 +621,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreNumType.
+             * <p>0 – Points added or deducted after a rule is triggered</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -578,7 +632,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreRuleHitType.
+             * <p>0—score when a hit occurs at an edge zone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scoreRuleHitType(Integer scoreRuleHitType) {
                 this.scoreRuleHitType = scoreRuleHitType;
@@ -586,7 +643,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * ScoreType.
+             * <p>1 for adding points, 3 for deducting points; default is 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -594,7 +654,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowId.
+             * <p>Flow ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -602,7 +665,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowName.
+             * <p>flow name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder taskFlowName(String taskFlowName) {
                 this.taskFlowName = taskFlowName;
@@ -695,7 +761,7 @@ public class SchemeCheckType extends TeaModel {
             } 
 
             /**
-             * SchemeScoreInfoList.
+             * <p>list of scoring items</p>
              */
             public Builder schemeScoreInfoList(java.util.List<TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList) {
                 this.schemeScoreInfoList = schemeScoreInfoList;
@@ -703,7 +769,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowId.
+             * <p>Flow ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -711,7 +780,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowName.
+             * <p>flow name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder taskFlowName(String taskFlowName) {
                 this.taskFlowName = taskFlowName;
@@ -719,7 +791,10 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * TaskFlowType.
+             * <p>\&quot;Flow version: 0: tree, 1: graph\&quot;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskFlowType(Integer taskFlowType) {
                 this.taskFlowType = taskFlowType;

@@ -74,7 +74,7 @@ public class AssignReviewerRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class AssignReviewerRequest extends Request {
         }
 
         /**
+         * <p>A complete JSON string. For details, see the following sections.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

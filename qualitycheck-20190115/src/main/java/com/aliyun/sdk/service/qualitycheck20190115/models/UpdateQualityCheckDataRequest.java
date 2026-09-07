@@ -75,6 +75,9 @@ public class UpdateQualityCheckDataRequest extends Request {
 
         /**
          * <p>baseMeAgentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class UpdateQualityCheckDataRequest extends Request {
         }
 
         /**
+         * <p>Complete JSON string containing detailed information. For specific content, see the details below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

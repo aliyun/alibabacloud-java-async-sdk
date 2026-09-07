@@ -106,7 +106,10 @@ public class CreateWarningConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. The caller can determine the failure reason based on this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateWarningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the warning configuration successfully created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateWarningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details when an error occurs. Returns \&quot;successful\&quot; on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class CreateWarningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class CreateWarningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful. The caller can determine if the request was successful based on this field: true indicates success, false/null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

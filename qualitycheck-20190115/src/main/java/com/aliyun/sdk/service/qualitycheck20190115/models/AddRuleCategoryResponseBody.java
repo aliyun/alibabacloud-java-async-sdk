@@ -106,7 +106,10 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return Result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D10B9203-1A6A-49DA-AE56-4D160DD37DBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class AddRuleCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Select.
+             * <p>Indicates whether the newly added rule category is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder select(Boolean select) {
                 this.select = select;
@@ -212,7 +227,10 @@ public class AddRuleCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Rule category ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

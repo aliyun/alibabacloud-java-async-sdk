@@ -102,7 +102,7 @@ public class DeleteRuleRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -111,7 +111,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * ForceDelete.
+         * <p>Whether to delete the rule even if it is associated with a quality check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceDelete(Boolean forceDelete) {
             this.putBodyParameter("ForceDelete", forceDelete);
@@ -120,7 +123,10 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * IsSchemeData.
+         * <p>Indicates whether this is the new version of quality check. 0: old version. 1: new version. Default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isSchemeData(Integer isSchemeData) {
             this.putBodyParameter("IsSchemeData", isSchemeData);
@@ -129,6 +135,7 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
+         * <p>Rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

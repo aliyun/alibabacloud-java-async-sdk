@@ -106,7 +106,10 @@ public class DeleteAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class DeleteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message, if any.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,10 @@ public class DeleteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false/null: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

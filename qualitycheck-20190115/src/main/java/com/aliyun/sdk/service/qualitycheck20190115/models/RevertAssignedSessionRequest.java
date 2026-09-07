@@ -73,7 +73,7 @@ public class RevertAssignedSessionRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +82,10 @@ public class RevertAssignedSessionRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>Input JSON. For details, see the request parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;isSchemeData&quot;:1,&quot;searchParam&quot;:{&quot;schemeTaskConfigId&quot;:1,&quot;sourceDataType&quot;:1,&quot;startTime&quot;:&quot;2022-09-20 00:00:00&quot;,&quot;endTime&quot;:&quot;2022-09-26 23:59:59&quot;}}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

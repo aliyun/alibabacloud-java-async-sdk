@@ -60,7 +60,11 @@ public class GetRuleV4Request extends Request {
         } 
 
         /**
+         * <p>Rule ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>531</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

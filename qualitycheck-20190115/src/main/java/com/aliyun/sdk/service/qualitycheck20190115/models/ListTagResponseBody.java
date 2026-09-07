@@ -158,7 +158,10 @@ public class ListTagResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -174,7 +180,7 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -182,7 +188,10 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>The actual number of records returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder dataSize(Integer dataSize) {
             this.dataSize = dataSize;
@@ -190,7 +199,10 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message, if any.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -217,7 +232,10 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class ListTagResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -382,7 +403,10 @@ public class ListTagResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildCount.
+             * <p>The number of direct child nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder childCount(Integer childCount) {
                 this.childCount = childCount;
@@ -390,7 +414,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the label was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748428991000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,7 +425,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用于归集售后服务相关的所有意图与 FAQ</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -406,7 +436,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the current node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -414,7 +447,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the label was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748428991000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -422,7 +458,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>售后问题</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -430,7 +469,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTagId.
+             * <p>The ID of the parent label node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentTagId(Long parentTagId) {
                 this.parentTagId = parentTagId;
@@ -438,7 +480,7 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The node path.</p>
              */
             public Builder path(java.util.List<String> path) {
                 this.path = path;
@@ -446,7 +488,10 @@ public class ListTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder tagId(Long tagId) {
                 this.tagId = tagId;

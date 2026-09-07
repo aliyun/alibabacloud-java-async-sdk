@@ -74,7 +74,7 @@ public class SubmitQualityCheckTaskRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +83,11 @@ public class SubmitQualityCheckTaskRequest extends Request {
         }
 
         /**
+         * <p>The complete JSON string. For details, see the following sections.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;jobName&quot;:&quot;任务 2020-03-19 14:16:55&quot;,&quot;jobType&quot;:0,&quot;jsonStr&quot;:{&quot;dataSetIds&quot;:[123**],&quot;modeCustomizationId&quot;:&quot;046db35352904c5dbb0564****&quot;,&quot;ruleIds&quot;:[185**,185**],&quot;vocabId&quot;:&quot;0f0cd63546c747bcb306bb05***&quot;}}&quot;</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

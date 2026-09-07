@@ -73,7 +73,10 @@ public class CreateAgentTaskRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The ID of the business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class CreateAgentTaskRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete <strong>JSON string</strong> information. For details, see the following sections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;\&quot;:\&quot;\&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);

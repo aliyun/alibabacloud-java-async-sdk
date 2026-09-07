@@ -132,7 +132,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of 200 indicates success. Other values indicate failure. Use this code to determine the cause of a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The QualityCheckScheme object. This is the JSON object of the quality check plan. For more information, see <a href="https://help.aliyun.com/document_detail/453292.html"><code>Description of quality check task objects</code></a>.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +162,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>If an error occurs, this field provides details about the error. If the request is successful, the value is <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +173,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>The list of returned messages.</p>
          */
         public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
@@ -172,7 +181,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +192,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +313,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckName.
+             * <p>The name of the quality check dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务规范性检测</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -306,7 +324,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * <p>The ID of the quality check dimension type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder checkType(Long checkType) {
                 this.checkType = checkType;
@@ -314,7 +335,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The status. Valid values: 0 (disabled) and 1 (enabled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -322,7 +346,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeId.
+             * <p>The quality check plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder schemeId(Long schemeId) {
                 this.schemeId = schemeId;
@@ -330,7 +357,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score of the quality check dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -338,7 +368,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SourceScore.
+             * <p>The original score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sourceScore(Integer sourceScore) {
                 this.sourceScore = sourceScore;
@@ -600,7 +633,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616113198000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -608,7 +644,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The username of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -616,7 +655,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the quality check plan. Valid values: 0 (text) and 1 (audio).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataType(Integer dataType) {
                 this.dataType = dataType;
@@ -624,7 +666,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>售前使用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -632,7 +677,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * InitScore.
+             * <p>The total score of the quality check plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder initScore(String initScore) {
                 this.initScore = initScore;
@@ -640,7 +688,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the quality check plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -648,7 +699,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * <p>The list of associated rule IDs.</p>
              */
             public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
@@ -656,7 +707,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>The list of rules.</p>
              */
             public Builder ruleList(java.util.List<RulesInfo> ruleList) {
                 this.ruleList = ruleList;
@@ -664,7 +715,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeCheckTypeList.
+             * <p>The list of quality check dimensions.</p>
              */
             public Builder schemeCheckTypeList(java.util.List<SchemeCheckTypeList> schemeCheckTypeList) {
                 this.schemeCheckTypeList = schemeCheckTypeList;
@@ -672,7 +723,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeId.
+             * <p>The quality check plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112**</p>
              */
             public Builder schemeId(Long schemeId) {
                 this.schemeId = schemeId;
@@ -680,7 +734,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeTemplateId.
+             * <p>The quality check plan template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder schemeTemplateId(Long schemeTemplateId) {
                 this.schemeTemplateId = schemeTemplateId;
@@ -688,7 +745,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values: 0 (deleted), 1 (published), 2 (unpublished), and 3 (updated but not published). Default value: 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -696,7 +756,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the quality check plan template. Valid values: 1 (system-built) and 2 (custom).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateType(Integer templateType) {
                 this.templateType = templateType;
@@ -704,7 +767,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the quality check plan. Valid values: 0 (system-built) and 1 (custom).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -712,7 +778,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the plan was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616113198000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -720,7 +789,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateUserName.
+             * <p>The username of the user who last updated the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder updateUserName(String updateUserName) {
                 this.updateUserName = updateUserName;
@@ -728,7 +800,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616113198000</p>
              */
             public Builder version(Long version) {
                 this.version = version;

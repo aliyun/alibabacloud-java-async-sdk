@@ -93,7 +93,10 @@ public class DeleteTagResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteTagResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message, if any.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,10 @@ public class DeleteTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -74,7 +74,7 @@ public class ListTaskAssignRulesRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class ListTaskAssignRulesRequest extends Request {
         }
 
         /**
+         * <p>Complete JSON string information. See the details below for specific content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

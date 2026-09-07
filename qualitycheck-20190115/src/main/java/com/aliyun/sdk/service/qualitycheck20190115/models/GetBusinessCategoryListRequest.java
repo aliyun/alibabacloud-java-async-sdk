@@ -74,7 +74,10 @@ public class GetBusinessCategoryListRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class GetBusinessCategoryListRequest extends Request {
         }
 
         /**
+         * <p>Pass an empty string as the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

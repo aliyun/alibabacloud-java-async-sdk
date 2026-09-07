@@ -93,7 +93,10 @@ public class DeleteTaskAssignRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. <strong>200</strong> means the operation succeeded. Any other value means the operation failed. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details if the operation failed. If the operation succeeded, the value is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DeleteTaskAssignRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

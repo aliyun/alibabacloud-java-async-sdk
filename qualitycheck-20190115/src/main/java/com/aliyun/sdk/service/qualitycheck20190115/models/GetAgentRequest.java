@@ -85,7 +85,10 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete JSON string. For more information, see the following details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);

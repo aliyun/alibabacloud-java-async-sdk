@@ -106,7 +106,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. The caller can use this field to determine whether the request was successful. Valid values: <strong>true</strong>: The request was successful. <strong>false/null</strong>: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +294,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * FinishReason.
+             * <p>If streaming output is used, this value is null during generation. When generation is complete, the value is stop if the generation ended due to a stop token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -293,7 +305,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -301,7 +316,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * LlmRequestId.
+             * <p>The request ID returned by the large language model service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
              */
             public Builder llmRequestId(String llmRequestId) {
                 this.llmRequestId = llmRequestId;
@@ -309,7 +327,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -317,7 +338,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The result returned by the large language model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这段对话似乎是客服与客户之间关于一个服务或产品的讨论，但具体内容难以明确理解，因为对话中的言语比较零散和抽象。</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -325,7 +349,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -333,7 +360,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * TyxmPlusCount.
+             * <p>The number of times the plus model was used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tyxmPlusCount(String tyxmPlusCount) {
                 this.tyxmPlusCount = tyxmPlusCount;
@@ -341,7 +371,10 @@ public class ExecuteAgentResponseBody extends TeaModel {
             }
 
             /**
-             * TyxmTurboCount.
+             * <p>The number of times the turbo model was used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tyxmTurboCount(String tyxmTurboCount) {
                 this.tyxmTurboCount = tyxmTurboCount;

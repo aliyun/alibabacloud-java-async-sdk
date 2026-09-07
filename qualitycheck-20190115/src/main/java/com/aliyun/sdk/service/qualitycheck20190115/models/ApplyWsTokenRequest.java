@@ -73,7 +73,10 @@ public class ApplyWsTokenRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,19 @@ public class ApplyWsTokenRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>Complete JSON string information. For details, see the following specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;business&quot;: &quot;test&quot;,
+         *     &quot;callType&quot;: 1,
+         *     &quot;callee&quot;: &quot;13111111111&quot;,
+         *     &quot;caller&quot;: &quot;13800000000&quot;,
+         *     &quot;skillGroupId&quot;: 1,
+         *     &quot;skillGroupName&quot;: &quot;test&quot;,
+         *     &quot;taskConfigId&quot;: 399,
+         *     &quot;tid&quot;: &quot;2025012412cb129e-1579-46b5-9326-1b2ececf8f30&quot;
+         * }</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

@@ -119,7 +119,10 @@ public class CreateMiningTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateMiningTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateMiningTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateMiningTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the call failed. Returns successful if the call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class CreateMiningTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
@@ -162,7 +171,10 @@ public class CreateMiningTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -215,7 +227,10 @@ public class CreateMiningTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7C1DEF5F-2C18-4D36-99C6-8C27*****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

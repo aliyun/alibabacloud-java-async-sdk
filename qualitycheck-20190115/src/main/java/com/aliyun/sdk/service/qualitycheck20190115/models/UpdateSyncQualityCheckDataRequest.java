@@ -75,6 +75,9 @@ public class UpdateSyncQualityCheckDataRequest extends Request {
 
         /**
          * <p>baseMeAgentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +86,7 @@ public class UpdateSyncQualityCheckDataRequest extends Request {
         }
 
         /**
+         * <p>jsonStr is a JSON string that contains all Custom Parameters for this API. For details, see <strong>jsonStr property description</strong> below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

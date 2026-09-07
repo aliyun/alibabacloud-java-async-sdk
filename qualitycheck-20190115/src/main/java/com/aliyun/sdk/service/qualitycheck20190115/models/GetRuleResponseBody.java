@@ -106,7 +106,10 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request fails. Returns <strong>successful</strong> if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

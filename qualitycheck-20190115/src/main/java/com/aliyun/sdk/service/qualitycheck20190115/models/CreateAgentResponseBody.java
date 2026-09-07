@@ -106,7 +106,10 @@ public class CreateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The AgentId of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message, if any.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

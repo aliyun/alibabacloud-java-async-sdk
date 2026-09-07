@@ -73,7 +73,10 @@ public class GetMiningTaskResultRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class GetMiningTaskResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

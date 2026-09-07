@@ -132,7 +132,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> means success. Any other value means failure. Callers can use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Quality check dimension ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details when the request fails. Returns <strong>successful</strong> on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Callers can use this field to determine success: true means success. false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +251,10 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Error details when the request fails. Returns <strong>successful</strong> on success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

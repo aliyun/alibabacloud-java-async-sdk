@@ -132,7 +132,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Quality check plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Use this field to determine success: true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +251,10 @@ public class UpdateRuleToSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

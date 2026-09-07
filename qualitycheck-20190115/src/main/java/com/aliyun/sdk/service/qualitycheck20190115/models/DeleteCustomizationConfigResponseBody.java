@@ -106,7 +106,10 @@ public class DeleteCustomizationConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> means the call succeeded. Any other value means the call failed. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteCustomizationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>252</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class DeleteCustomizationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details about the error if the call fails. If the call succeeds, this value is <strong>successful</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DeleteCustomizationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DeleteCustomizationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Use this field to check the result: true means success and <strong>false</strong> or <strong>null</strong> means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

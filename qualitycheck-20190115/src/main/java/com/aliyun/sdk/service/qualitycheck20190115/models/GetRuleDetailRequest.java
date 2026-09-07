@@ -74,7 +74,7 @@ public class GetRuleDetailRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class GetRuleDetailRequest extends Request {
         }
 
         /**
+         * <p>A complete JSON string. See the details below for the exact format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

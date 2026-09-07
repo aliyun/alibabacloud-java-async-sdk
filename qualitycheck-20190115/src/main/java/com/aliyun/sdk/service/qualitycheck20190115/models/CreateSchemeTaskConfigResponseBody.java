@@ -132,7 +132,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. The caller can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>ID of the newly created quality inspection job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>When an error occurs, this field provides error details. When the operation succeeds, the value is &quot;successful&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. The caller can use this field to determine the request outcome: true indicates success; false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +251,10 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>When an error occurs, this field provides error details. When the operation succeeds, the value is &quot;successful&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

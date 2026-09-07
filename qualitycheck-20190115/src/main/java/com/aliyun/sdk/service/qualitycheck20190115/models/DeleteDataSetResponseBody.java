@@ -93,7 +93,10 @@ public class DeleteDataSetResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. <strong>200</strong> indicates success. Other values indicate failure. The caller can determine the cause of failure based on this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if an error occurs, or <strong>successful</strong> if the operation succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DeleteDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. The caller can determine if the request was successful based on this field: <strong>true</strong> indicates success, and <strong>false/null</strong> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

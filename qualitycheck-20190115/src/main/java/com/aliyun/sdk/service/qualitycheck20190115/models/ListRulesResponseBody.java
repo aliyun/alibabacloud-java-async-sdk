@@ -145,7 +145,10 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of 200 means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -161,7 +167,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The rule list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -169,7 +175,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details about an error if the request failed. If the request succeeded, the value is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +186,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the rule list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -185,7 +197,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -193,7 +208,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82C91484-B2D5-4D2A-A21F-A6D73F**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -345,7 +366,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessCategoryNameList.
+             * <p>The names of business categories associated with the rule.</p>
              */
             public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
                 this.businessCategoryNameList = businessCategoryNameList;
@@ -353,7 +374,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Comments.
+             * <p>Comments for the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>检测是否出现了禁用语</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -361,7 +385,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-20T20:10Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -369,7 +396,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>禁用语检测</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -377,7 +407,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -385,7 +418,16 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * <p>The rule category. Valid values:</p>
+             * <ul>
+             * <li><p>1: Custom rule</p>
+             * </li>
+             * <li><p>0: System-provided rule</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -393,7 +435,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type value of the rule\&quot;s rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -401,7 +446,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The name of the rule\&quot;s rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务规范</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

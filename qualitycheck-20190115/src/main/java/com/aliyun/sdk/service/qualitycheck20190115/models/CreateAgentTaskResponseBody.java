@@ -106,7 +106,10 @@ public class CreateAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details when the request fails. The value is <strong>successful</strong> when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class CreateAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. You can use this field to determine whether the request succeeded: true indicates success. false/null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +216,10 @@ public class CreateAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7C1DEF5F-2C18-4D36-99C6-8***</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -215,7 +227,10 @@ public class CreateAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Vid.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6fa76916-3ce6-45d8-ac64-01b7f31***</p>
              */
             public Builder vid(String vid) {
                 this.vid = vid;

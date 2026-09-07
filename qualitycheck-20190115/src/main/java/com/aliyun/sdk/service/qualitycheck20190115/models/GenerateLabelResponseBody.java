@@ -106,7 +106,10 @@ public class GenerateLabelResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GenerateLabelResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the generation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20260616-4955F615-A74E-171E-86ED-080F60C72EC9</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GenerateLabelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,10 @@ public class GenerateLabelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

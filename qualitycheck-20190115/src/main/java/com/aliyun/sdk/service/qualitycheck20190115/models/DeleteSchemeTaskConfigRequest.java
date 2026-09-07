@@ -73,7 +73,7 @@ public class DeleteSchemeTaskConfigRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +82,10 @@ public class DeleteSchemeTaskConfigRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>A JSON object that contains the request parameters. For more information, see the parameter details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeId&quot;:&quot;329&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

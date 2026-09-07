@@ -74,7 +74,7 @@ public class GetCustomizationConfigListRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>The workspace ID.</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,6 +83,7 @@ public class GetCustomizationConfigListRequest extends Request {
         }
 
         /**
+         * <p>Set this parameter to an empty string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

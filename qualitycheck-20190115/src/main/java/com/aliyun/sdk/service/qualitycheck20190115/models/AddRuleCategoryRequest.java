@@ -75,6 +75,9 @@ public class AddRuleCategoryRequest extends Request {
 
         /**
          * <p>baseMeAgentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232927</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +86,11 @@ public class AddRuleCategoryRequest extends Request {
         }
 
         /**
+         * <p>A JSON-formatted string. For details, see the following information.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;typeName&quot;:&quot;规则类型A&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

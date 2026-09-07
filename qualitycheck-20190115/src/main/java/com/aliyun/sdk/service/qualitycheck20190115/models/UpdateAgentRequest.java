@@ -73,7 +73,10 @@ public class UpdateAgentRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The business space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete JSON string. For more information, see the following details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);

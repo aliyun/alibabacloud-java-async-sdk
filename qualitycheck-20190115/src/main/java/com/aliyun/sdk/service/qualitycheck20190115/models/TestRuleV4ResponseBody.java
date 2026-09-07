@@ -119,7 +119,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. 200 indicates success. Other values indicate failure. Callers can use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Full response body.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details when an error occurs. Returns successful when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96138D8D-XXXX-4E41-XXXX-77AED1088BBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Callers can use this field to determine success: true means success; false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckType.
+             * <p>Check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -298,7 +316,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Index number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -306,7 +327,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Lambda.
+             * <p>Lambda expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a&amp;&amp;b</p>
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -314,7 +338,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点A</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +349,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * NextNodeId.
+             * <p>ID of the next flow node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nextNodeId(Long nextNodeId) {
                 this.nextNodeId = nextNodeId;
@@ -330,7 +360,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Situation.
+             * <p>Flow node condition.</p>
              */
             public Builder situation(NextNodeSituations situation) {
                 this.situation = situation;
@@ -338,7 +368,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Triggers.
+             * <p>List of trigger IDs.</p>
              */
             public Builder triggers(java.util.List<String> triggers) {
                 this.triggers = triggers;
@@ -522,7 +552,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * Cid.
+             * <p>Condition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -530,7 +563,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizeCode.
+             * <p>Internal field. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder customizeCode(String customizeCode) {
                 this.customizeCode = customizeCode;
@@ -538,7 +574,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>Starting character position for highlighting. Index starts at 0. Maximum value is the total number of characters in the sentence minus 1. The character at position from is included in the highlight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -546,7 +585,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Oid.
+             * <p>Operator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder oid(String oid) {
                 this.oid = oid;
@@ -554,7 +596,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorKey.
+             * <p>Key information matched by the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder operatorKey(String operatorKey) {
                 this.operatorKey = operatorKey;
@@ -562,7 +607,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * <p>Index of this sentence in the full list of sentences. This is the index of the sentence in the dialogues array of the request parameters, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -570,7 +618,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * SimilarPhrase.
+             * <p>Similar phrase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好</p>
              */
             public Builder similarPhrase(String similarPhrase) {
                 this.similarPhrase = similarPhrase;
@@ -578,7 +629,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Tid.
+             * <p>Internal use only. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder tid(String tid) {
                 this.tid = tid;
@@ -586,7 +640,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The position of the character that follows the highlighted keyword. The character at the \<code>to\\</code> position is not included in the highlight. For example, if \<code>from\\</code> is 0 and \<code>to\\</code> is 3, the highlighted keyword consists of the characters at indices 0, 1, and 2. The maximum value is one less than the total number of characters in the sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -594,7 +651,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>Internal use only. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -602,7 +662,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Val.
+             * <p>Key information matched by the operator. For details, see <strong>Detailed explanation of Val key information</strong> in the response parameter description below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder val(String val) {
                 this.val = val;
@@ -864,7 +927,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>Start time offset of this sentence relative to the start of the full dialogue, in milliseconds. For example, if the total audio duration is 2 minutes and 10 seconds, and a customer starts speaking at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, then begin equals 72000 and end equals 80000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72000</p>
              */
             public Builder begin(Long begin) {
                 this.begin = begin;
@@ -872,7 +938,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>Start time of this sentence. Example: 2019-11-25 15:37:16.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-25 15:37:16</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -880,7 +949,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder channelId(Integer channelId) {
                 this.channelId = channelId;
@@ -888,7 +960,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionFineGrainedValue.
+             * <p>Internal use only. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>忽略</p>
              */
             public Builder emotionFineGrainedValue(Integer emotionFineGrainedValue) {
                 this.emotionFineGrainedValue = emotionFineGrainedValue;
@@ -896,7 +971,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionValue.
+             * <p>Emotion intensity score. Value equals volume in decibels divided by 10. Valid range: [1, 10]. Higher values indicate stronger emotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder emotionValue(Integer emotionValue) {
                 this.emotionValue = emotionValue;
@@ -904,7 +982,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>End time offset of this sentence relative to the start of the full dialogue, in milliseconds. For example, if the total audio duration is 2 minutes and 10 seconds, and a customer starts speaking at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, then begin equals 72000 and end equals 80000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80000</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -912,7 +993,16 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * HitStatus.
+             * <p>Hit status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Not hit</p>
+             * </li>
+             * <li><p><strong>1</strong>: Hit</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitStatus(Integer hitStatus) {
                 this.hitStatus = hitStatus;
@@ -920,7 +1010,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * HourMinSec.
+             * <p>Start time of this sentence in hh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10:00:00</p>
              */
             public Builder hourMinSec(String hourMinSec) {
                 this.hourMinSec = hourMinSec;
@@ -928,7 +1021,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>Role identifier. In offline voice scenarios, roles are limited to agent or customer. In offline text quality check scenarios, this field shows the identity value passed in during upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder identity(String identity) {
                 this.identity = identity;
@@ -936,7 +1032,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * <p>Index of this sentence in the full list of sentences. This is the index of the sentence in the dialogues array of the request parameters, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -944,7 +1043,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * RenterId.
+             * <p>Internal use only. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder renterId(Long renterId) {
                 this.renterId = renterId;
@@ -952,7 +1054,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Speaker role for this sentence. Valid values: agent and customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -960,7 +1065,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Sid.
+             * <p>Internal use only. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder sid(Long sid) {
                 this.sid = sid;
@@ -968,7 +1076,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceDuration.
+             * <p>Silence duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder silenceDuration(Integer silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -976,7 +1087,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>Average speech rate for this sentence, in words per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -984,7 +1098,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>Internal use only. Ignore this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -992,7 +1109,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>Dialogue content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好，请问有什么可以帮您</p>
              */
             public Builder words(String words) {
                 this.words = words;
@@ -1072,7 +1192,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * Cid.
+             * <p>Condition ID.</p>
              */
             public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
@@ -1080,7 +1200,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * KeyWords.
+             * <p>Key information that was hit. This information appears highlighted on the review page. Examples include keywords matched by a keyword-check operator or category information matched by an agent-model-check operator.</p>
              */
             public Builder keyWords(java.util.List<KeyWords> keyWords) {
                 this.keyWords = keyWords;
@@ -1088,7 +1208,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Phrase.
+             * <p>Sentence details for the current hit check item.</p>
              */
             public Builder phrase(Phrase phrase) {
                 this.phrase = phrase;
@@ -1298,7 +1418,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * BranchHitId.
+             * <p>ID of the hit branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder branchHitId(Long branchHitId) {
                 this.branchHitId = branchHitId;
@@ -1306,7 +1429,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * BranchInfoList.
+             * <p>List of branch information.</p>
              */
             public Builder branchInfoList(java.util.List<BranchInfoList> branchInfoList) {
                 this.branchInfoList = branchInfoList;
@@ -1314,7 +1437,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * ConditionHitInfoList.
+             * <p>Information about hit conditions.</p>
              */
             public Builder conditionHitInfoList(java.util.List<ConditionHitInfoList> conditionHitInfoList) {
                 this.conditionHitInfoList = conditionHitInfoList;
@@ -1322,7 +1445,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * ConditionInfoList.
+             * <p>List of conditions.</p>
              */
             public Builder conditionInfoList(java.util.List<ConditionBasicInfo> conditionInfoList) {
                 this.conditionInfoList = conditionInfoList;
@@ -1330,7 +1453,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * JudgeNodeName.
+             * <p>Judgement node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>判断节点A</p>
              */
             public Builder judgeNodeName(String judgeNodeName) {
                 this.judgeNodeName = judgeNodeName;
@@ -1338,7 +1464,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Lambda.
+             * <p>Lambda expression. Example: a&amp;\&amp;b.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a&amp;&amp;b</p>
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -1346,7 +1475,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Matched.
+             * <p>Whether the rule was hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;
@@ -1354,7 +1486,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>Node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -1362,7 +1497,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>Check item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>451</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -1370,7 +1508,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>规则A</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1378,7 +1519,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * RuleScoreType.
+             * <p>Whether scoring applies. Valid values: 1 (no scoring) and 3 (scoring).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleScoreType(Integer ruleScoreType) {
                 this.ruleScoreType = ruleScoreType;
@@ -1386,7 +1530,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreNumType.
+             * <p>Scoring type. Valid values: 0 (add or subtract points on hit) and 1 (one-time score on hit).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -1394,7 +1541,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * TaskFlowId.
+             * <p>Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -1474,7 +1624,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * GraphFlow.
+             * <p>Flowchart canvas.</p>
              */
             public Builder graphFlow(TaskGraphFlow graphFlow) {
                 this.graphFlow = graphFlow;
@@ -1482,7 +1632,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>Rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -1490,7 +1643,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * TaskFlowType.
+             * <p>Flowchart type. Deprecated. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder taskFlowType(Integer taskFlowType) {
                 this.taskFlowType = taskFlowType;
@@ -1583,7 +1739,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * ConditionInfoList.
+             * <p>List of conditions.</p>
              */
             public Builder conditionInfoList(java.util.List<ConditionBasicInfo> conditionInfoList) {
                 this.conditionInfoList = conditionInfoList;
@@ -1591,7 +1747,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Matched.
+             * <p>Whether the rule was hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;
@@ -1599,7 +1758,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -1607,7 +1769,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * TaskFlowType.
+             * <p>Flowchart type. Deprecated. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>忽略</p>
              */
             public Builder taskFlowType(Integer taskFlowType) {
                 this.taskFlowType = taskFlowType;
@@ -1687,7 +1852,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             } 
 
             /**
-             * HitRuleReviewInfoList.
+             * <p>Information about hit check items.</p>
              */
             public Builder hitRuleReviewInfoList(java.util.List<HitRuleReviewInfoList> hitRuleReviewInfoList) {
                 this.hitRuleReviewInfoList = hitRuleReviewInfoList;
@@ -1695,7 +1860,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * HitTaskFlowList.
+             * <p>List of hit advanced flow nodes.</p>
              */
             public Builder hitTaskFlowList(java.util.List<HitTaskFlowList> hitTaskFlowList) {
                 this.hitTaskFlowList = hitTaskFlowList;
@@ -1703,7 +1868,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * UnhitRuleReviewInfoList.
+             * <p>Information about rules that were not hit.</p>
              */
             public Builder unhitRuleReviewInfoList(java.util.List<UnhitRuleReviewInfoList> unhitRuleReviewInfoList) {
                 this.unhitRuleReviewInfoList = unhitRuleReviewInfoList;

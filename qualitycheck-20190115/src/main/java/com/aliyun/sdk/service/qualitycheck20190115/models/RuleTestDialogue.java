@@ -93,7 +93,7 @@ public class RuleTestDialogue extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>Content</p>
          */
         public Builder content(java.util.List<Content> content) {
             this.content = content;
@@ -101,7 +101,10 @@ public class RuleTestDialogue extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Conversation ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -109,7 +112,10 @@ public class RuleTestDialogue extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Conversation Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -117,7 +123,10 @@ public class RuleTestDialogue extends TeaModel {
         }
 
         /**
-         * UserGroup.
+         * <p>group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;
@@ -287,7 +296,10 @@ public class RuleTestDialogue extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>Start Time in long</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder begin(Long begin) {
                 this.begin = begin;
@@ -295,7 +307,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>Start Time in long</p>
+             * 
+             * <strong>example:</strong>
+             * <p>350</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -303,7 +318,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * EmotionValue.
+             * <p>Emotion energy value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder emotionValue(Integer emotionValue) {
                 this.emotionValue = emotionValue;
@@ -311,7 +329,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>End time in long</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1360</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -319,7 +340,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * HourMinSec.
+             * <p>Hour, minute, second</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder hourMinSec(String hourMinSec) {
                 this.hourMinSec = hourMinSec;
@@ -327,7 +351,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>Identity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户</p>
              */
             public Builder identity(String identity) {
                 this.identity = identity;
@@ -335,7 +362,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -343,7 +373,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * SilenceDuration.
+             * <p>Silence duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder silenceDuration(Long silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -351,7 +384,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>Speech rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder speechRate(Long speechRate) {
                 this.speechRate = speechRate;
@@ -359,7 +395,10 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>Dialogue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>方便</p>
              */
             public Builder words(String words) {
                 this.words = words;

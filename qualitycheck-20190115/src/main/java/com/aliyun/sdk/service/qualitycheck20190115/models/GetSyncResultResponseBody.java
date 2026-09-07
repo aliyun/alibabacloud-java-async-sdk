@@ -158,7 +158,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. A value of 200 indicates success. Any other value indicates failure. The caller can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -174,7 +180,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Query result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -182,7 +188,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details when an error occurs; &quot;successful&quot; when the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCountId.
+         * <p>Internal field. Ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder resultCountId(String resultCountId) {
             this.resultCountId = resultCountId;
@@ -222,7 +243,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. The caller can use this field to determine the request status: true indicates success; false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -301,7 +325,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12221</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -309,7 +336,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Agent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +347,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroup.
+             * <p>Skill group name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服组</p>
              */
             public Builder skillGroup(String skillGroup) {
                 this.skillGroup = skillGroup;
@@ -449,7 +482,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The start time of this sentence, which is the offset from the starting point in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>340</p>
              */
             public Builder begin(Long begin) {
                 this.begin = begin;
@@ -457,7 +493,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionValue.
+             * <p>Emotion intensity value ranging from 1 to 10. A higher value indicates stronger emotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder emotionValue(Integer emotionValue) {
                 this.emotionValue = emotionValue;
@@ -465,7 +504,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The end time of this sentence, which is the offset from the starting point in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -473,7 +515,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role in the dialogue content. Possible values: agent, Customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -481,7 +526,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceDuration.
+             * <p>Internal field. Ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder silenceDuration(Integer silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -489,7 +537,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>The average speech rate of this sentence, in characters per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>221</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -497,7 +548,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>Dialogue content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，很高兴为您服务</p>
              */
             public Builder words(String words) {
                 this.words = words;
@@ -590,7 +644,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Cid.
+             * <p>The ID of the condition that was hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66666</p>
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -598,7 +655,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The starting character position (inclusive) of the keyword to be highlighted. The value starts from 0 and can be at most the total number of characters in the sentence minus 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -606,7 +666,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The ending character position (exclusive) of the keyword to be highlighted. The maximum value is the total number of characters in the sentence minus 1. For example, in the sentence “不可能给你退货的”, if from=0 and to=3, the highlighted keyword is “不可能”, which consists of three characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -614,7 +677,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Val.
+             * <p>The exact keyword content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>投诉</p>
              */
             public Builder val(String val) {
                 this.val = val;
@@ -746,7 +812,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The Start Time of this sentence, represented as an offset in milliseconds from the starting point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>440</p>
              */
             public Builder begin(Long begin) {
                 this.begin = begin;
@@ -754,7 +823,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionValue.
+             * <p>Emotion intensity value ranging from 1 to 10. A higher value indicates stronger emotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder emotionValue(Integer emotionValue) {
                 this.emotionValue = emotionValue;
@@ -762,7 +834,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The End Time of this sentence, represented as an offset in milliseconds from the starting point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -770,7 +845,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role in the conversation content. Possible values: agent, Customer, System.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -778,7 +856,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceDuration.
+             * <p>Internal field. Ignore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder silenceDuration(Integer silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -786,7 +867,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>The speech rate of this sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -794,7 +878,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>A sentence spoken by this role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我要投诉</p>
              */
             public Builder words(String words) {
                 this.words = words;
@@ -874,7 +961,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Cid.
+             * <p>List of hit condition IDs.</p>
              */
             public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
@@ -882,7 +969,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * KeyWords.
+             * <p>Returns the specific characters in the current sentence that hit the rule, which are the keywords to be highlighted.</p>
              */
             public Builder keyWords(java.util.List<KeyWords> keyWords) {
                 this.keyWords = keyWords;
@@ -890,7 +977,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Phrase.
+             * <p>Details of the sentence that hit the current rule.</p>
              */
             public Builder phrase(Phrase phrase) {
                 this.phrase = phrase;
@@ -996,7 +1083,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Hits.
+             * <p>Specific hit location information. At the sentence dimension, returns which condition in the rule was hit and which specific characters triggered the hit within the sentence.</p>
              */
             public Builder hits(java.util.List<Hits> hits) {
                 this.hits = hits;
@@ -1004,7 +1091,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Hit rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试规则</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1012,7 +1102,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewResult.
+             * <p>Review accuracy; possible values: 0 (fault); 1 (correct).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reviewResult(Integer reviewResult) {
                 this.reviewResult = reviewResult;
@@ -1020,7 +1113,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>Hit rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1211</p>
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -1028,7 +1124,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Rule type associated with the hit rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1277,7 +1376,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Business.
+             * <p>Line-of-business name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服部</p>
              */
             public Builder business(String business) {
                 this.business = business;
@@ -1285,7 +1387,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -1293,7 +1398,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * CallTime.
+             * <p>Recording generation UNIX timestamp, accurate to milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563967699000</p>
              */
             public Builder callTime(String callTime) {
                 this.callTime = callTime;
@@ -1301,7 +1409,14 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * CallType.
+             * <p>Call type:  </p>
+             * <ul>
+             * <li>1: Outgoing call  </li>
+             * <li>3: Incoming call</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callType(Integer callType) {
                 this.callType = callType;
@@ -1309,7 +1424,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Callee.
+             * <p>Callee number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1888888***</p>
              */
             public Builder callee(String callee) {
                 this.callee = callee;
@@ -1317,7 +1435,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>Caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0108888****</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -1325,7 +1446,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetName.
+             * <p>Internal field. Ignore this.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder dataSetName(String dataSetName) {
                 this.dataSetName = dataSetName;
@@ -1333,7 +1457,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Total number of words in the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -1341,7 +1468,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * DurationAudio.
+             * <p>Call duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder durationAudio(Long durationAudio) {
                 this.durationAudio = durationAudio;
@@ -1349,7 +1479,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>File ID, which is the callId in the request parameters. If not specified, a random ID will be generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1357,7 +1490,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Recording file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123.wav</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1365,7 +1501,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryId.
+             * <p>Internal field. Ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder primaryId(String primaryId) {
                 this.primaryId = primaryId;
@@ -1373,7 +1512,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Remark1.
+             * <p>Custom data 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder remark1(String remark1) {
                 this.remark1 = remark1;
@@ -1381,7 +1523,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Remark2.
+             * <p>Custom data 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder remark2(String remark2) {
                 this.remark2 = remark2;
@@ -1389,7 +1534,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Remark3.
+             * <p>Custom data 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder remark3(String remark3) {
                 this.remark3 = remark3;
@@ -1397,7 +1545,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Recording file URL, used for playback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://aliyun.com/xxx.wav">http://aliyun.com/xxx.wav</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1633,7 +1784,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Agent.
+             * <p>Agent information</p>
              */
             public Builder agent(Agent agent) {
                 this.agent = agent;
@@ -1641,7 +1792,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * AsrResult.
+             * <p>Transcription result (dialogue text)</p>
              */
             public Builder asrResult(java.util.List<AsrResult> asrResult) {
                 this.asrResult = asrResult;
@@ -1649,7 +1800,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Comments.
+             * <p>Review comments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -1657,7 +1811,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Job Creation Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-24T19:31Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1665,7 +1822,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>When status is neither 0 nor 1, this field indicates the Error Details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1673,7 +1833,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * HitResult.
+             * <p>Rule hit result.</p>
              */
             public Builder hitResult(java.util.List<HitResult> hitResult) {
                 this.hitResult = hitResult;
@@ -1681,7 +1841,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Recording.
+             * <p>Recording file information</p>
              */
             public Builder recording(Recording recording) {
                 this.recording = recording;
@@ -1689,7 +1849,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Resolver.
+             * <p>The quality inspector who actually reviewed the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder resolver(String resolver) {
                 this.resolver = resolver;
@@ -1697,7 +1860,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewResult.
+             * <p>Review accuracy. Possible values: 0 (fault); 1 (correct); 2 (partially correct); 3 (pending review).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder reviewResult(Integer reviewResult) {
                 this.reviewResult = reviewResult;
@@ -1705,7 +1871,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewStatus.
+             * <p>Review status; possible values: 0 (not reviewed); 1 (reviewed).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reviewStatus(Integer reviewStatus) {
                 this.reviewStatus = reviewStatus;
@@ -1713,7 +1882,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Reviewer.
+             * <p>Username of the assigned quality inspector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder reviewer(String reviewer) {
                 this.reviewer = reviewer;
@@ -1721,7 +1893,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>Quality inspection score, with a maximum of 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -1729,7 +1904,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Current job status. Possible values: 0 (not completed); 1 (completed). The caller can use this field to determine whether the job is complete. Values other than 0 or 1 indicate an error; see the errorMessage field for Error Details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1737,7 +1915,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201231de3d34ec-40fa-4a55-8d27-76ea*****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1745,7 +1926,10 @@ public class GetSyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>Internal field. Ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

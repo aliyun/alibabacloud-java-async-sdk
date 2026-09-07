@@ -158,7 +158,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of <strong>200</strong> indicates success. Other values indicate a failure. Use this code to identify the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -174,7 +180,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data of the quality check scheme list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -182,7 +188,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82C91484-B2D5-4D2A-A21F-A6D73F4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCountId.
+         * <p>An internal parameter. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         public Builder resultCountId(String resultCountId) {
             this.resultCountId = resultCountId;
@@ -222,7 +243,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of <strong>false</strong> or <strong>null</strong> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -366,7 +390,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckType.
+             * <p>The quality check dimension to which the item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -374,7 +401,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试规则</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -382,7 +412,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -390,7 +423,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * RuleScoreType.
+             * <p>Indicates whether to calculate a score. Valid values: 1 (no score) and 3 (score).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleScoreType(Integer ruleScoreType) {
                 this.ruleScoreType = ruleScoreType;
@@ -398,7 +434,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreNum.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -406,7 +445,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreNumType.
+             * <p>The scoring type. Valid values: 0 (Points are added or deducted each time the rule is triggered) and 1 (A one-time score is given when the rule is triggered).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -414,7 +456,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreType.
+             * <p>The scoring method. Valid values: 1 (add points) and 3 (deduct points).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -422,7 +467,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The application scenario of the check item. Valid values: 10 (common check item) and 11 (SOP flow check item).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder targetType(Integer targetType) {
                 this.targetType = targetType;
@@ -476,7 +524,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * Rules.
+             * <p>The rule information. This parameter is reserved for future use. Currently, only one rule is returned.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -582,7 +630,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckName.
+             * <p>The name of the quality check dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务规范性检测</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -590,7 +641,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * <p>The type of the quality check dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -598,7 +652,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The enabled status. Valid values: 0 (disabled) and 1 (enabled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -606,7 +663,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score of the quality check dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -614,7 +674,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>An internal parameter. You can ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder targetType(Integer targetType) {
                 this.targetType = targetType;
@@ -837,7 +900,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the scheme was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-10T09:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -845,7 +911,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -853,7 +922,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the quality check scheme. Valid values: 0 (text) and 1 (audio).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataType(Integer dataType) {
                 this.dataType = dataType;
@@ -861,7 +933,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>售前使用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -869,7 +944,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the quality check scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -877,7 +955,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>The list of check items.</p>
              */
             public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -885,7 +963,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeCheckTypeList.
+             * <p>The list of quality check dimensions.</p>
              */
             public Builder schemeCheckTypeList(java.util.List<SchemeCheckTypeList> schemeCheckTypeList) {
                 this.schemeCheckTypeList = schemeCheckTypeList;
@@ -893,7 +971,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeId.
+             * <p>The ID of the quality check scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112**</p>
              */
             public Builder schemeId(Long schemeId) {
                 this.schemeId = schemeId;
@@ -901,7 +982,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the quality check scheme. Valid values: 0 (deleted), 1 (published), 2 (unpublished), and 3 (updated but not published).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -909,7 +993,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the quality check scheme template. Valid values: 1 (built-in) and 2 (user-defined).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateType(Integer templateType) {
                 this.templateType = templateType;
@@ -917,7 +1004,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the quality check scheme. Valid values: 0 (built-in) and 1 (user-defined).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -925,7 +1015,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the scheme was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-10T10:34Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -933,7 +1026,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateUserName.
+             * <p>The name of the user who last updated the scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder updateUserName(String updateUserName) {
                 this.updateUserName = updateUserName;
@@ -941,7 +1037,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the quality check scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;

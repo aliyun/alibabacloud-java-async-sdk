@@ -119,7 +119,10 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48864</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>A list of returned messages.</p>
          */
         public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
@@ -151,7 +160,10 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

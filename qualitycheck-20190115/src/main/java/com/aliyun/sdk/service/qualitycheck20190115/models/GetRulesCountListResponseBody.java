@@ -210,7 +210,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         } 
 
         /**
-         * BusinessType.
+         * <p>Business type. This field has no practical meaning and can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>忽略</p>
          */
         public Builder businessType(Integer businessType) {
             this.businessType = businessType;
@@ -218,7 +221,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -226,7 +232,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -234,7 +243,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -250,7 +262,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -258,7 +273,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns &quot;successful&quot; on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -274,7 +292,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -282,7 +303,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of rows per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -290,7 +314,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +325,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Use this field to determine request success: true means success; false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -306,7 +336,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -413,7 +446,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Error details if the request failed. Returns &quot;successful&quot; on success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(java.util.List<String> message) {
                 this.message = message;

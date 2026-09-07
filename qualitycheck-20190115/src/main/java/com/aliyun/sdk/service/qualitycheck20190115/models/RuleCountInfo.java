@@ -652,7 +652,16 @@ public class RuleCountInfo extends TeaModel {
         } 
 
         /**
-         * AutoReview.
+         * <p>The review option.</p>
+         * <ul>
+         * <li><p>1: Manual review</p>
+         * </li>
+         * <li><p>3: Automatic review</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoReview(Integer autoReview) {
             this.autoReview = autoReview;
@@ -660,7 +669,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * BusinessCategoryBasicInfoList.
+         * <p>A list of basic information about business categories.</p>
          */
         public Builder businessCategoryBasicInfoList(java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList) {
             this.businessCategoryBasicInfoList = businessCategoryBasicInfoList;
@@ -668,7 +677,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * BusinessCategoryNameList.
+         * <p>A list of business category names.</p>
          */
         public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
@@ -676,7 +685,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * BusinessRange.
+         * <p>The business scope.</p>
          */
         public Builder businessRange(java.util.List<Integer> businessRange) {
             this.businessRange = businessRange;
@@ -684,7 +693,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * CheckNumber.
+         * <p>The number of checked sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkNumber(Long checkNumber) {
             this.checkNumber = checkNumber;
@@ -692,7 +704,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Comments.
+         * <p>The comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder comments(String comments) {
             this.comments = comments;
@@ -700,7 +715,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * CreateEmpName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder createEmpName(String createEmpName) {
             this.createEmpName = createEmpName;
@@ -708,7 +726,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * CreateEmpid.
+         * <p>The employee ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder createEmpid(String createEmpid) {
             this.createEmpid = createEmpid;
@@ -716,7 +737,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615133575000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -724,7 +748,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Deny.
+         * <p>You can set this parameter to 1 to reject rule edits, or to 0 or null to allow rule edits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deny(Integer deny) {
             this.deny = deny;
@@ -732,7 +759,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Effective.
+         * <p>Indicates if the rule is active. \<code>0\\</code>: No. \<code>1\\</code>: Yes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder effective(Integer effective) {
             this.effective = effective;
@@ -740,7 +770,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * EffectiveEndTime.
+         * <p>The effective end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662685868850</p>
          */
         public Builder effectiveEndTime(String effectiveEndTime) {
             this.effectiveEndTime = effectiveEndTime;
@@ -748,7 +781,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * EffectiveStartTime.
+         * <p>The effective start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662685868850</p>
          */
         public Builder effectiveStartTime(String effectiveStartTime) {
             this.effectiveStartTime = effectiveStartTime;
@@ -756,7 +792,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650092585176</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -764,7 +803,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * FullCycle.
+         * <p>Indicates if the rule is active for the entire lifecycle. \<code>0\\</code>: No. \<code>1\\</code>: Yes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fullCycle(Integer fullCycle) {
             this.fullCycle = fullCycle;
@@ -772,7 +814,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * GraphFlow.
+         * <p>The flow canvas, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>较复杂，忽略</p>
          */
         public Builder graphFlow(Object graphFlow) {
             this.graphFlow = graphFlow;
@@ -780,7 +825,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * HitNumber.
+         * <p>The number of hit sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hitNumber(Long hitNumber) {
             this.hitNumber = hitNumber;
@@ -788,7 +836,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * HitRate.
+         * <p>The hit rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hitRate(Float hitRate) {
             this.hitRate = hitRate;
@@ -796,7 +847,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * HitRealViolationRate.
+         * <p>The hit rate of actual violations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hitRealViolationRate(Float hitRealViolationRate) {
             this.hitRealViolationRate = hitRealViolationRate;
@@ -804,7 +858,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * IsDelete.
+         * <p>Indicates if the rule is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isDelete(Integer isDelete) {
             this.isDelete = isDelete;
@@ -812,7 +869,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * IsSelect.
+         * <p>Indicates if the rule is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSelect(Boolean isSelect) {
             this.isSelect = isSelect;
@@ -820,7 +880,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * JobName.
+         * <p>The scheduled task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-1-20221012-105943</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -828,7 +891,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * LastUpdateEmpName.
+         * <p>The name of the user who last updated the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder lastUpdateEmpName(String lastUpdateEmpName) {
             this.lastUpdateEmpName = lastUpdateEmpName;
@@ -836,7 +902,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * LastUpdateEmpid.
+         * <p>The employee ID of the user who last updated the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lastUpdateEmpid(String lastUpdateEmpid) {
             this.lastUpdateEmpid = lastUpdateEmpid;
@@ -844,7 +913,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * LastUpdateTime.
+         * <p>The last update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648200901000</p>
          */
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
@@ -852,7 +924,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0801转封装测试</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -860,7 +935,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * OperationMode.
+         * <p>The operation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder operationMode(Integer operationMode) {
             this.operationMode = operationMode;
@@ -868,7 +946,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * PreReviewNumber.
+         * <p>The number of items pending review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder preReviewNumber(Long preReviewNumber) {
             this.preReviewNumber = preReviewNumber;
@@ -876,7 +957,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * ProblemNumber.
+         * <p>The number of problems found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder problemNumber(Long problemNumber) {
             this.problemNumber = problemNumber;
@@ -884,7 +968,16 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * QualityCheckType.
+         * <p>The quality check type.</p>
+         * <ul>
+         * <li><p>0: Offline</p>
+         * </li>
+         * <li><p>1: Real-time</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder qualityCheckType(Integer qualityCheckType) {
             this.qualityCheckType = qualityCheckType;
@@ -892,7 +985,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * RealViolationNumber.
+         * <p>The number of actual violations after review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder realViolationNumber(Integer realViolationNumber) {
             this.realViolationNumber = realViolationNumber;
@@ -900,7 +996,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * ReviewAccuracyRate.
+         * <p>The review accuracy rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reviewAccuracyRate(Float reviewAccuracyRate) {
             this.reviewAccuracyRate = reviewAccuracyRate;
@@ -908,7 +1007,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * ReviewNumber.
+         * <p>The number of reviewed items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reviewNumber(Long reviewNumber) {
             this.reviewNumber = reviewNumber;
@@ -916,7 +1018,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * ReviewRate.
+         * <p>The review rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reviewRate(Float reviewRate) {
             this.reviewRate = reviewRate;
@@ -924,7 +1029,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * ReviewStatusName.
+         * <p>The review status name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过</p>
          */
         public Builder reviewStatusName(String reviewStatusName) {
             this.reviewStatusName = reviewStatusName;
@@ -932,7 +1040,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Rid.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder rid(Long rid) {
             this.rid = rid;
@@ -940,7 +1051,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * RuleScoreSingleType.
+         * <p>The scoring type. \<code>8\\</code>: No score is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleScoreSingleType(Integer ruleScoreSingleType) {
             this.ruleScoreSingleType = ruleScoreSingleType;
@@ -948,7 +1062,16 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * RuleScoreType.
+         * <p>Specifies if a score is calculated.</p>
+         * <ul>
+         * <li><p>1: No</p>
+         * </li>
+         * <li><p>3: Yes</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleScoreType(Integer ruleScoreType) {
             this.ruleScoreType = ruleScoreType;
@@ -956,7 +1079,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * RuleType.
+         * <p>The rule origin. For example, a built-in rule or a user-created rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.ruleType = ruleType;
@@ -964,7 +1090,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * ScoreSubId.
+         * <p>The sub-item ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scoreSubId(Long scoreSubId) {
             this.scoreSubId = scoreSubId;
@@ -972,7 +1101,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662685868850</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -980,7 +1112,18 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the rule.</p>
+         * <ul>
+         * <li><p>0: Pending</p>
+         * </li>
+         * <li><p>1: Active</p>
+         * </li>
+         * <li><p>2: Expired</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -988,7 +1131,16 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * TargetType.
+         * <p>The rule category.</p>
+         * <ul>
+         * <li><p>10: Standard</p>
+         * </li>
+         * <li><p>11: Flow-based</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder targetType(Integer targetType) {
             this.targetType = targetType;
@@ -996,7 +1148,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.type = type;
@@ -1004,7 +1159,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * TypeName.
+         * <p>The type name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全部类别</p>
          */
         public Builder typeName(String typeName) {
             this.typeName = typeName;
@@ -1012,7 +1170,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * UnReviewNumber.
+         * <p>The number of unreviewed items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unReviewNumber(Long unReviewNumber) {
             this.unReviewNumber = unReviewNumber;
@@ -1020,7 +1181,10 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * UserGroup.
+         * <p>The user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;

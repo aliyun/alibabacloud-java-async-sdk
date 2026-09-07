@@ -145,7 +145,10 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <code>200</code> indicates success. Other values indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -169,7 +175,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. The value is successful if the request is successful. Otherwise, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +186,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -185,7 +197,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -193,7 +208,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -158,7 +158,7 @@ public class ConditionBasicInfo extends TeaModel {
         } 
 
         /**
-         * Check_range.
+         * <p>Detection range</p>
          */
         public Builder checkRange(CheckRange checkRange) {
             this.checkRange = checkRange;
@@ -166,7 +166,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Cid.
+         * <p>Condition ID, which may be the primary key in the database or a transformed identifier such as a, b, or c</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder cid(String cid) {
             this.cid = cid;
@@ -174,7 +177,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Exclusion.
+         * <p>Exclude</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder exclusion(Integer exclusion) {
             this.exclusion = exclusion;
@@ -182,7 +188,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Primary key in the database</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -190,7 +199,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Lambda.
+         * <p>Lambda expression; for example: a&amp;&amp;b</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder lambda(String lambda) {
             this.lambda = lambda;
@@ -198,7 +210,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Condition name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +221,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Operators.
+         * <p>List of operators</p>
          */
         public Builder operators(java.util.List<OperatorBasicInfo> operators) {
             this.operators = operators;
@@ -214,7 +229,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Rid.
+         * <p>ID of the rule to which the condition belongs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rid(String rid) {
             this.rid = rid;
@@ -222,7 +240,10 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * UserGroup.
+         * <p>User group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;
@@ -301,7 +322,10 @@ public class ConditionBasicInfo extends TeaModel {
             } 
 
             /**
-             * Cid.
+             * <p>Condition ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -309,7 +333,10 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * Hit_time.
+             * <p>Hit count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -317,7 +344,10 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>Location</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BEFORE</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -384,7 +414,10 @@ public class ConditionBasicInfo extends TeaModel {
             } 
 
             /**
-             * From.
+             * <p>Start index of the conversation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -392,7 +425,10 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>End index of the conversation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -511,7 +547,10 @@ public class ConditionBasicInfo extends TeaModel {
             } 
 
             /**
-             * Absolute.
+             * <p>false: relative position; the sentence position is determined in combination with the anchor and the role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder absolute(Boolean absolute) {
                 this.absolute = absolute;
@@ -519,7 +558,10 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * AllSentencesSatisfy.
+             * <p>true: Every sentence must satisfy the condition;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allSentencesSatisfy(Boolean allSentencesSatisfy) {
                 this.allSentencesSatisfy = allSentencesSatisfy;
@@ -527,7 +569,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * Anchor.
+             * <p>Precondition and postcondition</p>
              */
             public Builder anchor(Anchor anchor) {
                 this.anchor = anchor;
@@ -535,7 +577,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * Range.
+             * <p>Relative range</p>
              */
             public Builder range(Range range) {
                 this.range = range;
@@ -543,7 +585,10 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Corresponds to RoleType.type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -551,7 +596,10 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Corresponds to RoleType.id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder roleId(Integer roleId) {
                 this.roleId = roleId;

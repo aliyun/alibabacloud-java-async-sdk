@@ -74,6 +74,9 @@ public class GetQualityCheckSchemeRequest extends Request {
 
         /**
          * <p>baseMeAgentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class GetQualityCheckSchemeRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>The request parameters in JSON format. For more information, see the additional information for request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeId&quot;:&quot;187&quot;,&quot;ruleRequireInfos&quot;:[&quot;BusinessNameInfo&quot;,&quot;RuleCategory&quot;]}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

@@ -73,7 +73,10 @@ public class GetLabelGeneratedResultRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The ID of the business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class GetLabelGeneratedResultRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete JSON string. For more information, see the following details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

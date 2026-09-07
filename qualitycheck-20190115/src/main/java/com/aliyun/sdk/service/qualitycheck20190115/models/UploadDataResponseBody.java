@@ -106,7 +106,10 @@ public class UploadDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to diagnose failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UploadDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Task ID for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F5934C7-C223-4F0F-BBF3-5B3594***</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UploadDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class UploadDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID. A unique identifier for this request. Use it to trace the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F5934C7-C223-4F0F-BBF3-5B3594****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class UploadDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

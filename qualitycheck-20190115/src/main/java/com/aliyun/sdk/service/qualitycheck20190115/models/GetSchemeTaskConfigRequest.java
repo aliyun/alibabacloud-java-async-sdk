@@ -73,7 +73,10 @@ public class GetSchemeTaskConfigRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class GetSchemeTaskConfigRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>A complete JSON string. See the detailed information below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sourceDataType&quot;:3,&quot;id&quot;:588}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

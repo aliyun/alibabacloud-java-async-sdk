@@ -106,7 +106,10 @@ public class UploadDataV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UploadDataV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The taskId of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F5934C7-C223-4F0F-BBF3-5B3594***</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UploadDataV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details when the request fails. The value is &quot;successful&quot; when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class UploadDataV4ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A unique identifier for the request that can be used to locate and trace the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F5934C7-C223-4F0F-BBF3-5B3594***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class UploadDataV4ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true: successful. false/null: failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -106,7 +106,10 @@ public class CreateSkillGroupConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. A value of 200 indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>ID of the newly created configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the call fails. Returns successful if the call succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class CreateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class CreateSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

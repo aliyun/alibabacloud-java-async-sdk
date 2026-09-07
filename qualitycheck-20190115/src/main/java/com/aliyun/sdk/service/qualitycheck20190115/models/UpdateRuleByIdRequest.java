@@ -116,7 +116,7 @@ public class UpdateRuleByIdRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -125,7 +125,10 @@ public class UpdateRuleByIdRequest extends Request {
         }
 
         /**
-         * IsCopy.
+         * <p>Whether to copy. Setting to true is equivalent to copying the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isCopy(Boolean isCopy) {
             this.putBodyParameter("IsCopy", isCopy);
@@ -134,6 +137,7 @@ public class UpdateRuleByIdRequest extends Request {
         }
 
         /**
+         * <p>For more information about the format of JsonStrForlRule, see <a href="https://help.aliyun.com/document_detail/453053.html"><code>Rule object description</code></a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,10 @@ public class UpdateRuleByIdRequest extends Request {
         }
 
         /**
-         * ReturnRelatedSchemes.
+         * <p>Returns the IDs and names of quality inspection schemes associated with this rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnRelatedSchemes(Boolean returnRelatedSchemes) {
             this.putBodyParameter("ReturnRelatedSchemes", returnRelatedSchemes);
@@ -155,7 +162,10 @@ public class UpdateRuleByIdRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>Rule ID. Not required when creating, required when modifying.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

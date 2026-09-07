@@ -67,7 +67,7 @@ public class NextNodeSituations extends TeaModel {
         } 
 
         /**
-         * ConditionGroup.
+         * <p>Judgment Conditions</p>
          */
         public Builder conditionGroup(java.util.List<ConditionGroup> conditionGroup) {
             this.conditionGroup = conditionGroup;
@@ -75,7 +75,10 @@ public class NextNodeSituations extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The matching relationship between conditions: currently all are OR relationships.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -141,7 +144,7 @@ public class NextNodeSituations extends TeaModel {
             } 
 
             /**
-             * Conditions.
+             * <p>Collection of matching conditions</p>
              */
             public Builder conditions(java.util.List<JudgeNodeMetaDesc> conditions) {
                 this.conditions = conditions;
@@ -149,7 +152,10 @@ public class NextNodeSituations extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The matching relationship between conditions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(String type) {
                 this.type = type;

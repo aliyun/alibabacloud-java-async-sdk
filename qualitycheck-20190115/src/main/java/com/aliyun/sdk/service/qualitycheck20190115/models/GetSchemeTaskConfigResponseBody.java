@@ -119,7 +119,13 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Result code. <strong>200</strong> means success.</p>
+         * <blockquote>
+         * <p>Any other value means failure. The caller can use this field to identify the cause.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +133,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response data. See the additional notes below.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Use this field to check the result: true means success, false or null means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -264,7 +282,22 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>Type of the value</p>
+             * <ul>
+             * <li><p>0: String</p>
+             * </li>
+             * <li><p>1: Number</p>
+             * </li>
+             * <li><p>2: List (use list type for all parameter values when using =)</p>
+             * </li>
+             * <li><p>3: Date</p>
+             * </li>
+             * <li><p>4: List_Json</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dataType(Integer dataType) {
                 this.dataType = dataType;
@@ -272,7 +305,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ListObject.
+             * <p>List of on-the-fly recording data</p>
              */
             public Builder listObject(java.util.List<?> listObject) {
                 this.listObject = listObject;
@@ -280,7 +313,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Check item name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>callStartTime</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +324,34 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Symbol.
+             * <p>Operator</p>
+             * <ul>
+             * <li><p>1: ==</p>
+             * </li>
+             * <li><p>2: &gt;</p>
+             * </li>
+             * <li><p>3: &lt;</p>
+             * </li>
+             * <li><p>4: range</p>
+             * </li>
+             * <li><p>5: &gt;=</p>
+             * </li>
+             * <li><p>6: &lt;=</p>
+             * </li>
+             * <li><p>7: !=</p>
+             * </li>
+             * <li><p>8: null</p>
+             * </li>
+             * <li><p>9: not null</p>
+             * </li>
+             * <li><p>10: contains</p>
+             * </li>
+             * <li><p>11: does not contain</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder symbol(Integer symbol) {
                 this.symbol = symbol;
@@ -296,7 +359,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Matching value for on-the-fly recording data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;start\&quot;:\&quot;2022-09-01 00:00:00\&quot;,\&quot;end\&quot;:\&quot;2022-09-30 00:00:00\&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -350,7 +416,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignConfigContests.
+             * <p>Parameter matching configurations for on-the-fly recording</p>
              */
             public Builder assignConfigContests(java.util.List<AssignConfigContests> assignConfigContests) {
                 this.assignConfigContests = assignConfigContests;
@@ -443,7 +509,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignConfigs.
+             * <p>Data screening items for on-the-fly recording</p>
              */
             public Builder assignConfigs(java.util.List<AssignConfigs> assignConfigs) {
                 this.assignConfigs = assignConfigs;
@@ -451,7 +517,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataSets.
+             * <p>Dataset task. Manage datasets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder dataSets(String dataSets) {
                 this.dataSets = dataSets;
@@ -459,7 +528,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Index number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -467,7 +539,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResultParam.
+             * <p>JSON text for filtering conditions used in secondary quality inspection. For details, see the request parameters of the GetResult API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder resultParam(String resultParam) {
                 this.resultParam = resultParam;
@@ -534,7 +609,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>Quality inspection scheme name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>质检方案B</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +620,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeId.
+             * <p>Quality inspection scheme ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158</p>
              */
             public Builder schemeId(Long schemeId) {
                 this.schemeId = schemeId;
@@ -752,7 +833,18 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AsrTaskPriority.
+             * <p>Task priority:</p>
+             * <ul>
+             * <li><p>0 (low)</p>
+             * </li>
+             * <li><p>1 (medium)</p>
+             * </li>
+             * <li><p>2 (high)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder asrTaskPriority(Integer asrTaskPriority) {
                 this.asrTaskPriority = asrTaskPriority;
@@ -760,7 +852,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AssignType.
+             * <p>Assignment type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assignType(Integer assignType) {
                 this.assignType = assignType;
@@ -768,7 +863,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataConfig.
+             * <p>Data configuration</p>
              */
             public Builder dataConfig(DataConfig dataConfig) {
                 this.dataConfig = dataConfig;
@@ -776,7 +871,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Quality inspection task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -784,7 +882,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ManualReview.
+             * <p>Manual review</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder manualReview(Integer manualReview) {
                 this.manualReview = manualReview;
@@ -792,7 +893,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModeCustomizationId.
+             * <p>Language model ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdae396590b*****ec40f3476e274fc</p>
              */
             public Builder modeCustomizationId(String modeCustomizationId) {
                 this.modeCustomizationId = modeCustomizationId;
@@ -800,7 +904,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>Language model name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自定义模型</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -808,7 +915,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Quality inspection task name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -816,7 +926,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeIdList.
+             * <p>Quality inspection scheme IDs</p>
              */
             public Builder schemeIdList(java.util.List<Long> schemeIdList) {
                 this.schemeIdList = schemeIdList;
@@ -824,7 +934,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeList.
+             * <p>Quality inspection schemes</p>
              */
             public Builder schemeList(java.util.List<SchemeList> schemeList) {
                 this.schemeList = schemeList;
@@ -832,7 +942,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SchemeTaskConfigId.
+             * <p>Quality inspection task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder schemeTaskConfigId(Long schemeTaskConfigId) {
                 this.schemeTaskConfigId = schemeTaskConfigId;
@@ -840,7 +953,30 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDataType.
+             * <p>Quality inspection result type:</p>
+             * <ul>
+             * <li><p>1: offline voice</p>
+             * </li>
+             * <li><p>2: offline text</p>
+             * </li>
+             * <li><p>3: real-time voice</p>
+             * </li>
+             * <li><p>4: real-time text</p>
+             * </li>
+             * <li><p>5: contact center secondary quality inspection</p>
+             * </li>
+             * <li><p>51: call center voice secondary quality inspection</p>
+             * </li>
+             * <li><p>52: call center text secondary quality inspection</p>
+             * </li>
+             * <li><p>11: dataset voice</p>
+             * </li>
+             * <li><p>12: dataset text</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceDataType(String sourceDataType) {
                 this.sourceDataType = sourceDataType;
@@ -848,7 +984,10 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Enable status. Valid values: 0 (disabled) or 1 (enabled)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;

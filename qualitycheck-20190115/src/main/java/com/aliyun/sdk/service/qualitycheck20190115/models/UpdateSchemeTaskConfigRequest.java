@@ -73,7 +73,10 @@ public class UpdateSchemeTaskConfigRequest extends Request {
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class UpdateSchemeTaskConfigRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>Input parameter JSON. For details, see the request parameters section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schemeTaskConfigId&quot;:368,&quot;status&quot;:1,&quot;name&quot;:&quot;检测任务 2022-09-21 16:59:50&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("jsonStr", jsonStr);

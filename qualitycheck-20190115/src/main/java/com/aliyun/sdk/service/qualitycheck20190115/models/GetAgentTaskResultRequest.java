@@ -73,7 +73,10 @@ public class GetAgentTaskResultRequest extends Request {
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(String baseMeAgentId) {
             this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,10 @@ public class GetAgentTaskResultRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>The complete JSON string. For more information, see the following details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;vid\&quot;:\&quot;sip-11-1766561862.293393\&quot;,\&quot;taskId\&quot;:\&quot;20251224-D3B32484-2D53-5B53-A618-483A7941029E\&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);
