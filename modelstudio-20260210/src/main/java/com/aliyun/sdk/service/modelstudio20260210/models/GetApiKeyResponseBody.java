@@ -377,6 +377,9 @@ public class GetApiKeyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("workspaceId")
         private String workspaceId;
 
+        @com.aliyun.core.annotation.NameInMap("workspaceName")
+        private String workspaceName;
+
         private ApiKey(Builder builder) {
             this.apiKeyId = builder.apiKeyId;
             this.apiKeyValue = builder.apiKeyValue;
@@ -386,6 +389,7 @@ public class GetApiKeyResponseBody extends TeaModel {
             this.disabled = builder.disabled;
             this.gmtCreate = builder.gmtCreate;
             this.workspaceId = builder.workspaceId;
+            this.workspaceName = builder.workspaceName;
         }
 
         public static Builder builder() {
@@ -452,6 +456,13 @@ public class GetApiKeyResponseBody extends TeaModel {
             return this.workspaceId;
         }
 
+        /**
+         * @return workspaceName
+         */
+        public String getWorkspaceName() {
+            return this.workspaceName;
+        }
+
         public static final class Builder {
             private Long apiKeyId; 
             private String apiKeyValue; 
@@ -461,6 +472,7 @@ public class GetApiKeyResponseBody extends TeaModel {
             private Integer disabled; 
             private Long gmtCreate; 
             private String workspaceId; 
+            private String workspaceName; 
 
             private Builder() {
             } 
@@ -474,6 +486,7 @@ public class GetApiKeyResponseBody extends TeaModel {
                 this.disabled = model.disabled;
                 this.gmtCreate = model.gmtCreate;
                 this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
             } 
 
             /**
@@ -540,6 +553,14 @@ public class GetApiKeyResponseBody extends TeaModel {
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
+                return this;
+            }
+
+            /**
+             * workspaceName.
+             */
+            public Builder workspaceName(String workspaceName) {
+                this.workspaceName = workspaceName;
                 return this;
             }
 
