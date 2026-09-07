@@ -26,6 +26,10 @@ public class GetMediaRequest extends Request {
     private Long authTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizConfig")
+    private String bizConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputURL")
     private String inputURL;
 
@@ -37,6 +41,7 @@ public class GetMediaRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.authTimeout = builder.authTimeout;
+        this.bizConfig = builder.bizConfig;
         this.inputURL = builder.inputURL;
         this.mediaId = builder.mediaId;
     }
@@ -69,6 +74,13 @@ public class GetMediaRequest extends Request {
     }
 
     /**
+     * @return bizConfig
+     */
+    public String getBizConfig() {
+        return this.bizConfig;
+    }
+
+    /**
      * @return inputURL
      */
     public String getInputURL() {
@@ -85,6 +97,7 @@ public class GetMediaRequest extends Request {
     public static final class Builder extends Request.Builder<GetMediaRequest, Builder> {
         private String regionId; 
         private Long authTimeout; 
+        private String bizConfig; 
         private String inputURL; 
         private String mediaId; 
 
@@ -96,6 +109,7 @@ public class GetMediaRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.authTimeout = request.authTimeout;
+            this.bizConfig = request.bizConfig;
             this.inputURL = request.inputURL;
             this.mediaId = request.mediaId;
         } 
@@ -115,6 +129,15 @@ public class GetMediaRequest extends Request {
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
             this.authTimeout = authTimeout;
+            return this;
+        }
+
+        /**
+         * BizConfig.
+         */
+        public Builder bizConfig(String bizConfig) {
+            this.putQueryParameter("BizConfig", bizConfig);
+            this.bizConfig = bizConfig;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class DeleteMediasRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizConfig")
+    private String bizConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeletePhysicalFiles")
     private Boolean deletePhysicalFiles;
 
@@ -36,6 +40,7 @@ public class DeleteMediasRequest extends Request {
     private DeleteMediasRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.bizConfig = builder.bizConfig;
         this.deletePhysicalFiles = builder.deletePhysicalFiles;
         this.inputURLs = builder.inputURLs;
         this.mediaIds = builder.mediaIds;
@@ -62,6 +67,13 @@ public class DeleteMediasRequest extends Request {
     }
 
     /**
+     * @return bizConfig
+     */
+    public String getBizConfig() {
+        return this.bizConfig;
+    }
+
+    /**
      * @return deletePhysicalFiles
      */
     public Boolean getDeletePhysicalFiles() {
@@ -84,6 +96,7 @@ public class DeleteMediasRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteMediasRequest, Builder> {
         private String regionId; 
+        private String bizConfig; 
         private Boolean deletePhysicalFiles; 
         private String inputURLs; 
         private String mediaIds; 
@@ -95,6 +108,7 @@ public class DeleteMediasRequest extends Request {
         private Builder(DeleteMediasRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.bizConfig = request.bizConfig;
             this.deletePhysicalFiles = request.deletePhysicalFiles;
             this.inputURLs = request.inputURLs;
             this.mediaIds = request.mediaIds;
@@ -106,6 +120,15 @@ public class DeleteMediasRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BizConfig.
+         */
+        public Builder bizConfig(String bizConfig) {
+            this.putQueryParameter("BizConfig", bizConfig);
+            this.bizConfig = bizConfig;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class ImportMediaRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizConfig")
+    private String bizConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CategoryId")
     private Long categoryId;
 
@@ -73,9 +77,14 @@ public class ImportMediaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("YikeAssetConfig")
+    private String yikeAssetConfig;
+
     private ImportMediaRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.bizConfig = builder.bizConfig;
         this.categoryId = builder.categoryId;
         this.coverURL = builder.coverURL;
         this.description = builder.description;
@@ -89,6 +98,7 @@ public class ImportMediaRequest extends Request {
         this.registerConfig = builder.registerConfig;
         this.title = builder.title;
         this.userData = builder.userData;
+        this.yikeAssetConfig = builder.yikeAssetConfig;
     }
 
     public static Builder builder() {
@@ -109,6 +119,13 @@ public class ImportMediaRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return bizConfig
+     */
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     /**
@@ -202,8 +219,16 @@ public class ImportMediaRequest extends Request {
         return this.userData;
     }
 
+    /**
+     * @return yikeAssetConfig
+     */
+    public String getYikeAssetConfig() {
+        return this.yikeAssetConfig;
+    }
+
     public static final class Builder extends Request.Builder<ImportMediaRequest, Builder> {
         private String regionId; 
+        private String bizConfig; 
         private Long categoryId; 
         private String coverURL; 
         private String description; 
@@ -217,6 +242,7 @@ public class ImportMediaRequest extends Request {
         private String registerConfig; 
         private String title; 
         private String userData; 
+        private String yikeAssetConfig; 
 
         private Builder() {
             super();
@@ -225,6 +251,7 @@ public class ImportMediaRequest extends Request {
         private Builder(ImportMediaRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.bizConfig = request.bizConfig;
             this.categoryId = request.categoryId;
             this.coverURL = request.coverURL;
             this.description = request.description;
@@ -238,6 +265,7 @@ public class ImportMediaRequest extends Request {
             this.registerConfig = request.registerConfig;
             this.title = request.title;
             this.userData = request.userData;
+            this.yikeAssetConfig = request.yikeAssetConfig;
         } 
 
         /**
@@ -246,6 +274,15 @@ public class ImportMediaRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BizConfig.
+         */
+        public Builder bizConfig(String bizConfig) {
+            this.putQueryParameter("BizConfig", bizConfig);
+            this.bizConfig = bizConfig;
             return this;
         }
 
@@ -363,6 +400,15 @@ public class ImportMediaRequest extends Request {
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
             this.userData = userData;
+            return this;
+        }
+
+        /**
+         * YikeAssetConfig.
+         */
+        public Builder yikeAssetConfig(String yikeAssetConfig) {
+            this.putQueryParameter("YikeAssetConfig", yikeAssetConfig);
+            this.yikeAssetConfig = yikeAssetConfig;
             return this;
         }
 

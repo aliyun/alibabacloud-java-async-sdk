@@ -22,6 +22,10 @@ public class SearchMediaRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizConfig")
+    private String bizConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CategoryId")
     private Long categoryId;
 
@@ -48,6 +52,7 @@ public class SearchMediaRequest extends Request {
     private SearchMediaRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.bizConfig = builder.bizConfig;
         this.categoryId = builder.categoryId;
         this.match = builder.match;
         this.pageNo = builder.pageNo;
@@ -74,6 +79,13 @@ public class SearchMediaRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return bizConfig
+     */
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     /**
@@ -120,6 +132,7 @@ public class SearchMediaRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchMediaRequest, Builder> {
         private String regionId; 
+        private String bizConfig; 
         private Long categoryId; 
         private String match; 
         private Integer pageNo; 
@@ -134,6 +147,7 @@ public class SearchMediaRequest extends Request {
         private Builder(SearchMediaRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.bizConfig = request.bizConfig;
             this.categoryId = request.categoryId;
             this.match = request.match;
             this.pageNo = request.pageNo;
@@ -148,6 +162,15 @@ public class SearchMediaRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BizConfig.
+         */
+        public Builder bizConfig(String bizConfig) {
+            this.putQueryParameter("BizConfig", bizConfig);
+            this.bizConfig = bizConfig;
             return this;
         }
 

@@ -26,14 +26,24 @@ public class BatchGetMediasRequest extends Request {
     private Long authTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizConfig")
+    private String bizConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaIds")
     private String mediaIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnDynamicMeta")
+    private Boolean returnDynamicMeta;
 
     private BatchGetMediasRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.authTimeout = builder.authTimeout;
+        this.bizConfig = builder.bizConfig;
         this.mediaIds = builder.mediaIds;
+        this.returnDynamicMeta = builder.returnDynamicMeta;
     }
 
     public static Builder builder() {
@@ -64,16 +74,32 @@ public class BatchGetMediasRequest extends Request {
     }
 
     /**
+     * @return bizConfig
+     */
+    public String getBizConfig() {
+        return this.bizConfig;
+    }
+
+    /**
      * @return mediaIds
      */
     public String getMediaIds() {
         return this.mediaIds;
     }
 
+    /**
+     * @return returnDynamicMeta
+     */
+    public Boolean getReturnDynamicMeta() {
+        return this.returnDynamicMeta;
+    }
+
     public static final class Builder extends Request.Builder<BatchGetMediasRequest, Builder> {
         private String regionId; 
         private Long authTimeout; 
+        private String bizConfig; 
         private String mediaIds; 
+        private Boolean returnDynamicMeta; 
 
         private Builder() {
             super();
@@ -83,7 +109,9 @@ public class BatchGetMediasRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.authTimeout = request.authTimeout;
+            this.bizConfig = request.bizConfig;
             this.mediaIds = request.mediaIds;
+            this.returnDynamicMeta = request.returnDynamicMeta;
         } 
 
         /**
@@ -105,11 +133,29 @@ public class BatchGetMediasRequest extends Request {
         }
 
         /**
+         * BizConfig.
+         */
+        public Builder bizConfig(String bizConfig) {
+            this.putQueryParameter("BizConfig", bizConfig);
+            this.bizConfig = bizConfig;
+            return this;
+        }
+
+        /**
          * MediaIds.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
             this.mediaIds = mediaIds;
+            return this;
+        }
+
+        /**
+         * ReturnDynamicMeta.
+         */
+        public Builder returnDynamicMeta(Boolean returnDynamicMeta) {
+            this.putQueryParameter("ReturnDynamicMeta", returnDynamicMeta);
+            this.returnDynamicMeta = returnDynamicMeta;
             return this;
         }
 

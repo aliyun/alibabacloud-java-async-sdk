@@ -26,6 +26,10 @@ public class UpdateMediaRequest extends Request {
     private Boolean appendTags;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizConfig")
+    private String bizConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CategoryId")
     private Long categoryId;
 
@@ -65,6 +69,7 @@ public class UpdateMediaRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.appendTags = builder.appendTags;
+        this.bizConfig = builder.bizConfig;
         this.categoryId = builder.categoryId;
         this.coverURL = builder.coverURL;
         this.description = builder.description;
@@ -101,6 +106,13 @@ public class UpdateMediaRequest extends Request {
      */
     public Boolean getAppendTags() {
         return this.appendTags;
+    }
+
+    /**
+     * @return bizConfig
+     */
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     /**
@@ -169,6 +181,7 @@ public class UpdateMediaRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateMediaRequest, Builder> {
         private String regionId; 
         private Boolean appendTags; 
+        private String bizConfig; 
         private Long categoryId; 
         private String coverURL; 
         private String description; 
@@ -187,6 +200,7 @@ public class UpdateMediaRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.appendTags = request.appendTags;
+            this.bizConfig = request.bizConfig;
             this.categoryId = request.categoryId;
             this.coverURL = request.coverURL;
             this.description = request.description;
@@ -213,6 +227,15 @@ public class UpdateMediaRequest extends Request {
         public Builder appendTags(Boolean appendTags) {
             this.putQueryParameter("AppendTags", appendTags);
             this.appendTags = appendTags;
+            return this;
+        }
+
+        /**
+         * BizConfig.
+         */
+        public Builder bizConfig(String bizConfig) {
+            this.putQueryParameter("BizConfig", bizConfig);
+            this.bizConfig = bizConfig;
             return this;
         }
 
