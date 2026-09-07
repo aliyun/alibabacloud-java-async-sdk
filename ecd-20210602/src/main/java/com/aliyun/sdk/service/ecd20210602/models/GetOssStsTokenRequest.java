@@ -59,7 +59,10 @@ public class GetOssStsTokenRequest extends Request {
         } 
 
         /**
-         * FileType.
+         * <p>The file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SKILL</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);

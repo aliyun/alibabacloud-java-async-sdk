@@ -87,7 +87,10 @@ public class SetTenantSkillEnabledRequest extends Request {
         } 
 
         /**
-         * Enabled.
+         * <p>Specifies whether to enable the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -96,7 +99,10 @@ public class SetTenantSkillEnabledRequest extends Request {
         }
 
         /**
-         * SkillChannel.
+         * <p>The skill channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUSINESS</p>
          */
         public Builder skillChannel(String skillChannel) {
             this.putQueryParameter("SkillChannel", skillChannel);
@@ -105,7 +111,7 @@ public class SetTenantSkillEnabledRequest extends Request {
         }
 
         /**
-         * SkillIds.
+         * <p>The list of skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             this.putQueryParameter("SkillIds", skillIds);

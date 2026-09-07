@@ -185,7 +185,10 @@ public class CreateTenantSkillRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>akm-98f66829***</p>
          */
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
@@ -194,7 +197,10 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the skill. Maximum length: 500 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This skill is used for****</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +209,10 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name****</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -212,7 +221,7 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * EnvVars.
+         * <p>The environment variables.</p>
          */
         public Builder envVars(java.util.Map<String, String> envVars) {
             String envVarsShrink = shrink(envVars, "EnvVars", "json");
@@ -222,7 +231,10 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * IconETag.
+         * <p>The icon parsing tag. This parameter is required when SkillIcon is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21E9A5B273CB8EC0675*********</p>
          */
         public Builder iconETag(String iconETag) {
             this.putQueryParameter("IconETag", iconETag);
@@ -231,7 +243,14 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * SkillChannel.
+         * <p>The skill channel. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: Enterprise Edition.</li>
+         * <li>BUSINESS: Business Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUSINESS</p>
          */
         public Builder skillChannel(String skillChannel) {
             this.putQueryParameter("SkillChannel", skillChannel);
@@ -240,7 +259,7 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * SkillIcon.
+         * <p>The skill icon.</p>
          */
         public Builder skillIcon(String skillIcon) {
             this.putQueryParameter("SkillIcon", skillIcon);
@@ -249,7 +268,10 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * SkillVersion.
+         * <p>The skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder skillVersion(String skillVersion) {
             this.putQueryParameter("SkillVersion", skillVersion);
@@ -258,7 +280,10 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * Slug.
+         * <p>The slug identifier of the skill. This parameter is user-defined and must be unique within the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>find-skills****</p>
          */
         public Builder slug(String slug) {
             this.putQueryParameter("Slug", slug);
@@ -267,7 +292,10 @@ public class CreateTenantSkillRequest extends Request {
         }
 
         /**
-         * TaskKey.
+         * <p>The file parsing task key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1CF3D69-529D-****</p>
          */
         public Builder taskKey(String taskKey) {
             this.putQueryParameter("TaskKey", taskKey);

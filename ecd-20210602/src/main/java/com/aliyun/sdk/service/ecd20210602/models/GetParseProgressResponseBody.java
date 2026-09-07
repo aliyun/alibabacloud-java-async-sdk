@@ -67,7 +67,7 @@ public class GetParseProgressResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data object for parsing the skill package.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetParseProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,7 +256,10 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code returned when an execution exception occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Package.ReadFailed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -261,7 +267,10 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when an execution exception occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to read skill package</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -285,7 +294,10 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The name in the SKILL.md file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name****</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -293,7 +305,10 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The skill slug identifier. This is user-defined and unique within the tenant dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admapix******</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -301,7 +316,15 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>PARSING_METADATA: parsing in progress.</li>
+             * <li>COMPLETED: completed.</li>
+             * <li>FAILED: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +332,10 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TaskKey.
+             * <p>The task key for parsing the skill package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2E7D8B71-2677-1B4C-9E25-A88B9C5******</p>
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
@@ -317,7 +343,10 @@ public class GetParseProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

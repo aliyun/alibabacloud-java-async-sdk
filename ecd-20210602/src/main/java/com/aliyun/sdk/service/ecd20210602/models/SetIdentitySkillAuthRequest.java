@@ -120,6 +120,11 @@ public class SetIdentitySkillAuthRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to automatically install. Valid values:</p>
+         * <ul>
+         * <li>true: yes</li>
+         * <li>false: no</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +137,7 @@ public class SetIdentitySkillAuthRequest extends Request {
         }
 
         /**
+         * <p>The list of authorized objects.</p>
          * <p>This parameter is required.</p>
          */
         public Builder identities(java.util.List<Identities> identities) {
@@ -141,6 +147,7 @@ public class SetIdentitySkillAuthRequest extends Request {
         }
 
         /**
+         * <p>The operation type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +160,11 @@ public class SetIdentitySkillAuthRequest extends Request {
         }
 
         /**
+         * <p>The skill channel. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: enterprise edition</li>
+         * <li>BUSINESS: business edition</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +177,7 @@ public class SetIdentitySkillAuthRequest extends Request {
         }
 
         /**
+         * <p>The list of skill IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
@@ -235,6 +248,7 @@ public class SetIdentitySkillAuthRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the authorized object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -246,6 +260,7 @@ public class SetIdentitySkillAuthRequest extends Request {
             }
 
             /**
+             * <p>The region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

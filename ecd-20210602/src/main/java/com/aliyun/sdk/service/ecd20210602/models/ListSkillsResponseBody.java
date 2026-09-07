@@ -80,7 +80,10 @@ public class ListSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Skills.
+         * <p>The list of skill details.</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -96,7 +99,10 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -612,7 +618,10 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>akm-98f66829***</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -620,7 +629,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Author.
+             * <p>The author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li***</p>
              */
             public Builder author(String author) {
                 this.author = author;
@@ -628,7 +640,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * <p>The currently effective version number. If no version is effective, an empty value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -636,7 +651,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This skill is used for****</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -644,7 +662,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name****</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -652,7 +673,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the skill is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -660,7 +684,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvVars.
+             * <p>The environment variables.</p>
              */
             public Builder envVars(java.util.Map<String, String> envVars) {
                 this.envVars = envVars;
@@ -668,7 +692,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-28T10:32:53Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -676,7 +703,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillIconUrl.
+             * <p>The URL of the skill icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<em><strong>-</strong></em>-****</p>
              */
             public Builder skillIconUrl(String skillIconUrl) {
                 this.skillIconUrl = skillIconUrl;
@@ -684,7 +714,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The unique identifier of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-04rj8mzqj1fu****</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -692,7 +725,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The name in the SKILL.md file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name****</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -708,7 +744,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The skill slug identifier, which is user-defined and unique within the tenant dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>find-skills****</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -716,7 +755,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceMarket.
+             * <p>The source marketplace code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLAWHUB</p>
              */
             public Builder sourceMarket(String sourceMarket) {
                 this.sourceMarket = sourceMarket;
@@ -724,7 +766,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceMarketName.
+             * <p>The source marketplace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClawHub</p>
              */
             public Builder sourceMarketName(String sourceMarketName) {
                 this.sourceMarketName = sourceMarketName;
@@ -732,7 +777,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierType.
+             * <p>The supply type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder supplierType(String supplierType) {
                 this.supplierType = supplierType;

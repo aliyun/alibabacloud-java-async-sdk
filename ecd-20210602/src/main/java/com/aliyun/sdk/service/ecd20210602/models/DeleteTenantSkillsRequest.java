@@ -73,7 +73,14 @@ public class DeleteTenantSkillsRequest extends Request {
         } 
 
         /**
-         * SkillChannel.
+         * <p>The skill channel. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: Enterprise edition.</li>
+         * <li>BUSINESS: Business edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder skillChannel(String skillChannel) {
             this.putQueryParameter("SkillChannel", skillChannel);
@@ -82,7 +89,7 @@ public class DeleteTenantSkillsRequest extends Request {
         }
 
         /**
-         * SkillIds.
+         * <p>The list of skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             this.putQueryParameter("SkillIds", skillIds);

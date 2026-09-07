@@ -103,7 +103,10 @@ public class ListSkillAuthedIdentitiesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -112,7 +115,10 @@ public class ListSkillAuthedIdentitiesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -121,6 +127,11 @@ public class ListSkillAuthedIdentitiesRequest extends Request {
         }
 
         /**
+         * <p>The skill channel. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: enterprise edition</li>
+         * <li>BUSINESS: business edition</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +144,7 @@ public class ListSkillAuthedIdentitiesRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

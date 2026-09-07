@@ -90,6 +90,11 @@ public class SetIdentitySkillSecurityRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to enable the skill installation permission. Valid values:</p>
+         * <ul>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +107,7 @@ public class SetIdentitySkillSecurityRequest extends Request {
         }
 
         /**
+         * <p>The list of resource information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder identityIds(java.util.List<IdentityIds> identityIds) {
@@ -111,6 +117,11 @@ public class SetIdentitySkillSecurityRequest extends Request {
         }
 
         /**
+         * <p>The skill channel. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: enterprise edition.</li>
+         * <li>BUSINESS: business edition.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +195,7 @@ public class SetIdentitySkillSecurityRequest extends Request {
             } 
 
             /**
+             * <p>The resource information ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -195,6 +207,7 @@ public class SetIdentitySkillSecurityRequest extends Request {
             }
 
             /**
+             * <p>The region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

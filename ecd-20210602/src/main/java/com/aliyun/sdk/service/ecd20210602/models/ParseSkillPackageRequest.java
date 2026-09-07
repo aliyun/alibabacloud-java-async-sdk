@@ -75,6 +75,7 @@ public class ParseSkillPackageRequest extends Request {
         } 
 
         /**
+         * <p>The OSS ETag returned after the file is uploaded to OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ParseSkillPackageRequest extends Request {
         }
 
         /**
+         * <p>The OSS path of the skill package.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ossObjectKey(String ossObjectKey) {

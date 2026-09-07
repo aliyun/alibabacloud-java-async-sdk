@@ -54,7 +54,10 @@ public class SetIdentitySkillAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,7 @@ public class ListSkillAuthedIdentitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * Identities.
+         * <p>The list of authorized objects.</p>
          */
         public Builder identities(java.util.List<Identities> identities) {
             this.identities = identities;
@@ -88,7 +88,10 @@ public class ListSkillAuthedIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CC5E450-FC43-4F5B-B540-9964BD*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListSkillAuthedIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,14 @@ public class ListSkillAuthedIdentitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoInstall.
+             * <p>Indicates whether automatic installation is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Automatic installation is enabled.</li>
+             * <li>false: Automatic installation is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoInstall(Boolean autoInstall) {
                 this.autoInstall = autoInstall;
@@ -170,7 +183,10 @@ public class ListSkillAuthedIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityId.
+             * <p>The ID of the authorized object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-b9ej3xiok4tjbgf9x****</p>
              */
             public Builder identityId(String identityId) {
                 this.identityId = identityId;

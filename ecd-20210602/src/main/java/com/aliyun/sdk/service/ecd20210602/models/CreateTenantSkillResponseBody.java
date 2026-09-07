@@ -67,7 +67,10 @@ public class CreateTenantSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateTenantSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillId.
+         * <p>The unique ID of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-04rj8mzqj1fu****</p>
          */
         public Builder skillId(String skillId) {
             this.skillId = skillId;

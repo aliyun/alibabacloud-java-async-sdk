@@ -132,7 +132,10 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessKeyId.
+         * <p>The AccessKey ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.NZeNA1kdCm4QPuAJ9kN******</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -140,7 +143,10 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * AccessKeySecret.
+         * <p>The STS temporary AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9EStV7fgkSQsPuBi576EmNQXLxJGddL2EGyX********</p>
          */
         public Builder accessKeySecret(String accessKeySecret) {
             this.accessKeySecret = accessKeySecret;
@@ -148,7 +154,10 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Bucket.
+         * <p>The logical OSS bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-wy-*****</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -156,7 +165,7 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ObjectKeyPrefix.
+         * <p>The project storage path.</p>
          */
         public Builder objectKeyPrefix(String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
@@ -164,7 +173,10 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * OssRegion.
+         * <p>The region to which the current OSS bucket belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         public Builder ossRegion(String ossRegion) {
             this.ossRegion = ossRegion;
@@ -172,7 +184,10 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class GetOssStsTokenResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityToken.
+         * <p>The Security Token Service (STS) token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAISvAN1q6Ft5B2yfSjIr5n2Bez81ZRTgqOGZn6FkHBnXf9qgI6apjz2IH*******</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;

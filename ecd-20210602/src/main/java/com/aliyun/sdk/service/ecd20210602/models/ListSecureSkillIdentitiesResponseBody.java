@@ -80,7 +80,7 @@ public class ListSecureSkillIdentitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * Identities.
+         * <p>The list of resource information.</p>
          */
         public Builder identities(java.util.List<String> identities) {
             this.identities = identities;
@@ -88,7 +88,10 @@ public class ListSecureSkillIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListSecureSkillIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

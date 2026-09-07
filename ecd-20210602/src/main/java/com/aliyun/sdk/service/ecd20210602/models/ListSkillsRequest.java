@@ -38,6 +38,10 @@ public class ListSkillsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SupplierType")
     private String supplierType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagCodes")
+    private java.util.List<String> tagCodes;
+
     private ListSkillsRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
@@ -45,6 +49,7 @@ public class ListSkillsRequest extends Request {
         this.skillChannel = builder.skillChannel;
         this.skillIds = builder.skillIds;
         this.supplierType = builder.supplierType;
+        this.tagCodes = builder.tagCodes;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ListSkillsRequest extends Request {
         return this.supplierType;
     }
 
+    /**
+     * @return tagCodes
+     */
+    public java.util.List<String> getTagCodes() {
+        return this.tagCodes;
+    }
+
     public static final class Builder extends Request.Builder<ListSkillsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String skillChannel; 
         private java.util.List<String> skillIds; 
         private String supplierType; 
+        private java.util.List<String> tagCodes; 
 
         private Builder() {
             super();
@@ -113,10 +126,14 @@ public class ListSkillsRequest extends Request {
             this.skillChannel = request.skillChannel;
             this.skillIds = request.skillIds;
             this.supplierType = request.supplierType;
+            this.tagCodes = request.tagCodes;
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +142,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of rows per page in a paged query. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -134,6 +154,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
+         * <p>The skill channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +167,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * SkillIds.
+         * <p>The list of skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             this.putQueryParameter("SkillIds", skillIds);
@@ -155,11 +176,23 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * SupplierType.
+         * <p>The supply type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WUYING</p>
          */
         public Builder supplierType(String supplierType) {
             this.putQueryParameter("SupplierType", supplierType);
             this.supplierType = supplierType;
+            return this;
+        }
+
+        /**
+         * <p>TagCodes</p>
+         */
+        public Builder tagCodes(java.util.List<String> tagCodes) {
+            this.putQueryParameter("TagCodes", tagCodes);
+            this.tagCodes = tagCodes;
             return this;
         }
 

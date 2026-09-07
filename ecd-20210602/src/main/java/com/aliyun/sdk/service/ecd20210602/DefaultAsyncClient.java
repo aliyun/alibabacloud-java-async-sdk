@@ -30,32 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "ecd";
         this.version = "2021-06-02";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "ecd.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "ecd.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "ecd.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "ecd.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ecd.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ecd.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "ecd.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -101,6 +76,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The obtained SecurityToken is valid for 15 minutes.</p>
+     * 
      * @param request the request parameters of GetOssStsToken  GetOssStsTokenRequest
      * @return GetOssStsTokenResponse
      */
@@ -119,6 +97,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the ParseSkillPackage operation first. Poll this operation every 3 seconds.</p>
+     * 
      * @param request the request parameters of GetParseProgress  GetParseProgressRequest
      * @return GetParseProgressResponse
      */
@@ -137,6 +118,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The resource type supports only cloud computers.</p>
+     * 
      * @param request the request parameters of ListSecureSkillIdentities  ListSecureSkillIdentitiesRequest
      * @return ListSecureSkillIdentitiesResponse
      */
@@ -155,6 +139,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Authorized objects support only cloud computers.</p>
+     * 
      * @param request the request parameters of ListSkillAuthedIdentities  ListSkillAuthedIdentitiesRequest
      * @return ListSkillAuthedIdentitiesResponse
      */
@@ -191,6 +178,36 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The query scope is determined by the caller identity and includes applications uploaded by the current tenant and marketplace applications that the tenant is authorized to view. The visibility of marketplace applications is subject to authorization and display policy restrictions. The authorization and auto-installation information in the list represents application configurations and does not indicate the actual installation result on a specific device.</p>
+     * <ul>
+     * <li><strong>Application identity</strong>: Id is a numeric application ID, and AppUid is a character string UID. The two cannot be used interchangeably.</li>
+     * <li><strong>Authorization scope</strong>: DistributeType is used together with AuthType. For example, <code>AuthType=auth_type_user</code> and <code>DistributeType=ALL</code> indicate that the application is allocated to all users on a per-user dimension.</li>
+     * <li><strong>Auto-installation</strong>: AutoInstallmentType specifies the auto-installation scope policy, which is used to distinguish between full, partial, or disabled auto-installation.</li>
+     * <li><strong>Partial auto-installation</strong>: When AutoInstallmentType is set to 1, use SetAutoInstallUser or SetAutoInstallDesktop to configure specific users or cloud desktops. OperationType=1 indicates enabled, and OperationType=2 indicates disabled. ListTenantApp only returns configurations and does not modify auto-installation settings.</li>
+     * <li><strong>Capabilities and execution results</strong>: The silent installation capability is application metadata returned in the response. To determine the actual installation or execution result on a device, use the corresponding execution result query capability.</li>
+     * <li><strong>Optional information</strong>: Information such as timestamps may be empty.</li>
+     * <li><strong>Compatibility handling</strong>: Extension information and subtype do not use closed enumerations. Clients should ignore unrecognized extension fields and be compatible with new enumeration values.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListTenantApp  ListTenantAppRequest
+     * @return ListTenantAppResponse
+     */
+    @Override
+    public CompletableFuture<ListTenantAppResponse> listTenantApp(ListTenantAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTenantApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTenantAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTenantAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ParseSkillPackage  ParseSkillPackageRequest
      * @return ParseSkillPackageResponse
      */
@@ -209,6 +226,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The authorized object supports only cloud computers.</p>
+     * 
      * @param request the request parameters of SetIdentitySkillAuth  SetIdentitySkillAuthRequest
      * @return SetIdentitySkillAuthResponse
      */
@@ -227,6 +247,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The resource type supports only cloud computers.</p>
+     * 
      * @param request the request parameters of SetIdentitySkillSecurity  SetIdentitySkillSecurityRequest
      * @return SetIdentitySkillSecurityResponse
      */
