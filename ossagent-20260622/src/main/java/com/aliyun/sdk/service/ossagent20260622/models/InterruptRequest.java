@@ -59,7 +59,10 @@ public class InterruptRequest extends Request {
         } 
 
         /**
-         * sessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder sessionId(String sessionId) {
             this.putPathParameter("sessionId", sessionId);

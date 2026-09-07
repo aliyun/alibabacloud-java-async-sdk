@@ -115,7 +115,10 @@ public class ConfirmRequest extends Request {
         } 
 
         /**
-         * confirmed.
+         * <p>Specifies whether to approve the tool execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder confirmed(Boolean confirmed) {
             this.putBodyParameter("confirmed", confirmed);
@@ -124,7 +127,10 @@ public class ConfirmRequest extends Request {
         }
 
         /**
-         * phase.
+         * <p>The current execution phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_INPUT</p>
          */
         public Builder phase(String phase) {
             this.putBodyParameter("phase", phase);
@@ -133,7 +139,10 @@ public class ConfirmRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>The reason for whether to call the tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);
@@ -142,7 +151,10 @@ public class ConfirmRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The Q&amp;A session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("sessionId", sessionId);
@@ -151,7 +163,7 @@ public class ConfirmRequest extends Request {
         }
 
         /**
-         * toolCalls.
+         * <p>The tool invocations.</p>
          */
         public Builder toolCalls(java.util.List<ToolCalls> toolCalls) {
             this.putBodyParameter("toolCalls", toolCalls);
@@ -232,7 +244,10 @@ public class ConfirmRequest extends Request {
             } 
 
             /**
-             * id.
+             * <p>The tool ID, returned by the Chat operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_662cc029b3444d8d923a7ea6</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -240,7 +255,13 @@ public class ConfirmRequest extends Request {
             }
 
             /**
-             * modifiedInput.
+             * <p>The command to execute for the tool calling operation, returned by the Chat operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;command&quot;: &quot;api put-bucket-acl --bucket xxx --acl private&quot;,
+             *     &quot;region&quot;: &quot;cn-hangzhou&quot;
+             * }</p>
              */
             public Builder modifiedInput(java.util.Map<String, ?> modifiedInput) {
                 this.modifiedInput = modifiedInput;
@@ -248,7 +269,10 @@ public class ConfirmRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ossutil_safe</p>
              */
             public Builder name(String name) {
                 this.name = name;

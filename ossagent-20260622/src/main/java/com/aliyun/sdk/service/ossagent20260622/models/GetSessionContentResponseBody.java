@@ -80,7 +80,7 @@ public class GetSessionContentResponseBody extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The conversation text content.</p>
          */
         public Builder content(java.util.List<Content> content) {
             this.content = content;
@@ -99,7 +99,10 @@ public class GetSessionContentResponseBody extends TeaModel {
         }
 
         /**
-         * sessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -165,7 +168,10 @@ public class GetSessionContentResponseBody extends TeaModel {
             } 
 
             /**
-             * agentContent.
+             * <p>The detailed conversation chunk content. All chunks compose the complete response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;id\&quot;:\&quot;16aa7737-9e6a-4500-abd2-96c5f17d1188\&quot;,\&quot;object\&quot;:\&quot;chat.completion.chunk\&quot;,\&quot;created\&quot;:1788408524,\&quot;model\&quot;:\&quot;oss-agent\&quot;,\&quot;choices\&quot;:[{\&quot;index\&quot;:0,\&quot;delta\&quot;:{\&quot;role\&quot;:\&quot;assistant\&quot;,\&quot;content\&quot;:\&quot;，Hello， I am OSS Agent\&quot;}}]}</p>
              */
             public Builder agentContent(String agentContent) {
                 this.agentContent = agentContent;
@@ -173,7 +179,10 @@ public class GetSessionContentResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The time when the content was generated, in the yyyy-MM-dd HH:mm:ss,SSS format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774577589</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -266,7 +275,7 @@ public class GetSessionContentResponseBody extends TeaModel {
             } 
 
             /**
-             * agentContents.
+             * <p>The detailed conversation content.</p>
              */
             public Builder agentContents(java.util.List<AgentContents> agentContents) {
                 this.agentContents = agentContents;
@@ -274,7 +283,10 @@ public class GetSessionContentResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The time when the session occurred, in the yyyy-MM-dd HH:mm:ss,SSS format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-03 04:08:30,637</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -282,7 +294,10 @@ public class GetSessionContentResponseBody extends TeaModel {
             }
 
             /**
-             * toolConfirm.
+             * <p>Indicates whether tool confirmation is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder toolConfirm(Boolean toolConfirm) {
                 this.toolConfirm = toolConfirm;
@@ -290,7 +305,10 @@ public class GetSessionContentResponseBody extends TeaModel {
             }
 
             /**
-             * userContent.
+             * <p>The user content of the first message in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;role\&quot;:\&quot;user\&quot;,\&quot;content\&quot;:\&quot;Hi OSS\&quot;}]</p>
              */
             public Builder userContent(String userContent) {
                 this.userContent = userContent;

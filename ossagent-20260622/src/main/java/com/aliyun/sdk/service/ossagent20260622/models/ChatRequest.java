@@ -73,7 +73,7 @@ public class ChatRequest extends Request {
         } 
 
         /**
-         * messages.
+         * <p>The messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("messages", messages);
@@ -82,7 +82,10 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The ID of the Q&amp;A session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("sessionId", sessionId);
@@ -150,7 +153,10 @@ public class ChatRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The conversation text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -158,7 +164,10 @@ public class ChatRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>The role of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
