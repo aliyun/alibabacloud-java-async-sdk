@@ -119,7 +119,10 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
         } 
 
         /**
-         * NoticeCountDetail.
+         * <p>The message notification quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{TotalCount=189, RemainCount=94, UsedCount=95}</p>
          */
         public Builder noticeCountDetail(String noticeCountDetail) {
             this.noticeCountDetail = noticeCountDetail;
@@ -127,7 +130,21 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCountList.
+         * <p>The details of certificate brand products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *   {
+         *     &quot;BrandName&quot;: &quot;CFCA&quot;,
+         *     &quot;TotalCount&quot;: 14,
+         *     &quot;DomainType&quot;: &quot;ONE&quot;,
+         *     &quot;RemainCount&quot;: 14,
+         *     &quot;ProductCode&quot;: &quot;cfca-ev-1-advanced&quot;,
+         *     &quot;CertType&quot;: &quot;EV&quot;,
+         *     &quot;ProductId&quot;: 8,
+         *     &quot;UsedCount&quot;: 0
+         *   }
+         * ]</p>
          */
         public Builder productCountList(String productCountList) {
             this.productCountList = productCountList;
@@ -135,7 +152,10 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyCountDetail.
+         * <p>The acceleration gateway forwarding quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{TotalCount=116900, RemainCount=90448, AutoPay=0, AutoPayCount=5000, UsedCount=26452}</p>
          */
         public Builder proxyCountDetail(String proxyCountDetail) {
             this.proxyCountDetail = proxyCountDetail;
@@ -143,7 +163,10 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08F45EA0-66A7-4504-9B31-3589F5CE308D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +174,10 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCountDetail.
+         * <p>The total number of domain names bound to certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{TotalCount=573, RemainCount=243, FreeQuota=10, UsedCount=330}</p>
          */
         public Builder totalCountDetail(String totalCountDetail) {
             this.totalCountDetail = totalCountDetail;
@@ -159,7 +185,10 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
         }
 
         /**
-         * TrusteeCountDetail.
+         * <p>The usage of the hosting quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{TotalCount=177, ValidCount=6, RemainCount=129, UsedCount=48}</p>
          */
         public Builder trusteeCountDetail(String trusteeCountDetail) {
             this.trusteeCountDetail = trusteeCountDetail;

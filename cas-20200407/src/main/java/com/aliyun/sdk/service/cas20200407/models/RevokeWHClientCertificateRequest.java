@@ -60,7 +60,7 @@ public class RevokeWHClientCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier of the client certificate or server certificate that you want to revoke.</p>
+         * <p>The unique identifier of the client or server certificate to revoke.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

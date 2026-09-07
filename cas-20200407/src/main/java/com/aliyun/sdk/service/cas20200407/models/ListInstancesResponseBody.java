@@ -20,6 +20,12 @@ public class ListInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
+    @com.aliyun.core.annotation.NameInMap("DisableReissueCount")
+    private Long disableReissueCount;
+
+    @com.aliyun.core.annotation.NameInMap("EnableReissueCount")
+    private Long enableReissueCount;
+
     @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List<InstanceList> instanceList;
 
@@ -34,6 +40,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     private ListInstancesResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
+        this.disableReissueCount = builder.disableReissueCount;
+        this.enableReissueCount = builder.enableReissueCount;
         this.instanceList = builder.instanceList;
         this.requestId = builder.requestId;
         this.showSize = builder.showSize;
@@ -57,6 +65,20 @@ public class ListInstancesResponseBody extends TeaModel {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return disableReissueCount
+     */
+    public Long getDisableReissueCount() {
+        return this.disableReissueCount;
+    }
+
+    /**
+     * @return enableReissueCount
+     */
+    public Long getEnableReissueCount() {
+        return this.enableReissueCount;
     }
 
     /**
@@ -89,6 +111,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
+        private Long disableReissueCount; 
+        private Long enableReissueCount; 
         private java.util.List<InstanceList> instanceList; 
         private String requestId; 
         private Integer showSize; 
@@ -99,6 +123,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
         private Builder(ListInstancesResponseBody model) {
             this.currentPage = model.currentPage;
+            this.disableReissueCount = model.disableReissueCount;
+            this.enableReissueCount = model.enableReissueCount;
             this.instanceList = model.instanceList;
             this.requestId = model.requestId;
             this.showSize = model.showSize;
@@ -106,7 +132,10 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +143,29 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceList.
+         * <p>The number of instances for which managed renewal is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
+        public Builder disableReissueCount(Long disableReissueCount) {
+            this.disableReissueCount = disableReissueCount;
+            return this;
+        }
+
+        /**
+         * <p>The number of instances for which managed renewal is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder enableReissueCount(Long enableReissueCount) {
+            this.enableReissueCount = enableReissueCount;
+            return this;
+        }
+
+        /**
+         * <p>The list of instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -122,7 +173,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +184,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of records displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -138,7 +195,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -233,6 +293,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsingProductList")
         private java.util.List<String> usingProductList;
 
+        @com.aliyun.core.annotation.NameInMap("VersionType")
+        private String versionType;
+
         @com.aliyun.core.annotation.NameInMap("WildcardDomainCount")
         private Integer wildcardDomainCount;
 
@@ -262,6 +325,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.spec = builder.spec;
             this.status = builder.status;
             this.usingProductList = builder.usingProductList;
+            this.versionType = builder.versionType;
             this.wildcardDomainCount = builder.wildcardDomainCount;
         }
 
@@ -449,6 +513,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionType
+         */
+        public String getVersionType() {
+            return this.versionType;
+        }
+
+        /**
          * @return wildcardDomainCount
          */
         public Integer getWildcardDomainCount() {
@@ -481,6 +552,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String spec; 
             private String status; 
             private java.util.List<String> usingProductList; 
+            private String versionType; 
             private Integer wildcardDomainCount; 
 
             private Builder() {
@@ -512,11 +584,19 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.spec = model.spec;
                 this.status = model.status;
                 this.usingProductList = model.usingProductList;
+                this.versionType = model.versionType;
                 this.wildcardDomainCount = model.wildcardDomainCount;
             } 
 
             /**
-             * AutoReissue.
+             * <p>Indicates whether automatic managed renewal is enabled. Valid values:</p>
+             * <ul>
+             * <li>enable: Enabled.</li>
+             * <li>disable: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder autoReissue(String autoReissue) {
                 this.autoReissue = autoReissue;
@@ -524,7 +604,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Brand.
+             * <p>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DigiCert</p>
              */
             public Builder brand(String brand) {
                 this.brand = brand;
@@ -532,7 +615,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertIdentifier.
+             * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+             * <ul>
+             * <li>China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
+             * <li>International site: certificate ID + &quot;-ap-southeast-1&quot;</li>
+             * </ul>
+             * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the international site is &quot;123-ap-southeast-1&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21795675-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -540,7 +631,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateDomain.
+             * <p>The domain name of the latest issued certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc.com,<a href="http://www.abc.com">www.abc.com</a></p>
              */
             public Builder certificateDomain(String certificateDomain) {
                 this.certificateDomain = certificateDomain;
@@ -548,7 +642,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateId.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18541349</p>
              */
             public Builder certificateId(Long certificateId) {
                 this.certificateId = certificateId;
@@ -556,7 +653,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateName.
+             * <p>The certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-13216408</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -564,7 +664,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateNotAfter.
+             * <p>The end time of the latest certificate. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1801324800000</p>
              */
             public Builder certificateNotAfter(Long certificateNotAfter) {
                 this.certificateNotAfter = certificateNotAfter;
@@ -572,7 +675,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateNotBefore.
+             * <p>The start time of the latest certificate. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776988800000</p>
              */
             public Builder certificateNotBefore(Long certificateNotBefore) {
                 this.certificateNotBefore = certificateNotBefore;
@@ -580,7 +686,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateRevokeTime.
+             * <p>The revocation time of the latest certificate. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1801324800000</p>
              */
             public Builder certificateRevokeTime(Long certificateRevokeTime) {
                 this.certificateRevokeTime = certificateRevokeTime;
@@ -588,7 +697,16 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateStatus.
+             * <p>The status of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>issued</strong>: Issued.</li>
+             * <li><strong>revoked</strong>: Revoked.</li>
+             * <li><strong>willExpire</strong>: About to expire.</li>
+             * <li><strong>expired</strong>: Expired.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>issued</p>
              */
             public Builder certificateStatus(String certificateStatus) {
                 this.certificateStatus = certificateStatus;
@@ -596,7 +714,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateType.
+             * <p>The type of the certificate. Valid values: DV, OV, and EV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DV</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -604,7 +725,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -612,7 +736,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FullDomainCount.
+             * <p>The number of exact-match domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fullDomainCount(Integer fullDomainCount) {
                 this.fullDomainCount = fullDomainCount;
@@ -620,7 +747,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceEndTime.
+             * <p>The expiration time of the instance. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1801324800000</p>
              */
             public Builder instanceEndTime(Long instanceEndTime) {
                 this.instanceEndTime = instanceEndTime;
@@ -628,7 +758,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas_dv-cn-123</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -636,7 +769,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStartTime.
+             * <p>The start time of the instance. The value is a UNIX timestamp in seconds. This field is empty if no certificate has been issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1801324800000</p>
              */
             public Builder instanceStartTime(Long instanceStartTime) {
                 this.instanceStartTime = instanceStartTime;
@@ -644,7 +780,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>BUY: formal certificate.</li>
+             * <li>TEST: test certificate.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -652,7 +795,17 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyAlgorithm.
+             * <p>The certificate algorithm. Default value: RSA_2048. Valid values:</p>
+             * <ul>
+             * <li><strong>RSA_2048</strong></li>
+             * <li><strong>RSA_3072</strong></li>
+             * <li><strong>RSA_4096</strong></li>
+             * <li><strong>ECC_256</strong></li>
+             * <li><strong>SM2</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA_2048</p>
              */
             public Builder keyAlgorithm(String keyAlgorithm) {
                 this.keyAlgorithm = keyAlgorithm;
@@ -660,7 +813,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderEndTime.
+             * <p>The end time when the instance was purchased. The value is a UNIX timestamp in seconds. This value is used to determine the purchase duration of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1801324800000</p>
              */
             public Builder orderEndTime(Long orderEndTime) {
                 this.orderEndTime = orderEndTime;
@@ -668,7 +824,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderStartTime.
+             * <p>The start time when the instance was purchased. The value is a UNIX timestamp in seconds. This value is used to determine the refund time limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1801324800000</p>
              */
             public Builder orderStartTime(Long orderStartTime) {
                 this.orderStartTime = orderStartTime;
@@ -676,7 +835,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PendingResult.
+             * <p>The result returned by the CA during the last certificate operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder pendingResult(String pendingResult) {
                 this.pendingResult = pendingResult;
@@ -684,7 +846,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -692,7 +857,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The purchased instance specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss.dv.t</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -700,7 +868,19 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>inactive</strong>: Pending use.</li>
+             * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+             * <li><strong>willExpire</strong>: The instance is about to expire.</li>
+             * <li><strong>expired</strong>: The instance has expired.</li>
+             * <li><strong>refund</strong>: Refunded.</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>closed</strong>: Closed. The instance is unavailable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>inactive</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -708,7 +888,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsingProductList.
+             * <p>The list of cloud services to which the latest certificate is deployed.</p>
              */
             public Builder usingProductList(java.util.List<String> usingProductList) {
                 this.usingProductList = usingProductList;
@@ -716,7 +896,27 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WildcardDomainCount.
+             * <p>The version type. Valid values:</p>
+             * <ul>
+             * <li>basic: Basic Edition.</li>
+             * <li>standard: Standard Edition.</li>
+             * <li>professional: Professional Edition.</li>
+             * <li>ultimate: Ultimate Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>professional</p>
+             */
+            public Builder versionType(String versionType) {
+                this.versionType = versionType;
+                return this;
+            }
+
+            /**
+             * <p>The number of wildcard domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder wildcardDomainCount(Integer wildcardDomainCount) {
                 this.wildcardDomainCount = wildcardDomainCount;

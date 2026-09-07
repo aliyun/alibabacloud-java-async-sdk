@@ -60,9 +60,9 @@ public class CancelOrderRequestRequest extends Request {
         } 
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the certificate order to cancel.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+         * <p>Obtain this ID by calling <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

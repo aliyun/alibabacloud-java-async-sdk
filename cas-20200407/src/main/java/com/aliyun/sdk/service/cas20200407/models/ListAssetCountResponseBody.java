@@ -106,7 +106,7 @@ public class ListAssetCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AssetCountList.
+         * <p>The resource statistics list.</p>
          */
         public Builder assetCountList(java.util.List<AssetCountList> assetCountList) {
             this.assetCountList = assetCountList;
@@ -114,7 +114,10 @@ public class ListAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -122,7 +125,10 @@ public class ListAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class ListAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of entries displayed on each page for paging. This parameter is not returned if ShowSize is not specified in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Long showSize) {
             this.showSize = showSize;
@@ -138,7 +147,10 @@ public class ListAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListAssetCountResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunAssetCount.
+             * <p>The total number of Alibaba Cloud resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder aliyunAssetCount(Long aliyunAssetCount) {
                 this.aliyunAssetCount = aliyunAssetCount;
@@ -264,7 +279,10 @@ public class ListAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateCount.
+             * <p>The total number of certificate resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder certificateCount(Integer certificateCount) {
                 this.certificateCount = certificateCount;
@@ -272,7 +290,10 @@ public class ListAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * CountDate.
+             * <p>The statistics date. The value is a UNIX timestamp accurate to seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767680115423</p>
              */
             public Builder countDate(Long countDate) {
                 this.countDate = countDate;
@@ -280,7 +301,10 @@ public class ListAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * DomainAssetCount.
+             * <p>The total number of domain name resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder domainAssetCount(Integer domainAssetCount) {
                 this.domainAssetCount = domainAssetCount;
@@ -288,7 +312,10 @@ public class ListAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * MultiCloudAssetCount.
+             * <p>The total number of resources from other cloud providers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder multiCloudAssetCount(Long multiCloudAssetCount) {
                 this.multiCloudAssetCount = multiCloudAssetCount;
@@ -296,7 +323,10 @@ public class ListAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * <p>The number of points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder points(Long points) {
                 this.points = points;

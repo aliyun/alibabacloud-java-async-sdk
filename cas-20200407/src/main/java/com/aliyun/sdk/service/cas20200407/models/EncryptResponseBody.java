@@ -83,7 +83,7 @@ public class EncryptResponseBody extends TeaModel {
          * <p>The unique identifier of the certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345678-1234-1234-1234-12345678****</p>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -91,7 +91,7 @@ public class EncryptResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data after encryption. The value is encoded in Base64.</p>
+         * <p>The encrypted data. The data is Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
@@ -102,7 +102,7 @@ public class EncryptResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>

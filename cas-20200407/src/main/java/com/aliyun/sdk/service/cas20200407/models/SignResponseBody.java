@@ -67,7 +67,7 @@ public class SignResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1ed33293-2e48-6b14-861e-538e28e408eb</p>
@@ -78,7 +78,7 @@ public class SignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The signature.</p>
+         * <p>The Base64-encoded signature.</p>
          * 
          * <strong>example:</strong>
          * <p>eyaC0w3ROK5b3QcHmUtAhMY/sQjKu2t3uBfnf6J/gn7JfZtyxwcCUjzXbw5jmqJQRbj1te670Bshg9kUdanKhtHFhJjU5jX+ZMMBr6pH0gqQDJxR0K0yHXRc0Q5OQoUZ6BfpbI4Wt4jJvJSdCstz1vSg12CfEHS8Kd5qfhItK7Y=</p>

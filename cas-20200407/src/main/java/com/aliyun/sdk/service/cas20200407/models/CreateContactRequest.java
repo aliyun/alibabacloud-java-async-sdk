@@ -117,7 +117,10 @@ public class CreateContactRequest extends Request {
         } 
 
         /**
-         * Email.
+         * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@126.com">test@126.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -126,7 +129,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * Idcard.
+         * <p>The ID card number of the contact. This parameter is required for the CFCA certificate brand and is not required for other brands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder idcard(String idcard) {
             this.putQueryParameter("Idcard", idcard);
@@ -135,6 +141,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
+         * <p>The phone number of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class CreateContactRequest extends Request {
         }
 
         /**
+         * <p>The name of the certificate contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class CreateContactRequest extends Request {
         }
 
         /**
-         * Webhooks.
+         * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\\&quot;]</a></p>
          */
         public Builder webhooks(String webhooks) {
             this.putQueryParameter("Webhooks", webhooks);

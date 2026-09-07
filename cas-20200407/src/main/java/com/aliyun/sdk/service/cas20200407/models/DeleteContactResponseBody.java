@@ -54,7 +54,10 @@ public class DeleteContactResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F1E4D86-B70B-5352-A641-8CC80D13A37F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

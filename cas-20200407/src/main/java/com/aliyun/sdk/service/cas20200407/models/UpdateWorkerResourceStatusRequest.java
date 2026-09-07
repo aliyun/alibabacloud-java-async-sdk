@@ -90,7 +90,7 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the deployment task. You can call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> operation to obtain the ID of a deployment task from the <strong>JobId</strong> parameter. You can also call the <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation to obtain the ID of a deployment task.</p>
+         * <p>The deployment task ID. This ID is returned by <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a>. You can also obtain it by calling <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,11 +103,7 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         }
 
         /**
-         * <p>The desired status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>rollback</li>
-         * </ul>
+         * <p>The target status. Valid values: &quot;editing&quot;, &quot;pending&quot;, &quot;success&quot;, &quot;rollback&quot;, &quot;rollback_success&quot;, &quot;rollback_error&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +116,7 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the worker task. You can call the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation to obtain the ID of a worker task.</p>
+         * <p>The deployment task worker ID. You can obtain this ID by calling <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

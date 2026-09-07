@@ -103,10 +103,7 @@ public class UploadPCACertRequest extends Request {
         } 
 
         /**
-         * <UploadPCACertResponse>
-         *     <RequestId>15C66C7B-671A-4297-9187-2C4477247A74</RequestId>
-         * </UploadPCACertResponse>
-         * 
+         * <p>The certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +116,7 @@ public class UploadPCACertRequest extends Request {
         }
 
         /**
-         * <p>UploadPCACert</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>cert_name</p>
@@ -131,7 +128,7 @@ public class UploadPCACertRequest extends Request {
         }
 
         /**
-         * <p>Uploads a private certificate to a certificate repository.</p>
+         * <p>The private key of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEA5SIfpNCBoiDrZhX1H39CHwQMVD0kBNeBTWfP9xkeesvfzbOz ******* POVNFfDf9h7pJtQ5fRZNTYTDs/d+cH62Z3+nS74mNnEfff0nkvne -----END RSA PRIVATE KEY-----</p>
@@ -143,9 +140,9 @@ public class UploadPCACertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The repository ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> operation to query the ID.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

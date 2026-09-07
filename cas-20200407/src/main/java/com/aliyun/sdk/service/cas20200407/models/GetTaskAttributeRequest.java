@@ -74,6 +74,7 @@ public class GetTaskAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetTaskAttributeRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the asynchronous task. The default value is ApplyCertificate, which specifies a query for the result of a certificate application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApplyCertificate</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

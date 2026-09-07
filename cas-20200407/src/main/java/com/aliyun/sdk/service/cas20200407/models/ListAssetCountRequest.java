@@ -101,7 +101,10 @@ public class ListAssetCountRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -110,7 +113,10 @@ public class ListAssetCountRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The certificate expiration date, in seconds. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767807000000</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -119,7 +125,10 @@ public class ListAssetCountRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -128,7 +137,10 @@ public class ListAssetCountRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The certificate issuance date, in seconds. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767202200000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);

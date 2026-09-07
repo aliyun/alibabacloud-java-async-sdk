@@ -113,12 +113,7 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the deployment task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cloud: multi-cloud deployment task.</li>
-         * <li>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</li>
-         * </ul>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -130,10 +125,10 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * <p>The number of certificates per page. Default value: <strong>50</strong>.</p>
+         * <p>The number of certificates to display per page in a paged query. Default value: <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>50</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -142,16 +137,7 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * <p>The status of the deployment task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>success</li>
-         * <li>pending</li>
-         * <li>scheduling</li>
-         * <li>processing</li>
-         * <li>error</li>
-         * <li>editing</li>
-         * </ul>
+         * <p>The deployment task status.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>

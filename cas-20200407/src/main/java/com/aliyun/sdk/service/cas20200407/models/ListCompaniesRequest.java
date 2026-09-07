@@ -101,7 +101,10 @@ public class ListCompaniesRequest extends Request {
         } 
 
         /**
-         * CompanyId.
+         * <p>The company ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51001</p>
          */
         public Builder companyId(Long companyId) {
             this.putQueryParameter("CompanyId", companyId);
@@ -110,7 +113,10 @@ public class ListCompaniesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +125,10 @@ public class ListCompaniesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. For example, a keyword for the company name, province, country code, or city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -128,7 +137,10 @@ public class ListCompaniesRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of contacts to display per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

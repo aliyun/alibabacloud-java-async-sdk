@@ -74,7 +74,7 @@ public class GetUserCertificateDetailRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to filter return results. Valid values: true and false. Default value: false. <strong>true</strong> specifies that the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. <strong>false</strong> specifies that the parameters are returned.</p>
+         * <p>Specifies whether to filter certificate content. If set to <strong>true</strong>, the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey fields are not returned. If set to <strong>false</strong>, these fields are returned. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -86,9 +86,9 @@ public class GetUserCertificateDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to query the ID.</p>
+         * <p>You can obtain this ID by calling <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

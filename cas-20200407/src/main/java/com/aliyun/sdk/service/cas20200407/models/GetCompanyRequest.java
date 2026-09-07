@@ -60,6 +60,7 @@ public class GetCompanyRequest extends Request {
         } 
 
         /**
+         * <p>The company ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

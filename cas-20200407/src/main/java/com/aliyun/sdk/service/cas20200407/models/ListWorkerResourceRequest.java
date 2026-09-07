@@ -156,7 +156,7 @@ public class ListWorkerResourceRequest extends Request {
          * <p>The number of entries per page. Default value: 50.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>50</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -168,15 +168,24 @@ public class ListWorkerResourceRequest extends Request {
          * <p>The status of the worker task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>rollback</li>
-         * <li>rollback_error</li>
-         * <li>success</li>
-         * <li>rollback_success</li>
-         * <li>pending</li>
-         * <li>scheduling</li>
-         * <li>processing</li>
-         * <li>error</li>
-         * <li>editing</li>
+         * <li><p>rollback</p>
+         * </li>
+         * <li><p>rollback_error</p>
+         * </li>
+         * <li><p>success</p>
+         * </li>
+         * <li><p>rollback_success</p>
+         * </li>
+         * <li><p>pending</p>
+         * </li>
+         * <li><p>scheduling</p>
+         * </li>
+         * <li><p>processing</p>
+         * </li>
+         * <li><p>error</p>
+         * </li>
+         * <li><p>editing</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

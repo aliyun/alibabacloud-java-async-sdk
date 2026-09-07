@@ -54,7 +54,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0068247C-A454-5FC9-93BF-C41CBB5CD19E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

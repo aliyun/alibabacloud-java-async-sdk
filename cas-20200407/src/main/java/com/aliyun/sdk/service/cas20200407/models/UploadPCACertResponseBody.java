@@ -67,7 +67,7 @@ public class UploadPCACertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier of the certificate.</p>
+         * <p>The certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1ed65580-7e33-6a50-8630-dd13fdc009ee</p>
@@ -78,7 +78,10 @@ public class UploadPCACertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

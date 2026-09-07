@@ -106,7 +106,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The certificate application repositories.</p>
+         * <p>The list of certificate repositories.</p>
          */
         public Builder certWarehouseList(java.util.List<CertWarehouseList> certWarehouseList) {
             this.certWarehouseList = certWarehouseList;
@@ -114,7 +114,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -136,7 +136,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Default value: 50.</p>
+         * <p>The number of entries per page. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -147,7 +147,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -294,7 +294,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the certificate application repository expires. Unit: milliseconds.</p>
+             * <p>The expiration time, in timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1665819958000</p>
@@ -305,7 +305,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the certificate application repository.</p>
+             * <p>The sales instance.</p>
              * 
              * <strong>example:</strong>
              * <p>14dcc8afc7578e1f</p>
@@ -316,7 +316,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the certificate application repository has expired. Valid values:</p>
+             * <p>Indicates whether the repository has expired. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong></li>
@@ -331,7 +331,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate application repository.</p>
+             * <p>The repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -342,7 +342,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the private CA.</p>
+             * <p>The PCA instance.</p>
              * 
              * <strong>example:</strong>
              * <p>14dcc8afc7578e1f</p>
@@ -353,7 +353,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queries per second (QPS).</p>
+             * <p>Qps。</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -364,13 +364,11 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the certificate application repository. Valid values:</p>
+             * <p>The repository type. Valid values:</p>
              * <ul>
-             * <li><strong>ssl</strong>: certificate application repository of SSL certificates</li>
-             * <li><strong>uploadPCA</strong>: certificate application repository of uploaded private certificates</li>
-             * <li><strong>free</strong>: certificate application repository of free certificates, available only on the China site (aliyun.com)</li>
-             * <li><strong>aliyunPCA</strong>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</li>
-             * <li><strong>disable</strong>: disabled certificate application repository</li>
+             * <li><strong>uploadCA</strong>: an uploaded CA certificate that contains a complete certificate chain.</li>
+             * <li><strong>uploadPCA</strong>: an uploaded certificate, including a self-signed certificate, a certificate issued by a third party, or a certificate issued by Alibaba Cloud.</li>
+             * <li><strong>aliyunPCA</strong>: an Alibaba Cloud PCA certificate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -382,7 +380,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate application repository.</p>
+             * <p>The repository ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

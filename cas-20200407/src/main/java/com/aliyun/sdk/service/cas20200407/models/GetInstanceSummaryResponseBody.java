@@ -119,7 +119,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoReissueCount.
+         * <p>The remaining quota for automatic reissue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoReissueCount(Integer autoReissueCount) {
             this.autoReissueCount = autoReissueCount;
@@ -127,7 +130,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateCount.
+         * <p>The remaining certificate quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder certificateCount(Integer certificateCount) {
             this.certificateCount = certificateCount;
@@ -135,7 +141,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * InactiveCount.
+         * <p>The total number of inactive instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inactiveCount(Integer inactiveCount) {
             this.inactiveCount = inactiveCount;
@@ -143,7 +152,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +174,10 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * WillExpireCount.
+         * <p>The total number of instances that are about to expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder willExpireCount(Integer willExpireCount) {
             this.willExpireCount = willExpireCount;

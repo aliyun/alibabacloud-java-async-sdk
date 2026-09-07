@@ -483,8 +483,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the certificate was purchased from Alibaba Cloud. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: Yes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,7 +498,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+         * <p>The certificate content that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
@@ -507,7 +509,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate chain.</p>
+         * <p>The certificate chain information.</p>
          */
         public Builder certChain(java.util.List<CertChain> certChain) {
             this.certChain = certChain;
@@ -515,10 +517,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate identifier. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * <p>The certificate ID appended with &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot;.</p>
          * 
          * <strong>example:</strong>
-         * <p>10741304-cn-hangzhou</p>
+         * <p>13781326-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -526,7 +528,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertSha2.
+         * <p>The SHA-2 algorithm value of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E696C2DB574DF99467A90BEF62B341294A9B0C731D228A0BD38265E1467D8EF0</p>
          */
         public Builder certSha2(String certSha2) {
             this.certSha2 = certSha2;
@@ -534,7 +539,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The city of the company or organization to which the certificate purchaser belongs.</p>
+         * <p>The city where the company or organization of the certificate purchaser is located.</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou</p>
@@ -545,7 +550,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The primary domain name that is bound to the certificate.</p>
+         * <p>The primary domain name bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>*.com</p>
@@ -556,7 +561,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The country or region of the company or organization to which the certificate purchaser belongs.</p>
+         * <p>The country where the company or organization of the certificate purchaser is located.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -567,7 +572,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+         * <p>The encryption certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -580,7 +585,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private key of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+         * <p>The private key of the encryption certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN EC PRIVATE KEY-----
@@ -593,7 +598,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration date of the certificate.</p>
+         * <p>The certificate expiration date in the format of YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-25</p>
@@ -606,8 +611,8 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the certificate has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: The certificate has expired.</li>
+         * <li><strong>false</strong>: The certificate has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -619,7 +624,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The fingerprint of the certificate.</p>
+         * <p>The certificate fingerprint.</p>
          * 
          * <strong>example:</strong>
          * <p>1D7801BBE772D5DE55CBF1F88AEB41A42402DA07</p>
@@ -630,7 +635,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>121345</p>
@@ -641,10 +646,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the resource.</p>
+         * <p>The resource instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cas-upload-50yf1q</p>
+         * <p>cas-ivauto-hqito6</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -652,7 +657,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The certification authority.</p>
          * 
          * <strong>example:</strong>
          * <p>Digicert</p>
@@ -663,7 +668,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private key of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+         * <p>The private key that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</p>
@@ -674,7 +679,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>cert_name</p>
@@ -685,10 +690,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the validity period of the certificate.</p>
+         * <p>The end time of the certificate validity period.</p>
          * 
          * <strong>example:</strong>
-         * <p>17322613180000</p>
+         * <p>17326613180000</p>
          */
         public Builder notAfter(Long notAfter) {
             this.notAfter = notAfter;
@@ -696,10 +701,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the validity period of the certificate.</p>
+         * <p>The start time of the certificate validity period.</p>
          * 
          * <strong>example:</strong>
-         * <p>17312613180000</p>
+         * <p>17321613180000</p>
          */
         public Builder notBefore(Long notBefore) {
             this.notBefore = notBefore;
@@ -707,7 +712,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the certificate application order.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -729,7 +734,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The province of the company or organization to which the certificate purchaser belongs.</p>
+         * <p>The province where the company or organization of the certificate purchaser is located.</p>
          * 
          * <strong>example:</strong>
          * <p>zhejiang</p>
@@ -740,7 +745,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -751,7 +756,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek****wia</p>
@@ -762,7 +767,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>All domain names that are bound to the certificate.</p>
+         * <p>All domain names bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>*.com</p>
@@ -773,10 +778,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
-         * <p>06ea4879591ddf84e6c8b6ba43607ccf</p>
+         * <p>033cd852608689ef5e368fde89e0961769e8</p>
          */
         public Builder serialNo(String serialNo) {
             this.serialNo = serialNo;
@@ -787,7 +792,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
          * <p>The SHA-2 value of the certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>840707695D5EE41323102DDC2CB4924AA561012FBDC4E1A6324147119ED3C339</p>
+         * <p>573415B23243066AD345AE5A57BD0FAE94F598BDD06D906278B5FF318F090FC8</p>
          */
         public Builder sha2(String sha2) {
             this.sha2 = sha2;
@@ -795,7 +800,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+         * <p>The signing certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -808,7 +813,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private key of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+         * <p>The private key of the signing certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN EC PRIVATE KEY-----
@@ -821,7 +826,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The issuance date of the certificate.</p>
+         * <p>The certificate issuance date in the format of YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-13</p>
@@ -832,7 +837,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -937,7 +942,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The common name of the certificate.</p>
+             * <p>The common name in the certificate chain.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -959,10 +964,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the validity period of the certificate.</p>
+             * <p>The end time of the certificate chain validity period.</p>
              * 
              * <strong>example:</strong>
-             * <p>17322613180000</p>
+             * <p>17352613180000</p>
              */
             public Builder notAfter(Long notAfter) {
                 this.notAfter = notAfter;
@@ -970,10 +975,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the validity period of the certificate.</p>
+             * <p>The start time of the certificate chain validity period.</p>
              * 
              * <strong>example:</strong>
-             * <p>17302633180000</p>
+             * <p>17322633180000</p>
              */
             public Builder notBefore(Long notBefore) {
                 this.notBefore = notBefore;
@@ -981,7 +986,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining days of the certificate validity period.</p>
+             * <p>The remaining days of the certificate chain validity period.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1051,7 +1056,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1059,7 +1067,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -256,7 +256,14 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * AutoReissue.
+         * <p>Specifies whether to enable automatic hosting. Valid values:</p>
+         * <ul>
+         * <li>enable: Enabled.</li>
+         * <li>disable: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder autoReissue(String autoReissue) {
             this.putQueryParameter("AutoReissue", autoReissue);
@@ -265,7 +272,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * CertificateName.
+         * <p>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certificateName(String certificateName) {
             this.putQueryParameter("CertificateName", certificateName);
@@ -274,7 +284,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * City.
+         * <p>The city where the company or organization of the certificate purchaser is located. This field is required when generating a CSR for a DV certificate. Default value: Beijing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -283,7 +296,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * CompanyId.
+         * <p>The company information ID. This parameter is required for OV and EV certificates. Otherwise, you cannot call the ApplyCertificate operation to apply for a certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44211</p>
          */
         public Builder companyId(Long companyId) {
             this.putQueryParameter("CompanyId", companyId);
@@ -292,7 +308,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ContactIdList.
+         * <p>The list of contact IDs. If a contact already exists, you do not need to specify this parameter. If no contact has been configured, specify at least one contact ID. Otherwise, you cannot call the ApplyCertificate operation to apply for a certificate.</p>
          */
         public Builder contactIdList(java.util.List<Long> contactIdList) {
             this.putQueryParameter("ContactIdList", contactIdList);
@@ -301,7 +317,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * CountryCode.
+         * <p>The country or region code of the certificate organization. For example, CN indicates China and US indicates the United States. This field is required when generating a CSR for a DV certificate. Default value: CN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -310,7 +329,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Csr.
+         * <p>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -319,7 +341,18 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name to which the certificate is bound. Requirements:</p>
+         * <ul>
+         * <li>You can specify a single domain name or a wildcard domain name (for example, <code>*.aliyundoc.com</code>).</li>
+         * <li>You can specify multiple domain names. Separate multiple domain names with commas (,). Whether a free domain name is included is determined based on the first domain name.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Notice:  </p>
+         * </blockquote>
+         * <p>When the certificate is bound to multiple domain names, this parameter is required. This parameter and the <strong>Csr</strong> parameter cannot both be empty. If you specify both this parameter and the <strong>Csr</strong> parameter, the <strong>CN</strong> field value in the <strong>Csr</strong> parameter is used as the domain name to which the certificate is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -328,7 +361,14 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * GenerateCsrMethod.
+         * <p>The method used to generate the certificate signing request (CSR). Default value: online. Valid values:</p>
+         * <ul>
+         * <li>online: The system generates the CSR. The Csr parameter is ignored.</li>
+         * <li>upload: You upload the CSR. The Csr parameter is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder generateCsrMethod(String generateCsrMethod) {
             this.putQueryParameter("GenerateCsrMethod", generateCsrMethod);
@@ -337,6 +377,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,7 +390,17 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * KeyAlgorithm.
+         * <p>The certificate algorithm. Default value: RSA_2048. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA_2048</strong></li>
+         * <li><strong>RSA_3072</strong></li>
+         * <li><strong>RSA_4096</strong></li>
+         * <li><strong>ECC_256</strong></li>
+         * <li><strong>SM2</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.putQueryParameter("KeyAlgorithm", keyAlgorithm);
@@ -358,7 +409,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>The province or region where the company is located. This field is required when generating a CSR for a DV certificate. Default value: Beijing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -367,7 +421,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******4wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -376,7 +433,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -385,7 +442,14 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ValidationMethod.
+         * <p>The validation method for the certificate application. Valid values:</p>
+         * <ul>
+         * <li>DNS: DNS validation, which uses TXT or CNAME records.</li>
+         * <li>HTTP: File validation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
         public Builder validationMethod(String validationMethod) {
             this.putQueryParameter("ValidationMethod", validationMethod);
@@ -453,7 +517,11 @@ public class UpdateInstanceRequest extends Request {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, the value cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -461,7 +529,11 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, the value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

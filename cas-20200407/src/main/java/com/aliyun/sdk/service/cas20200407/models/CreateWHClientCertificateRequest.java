@@ -284,7 +284,13 @@ public class CreateWHClientCertificateRequest extends Request {
         } 
 
         /**
-         * AfterTime.
+         * <p>The expiration time of the client certificate, specified as a Unix timestamp in seconds.</p>
+         * <blockquote>
+         * <p>The <code>BeforeTime</code> and <code>AfterTime</code> parameters must be specified together or not at all.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1665819958</p>
          */
         public Builder afterTime(Long afterTime) {
             this.putQueryParameter("AfterTime", afterTime);
@@ -293,7 +299,27 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Algorithm.
+         * <p>The key algorithm for the client certificate. The format is <code>&lt;encryption_algorithm&gt;_&lt;key_length&gt;</code>. Valid values:</p>
+         * <ul>
+         * <li><p><strong>RSA_1024</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+         * </li>
+         * <li><p><strong>RSA_2048</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+         * </li>
+         * <li><p><strong>RSA_4096</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+         * </li>
+         * <li><p><strong>ECC_256</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+         * </li>
+         * <li><p><strong>ECC_384</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+         * </li>
+         * <li><p><strong>ECC_512</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+         * </li>
+         * <li><p><strong>SM2_256</strong>: The corresponding signature algorithm is SM3WithSM2.</p>
+         * </li>
+         * </ul>
+         * <p>The encryption algorithm of the client certificate must match that of the issuing subordinate CA certificate, but the key lengths can differ. For example, if the key algorithm of the subordinate CA certificate is RSA_2048, the key algorithm for the client certificate must be one of RSA_1024, RSA_2048, or RSA_4096.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -302,7 +328,13 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * BeforeTime.
+         * <p>The issuance time of the client certificate, as a Unix timestamp in seconds. If omitted, this defaults to the time of the API call.</p>
+         * <blockquote>
+         * <p>The <code>BeforeTime</code> and <code>AfterTime</code> parameters must be specified together or not at all.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1634283958</p>
          */
         public Builder beforeTime(Long beforeTime) {
             this.putQueryParameter("BeforeTime", beforeTime);
@@ -311,7 +343,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * CommonName.
+         * <p>The common name of the client certificate. Supports Chinese, English, and other characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -320,7 +355,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>The country where the organization is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -329,7 +367,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Csr.
+         * <p>The content of the certificate signing request (CSR). You can generate a CSR with tools like OpenSSL or Keytool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -338,7 +379,20 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Days.
+         * <p>The validity period of the client certificate, in days.</p>
+         * <p>You cannot leave the <code>Days</code>, <code>BeforeTime</code>, and <code>AfterTime</code> parameters all empty. The <code>BeforeTime</code> and <code>AfterTime</code> parameters must be specified together or not at all.</p>
+         * <ul>
+         * <li><p>If you specify the <code>Days</code> parameter, specifying <code>BeforeTime</code> and <code>AfterTime</code> is optional.</p>
+         * </li>
+         * <li><p>If you do not specify the <code>Days</code> parameter, you must specify both <code>BeforeTime</code> and <code>AfterTime</code>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify <code>Days</code>, <code>BeforeTime</code>, and <code>AfterTime</code> simultaneously, the <code>Days</code> parameter takes precedence in determining the validity period.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder days(Long days) {
             this.putQueryParameter("Days", days);
@@ -347,7 +401,18 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Immediately.
+         * <p>Specifies which certificate content to return in the response.</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Does not return the certificate (default).</p>
+         * </li>
+         * <li><p><strong>1</strong>: Returns the certificate.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Returns the certificate and its certificate chain.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder immediately(Long immediately) {
             this.putQueryParameter("Immediately", immediately);
@@ -356,7 +421,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Locality.
+         * <p>The city where the organization is located. Chinese, English, and other characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -365,7 +433,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Months.
+         * <p>The validity period of the certificate, in months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder months(Long months) {
             this.putQueryParameter("Months", months);
@@ -374,7 +445,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Organization.
+         * <p>The organization name associated with the root CA certificate, typically your company or enterprise name. Supports Chinese, English, and other characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里巴巴网络技术有限公司</p>
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -383,7 +457,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * OrganizationUnit.
+         * <p>The name of the department or business unit within the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT</p>
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -392,6 +469,7 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the issuing subordinate CA certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -404,7 +482,20 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * SanType.
+         * <p>The type of the subject alternative name (SAN) for the client certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: email address.</p>
+         * </li>
+         * <li><p><strong>2</strong>: domain name.</p>
+         * </li>
+         * <li><p><strong>6</strong>: Uniform Resource Identifier (URI).</p>
+         * </li>
+         * <li><p><strong>7</strong>: IP address.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder sanType(Long sanType) {
             this.putQueryParameter("SanType", sanType);
@@ -413,7 +504,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * SanValue.
+         * <p>The value of the SAN extension. To specify multiple values, separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder sanValue(String sanValue) {
             this.putQueryParameter("SanValue", sanValue);
@@ -422,7 +516,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The province, municipality, or autonomous region where the organization is located. Chinese, English, and other characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -431,7 +528,10 @@ public class CreateWHClientCertificateRequest extends Request {
         }
 
         /**
-         * Years.
+         * <p>The validity period of the certificate, in years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder years(Long years) {
             this.putQueryParameter("Years", years);

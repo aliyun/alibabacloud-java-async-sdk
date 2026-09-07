@@ -104,6 +104,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The region to which the organization of the certificate owner belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -125,6 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Default value: <strong>instance</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +140,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag information of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -207,7 +210,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. Valid values of n: 1 to 20. You can specify up to 20 tag keys. For example: tag.1.key, tag.2.key, ..., tag.20.key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -215,7 +221,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. Valid values of n: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

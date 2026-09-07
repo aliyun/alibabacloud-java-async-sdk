@@ -60,6 +60,7 @@ public class GetContactRequest extends Request {
         } 
 
         /**
+         * <p>The contact ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

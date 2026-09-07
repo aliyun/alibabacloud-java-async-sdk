@@ -101,7 +101,10 @@ public class ListWarehouseRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -110,7 +113,10 @@ public class ListWarehouseRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token from a previous response. Use this token to retrieve the next page of results. Omit this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -119,7 +125,10 @@ public class ListWarehouseRequest extends Request {
         }
 
         /**
-         * WarehouseInstanceIds.
+         * <p>A list of warehouse instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-wh-uc-gl2bsq</p>
          */
         public Builder warehouseInstanceIds(java.util.List<String> warehouseInstanceIds) {
             String warehouseInstanceIdsShrink = shrink(warehouseInstanceIds, "WarehouseInstanceIds", "json");
@@ -129,7 +138,10 @@ public class ListWarehouseRequest extends Request {
         }
 
         /**
-         * WarehouseTypes.
+         * <p>A list of warehouse types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcaCaCert</p>
          */
         public Builder warehouseTypes(java.util.List<String> warehouseTypes) {
             String warehouseTypesShrink = shrink(warehouseTypes, "WarehouseTypes", "json");

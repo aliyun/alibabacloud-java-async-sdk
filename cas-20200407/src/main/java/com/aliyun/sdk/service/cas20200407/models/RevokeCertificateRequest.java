@@ -74,7 +74,10 @@ public class RevokeCertificateRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * <p>The ID of the certificate to revoke.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51001</p>
          */
         public Builder certificateId(Long certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -83,6 +86,7 @@ public class RevokeCertificateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. This parameter accepts only V2.0 subscription certificate instances (certificates purchased from a CA such as DigiCert or GeoTrust, with an InstanceId in the format of cas-cn-<em>). Uploaded certificates (cas-upload-</em>) are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

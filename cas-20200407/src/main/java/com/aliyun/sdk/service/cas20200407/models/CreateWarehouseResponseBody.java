@@ -67,7 +67,10 @@ public class CreateWarehouseResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0206B77-14B9-584C-8A3A-09D5827FBC50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * WarehouseInstanceId.
+         * <p>The instance ID of the certificate application repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-wh-typ-serial</p>
          */
         public Builder warehouseInstanceId(String warehouseInstanceId) {
             this.warehouseInstanceId = warehouseInstanceId;

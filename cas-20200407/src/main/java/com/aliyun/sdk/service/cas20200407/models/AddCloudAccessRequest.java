@@ -87,7 +87,10 @@ public class AddCloudAccessRequest extends Request {
         } 
 
         /**
-         * CloudName.
+         * <p>The cloud service provider. This API supports multiple providers as detailed in the SecretKey parameter description. For example, to add credentials for Tencent Cloud, set this parameter to <strong>Tencent</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tencent</p>
          */
         public Builder cloudName(String cloudName) {
             this.putQueryParameter("CloudName", cloudName);
@@ -96,7 +99,10 @@ public class AddCloudAccessRequest extends Request {
         }
 
         /**
-         * SecretId.
+         * <p>The Secret ID for accessing the cloud resource set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xcxx</p>
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -105,7 +111,32 @@ public class AddCloudAccessRequest extends Request {
         }
 
         /**
-         * SecretKey.
+         * <p>The secret corresponding to the AccessKey. The value is determined by the <code>AkType</code> parameter as follows:</p>
+         * <p>1\. If <code>AkType</code> is set to <code>primary</code>:</p>
+         * <ul>
+         * <li><p><strong>Tencent</strong>: The SecretAccessKey of the primary account.</p>
+         * </li>
+         * <li><p><strong>HUAWEI CLOUD</strong>: The SecretAccessKey of the primary account.</p>
+         * </li>
+         * <li><p><strong>Azure</strong>: The ClientSecret.</p>
+         * </li>
+         * <li><p><strong>AWS</strong>: The SecretAccessKey of the primary account.</p>
+         * </li>
+         * </ul>
+         * <p>2\. If <code>AkType</code> is set to <code>sub</code>:</p>
+         * <ul>
+         * <li><p><strong>Tencent</strong>: The SecretAccessKey of the sub-account.</p>
+         * </li>
+         * <li><p><strong>HUAWEI CLOUD</strong>: The SecretAccessKey of the sub-account.</p>
+         * </li>
+         * <li><p><strong>Azure</strong>: The ClientSecret.</p>
+         * </li>
+         * <li><p><strong>AWS</strong>: The SecretAccessKey of the sub-account.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder secretKey(String secretKey) {
             this.putQueryParameter("SecretKey", secretKey);

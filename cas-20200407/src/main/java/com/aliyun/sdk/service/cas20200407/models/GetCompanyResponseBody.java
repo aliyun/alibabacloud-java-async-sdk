@@ -223,7 +223,10 @@ public class GetCompanyResponseBody extends TeaModel {
         } 
 
         /**
-         * City.
+         * <p>The city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder city(String city) {
             this.city = city;
@@ -231,7 +234,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyAddress.
+         * <p>The address of the company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder companyAddress(String companyAddress) {
             this.companyAddress = companyAddress;
@@ -239,7 +245,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyCode.
+         * <p>The company code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder companyCode(String companyCode) {
             this.companyCode = companyCode;
@@ -247,7 +256,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyEmail.
+         * <p>The email address of the company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@163.com">test@163.com</a></p>
          */
         public Builder companyEmail(String companyEmail) {
             this.companyEmail = companyEmail;
@@ -255,7 +267,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyId.
+         * <p>The company ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51001</p>
          */
         public Builder companyId(Long companyId) {
             this.companyId = companyId;
@@ -263,7 +278,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyName.
+         * <p>The name of the company or organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testYanwen045</p>
          */
         public Builder companyName(String companyName) {
             this.companyName = companyName;
@@ -271,7 +289,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyPhone.
+         * <p>The phone number of the company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1511</p>
          */
         public Builder companyPhone(String companyPhone) {
             this.companyPhone = companyPhone;
@@ -279,7 +300,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyType.
+         * <p>The company type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder companyType(Integer companyType) {
             this.companyType = companyType;
@@ -287,7 +311,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * CountryCode.
+         * <p>The country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.countryCode = countryCode;
@@ -295,7 +322,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * Department.
+         * <p>The department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder department(String department) {
             this.department = department;
@@ -303,7 +333,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * Lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.lang = lang;
@@ -311,7 +344,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * PostCode.
+         * <p>The postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder postCode(String postCode) {
             this.postCode = postCode;
@@ -319,7 +355,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * Province.
+         * <p>The province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder province(String province) {
             this.province = province;
@@ -327,7 +366,10 @@ public class GetCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0068247C-A454-5FC9-93BF-C41CBB5CD19E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

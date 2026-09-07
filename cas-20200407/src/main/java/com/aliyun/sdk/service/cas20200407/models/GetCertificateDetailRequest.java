@@ -60,6 +60,7 @@ public class GetCertificateDetailRequest extends Request {
         } 
 
         /**
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

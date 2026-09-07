@@ -75,6 +75,7 @@ public class ShareCertificateRequest extends Request {
         } 
 
         /**
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ShareCertificateRequest extends Request {
         }
 
         /**
+         * <p>The UID of the user with whom the certificate is shared.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

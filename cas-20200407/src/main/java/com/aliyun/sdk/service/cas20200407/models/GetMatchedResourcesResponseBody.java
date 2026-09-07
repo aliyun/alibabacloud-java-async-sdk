@@ -93,7 +93,10 @@ public class GetMatchedResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>请求接口返回的数据。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -101,7 +104,10 @@ public class GetMatchedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>分页参数：结果集的最大数量，默认值为 20。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +115,10 @@ public class GetMatchedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>下一个查询开始 Token，NextToken 为空说明没有下一个。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +126,10 @@ public class GetMatchedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>本次请求的 ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26F62CED-1E0E-51AA-B8EB-BCD61C5B0C50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

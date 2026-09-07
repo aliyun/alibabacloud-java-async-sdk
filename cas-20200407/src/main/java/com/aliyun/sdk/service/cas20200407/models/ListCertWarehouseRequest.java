@@ -115,7 +115,7 @@ public class ListCertWarehouseRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the certificate application repository.</p>
+         * <p>The repository instance.</p>
          * 
          * <strong>example:</strong>
          * <p>14dcc8afc7578e1f</p>
@@ -139,7 +139,7 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The name of the certificate application repository. Fuzzy match is supported.</p>
+         * <p>The repository name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -151,7 +151,7 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 50.</p>
+         * <p>The number of entries per page. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -163,13 +163,11 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * <p>The type of the certificate application repository. Valid values:</p>
+         * <p>The repository type. Valid values:</p>
          * <ul>
-         * <li><strong>ssl</strong>: certificate application repository of SSL certificates</li>
-         * <li><strong>uploadPCA</strong>: certificate application repository of uploaded private certificates</li>
-         * <li><strong>free</strong>: certificate application repository of free certificates, available only on the China site (aliyun.com)</li>
-         * <li><strong>aliyunPCA</strong>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</li>
-         * <li><strong>disable</strong>: disabled certificate application repository</li>
+         * <li><strong>uploadCA</strong>: an uploaded CA certificate that contains a complete certificate chain.</li>
+         * <li><strong>uploadPCA</strong>: an uploaded certificate, including a self-signed certificate, a certificate issued by a third party, or a certificate issued by Alibaba Cloud.</li>
+         * <li><strong>aliyunPCA</strong>: an Alibaba Cloud PCA certificate.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,7 @@ public class DeleteCloudAccessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>

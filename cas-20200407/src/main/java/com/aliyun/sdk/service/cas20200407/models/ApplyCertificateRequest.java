@@ -60,6 +60,7 @@ public class ApplyCertificateRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance. You must call the UpdateInstance operation in advance to ensure that all application information for the instance has been updated and completed before applying for a certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

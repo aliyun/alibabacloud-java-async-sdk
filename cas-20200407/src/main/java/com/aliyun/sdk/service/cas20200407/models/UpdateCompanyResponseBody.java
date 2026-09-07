@@ -67,7 +67,10 @@ public class UpdateCompanyResponseBody extends TeaModel {
         } 
 
         /**
-         * CompanyId.
+         * <p>The company ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51001</p>
          */
         public Builder companyId(Long companyId) {
             this.companyId = companyId;
@@ -75,7 +78,10 @@ public class UpdateCompanyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2BAAB19-BCEB-569B-BE08-7C728344A79C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

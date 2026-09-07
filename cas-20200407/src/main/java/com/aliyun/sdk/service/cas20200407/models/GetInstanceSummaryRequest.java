@@ -59,7 +59,10 @@ public class GetInstanceSummaryRequest extends Request {
         } 
 
         /**
-         * InstanceType.
+         * <p>The instance type. Valid values: BUY: a paid certificate. TEST: a test certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

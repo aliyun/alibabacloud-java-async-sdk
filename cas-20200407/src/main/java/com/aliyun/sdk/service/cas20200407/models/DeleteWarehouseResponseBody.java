@@ -54,7 +54,10 @@ public class DeleteWarehouseResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C53F7EC-7C47-5DA5-8B6D-FE6B1F934E82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

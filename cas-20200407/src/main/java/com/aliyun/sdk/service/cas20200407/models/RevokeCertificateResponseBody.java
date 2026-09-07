@@ -54,7 +54,10 @@ public class RevokeCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

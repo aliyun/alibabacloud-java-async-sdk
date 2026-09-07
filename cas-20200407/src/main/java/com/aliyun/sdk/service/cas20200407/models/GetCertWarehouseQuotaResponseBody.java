@@ -106,7 +106,10 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * AppTotalQuota.
+         * <p>The total quota for the certificate application service. This includes both complimentary and purchased quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder appTotalQuota(Long appTotalQuota) {
             this.appTotalQuota = appTotalQuota;
@@ -114,7 +117,10 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * AppUseCount.
+         * <p>The used quota for the certificate application service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder appUseCount(Long appUseCount) {
             this.appUseCount = appUseCount;
@@ -122,7 +128,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -133,7 +139,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total quota for certificate repositories, including the free quota and purchased quota.</p>
+         * <p>The total quota for the electronic contract signing service. This includes both complimentary and purchased quotas.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -144,7 +150,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used quota.</p>
+         * <p>The used quota for the electronic contract signing service.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

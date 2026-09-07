@@ -117,6 +117,7 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         } 
 
         /**
+         * <p>The list of primary key identifiers to be synchronized to Certificate Management Service. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,16 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for the request and the received message. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,7 +148,10 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * NoticeBiz.
+         * <p>The business code of message notification. The value is fixed as ssl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssl</p>
          */
         public Builder noticeBiz(String noticeBiz) {
             this.putQueryParameter("NoticeBiz", noticeBiz);
@@ -147,6 +160,9 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable message notification.
+         * \--enable: enables message notification.
+         * \--disable: disables message notification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +175,10 @@ public class BatchUpdateNoticeStatusRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.242.200</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -130,6 +130,7 @@ public class UpdateContactRequest extends Request {
         } 
 
         /**
+         * <p>The contact ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@136.com">test@136.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -151,7 +155,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * Idcard.
+         * <p>The ID card number of the contact. This parameter is required for the CFCA certificate brand and is not required for other brands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>142***************</p>
          */
         public Builder idcard(String idcard) {
             this.putQueryParameter("Idcard", idcard);
@@ -160,7 +167,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>The phone number of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1510108***</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -169,7 +179,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the certificate contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang san</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -178,7 +191,10 @@ public class UpdateContactRequest extends Request {
         }
 
         /**
-         * Webhooks.
+         * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5\\&quot;]</a></p>
          */
         public Builder webhooks(String webhooks) {
             this.putQueryParameter("Webhooks", webhooks);

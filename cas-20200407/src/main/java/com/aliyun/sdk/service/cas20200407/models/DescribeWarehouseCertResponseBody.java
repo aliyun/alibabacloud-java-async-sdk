@@ -197,7 +197,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         } 
 
         /**
-         * CertIdentifier.
+         * <p>The unique identifier of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -205,7 +208,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * CertStatus.
+         * <p>The status of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>issued</p>
          */
         public Builder certStatus(String certStatus) {
             this.certStatus = certStatus;
@@ -213,7 +219,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * CertType.
+         * <p>The type of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OV</p>
          */
         public Builder certType(String certType) {
             this.certType = certType;
@@ -221,7 +230,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * CommonName.
+         * <p>The common name of the certificate subject. This field is empty if the certificate subject does not include a common name (CN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyundoc.com</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -229,7 +241,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The content of the certificate, including the certificate chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -237,7 +252,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * Fingerprint.
+         * <p>The fingerprint of the certificate content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1291AF83F48170E48140FDFE5DADC19FE51F261</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -245,7 +263,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * Issuer.
+         * <p>The common name (or organization name) of the issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Digicert</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -253,7 +274,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * IssuerIdentifier.
+         * <p>The unique identifier of the issuer certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder issuerIdentifier(String issuerIdentifier) {
             this.issuerIdentifier = issuerIdentifier;
@@ -261,7 +285,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateCaInstanceId.
+         * <p>The instance ID of the private CA instance associated with the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder privateCaInstanceId(String privateCaInstanceId) {
             this.privateCaInstanceId = privateCaInstanceId;
@@ -269,7 +296,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateCaRegionId.
+         * <p>The region ID of the private CA instance associated with the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder privateCaRegionId(String privateCaRegionId) {
             this.privateCaRegionId = privateCaRegionId;
@@ -277,7 +307,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -285,7 +318,10 @@ public class DescribeWarehouseCertResponseBody extends TeaModel {
         }
 
         /**
-         * WarehouseInstanceId.
+         * <p>The instance ID of the certificate warehouse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder warehouseInstanceId(String warehouseInstanceId) {
             this.warehouseInstanceId = warehouseInstanceId;

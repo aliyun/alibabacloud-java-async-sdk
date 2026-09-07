@@ -143,7 +143,18 @@ public class ListCertificatesRequest extends Request {
         } 
 
         /**
-         * CertificateSource.
+         * <p>The source of the certificate.</p>
+         * <ul>
+         * <li><p>BUY: A purchased certificate.</p>
+         * </li>
+         * <li><p>TEST: A test certificate.</p>
+         * </li>
+         * <li><p>UPLOAD: An uploaded certificate.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder certificateSource(String certificateSource) {
             this.putQueryParameter("CertificateSource", certificateSource);
@@ -152,7 +163,20 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * CertificateStatus.
+         * <p>The status of the certificate.</p>
+         * <ul>
+         * <li><p><strong>issued</strong>: The certificate is issued.</p>
+         * </li>
+         * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
+         * </li>
+         * <li><p><strong>willExpire</strong>: The certificate is about to expire.</p>
+         * </li>
+         * <li><p><strong>expired</strong>: The certificate has expired.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>issued</p>
          */
         public Builder certificateStatus(String certificateStatus) {
             this.putQueryParameter("CertificateStatus", certificateStatus);
@@ -161,7 +185,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,7 +197,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-ivauto-hqito6</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -179,7 +209,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>A keyword for a fuzzy query. The keyword can be a domain name, a certificate name, or a resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -188,7 +221,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek****wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -197,7 +233,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

@@ -119,7 +119,7 @@ public class ListContactResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The contacts.</p>
+         * <p>The contact list.</p>
          */
         public Builder contactList(java.util.List<ContactList> contactList) {
             this.contactList = contactList;
@@ -127,7 +127,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The current page number in a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The keyword used in the fuzzy search.</p>
+         * <p>The fuzzy match keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>186</p>
@@ -149,7 +149,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>31C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -160,7 +160,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of certificates per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of certificates displayed per page in a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -171,7 +171,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of search results.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -318,7 +318,7 @@ public class ListContactResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the contact.</p>
+             * <p>The contact ID.</p>
              * 
              * <strong>example:</strong>
              * <p>519580</p>
@@ -340,7 +340,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the email address passed the verification.</p>
+             * <p>Indicates whether the email address is verified.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -351,7 +351,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number.</p>
+             * <p>The mobile phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>139****8888</p>
@@ -362,7 +362,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the phone number was verified.</p>
+             * <p>Indicates whether the mobile phone number is verified.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -373,10 +373,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the contact.</p>
+             * <p>The contact name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ty-yaoyue.com</p>
+             * <p>John</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -384,7 +384,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * WebhookList.
+             * <p>The webhook URL.</p>
              */
             public Builder webhookList(java.util.List<String> webhookList) {
                 this.webhookList = webhookList;
@@ -392,10 +392,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The webhook URL of the chatbot.</p>
+             * <p>The webhook URL.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%22,%5C%22https://oapi.dingtalk.com/robot/send?access_token=XXX%5C%22,%5C%22https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\&quot;,\&quot;https://oapi.dingtalk.com/robot/send?access_token=XXX\&quot;,\&quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX\&quot;]</a></p>
+             * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%5C%22,%5C%5C%22https://oapi.dingtalk.com/robot/send?access_token=XXX%5C%5C%22,%5C%5C%22https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\\&quot;,\\&quot;https://oapi.dingtalk.com/robot/send?access_token=XXX\\&quot;,\\&quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX\\&quot;]</a></p>
              */
             public Builder webhooks(String webhooks) {
                 this.webhooks = webhooks;

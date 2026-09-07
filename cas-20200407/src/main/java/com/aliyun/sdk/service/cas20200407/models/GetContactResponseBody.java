@@ -171,7 +171,10 @@ public class GetContactResponseBody extends TeaModel {
         } 
 
         /**
-         * ContactId.
+         * <p>The contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1352570</p>
          */
         public Builder contactId(Long contactId) {
             this.contactId = contactId;
@@ -179,7 +182,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * Email.
+         * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@163.com">test@163.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -187,7 +193,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * EmailStatus.
+         * <p>Indicates whether the email address is verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder emailStatus(Integer emailStatus) {
             this.emailStatus = emailStatus;
@@ -195,7 +204,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * IdCard.
+         * <p>The ID card number of the contact. This is required for the CFCA certificate brand and not required for other brands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>142***************</p>
          */
         public Builder idCard(String idCard) {
             this.idCard = idCard;
@@ -203,7 +215,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * Mobile.
+         * <p>The phone number of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1510108****</p>
          */
         public Builder mobile(String mobile) {
             this.mobile = mobile;
@@ -211,7 +226,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * MobileStatus.
+         * <p>Indicates whether the phone number is verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mobileStatus(Integer mobileStatus) {
             this.mobileStatus = mobileStatus;
@@ -219,7 +237,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the certificate contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang san</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -227,7 +248,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EECA10D5-BD0F-4EF1-B3EA-B4578E5C6F8E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +259,7 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * WebhookList.
+         * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots, in list format.</p>
          */
         public Builder webhookList(java.util.List<String> webhookList) {
             this.webhookList = webhookList;
@@ -243,7 +267,10 @@ public class GetContactResponseBody extends TeaModel {
         }
 
         /**
-         * Webhooks.
+         * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots, in list format as a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5\\&quot;]</a></p>
          */
         public Builder webhooks(String webhooks) {
             this.webhooks = webhooks;

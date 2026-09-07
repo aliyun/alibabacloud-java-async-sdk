@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReissueFlag")
+    private Integer autoReissueFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Brand")
     private String brand;
 
@@ -46,6 +50,10 @@ public class ListInstancesRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerDeployFlag")
+    private Integer serverDeployFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Integer showSize;
 
@@ -55,6 +63,7 @@ public class ListInstancesRequest extends Request {
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.autoReissueFlag = builder.autoReissueFlag;
         this.brand = builder.brand;
         this.certificateStatus = builder.certificateStatus;
         this.certificateType = builder.certificateType;
@@ -62,6 +71,7 @@ public class ListInstancesRequest extends Request {
         this.instanceType = builder.instanceType;
         this.keyword = builder.keyword;
         this.resourceGroupId = builder.resourceGroupId;
+        this.serverDeployFlag = builder.serverDeployFlag;
         this.showSize = builder.showSize;
         this.status = builder.status;
     }
@@ -77,6 +87,13 @@ public class ListInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoReissueFlag
+     */
+    public Integer getAutoReissueFlag() {
+        return this.autoReissueFlag;
     }
 
     /**
@@ -129,6 +146,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return serverDeployFlag
+     */
+    public Integer getServerDeployFlag() {
+        return this.serverDeployFlag;
+    }
+
+    /**
      * @return showSize
      */
     public Integer getShowSize() {
@@ -143,6 +167,7 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private Integer autoReissueFlag; 
         private String brand; 
         private String certificateStatus; 
         private String certificateType; 
@@ -150,6 +175,7 @@ public class ListInstancesRequest extends Request {
         private String instanceType; 
         private String keyword; 
         private String resourceGroupId; 
+        private Integer serverDeployFlag; 
         private Integer showSize; 
         private String status; 
 
@@ -159,6 +185,7 @@ public class ListInstancesRequest extends Request {
 
         private Builder(ListInstancesRequest request) {
             super(request);
+            this.autoReissueFlag = request.autoReissueFlag;
             this.brand = request.brand;
             this.certificateStatus = request.certificateStatus;
             this.certificateType = request.certificateType;
@@ -166,12 +193,32 @@ public class ListInstancesRequest extends Request {
             this.instanceType = request.instanceType;
             this.keyword = request.keyword;
             this.resourceGroupId = request.resourceGroupId;
+            this.serverDeployFlag = request.serverDeployFlag;
             this.showSize = request.showSize;
             this.status = request.status;
         } 
 
         /**
-         * Brand.
+         * <p>Specifies whether the instance is managed. Valid values:</p>
+         * <ul>
+         * <li>1: Managed.</li>
+         * <li>0: Not managed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder autoReissueFlag(Integer autoReissueFlag) {
+            this.putQueryParameter("AutoReissueFlag", autoReissueFlag);
+            this.autoReissueFlag = autoReissueFlag;
+            return this;
+        }
+
+        /**
+         * <p>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Digicert</p>
          */
         public Builder brand(String brand) {
             this.putQueryParameter("Brand", brand);
@@ -180,7 +227,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * CertificateStatus.
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>issued</strong>: Issued.</li>
+         * <li><strong>revoked</strong>: Revoked.</li>
+         * <li><strong>willExpire</strong>: About to expire.</li>
+         * <li><strong>expired</strong>: Expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>issued</p>
          */
         public Builder certificateStatus(String certificateStatus) {
             this.putQueryParameter("CertificateStatus", certificateStatus);
@@ -189,7 +245,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * CertificateType.
+         * <p>The type of the certificate. Valid values: DV, OV, and EV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DV</p>
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -198,7 +257,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -207,7 +269,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>BUY: formal certificate.</li>
+         * <li>TEST: test certificate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -216,7 +285,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword for fuzzy search. Matches domain names, instance names, or corresponding resource IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -225,7 +297,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******4wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -234,7 +309,26 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>Specifies whether to return only instances that meet server deployment conditions. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder serverDeployFlag(Integer serverDeployFlag) {
+            this.putQueryParameter("ServerDeployFlag", serverDeployFlag);
+            this.serverDeployFlag = serverDeployFlag;
+            return this;
+        }
+
+        /**
+         * <p>The number of instances to display per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -243,7 +337,19 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>inactive</strong>: Pending use.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+         * <li><strong>willExpire</strong>: The instance is about to expire.</li>
+         * <li><strong>expired</strong>: The instance has expired.</li>
+         * <li><strong>refund</strong>: Refunded.</li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>closed</strong>: Closed. The instance is unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inactive</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

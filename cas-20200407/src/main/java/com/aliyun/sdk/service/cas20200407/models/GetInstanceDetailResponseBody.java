@@ -20,6 +20,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoReissue")
     private String autoReissue;
 
+    @com.aliyun.core.annotation.NameInMap("AutoReissueFlag")
+    private Integer autoReissueFlag;
+
     @com.aliyun.core.annotation.NameInMap("AverageWaitingTime")
     private String averageWaitingTime;
 
@@ -65,6 +68,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
+    @com.aliyun.core.annotation.NameInMap("DeploymentResourceCount")
+    private Integer deploymentResourceCount;
+
+    @com.aliyun.core.annotation.NameInMap("DeploymentUseCount")
+    private Integer deploymentUseCount;
+
     @com.aliyun.core.annotation.NameInMap("DingGroupList")
     private java.util.List<DingGroupList> dingGroupList;
 
@@ -95,6 +104,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("KeyAlgorithm")
     private String keyAlgorithm;
 
+    @com.aliyun.core.annotation.NameInMap("MonitorExpandFlag")
+    private Integer monitorExpandFlag;
+
+    @com.aliyun.core.annotation.NameInMap("MonitorUseCount")
+    private Integer monitorUseCount;
+
     @com.aliyun.core.annotation.NameInMap("OrderEndTime")
     private Long orderEndTime;
 
@@ -122,17 +137,27 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("TotalDeploymentCount")
+    private Integer totalDeploymentCount;
+
+    @com.aliyun.core.annotation.NameInMap("TotalMonitorCount")
+    private Integer totalMonitorCount;
+
     @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
     private String upgradeStatus;
 
     @com.aliyun.core.annotation.NameInMap("ValidationMethod")
     private String validationMethod;
 
+    @com.aliyun.core.annotation.NameInMap("VersionType")
+    private String versionType;
+
     @com.aliyun.core.annotation.NameInMap("WildcardDomainCount")
     private Integer wildcardDomainCount;
 
     private GetInstanceDetailResponseBody(Builder builder) {
         this.autoReissue = builder.autoReissue;
+        this.autoReissueFlag = builder.autoReissueFlag;
         this.averageWaitingTime = builder.averageWaitingTime;
         this.brand = builder.brand;
         this.certIdentifier = builder.certIdentifier;
@@ -148,6 +173,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         this.contactIdList = builder.contactIdList;
         this.countryCode = builder.countryCode;
         this.csr = builder.csr;
+        this.deploymentResourceCount = builder.deploymentResourceCount;
+        this.deploymentUseCount = builder.deploymentUseCount;
         this.dingGroupList = builder.dingGroupList;
         this.domain = builder.domain;
         this.domainValidationList = builder.domainValidationList;
@@ -158,6 +185,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         this.instanceStartTime = builder.instanceStartTime;
         this.instanceType = builder.instanceType;
         this.keyAlgorithm = builder.keyAlgorithm;
+        this.monitorExpandFlag = builder.monitorExpandFlag;
+        this.monitorUseCount = builder.monitorUseCount;
         this.orderEndTime = builder.orderEndTime;
         this.orderStartTime = builder.orderStartTime;
         this.pendingResult = builder.pendingResult;
@@ -167,8 +196,11 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         this.spec = builder.spec;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.totalDeploymentCount = builder.totalDeploymentCount;
+        this.totalMonitorCount = builder.totalMonitorCount;
         this.upgradeStatus = builder.upgradeStatus;
         this.validationMethod = builder.validationMethod;
+        this.versionType = builder.versionType;
         this.wildcardDomainCount = builder.wildcardDomainCount;
     }
 
@@ -189,6 +221,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      */
     public String getAutoReissue() {
         return this.autoReissue;
+    }
+
+    /**
+     * @return autoReissueFlag
+     */
+    public Integer getAutoReissueFlag() {
+        return this.autoReissueFlag;
     }
 
     /**
@@ -297,6 +336,20 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return deploymentResourceCount
+     */
+    public Integer getDeploymentResourceCount() {
+        return this.deploymentResourceCount;
+    }
+
+    /**
+     * @return deploymentUseCount
+     */
+    public Integer getDeploymentUseCount() {
+        return this.deploymentUseCount;
+    }
+
+    /**
      * @return dingGroupList
      */
     public java.util.List<DingGroupList> getDingGroupList() {
@@ -367,6 +420,20 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return monitorExpandFlag
+     */
+    public Integer getMonitorExpandFlag() {
+        return this.monitorExpandFlag;
+    }
+
+    /**
+     * @return monitorUseCount
+     */
+    public Integer getMonitorUseCount() {
+        return this.monitorUseCount;
+    }
+
+    /**
      * @return orderEndTime
      */
     public Long getOrderEndTime() {
@@ -430,6 +497,20 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalDeploymentCount
+     */
+    public Integer getTotalDeploymentCount() {
+        return this.totalDeploymentCount;
+    }
+
+    /**
+     * @return totalMonitorCount
+     */
+    public Integer getTotalMonitorCount() {
+        return this.totalMonitorCount;
+    }
+
+    /**
      * @return upgradeStatus
      */
     public String getUpgradeStatus() {
@@ -444,6 +525,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return versionType
+     */
+    public String getVersionType() {
+        return this.versionType;
+    }
+
+    /**
      * @return wildcardDomainCount
      */
     public Integer getWildcardDomainCount() {
@@ -452,6 +540,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String autoReissue; 
+        private Integer autoReissueFlag; 
         private String averageWaitingTime; 
         private String brand; 
         private String certIdentifier; 
@@ -467,6 +556,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private java.util.List<Long> contactIdList; 
         private String countryCode; 
         private String csr; 
+        private Integer deploymentResourceCount; 
+        private Integer deploymentUseCount; 
         private java.util.List<DingGroupList> dingGroupList; 
         private String domain; 
         private java.util.List<DomainValidationList> domainValidationList; 
@@ -477,6 +568,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private Long instanceStartTime; 
         private String instanceType; 
         private String keyAlgorithm; 
+        private Integer monitorExpandFlag; 
+        private Integer monitorUseCount; 
         private Long orderEndTime; 
         private Long orderStartTime; 
         private String pendingResult; 
@@ -486,8 +579,11 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private String spec; 
         private String status; 
         private java.util.List<Tags> tags; 
+        private Integer totalDeploymentCount; 
+        private Integer totalMonitorCount; 
         private String upgradeStatus; 
         private String validationMethod; 
+        private String versionType; 
         private Integer wildcardDomainCount; 
 
         private Builder() {
@@ -495,6 +591,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         private Builder(GetInstanceDetailResponseBody model) {
             this.autoReissue = model.autoReissue;
+            this.autoReissueFlag = model.autoReissueFlag;
             this.averageWaitingTime = model.averageWaitingTime;
             this.brand = model.brand;
             this.certIdentifier = model.certIdentifier;
@@ -510,6 +607,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.contactIdList = model.contactIdList;
             this.countryCode = model.countryCode;
             this.csr = model.csr;
+            this.deploymentResourceCount = model.deploymentResourceCount;
+            this.deploymentUseCount = model.deploymentUseCount;
             this.dingGroupList = model.dingGroupList;
             this.domain = model.domain;
             this.domainValidationList = model.domainValidationList;
@@ -520,6 +619,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.instanceStartTime = model.instanceStartTime;
             this.instanceType = model.instanceType;
             this.keyAlgorithm = model.keyAlgorithm;
+            this.monitorExpandFlag = model.monitorExpandFlag;
+            this.monitorUseCount = model.monitorUseCount;
             this.orderEndTime = model.orderEndTime;
             this.orderStartTime = model.orderStartTime;
             this.pendingResult = model.pendingResult;
@@ -529,13 +630,23 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.spec = model.spec;
             this.status = model.status;
             this.tags = model.tags;
+            this.totalDeploymentCount = model.totalDeploymentCount;
+            this.totalMonitorCount = model.totalMonitorCount;
             this.upgradeStatus = model.upgradeStatus;
             this.validationMethod = model.validationMethod;
+            this.versionType = model.versionType;
             this.wildcardDomainCount = model.wildcardDomainCount;
         } 
 
         /**
-         * AutoReissue.
+         * <p>Indicates whether automatic hosting is enabled. Valid values:</p>
+         * <ul>
+         * <li>enable: Enabled.</li>
+         * <li>disable: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder autoReissue(String autoReissue) {
             this.autoReissue = autoReissue;
@@ -543,7 +654,25 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AverageWaitingTime.
+         * <p>Indicates whether the current version includes automatic hosting. Valid values:</p>
+         * <ul>
+         * <li>1: Included.</li>
+         * <li>0: Not included.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder autoReissueFlag(Integer autoReissueFlag) {
+            this.autoReissueFlag = autoReissueFlag;
+            return this;
+        }
+
+        /**
+         * <p>The average waiting time for issuing a certificate of this specification. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder averageWaitingTime(String averageWaitingTime) {
             this.averageWaitingTime = averageWaitingTime;
@@ -551,7 +680,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Brand.
+         * <p>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DigiCert</p>
          */
         public Builder brand(String brand) {
             this.brand = brand;
@@ -559,7 +691,15 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertIdentifier.
+         * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+         * <ul>
+         * <li>China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
+         * <li>International site: certificate ID + &quot;-ap-southeast-1&quot;</li>
+         * </ul>
+         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22783111-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -567,7 +707,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateId.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder certificateId(Integer certificateId) {
             this.certificateId = certificateId;
@@ -575,7 +718,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateName.
+         * <p>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certificateName(String certificateName) {
             this.certificateName = certificateName;
@@ -583,7 +729,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateNotAfter.
+         * <p>The end time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1801324800000</p>
          */
         public Builder certificateNotAfter(Long certificateNotAfter) {
             this.certificateNotAfter = certificateNotAfter;
@@ -591,7 +740,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateNotBefore.
+         * <p>The start time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1781568000000</p>
          */
         public Builder certificateNotBefore(Long certificateNotBefore) {
             this.certificateNotBefore = certificateNotBefore;
@@ -599,7 +751,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateRevokeTime.
+         * <p>The revocation time of the latest certificate, in UNIX timestamp format. The value is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1801324800000</p>
          */
         public Builder certificateRevokeTime(Long certificateRevokeTime) {
             this.certificateRevokeTime = certificateRevokeTime;
@@ -607,7 +762,16 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateStatus.
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>issued</strong>: Issued.</li>
+         * <li><strong>revoked</strong>: Revoked.</li>
+         * <li><strong>willExpire</strong>: About to expire.</li>
+         * <li><strong>expired</strong>: Expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>issued</p>
          */
         public Builder certificateStatus(String certificateStatus) {
             this.certificateStatus = certificateStatus;
@@ -615,7 +779,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateType.
+         * <p>The type of the certificate. Valid values: DV, OV, and EV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DV</p>
          */
         public Builder certificateType(String certificateType) {
             this.certificateType = certificateType;
@@ -623,7 +790,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * City.
+         * <p>The city where the company or organization of the certificate purchaser is located. This field is required when generating a certificate signing request. Default value: Beijing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder city(String city) {
             this.city = city;
@@ -631,7 +801,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyId.
+         * <p>The company information ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47305</p>
          */
         public Builder companyId(Long companyId) {
             this.companyId = companyId;
@@ -639,7 +812,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ContactIdList.
+         * <p>The list of contact IDs.</p>
          */
         public Builder contactIdList(java.util.List<Long> contactIdList) {
             this.contactIdList = contactIdList;
@@ -647,7 +820,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CountryCode.
+         * <p>The country or region code of the certificate organization. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.countryCode = countryCode;
@@ -655,7 +831,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Csr.
+         * <p>The certificate signing request in PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST-----   ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -663,7 +842,29 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DingGroupList.
+         * <p>The number of cloud resources to which the certificate has been deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        public Builder deploymentResourceCount(Integer deploymentResourceCount) {
+            this.deploymentResourceCount = deploymentResourceCount;
+            return this;
+        }
+
+        /**
+         * <p>The used quota for cloud server deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        public Builder deploymentUseCount(Integer deploymentUseCount) {
+            this.deploymentUseCount = deploymentUseCount;
+            return this;
+        }
+
+        /**
+         * <p>The list of associated expert service DingTalk groups.</p>
          */
         public Builder dingGroupList(java.util.List<DingGroupList> dingGroupList) {
             this.dingGroupList = dingGroupList;
@@ -671,7 +872,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Domain.
+         * <p>The domain name bound to the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -679,7 +883,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DomainValidationList.
+         * <p>The list of domain names to be validated.</p>
          */
         public Builder domainValidationList(java.util.List<DomainValidationList> domainValidationList) {
             this.domainValidationList = domainValidationList;
@@ -687,7 +891,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FullDomainCount.
+         * <p>The number of exact-match domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fullDomainCount(Integer fullDomainCount) {
             this.fullDomainCount = fullDomainCount;
@@ -695,7 +902,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * GenerateCsrMethod.
+         * <p>The method used to generate the certificate signing request. Valid values:</p>
+         * <ul>
+         * <li>online: System-generated. The Csr field is ignored.</li>
+         * <li>upload: User-uploaded. The Csr field is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder generateCsrMethod(String generateCsrMethod) {
             this.generateCsrMethod = generateCsrMethod;
@@ -703,7 +917,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceEndTime.
+         * <p>The expiration time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1801324800000</p>
          */
         public Builder instanceEndTime(Long instanceEndTime) {
             this.instanceEndTime = instanceEndTime;
@@ -711,7 +928,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas_dv-cn-123</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -719,7 +939,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStartTime.
+         * <p>The start time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1801324800000</p>
          */
         public Builder instanceStartTime(Long instanceStartTime) {
             this.instanceStartTime = instanceStartTime;
@@ -727,7 +950,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>BUY: official certificate</li>
+         * <li>TEST: test certificate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -735,7 +965,17 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * KeyAlgorithm.
+         * <p>The certificate algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA_2048</strong></li>
+         * <li><strong>RSA_3072</strong></li>
+         * <li><strong>RSA_4096</strong></li>
+         * <li><strong>ECC_256</strong></li>
+         * <li><strong>SM2</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
@@ -743,7 +983,36 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OrderEndTime.
+         * <p>Indicates whether the domain name monitoring quota can be expanded. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder monitorExpandFlag(Integer monitorExpandFlag) {
+            this.monitorExpandFlag = monitorExpandFlag;
+            return this;
+        }
+
+        /**
+         * <p>The used quota for domain name monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder monitorUseCount(Integer monitorUseCount) {
+            this.monitorUseCount = monitorUseCount;
+            return this;
+        }
+
+        /**
+         * <p>The end time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1801324800000</p>
          */
         public Builder orderEndTime(Long orderEndTime) {
             this.orderEndTime = orderEndTime;
@@ -751,7 +1020,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OrderStartTime.
+         * <p>The start time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1801324800000</p>
          */
         public Builder orderStartTime(Long orderStartTime) {
             this.orderStartTime = orderStartTime;
@@ -759,7 +1031,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PendingResult.
+         * <p>The result returned by the CA during the last certificate operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder pendingResult(String pendingResult) {
             this.pendingResult = pendingResult;
@@ -767,7 +1042,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Province.
+         * <p>The province or region where the company is located. This field is required when generating a certificate signing request. Default value: Beijing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder province(String province) {
             this.province = province;
@@ -775,7 +1053,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2CE1D02-6D5E-56E5-A9BD-EE288255C7F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -783,7 +1064,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek****wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -791,7 +1075,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Spec.
+         * <p>The purchased instance specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss.dv.t</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;
@@ -799,7 +1086,19 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>inactive</strong>: Pending use.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+         * <li><strong>willExpire</strong>: The instance is about to expire.</li>
+         * <li><strong>expired</strong>: The instance has expired.</li>
+         * <li><strong>refund</strong>: Refunded.</li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>closed</strong>: Closed. The instance cannot be used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inactive</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -807,7 +1106,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -815,7 +1114,40 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeStatus.
+         * <p>The total quota for cloud server deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        public Builder totalDeploymentCount(Integer totalDeploymentCount) {
+            this.totalDeploymentCount = totalDeploymentCount;
+            return this;
+        }
+
+        /**
+         * <p>The total quota for domain name monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
+        public Builder totalMonitorCount(Integer totalMonitorCount) {
+            this.totalMonitorCount = totalMonitorCount;
+            return this;
+        }
+
+        /**
+         * <p>The upgrade status of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>none: The instance has not been upgraded.</p>
+         * </li>
+         * <li><p>payed: The instance upgrade has been paid.</p>
+         * </li>
+         * <li><p>issued: The latest certificate has been issued for the instance upgrade.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder upgradeStatus(String upgradeStatus) {
             this.upgradeStatus = upgradeStatus;
@@ -823,7 +1155,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ValidationMethod.
+         * <p>The validation method for the certificate application. Valid values:</p>
+         * <ul>
+         * <li>DNS: DNS validation, using TXT or CNAME records.</li>
+         * <li>HTTP: File-based validation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
         public Builder validationMethod(String validationMethod) {
             this.validationMethod = validationMethod;
@@ -831,7 +1170,21 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * WildcardDomainCount.
+         * <p>The version type. Valid values: FOTA: system upgrade. APP: application upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder versionType(String versionType) {
+            this.versionType = versionType;
+            return this;
+        }
+
+        /**
+         * <p>The number of wildcard domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder wildcardDomainCount(Integer wildcardDomainCount) {
             this.wildcardDomainCount = wildcardDomainCount;
@@ -923,7 +1276,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * DingGroupInstanceId.
+             * <p>The instance ID of the expert service DingTalk group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dingGroupInstanceId(String dingGroupInstanceId) {
                 this.dingGroupInstanceId = dingGroupInstanceId;
@@ -931,7 +1287,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DingGroupName.
+             * <p>The name of the expert service DingTalk group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dingGroupName(String dingGroupName) {
                 this.dingGroupName = dingGroupName;
@@ -939,7 +1298,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DingGroupType.
+             * <p>The type of the expert service DingTalk group. Valid values:</p>
+             * <ul>
+             * <li>expedite: application assistance</li>
+             * <li>remote: offline deployment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>remote</p>
              */
             public Builder dingGroupType(String dingGroupType) {
                 this.dingGroupType = dingGroupType;
@@ -947,7 +1313,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DingGroupUrl.
+             * <p>The URL for joining the expert service DingTalk group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://123.com">https://123.com</a></p>
              */
             public Builder dingGroupUrl(String dingGroupUrl) {
                 this.dingGroupUrl = dingGroupUrl;
@@ -1079,7 +1448,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Cname.
+             * <p>The CNAME record value for verification-free authorization. This value may be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -1087,7 +1459,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CnameKey.
+             * <p>The prefix for CNAME validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder cnameKey(String cnameKey) {
                 this.cnameKey = cnameKey;
@@ -1095,7 +1470,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name to be validated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1103,7 +1481,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RootDomain.
+             * <p>The root domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder rootDomain(String rootDomain) {
                 this.rootDomain = rootDomain;
@@ -1111,7 +1492,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ValidationKey.
+             * <p>The host record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@</p>
              */
             public Builder validationKey(String validationKey) {
                 this.validationKey = validationKey;
@@ -1119,7 +1503,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ValidationType.
+             * <p>The validation type. Valid values: TXT, HTTP, and CNAME.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TXT</p>
              */
             public Builder validationType(String validationType) {
                 this.validationType = validationType;
@@ -1127,7 +1514,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ValidationValue.
+             * <p>The host record value for validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder validationValue(String validationValue) {
                 this.validationValue = validationValue;
@@ -1194,7 +1584,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1202,7 +1595,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

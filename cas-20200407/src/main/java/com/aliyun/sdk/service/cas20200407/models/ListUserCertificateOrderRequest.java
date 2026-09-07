@@ -129,7 +129,7 @@ public class ListUserCertificateOrderRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paginated query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * <p>The domain name that is bound or the ID of the resource. Fuzzy match is supported.</p>
+         * <p>The keyword for fuzzy search. Matches the domain name or the corresponding resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cert-instanceId</p>
@@ -153,12 +153,12 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * <p>The type of the order. Default value: <strong>CPACK</strong>. Valid values:</p>
+         * <p>The resource type. Default value: <strong>CPACK</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>CPACK</strong>: virtual resource order. If you set OrderType to CPACK, only the information about orders that are generated to consume the certificate quota is returned.</li>
-         * <li><strong>BUY</strong>: purchase order. If you set OrderType to BUY, only the information about purchase orders is returned. In most cases, this type of order can be ignored.</li>
-         * <li><strong>UPLOAD</strong>: uploaded certificate. If you set OrderType to UPLOAD, only uploaded certificates are returned.</li>
-         * <li><strong>CERT</strong>: certificate. If you set OrderType to CERT, both issued certificates and uploaded certificates are returned.</li>
+         * <li><strong>CPACK</strong>: resource virtual order. Only orders generated from quotas are returned.</li>
+         * <li><strong>BUY</strong>: purchase order. Only orders generated from purchases are returned. You can ignore this type in most cases.</li>
+         * <li><strong>UPLOAD</strong>: uploaded certificate. Only uploaded certificates are returned.</li>
+         * <li><strong>CERT</strong>: certificate. Both issued certificates and uploaded certificates are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation to obtain the ID.</p>
+         * <p>The resource group ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******4wia</p>
@@ -183,7 +183,7 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 50.</p>
+         * <p>The number of entries per page in a paginated query. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -195,18 +195,18 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * <p>The certificate status of the order. Valid values:</p>
+         * <p>The order status. Valid values:</p>
          * <ul>
-         * <li><strong>PAYED</strong>: pending application. You can set Status to PAYED only if you set OrderType to CPACK or BUY.</li>
-         * <li><strong>CHECKING</strong>: validating. You can set Status to CHECKING only if you set OrderType to CPACK or BUY.</li>
-         * <li><strong>CHECKED_FAIL</strong>: validation failed. You can set Status to CHECKED_FAIL only if you set OrderType to CPACK or BUY.</li>
-         * <li><strong>ISSUED</strong>: issued.</li>
-         * <li><strong>WILLEXPIRED</strong>: about to expire.</li>
-         * <li><strong>EXPIRED</strong>: expired.</li>
-         * <li><strong>NOTACTIVATED</strong>: not activated. You can set Status to NOTACTIVATED only if you set OrderType to CPACK or BUY.</li>
-         * <li><strong>REVOKED</strong>: revoked. You can set Status to REVOKED only if you set OrderType to CPACK or BUY.</li>
+         * <li><strong>PAYED</strong>: Pending application. Valid when OrderType is set to CPACK or BUY.</li>
+         * <li><strong>CHECKING</strong>: Under review. Valid when OrderType is set to CPACK or BUY.</li>
+         * <li><strong>CHECKED_FAIL</strong>: Review failed. Valid when OrderType is set to CPACK or BUY.</li>
+         * <li><strong>ISSUED</strong>: Issued.</li>
+         * <li><strong>WILLEXPIRED</strong>: About to expire.</li>
+         * <li><strong>EXPIRED</strong>: Expired.</li>
+         * <li><strong>NOTACTIVATED</strong>: Not activated. Valid when OrderType is set to CPACK or BUY.</li>
+         * <li><strong>REVOKED</strong>: Revoked. Valid when OrderType is set to CPACK or BUY.</li>
          * </ul>
-         * <p>If you set OrderType to CERT or UPLOAD and Status is left empty, valid certificates are returned by default, including issued certificates and certificates that are about to expire. If you set OrderType to CPACK or BUY and Status is left empty, all orders are returned by default.</p>
+         * <p>If OrderType is set to CERT or UPLOAD and Status is empty, valid certificates are returned by default, including issued and about-to-expire certificates. If OrderType is set to CPACK or BUY and Status is empty, all orders are returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>ISSUED</p>

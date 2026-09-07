@@ -106,7 +106,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned for the request.</p>
+         * <p>The data returned by the API.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678-1234-1234-1234-123456789ABC</p>
@@ -139,7 +139,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
          * <p>The number of deployment tasks per page. Default value: <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>50</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -398,7 +398,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain names bound to the certificate of the deployment task.</p>
+             * <p>The domain names included in the certificate of the deployment task.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyundoc1.com,aliyundoc2.com,aliyundoc3.com</p>
@@ -409,11 +409,11 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the certificate. Valid values:</p>
+             * <p>The certificate type. Valid values:</p>
              * <ul>
              * <li><strong>upload</strong>: uploaded certificate</li>
              * <li><strong>buy</strong>: purchased certificate</li>
-             * <li><strong>free</strong>: free certificate, available only on the China site (aliyun.com)</li>
+             * <li><strong>free</strong>: personal test certificate (supported only on the China site)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -425,10 +425,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the deployment task is deleted. Valid values:</p>
+             * <p>The deletion flag. This parameter has no practical significance. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: not deleted</li>
-             * <li><strong>1</strong>: deleted</li>
+             * <li><strong>0</strong>: not deleted.</li>
+             * <li><strong>1</strong>: deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -440,7 +440,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the deployment task.</p>
+             * <p>The end time of the deployment task execution, in UNIX timestamp format (seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1606482979000</p>
@@ -451,7 +451,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment task was created.</p>
+             * <p>The time when the deployment task was created, in UNIX timestamp format (seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1624343180000</p>
@@ -462,7 +462,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment task was last modified.</p>
+             * <p>The time when the deployment task was last modified, in UNIX timestamp format (seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1606482979000</p>
@@ -473,7 +473,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deployment task. You can use the ID to query the details and status of the deployment task.</p>
+             * <p>The deployment task ID. You can use this ID to query the deployment task details and status.</p>
              * 
              * <strong>example:</strong>
              * <p>19975</p>
@@ -487,7 +487,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
              * <p>The instance ID of the deployment task.</p>
              * 
              * <strong>example:</strong>
-             * <p>cas-job-user-0gvntn</p>
+             * <p>cas-job-user-***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -495,10 +495,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the deployment task.</p>
+             * <p>The task type. Valid values:</p>
              * <ul>
              * <li><strong>cloud</strong>: multi-cloud deployment task.</li>
-             * <li><strong>user</strong>: cloud service deployment task. This type of task does not support ECS instances.</li>
+             * <li><strong>user</strong>: cloud service deployment task (excluding ECS instances).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -521,7 +521,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud service included in the resources of the deployment task.</p>
+             * <p>The cloud services included in the deployment task resources.</p>
              * 
              * <strong>example:</strong>
              * <p>NLB</p>
@@ -532,10 +532,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rollback worker is included. For example, if a cloud service involved in a deployment task has been rolled back, <strong>1</strong> is returned. Valid values:</p>
+             * <p>Indicates whether the task contains a rollback worker. For example, if a cloud service in the task has been rolled back, the value <strong>1</strong> is returned. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The rollback worker is not included.</li>
-             * <li><strong>1</strong>: The rollback worker is included.</li>
+             * <li><strong>0</strong>: does not contain a rollback worker.</li>
+             * <li><strong>1</strong>: contains a rollback worker.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -547,7 +547,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment task was scheduled.</p>
+             * <p>The scheduled time of the task, in UNIX timestamp format (seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1606482979000</p>
@@ -558,7 +558,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the deployment task.</p>
+             * <p>The start time of the deployment task execution, in UNIX timestamp format (seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1606482979000</p>
@@ -569,14 +569,14 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the deployment task. Valid values:</p>
+             * <p>The deployment task status. Valid values:</p>
              * <ul>
-             * <li><strong>pending</strong></li>
-             * <li><strong>editing</strong></li>
-             * <li><strong>scheduling</strong></li>
-             * <li><strong>processing</strong></li>
-             * <li><strong>error</strong></li>
-             * <li><strong>success</strong></li>
+             * <li><strong>pending</strong>: pending execution.</li>
+             * <li><strong>editing</strong>: being edited.</li>
+             * <li><strong>scheduling</strong>: being scheduled.</li>
+             * <li><strong>processing</strong>: being deployed.</li>
+             * <li><strong>error</strong>: deployment failed.</li>
+             * <li><strong>success</strong>: deployment succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -588,10 +588,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user account ID (UID).</p>
              * 
              * <strong>example:</strong>
-             * <p>1666884372152785</p>
+             * <p>166688437*****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

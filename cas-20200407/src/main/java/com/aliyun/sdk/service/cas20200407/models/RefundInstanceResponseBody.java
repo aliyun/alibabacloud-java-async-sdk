@@ -54,7 +54,10 @@ public class RefundInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3F1FA43-1C26-50A2-8F0F-7A03851DBB46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

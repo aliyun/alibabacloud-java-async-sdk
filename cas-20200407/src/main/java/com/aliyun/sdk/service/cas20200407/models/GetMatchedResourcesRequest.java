@@ -102,6 +102,7 @@ public class GetMatchedResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The certificate IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class GetMatchedResourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Because of the large number of matched resources, the backend uses aggregation and does not support pagination. This parameter is reserved. By default, a maximum of 2,000 entries are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -123,7 +127,10 @@ public class GetMatchedResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Because of the large number of matched resources, the backend uses aggregation and does not support pagination. This parameter is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>666</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -132,7 +139,10 @@ public class GetMatchedResourcesRequest extends Request {
         }
 
         /**
-         * ResourceScope.
+         * <p>The resource match scope. This parameter can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目前支持全部云产品</p>
          */
         public Builder resourceScope(String resourceScope) {
             this.putQueryParameter("ResourceScope", resourceScope);

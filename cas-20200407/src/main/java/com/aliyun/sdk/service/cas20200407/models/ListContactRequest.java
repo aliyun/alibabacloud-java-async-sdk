@@ -87,7 +87,7 @@ public class ListContactRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The current page number for pagination. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,7 +99,7 @@ public class ListContactRequest extends Request {
         }
 
         /**
-         * <p>The keyword used in the query. For example, you can specify a keyword in names, email addresses, and mobile phone numbers.</p>
+         * <p>The search keyword. For example, a keyword in the name, email address, or phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>186</p>
@@ -111,7 +111,7 @@ public class ListContactRequest extends Request {
         }
 
         /**
-         * <p>The number of contacts per page.</p>
+         * <p>The number of contacts to display per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

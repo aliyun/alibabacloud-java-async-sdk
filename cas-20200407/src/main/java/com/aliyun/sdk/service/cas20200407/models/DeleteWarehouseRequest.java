@@ -59,7 +59,10 @@ public class DeleteWarehouseRequest extends Request {
         } 
 
         /**
-         * WarehouseInstanceId.
+         * <p>The certificate warehouse instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-wh-Q7ID6V</p>
          */
         public Builder warehouseInstanceId(String warehouseInstanceId) {
             this.putQueryParameter("WarehouseInstanceId", warehouseInstanceId);

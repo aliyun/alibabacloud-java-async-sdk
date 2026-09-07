@@ -208,7 +208,7 @@ public class CreateCsrRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123.com</p>
+         * <p>example.com</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -220,7 +220,7 @@ public class CreateCsrRequest extends Request {
          * <p>The name of the company.</p>
          * 
          * <strong>example:</strong>
-         * <p>aly</p>
+         * <p>北京CSR科技有效公司</p>
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -256,8 +256,10 @@ public class CreateCsrRequest extends Request {
         /**
          * <p>The key length that is used by the algorithm.</p>
          * <ul>
-         * <li>The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.</li>
-         * <li>The key length for ECC and SM2 algorithms can be 256 bits.</li>
+         * <li><p>The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.</p>
+         * </li>
+         * <li><p>The key length for ECC and SM2 algorithms can be 256 bits.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -312,7 +314,7 @@ public class CreateCsrRequest extends Request {
          * <p>The secondary domain names. Separate multiple domain names with commas (,). You can use the CSR to apply for a certificate for both the primary and secondary domain names.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></p>
+         * <p><a href="http://www.aliyundoc.com,www.example.com">www.aliyundoc.com,www.example.com</a></p>
          */
         public Builder sans(String sans) {
             this.putQueryParameter("Sans", sans);

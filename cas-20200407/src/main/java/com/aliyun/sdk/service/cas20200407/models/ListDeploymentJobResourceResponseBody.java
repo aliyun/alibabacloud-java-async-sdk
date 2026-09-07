@@ -67,7 +67,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -404,7 +404,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end date of the certificate bound to the cloud resource. The value is a timestamp in seconds.</p>
+             * <p>The expiration date of the certificate that is attached to the cloud product resource. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1681956830000</p>
@@ -415,7 +415,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate bound to the cloud resource.</p>
+             * <p>The ID of the certificate that is attached to the cloud product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>11599949</p>
@@ -426,7 +426,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate bound to the cloud resource.</p>
+             * <p>The name of the certificate that is attached to the cloud product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>sc-SSL</p>
@@ -437,7 +437,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start date of the certificate bound to the cloud resource. The value is a timestamp in seconds.</p>
+             * <p>The start date of the certificate that is attached to the cloud product resource. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1681956830000</p>
@@ -448,9 +448,9 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessKey ID used to access cloud resources.</p>
+             * <p>The key ID used to access the cloud resource set.</p>
              * <blockquote>
-             * <p> This parameter is required only when you deploy certificates to services of multiple clouds.</p>
+             * <p>This parameter is returned only for multicloud deployments.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -462,10 +462,12 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud service provider of the cloud resource. Valid values:</p>
+             * <p>The provider of the cloud product resource.</p>
              * <ul>
-             * <li><strong>aliyun</strong>: Alibaba Cloud</li>
-             * <li><strong>Tencent</strong>: Tencent Cloud</li>
+             * <li><p><strong>aliyun</strong>: Alibaba Cloud</p>
+             * </li>
+             * <li><p><strong>Tencent</strong>: Tencent Cloud</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -477,26 +479,45 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud service. Valid values:</p>
+             * <p>The cloud service.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
              * <ul>
-             * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>DDOS</strong>: Anti-DDoS. This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</li>
-             * <li><strong>ALB</strong>: Application Load Balancer (ALB).</li>
-             * <li><strong>APIGateway</strong>: API Gateway.</li>
-             * <li><strong>FC</strong>: Function Compute.</li>
-             * <li><strong>GA</strong>: Global Accelerator (GA).</li>
-             * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-             * <li><strong>NLB</strong>: Network Load Balancer (NLB).</li>
-             * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
-             * <li><strong>SAE</strong>: Serverless App Engine (SAE).</li>
-             * <li><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</li>
-             * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+             * <li><p><strong>SLB</strong>: Classic Load Balancer (CLB) (China site only)</p>
+             * </li>
+             * <li><p><strong>LIVE</strong>: ApsaraVideo Live (China site only)</p>
+             * </li>
+             * <li><p><strong>webHosting</strong>: Cloud Web Hosting (China site only)</p>
+             * </li>
+             * <li><p><strong>VOD</strong>: ApsaraVideo VOD (China site only)</p>
+             * </li>
+             * <li><p><strong>CR</strong>: Container Registry (China site only)</p>
+             * </li>
+             * <li><p><strong>DCDN</strong>: DCDN</p>
+             * </li>
+             * <li><p><strong>DDOS</strong>: Anti-DDoS</p>
+             * </li>
+             * <li><p><strong>CDN</strong>: Alibaba Cloud CDN</p>
+             * </li>
+             * <li><p><strong>ALB</strong>: Application Load Balancer</p>
+             * </li>
+             * <li><p><strong>APIGateway</strong>: API Gateway</p>
+             * </li>
+             * <li><p><strong>FC</strong>: Function Compute</p>
+             * </li>
+             * <li><p><strong>GA</strong>: Global Accelerator</p>
+             * </li>
+             * <li><p><strong>MSE</strong>: MSE</p>
+             * </li>
+             * <li><p><strong>NLB</strong>: Network Load Balancer</p>
+             * </li>
+             * <li><p><strong>OSS</strong>: OSS</p>
+             * </li>
+             * <li><p><strong>SAE</strong>: SAE</p>
+             * </li>
+             * <li><p><strong>TencentCDN</strong>: Tencent CDN</p>
+             * </li>
+             * <li><p><strong>WAF</strong>: WAF</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -508,7 +529,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cloud service provider to which the cloud resource belongs.</p>
+             * <p>The region ID of the cloud product resource from the cloud provider.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -519,13 +540,15 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud resource is the default resource. Valid values:</p>
+             * <p>Indicates whether the cloud product resource is a default resource.</p>
              * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><p><strong>1</strong>: Default resource</p>
+             * </li>
+             * <li><p><strong>0</strong>: Not a default resource</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * <p>This parameter is returned only for deployments of SLB, NLB, ALB, and GA.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -537,7 +560,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name bound to the cloud resource.</p>
+             * <p>The domain name that is attached to the cloud product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyundoc.com</p>
@@ -548,10 +571,12 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTPS is enabled for the cloud resource. Valid values:</p>
+             * <p>Indicates whether HTTPS is enabled for the cloud product resource.</p>
              * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -563,7 +588,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud resource was created. The time is a timestamp in seconds.</p>
+             * <p>The time when the synchronized resource was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1673423339000</p>
@@ -574,7 +599,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud resource was last modified. The time is in the timestamp format.</p>
+             * <p>The time when the synchronized resource was last modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1681956830000</p>
@@ -585,7 +610,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud resource.</p>
+             * <p>The ID of the cloud product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>20979</p>
@@ -596,9 +621,9 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the cloud resource.</p>
+             * <p>The instance ID of the cloud product resource.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * <p>This parameter is returned only for deployments of SLB, NLB, ALB, and GA.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -610,9 +635,9 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener ID of the cloud resource.</p>
+             * <p>The listener ID of the cloud product resource.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * <p>This parameter is returned only for deployments of SLB, NLB, ALB, and GA.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -624,9 +649,9 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listening port of the cloud resource.</p>
+             * <p>The listener port of the cloud product resource.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * <p>This parameter is returned only for deployments of SLB, NLB, ALB, and GA.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -638,7 +663,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cloud resource.</p>
+             * <p>The region ID of the synchronized cloud product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -649,10 +674,10 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The other metadata related to the cloud resource.</p>
+             * <p>Other metadata about the cloud product resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;camera_model&quot;:&quot;GIFSHOW [1267087617][OnePlus</p>
+             * <p>{\&quot;camera_model\&quot;:\&quot;GIFSHOW [1267087617][OnePlus</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -660,7 +685,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud resource.</p>
+             * <p>The status of the synchronized cloud product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>online</p>
@@ -671,13 +696,15 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an Alibaba Cloud SSL certificate is used. Valid values:</p>
+             * <p>Indicates whether an Alibaba Cloud SSL certificate is used.</p>
              * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><p><strong>1</strong>: Yes</p>
+             * </li>
+             * <li><p><strong>0</strong>: No</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is required only when you deploy certificates to services of multiple clouds.</p>
+             * <p>This parameter is returned only for multicloud deployments.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -692,7 +719,7 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
-             * <p>1666884372152785</p>
+             * <p>1666884372******</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

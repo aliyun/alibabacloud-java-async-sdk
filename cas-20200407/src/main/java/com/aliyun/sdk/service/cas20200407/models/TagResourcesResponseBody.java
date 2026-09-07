@@ -54,7 +54,10 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D85A4B3-8F5B-411B-A91C-EF91B5183E2E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

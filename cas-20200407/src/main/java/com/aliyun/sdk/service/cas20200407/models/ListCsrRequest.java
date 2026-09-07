@@ -113,7 +113,7 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * <p>The keyword.</p>
+         * <p>The keyword for fuzzy search. For example, you can specify a domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>

@@ -106,7 +106,7 @@ public class ListWarehouseResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>A list of warehouse objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned on each page. The default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the result set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class ListWarehouseResponseBody extends TeaModel {
             } 
 
             /**
-             * WarehouseInstanceId.
+             * <p>The warehouse instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas-wh-Q7ID6V</p>
              */
             public Builder warehouseInstanceId(String warehouseInstanceId) {
                 this.warehouseInstanceId = warehouseInstanceId;
@@ -225,7 +240,10 @@ public class ListWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * WarehouseName.
+             * <p>The warehouse name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_warehouse</p>
              */
             public Builder warehouseName(String warehouseName) {
                 this.warehouseName = warehouseName;
@@ -233,7 +251,10 @@ public class ListWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * WarehouseType.
+             * <p>The warehouse type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcaCaCert</p>
              */
             public Builder warehouseType(String warehouseType) {
                 this.warehouseType = warehouseType;

@@ -267,7 +267,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
              * <p>The AccessKey ID that is used to access cloud resources.</p>
              * 
              * <strong>example:</strong>
-             * <p>AAAqdwPBA****</p>
+             * <p>AAAZCJQ******</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;

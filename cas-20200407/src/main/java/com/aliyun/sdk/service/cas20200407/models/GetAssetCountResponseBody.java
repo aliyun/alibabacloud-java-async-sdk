@@ -210,7 +210,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AliyunAssetCount.
+         * <p>The total number of Alibaba Cloud resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aliyunAssetCount(Integer aliyunAssetCount) {
             this.aliyunAssetCount = aliyunAssetCount;
@@ -218,7 +221,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * AwsAssetCount.
+         * <p>The total number of Amazon Web Services (AWS) resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder awsAssetCount(Integer awsAssetCount) {
             this.awsAssetCount = awsAssetCount;
@@ -226,7 +232,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * BuyCertificateCount.
+         * <p>The number of paid certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyCertificateCount(Integer buyCertificateCount) {
             this.buyCertificateCount = buyCertificateCount;
@@ -234,7 +243,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * DomainAssetCount.
+         * <p>The total number of domain name resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder domainAssetCount(Integer domainAssetCount) {
             this.domainAssetCount = domainAssetCount;
@@ -242,7 +254,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * FreeCertificateCount.
+         * <p>The number of free certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder freeCertificateCount(Integer freeCertificateCount) {
             this.freeCertificateCount = freeCertificateCount;
@@ -250,7 +265,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * HuaweiAssetCount.
+         * <p>The total number of Huawei Cloud resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder huaweiAssetCount(Integer huaweiAssetCount) {
             this.huaweiAssetCount = huaweiAssetCount;
@@ -258,7 +276,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * LastPoint.
+         * <p>The previous health score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder lastPoint(Integer lastPoint) {
             this.lastPoint = lastPoint;
@@ -266,7 +287,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * Point.
+         * <p>The generated perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder point(Integer point) {
             this.point = point;
@@ -274,7 +298,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * PointRatio.
+         * <p>The health score ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pointRatio(Integer pointRatio) {
             this.pointRatio = pointRatio;
@@ -282,7 +309,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * PointTime.
+         * <p>The time when the health score was updated (in timestamp format, accurate to seconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767681210879</p>
          */
         public Builder pointTime(Long pointTime) {
             this.pointTime = pointTime;
@@ -290,7 +320,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EECA10D5-BD0F-4EF1-B3EA-B4578E5C6F8E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +331,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * TencentAssetCount.
+         * <p>The total number of Tencent Cloud resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder tencentAssetCount(Integer tencentAssetCount) {
             this.tencentAssetCount = tencentAssetCount;
@@ -306,7 +342,10 @@ public class GetAssetCountResponseBody extends TeaModel {
         }
 
         /**
-         * UploadCertificateCount.
+         * <p>The number of uploaded certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder uploadCertificateCount(Integer uploadCertificateCount) {
             this.uploadCertificateCount = uploadCertificateCount;

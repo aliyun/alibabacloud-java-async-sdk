@@ -132,7 +132,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page displayed in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -140,7 +143,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +154,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty value of NextToken indicates that there is no next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +165,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TagKeys.
+         * <p>The list of tag keys.</p>
          */
         public Builder tagKeys(java.util.List<TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -180,7 +195,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +264,10 @@ public class ListTagKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * TagCount.
+             * <p>The total number of tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagCount(Integer tagCount) {
                 this.tagCount = tagCount;
@@ -254,7 +275,10 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-cus-tag-3</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

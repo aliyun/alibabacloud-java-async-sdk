@@ -80,7 +80,7 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -91,7 +91,7 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BDB81BA2-E1F5-4D08-A2DD-4BE2BF44C90E</p>
@@ -102,10 +102,10 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The instance ID of the certificate to operate on.</p>
          * 
          * <strong>example:</strong>
-         * <p>cas-upload-j2ofdb</p>
+         * <p>cas-upload-xki1d0</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;

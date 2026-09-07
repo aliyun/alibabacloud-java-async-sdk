@@ -353,7 +353,15 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Algorithm.
+         * <p>The certificate algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA</strong>: RSA algorithm.</li>
+         * <li><strong>ECC</strong>: ECC algorithm.</li>
+         * <li><strong>SM2</strong>: SM2 encryption algorithm.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         public Builder algorithm(String algorithm) {
             this.algorithm = algorithm;
@@ -361,7 +369,13 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertIdentifier.
+         * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This is commonly used across Alibaba Cloud services.
+         *   --For the China site, the format is certificate ID + &quot;-cn-hangzhou&quot;.
+         * For the China site, the format is certificate ID + &quot;-ap-southeast-1&quot;.
+         * For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21912069-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -369,7 +383,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateChainList.
+         * <p>The certificate chain information list.</p>
          */
         public Builder certificateChainList(java.util.List<CertificateChainList> certificateChainList) {
             this.certificateChainList = certificateChainList;
@@ -377,7 +391,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateId.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22559621</p>
          */
         public Builder certificateId(Integer certificateId) {
             this.certificateId = certificateId;
@@ -385,7 +402,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateName.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certificateName(String certificateName) {
             this.certificateName = certificateName;
@@ -393,7 +413,15 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateSource.
+         * <p>The certificate source. Valid values:</p>
+         * <ul>
+         * <li>BUY: purchased certificate.</li>
+         * <li>TEST: test certificate.</li>
+         * <li>UPLOAD: uploaded certificate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder certificateSource(String certificateSource) {
             this.certificateSource = certificateSource;
@@ -401,7 +429,16 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateStatus.
+         * <p>The certificate status. Valid values:</p>
+         * <ul>
+         * <li><strong>issued</strong>: issued.</li>
+         * <li><strong>revoked</strong>: revoked.</li>
+         * <li><strong>willExpire</strong>: about to expire.</li>
+         * <li><strong>expired</strong>: expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>issued</p>
          */
         public Builder certificateStatus(String certificateStatus) {
             this.certificateStatus = certificateStatus;
@@ -409,7 +446,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CommonName.
+         * <p>The common domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -417,7 +457,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CompanyId.
+         * <p>The company information ID associated with the certificate application. This field is empty for DV certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44211</p>
          */
         public Builder companyId(Long companyId) {
             this.companyId = companyId;
@@ -425,7 +468,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ContactId.
+         * <p>The contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>304066</p>
          */
         public Builder contactId(Long contactId) {
             this.contactId = contactId;
@@ -433,7 +479,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Csr.
+         * <p>The certificate signing request (CSR) used to issue the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -441,7 +490,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Domain.
+         * <p>All domain names contained in the certificate. Multiple domain names are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyundoc.com,example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -449,7 +501,14 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ExistPrivateKey.
+         * <p>Indicates whether a private key exists on the backend for the current certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder existPrivateKey(Boolean existPrivateKey) {
             this.existPrivateKey = existPrivateKey;
@@ -457,7 +516,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FingerPrint.
+         * <p>The public key fingerprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder fingerPrint(String fingerPrint) {
             this.fingerPrint = fingerPrint;
@@ -465,7 +527,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas_dv-cn-123</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -473,7 +538,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Issuer.
+         * <p>The entity that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Digicert</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -481,7 +549,14 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * KeySize.
+         * <p>The key algorithm length.</p>
+         * <ul>
+         * <li>The RSA algorithm length is typically 2048, 3072, or 4096.</li>
+         * <li>The ECC and SM2 algorithm length is typically 256.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder keySize(Integer keySize) {
             this.keySize = keySize;
@@ -489,7 +564,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NotAfter.
+         * <p>The end time of the certificate validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17326613180000</p>
          */
         public Builder notAfter(Long notAfter) {
             this.notAfter = notAfter;
@@ -497,7 +575,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NotBefore.
+         * <p>The start time of the certificate validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17321613180000</p>
          */
         public Builder notBefore(Long notBefore) {
             this.notBefore = notBefore;
@@ -505,7 +586,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -513,7 +597,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Serial.
+         * <p>The certificate serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder serial(String serial) {
             this.serial = serial;
@@ -521,7 +608,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SubjectAlternativeNames.
+         * <p>The list of Subject Alternative Names (SANs) of the certificate, returned in array format. This corresponds to the <code>Subject Alternative Name</code> field of the certificate.</p>
          */
         public Builder subjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
@@ -529,7 +616,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -537,7 +624,7 @@ public class GetCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UsingProductList.
+         * <p>The list of cloud services to which the current certificate is deployed.</p>
          */
         public Builder usingProductList(java.util.List<String> usingProductList) {
             this.usingProductList = usingProductList;
@@ -642,7 +729,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Issuer.
+             * <p>The issuer name in the certificate chain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Digicert</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -650,7 +740,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * <p>The end time of the certificate validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17326613180000</p>
              */
             public Builder notAfter(Long notAfter) {
                 this.notAfter = notAfter;
@@ -658,7 +751,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * <p>The start time of the certificate validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17321613180000</p>
              */
             public Builder notBefore(Long notBefore) {
                 this.notBefore = notBefore;
@@ -666,7 +762,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RemainDay.
+             * <p>The remaining days of the certificate chain validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder remainDay(Integer remainDay) {
                 this.remainDay = remainDay;
@@ -674,7 +773,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * <p>The common name in the certificate chain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Digicert</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -741,7 +843,11 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -749,7 +855,10 @@ public class GetCertificateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

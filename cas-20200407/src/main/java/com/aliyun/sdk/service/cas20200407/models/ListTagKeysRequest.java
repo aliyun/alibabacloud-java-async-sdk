@@ -145,7 +145,10 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page displayed in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -154,7 +157,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries in the result set. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -163,7 +169,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty value of NextToken indicates that there is no next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,7 +181,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -181,6 +193,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +206,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-cd1f2g3h4i\&quot;\&quot;</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -202,6 +218,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
+         * <p>The resource type. The value is fixed as <strong>instance</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -384,7 +384,7 @@ public class ListCsrResponseBody extends TeaModel {
              * <p>The name of the company.</p>
              * 
              * <strong>example:</strong>
-             * <p>corp_name</p>
+             * <p>北京CSR科技有限公司</p>
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -472,7 +472,7 @@ public class ListCsrResponseBody extends TeaModel {
              * <p>The name of the CSR.</p>
              * 
              * <strong>example:</strong>
-             * <p>name</p>
+             * <p>test_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +494,7 @@ public class ListCsrResponseBody extends TeaModel {
              * <p>The secondary domain names. Separate multiple domain names with commas (,).</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></p>
+             * <p><a href="http://www.aliyundoc.com,www.example.com">www.aliyundoc.com,www.example.com</a></p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;

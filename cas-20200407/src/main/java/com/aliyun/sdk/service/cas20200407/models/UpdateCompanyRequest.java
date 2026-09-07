@@ -237,6 +237,7 @@ public class UpdateCompanyRequest extends Request {
         } 
 
         /**
+         * <p>The city.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +250,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The address of the company.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,6 +263,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The company code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +276,10 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
-         * CompanyEmail.
+         * <p>The email address of the company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@163.com">test@163.com</a></p>
          */
         public Builder companyEmail(String companyEmail) {
             this.putQueryParameter("CompanyEmail", companyEmail);
@@ -282,6 +288,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The company ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,6 +301,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The name of the company or organization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,6 +314,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The phone number of the company.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +327,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The company type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +340,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The country code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +353,10 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>The department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -351,7 +365,10 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -360,6 +377,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The postal code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -372,6 +390,7 @@ public class UpdateCompanyRequest extends Request {
         }
 
         /**
+         * <p>The province.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

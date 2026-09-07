@@ -288,7 +288,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AliyunAssetCertificateExpiredCount.
+         * <p>Number of expired Alibaba Cloud certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aliyunAssetCertificateExpiredCount(Integer aliyunAssetCertificateExpiredCount) {
             this.aliyunAssetCertificateExpiredCount = aliyunAssetCertificateExpiredCount;
@@ -296,7 +299,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * AliyunAssetCertificateWillExpiredCount.
+         * <p>Number of Alibaba Cloud certificates that will expire soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aliyunAssetCertificateWillExpiredCount(Integer aliyunAssetCertificateWillExpiredCount) {
             this.aliyunAssetCertificateWillExpiredCount = aliyunAssetCertificateWillExpiredCount;
@@ -304,7 +310,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * BuyCertificateExpireCount.
+         * <p>Number of expired paid certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyCertificateExpireCount(Integer buyCertificateExpireCount) {
             this.buyCertificateExpireCount = buyCertificateExpireCount;
@@ -312,7 +321,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * BuyCertificateNotDeploymentCount.
+         * <p>Number of paid certificates not deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyCertificateNotDeploymentCount(Integer buyCertificateNotDeploymentCount) {
             this.buyCertificateNotDeploymentCount = buyCertificateNotDeploymentCount;
@@ -320,7 +332,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * BuyCertificateNotTrusteeCount.
+         * <p>Number of paid certificates not managed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyCertificateNotTrusteeCount(Integer buyCertificateNotTrusteeCount) {
             this.buyCertificateNotTrusteeCount = buyCertificateNotTrusteeCount;
@@ -328,7 +343,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * BuyCertificateWillExpiredCount.
+         * <p>Number of paid certificates that will expire soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyCertificateWillExpiredCount(Integer buyCertificateWillExpiredCount) {
             this.buyCertificateWillExpiredCount = buyCertificateWillExpiredCount;
@@ -336,7 +354,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * BuyCheckedFailCount.
+         * <p>Number of failed paid certificate orders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyCheckedFailCount(Integer buyCheckedFailCount) {
             this.buyCheckedFailCount = buyCheckedFailCount;
@@ -344,7 +365,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * DomainAssetNotMonitorCount.
+         * <p>Number of domains without monitoring configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder domainAssetNotMonitorCount(Integer domainAssetNotMonitorCount) {
             this.domainAssetNotMonitorCount = domainAssetNotMonitorCount;
@@ -352,7 +376,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * FreeCertificateExpireCount.
+         * <p>Number of expired free certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder freeCertificateExpireCount(Integer freeCertificateExpireCount) {
             this.freeCertificateExpireCount = freeCertificateExpireCount;
@@ -360,7 +387,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * FreeCertificateNotDeploymentCount.
+         * <p>Number of free certificates not deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder freeCertificateNotDeploymentCount(Integer freeCertificateNotDeploymentCount) {
             this.freeCertificateNotDeploymentCount = freeCertificateNotDeploymentCount;
@@ -368,7 +398,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * FreeCertificateWillExpiredCount.
+         * <p>Number of free certificates that will expire soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder freeCertificateWillExpiredCount(Integer freeCertificateWillExpiredCount) {
             this.freeCertificateWillExpiredCount = freeCertificateWillExpiredCount;
@@ -376,7 +409,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * FreeCheckedFailCount.
+         * <p>Number of failed free certificate orders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder freeCheckedFailCount(Integer freeCheckedFailCount) {
             this.freeCheckedFailCount = freeCheckedFailCount;
@@ -384,7 +420,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * MultiCloudAssetCertificateExpiredCount.
+         * <p>Number of expired multicloud certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder multiCloudAssetCertificateExpiredCount(Integer multiCloudAssetCertificateExpiredCount) {
             this.multiCloudAssetCertificateExpiredCount = multiCloudAssetCertificateExpiredCount;
@@ -392,7 +431,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * MultiCloudAssetCertificateWillExpiredCount.
+         * <p>Number of multicloud certificates that will expire soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder multiCloudAssetCertificateWillExpiredCount(Integer multiCloudAssetCertificateWillExpiredCount) {
             this.multiCloudAssetCertificateWillExpiredCount = multiCloudAssetCertificateWillExpiredCount;
@@ -400,7 +442,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this API call. Alibaba Cloud generates this unique identifier for each request. Use it to troubleshoot and locate issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BCD2F6C-7A9D-47C1-8588-2CC6A4E0BE5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -408,7 +453,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * UploadCertificateExpireCount.
+         * <p>Number of expired uploaded certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder uploadCertificateExpireCount(Integer uploadCertificateExpireCount) {
             this.uploadCertificateExpireCount = uploadCertificateExpireCount;
@@ -416,7 +464,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * UploadCertificateNotDeploymentCount.
+         * <p>Number of uploaded certificates not deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder uploadCertificateNotDeploymentCount(Integer uploadCertificateNotDeploymentCount) {
             this.uploadCertificateNotDeploymentCount = uploadCertificateNotDeploymentCount;
@@ -424,7 +475,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * UploadCertificateNotNoticeCount.
+         * <p>Number of uploaded certificates without alerting configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder uploadCertificateNotNoticeCount(Integer uploadCertificateNotNoticeCount) {
             this.uploadCertificateNotNoticeCount = uploadCertificateNotNoticeCount;
@@ -432,7 +486,10 @@ public class GetRiskCountResponseBody extends TeaModel {
         }
 
         /**
-         * UploadCertificateWillExpiredCount.
+         * <p>Number of uploaded certificates that will expire soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder uploadCertificateWillExpiredCount(Integer uploadCertificateWillExpiredCount) {
             this.uploadCertificateWillExpiredCount = uploadCertificateWillExpiredCount;

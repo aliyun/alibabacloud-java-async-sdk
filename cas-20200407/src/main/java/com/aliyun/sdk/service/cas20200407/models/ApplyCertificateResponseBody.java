@@ -54,7 +54,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

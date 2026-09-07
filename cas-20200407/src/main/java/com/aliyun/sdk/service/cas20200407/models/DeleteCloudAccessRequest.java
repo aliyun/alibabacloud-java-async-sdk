@@ -59,7 +59,10 @@ public class DeleteCloudAccessRequest extends Request {
         } 
 
         /**
-         * AccessId.
+         * <p>The ID of the access key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder accessId(String accessId) {
             this.putQueryParameter("AccessId", accessId);

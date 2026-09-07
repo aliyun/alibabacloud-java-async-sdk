@@ -75,6 +75,7 @@ public class CreateRollbackTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the deployment task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateRollbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the deployment worker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

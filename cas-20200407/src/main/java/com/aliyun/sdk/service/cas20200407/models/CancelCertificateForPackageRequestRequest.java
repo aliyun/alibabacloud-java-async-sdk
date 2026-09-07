@@ -60,14 +60,14 @@ public class CancelCertificateForPackageRequestRequest extends Request {
         } 
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> to obtain this ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123451222</p>
+         * <p>123456</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

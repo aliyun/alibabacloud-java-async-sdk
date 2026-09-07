@@ -186,7 +186,7 @@ public class UploadUserCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The content of the certificate in the PEM format.</p>
+         * <p>The non-China SM certificate content in PEM format.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
@@ -198,7 +198,10 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -207,7 +210,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The content of the encryption certificate in PEM format.</p>
+         * <p>The encryption certificate content of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -221,7 +224,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key of the encryption certificate in the PEM format.</p>
+         * <p>The private key content of the encryption certificate of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN EC PRIVATE KEY-----
@@ -235,7 +238,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key of the certificate in the PEM format.</p>
+         * <p>The private key content of the non-China SM certificate in PEM format.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -249,9 +252,9 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The name of the certificate. The name can be up to 64 characters in length, and can contain all types of characters, such as letters, digits, and underscores (_).</p>
+         * <p>The custom certificate name. Maximum length: 63 characters. All character types are supported, including letters, digits, and underscores.</p>
          * <blockquote>
-         * <p> The name must be unique within an Alibaba Cloud account.</p>
+         * <p>Certificate names must be unique within the same user account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -265,7 +268,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>the resource group id.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae****vty</p>
@@ -277,7 +280,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The content of the signing certificate in the PEM format.</p>
+         * <p>The signing certificate content of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -291,7 +294,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key of the signing certificate in the PEM format.</p>
+         * <p>The private key content of the signing certificate of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN EC PRIVATE KEY-----
@@ -305,7 +308,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);

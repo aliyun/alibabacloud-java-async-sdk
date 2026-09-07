@@ -101,7 +101,10 @@ public class ListTrusteeOrderRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * <p>The certificate ID. You must specify either CertificateId or OrderId. Both cannot be empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23787679</p>
          */
         public Builder certificateId(Long certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -110,7 +113,10 @@ public class ListTrusteeOrderRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -119,7 +125,10 @@ public class ListTrusteeOrderRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,7 +137,10 @@ public class ListTrusteeOrderRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID. You must specify either CertificateId or OrderId. Both cannot be empty at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14933279</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

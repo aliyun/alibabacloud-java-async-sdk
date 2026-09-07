@@ -59,7 +59,10 @@ public class DescribeWarehouseCertRequest extends Request {
         } 
 
         /**
-         * CertIdentifier.
+         * <p>The unique identifier of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);

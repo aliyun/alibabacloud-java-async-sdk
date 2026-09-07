@@ -87,7 +87,10 @@ public class CreateWarehouseRequest extends Request {
         } 
 
         /**
-         * Biz.
+         * <p>The scenarios of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contract</p>
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -96,7 +99,10 @@ public class CreateWarehouseRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the certificate repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCertificateWarehouse</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -105,7 +111,10 @@ public class CreateWarehouseRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the certificate repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcaCertificate</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
