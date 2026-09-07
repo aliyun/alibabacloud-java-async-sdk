@@ -93,7 +93,7 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
         } 
 
         /**
-         * Bridges.
+         * <p>The virtual bridge information.</p>
          */
         public Builder bridges(java.util.List<Bridges> bridges) {
             this.bridges = bridges;
@@ -101,7 +101,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned. Valid values: 1 to 100. If this parameter is not specified, the default value 100 is used. The number of returned entries can be less than but cannot be greater than the specified number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +283,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessType.
+             * <p>The access type of the management page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -282,7 +294,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeId.
+             * <p>The virtual bridge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vb-sfijaosifiosjfoij***</p>
              */
             public Builder bridgeId(String bridgeId) {
                 this.bridgeId = bridgeId;
@@ -290,7 +305,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeLevel.
+             * <p>The virtual bridge specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vb.pro</p>
              */
             public Builder bridgeLevel(String bridgeLevel) {
                 this.bridgeLevel = bridgeLevel;
@@ -298,7 +316,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeStatus.
+             * <p>The virtual bridge status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inuse</p>
              */
             public Builder bridgeStatus(String bridgeStatus) {
                 this.bridgeStatus = bridgeStatus;
@@ -306,7 +327,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeType.
+             * <p>The third-party plugin type of the virtual bridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>panbit</p>
              */
             public Builder bridgeType(String bridgeType) {
                 this.bridgeType = bridgeType;
@@ -314,7 +338,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-07T02:02:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -322,7 +349,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetUrl.
+             * <p>The internal network address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://10.0.0.0:8080">http://10.0.0.0:8080</a></p>
              */
             public Builder intranetUrl(String intranetUrl) {
                 this.intranetUrl = intranetUrl;
@@ -330,7 +360,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen+dir-8485473914</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -338,7 +371,10 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The office network name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hk11</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;

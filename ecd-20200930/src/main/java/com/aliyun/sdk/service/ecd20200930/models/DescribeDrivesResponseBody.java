@@ -132,7 +132,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value 200 indicates that the request was successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of storage resources.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -154,7 +154,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user-level storage resources.</p>
+         * <p>The list of user-level storage resources.</p>
          */
         public Builder drives(java.util.List<Drives> drives) {
             this.drives = drives;
@@ -162,7 +162,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -173,7 +173,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAA****</p>
@@ -264,7 +264,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud computer pool.</p>
+             * <p>The cloud computer pool ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-aaaa****</p>
@@ -275,7 +275,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer pool.</p>
+             * <p>The cloud computer pool name.</p>
              * 
              * <strong>example:</strong>
              * <p>group01</p>
@@ -579,7 +579,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1202****</p>
@@ -590,7 +590,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The introduction to the storage resource.</p>
+             * <p>The storage resource description.</p>
              * 
              * <strong>example:</strong>
              * <p>test****</p>
@@ -603,7 +603,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             /**
              * <p>The number of associated cloud computer pools.</p>
              * <blockquote>
-             * <p> This parameter is returned only if ResourceType is set to NAS and Type is set to USER_PROFILE.</p>
+             * <p>This parameter is returned only when the storage resource is NAS and the purpose is USER_PROFILE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -615,9 +615,9 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the associated cloud computers.</p>
+             * <p>The list of associated cloud computer pool details.</p>
              * <blockquote>
-             * <p> This parameter is returned only if ResourceType is set to NAS and Type is set to USER_PROFILE.</p>
+             * <p>This parameter is returned only when the storage resource is NAS and the purpose is USER_PROFILE.</p>
              * </blockquote>
              */
             public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
@@ -626,7 +626,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the storage resource.</p>
+             * <p>The storage resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dom-aaaa****</p>
@@ -637,7 +637,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user-level storage resource.</p>
+             * <p>The user-level storage resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dri-aaaa****</p>
@@ -648,7 +648,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the UPM feature is enabled.</p>
+             * <p>Indicates whether the User Profile Management (UPM) feature is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -659,10 +659,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external storage resource.</p>
+             * <p>The external storage resource ID.</p>
              * <ul>
-             * <li>If ResourceType is set to NAS, the NAS ID is returned for this parameter.</li>
-             * <li>If ResourceType is set to PDS, the PDS ID is returned for this parameter.</li>
+             * <li>If the storage resource is NAS, this parameter returns the NAS ID.</li>
+             * <li>If the storage resource is PDS, this parameter returns the PDS ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -674,9 +674,9 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the storage resource at the external user level.</p>
+             * <p>The external user-level storage resource ID.</p>
              * <blockquote>
-             * <p> This parameter is returned only if ResourceType is set to PDS.</p>
+             * <p>This parameter is returned only when the storage resource is PDS.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -688,9 +688,9 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external user.</p>
+             * <p>The external user ID.</p>
              * <blockquote>
-             * <p> This parameter is returned only if ResourceType is set to PDS.</p>
+             * <p>This parameter is returned only when the storage resource is PDS.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -702,7 +702,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the storage resource was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-02T08:42:26.000+00:00</p>
@@ -713,7 +713,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the storage resource was modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-07T02:46:04.000+00:00</p>
@@ -724,9 +724,9 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID.</p>
              * <blockquote>
-             * <p> You can ignore this parameter.</p>
+             * <p>You can ignore this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -738,7 +738,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the storage resource.</p>
+             * <p>The storage resource name.</p>
              * 
              * <strong>example:</strong>
              * <p>test****</p>
@@ -750,7 +750,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This parameter is deprecated.</p>
+             * <p>This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -765,15 +765,6 @@ public class DescribeDrivesResponseBody extends TeaModel {
 
             /**
              * <p>The status of the user-level storage resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>INIT: initializing</li>
-             * <li>MAINTAIN: maintaining</li>
-             * <li>DELETING: deleting</li>
-             * <li>INVALID: invalid</li>
-             * <li>NORMAL: normal</li>
-             * <li>FAIL: failed</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -784,7 +775,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of user-level storage capacity.</p>
+             * <p>The total capacity of the user-level storage resource.</p>
              * 
              * <strong>example:</strong>
              * <p>536870912000</p>
@@ -795,12 +786,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of the storage resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>DESKTOP: data disk space</li>
-             * <li>USER_PROFILE: personal data space</li>
-             * </ul>
+             * <p>The purpose of the storage resource.</p>
              * 
              * <strong>example:</strong>
              * <p>USER_PROFILE</p>
@@ -811,7 +797,7 @@ public class DescribeDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of user-level storage capacity used.</p>
+             * <p>The used capacity of the user-level storage resource.</p>
              * 
              * <strong>example:</strong>
              * <p>243175936</p>

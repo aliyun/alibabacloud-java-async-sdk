@@ -90,7 +90,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the NAS file system.</p>
+         * <p>The NAS file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the mount target.</p>
+         * <p>The mount target domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

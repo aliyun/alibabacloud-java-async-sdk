@@ -80,7 +80,10 @@ public class CreateVirtualBridgeResponseBody extends TeaModel {
         } 
 
         /**
-         * BridgeId.
+         * <p>The virtual bridge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vb-sjfaijfish***</p>
          */
         public Builder bridgeId(String bridgeId) {
             this.bridgeId = bridgeId;
@@ -88,7 +91,10 @@ public class CreateVirtualBridgeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class CreateVirtualBridgeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93AD30C1-16B8-5C54-AD23-A51FF53F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

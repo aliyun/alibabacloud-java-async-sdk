@@ -67,7 +67,7 @@ public class SetIdpMetadataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The entity ID obtained after the IdP metadata file is parsed.</p>
+         * <p>The entityID value obtained after parsing the IdP metadata file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test****.cn/adfs/services/trust">http://test****.cn/adfs/services/trust</a></p>

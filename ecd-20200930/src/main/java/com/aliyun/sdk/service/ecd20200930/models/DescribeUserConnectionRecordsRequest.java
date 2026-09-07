@@ -230,7 +230,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The duration when the cloud desktop is connected, which is the minimum value for condition filtering.</p>
+         * <p>The minimum value of the connection duration used as a filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -242,7 +242,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The duration when the cloud desktop is connected, which is the maximum value for condition filtering.</p>
+         * <p>The maximum value of the connection duration used as a filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -254,7 +254,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The minimum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1631266200000</p>
@@ -266,7 +266,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The maximum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1631268000000</p>
@@ -278,7 +278,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The minimum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1631239200000</p>
@@ -290,7 +290,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The maximum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1631241000000</p>
@@ -302,7 +302,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>The cloud computer pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-138dsptkrt00u****</p>
@@ -327,7 +327,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the authorized user.</p>
+         * <p>The authorized user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,22 +340,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The type of the user account.</p>
-         * <p>Valid values:</p>
+         * <p>The type of user account system. Valid values:</p>
          * <ul>
-         * <li><p>SIMPLE: convenience account</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>AD_CONNECTOR: enterprise AD account</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>SIMPLE: convenience account</li>
+         * <li>AD_CONNECTOR: enterprise AD account</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,7 +356,9 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * <p>The number of entries per page for a paged query.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -380,7 +370,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * <p>The pagination token for the next query. An empty value indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -392,7 +382,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

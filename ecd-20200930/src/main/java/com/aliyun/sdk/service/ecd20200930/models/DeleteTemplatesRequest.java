@@ -97,7 +97,7 @@ public class DeleteTemplatesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DeleteTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the templates that you want to delete.</p>
+         * <p>The list of template IDs to delete.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);

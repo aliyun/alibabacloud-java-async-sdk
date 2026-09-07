@@ -67,7 +67,7 @@ public class RunCommandResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the command execution.</p>
+         * <p>The script execution ID. You can call <a href="~~DescribeInvocations~~">DescribeInvocations</a> and pass in this value to query the script execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>t-hz01qgsqj2n****</p>
@@ -78,7 +78,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

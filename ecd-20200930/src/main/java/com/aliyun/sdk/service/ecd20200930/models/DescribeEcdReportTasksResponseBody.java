@@ -80,7 +80,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The report export tasks.</p>
+         * <p>The list of report tasks.</p>
          */
         public Builder exportTaskList(java.util.List<ExportTaskList> exportTaskList) {
             this.exportTaskList = exportTaskList;
@@ -293,7 +293,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -315,7 +315,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-14T07:46:49.000+00:00</p>
@@ -326,7 +326,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was last modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-14T07:46:49.000+00:00</p>
@@ -348,7 +348,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the report file.</p>
+             * <p>The report file name.</p>
              * 
              * <strong>example:</strong>
              * <p>TestFileName</p>
@@ -359,7 +359,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The report task status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -370,11 +370,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-type of the report export task.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>DESKTOP: cloud computer</li>
-             * </ul>
+             * <p>The subtype of the report task.</p>
              * 
              * <strong>example:</strong>
              * <p>DESKTOP</p>
@@ -385,7 +381,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the report export task.</p>
+             * <p>The report task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ret-asdfkjg*****</p>
@@ -396,11 +392,7 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the report.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>RESOURCE_REPORT</li>
-             * </ul>
+             * <p>The report type.</p>
              * 
              * <strong>example:</strong>
              * <p>RESOURCE_REPORT</p>

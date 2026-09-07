@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. If NextToken is empty, no next page exists.</p>
+         * <p>The token that determines the start point of the next query. If this parameter is empty, no next query is to be sent.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -194,7 +194,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID, which is the cloud computer ID.</p>
+             * <p>The ID of the resource, that is, the ID of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-ia2zw38bi6cm7****</p>
@@ -205,11 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
-             * </ul>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::GWS::INSTANCE</p>
@@ -220,10 +216,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag keys.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestKey</p>
+             * <p>department</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -231,10 +227,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag values.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestValue</p>
+             * <p>design</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

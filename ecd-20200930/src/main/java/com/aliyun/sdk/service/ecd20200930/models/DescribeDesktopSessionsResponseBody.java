@@ -91,7 +91,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of sessions.</p>
+         * <p>The session details.</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -99,7 +99,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-8whrmo2gtsb8bxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -176,7 +179,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RgTest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,7 +275,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>The terminal device information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mac</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -277,7 +286,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The terminal device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mac</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -285,7 +297,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * <p>The terminal device serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -293,7 +308,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the logon device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EBFDC7773BEBAD418A9F89429652****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -633,7 +651,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The account type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -641,7 +662,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client.</p>
+             * <p>The client IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>172.21.XX.XX</p>
@@ -652,10 +673,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client OS.</p>
+             * <p>The client operating system.</p>
              * 
              * <strong>example:</strong>
-             * <p>windows_&quot;Windows10Enterprise&quot;10.0(Build22000)</p>
+             * <p>windows_\&quot;Windows10Enterprise\&quot;10.0(Build22000)</p>
              */
             public Builder clientOS(String clientOS) {
                 this.clientOS = clientOS;
@@ -674,7 +695,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud computer.</p>
+             * <p>The cloud computer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-g6t1ukbaea****</p>
@@ -685,10 +706,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer.</p>
+             * <p>The cloud computer name.</p>
              * 
              * <strong>example:</strong>
-             * <p>testDesktop</p>
+             * <p>DemoComputer</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -696,7 +717,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryType.
+             * <p>The office network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -704,7 +728,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the remote assistance. Unit: seconds.</p>
+             * <p>The duration of remote assistance for the end user. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -715,10 +739,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the end user.</p>
+             * <p>The end user ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>testUser</p>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -726,7 +750,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the last connection to the cloud computer. Unit: seconds.</p>
+             * <p>The duration of the most recent connection to the cloud computer. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -737,7 +761,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the office network.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-8904****</p>
@@ -751,7 +775,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
              * <p>The name of the office network.</p>
              * 
              * <strong>example:</strong>
-             * <p>DemoOfficeSite</p>
+             * <p>TestOfficeSite</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -759,7 +783,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the switch to check session status of cloud computers is turned on.</p>
+             * <p>Specifies whether to check the session status within the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -770,12 +794,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Linux</li>
-             * <li>Windows</li>
-             * </ul>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -787,11 +806,6 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>HDX</li>
-             * <li>ASP</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -802,7 +816,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroups.
+             * <p>The resource group information.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -810,7 +824,8 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the session.</p>
+             * <p>The end time of the session.
+             * The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-28T02:31:43Z</p>
@@ -821,7 +836,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle duration of the session. Unit: seconds.</p>
+             * <p>The session idle duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -832,7 +847,8 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the session.</p>
+             * <p>The start time of the session.
+             * The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-28T02:31:43Z</p>
@@ -843,12 +859,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the session.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Connected</li>
-             * <li>Disconnected</li>
-             * </ul>
+             * <p>The session connection status.</p>
              * 
              * <strong>example:</strong>
              * <p>Connected</p>
@@ -859,14 +870,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of cloud computers.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>duration: hourly plan (available for users in the whitelist)</li>
-             * <li>postPaid: pay-as-you-go</li>
-             * <li>monthPackage: monthly subscription (120-hour computing plan and 250-hour computing plan)</li>
-             * <li>prePaid: monthly subscription (Unlimited computing plan)</li>
-             * </ul>
+             * <p>The purchase method of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>monthPackage</p>
@@ -877,7 +881,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * TerminalInfo.
+             * <p>The terminal device information.</p>
              */
             public Builder terminalInfo(TerminalInfo terminalInfo) {
                 this.terminalInfo = terminalInfo;

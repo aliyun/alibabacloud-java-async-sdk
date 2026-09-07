@@ -104,7 +104,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud computer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,13 +131,6 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
 
         /**
          * <p>The status of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: enabled</li>
-         * <li>2: disabled</li>
-         * <li>3: deleted</li>
-         * <li>100: unknown</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,13 +143,6 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
 
         /**
          * <p>The type of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: scheduled reset</li>
-         * <li>2: scheduled startup</li>
-         * <li>3: scheduled stop</li>
-         * <li>4: scheduled restart</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,10 @@ public class DeleteCloudDriveUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAEFFE4B-E87B-5F76-B165-9248F377****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

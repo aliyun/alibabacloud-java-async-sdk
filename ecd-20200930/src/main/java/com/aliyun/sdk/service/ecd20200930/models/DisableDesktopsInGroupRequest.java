@@ -90,7 +90,7 @@ public class DisableDesktopsInGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud computer group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DisableDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computers.</p>
+         * <p>The list of cloud computer IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
@@ -113,7 +113,7 @@ public class DisableDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

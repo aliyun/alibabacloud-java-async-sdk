@@ -229,7 +229,10 @@ public class DescribeRecordFileRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The Cloud Desktop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -238,7 +241,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Format: yyyyMMddHHmmss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20251218205715</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -247,7 +253,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -256,7 +265,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The name of the recording file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task7</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -265,7 +277,13 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The field used for sorting. If this parameter is not specified, the results are sorted by recording start time in descending order. Valid values:</p>
+         * <ul>
+         * <li>startTime: recording start time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>startTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -274,7 +292,14 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * OrderSort.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderSort(String orderSort) {
             this.putQueryParameter("OrderSort", orderSort);
@@ -283,7 +308,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -292,7 +320,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of rows per page in a paging query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +332,16 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * RecordType.
+         * <p>The type of the screen recording file. Valid values:</p>
+         * <ul>
+         * <li>alltime: full-time recording.</li>
+         * <li>period: interval recording.</li>
+         * <li>event: event-based recording.</li>
+         * <li>session: session recording.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alltime</p>
          */
         public Builder recordType(String recordType) {
             this.putQueryParameter("RecordType", recordType);
@@ -310,6 +350,7 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +363,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_DESKTOP</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -331,7 +375,10 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Format: yyyyMMddHHmmss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20251218175715</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -340,7 +387,14 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the screen recording file. Valid values:</p>
+         * <ul>
+         * <li>0: uploaded.</li>
+         * <li>1: uploading.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

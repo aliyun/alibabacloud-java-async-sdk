@@ -106,7 +106,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of the NAS file system.</p>
+         * <p>The NAS file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****</p>
@@ -117,7 +117,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Name of the NAS file system.</p>
+         * <p>The NAS file system name.</p>
          * 
          * <strong>example:</strong>
          * <p>testNAS</p>
@@ -128,7 +128,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Mount point domain.</p>
+         * <p>The mount target domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
@@ -139,7 +139,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -150,7 +150,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>

@@ -217,9 +217,9 @@ public class DescribeModificationPriceRequest extends Request {
         } 
 
         /**
-         * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
+         * <p>The peak Internet bandwidth. Unit: Mbit/s.</p>
          * <blockquote>
-         * <p> Valid values when PayByTraffic is set to PayByBandwidth: 10 to 1000.</p>
+         * <p>If you use the pay-by-fixed-bandwidth billing method, valid values are 10 to 1000.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of either the monthly subscription cloud computer with unlimited hours or the premium bandwidth plan.</p>
+         * <p>The instance ID. The value can be the ID of a monthly subscription (unlimited duration) cloud computer or the ID of a premium Internet bandwidth instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-0gfv2z3sf95zvt****</p>
@@ -244,9 +244,9 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The specifications.</p>
+         * <p>The resource specification.</p>
          * <ul>
-         * <li><p>Valid values when you set <code>ResourceType</code> to <code>Desktop</code>:</p>
+         * <li><p>If ResourceType is set to Desktop, valid values include:</p>
          * <ul>
          * <li>ecd.basic.small</li>
          * <li>ecd.basic.large</li>
@@ -268,7 +268,7 @@ public class DescribeModificationPriceRequest extends Request {
          * <li>eds.general.16c32g</li>
          * </ul>
          * </li>
-         * <li><p>You can skip this parameter if <code>ResourceType</code> is set to <code>NetworkPackage</code>.</p>
+         * <li><p>If ResourceType is set to NetworkPackage, you do not need to specify this parameter.</p>
          * </li>
          * </ul>
          * 
@@ -282,7 +282,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -291,7 +294,7 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +307,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The resource ownership user ID in the reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -313,7 +319,7 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * ResourceSpecs.
+         * <p>The list of resource specification templates.</p>
          */
         public Builder resourceSpecs(java.util.List<ResourceSpecs> resourceSpecs) {
             this.putQueryParameter("ResourceSpecs", resourceSpecs);
@@ -322,15 +328,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The resource type. The required parameters depend on the resource type.</p>
+         * <p>The resource type. The required parameters vary based on the resource type for which you want to query the upgrade/downgrade price:</p>
          * <ul>
-         * <li>When <code>ResourceType</code> is set to <code>Desktop</code>, the required parameters are <code>InstanceType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code>.</li>
-         * <li>When <code>ResourceType</code> is set to <code>NetworkPackage</code>, the required parameter is <code>Bandwidth</code>.</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Desktop (default): cloud computers.</li>
-         * <li>NetworkPackage: premium bandwidth plans.</li>
+         * <li>If ResourceType is set to Desktop, you must specify the InstanceType, RootDiskSizeGib, and UserDiskSizeGib parameters.</li>
+         * <li>If ResourceType is set to NetworkPackage, you must specify the Bandwidth parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +344,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * RootDiskPerformanceLevel.
+         * <p>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud computer specification in Settings is Graphics or High Frequency. For more information about the differences between disk performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD and ESSD have different performance levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
             this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
@@ -352,7 +356,7 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GiB.</p>
+         * <p>The size of the system cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -364,7 +368,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * UserDiskPerformanceLevel.
+         * <p>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud computer specification in Settings is Graphics or High Frequency. For more information about the differences between disk performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD and ESSD have different performance levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
@@ -373,7 +380,7 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The size of the data disk. Unit: GiB.</p>
+         * <p>The size of the data cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -457,7 +464,10 @@ public class DescribeModificationPriceRequest extends Request {
             } 
 
             /**
-             * DesktopId.
+             * <p>The cloud computer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-6ghhzivgmnzgeyXXX</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -465,7 +475,7 @@ public class DescribeModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The size of the system cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -476,10 +486,10 @@ public class DescribeModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>The size of the data cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
-             * <p>50</p>
+             * <p>100</p>
              */
             public Builder userDiskSizeGib(Integer userDiskSizeGib) {
                 this.userDiskSizeGib = userDiskSizeGib;

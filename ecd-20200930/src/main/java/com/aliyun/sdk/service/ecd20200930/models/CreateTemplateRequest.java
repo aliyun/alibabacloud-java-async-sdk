@@ -380,7 +380,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Indicates whether automatic payment is enabled for the subscription order.</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -389,7 +389,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for the subscription cloud computer.</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -399,12 +399,8 @@ public class CreateTemplateRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: the Enterprise edition.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -416,7 +412,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -425,7 +424,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The data disks.</p>
+         * <p>The size and specification configurations of data disks.</p>
          */
         public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
             this.putBodyParameter("DataDiskList", dataDiskList);
@@ -434,7 +433,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The default language of cloud computers during startup. This parameter takes effect only when cloud computers are created from system images.</p>
+         * <p>The default language set when the cloud computer starts. This parameter takes effect only when a system image is used to create the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -446,11 +445,14 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The template description. It must meet the following criteria:</p>
+         * <p>The description of the template. The description must meet the following requirements:</p>
          * <ul>
-         * <li>It can be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</li>
+         * <li>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DesignDepartmentTemplate</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -459,7 +461,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</p>
+         * <p>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopimage-windows-server-2022-64-asp</p>
@@ -471,7 +473,27 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:<ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * </ul>
+         * </li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:<ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -480,7 +502,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription billable methods duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -489,7 +514,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy group.</p>
+         * <p>The ID of the global policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-8hlryfn331******</p>
@@ -501,7 +526,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * PostPaidAfterUsedUp.
+         * <p>Specifies whether to automatically switch to pay-as-you-go billing after the duration plan is used up.</p>
          */
         public Builder postPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
             this.putBodyParameter("PostPaidAfterUsedUp", postPaidAfterUsedUp);
@@ -510,10 +535,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The service type. Set the value to <code>CloudDesktop</code>.</p>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The product type. Set the value to <code>CloudDesktop</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>CloudDesktop</p>
@@ -525,9 +547,9 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The regions of the template. You can create cloud computers by using a template only within the same region as the template itself.</p>
+         * <p>The region-specific template configurations. You can specify multiple configurations. The configuration that matches the specific region is used.</p>
          * <blockquote>
-         * <p> You can specify up to 20 regions.</p>
+         * <p>You can specify configurations for up to 20 regions.</p>
          * </blockquote>
          */
         public Builder regionConfigList(java.util.List<RegionConfigList> regionConfigList) {
@@ -537,7 +559,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-4knxmfneq1e******</p>
@@ -549,7 +571,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tags added to cloud computers. Specify tags in key-value pairs. You can specify up to 20 tags.</p>
+         * <p>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</p>
          */
         public Builder resourceTagList(java.util.List<ResourceTagList> resourceTagList) {
             this.putBodyParameter("ResourceTagList", resourceTagList);
@@ -558,7 +580,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>区域配置管理</p>
+         * <p>The site configuration management.</p>
          */
         public Builder siteConfigList(java.util.List<SiteConfigList> siteConfigList) {
             this.putBodyParameter("SiteConfigList", siteConfigList);
@@ -567,16 +589,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the system disk.</p>
+         * <p>The type of the system disk.</p>
          * <blockquote>
-         * <p> Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</p>
+         * <p>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD disks.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PL1: a PL1 ESSD.</li>
-         * <li>PL0: a PL0 ESSD.</li>
-         * <li>AutoPL: an AutoPL ESSD.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AutoPL</p>
@@ -588,9 +604,9 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. Increments: 10 GiB.</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
          * <blockquote>
-         * <p> The system disk size must be at least as large as the configured image size.</p>
+         * <p>The system disk size cannot be smaller than the image size.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -603,13 +619,16 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The template name. It must meet the following criteria:</p>
+         * <p>The name of the template. The name must meet the following requirements:</p>
          * <ul>
-         * <li>It can be 2 to 126 characters in length.</li>
-         * <li>It must begin with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</li>
+         * <li>The name must be 2 to 126 characters in length.</li>
+         * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCloudComputerTemplate001</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -618,7 +637,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scheduled task group.</p>
+         * <p>The configuration group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-0caoeogrk9m5****</p>
@@ -630,7 +649,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * UserDuration.
+         * <p>The usage duration plan per user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder userDuration(Integer userDuration) {
             this.putBodyParameter("UserDuration", userDuration);
@@ -699,7 +721,7 @@ public class CreateTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The PL of the data disk. Default value: <code>AutoPL</code>.</p>
+             * <p>The performance level of the data disk. Default value: <code>AutoPL</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>AutoPL</p>
@@ -710,9 +732,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB. Valid values: 40 to 2040. Increments: 10 GiB.</p>
-             * <p>**</p>
-             * <p><strong>Keep in mind</strong> that the larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</p>
+             * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
+             * <blockquote>
+             * <p>Notice: The larger the ESSD cloud disk capacity, the higher the performance level (PL) available (for example, PL2 is available for capacities of 460 GiB or more). Higher performance levels (PLs) incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements. Note: Only standard SSD and ESSD cloud disks are supported.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -858,7 +881,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+             * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -869,7 +892,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the cloud computer type.</p>
+             * <p>The cloud computer specification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.enterprise_office.8c16g</p>
@@ -903,11 +926,6 @@ public class CreateTemplateRequest extends Request {
 
             /**
              * <p>Specifies whether to enable disk encryption.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>false (default): disables disk encryption.</li>
-             * <li>true: enables disk encryption.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -918,7 +936,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query KMS keys.</p>
+             * <p>The ID of the KMS key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a7b3c0c8-b3a2-4876-b1cc-*********</p>
@@ -1069,7 +1087,7 @@ public class CreateTemplateRequest extends Request {
             } 
 
             /**
-             * <p>应用管控策略ID</p>
+             * <p>The application control policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bwr-5a5371e0db954d********</p>
@@ -1080,7 +1098,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>站点ID。</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mainland</p>

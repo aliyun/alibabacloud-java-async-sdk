@@ -131,7 +131,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the NAS file systems.</p>
+         * <p>The list of NAS file system IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****</p>
@@ -143,7 +143,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include only NAS file systems that support the User Profile Management (UPM) feature in the query results.</p>
+         * <p>Specifies whether to include only NAS file systems that support UPM in the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -155,9 +155,11 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Maximum value: 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The number of entries per page for a paged query.    </p>
+         * <ul>
+         * <li>Maximum value: 100.    </li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -169,7 +171,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -181,7 +183,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -193,7 +195,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

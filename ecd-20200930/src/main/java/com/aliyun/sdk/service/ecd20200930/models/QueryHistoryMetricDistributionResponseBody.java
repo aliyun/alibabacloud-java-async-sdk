@@ -80,7 +80,7 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
         } 
 
         /**
-         * DistributionList.
+         * <p>The distribution list corresponding to resource monitoring.</p>
          */
         public Builder distributionList(java.util.List<DistributionList> distributionList) {
             this.distributionList = distributionList;
@@ -88,7 +88,10 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F2BF549-CBD9-1FED-9ABB-086B62D7B293</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -196,7 +205,10 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The range label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2F2BF549-CBD9-1FED-9ABB-086B62D7B293</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -204,7 +216,10 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder max(Float max) {
                 this.max = max;
@@ -212,7 +227,10 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Float min) {
                 this.min = min;

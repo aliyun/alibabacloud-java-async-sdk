@@ -80,7 +80,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+         * <p>The token for the next query. If this parameter is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -91,7 +91,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -102,7 +102,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The usernames corresponding to the AD directory. If the AD directory contains only the Administrator and Guest accounts, the Users array will be empty.</p>
+         * <p>The array of usernames in the AD directory. If the AD directory contains only the Administrator and Guest users and no other users, an empty Users array is returned.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -244,7 +244,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>
@@ -255,7 +255,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameNew.
+             * <p>The new display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder displayNameNew(String displayNameNew) {
                 this.displayNameNew = displayNameNew;
@@ -274,7 +277,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>
@@ -285,7 +288,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number.</p>
+             * <p>The mobile phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>130********</p>
@@ -296,7 +299,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The user principal name (UPN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

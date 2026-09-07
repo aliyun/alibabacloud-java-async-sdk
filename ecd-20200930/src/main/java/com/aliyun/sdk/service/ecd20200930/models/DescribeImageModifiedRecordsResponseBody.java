@@ -101,7 +101,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If the NextToken parameter is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6koN7RqHg3d2z8LKmSoe821</p>
@@ -112,7 +112,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DC40EE61-7E83-59ED-AEA6-7EE9C437F352</p>
@@ -123,7 +123,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of image modification records.</p>
+         * <p>The total number of image change records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -257,10 +257,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the original image.</p>
+             * <p>The image ID before the change.</p>
              * 
              * <strong>example:</strong>
-             * <p>m-8rnz2imrpcfuh****</p>
+             * <p>desktopimage-windows-server-2019-64-ch-asp</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -268,10 +268,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the original image.</p>
+             * <p>The image name before the change.</p>
              * 
              * <strong>example:</strong>
-             * <p>win10-0307</p>
+             * <p>Windows server 2019 Mainland</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -279,10 +279,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the new image after the image was modified.</p>
+             * <p>The ID of the new image after the change.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxNewImageID</p>
+             * <p>desktopimage-windows-server-2022-64-ch-asp</p>
              */
             public Builder newImageId(String newImageId) {
                 this.newImageId = newImageId;
@@ -290,10 +290,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the new image after the image was modified.</p>
+             * <p>The name of the new image after the change.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxImageID</p>
+             * <p>Windows server 2022 Mainland asp</p>
              */
             public Builder newImageName(String newImageName) {
                 this.newImageName = newImageName;
@@ -301,7 +301,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for ignoring the vulnerability. This parameter is required only when you perform the ignore vulnerability operation, that is, when <code>OperateType</code> is set to <code>vul_ignore</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Defer fix</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -309,16 +312,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image modification.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>0: The image is being modified.</p>
-             * </li>
-             * <li><p>1: The image is successfully modified.</p>
-             * </li>
-             * <li><p>2: The image fails to be modified.</p>
-             * </li>
-             * </ul>
+             * <p>The status of the image change.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -329,7 +323,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was last modified.</p>
+             * <p>The time when the image was last changed. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ss.SSSZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-03T02:43:44.851Z</p>

@@ -340,7 +340,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computer templates.</p>
+         * <p>The list of cloud computer template IDs.</p>
          */
         public Builder bundleId(java.util.List<String> bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -349,7 +349,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -361,7 +361,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer shares.</p>
+         * <p>The list of shared cloud computer IDs.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -370,10 +370,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer share that you want to query. Fuzzy search is supported.</p>
+         * <p>The name of the shared cloud computer to query. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>testName</p>
+         * <p>CloudComputerPool01</p>
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -382,7 +382,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * DesktopType.
+         * <p>The cloud computer specifications. You can call <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the supported specification IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.enterprise_office.16c64g</p>
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -391,7 +394,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the users who can access the cloud computer share.</p>
+         * <p>The list of authorized user IDs for the shared cloud computer.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -400,7 +403,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The authorized users that you want to exclude.</p>
+         * <p>The list of authorized users to exclude.</p>
          */
         public Builder excludedEndUserIds(java.util.List<String> excludedEndUserIds) {
             this.putQueryParameter("ExcludedEndUserIds", excludedEndUserIds);
@@ -409,7 +412,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the images.</p>
+         * <p>The list of image IDs.</p>
          */
         public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -418,7 +421,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -430,11 +433,11 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the cloud computer share is a many-to-many share.</p>
+         * <p>Specifies whether the shared cloud computer is a multi-host type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: The cloud computer share is a many-to-many share.</li>
-         * <li>false: The cloud computer share is a one-to-many share.</li>
+         * <li>true: Multi-host shared cloud computer.</li>
+         * <li>false: Single-host shared cloud computer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +450,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -459,7 +462,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network in which the cloud computer share resides.</p>
+         * <p>The ID of the office network to which the shared cloud computers belong.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-467671****</p>
@@ -471,15 +474,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud computer share.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: a single-session many-to-many share.</li>
-         * <li>1: a multi-session many-to-many share.</li>
-         * </ul>
+         * <p>The type of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -491,26 +486,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the cloud computer share. The unit is specified by <code>PeriodUnit</code>.</p>
-         * <ul>
-         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>:</p>
-         * <ul>
-         * <li>1</li>
-         * <li>2</li>
-         * <li>3</li>
-         * <li>6</li>
-         * </ul>
-         * </li>
-         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>:</p>
-         * <ul>
-         * <li>1</li>
-         * <li>2</li>
-         * <li>3</li>
-         * <li>4</li>
-         * <li>5</li>
-         * </ul>
-         * </li>
-         * </ul>
+         * <p>The subscription duration of the shared cloud computer. The unit is specified by <code>PeriodUnit</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -522,7 +498,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration.</p>
+         * <p>The unit of the duration for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -534,7 +510,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the applied policy.</p>
+         * <p>The ID of the policy associated with the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-53iyi2aar0nd6****</p>
@@ -547,22 +523,6 @@ public class DescribeDesktopGroupsRequest extends Request {
 
         /**
          * <p>The protocol type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>High-definition Experience (HDX)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Adaptive Streaming Protocol (ASP)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -574,7 +534,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * QosRuleId.
+         * <p>The ID of the QoS rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-5605u0gelk200****</p>
          */
         public Builder qosRuleId(String qosRuleId) {
             this.putQueryParameter("QosRuleId", qosRuleId);
@@ -583,7 +546,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -596,13 +559,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The status of the cloud computer share.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: The cloud computer share is unpaid.</li>
-         * <li>1: The cloud computer share is normal.</li>
-         * <li>2: The cloud computer share expired, or your account has an overdue payment.</li>
-         * </ul>
+         * <p>The status of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -614,7 +571,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to add to the cloud computer share. You can specify 1 to 20 tags.</p>
+         * <p>The list of tags. You can specify 1 to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -682,7 +639,7 @@ public class DescribeDesktopGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -693,7 +650,7 @@ public class DescribeDesktopGroupsRequest extends Request {
             }
 
             /**
-             * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

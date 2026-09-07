@@ -102,7 +102,14 @@ public class DescribeDesktopInfoRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The business channel. Valid values:</p>
+         * <ul>
+         * <li>Enterprise: Enterprise Edition.</li>
+         * <li>Business: Business Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -111,7 +118,7 @@ public class DescribeDesktopInfoRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+         * <p>The cloud computer ID. You can specify 1 to 100 IDs.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -120,7 +127,7 @@ public class DescribeDesktopInfoRequest extends Request {
         }
 
         /**
-         * NeedExtraInfo.
+         * <p>Specifies whether to return the extended information of the cloud computer.</p>
          */
         public Builder needExtraInfo(Boolean needExtraInfo) {
             this.putQueryParameter("NeedExtraInfo", needExtraInfo);
@@ -129,7 +136,7 @@ public class DescribeDesktopInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

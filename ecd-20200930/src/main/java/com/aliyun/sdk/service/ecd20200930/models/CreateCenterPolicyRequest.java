@@ -2038,7 +2038,14 @@ public class CreateCenterPolicyRequest extends Request {
         } 
 
         /**
-         * AcademicProxy.
+         * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder academicProxy(String academicProxy) {
             this.putQueryParameter("AcademicProxy", academicProxy);
@@ -2047,16 +2054,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant the admin permissions to end users.</p>
+         * <p>Specifies whether the user has administrator permissions after logging on to the cloud desktop.</p>
          * <blockquote>
-         * <p> This parameter is in private preview and only available to specific users.</p>
+         * <p>This feature is in invitational preview and is not publicly available.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>allow: forcibly grants admin permissions.</li>
-         * <li>deny: forcibly rejects granting admin permissions.</li>
-         * <li>inherited: inherits the admin permissions from the user dimension.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -2068,7 +2069,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * AdminKeyboardOnFullScreen.
+         * <p>Specifies whether to enable administrator keyboard control in full-screen mode. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder adminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
             this.putQueryParameter("AdminKeyboardOnFullScreen", adminKeyboardOnFullScreen);
@@ -2077,7 +2085,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * AdminKeyboardOnWindows.
+         * <p>Specifies whether to enable administrator keyboard control within the Windows system. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder adminKeyboardOnWindows(String adminKeyboardOnWindows) {
             this.putQueryParameter("AdminKeyboardOnWindows", adminKeyboardOnWindows);
@@ -2086,12 +2101,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The anti-screenshot policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off (default): disables anti-screenshot.</li>
-         * <li>on: enables anti-screenshot.</li>
-         * </ul>
+         * <p>Specifies whether to enable the screenshot prevention feature.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2103,7 +2113,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The client IP address whitelists that you want to add. Once an IP address whitelist is configured, end users can only access cloud computers from the IP addresses listed in it.</p>
+         * <p>The client IP whitelist. After configuration, only IP addresses within the whitelisted CIDR blocks can access cloud computers.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -2112,7 +2122,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The security group rule.</p>
+         * <p>The list of security group control rules.</p>
          */
         public Builder authorizeSecurityPolicyRule(java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
@@ -2121,7 +2131,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * AutoReconnect.
+         * <p>Specifies whether to enable automatic reconnection on the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder autoReconnect(String autoReconnect) {
             this.putQueryParameter("AutoReconnect", autoReconnect);
@@ -2130,7 +2143,12 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>The business channel. Valid values:
+         * Enterprise: Enterprise Edition.
+         * Business: Business Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -2140,11 +2158,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The business type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: public cloud</li>
-         * <li>8: commercial edition.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2157,12 +2170,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The on-premises camera redirection policy. This parameter only applies if DeviceRedirects does not include an on-premises camera redirection policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>deviceRedirect: enables device redirection.</li>
-         * <li>off: disables device redirection.</li>
-         * </ul>
+         * <p>The local camera redirection policy. This parameter takes effect only when no local camera redirection policy is specified in DeviceRedirects.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2174,7 +2182,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ClientControlMenu.
+         * <p>Specifies whether to display the client control menu. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder clientControlMenu(String clientControlMenu) {
             this.putQueryParameter("ClientControlMenu", clientControlMenu);
@@ -2183,7 +2198,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ClientCreateSnapshot.
+         * <p>Specifies whether to enable the custom snapshot creation feature on the client. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder clientCreateSnapshot(String clientCreateSnapshot) {
             this.putQueryParameter("ClientCreateSnapshot", clientCreateSnapshot);
@@ -2192,7 +2214,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</p>
+         * <p>The list of logon method control rules. Specifies which client types can access cloud computers.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -2201,14 +2223,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The read/write permissions on the clipboard.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: specifies one-way transfer You can copy files only from on-premises devices to cloud computers.</li>
-         * <li>readwrite: specifies two-way transfer. You can copy files between on-premises devices and cloud computers.</li>
-         * <li>write: specifies one-way transfer. You can only copy files from cloud computers to on-premises devices.</li>
-         * <li>off (default): disables all transfers, both one-way and two-way. Files cannot be copied directly between on-premises devices and cloud computers.</li>
-         * </ul>
+         * <p>The clipboard permission.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2220,7 +2235,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ClipboardGraineds.
+         * <p>The clipboard fine-grained control configuration.</p>
          */
         public Builder clipboardGraineds(java.util.List<ClipboardGraineds> clipboardGraineds) {
             this.putQueryParameter("ClipboardGraineds", clipboardGraineds);
@@ -2229,7 +2244,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ClipboardScope.
+         * <p>The clipboard scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
          */
         public Builder clipboardScope(String clipboardScope) {
             this.putQueryParameter("ClipboardScope", clipboardScope);
@@ -2238,12 +2256,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable color enhancement for design and 3D applications.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t enable color enhancement for design and 3D applications.</li>
-         * <li>on: enables color enhancement for design and 3D applications.</li>
-         * </ul>
+         * <p>Specifies whether color enhancement is enabled for the design and 3D common scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2255,7 +2268,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpdDriveClipboard.
+         * <p>Specifies whether to enable the local drive clipboard feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder cpdDriveClipboard(String cpdDriveClipboard) {
             this.putQueryParameter("CpdDriveClipboard", cpdDriveClipboard);
@@ -2264,7 +2284,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</p>
+         * <p>The CPU throttling duration. Valid values: 30 to 120. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -2276,7 +2296,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuOverload.
+         * <p>Specifies whether to enable CPU overload protection. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder cpuOverload(String cpuOverload) {
             this.putQueryParameter("CpuOverload", cpuOverload);
@@ -2285,7 +2312,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The CPU processors.</p>
+         * <p>The process name.</p>
          */
         public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
             this.putQueryParameter("CpuProcessors", cpuProcessors);
@@ -2294,12 +2321,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The CPU spike protection policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables CPU spike protection.</li>
-         * <li>on: enables CPU spike protection.</li>
-         * </ul>
+         * <p>Specifies whether to enable CPU spike protection.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2311,7 +2333,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The overall CPU usage. Valid values: 70 to 90. Unit: percentage (%).</p>
+         * <p>The overall CPU usage percentage. Valid values: 70 to 90.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -2335,7 +2357,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The single-CPU usage. Valid values: 70 to 100. Unit: %.</p>
+         * <p>The single-core CPU usage percentage. Valid values: 70 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -2347,7 +2369,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -2356,7 +2381,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the peripheral connection prompt.</p>
+         * <p>The peripheral connection prompt control.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2368,7 +2393,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The device redirection rules.</p>
+         * <p>The list of device redirection rules.</p>
          */
         public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
             this.putQueryParameter("DeviceRedirects", deviceRedirects);
@@ -2377,7 +2402,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The custom peripheral rules.</p>
+         * <p>The list of custom peripheral rules.</p>
          */
         public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
             this.putQueryParameter("DeviceRules", deviceRules);
@@ -2386,15 +2411,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the session upon disconnection.</p>
+         * <p>Session retention after disconnection.</p>
          * <blockquote>
-         * <p> This parameter applies only to cloud application policies.</p>
+         * <p>Applicable only to cloud application policies.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>customTime: retains the session for a specified time period.</li>
-         * <li>persistent: retains the session permanently.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>customTime</p>
@@ -2406,9 +2426,9 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the session after disconnection. Valid values: 30 to 7200. Unit: seconds.</p>
+         * <p>The duration of session retention after disconnection. Valid values: 30 to 7200. Unit: seconds.</p>
          * <blockquote>
-         * <p> This parameter applies only to cloud application policies.</p>
+         * <p>Applicable only to cloud application policies.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2421,7 +2441,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DiskOverload.
+         * <p>Specifies whether to enable disk overload protection. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder diskOverload(String diskOverload) {
             this.putQueryParameter("DiskOverload", diskOverload);
@@ -2431,13 +2458,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The display mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>clientCustom: suitable for user-defined scenarios.</li>
-         * <li>adminOffice: suitable for daily office scenarios.</li>
-         * <li>adminDesign: suitable for design and 3D application scenarios.</li>
-         * <li>adminCustom: suitable for admin-customized scenarios.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>clientCustom</p>
@@ -2449,7 +2469,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The domain resolution policies.</p>
+         * <p>The domain name resolution policies.</p>
          */
         public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
@@ -2458,12 +2478,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce the domain resolution policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables the domain resolution policy.</li>
-         * <li>on: enables the domain resolution policy.</li>
-         * </ul>
+         * <p>The domain name resolution policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2475,12 +2490,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce the peak bandwidth limit for sessions.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t enforce the peak bandwidth limit for sessions.</li>
-         * <li>on: enforces the peak bandwidth limit for sessions.</li>
-         * </ul>
+         * <p>Specifies whether to enable session bandwidth throttling.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2492,12 +2502,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable end users to request administrator help.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables end users to request administrator help.</li>
-         * <li>on: enables end users to request administrator help.</li>
-         * </ul>
+         * <p>Specifies whether users can request administrator assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2509,12 +2514,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow end users in the same office network to share cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t allow end users in the same office network to share cloud computers.</li>
-         * <li>on: allows end users in the same office network to share cloud computers.</li>
-         * </ul>
+         * <p>Specifies whether users in the same office network can share cloud desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2526,7 +2526,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ExternalDrive.
+         * <p>Specifies whether to enable external storage device access. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder externalDrive(String externalDrive) {
             this.putQueryParameter("ExternalDrive", externalDrive);
@@ -2535,7 +2542,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable file transfer.</p>
+         * <p>The file migration setting.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2547,7 +2554,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferAddress.
+         * <p>The service address for the file transfer feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filetransfer.example.com</p>
          */
         public Builder fileTransferAddress(String fileTransferAddress) {
             this.putQueryParameter("FileTransferAddress", fileTransferAddress);
@@ -2556,7 +2566,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferInSize.
+         * <p>The file size limit for a single transfer to the cloud desktop. Use this parameter together with the transfer-in unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder fileTransferInSize(Integer fileTransferInSize) {
             this.putQueryParameter("FileTransferInSize", fileTransferInSize);
@@ -2565,7 +2578,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferInUnit.
+         * <p>The unit for the file size limit of a single transfer to the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         public Builder fileTransferInUnit(String fileTransferInUnit) {
             this.putQueryParameter("FileTransferInUnit", fileTransferInUnit);
@@ -2574,7 +2590,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferOutSize.
+         * <p>The file size limit for a single transfer from the cloud desktop. Use this parameter together with the transfer-out unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder fileTransferOutSize(Integer fileTransferOutSize) {
             this.putQueryParameter("FileTransferOutSize", fileTransferOutSize);
@@ -2583,7 +2602,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferOutUnit.
+         * <p>The unit for the file size limit of a single transfer from the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         public Builder fileTransferOutUnit(String fileTransferOutUnit) {
             this.putQueryParameter("FileTransferOutUnit", fileTransferOutUnit);
@@ -2592,7 +2614,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferSizeLimit.
+         * <p>Specifies whether to enable the file transfer size limit. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder fileTransferSizeLimit(String fileTransferSizeLimit) {
             this.putQueryParameter("FileTransferSizeLimit", fileTransferSizeLimit);
@@ -2601,7 +2630,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferSpeed.
+         * <p>The file transfer speed level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder fileTransferSpeed(String fileTransferSpeed) {
             this.putQueryParameter("FileTransferSpeed", fileTransferSpeed);
@@ -2610,7 +2642,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileTransferSpeedLocation.
+         * <p>The location where the file transfer speed configured on the client takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client</p>
          */
         public Builder fileTransferSpeedLocation(String fileTransferSpeedLocation) {
             this.putQueryParameter("FileTransferSpeedLocation", fileTransferSpeedLocation);
@@ -2619,12 +2654,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable image quality control. This feature is highly recommended for professional design scenarios where computer performance and user experience are critical.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t enable image quality control.</li>
-         * <li>on: enables image quality control.</li>
-         * </ul>
+         * <p>Specifies whether to enable the image quality policy for GPU-accelerated Cloud Desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2636,7 +2666,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * HoverConfigMsg.
+         * <p>Specifies whether to enable the floating ball configuration message prompt. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder hoverConfigMsg(String hoverConfigMsg) {
             this.putQueryParameter("HoverConfigMsg", hoverConfigMsg);
@@ -2645,14 +2682,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The file transfer feature on the web client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>all: File upload and download are supported.</li>
-         * <li>download: Only file download is supported.</li>
-         * <li>upload: Only file upload is supported.</li>
-         * <li>off (default): File upload and download are not supported.</li>
-         * </ul>
+         * <p>The file transfer policy for the web client.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2664,14 +2694,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protocol for network communication.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>tcp: TCP is used when UDP/AST is restricted.</li>
-         * <li>rtc: AST is used for high-frequency audio and video streaming.</li>
-         * <li>auto: UTO is used to enable automatic switch between AST and UDP modes based on desktop content.</li>
-         * <li>both: UDP is used for office and HD graphic design use.</li>
-         * </ul>
+         * <p>The network communication protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>both</p>
@@ -2683,7 +2706,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * InternetPrinter.
+         * <p>Specifies whether to enable the network printer feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder internetPrinter(String internetPrinter) {
             this.putQueryParameter("InternetPrinter", internetPrinter);
@@ -2692,7 +2722,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * KeyboardControl.
+         * <p>Specifies whether to enable the floating ball keyboard control. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder keyboardControl(String keyboardControl) {
             this.putQueryParameter("KeyboardControl", keyboardControl);
@@ -2701,13 +2738,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The read/write permissions on the on-premises drive.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: read-only. Cloud computers support on-premises disk mapping, but only for reading (copying) files—not modifying them.</li>
-         * <li>readwrite: read and write. Cloud computers support on-premises disk mapping, allowing you to read (copy) and write (modify) on-premises files.</li>
-         * <li>off (default): none. Cloud computers don&quot;t support on-premises disk mapping.</li>
-         * </ul>
+         * <p>The local disk mapping permission.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2719,7 +2750,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration to retry reconnecting to cloud computers after an unexpected disconnection (non-human causes). Valid values: 30 to 7200. Unit: seconds.</p>
+         * <p>The maximum reconnection retry time when a cloud computer is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -2731,7 +2762,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The memory underclocking duration per process. Valid values: 30 to 120. Unit: seconds.</p>
+         * <p>The memory throttling duration of a single process. Valid values: 30 to 120. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -2743,7 +2774,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemoryOverload.
+         * <p>Specifies whether to enable memory overload protection. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder memoryOverload(String memoryOverload) {
             this.putQueryParameter("MemoryOverload", memoryOverload);
@@ -2752,7 +2790,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The memory processors.</p>
+         * <p>The process name.</p>
          */
         public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
             this.putQueryParameter("MemoryProcessors", memoryProcessors);
@@ -2761,12 +2799,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The memory spike protection policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables memory spike protection.</li>
-         * <li>on: enables memory spike protection.</li>
-         * </ul>
+         * <p>Specifies whether to enable memory protection.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2778,7 +2811,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The overall memory usage. Valid values: 70 to 90. Unit: %.</p>
+         * <p>The overall memory usage percentage. Valid values: 70 to 90.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -2802,7 +2835,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The memory usage per process. Valid values: 30 to 60. Unit: %.</p>
+         * <p>The memory usage percentage of a single process. Valid values: 30 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -2814,15 +2847,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
+         * <p>Specifies whether to provide a restart button in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
          * <blockquote>
-         * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
+         * <p>This parameter applies only to mobile clients V7.4 or later.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t display the Restart button in the DesktopAssistant menu.</li>
-         * <li>on: displays the Restart button in the DesktopAssistant menu.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2834,7 +2862,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MobileSafeMenu.
+         * <p>Specifies whether to enable Windows security control on mobile devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder mobileSafeMenu(String mobileSafeMenu) {
             this.putQueryParameter("MobileSafeMenu", mobileSafeMenu);
@@ -2843,15 +2874,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
+         * <p>Specifies whether to provide a shutdown button in the cloud desktop floating ball from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
          * <blockquote>
-         * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
+         * <p>This parameter applies only to mobile clients V7.4 or later.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t display the Stop button in the DesktopAssistant menu.</li>
-         * <li>on: displays the Stop button in the DesktopAssistant menu.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2863,7 +2889,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MobileWuyingKeeper.
+         * <p>Specifies whether to enable WUYING Keeper on mobile devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder mobileWuyingKeeper(String mobileWuyingKeeper) {
             this.putQueryParameter("MobileWuyingKeeper", mobileWuyingKeeper);
@@ -2872,7 +2901,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MobileWyAssistant.
+         * <p>Specifies whether to enable WY Assistant on mobile devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder mobileWyAssistant(String mobileWyAssistant) {
             this.putQueryParameter("MobileWyAssistant", mobileWyAssistant);
@@ -2881,7 +2913,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ModelLibrary.
+         * <p>Specifies whether to enable the model library feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder modelLibrary(String modelLibrary) {
             this.putQueryParameter("ModelLibrary", modelLibrary);
@@ -2890,7 +2929,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MultiScreen.
+         * <p>Specifies whether to enable the multi-screen display feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder multiScreen(String multiScreen) {
             this.putQueryParameter("MultiScreen", multiScreen);
@@ -2912,16 +2958,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The network redirection policy.</p>
+         * <p>Specifies whether to enable network redirection.</p>
          * <blockquote>
-         * <p> This parameter is in private preview and only available to specific users.</p>
+         * <p>This feature is in invitational preview and is not publicly available.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>all: enables network redirection globally.</li>
-         * <li>off (default): disables network redirection.</li>
-         * <li>on: enables the whitelist mode.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2933,9 +2973,9 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The network redirection policy.</p>
+         * <p>The details of the network redirect policy.</p>
          * <blockquote>
-         * <p> This parameter is in private preview and only available to specific users.</p>
+         * <p>This feature is in invitational preview and is not publicly available.</p>
          * </blockquote>
          */
         public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
@@ -2945,15 +2985,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce a disconnection upon inactivity.</p>
+         * <p>Disconnect on no operation.</p>
          * <blockquote>
-         * <p> This parameter applies only to cloud application policies.</p>
+         * <p>Applicable only to cloud application policies.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t enforce a disconnection upon inactivity.</li>
-         * <li>on: enforces a disconnection upon inactivity.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -2965,9 +3000,9 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The duration of disconnection after inactivity. Valid values: 120 to 7200. Unit: seconds.</p>
+         * <p>The duration of inactivity before disconnection. Valid values: 120 to 7200. Unit: seconds.</p>
          * <blockquote>
-         * <p> This parameter applies only to cloud application policies.</p>
+         * <p>Applicable only to cloud application policies.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2980,7 +3015,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * PortProxy.
+         * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder portProxy(String portProxy) {
             this.putQueryParameter("PortProxy", portProxy);
@@ -2989,7 +3031,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * PrinterAlert.
+         * <p>The printer pop-up prompt setting. Valid values:</p>
+         * <ul>
+         * <li>default: Default value.</li>
+         * <li>off: Disabled.</li>
+         * <li>custom: Custom.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder printerAlert(String printerAlert) {
             this.putQueryParameter("PrinterAlert", printerAlert);
@@ -2998,7 +3048,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * PrinterAlertContent.
+         * <p>The content of the printer pop-up prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Print Content</p>
          */
         public Builder printerAlertContent(String printerAlertContent) {
             this.putQueryParameter("PrinterAlertContent", printerAlertContent);
@@ -3007,7 +3060,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * PrinterAlertTitle.
+         * <p>The title of the printer pop-up prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Print Title</p>
          */
         public Builder printerAlertTitle(String printerAlertTitle) {
             this.putQueryParameter("PrinterAlertTitle", printerAlertTitle);
@@ -3016,13 +3072,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The printer redirection policy. This parameter only applies if DeviceRedirects does not include a printer redirection policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>deviceRedirect (default):enables device redirection.</li>
-         * <li>usbRedirect: enables USB redirection.</li>
-         * <li>off: disables any type of redirection.</li>
-         * </ul>
+         * <p>The printer redirection policy. This parameter takes effect only when no printer redirection policy is specified in DeviceRedirects.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3034,12 +3084,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable image quality enhancement for design and 3D applications.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t enable image quality enhancement for design and 3D applications.</li>
-         * <li>on: enables image quality enhancement for design and 3D applications.</li>
-         * </ul>
+         * <p>Specifies whether image quality enhancement is enabled for the design and 3D common scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3051,7 +3096,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The duration of screen recording after the specified event is detected. Unit: minutes. Valid values: 10 to 60.</p>
+         * <p>The duration of screen recording after an event is detected in screen recording audits. Unit: minutes. Valid values: 10 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3063,7 +3108,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordEventFileExts.
+         * <p>The file name extensions for screen recording events.</p>
          */
         public Builder recordEventFileExts(java.util.List<String> recordEventFileExts) {
             this.putQueryParameter("RecordEventFileExts", recordEventFileExts);
@@ -3072,7 +3117,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The absolute paths to screen recording files.</p>
+         * <p>The absolute paths for file monitoring in screen recording audits.</p>
          */
         public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
             this.putQueryParameter("RecordEventFilePaths", recordEventFilePaths);
@@ -3081,7 +3126,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordEventLevels.
+         * <p>The levels of screen recording events.</p>
          */
         public Builder recordEventLevels(java.util.List<RecordEventLevels> recordEventLevels) {
             this.putQueryParameter("RecordEventLevels", recordEventLevels);
@@ -3090,7 +3135,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The absolute paths to screen recording registries.</p>
+         * <p>The absolute paths for registry monitoring in screen recording audits.</p>
          */
         public Builder recordEventRegisters(java.util.List<String> recordEventRegisters) {
             this.putQueryParameter("RecordEventRegisters", recordEventRegisters);
@@ -3099,7 +3144,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The events that trigger screen recording.</p>
+         * <p>The list of screen recording events.</p>
          */
         public Builder recordEvents(java.util.List<String> recordEvents) {
             this.putQueryParameter("RecordEvents", recordEvents);
@@ -3108,14 +3153,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The screen recording policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>period: Screen recording occurs at set intervals.</li>
-         * <li>session: Screen recording is limited to sessions only.</li>
-         * <li>off: Screen recording is disabled.</li>
-         * <li>alltime: Screen recording is always enabled.</li>
-         * </ul>
+         * <p>Specifies whether to enable screen recording.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3127,12 +3165,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to record audio files generated on cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t record audio files generated on cloud computers.</li>
-         * <li>on: records audio files generated on cloud computers.</li>
-         * </ul>
+         * <p>The option for recording cloud desktop audio.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3144,7 +3177,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The frame rate of screen recording. Screen recordings are split based on the specified duration and uploaded to Object Storage Service (OSS) buckets. If a file reaches 300 MB, the system prioritizes rolling updates for that file. Valid values: 10 to 60</p>
+         * <p>The duration of each screen recording file, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB. Valid values: 10 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3156,7 +3189,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The screen recording&quot;s end time in HH:MM:SS format. The value is meaningful only if <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * <p>The end time of screen recording. Format: HH:MM:SS. This parameter is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -3168,7 +3201,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</p>
+         * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -3180,7 +3213,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The frame rate of screen recording. Unit: fps.</p>
+         * <p>The screen recording frame rate. Unit: FPS (frames per second).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -3192,7 +3225,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The screen recording&quot;s start time in HH:MM:SS format. The value is meaningful only if <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * <p>The start time of screen recording. Format: HH:MM:SS. This parameter is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -3204,12 +3237,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to notify end users when screen recording is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t notify end users when screen recording is enabled.</li>
-         * <li>on: notifies end users when screen recording is enabled.</li>
-         * </ul>
+         * <p>Specifies whether to notify end users that screen recording is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3221,7 +3249,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The notification sent to end users when screen recording is enabled.</p>
+         * <p>The notification message displayed to end users when screen recording is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Screen recording is enabled</p>
          */
         public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
             this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
@@ -3230,7 +3261,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * <p>The region ID. This feature is region-independent. Set this parameter to cn-shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -3243,13 +3274,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The keyboard and mouse control permissions during remote assistance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>optionalControl: By default, keyboard and mouse control is disabled during remote assistance. You can request permissions as needed.</li>
-         * <li>fullControl: Keyboard and mouse control is enabled during remote assistance.</li>
-         * <li>disableControl: Keyboard and mouse control is disabled during remote assistance.</li>
-         * </ul>
+         * <p>The keyboard and mouse control permission during remote assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>fullControl</p>
@@ -3261,7 +3286,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The computer reset setting.</p>
+         * <p>Resets the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3273,7 +3298,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ResolutionDpi.
+         * <p>The DPI value of the screen resolution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder resolutionDpi(Integer resolutionDpi) {
             this.putQueryParameter("ResolutionDpi", resolutionDpi);
@@ -3282,7 +3310,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The resolution height. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * <p>The height of the resolution. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for cloud desktops: 480 to 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -3295,11 +3323,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The resolution type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>adaptive: adaptive resolution.</li>
-         * <li>customer: fixed resolution.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>adaptive</p>
@@ -3311,7 +3334,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The resolution width. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * <p>The width of the resolution. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for cloud desktops: 640 to 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -3324,11 +3347,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>app: cloud applications.</li>
-         * <li>desktop: cloud computers.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -3341,7 +3359,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * SafeMenu.
+         * <p>Specifies whether to enable the security center shortcut key. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder safeMenu(String safeMenu) {
             this.putQueryParameter("SafeMenu", safeMenu);
@@ -3350,12 +3375,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The effective scope of the policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>IP: The policy applies to specific IP addresses.</li>
-         * <li>GLOBAL: The policy applies globally.</li>
-         * </ul>
+         * <p>The scope of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>GLOBAL</p>
@@ -3367,7 +3387,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The effective scopes. This parameter is required when <code>Scope</code> is set to <code>IP</code>. If <code>Scope</code> is set to <code>IP</code>, this parameter doesn&quot;t take effect.</p>
+         * <p>The value to specify when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
          */
         public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -3376,7 +3396,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ScreenDisplayMode.
+         * <p>The screen display mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder screenDisplayMode(String screenDisplayMode) {
             this.putQueryParameter("ScreenDisplayMode", screenDisplayMode);
@@ -3385,7 +3408,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth peak allowed for sessions. Unit: Kbit/s. Valid values: 2000 to 100000.</p>
+         * <p>The maximum value of session bandwidth throttling. Unit: Kbps. Valid values: 2000 to 100000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -3397,12 +3420,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable smoothness enhancement for daily office use.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t enable smoothness enhancement for daily office use.</li>
-         * <li>on: enables smoothness enhancement for daily office use.</li>
-         * </ul>
+         * <p>Specifies whether to enable smoothness enhancement for the daily office scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3414,12 +3432,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the metric status entry in the DesktopAssistant menu.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t display the metric status entry in the DesktopAssistant menu.</li>
-         * <li>on: displays the metric status entry in the DesktopAssistant menu.</li>
-         * </ul>
+         * <p>Specifies whether to provide a status monitoring entry in the cloud desktop floating ball.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3431,12 +3444,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The streaming mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>intelligent</li>
-         * <li>smooth</li>
-         * </ul>
+         * <p>The streaming mode scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>smooth</p>
@@ -3460,15 +3468,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the application taskbar.</p>
+         * <p>The application taskbar.</p>
          * <blockquote>
-         * <p> This parameter applies only to cloud application policies.</p>
+         * <p>This parameter applies only to cloud application policies.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t display the application taskbar.</li>
-         * <li>on: displays the application taskbar.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3480,7 +3483,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ThreeScreen.
+         * <p>Specifies whether to enable the three-screen feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder threeScreen(String threeScreen) {
             this.putQueryParameter("ThreeScreen", threeScreen);
@@ -3489,12 +3499,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable USB redirection.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off (default): doesn&quot;t enable USB redirection.</li>
-         * <li>on: enables USB redirection.</li>
-         * </ul>
+         * <p>The USB redirection policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3515,7 +3520,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * UseTime.
+         * <p>Specifies whether to display the usage duration on the floating ball. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder useTime(String useTime) {
             this.putQueryParameter("UseTime", useTime);
@@ -3524,7 +3536,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
+         * <p>The average bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -3536,7 +3548,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum QP for video files. Higher QP values result in lower video quality. Valid values: 0 to 51.</p>
+         * <p>The maximum QP for video encoding, which represents the lowest quality. Valid values: 0 to 51.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -3548,7 +3560,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The minimum quantizer parameter (QP) for video files. A lower QP means better video quality. Valid values: 0 to 51.</p>
+         * <p>The minimum QP for video encoding, which represents the highest quality. Valid values: 0 to 51.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -3560,7 +3572,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The peak bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
+         * <p>The peak video encoding bitrate. Unit: Kbps. Valid values: 1000 to 50000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -3573,11 +3585,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The video encoding policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>qualityFirst: prioritizes image quality.</li>
-         * <li>bandwidthFirst: prioritizes bandwidth.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>qualityFirst</p>
@@ -3590,11 +3597,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The multimedia redirection policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables multimedia redirection.</li>
-         * <li>on: enables multimedia redirection.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3606,14 +3608,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The image display quality.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>high: high-definition (HD).</li>
-         * <li>low: smoothness.</li>
-         * <li>lossless: no quality loss.</li>
-         * <li>medium (default): scenario-specific adaptation.</li>
-         * </ul>
+         * <p>The image display quality policy.</p>
          * 
          * <strong>example:</strong>
          * <p>low</p>
@@ -3626,12 +3621,6 @@ public class CreateCenterPolicyRequest extends Request {
 
         /**
          * <p>The watermark policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>blind: displays invisible watermarks.</li>
-         * <li>off (default): displays no watermark.</li>
-         * <li>on: displays visible watermarks.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3643,12 +3632,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable anti-screen capture for invisible watermarks.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables anti-screen capture for invisible watermarks.</li>
-         * <li>on: enables anti-screen capture for invisible watermarks.</li>
-         * </ul>
+         * <p>The invisible watermark anti-camera capture feature.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3660,7 +3644,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * <p>The watermark font color. Valid values: 0 to 16777215.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -3684,10 +3668,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>If you set <code>WatermarkType</code> to <code>custom</code>, you must also specify <code>WatermarkCustomText</code>.</p>
+         * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Internal Document</p>
          */
         public Builder watermarkCustomText(String watermarkCustomText) {
             this.putQueryParameter("WatermarkCustomText", watermarkCustomText);
@@ -3696,7 +3680,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark rotation. Valid values: -10 to -30.</p>
+         * <p>The watermark tilt angle. Valid values: -10 to -30.</p>
          * 
          * <strong>example:</strong>
          * <p>-10</p>
@@ -3708,7 +3692,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+         * <p>The watermark font size. Valid values: 10 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3720,12 +3704,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The font style of the watermark.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>plain</li>
-         * <li>bold</li>
-         * </ul>
+         * <p>The watermark font style.</p>
          * 
          * <strong>example:</strong>
          * <p>plain</p>
@@ -3737,13 +3716,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The enhancement level for invisible watermarks.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>high</li>
-         * <li>low</li>
-         * <li>medium</li>
-         * </ul>
+         * <p>The invisible watermark enhancement feature.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -3767,12 +3740,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable security priority for invisible watermarks.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: disables security priority for invisible watermarks.</li>
-         * <li>on: enables security priority for invisible watermarks.</li>
-         * </ul>
+         * <p>The invisible watermark security priority rule.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3784,7 +3752,14 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkShadow.
+         * <p>Specifies whether to enable the watermark shadow effect. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder watermarkShadow(String watermarkShadow) {
             this.putQueryParameter("WatermarkShadow", watermarkShadow);
@@ -3793,7 +3768,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark opacity. A higher value makes the watermark more opaque. Valid values: 10 to 100.</p>
+         * <p>The watermark opacity. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3805,19 +3780,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The watermark type. You can specify up to three types. Separate multiple values with commas (,).</p>
+         * <p>The watermark type. You can specify up to three types, separated by commas (,).</p>
          * <blockquote>
-         * <p> If you provide <code>custom</code> as the value for this parameter, you must configure <code>WatermarkCustomText</code> to specify custom text.</p>
+         * <p>If you set this parameter to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>EndUserId: the username.</li>
-         * <li>Custom: the custom text.</li>
-         * <li>DesktopIp: the IP address of the cloud computer.</li>
-         * <li>ClientIp: the IP address of the client.</li>
-         * <li>HostName: the rightmost 15 digits of the cloud computer ID.</li>
-         * <li>ClientTime: the current time displayed on the cloud computer.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EndUserId,HostName,ClientTime</p>
@@ -3829,7 +3795,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Cloud Computer Manager.</p>
+         * <p>The WUYING Keeper switch.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -3841,15 +3807,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the Xiaoying AI Assistant option in the DesktopAssistant menu when end users connect to cloud computers via desktop clients (Windows and macOS).</p>
+         * <p>Specifies whether to provide the WUYING AI Assistant entry in the floating ball when connecting to a cloud computer through a desktop client (including Windows client and macOS client).</p>
          * <blockquote>
-         * <p> This feature applies to only desktop clients of version 7.7.0 or later.</p>
+         * <p>This feature applies only to desktop clients of V7.7 or later.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: doesn&quot;t display the Xiaoying AI Assistant option in the DesktopAssistant menu.</li>
-         * <li>on: displays the Xiaoying AI Assistant option in the DesktopAssistant menu.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -3920,7 +3881,7 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The client CIDR block from which end users can connect to cloud computers. Specify an IPv4 CIDR block.</p>
+             * <p>The client access IP address range. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -3931,10 +3892,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP address whitelist.</p>
+             * <p>The description of the client IP whitelist entry.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Company office network segment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4066,7 +4027,7 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The object of the security group rule. Specify an IPv4 CIDR block.</p>
+             * <p>The object of the security group control rule. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX/8</p>
@@ -4077,10 +4038,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The description of the security group rule.</p>
+             * <p>The description of the security group control rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Allow access to the internal R&amp;D environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4088,15 +4049,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the security group rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>TCP: the Transmission Control Protocol (TCP) protocol.</li>
-             * <li>UDP: the User Datagram Protocol (UDP) protocol.</li>
-             * <li>ALL: any type of protocol.</li>
-             * <li>GRE: the Generic Routing Encapsulation (GRE) protocol.</li>
-             * <li>ICMP: the Internet Control Message Protocol (ICMP) for (IPv4).</li>
-             * </ul>
+             * <p>The protocol type of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -4107,12 +4060,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The authorization policy of the security group rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>drop: denies all access requests. If no &quot;&quot;access denied&quot;&quot; messages are returned, the requests either timed out or failed.</li>
-             * <li>accept (default): accepts all requests.</li>
-             * </ul>
+             * <p>The authorization policy of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -4123,14 +4071,14 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The port range of the security group rule. The value range of this parameter varies based on the value of IpProtocol.</p>
+             * <p>The port range of the security group control rule. The port range is determined by the value of the protocol (IpProtocol):</p>
              * <ul>
-             * <li>If IpProtocol is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-             * <li>If IpProtocol is set to ICMP, set the value to -1/-1.</li>
-             * <li>If IpProtocol is set to GRE, set the value to -1/-1.</li>
-             * <li>If IpProtocol is set to ALL, set the value to -1/-1.</li>
+             * <li>TCP or UDP: Valid values: 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP: -1/-1.</li>
+             * <li>GRE: -1/-1.</li>
+             * <li>If IpProtocol is set to all: -1/-1.</li>
              * </ul>
-             * <p>For more information about the common ports, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -4141,7 +4089,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule. A smaller value specifies a higher priority.<br>Valid values: 1 to 60.<br>Default value: 1.</p>
+             * <p>The priority of the security group control rule. A smaller value indicates a higher priority.<br>Valid values: 1 to 60.<br>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -4152,12 +4100,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The direction of the security group rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>outflow: outbound.</li>
-             * <li>inflow: inbound.</li>
-             * </ul>
+             * <p>The direction of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>inflow</p>
@@ -4227,15 +4170,7 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The type of the Alibaba Cloud Workspace client that end users can use to connect to cloud computers.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>html5: the web client.</li>
-             * <li>android: the Android client.</li>
-             * <li>ios: the iOS client.</li>
-             * <li>windows: the Windows client.</li>
-             * <li>macos: the macOS client.</li>
-             * </ul>
+             * <p>The client type for logon method control.</p>
              * 
              * <strong>example:</strong>
              * <p>windows</p>
@@ -4246,15 +4181,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether end users can use the specified type of Alibaba Cloud Workspace client to connect to cloud computers.</p>
+             * <p>Specifies whether to allow a specific type of client to log on to cloud computers.</p>
              * <blockquote>
-             * <p> If you don&quot;t specify <code>ClientType</code>, any client can be used to connect to cloud computers.</p>
+             * <p>If you do not set the <code>ClientType</code> parameters, all client types are allowed to log on to cloud computers by default.</p>
              * </blockquote>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off: End users cannot use the specified type of Alibaba Cloud Workspace client to connect to cloud computers.</li>
-             * <li>on: End users can use the specified type of Alibaba Cloud Workspace client to connect to cloud computers.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4402,7 +4332,10 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * ClipboardSize.
+             * <p>The size limit for a single clipboard transfer. Use this parameter together with the size unit parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder clipboardSize(Integer clipboardSize) {
                 this.clipboardSize = clipboardSize;
@@ -4410,7 +4343,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * ClipboardSizeUnit.
+             * <p>The unit for the single clipboard transfer size limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder clipboardSizeUnit(String clipboardSizeUnit) {
                 this.clipboardSizeUnit = clipboardSizeUnit;
@@ -4418,7 +4354,16 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * ClipboardType.
+             * <p>The fine-grained clipboard control type. Valid values:</p>
+             * <ul>
+             * <li>off: Clipboard usage is disabled.</li>
+             * <li>read: Read-only.</li>
+             * <li>write: Write-only.</li>
+             * <li>readwrite: Read and write.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>readwrite</p>
              */
             public Builder clipboardType(String clipboardType) {
                 this.clipboardType = clipboardType;
@@ -4426,7 +4371,16 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * GrainedType.
+             * <p>The content type for fine-grained clipboard control. Valid values:</p>
+             * <ul>
+             * <li>text: Text.</li>
+             * <li>richtext: Rich text.</li>
+             * <li>file: File.</li>
+             * <li>picture: Image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder grainedType(String grainedType) {
                 this.grainedType = grainedType;
@@ -4434,7 +4388,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * InClipboardSize.
+             * <p>The size limit for a single clipboard transfer to the cloud desktop. Use this parameter together with the inbound unit parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder inClipboardSize(Integer inClipboardSize) {
                 this.inClipboardSize = inClipboardSize;
@@ -4442,7 +4399,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * InClipboardSizeUnit.
+             * <p>The unit for the single clipboard transfer size limit to the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder inClipboardSizeUnit(String inClipboardSizeUnit) {
                 this.inClipboardSizeUnit = inClipboardSizeUnit;
@@ -4450,7 +4410,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * OutClipboardSize.
+             * <p>The size limit for a single clipboard transfer from the cloud desktop. Use this parameter together with the outbound unit parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder outClipboardSize(Integer outClipboardSize) {
                 this.outClipboardSize = outClipboardSize;
@@ -4458,7 +4421,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * OutClipboardSizeUnit.
+             * <p>The unit for the single clipboard transfer size limit from the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder outClipboardSizeUnit(String outClipboardSizeUnit) {
                 this.outClipboardSizeUnit = outClipboardSizeUnit;
@@ -4525,15 +4491,7 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The peripheral type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>printer</li>
-             * <li>scanner</li>
-             * <li>serialport</li>
-             * <li>camera</li>
-             * <li>adb</li>
-             * </ul>
+             * <p>The device type.</p>
              * 
              * <strong>example:</strong>
              * <p>camera</p>
@@ -4545,12 +4503,6 @@ public class CreateCenterPolicyRequest extends Request {
 
             /**
              * <p>The redirection type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>deviceRedirect: enables device redirection.</li>
-             * <li>usbRedirect: enables USB redirection.</li>
-             * <li>off: disables any type of redirection.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>usbRedirect</p>
@@ -4696,7 +4648,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The product ID (PID).</p>
+             * <p>The product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>0x55b1</p>
@@ -4708,18 +4660,6 @@ public class CreateCenterPolicyRequest extends Request {
 
             /**
              * <p>The peripheral type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>usbKey: UKeys.</li>
-             * <li>other: other peripheral devices.</li>
-             * <li>graphicsTablet: graphics tablets.</li>
-             * <li>cardReader: card readers.</li>
-             * <li>printer: printers.</li>
-             * <li>scanner: scanners.</li>
-             * <li>storage: storage devices.</li>
-             * <li>camera: cameras.</li>
-             * <li>networkInterfaceCard: NIC devices.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>storage</p>
@@ -4730,7 +4670,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+             * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0x0781</p>
@@ -4741,7 +4681,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The link optimization command.</p>
+             * <p>The link optimization instruction.</p>
              * 
              * <strong>example:</strong>
              * <p>2:0</p>
@@ -4752,7 +4692,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Platforms.
+             * <p>The platform types to which the device rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder platforms(String platforms) {
                 this.platforms = platforms;
@@ -4761,12 +4704,6 @@ public class CreateCenterPolicyRequest extends Request {
 
             /**
              * <p>The redirection type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>deviceRedirect: device redirection.</li>
-             * <li>usbRedirect: USB redirection.</li>
-             * <li>off: redirection disabled.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>usbRedirect</p>
@@ -4850,6 +4787,9 @@ public class CreateCenterPolicyRequest extends Request {
 
             /**
              * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4868,12 +4808,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the domain resolution policy to take effect.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>allow</li>
-             * <li>block</li>
-             * </ul>
+             * <p>The resolution policy.</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -4959,7 +4894,7 @@ public class CreateCenterPolicyRequest extends Request {
              * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>*.taobao.com</p>
+             * <p>*.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -4967,7 +4902,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The redirection policy.</p>
+             * <p>The redirect policy.</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -4979,11 +4914,6 @@ public class CreateCenterPolicyRequest extends Request {
 
             /**
              * <p>The rule type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>prc: process.</li>
-             * <li>domain: domain name.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -5053,7 +4983,10 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * EventLevel.
+             * <p>The event level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HIGH</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -5061,7 +4994,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * EventType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StartApplication</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -5168,6 +5104,9 @@ public class CreateCenterPolicyRequest extends Request {
 
             /**
              * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -5175,7 +5114,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The product ID (PID).</p>
+             * <p>The product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08**</p>
@@ -5186,12 +5125,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow USB redirection.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>1: allows USB redirection.</li>
-             * <li>2: forbids USB redirection.</li>
-             * </ul>
+             * <p>The USB redirection type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -5202,11 +5136,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The type of the USB redirection rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>2: enables USB redirection based on products.</li>
-             * </ul>
+             * <p>The USB redirection rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -5217,7 +5147,7 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>04**</p>

@@ -80,7 +80,7 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-0ctwi5zbswtql****</p>
@@ -91,7 +91,7 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation result of the configuration group.</p>
+         * <p>The creation result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE9472BC-0B5D-5458-85CD-C52BDD******</p>

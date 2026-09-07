@@ -429,12 +429,7 @@ public class ModifyDesktopGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto-creation of cloud computers for the subscription cloud computer share. You must specify this parameter when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: disable auto-creation of cloud computers.</li>
-         * <li>1: enables auto-creation of cloud computers.</li>
-         * </ul>
+         * <p>Specifies whether to allow automatic creation of cloud computers in the subscription shared cloud computer. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>, and is required in this case.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -446,13 +441,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of standby cloud computers that can be reserved within the pay-as-you-go cloud computer share. You must specify this property only when <code>ChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
+         * <p>The number of cloud computers that can be reserved in a pay-as-you-go shared cloud computer. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PostPaid</code>, and is required in this case. Valid values: </p>
          * <ul>
-         * <li>0: does not reserve any cloud computer.</li>
-         * <li>N: reserves N cloud computers (1≤ N ≤ 100).</li>
+         * <li>0: no reservation</li>
+         * <li>N: reserve N cloud computers (1 ≤ N ≤ 100)</li>
          * </ul>
          * <blockquote>
-         * <p> Setting this parameter to 0 means no cloud computers will be reserved within the cloud computer share. In this case, the system must create, start, and assign cloud computers to end users upon request, which can be time-consuming. To improve user experience, we recommend that you reserve a specific number of cloud computers.</p>
+         * <p>If no available cloud computers are reserved, the system must create and start a cloud computer before assigning it to the user when an end user initiates a connection request. This process takes a relatively long time. Reserve a certain number of cloud computers as needed to ensure a good experience for end users.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -465,13 +460,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</p>
+         * <p>The number of concurrent sessions allowed on each cloud computer in a multi-session shared cloud computer with multiple cloud computers.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2</p>
          */
         public Builder bindAmount(Long bindAmount) {
             this.putQueryParameter("BindAmount", bindAmount);
@@ -481,8 +476,8 @@ public class ModifyDesktopGroupRequest extends Request {
 
         /**
          * <ul>
-         * <li>For subscription cloud computer shares, this parameter specifies the number of purchased cloud computers. Valid values: 0 to 200.</li>
-         * <li>For pay-as-you-go cloud computer shares, this parameter specifies the minimum number of cloud computers created in the initial batch. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</li>
+         * <li>For subscription shared cloud computers: the number of cloud computers to purchase. Valid values: 0 to 200.</li>
+         * <li>For pay-as-you-go shared cloud computers: the minimum number of cloud computers to create in the pool. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,15 +490,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud computer share.</p>
+         * <p>The type of the shared cloud computer.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>teacher: teacher-oriented.</li>
-         * <li>student: student-oriented.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>teacher</p>
@@ -518,7 +508,7 @@ public class ModifyDesktopGroupRequest extends Request {
          * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>comment</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -527,10 +517,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 to 345600000. That is, the session can be connected for 15 to 5,760 minutes (4 days).</p>
+         * <p>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
          * 
          * <strong>example:</strong>
-         * <p>600000</p>
+         * <p>900000</p>
          */
         public Builder connectDuration(Long connectDuration) {
             this.putQueryParameter("ConnectDuration", connectDuration);
@@ -539,7 +529,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * DeleteDuration.
+         * <p>The retention period before cloud computers in the cloud computer pool are automatically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder deleteDuration(Long deleteDuration) {
             this.putQueryParameter("DeleteDuration", deleteDuration);
@@ -548,7 +541,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The shared cloud computer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -561,7 +554,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer share.</p>
+         * <p>The shared cloud computer name.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopGroupName1</p>
@@ -585,9 +578,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
+         * <p>The NAS file system ID used by the user data roaming feature.</p>
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -600,14 +593,14 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>After an end user connects to a cloud computer, the session is established. If the system does not detect inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds. Valid values: 360000 to 3600000 (6 minutes to 60 minutes)</p>
-         * <p>End users can receive a prompt to save data before sessions are disconnected. The system sends the prompt 30 seconds before the specified period of time is reached. To prevent data loss, end users must save the data of the sessions.</p>
+         * <p>The maximum idle duration after a user session is connected. If no keyboard or mouse activity occurs within this duration, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
+         * <p>30 seconds before this duration is reached, the end user in the session receives a prompt to save document data. The end user must save document data promptly to avoid data loss.</p>
          * <blockquote>
-         * <p> This parameter is suitable only for cloud computers whose image version is v1.0.2 or later.</p>
+         * <p>This parameter applies only to cloud computers with an image version of 1.0.2 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>120000</p>
+         * <p>360000</p>
          */
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
             this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
@@ -616,7 +609,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the images.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopimage-windows-server-2016-64-ch</p>
@@ -628,11 +621,11 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The retention period of a session after it is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5,760 minutes (4 days) after it is disconnected. If you set this parameter to 0, the session is permanently retained after it is disconnected.</p>
-         * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can continue to access data of the session.</p>
+         * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
+         * <p>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within the retention period, the user can access the original session and the data that existed before the disconnection.</p>
          * 
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>180000</p>
          */
         public Builder keepDuration(Long keepDuration) {
             this.putQueryParameter("KeepDuration", keepDuration);
@@ -641,15 +634,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The load balancing policy for the multi-session many-to-many share.</p>
+         * <p>The load balancing policy for multi-session shared cloud computers with multiple cloud computers.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: depth first.</li>
-         * <li>1: breadth first.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -661,7 +649,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share. Valid values: 0 to 500.</p>
+         * <p>The maximum number of cloud computers that a pay-as-you-go shared cloud computer can contain. Valid values: 0 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -673,7 +661,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of auto-created cloud computers allowed in the subscription cloud computer share. You must specify this parameter when <code>ChargeType</code> is set to <code>PrePaid</code>. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</p>
+         * <p>The maximum number of cloud computers that can be subject to automatic creation in a subscription shared cloud computer. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>, and is required in this case. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -685,7 +673,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer template.</p>
+         * <p>The cloud computer template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b-7t275tpgjueeu****</p>
@@ -697,7 +685,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-53iyi2aar0nd6****</p>
@@ -709,7 +697,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of policy groups.</p>
+         * <p>The list of policy group IDs.</p>
          */
         public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
@@ -720,7 +708,7 @@ public class ModifyDesktopGroupRequest extends Request {
         /**
          * <p>Specifies whether to enable user data roaming.</p>
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -733,15 +721,15 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
-         * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code></p>
-         * <p>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</p>
+         * <p>The session occupancy threshold, which is used as the auto scaling trigger condition for multi-session shared cloud computers with multiple cloud computers. The session occupancy is calculated by using the following formula:</p>
+         * <p><code>Session occupancy = Number of attached sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
+         * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>0.5</p>
+         * <p>0.85</p>
          */
         public Builder ratioThreshold(Float ratioThreshold) {
             this.putQueryParameter("RatioThreshold", ratioThreshold);
@@ -750,7 +738,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -763,18 +751,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The disk reset type of cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>0: does not reset disks.</p>
-         * </li>
-         * <li><p>1: resets only the system disks.</p>
-         * </li>
-         * <li><p>2: resets only the user disks.</p>
-         * </li>
-         * <li><p>3: resets the system disks and user disks.</p>
-         * </li>
-         * </ul>
+         * <p>The cloud computer reset type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -786,9 +763,9 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling policy group.</p>
+         * <p>The scaling policy group ID.</p>
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -801,10 +778,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The period of time before the idle cloud computer enters the Stopped state. When the specified period of time is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer automatically starts. Unit: milliseconds.</p>
+         * <p>The idle shutdown duration. When the idle duration of a cloud computer reaches this value, the cloud computer is automatically shut down. If a user connects after the shutdown, the cloud computer is automatically started. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>180000</p>
+         * <p>300000</p>
          */
         public Builder stopDuration(Long stopDuration) {
             this.putQueryParameter("StopDuration", stopDuration);

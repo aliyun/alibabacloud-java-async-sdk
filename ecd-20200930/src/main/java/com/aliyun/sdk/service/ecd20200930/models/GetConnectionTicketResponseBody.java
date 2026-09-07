@@ -132,7 +132,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -143,7 +143,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -154,14 +154,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
+         * <p>The ticket used to connect to the user instance. Before you use the ticket, Base64-decode its content and save it as an xxx.ica file, and then open the file. The following Python code provides an example:</p>
          * <pre><code>import base64
          * response = {
          *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
          *     &quot;RequestId&quot;: &quot;1CBAFFAB-B697-4049-A9B1-67E1FC5F****&quot;,
          * }
-         * f = open (\&quot;xxx.ica\&quot;, \&quot;w\&quot;)
-         * out = base64.b64decode(response[\&quot;Ticket\&quot;])
+         * f = open (\\&quot;xxx.ica\\&quot;, \\&quot;w\\&quot;)
+         * out = base64.b64decode(response[\\&quot;Ticket\\&quot;])
          * f.write(out)
          * f.close()
          * </code></pre>
@@ -186,7 +186,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the connection task.</p>
+         * <p>The ID of the cloud computer connection task.</p>
          * 
          * <strong>example:</strong>
          * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
@@ -198,29 +198,6 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
         /**
          * <p>The task status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>FAILED: The credential fails to be obtained.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>RUNNING: The credential is being obtained.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>FINISHED: The credential is obtained.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -231,7 +208,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credentials for connecting to the cloud computer.</p>
+         * <p>The connection credential for the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

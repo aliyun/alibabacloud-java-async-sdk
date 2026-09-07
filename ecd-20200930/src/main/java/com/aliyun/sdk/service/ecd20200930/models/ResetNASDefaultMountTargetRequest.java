@@ -75,7 +75,7 @@ public class ResetNASDefaultMountTargetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the NAS file system.</p>
+         * <p>The NAS file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

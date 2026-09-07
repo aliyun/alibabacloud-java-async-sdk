@@ -117,6 +117,7 @@ public class DescribeCloudDiskGroupsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the enterprise cloud disk that is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,7 @@ public class DescribeCloudDiskGroupsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The configuration group ID.</p>
          */
         public Builder groupId(java.util.List<String> groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -138,7 +139,10 @@ public class DescribeCloudDiskGroupsRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The team space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTeam1</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -147,7 +151,10 @@ public class DescribeCloudDiskGroupsRequest extends Request {
         }
 
         /**
-         * ParentOrgId.
+         * <p>The parent organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder parentOrgId(String parentOrgId) {
             this.putQueryParameter("ParentOrgId", parentOrgId);
@@ -156,6 +163,7 @@ public class DescribeCloudDiskGroupsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

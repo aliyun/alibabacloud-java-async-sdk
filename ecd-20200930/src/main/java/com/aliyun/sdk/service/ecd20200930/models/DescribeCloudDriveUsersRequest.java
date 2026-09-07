@@ -118,6 +118,7 @@ public class DescribeCloudDriveUsersRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the enterprise network drive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,11 @@ public class DescribeCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The end user ID.</p>
+         * <p>If specified, the query returns only the personal drive of that user. If left empty, the query returns the personal drives of all users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -139,7 +144,16 @@ public class DescribeCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li><p>Maximum: 100.</p>
+         * </li>
+         * <li><p>Default: 10.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,7 +162,10 @@ public class DescribeCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page of results. This is the <code>NextToken</code> value from the previous response. Leave this parameter empty for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,6 +174,7 @@ public class DescribeCloudDriveUsersRequest extends Request {
         }
 
         /**
+         * <p>The region ID. To obtain a list of supported regions, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

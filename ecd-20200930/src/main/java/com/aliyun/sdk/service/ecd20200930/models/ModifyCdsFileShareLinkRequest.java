@@ -524,6 +524,9 @@ public class ModifyCdsFileShareLinkRequest extends Request {
          * <blockquote>
          * <p> The sharing task name must be 0 to 128 characters in length.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>File sharing</p>
          */
         public Builder shareName(String shareName) {
             this.putQueryParameter("ShareName", shareName);

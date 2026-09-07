@@ -133,7 +133,7 @@ public class CreateConfigGroupRequest extends Request {
         } 
 
         /**
-         * <p>The scheduled task groups.</p>
+         * <p>The configuration information of scheduled tasks. This parameter is a list.</p>
          */
         public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
             this.putQueryParameter("ConfigTimers", configTimers);
@@ -145,7 +145,7 @@ public class CreateConfigGroupRequest extends Request {
          * <p>The description of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>Description of the scheduled task</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -158,7 +158,7 @@ public class CreateConfigGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>ScheduledTaskGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -167,11 +167,7 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The service type of the configuration group.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The product type used by the configuration group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,10 +180,10 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,11 +192,7 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The group type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Timer: a scheduled task group.</li>
-         * </ul>
+         * <p>The type of the configuration group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -493,7 +485,10 @@ public class CreateConfigGroupRequest extends Request {
             } 
 
             /**
-             * AppointmentTimer.
+             * <p>The appointment timer used for executing scheduled tasks at specified time points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764660600967</p>
              */
             public Builder appointmentTimer(Long appointmentTimer) {
                 this.appointmentTimer = appointmentTimer;
@@ -501,7 +496,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * CreateSnapshot.
+             * <p>Specifies whether to create a snapshot.</p>
              */
             public Builder createSnapshot(Boolean createSnapshot) {
                 this.createSnapshot = createSnapshot;
@@ -509,7 +504,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * EndCronExpression.
+             * <p>The cron expression for the end of the scheduled task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 18 ? * 1-5</p>
              */
             public Builder endCronExpression(String endCronExpression) {
                 this.endCronExpression = endCronExpression;
@@ -517,7 +515,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * Enforce.
+             * <p>Specifies whether to forcefully execute the task. If set to true, the scheduled task is forcefully executed regardless of the desktop and connection status.</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -525,7 +523,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-4zfb6zj728hhr****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -533,7 +534,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>The time interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -541,7 +545,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * IpSegments.
+             * <p>The list of effective IP CIDR blocks.</p>
              */
             public Builder ipSegments(java.util.List<String> ipSegments) {
                 this.ipSegments = ipSegments;
@@ -549,7 +553,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * LockScreenTime.
+             * <p>The duration of inactivity before the screen is locked, used by the no-operation lock screen feature. Unit: minutes. Only AD cloud desktops are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder lockScreenTime(Integer lockScreenTime) {
                 this.lockScreenTime = lockScreenTime;
@@ -557,7 +564,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * NotificationTime.
+             * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder notificationTime(Integer notificationTime) {
                 this.notificationTime = notificationTime;
@@ -565,7 +575,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * OperationType.
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shutdown</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -573,7 +586,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * PatchId.
+             * <p>The patch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KB5082063</p>
              */
             public Builder patchId(String patchId) {
                 this.patchId = patchId;
@@ -581,7 +597,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * ProcessWhitelist.
+             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -589,7 +605,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * ResetType.
+             * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -597,7 +616,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * StartCronExpression.
+             * <p>The cron expression for the start of the scheduled task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 8 ? * 1-5</p>
              */
             public Builder startCronExpression(String startCronExpression) {
                 this.startCronExpression = startCronExpression;
@@ -605,7 +627,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * TimerOrder.
+             * <p>The execution order number of the timer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timerOrder(Integer timerOrder) {
                 this.timerOrder = timerOrder;
@@ -613,7 +638,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone used by the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -621,7 +649,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -629,7 +660,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * VerificationNotificationTime.
+             * <p>The advance notification time before verification is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder verificationNotificationTime(Integer verificationNotificationTime) {
                 this.verificationNotificationTime = verificationNotificationTime;
@@ -637,7 +671,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * VerificationTime.
+             * <p>The verification wait duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder verificationTime(Integer verificationTime) {
                 this.verificationTime = verificationTime;
@@ -822,7 +859,7 @@ public class CreateConfigGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow end users to configure the scheduled task.</p>
+             * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -833,9 +870,9 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The cron expression specified in the scheduled task.</p>
+             * <p>The cron expression of the scheduled task.</p>
              * <blockquote>
-             * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7</p>
+             * <p>Notice: Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, use 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -847,7 +884,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to forcefully execute the scheduled task.</p>
+             * <p>Specifies whether to forcefully execute the task.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -858,7 +895,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+             * <p>The time interval. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -869,7 +906,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * NotificationTime.
+             * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder notificationTime(Integer notificationTime) {
                 this.notificationTime = notificationTime;
@@ -877,12 +917,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Hibernate: scheduled hibernation.</li>
-             * <li>Shutdown: scheduled shutdown.</li>
-             * </ul>
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -893,7 +928,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</p>
+             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -901,13 +936,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The reset option.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RESET_TYPE_SYSTEM: resets only the system disk.</li>
-             * <li>RESET_TYPE_USER_DISK: resets only the data disk.</li>
-             * <li>RESET_TYPE_BOTH: resets the system and data disks.</li>
-             * </ul>
+             * <p>The reset type of the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>RESET_TYPE_SYSTEM</p>
@@ -918,7 +947,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * SegmentTimers.
+             * <p>The list of segment timer configurations.</p>
              */
             public Builder segmentTimers(java.util.List<SegmentTimers> segmentTimers) {
                 this.segmentTimers = segmentTimers;
@@ -926,19 +955,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The scheduled task type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
-             * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
-             * <li>TimerBoot: scheduled start.</li>
-             * <li>TimerReset: scheduled reset.</li>
-             * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
-             * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
-             * <li>TimerShutdown: scheduled shutdown.</li>
-             * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
-             * <li>TimerReboot: scheduled restart.</li>
-             * </ul>
+             * <p>The type of the scheduled task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -950,12 +967,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The method to trigger the scheduled task upon inactivity.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Advanced: intelligent detection.</li>
-             * <li>Standard: standard detection.</li>
-             * </ul>
+             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>

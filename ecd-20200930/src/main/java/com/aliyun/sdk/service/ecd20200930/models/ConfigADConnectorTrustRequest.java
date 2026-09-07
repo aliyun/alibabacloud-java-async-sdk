@@ -104,7 +104,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the enterprise AD office network.</p>
+         * <p>The ID of the AD office network.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,14 +117,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to configure a trust password for the Remote Desktop Services (RDS) License Domain of the enterprise AD office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true: configures a trust password for the RDS License Domain of the AD office network.</p>
-         * </li>
-         * <li><p>false: configures a trust password for a regular enterprise AD office network.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to configure the trust password for the RDS License Domain of the AD office network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -136,7 +129,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +142,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * <p>The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.</p>
+         * <p>The trust password. This password is the one that you set when configuring the trust relationship (establishing a trust relationship with the Elastic Desktop Service ecd.acs domain) in the AD domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

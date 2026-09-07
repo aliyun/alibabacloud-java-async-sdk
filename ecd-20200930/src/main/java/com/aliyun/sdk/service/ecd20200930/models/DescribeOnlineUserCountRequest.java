@@ -101,7 +101,12 @@ public class DescribeOnlineUserCountRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -110,7 +115,10 @@ public class DescribeOnlineUserCountRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+dir-631324****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -119,7 +127,10 @@ public class DescribeOnlineUserCountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +139,10 @@ public class DescribeOnlineUserCountRequest extends Request {
         }
 
         /**
-         * SearchRegionId.
+         * <p>The region ID used to filter cloud resource information for the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder searchRegionId(String searchRegionId) {
             this.putQueryParameter("SearchRegionId", searchRegionId);

@@ -89,7 +89,7 @@ public class ResetSnapshotRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The ID of the snapshot used to recover disk data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * StopDesktop.
+         * <p>Indicates whether to shut down and recover the disk using the snapshot.</p>
          */
         public Builder stopDesktop(Boolean stopDesktop) {
             this.putQueryParameter("StopDesktop", stopDesktop);

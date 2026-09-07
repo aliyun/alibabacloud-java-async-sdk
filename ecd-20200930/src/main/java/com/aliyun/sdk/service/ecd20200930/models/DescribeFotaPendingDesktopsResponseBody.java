@@ -128,7 +128,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>Succeeded</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -147,7 +147,7 @@ public class BatchModifyEntitlementRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computers for which you want to modify end users.</p>
+         * <p>The IDs of the cloud computers for which you want to update authorized users.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -157,7 +157,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the users.</p>
+         * <p>The user IDs (usernames).</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -166,7 +166,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The number of cloud computers allocated to each user.</p>
+         * <p>The number of cloud computers to assign to each user.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -178,7 +178,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The number of users assigned to each cloud computer.</p>
+         * <p>The number of users to assign to each cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +190,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * <p>Whether to preview the assign results instead of actually assigning cloud computers.</p>
+         * <p>Specifies whether to preview the assignment. If you set this parameter to true, the assignment is not actually performed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -202,7 +202,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Call the DescribeRegions operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service (EDS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,9 +215,13 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The disproportional assignment policy. Valid values:</p>
-         * <p>AVERAGE: The system preferentially guarantees that each user is assigned with at least a cloud computer. If the number of selected cloud computers cannot be proportionally assigned to the selected users, ensure that each user is assigned a cloud computer.</p>
-         * <p>CENTRAL: The system preferentially assigns the designated number of cloud computers to each user. If the number of selected cloud computers cannot be proportionally assigned to the selected users, ensure that each user is assigned the specified number of cloud computers.</p>
+         * <p>The policy used when the ratio of cloud computers to users cannot be evenly matched. Valid values:</p>
+         * <ul>
+         * <li><p>AVERAGE: Prioritizes assigning a cloud computer to each user. When the number of selected cloud computers and users cannot be evenly matched, the system prioritizes assigning a cloud computer to each user.</p>
+         * </li>
+         * <li><p>CENTRAL: Prioritizes assigning the specified number of cloud computers to users. When the number of selected cloud computers and users cannot be evenly matched, the system prioritizes assigning the specified number of cloud computers to users.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AVERAGE</p>

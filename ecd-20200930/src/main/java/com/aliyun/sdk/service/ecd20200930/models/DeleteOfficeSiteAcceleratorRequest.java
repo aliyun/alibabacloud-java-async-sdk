@@ -75,6 +75,7 @@ public class DeleteOfficeSiteAcceleratorRequest extends Request {
         } 
 
         /**
+         * <p>The office network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteOfficeSiteAcceleratorRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

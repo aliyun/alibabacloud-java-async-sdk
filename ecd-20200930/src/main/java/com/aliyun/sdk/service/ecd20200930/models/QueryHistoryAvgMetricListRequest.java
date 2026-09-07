@@ -158,7 +158,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         } 
 
         /**
-         * DataDate.
+         * <p>The start date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-01</p>
          */
         public Builder dataDate(String dataDate) {
             this.putQueryParameter("DataDate", dataDate);
@@ -167,7 +170,7 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * <p>The list of desktop IDs. A maximum of 100 IDs are supported.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -176,7 +179,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * <p>The type of monitoring metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOAD_SCORE</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -185,7 +191,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1. The value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -194,7 +203,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +215,7 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * Range.
+         * <p>The list of custom numeric ranges.</p>
          */
         public Builder range(Range range) {
             String rangeShrink = shrink(range, "Range", "json");
@@ -213,7 +225,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * ResourceRegionId.
+         * <p>The region of the desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -222,7 +237,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -329,7 +347,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
             } 
 
             /**
-             * IncludeMax.
+             * <p>Specifies whether to include the maximum value. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder includeMax(Boolean includeMax) {
                 this.includeMax = includeMax;
@@ -337,7 +358,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
             }
 
             /**
-             * IncludeMin.
+             * <p>Specifies whether to include the minimum value. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder includeMin(Boolean includeMin) {
                 this.includeMin = includeMin;
@@ -345,7 +369,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
             }
 
             /**
-             * Label.
+             * <p>The range label, which is used in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>label-02\&quot;</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -353,7 +380,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder max(Float max) {
                 this.max = max;
@@ -361,7 +391,10 @@ public class QueryHistoryAvgMetricListRequest extends Request {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Float min) {
                 this.min = min;

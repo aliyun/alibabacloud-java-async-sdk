@@ -74,6 +74,7 @@ public class DescribeQosRulesRequest extends Request {
         } 
 
         /**
+         * <p>The premium Internet bandwidth ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeQosRulesRequest extends Request {
         }
 
         /**
-         * QosRuleName.
+         * <p>The name of the QoS rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Office network QoS rule</p>
          */
         public Builder qosRuleName(String qosRuleName) {
             this.putQueryParameter("QosRuleName", qosRuleName);

@@ -80,7 +80,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the cloud computer policies.</p>
+         * <p>The details of the cloud desktop policies.</p>
          */
         public Builder describePolicyGroups(java.util.List<DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;
@@ -99,7 +99,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -168,7 +168,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</p>
+             * <p>The client access IP CIDR block, in IPv4 CIDR notation.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -179,10 +179,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the client CIDR block.</p>
+             * <p>The description of the client access IP CIDR block.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Corporate office network segment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +314,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
+             * <p>The object of the security group rule, which is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -328,7 +328,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              * <p>The description of the security group rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Allow access to the internal R&amp;D environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -461,7 +461,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a specific client type can connect to cloud computers.</p>
+             * <p>Indicates whether a specific type of client is allowed to log on to the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -531,7 +531,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The peripheral type.</p>
+             * <p>The peripheral device type.</p>
              * 
              * <strong>example:</strong>
              * <p>camera</p>
@@ -688,7 +688,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID (PID).</p>
+             * <p>The product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>0x55b1</p>
@@ -699,7 +699,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peripheral type.</p>
+             * <p>The peripheral device type.</p>
              * 
              * <strong>example:</strong>
              * <p>storage</p>
@@ -710,7 +710,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0x0781</p>
@@ -732,7 +732,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * Platforms.
+             * <p>The platform types to which the device rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder platforms(String platforms) {
                 this.platforms = platforms;
@@ -824,6 +827,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
             /**
              * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1057,6 +1063,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
             /**
              * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1064,7 +1073,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID (PID).</p>
+             * <p>The product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08**</p>
@@ -1075,7 +1084,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether USB redirection is allowed.</p>
+             * <p>The USB redirection type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1086,7 +1095,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the USB redirection rule.</p>
+             * <p>The USB redirection rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1097,7 +1106,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>04**</p>
@@ -3104,7 +3113,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * AcademicProxy.
+             * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder academicProxy(String academicProxy) {
                 this.academicProxy = academicProxy;
@@ -3112,9 +3128,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the admin permissions are granted to end users.</p>
+             * <p>Indicates whether the user has administrator permissions after connecting to the cloud desktop.</p>
              * <blockquote>
-             * <p> This parameter is in private preview and only available to specific users.</p>
+             * <p>This feature is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3126,7 +3142,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * AdminKeyboardOnFullScreen.
+             * <p>Specifies whether to enable administrator keyboard control in full-screen mode. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder adminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
                 this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
@@ -3134,7 +3157,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * AdminKeyboardOnWindows.
+             * <p>Specifies whether to enable administrator keyboard control within the Windows system. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder adminKeyboardOnWindows(String adminKeyboardOnWindows) {
                 this.adminKeyboardOnWindows = adminKeyboardOnWindows;
@@ -3142,7 +3172,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * AdminMonitor.
+             * <p>Specifies whether to enable administrator monitoring. Valid values:</p>
+             * <ul>
+             * <li>1: Enabled.</li>
+             * <li>0: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder adminMonitor(Integer adminMonitor) {
                 this.adminMonitor = adminMonitor;
@@ -3150,7 +3187,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether anti-screenshot is enabled.</p>
+             * <p>Indicates whether the screenshot prevention feature is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3161,7 +3198,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client IP address whitelists.</p>
+             * <p>The client access IP whitelist.</p>
              */
             public Builder authorizeAccessPolicyRules(java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
                 this.authorizeAccessPolicyRules = authorizeAccessPolicyRules;
@@ -3169,7 +3206,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group rules.</p>
+             * <p>The list of security group rules.</p>
              */
             public Builder authorizeSecurityPolicyRules(java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
@@ -3177,7 +3214,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * AutoReconnect.
+             * <p>Specifies whether to enable automatic reconnection on the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder autoReconnect(String autoReconnect) {
                 this.autoReconnect = autoReconnect;
@@ -3185,7 +3225,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether on-premises webcam redirection is enabled.</p>
+             * <p>Indicates whether local camera redirection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -3196,7 +3236,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientControlMenu.
+             * <p>The client control menu display switch. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder clientControlMenu(String clientControlMenu) {
                 this.clientControlMenu = clientControlMenu;
@@ -3204,7 +3251,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientCreateSnapshot.
+             * <p>Specifies whether to enable the custom snapshot creation feature on the client. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder clientCreateSnapshot(String clientCreateSnapshot) {
                 this.clientCreateSnapshot = clientCreateSnapshot;
@@ -3212,7 +3266,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientHibernate.
+             * <p>Specifies whether to enable the hibernate option in the client menu. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder clientHibernate(String clientHibernate) {
                 this.clientHibernate = clientHibernate;
@@ -3220,7 +3281,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientRestart.
+             * <p>Specifies whether to enable the restart option in the client menu. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder clientRestart(String clientRestart) {
                 this.clientRestart = clientRestart;
@@ -3228,7 +3296,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientShutdown.
+             * <p>Specifies whether to enable the shutdown option in the client menu. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder clientShutdown(String clientShutdown) {
                 this.clientShutdown = clientShutdown;
@@ -3244,7 +3319,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write permissions on the clipboard.</p>
+             * <p>The clipboard permission.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3255,7 +3330,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether color enhancement is enabled for design and 3D applications.</p>
+             * <p>Specifies whether color enhancement is enabled for design and 3D common scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3266,7 +3341,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * CpdDriveClipboard.
+             * <p>The local drive clipboard feature switch. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder cpdDriveClipboard(String cpdDriveClipboard) {
                 this.cpdDriveClipboard = cpdDriveClipboard;
@@ -3274,7 +3356,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</p>
+             * <p>The CPU downgrade duration. Valid values: 30 to 120. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3285,7 +3367,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * CpuOverload.
+             * <p>Specifies whether to enable CPU overload protection. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder cpuOverload(String cpuOverload) {
                 this.cpuOverload = cpuOverload;
@@ -3293,7 +3382,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU processors.</p>
+             * <p>The process name.</p>
              */
             public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
                 this.cpuProcessors = cpuProcessors;
@@ -3301,7 +3390,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU spike protection policy.</p>
+             * <p>The CPU spike protection mode switch.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -3312,7 +3401,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall CPU usage. Valid values: 70 to 90. Unit: percentage (%).</p>
+             * <p>The overall CPU usage percentage. Valid values: 70 to 90.</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -3334,7 +3423,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The single-CPU usage. Valid values: 70 to 100. Unit: %.</p>
+             * <p>The single-core CPU usage percentage. Valid values: 70 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -3345,7 +3434,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cloud computers that are associated with the policy.</p>
+             * <p>The number of cloud desktops associated with the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3356,7 +3445,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cloud computer shares that are associated with the policy.</p>
+             * <p>The number of cloud desktop pools associated with the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3367,7 +3456,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceConnectHint.
+             * <p>The peripheral connection notification control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder deviceConnectHint(String deviceConnectHint) {
                 this.deviceConnectHint = deviceConnectHint;
@@ -3383,7 +3475,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom peripheral rules.</p>
+             * <p>The custom peripheral device rules.</p>
              */
             public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
                 this.deviceRules = deviceRules;
@@ -3391,9 +3483,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the session is retained after disconnection.</p>
+             * <p>Specifies whether to retain the session after disconnection.</p>
              * <blockquote>
-             * <p> This parameter applies only to cloud application policies.</p>
+             * <p>This applies only to cloud application policies.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3405,9 +3497,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the session after disconnection. Unit: seconds.</p>
+             * <p>The session retention duration after disconnection. Unit: seconds.</p>
              * <blockquote>
-             * <p> This parameter applies only to cloud application policies.</p>
+             * <p>This applies only to cloud application policies.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3419,7 +3511,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * DiskOverload.
+             * <p>Specifies whether to enable disk overload protection. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder diskOverload(String diskOverload) {
                 this.diskOverload = diskOverload;
@@ -3438,10 +3537,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field where the domain resolution policy is applied.</p>
+             * <p>The domain name resolution effective field.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx</p>
+             * <p>example.com</p>
              */
             public Builder domainRegisterValue(String domainRegisterValue) {
                 this.domainRegisterValue = domainRegisterValue;
@@ -3449,7 +3548,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain resolution policies.</p>
+             * <p>The details of the domain name resolution policy.</p>
              */
             public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
                 this.domainResolveRule = domainResolveRule;
@@ -3457,7 +3556,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether domain name resolution is allowed.</p>
+             * <p>The domain name resolution policy switch.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -3468,7 +3567,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether end users are allowed to request administrator help.</p>
+             * <p>Indicates whether end users can request administrator assistance.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3479,7 +3578,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserCount.
+             * <p>The number of associated end users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder endUserCount(String endUserCount) {
                 this.endUserCount = endUserCount;
@@ -3487,7 +3589,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether end users in the same office network can share cloud computers.</p>
+             * <p>Indicates whether users within the same office network can share cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3498,7 +3600,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalDrive.
+             * <p>Specifies whether to enable the use of external storage devices. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder externalDrive(String externalDrive) {
                 this.externalDrive = externalDrive;
@@ -3506,7 +3615,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileMigrate.
+             * <p>The file migration setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder fileMigrate(String fileMigrate) {
                 this.fileMigrate = fileMigrate;
@@ -3514,7 +3626,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferAddress.
+             * <p>The service address for the file transfer feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filetransfer.example.com</p>
              */
             public Builder fileTransferAddress(String fileTransferAddress) {
                 this.fileTransferAddress = fileTransferAddress;
@@ -3522,7 +3637,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferInSize.
+             * <p>The file size limit for a single transfer to the cloud desktop. This parameter must be used together with the inbound unit parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder fileTransferInSize(String fileTransferInSize) {
                 this.fileTransferInSize = fileTransferInSize;
@@ -3530,7 +3648,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferInUnit.
+             * <p>The unit for the file size limit of a single transfer to the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder fileTransferInUnit(String fileTransferInUnit) {
                 this.fileTransferInUnit = fileTransferInUnit;
@@ -3538,7 +3659,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferOutSize.
+             * <p>The file size limit for a single transfer from the cloud desktop. This parameter must be used together with the outbound unit parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder fileTransferOutSize(String fileTransferOutSize) {
                 this.fileTransferOutSize = fileTransferOutSize;
@@ -3546,7 +3670,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferOutUnit.
+             * <p>The unit for the file size limit of a single transfer from the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder fileTransferOutUnit(String fileTransferOutUnit) {
                 this.fileTransferOutUnit = fileTransferOutUnit;
@@ -3554,7 +3681,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferSizeLimit.
+             * <p>Specifies whether to enable the file transfer size limit. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder fileTransferSizeLimit(String fileTransferSizeLimit) {
                 this.fileTransferSizeLimit = fileTransferSizeLimit;
@@ -3562,7 +3696,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferSpeed.
+             * <p>The file transfer speed level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder fileTransferSpeed(String fileTransferSpeed) {
                 this.fileTransferSpeed = fileTransferSpeed;
@@ -3570,7 +3707,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * FileTransferSpeedLocation.
+             * <p>The location where the file transfer speed configured on the client takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client</p>
              */
             public Builder fileTransferSpeedLocation(String fileTransferSpeedLocation) {
                 this.fileTransferSpeedLocation = fileTransferSpeedLocation;
@@ -3578,7 +3718,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether image quality control is enabled. For optimal computer performance and user experience in professional design scenarios, we recommend enabling this feature.</p>
+             * <p>Indicates whether the image quality policy is enabled for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3589,7 +3729,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * HoverConfigMsg.
+             * <p>Specifies whether to enable the configuration message notification on the floating ball. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder hoverConfigMsg(String hoverConfigMsg) {
                 this.hoverConfigMsg = hoverConfigMsg;
@@ -3597,7 +3744,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * HoverHibernate.
+             * <p>Specifies whether to enable the hibernate button on the floating ball. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder hoverHibernate(String hoverHibernate) {
                 this.hoverHibernate = hoverHibernate;
@@ -3605,7 +3759,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * HoverRestart.
+             * <p>Specifies whether to enable the restart button on the floating ball. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder hoverRestart(String hoverRestart) {
                 this.hoverRestart = hoverRestart;
@@ -3613,7 +3774,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * HoverShutdown.
+             * <p>Specifies whether to enable the shutdown button on the floating ball. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder hoverShutdown(String hoverShutdown) {
                 this.hoverShutdown = hoverShutdown;
@@ -3632,7 +3800,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file transfer feature on the web client.</p>
+             * <p>The web client file transfer policy.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3654,7 +3822,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetPrinter.
+             * <p>The network printer feature switch. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder internetPrinter(String internetPrinter) {
                 this.internetPrinter = internetPrinter;
@@ -3662,7 +3837,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * KeyboardControl.
+             * <p>Specifies whether to enable keyboard control on the floating ball. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder keyboardControl(String keyboardControl) {
                 this.keyboardControl = keyboardControl;
@@ -3670,7 +3852,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * KmsServer.
+             * <p>Specifies whether to enable the KMS server. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder kmsServer(String kmsServer) {
                 this.kmsServer = kmsServer;
@@ -3678,7 +3867,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * KmsServerConfig.
+             * <p>The KMS server configuration in the format of address:port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kms.example.com:1688</p>
              */
             public Builder kmsServerConfig(String kmsServerConfig) {
                 this.kmsServerConfig = kmsServerConfig;
@@ -3686,7 +3878,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write permissions on the on-premises drive.</p>
+             * <p>The local disk mapping permission.</p>
              * 
              * <strong>example:</strong>
              * <p>readwrite</p>
@@ -3697,7 +3889,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration to retry reconnecting to cloud computers after an unexpected disconnection (non-human causes). Valid values: 30 to 7200. Unit: seconds.</p>
+             * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -3708,7 +3900,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory underclocking duration per process. Valid values: 30 to 120. Unit: seconds.</p>
+             * <p>The memory downgrade duration of a single process. Valid values: 30 to 120. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3719,7 +3911,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryOverload.
+             * <p>Specifies whether to enable memory overload protection. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder memoryOverload(String memoryOverload) {
                 this.memoryOverload = memoryOverload;
@@ -3727,7 +3926,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory processors.</p>
+             * <p>The process name.</p>
              */
             public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
                 this.memoryProcessors = memoryProcessors;
@@ -3735,7 +3934,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory spike protection policy.</p>
+             * <p>The memory protection mode switch.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -3746,7 +3945,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall memory usage. Valid values: 70 to 90. Unit: %.</p>
+             * <p>The overall memory usage percentage. Valid values: 70 to 90.</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -3768,7 +3967,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory usage per process. Valid values: 30 to 60. Unit: %.</p>
+             * <p>The memory usage percentage of a single process. Valid values: 30 to 60.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -3779,9 +3978,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Restart button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
+             * <p>Specifies whether the restart button is provided in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
              * <blockquote>
-             * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
+             * <p>This applies only to mobile clients of V7.4 or later.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3793,7 +3992,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * MobileSafeMenu.
+             * <p>Specifies whether to enable the Windows security control on mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder mobileSafeMenu(String mobileSafeMenu) {
                 this.mobileSafeMenu = mobileSafeMenu;
@@ -3801,9 +4003,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
+             * <p>Specifies whether the shutdown button is provided in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
              * <blockquote>
-             * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
+             * <p>This applies only to mobile clients of V7.4 or later.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3815,7 +4017,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * MobileWuyingKeeper.
+             * <p>Specifies whether to enable WUYING Keeper on mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder mobileWuyingKeeper(String mobileWuyingKeeper) {
                 this.mobileWuyingKeeper = mobileWuyingKeeper;
@@ -3823,7 +4028,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * MobileWyAssistant.
+             * <p>Specifies whether to enable the WUYING Assistant on mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder mobileWyAssistant(String mobileWyAssistant) {
                 this.mobileWyAssistant = mobileWyAssistant;
@@ -3831,7 +4039,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ModelLibrary.
+             * <p>Specifies whether to enable the model library feature. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder modelLibrary(String modelLibrary) {
                 this.modelLibrary = modelLibrary;
@@ -3839,7 +4054,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * MultiScreen.
+             * <p>Specifies whether to enable the multi-screen display feature. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder multiScreen(String multiScreen) {
                 this.multiScreen = multiScreen;
@@ -3858,9 +4080,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network redirection policy.</p>
+             * <p>The network redirection setting.</p>
              * <blockquote>
-             * <p> This parameter is in private preview and only available to specific users.</p>
+             * <p>This feature is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3872,9 +4094,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network redirection policies.</p>
+             * <p>The details of the network redirection policy.</p>
              * <blockquote>
-             * <p> This parameter is in private preview and only available to specific users.</p>
+             * <p>This feature is in invitational preview and is not publicly available.</p>
              * </blockquote>
              */
             public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
@@ -3883,7 +4105,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkPrinter.
+             * <p>The network printer feature switch. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder networkPrinter(String networkPrinter) {
                 this.networkPrinter = networkPrinter;
@@ -3891,9 +4120,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a disconnection is enforced upon inactivity.</p>
+             * <p>Specifies whether to disconnect the session when no operation is performed.</p>
              * <blockquote>
-             * <p> This parameter applies only to cloud application policies.</p>
+             * <p>This applies only to cloud application policies.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3905,9 +4134,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of disconnection after inactivity. Unit: seconds.</p>
+             * <p>The idle disconnection duration. Unit: seconds.</p>
              * <blockquote>
-             * <p> This parameter applies only to cloud application policies.</p>
+             * <p>This applies only to cloud application policies.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3919,7 +4148,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationCount.
+             * <p>The number of associated organizations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder organizationCount(String organizationCount) {
                 this.organizationCount = organizationCount;
@@ -3938,7 +4170,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy.</p>
+             * <p>The policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -3949,7 +4181,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud computer policy.</p>
+             * <p>The status of the cloud desktop policy.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -3960,7 +4192,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PortProxy.
+             * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder portProxy(String portProxy) {
                 this.portProxy = portProxy;
@@ -3968,7 +4207,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterAlert.
+             * <p>The printer alert dialog setting. Valid values:</p>
+             * <ul>
+             * <li>default: Default.</li>
+             * <li>off: Disabled.</li>
+             * <li>custom: Custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder printerAlert(String printerAlert) {
                 this.printerAlert = printerAlert;
@@ -3976,7 +4223,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterAlertContent.
+             * <p>The content of the printer alert dialog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Print Content.</p>
              */
             public Builder printerAlertContent(String printerAlertContent) {
                 this.printerAlertContent = printerAlertContent;
@@ -3984,7 +4234,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterAlertTitle.
+             * <p>The title of the printer alert dialog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Print Title</p>
              */
             public Builder printerAlertTitle(String printerAlertTitle) {
                 this.printerAlertTitle = printerAlertTitle;
@@ -4003,7 +4256,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether image quality enhancement is enabled for design and 3D applications.</p>
+             * <p>Specifies whether image quality enhancement is enabled for design and 3D common scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4025,7 +4278,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which custom screen recordings are kept before they expire. Default value: 30 days.</p>
+             * <p>The expiration period of custom screen recording files. Default value: 30. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -4036,7 +4289,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of screen recording after the specified event is detected. Unit: minutes. Valid values: 10 to 60.</p>
+             * <p>The screen recording duration after an event is detected in screen recording audit. Unit: minutes. Valid values: 10 to 60.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4047,7 +4300,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute paths to screen recording files.</p>
+             * <p>The absolute paths for file monitoring in screen recording audit.</p>
              */
             public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
                 this.recordEventFilePaths = recordEventFilePaths;
@@ -4055,7 +4308,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute paths to screen recording registries.</p>
+             * <p>The absolute paths for registry monitoring in screen recording audit.</p>
              */
             public Builder recordEventRegisters(java.util.List<String> recordEventRegisters) {
                 this.recordEventRegisters = recordEventRegisters;
@@ -4074,7 +4327,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether audio files generated on cloud computers are recorded.</p>
+             * <p>The option for recording cloud desktop audio.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4085,7 +4338,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the screen recording file. Unit: minutes. Screen recording files are split by the specified length and uploaded to OSS buckets. Once a file reaches 300 MB, the system prioritizes rolling updates for that file.</p>
+             * <p>The duration of screen recording files, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4096,7 +4349,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of screen recording. The value is in the HH:MM:SS format. The value is meaningful only when you set Recording to period.</p>
+             * <p>The end time of screen recording, in the format of HH:MM:SS. This response value is meaningful only when Recording is set to period.</p>
              * 
              * <strong>example:</strong>
              * <p>08:59:00</p>
@@ -4107,7 +4360,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</p>
+             * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -4118,7 +4371,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frame rate of screen recording. Unit: fps.</p>
+             * <p>The frame rate of screen recording. Unit: FPS (frames per second).</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -4129,7 +4382,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of screen recording. The value is in the HH:MM:SS format. The value is meaningful only when you set Recording to period.</p>
+             * <p>The start time of screen recording, in the format of HH:MM:SS. This response value is meaningful only when Recording is set to period.</p>
              * 
              * <strong>example:</strong>
              * <p>08:00:00</p>
@@ -4140,7 +4393,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to notify end users when screen recording is enabled.</p>
+             * <p>Indicates whether end users are notified that screen recording is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4151,7 +4404,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification sent to end users when screen recording is enabled.</p>
+             * <p>The notification message displayed to end users when screen recording is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Screen recording is enabled</p>
              */
             public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
                 this.recordingUserNotifyMessage = recordingUserNotifyMessage;
@@ -4159,7 +4415,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyboard and mouse control permissions during remote assistance.</p>
+             * <p>The keyboard and mouse control permission for remote assistance.</p>
              * 
              * <strong>example:</strong>
              * <p>fullControl</p>
@@ -4170,7 +4426,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ResetDesktop.
+             * <p>The setting for resetting the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder resetDesktop(String resetDesktop) {
                 this.resetDesktop = resetDesktop;
@@ -4178,7 +4437,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionDpi.
+             * <p>The DPI value of the screen resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder resolutionDpi(Integer resolutionDpi) {
                 this.resolutionDpi = resolutionDpi;
@@ -4186,7 +4448,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the resolution. Unit: pixel.</p>
+             * <p>The resolution height. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>
@@ -4208,7 +4470,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the resolution. Unit: pixel.</p>
+             * <p>The resolution width. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1920</p>
@@ -4219,7 +4481,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resource groups that are associated with the policy.</p>
+             * <p>The number of resource groups associated with the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -4230,7 +4492,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * SafeMenu.
+             * <p>The security center shortcut key switch. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder safeMenu(String safeMenu) {
                 this.safeMenu = safeMenu;
@@ -4238,7 +4507,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective scope of the policy.</p>
+             * <p>The scope of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>GLOBAL</p>
@@ -4249,7 +4518,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective scopes specified by CIDR blocks.</p>
+             * <p>The CIDR block that the policy applies to.</p>
              */
             public Builder scopeValue(java.util.List<String> scopeValue) {
                 this.scopeValue = scopeValue;
@@ -4257,7 +4526,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ScreenDisplayMode.
+             * <p>The screen display mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder screenDisplayMode(String screenDisplayMode) {
                 this.screenDisplayMode = screenDisplayMode;
@@ -4265,7 +4537,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether smoothness enhancement is enabled for daily office use.</p>
+             * <p>Specifies whether smoothness enhancement is enabled for daily office scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4276,7 +4548,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the metric status entry is displayed in the DesktopAssistant menu.</p>
+             * <p>Specifies whether the status monitoring entry is provided in the cloud desktop floating ball.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4287,7 +4559,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The streaming mode.</p>
+             * <p>The streaming mode adaptation scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>smooth</p>
@@ -4298,7 +4570,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target frame rate. Valid values: 10 to 60. Unit: fps.</p>
+             * <p>The target frame rate. Valid values: 10 to 60.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -4309,9 +4581,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application taskbar is displayed.</p>
+             * <p>The application taskbar.</p>
              * <blockquote>
-             * <p> This parameter applies only to cloud application policies.</p>
+             * <p>This applies only to cloud application policies.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -4323,7 +4595,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * ThreeScreen.
+             * <p>Specifies whether to enable the three-screen feature. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder threeScreen(String threeScreen) {
                 this.threeScreen = threeScreen;
@@ -4331,7 +4610,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The USB redirection policy.</p>
+             * <p>The USB redirection setting.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4350,7 +4629,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * UseTime.
+             * <p>Specifies whether to display the usage duration on the floating ball. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder useTime(String useTime) {
                 this.useTime = useTime;
@@ -4358,7 +4644,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
+             * <p>The average bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -4369,7 +4655,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum QP for video files. Higher QP values result in lower video quality. Valid values: 0 to 51.</p>
+             * <p>The maximum QP for video encoding, which represents the lowest quality. Valid values: 0 to 51.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -4380,7 +4666,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum quantizer parameter (QP) for video files. A lower QP means better video quality. Valid values: 0 to 51.</p>
+             * <p>The minimum QP for video encoding, which represents the highest quality. Valid values: 0 to 51.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -4391,7 +4677,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
+             * <p>The peak bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -4413,7 +4699,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether multimedia redirection is enabled.</p>
+             * <p>The multimedia redirection setting.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4424,7 +4710,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image quality policy.</p>
+             * <p>The image display quality policy.</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>
@@ -4435,7 +4721,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark policy.</p>
+             * <p>The watermark setting.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4446,7 +4732,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether anti-screen capture is enabled for invisible watermarks.</p>
+             * <p>The invisible watermark anti-camera capture feature.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -4457,7 +4743,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+             * <p>The watermark font color. Valid values: 0 to 16777215.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -4468,7 +4754,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If you set <code>WatermarkType</code> to <code>custom</code>, you must also specify <code>WatermarkCustomText</code>.</p>
+             * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>custom-watermark</p>
@@ -4479,7 +4765,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark rotation. Valid values: -10 to -30.</p>
+             * <p>The watermark tilt angle. Valid values: -10 to -30.</p>
              * 
              * <strong>example:</strong>
              * <p>-10</p>
@@ -4490,7 +4776,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+             * <p>The watermark font size. Valid values: 10 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4501,7 +4787,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The font style of the watermark.</p>
+             * <p>The watermark font style.</p>
              * 
              * <strong>example:</strong>
              * <p>plain</p>
@@ -4512,7 +4798,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enhancement level for invisible watermarks.</p>
+             * <p>The invisible watermark enhancement feature.</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>
@@ -4534,7 +4820,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether security priority is enabled for invisible watermarks.</p>
+             * <p>The invisible watermark security-first rule.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -4545,7 +4831,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkShadow.
+             * <p>Specifies whether to enable the watermark shadow effect. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder watermarkShadow(String watermarkShadow) {
                 this.watermarkShadow = watermarkShadow;
@@ -4553,7 +4846,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The watermark transparency. A higher value means the watermark is less transparent. Valid values: 10 to 100.</p>
+             * <p>The watermark transparency. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -4575,7 +4868,10 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingKeeper.
+             * <p>Specifies whether to enable WUYING Keeper.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder wuyingKeeper(String wuyingKeeper) {
                 this.wuyingKeeper = wuyingKeeper;
@@ -4583,7 +4879,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Xiaoying AI Assistant entry is displayed in the DesktopAssistant menu.</p>
+             * <p>Specifies whether the WUYING AI Assistant entry is provided in the cloud desktop floating ball.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

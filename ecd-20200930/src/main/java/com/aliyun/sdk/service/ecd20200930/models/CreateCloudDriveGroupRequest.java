@@ -119,7 +119,7 @@ public class CreateCloudDriveGroupRequest extends Request {
         } 
 
         /**
-         * AdminUserIds.
+         * <p>List of user IDs to be set as team space administrators.</p>
          */
         public Builder adminUserIds(java.util.List<String> adminUserIds) {
             this.putQueryParameter("AdminUserIds", adminUserIds);

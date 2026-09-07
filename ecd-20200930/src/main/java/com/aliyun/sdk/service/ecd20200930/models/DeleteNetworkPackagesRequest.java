@@ -89,7 +89,7 @@ public class DeleteNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of premium bandwidth plans. You can specify one or more IDs.</p>
+         * <p>The IDs of the premium Internet bandwidth plans. You can specify one or more IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder networkPackageId(java.util.List<String> networkPackageId) {
@@ -99,7 +99,7 @@ public class DeleteNetworkPackagesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +112,10 @@ public class DeleteNetworkPackagesRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);

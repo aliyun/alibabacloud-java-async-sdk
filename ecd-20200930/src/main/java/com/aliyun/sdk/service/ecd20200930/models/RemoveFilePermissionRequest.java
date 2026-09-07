@@ -133,7 +133,7 @@ public class RemoveFilePermissionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the enterprise drive.</p>
+         * <p>The enterprise cloud disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,10 +146,10 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>user01</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -158,7 +158,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</p>
+         * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the team space.</p>
+         * <p>The team space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-1fbmvrc7ug5m7****</p>
@@ -183,7 +183,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * <p>The users that you want to authorize to use the cloud disk.</p>
+         * <p>The list of authorized users.</p>
          * <p>This parameter is required.</p>
          */
         public Builder memberList(java.util.List<MemberList> memberList) {
@@ -194,7 +194,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,11 +281,6 @@ public class RemoveFilePermissionRequest extends Request {
 
             /**
              * <p>The object type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>IT_Group: group.</li>
-             * <li>IT_User: user.</li>
-             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,23 +362,7 @@ public class RemoveFilePermissionRequest extends Request {
             }
 
             /**
-             * <p>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <code>ActionList</code>.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>SystemFileEditorWithoutShareLink: the role that has the permissions to edit files but cannot share files.</li>
-             * <li>SystemFileUploaderAndDownloaderWithShareLink: the role that has the permissions to upload, download, and share files.</li>
-             * <li>SystemFileDownloader: the role that has the permissions to download files.</li>
-             * <li>SystemFileEditorWithoutDelete: the role that has the permissions to edit files but cannot delete files.</li>
-             * <li>SystemFileOwner: the role that has the permissions to collaborate with others.</li>
-             * <li>SystemFileDownloaderWithShareLink: the role that has the permissions to download and share files</li>
-             * <li>SystemFileUploaderAndViewer: the role that has the permissions to preview or upload files.</li>
-             * <li>SystemFileViewer: the role that has the permissions to preview files.</li>
-             * <li>SystemFileEditor: the role that has the permissions to edit files</li>
-             * <li>SystemFileUploaderWithShareLink: the role that has the permissions to upload or share files.</li>
-             * <li>SystemFileUploader: the role that has the permission to upload files.</li>
-             * <li>SystemFileUploaderAndDownloader: the role that has the permissions to upload or download files.</li>
-             * <li>SystemFileMetaViewer: the role that has the permissions to view files</li>
-             * </ul>
+             * <p>Two methods are supported for setting permissions: specifying a role or customizing operation permissions. This parameter specifies the role-based permission and is mutually exclusive with <code>ActionList</code>. If both parameters are specified, this parameter takes precedence.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

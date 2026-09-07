@@ -144,7 +144,7 @@ public class ModifyQosEntriesRequest extends Request {
         } 
 
         /**
-         * AuthAndroidId.
+         * <p>The list of cloud phone IDs to associate.</p>
          */
         public Builder authAndroidId(java.util.List<String> authAndroidId) {
             this.putQueryParameter("AuthAndroidId", authAndroidId);
@@ -153,7 +153,7 @@ public class ModifyQosEntriesRequest extends Request {
         }
 
         /**
-         * AuthDesktopGroupId.
+         * <p>The ID of the cloud desktop pool to authorize.</p>
          */
         public Builder authDesktopGroupId(java.util.List<String> authDesktopGroupId) {
             this.putQueryParameter("AuthDesktopGroupId", authDesktopGroupId);
@@ -162,7 +162,7 @@ public class ModifyQosEntriesRequest extends Request {
         }
 
         /**
-         * AuthDesktopId.
+         * <p>The list of cloud desktop IDs to associate.</p>
          */
         public Builder authDesktopId(java.util.List<String> authDesktopId) {
             this.putQueryParameter("AuthDesktopId", authDesktopId);
@@ -171,6 +171,7 @@ public class ModifyQosEntriesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the public network rate limiting rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +184,7 @@ public class ModifyQosEntriesRequest extends Request {
         }
 
         /**
-         * RevokeAndroidId.
+         * <p>The list of cloud phone IDs to disassociate.</p>
          */
         public Builder revokeAndroidId(java.util.List<String> revokeAndroidId) {
             this.putQueryParameter("RevokeAndroidId", revokeAndroidId);
@@ -192,7 +193,7 @@ public class ModifyQosEntriesRequest extends Request {
         }
 
         /**
-         * RevokeDesktopGroupId.
+         * <p>The ID of the cloud desktop pool to revoke authorization from.</p>
          */
         public Builder revokeDesktopGroupId(java.util.List<String> revokeDesktopGroupId) {
             this.putQueryParameter("RevokeDesktopGroupId", revokeDesktopGroupId);
@@ -201,7 +202,7 @@ public class ModifyQosEntriesRequest extends Request {
         }
 
         /**
-         * RevokeDesktopId.
+         * <p>The list of cloud desktop IDs to disassociate.</p>
          */
         public Builder revokeDesktopId(java.util.List<String> revokeDesktopId) {
             this.putQueryParameter("RevokeDesktopId", revokeDesktopId);

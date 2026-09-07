@@ -175,23 +175,7 @@ public class CopyCdsFileRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to automatically rename the file if a file that has the same name exists in the folder to which you want to copy the file. Default value: false.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to automatically rename the file when a file with the same name already exists in the destination folder.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +187,7 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud disk.</p>
+         * <p>The enterprise cloud drive ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +200,7 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The user ID that you want to use to access the cloud disk.</p>
+         * <p>The ID of the user who is logged on to the cloud drive.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>
@@ -228,7 +212,7 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The file ID. You can call the CreateCdsFile operation to query the file ID.</p>
+         * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,9 +225,9 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>目标复制文件所在的个人空间ID（即UserId，您可以在DescribeCloudDriveUsers接口返回的报文中获取。）或者目标复制文件所在的团队空间ID（即GroupId，您可以在DescribeCloudDriveGroups接口返回的报文中获取。）</p>
+         * <p>The ID of the personal drive (which can be obtained from the UserId response parameter of the <a href="https://help.aliyun.com/document_detail/2357237.html">DescribeCloudDriveUsers</a> operation) or the team space ID (which can be obtained from the GroupId response parameter of the <a href="https://help.aliyun.com/document_detail/609896.html">DescribeCloudDriveGroups</a> operation) at the destination.</p>
          * <blockquote>
-         * <p>FileReceiverId和FileReceiverType都为空时，默认复制到文件所在的个人空间。</p>
+         * <p>If both FileReceiverId and FileReceiverType are empty, the file is copied to the personal drive where the file currently resides by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,7 +240,7 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>文件所属的空间类型。</p>
+         * <p>The type of the space to which the file belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -268,7 +252,10 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The team space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-hs3i1w39o68ma****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -277,7 +264,7 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent folder of the folder to which you want to copy the file. If you want to copy the file to the root directory, set this parameter to root.</p>
+         * <p>The ID of the parent folder at the destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the folder. Set this parameter to <code>root</code> if you want to copy the file or folder to the root directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +277,7 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

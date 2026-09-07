@@ -106,7 +106,7 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the stream collaboration.</p>
+         * <p>The coordination flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>co-0sot77uale3****</p>
@@ -128,7 +128,7 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cloud computer connection task.</p>
+         * <p>The cloud computer connection task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</p>
@@ -140,29 +140,6 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
 
         /**
          * <p>The task status.</p>
-         * <p>Possible values:</p>
-         * <ul>
-         * <li><p>Finished</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Failed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Running</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -173,7 +150,7 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credentials of the stream collaboration.</p>
+         * <p>The coordination flow ticket.</p>
          * 
          * <strong>example:</strong>
          * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

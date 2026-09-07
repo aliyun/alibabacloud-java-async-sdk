@@ -80,7 +80,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud computer templates.</p>
+         * <p>The list of cloud computer templates.</p>
          */
         public Builder bundles(java.util.List<Bundles> bundles) {
             this.bundles = bundles;
@@ -88,7 +88,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</p>
@@ -99,7 +99,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BCC854D8-5D1E-46D3-96EF-797A5DD36789</p>
@@ -230,7 +230,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
              * <p>The memory size. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
-             * <p>47104</p>
+             * <p>4096</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -310,37 +310,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The PL of the disk.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>PL1</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>PL0</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>PL3</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>PL2</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The disk performance level.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -351,7 +321,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -362,23 +332,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>SYSTEM: system disk</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>DATA: data disk</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -708,7 +662,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud computer template.</p>
+             * <p>The cloud computer template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
@@ -730,23 +684,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud computer template.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>SYSTEM: system template</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CUSTOM: custom template</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The cloud computer templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -757,7 +695,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud computer template was created.</p>
+             * <p>The time when the cloud computer template was created. The time is in the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-09-30T06:09Z</p>
@@ -768,13 +706,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the data disk.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>cloud_efficiency: the ultra disk</li>
-             * <li>cloud_auto: the standard SSD.</li>
-             * <li>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</li>
-             * </ul>
+             * <p>The data cloud disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_efficiency</p>
@@ -788,7 +720,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
              * <p>The description of the cloud computer template.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Template for daily office use</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -796,7 +728,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the cloud computer.</p>
+             * <p>The cloud computer specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd.graphics.2xlarge</p>
@@ -807,7 +739,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the cloud computer instance type.</p>
+             * <p>The details of the cloud computer specifications.</p>
              */
             public Builder desktopTypeAttribute(DesktopTypeAttribute desktopTypeAttribute) {
                 this.desktopTypeAttribute = desktopTypeAttribute;
@@ -815,13 +747,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family of the cloud computer.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>eds.graphics: graphical instance family</li>
-             * <li>eds.hf: instance family with a high clock speed</li>
-             * <li>eds.general: general-purpose instance family</li>
-             * </ul>
+             * <p>The cloud computer instance family.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.general</p>
@@ -832,7 +758,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the disks.</p>
+             * <p>The disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -862,7 +788,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image.</p>
+             * <p>The image status.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -873,14 +799,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS language of the image.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>en-US: English</li>
-             * <li>zh-HK: Chinese, Traditional (Hong Kong, China)</li>
-             * <li>zh-CN: Simplified Chinese</li>
-             * <li>ja-JP: Japanese</li>
-             * </ul>
+             * <p>The language of the image operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>en-US</p>
@@ -891,23 +810,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the OS.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Linux</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -918,51 +821,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Ubuntu</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows Server 2022</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>UOS</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CentOS</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows Server 2019</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows Server 2016</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The operating system platform information.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows Server 2019</p>
@@ -974,11 +833,6 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>HDX: HDX protocol</li>
-             * <li>ASP: in-house ASP</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -990,11 +844,6 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
             /**
              * <p>The session type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>0: single-session</li>
-             * <li>1: multi-session</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1005,7 +854,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inventory status of the cloud computer instance type. This parameter is returned only if you set the <code>CheckStock</code> parameter to <code>true</code>.</p>
+             * <p>The stock status. This parameter is returned when <code>CheckStock</code> is set to <code>True</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Sufficient</p>
@@ -1016,13 +865,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the system disk.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>cloud_efficiency: the ultra disk</li>
-             * <li>cloud_auto: the standard SSD.</li>
-             * <li>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</li>
-             * </ul>
+             * <p>The system cloud disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_efficiency</p>
@@ -1033,7 +876,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether disk encryption is enabled.</p>
+             * <p>Specifies whether to enable disk encryption.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1044,7 +887,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</p>
+             * <p>The ID of the KMS key used when disk encryption is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>

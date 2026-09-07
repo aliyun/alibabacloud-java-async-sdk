@@ -80,7 +80,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL23as</p>
@@ -102,7 +102,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the virtual MFA devices.</p>
+         * <p>The information about virtual MFA devices.</p>
          */
         public Builder virtualMFADevices(java.util.List<VirtualMFADevices> virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -194,7 +194,10 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the AD account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aduser</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +205,10 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameNew.
+             * <p>The new display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder displayNameNew(String displayNameNew) {
                 this.displayNameNew = displayNameNew;
@@ -210,7 +216,10 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * EndUser.
+             * <p>The username of the AD account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aduser</p>
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;
@@ -218,7 +227,10 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The user principal name (UPN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -376,7 +388,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * AdUser.
+             * <p>The AD domain user information.</p>
              */
             public Builder adUser(AdUser adUser) {
                 this.adUser = adUser;
@@ -384,7 +396,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</p>
+             * <p>The number of consecutive failures to bind or authenticate the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -408,7 +420,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the AD user who uses the virtual MFA device.</p>
+             * <p>The username of the AD account that uses the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>usertest</p>
@@ -419,7 +431,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the virtual MFA device was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the virtual MFA device was enabled. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T14:52:28Z</p>
@@ -430,7 +442,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when a locked virtual MFA device was automatically unlocked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The automatic unlock time after the virtual MFA device is locked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-21T15:21:28Z</p>
@@ -441,7 +453,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-269345****</p>
@@ -452,7 +464,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
+             * <p>The serial number of the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>a25f297f-f2e1-4a44-bbf1-5f48a6e5****</p>
@@ -464,29 +476,6 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
 
             /**
              * <p>The status of the virtual MFA device.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>LOCKED</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>UNBOUND</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>NORMAL</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>

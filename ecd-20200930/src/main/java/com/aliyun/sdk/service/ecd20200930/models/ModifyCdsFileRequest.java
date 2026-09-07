@@ -147,11 +147,11 @@ public class ModifyCdsFileRequest extends Request {
         } 
 
         /**
-         * <p>The enterprise drive ID.</p>
+         * <p>The enterprise cloud disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou+cds-64326*****</p>
+         * <p>cn-hangzhou+cds-643267****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -160,14 +160,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The processing policy when a file with the same name appears.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>refuse: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</li>
-         * <li>auto_rename: automatically renames a file if the file has the same name as an existing file in the cloud. By default, the current point in time is appended to the end of the original file name. Example: xxx20240102_150405.</li>
-         * <li>ignore: allows the file to be with the same name.</li>
-         * <li>over_write: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</li>
-         * </ul>
+         * <p>The conflict resolution policy when a file with the same name exists.</p>
          * 
          * <strong>example:</strong>
          * <p>ignore</p>
@@ -179,7 +172,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user who uses the network disk.</p>
+         * <p>The ID of the user who uses the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>
@@ -191,7 +184,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</p>
+         * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,11 +197,11 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test.txt</p>
+         * <p>NewFileName.txt</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -217,7 +210,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the team space.</p>
+         * <p>The team space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-i1ruuudp92qpj****</p>
@@ -229,7 +222,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

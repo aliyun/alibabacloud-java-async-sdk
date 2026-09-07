@@ -67,7 +67,7 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Bridge.
+         * <p>The virtual bridge information.</p>
          */
         public Builder bridge(Bridge bridge) {
             this.bridge = bridge;
@@ -75,7 +75,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -297,7 +300,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessType.
+             * <p>The access type of the management page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -305,7 +311,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeId.
+             * <p>The virtual bridge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vb-sofiahfish***</p>
              */
             public Builder bridgeId(String bridgeId) {
                 this.bridgeId = bridgeId;
@@ -313,7 +322,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeLevel.
+             * <p>The virtual bridge specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vb.pro</p>
              */
             public Builder bridgeLevel(String bridgeLevel) {
                 this.bridgeLevel = bridgeLevel;
@@ -321,7 +333,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeStatus.
+             * <p>The virtual bridge status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inuse</p>
              */
             public Builder bridgeStatus(String bridgeStatus) {
                 this.bridgeStatus = bridgeStatus;
@@ -329,7 +344,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BridgeType.
+             * <p>The third-party plugin type of the virtual bridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unsr</p>
              */
             public Builder bridgeType(String bridgeType) {
                 this.bridgeType = bridgeType;
@@ -337,7 +355,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultPassword.
+             * <p>The default password for the administrator page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder defaultPassword(String defaultPassword) {
                 this.defaultPassword = defaultPassword;
@@ -345,7 +366,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultUser.
+             * <p>The default account for the administrator page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder defaultUser(String defaultUser) {
                 this.defaultUser = defaultUser;
@@ -353,7 +377,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeployTime.
+             * <p>The deployment time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-07T02:02:00Z</p>
              */
             public Builder deployTime(String deployTime) {
                 this.deployTime = deployTime;
@@ -361,7 +388,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-18T00:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -369,7 +399,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InternetUrl.
+             * <p>The public network address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://8.*.*.*:8080">http://8.*.*.*:8080</a></p>
              */
             public Builder internetUrl(String internetUrl) {
                 this.internetUrl = internetUrl;
@@ -377,7 +410,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetUrl.
+             * <p>The internal network address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://10.0.0.0:8080">http://10.0.0.0:8080</a></p>
              */
             public Builder intranetUrl(String intranetUrl) {
                 this.intranetUrl = intranetUrl;
@@ -385,7 +421,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The ID of the locked convenience office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing+dir-0211574032</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -393,7 +432,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The office network name. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P0801-1</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -401,7 +443,10 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-07T02:02:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

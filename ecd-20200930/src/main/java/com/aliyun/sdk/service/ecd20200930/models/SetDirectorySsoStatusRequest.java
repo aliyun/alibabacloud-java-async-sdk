@@ -90,7 +90,7 @@ public class SetDirectorySsoStatusRequest extends Request {
         } 
 
         /**
-         * <p>The AD directory ID.</p>
+         * <p>The ID of the AD office network.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,11 +103,7 @@ public class SetDirectorySsoStatusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable SSO. Valid values:</p>
-         * <ul>
-         * <li>true: enables SSO.</li>
-         * <li>false: disables SSO.</li>
-         * </ul>
+         * <p>Specifies whether to enable or shutdown SSO logon.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +116,7 @@ public class SetDirectorySsoStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

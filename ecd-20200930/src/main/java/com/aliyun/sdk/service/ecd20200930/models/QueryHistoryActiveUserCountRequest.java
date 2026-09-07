@@ -59,7 +59,10 @@ public class QueryHistoryActiveUserCountRequest extends Request {
         } 
 
         /**
-         * DataDate.
+         * <p>The statistical date. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dataDate(String dataDate) {
             this.putQueryParameter("DataDate", dataDate);

@@ -80,7 +80,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The premium bandwidth plans.</p>
+         * <p>The list of premium Internet bandwidth plans.</p>
          */
         public Builder networkPackages(java.util.List<NetworkPackages> networkPackages) {
             this.networkPackages = networkPackages;
@@ -88,7 +88,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more pages exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -99,7 +99,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -168,7 +168,10 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -176,7 +179,10 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -425,7 +431,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+             * <p>The bandwidth of the premium Internet bandwidth plan. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -437,22 +443,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
             /**
              * <p>The business status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Expired</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Normal</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -463,7 +453,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the premium bandwidth plan was created.</p>
+             * <p>The time when the plan was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-10T02:35:26Z</p>
@@ -474,7 +464,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public egress IP address of the premium bandwidth plan.</p>
+             * <p>The public egress IP address of the premium Internet bandwidth plan.</p>
              */
             public Builder eipAddresses(java.util.List<String> eipAddresses) {
                 this.eipAddresses = eipAddresses;
@@ -482,11 +472,12 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the premium bandwidth plan expires.</p>
+             * <p>The expiration time of the premium Internet bandwidth plan.</p>
              * <ul>
-             * <li>If the plan is a subscription one, the time when the plan expires is returned.</li>
-             * <li>If the plan is a pay-as-you-go one, <code>2099-12-31T15:59:59Z</code> is returned.</li>
+             * <li>If the plan uses the subscription billing method, the actual expiration time is returned.</li>
+             * <li>If the plan uses the pay-as-you-go billing method, <code>2099-12-31T15:59:59Z</code> is returned.</li>
              * </ul>
+             * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2099-12-31T15:59:59Z</p>
@@ -497,17 +488,15 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The charge type of the premium bandwidth plan.</p>
+             * <p>The billing method of the premium Internet bandwidth plan.</p>
              * <ul>
-             * <li><p>Valid value when the <code>PayType</code> parameter is set to <code>PrePaid</code>:</p>
-             * <ul>
-             * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+             * <li>If the parameter <code>PayType</code> is set to <code>PrePaid</code>, the valid value is:<ul>
+             * <li>PayByBandwidth: billing by fixed bandwidth.</li>
              * </ul>
              * </li>
-             * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
-             * <ul>
-             * <li>PayByTraffic: charges by data transfer.</li>
-             * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+             * <li>If the parameter <code>PayType</code> is set to <code>PostPaid</code>, valid values are:<ul>
+             * <li>PayByTraffic: billing by data transfer.</li>
+             * <li>PayByBandwidth: billing by fixed bandwidth.</li>
              * </ul>
              * </li>
              * </ul>
@@ -521,7 +510,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the premium bandwidth plan.</p>
+             * <p>The ID of the premium Internet bandwidth plan.</p>
              * 
              * <strong>example:</strong>
              * <p>np-amtp8e8q1o9e4****</p>
@@ -532,37 +521,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the premium bandwidth plan.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Creating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Released</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>InUse</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Releasing</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The status of the premium Internet bandwidth plan.</p>
              * 
              * <strong>example:</strong>
              * <p>InUse</p>
@@ -587,7 +546,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
              * <p>The office network name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>default</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -595,13 +554,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the office network.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>standard: advanced office network</li>
-             * <li>customized: custom office network</li>
-             * <li>basic: basic office network</li>
-             * </ul>
+             * <p>The office network type.</p>
              * 
              * <strong>example:</strong>
              * <p>basic</p>
@@ -612,12 +565,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the premium bandwidth plan.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>PostPaid: pay-as-you-go</li>
-             * <li>PrePaid: subscription</li>
-             * </ul>
+             * <p>The billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>PostPaid</p>
@@ -628,7 +576,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the reserved network bandwidth took effect.</p>
+             * <p>The effective period of the reserved network bandwidth. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-10T00:00:00Z</p>
@@ -639,7 +587,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.</p>
+             * <p>The peak reserved network bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -651,13 +599,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
             /**
              * <p>The billing method of the reserved network bandwidth.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>PayByTraffic: charges by data transfer.</p>
-             * </li>
-             * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
-             * </li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PayByBandwidth</p>
@@ -668,7 +609,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

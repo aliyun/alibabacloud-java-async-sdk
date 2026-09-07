@@ -73,7 +73,7 @@ public class DeleteConfigGroupRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the configuration groups that you want to delete.</p>
+         * <p>The list of configuration group IDs to delete.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -82,10 +82,10 @@ public class DeleteConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * <p>The region ID. This operation is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

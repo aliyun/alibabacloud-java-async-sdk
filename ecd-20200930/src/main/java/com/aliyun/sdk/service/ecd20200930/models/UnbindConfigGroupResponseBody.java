@@ -67,7 +67,7 @@ public class UnbindConfigGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the configuration groups.</p>
+         * <p>The list of unbound configuration group IDs.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.groupIds = groupIds;
@@ -75,7 +75,7 @@ public class UnbindConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AD0FF13D-FC7D-56AD-934F-91C8487*****</p>

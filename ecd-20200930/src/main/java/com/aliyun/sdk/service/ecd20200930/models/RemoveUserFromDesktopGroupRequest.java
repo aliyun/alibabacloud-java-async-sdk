@@ -158,7 +158,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud computer from which to remove authorized users.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -170,7 +170,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer shares.</p>
+         * <p>The list of shared cloud computer IDs.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -179,7 +179,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the authorized users that you want to remove.</p>
+         * <p>The list of authorized users to remove.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -188,7 +188,10 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * OrgId.
+         * <p>The organization ID of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-aliyun-wy-org-id</p>
          */
         public Builder orgId(String orgId) {
             this.putQueryParameter("OrgId", orgId);
@@ -197,7 +200,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +213,10 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * SimpleUserGroupId.
+         * <p>The convenience user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-3f6c8a2b****</p>
          */
         public Builder simpleUserGroupId(String simpleUserGroupId) {
             this.putQueryParameter("SimpleUserGroupId", simpleUserGroupId);
@@ -219,7 +225,10 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * UserGroupName.
+         * <p>The user group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Group</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);
@@ -228,7 +237,10 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * UserOuPath.
+         * <p>The organizational unit (OU) path of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder userOuPath(String userOuPath) {
             this.putQueryParameter("UserOuPath", userOuPath);

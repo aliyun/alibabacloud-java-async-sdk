@@ -384,7 +384,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         } 
 
         /**
-         * AccessAttribute.
+         * <p>The access attribute of the office network (workspace).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder accessAttribute(String accessAttribute) {
             this.putQueryParameter("AccessAttribute", accessAttribute);
@@ -393,7 +396,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.</p>
+         * <p>The hostname of the domain controller. The hostname must comply with Windows hostname naming conventions.</p>
          * 
          * <strong>example:</strong>
          * <p>beijing-ad01</p>
@@ -429,7 +432,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The maximum public bandwidth of the Internet access package. Valid values: 0 to 200.<br>If you do not specify this parameter or you set this parameter to 0, Internet access is disabled.</p>
+         * <p>The peak Internet bandwidth, in Mbit/s. Valid values: 0 to 200.<br>If you do not set this parameter or set it to 0, the Internet access feature is not enabled. Settings take effect immediately.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -441,7 +444,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
          * 
          * <strong>example:</strong>
          * <p>cen-3gwy16dojz1m65****</p>
@@ -453,10 +456,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account that creates the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The Alibaba Cloud account ID of the Cloud Enterprise Network (CEN) instance owner.</p>
          * <ul>
-         * <li>If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</li>
-         * <li>If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</li>
+         * <li>If CenId is not specified, or the specified CenId belongs to the current Alibaba Cloud account, you do not need to specify this parameter.</li>
+         * <li>If the specified CenId belongs to another Alibaba Cloud account, specify the Alibaba Cloud account ID of that account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -469,11 +472,11 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IPv4 CIDR block of the virtual private cloud (VPC) that your office network uses. The system creates a VPC for your office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
+         * <p>The IPv4 CIDR block of the office network VPC. The system uses automatic creation to provision a VPC based on the specified IPv4 CIDR block. Use one of the following CIDR blocks or their subnets as the IPv4 CIDR block:</p>
          * <ul>
-         * <li><code>10.0.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
-         * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
-         * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
+         * <li><code>10.0.0.0/12</code> (valid mask range: 12 to 24 bits)</li>
+         * <li><code>172.16.0.0/12</code> (valid mask range: 12 to 24 bits)</li>
+         * <li><code>192.168.0.0/16</code> (valid mask range: 16 to 24 bits)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -486,16 +489,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+         * <p>The access method allowed when connecting to cloud computers.</p>
          * <blockquote>
-         * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to <code>VPC</code> or <code>Any</code>, PrivateLink is automatically activated.</p>
+         * <p>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. If this parameter is set to <code>VPC</code> or <code>Any</code>, the system automatically activates the PrivateLink service for you.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Internet: connects clients to cloud desktops only over the Internet. [Default]</li>
-         * <li>VPC: connects clients to cloud desktops only over a VPC.</li>
-         * <li>Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to your cloud desktop from a client.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -507,7 +504,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the DNS server of the enterprise AD system. You can specify only one IP address.</p>
+         * <p>The IP address of the DNS server corresponding to the enterprise AD. Currently, only one IP address is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -520,7 +517,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the enterprise AD system. You can register each domain name only once.</p>
+         * <p>The domain name of the enterprise AD. The same domain name can be registered only once.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -547,7 +544,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         /**
          * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
          * <blockquote>
-         * <p>Specify the username by using sAMAccountName instead of userPrincipalName.</p>
+         * <p>Use the sAMAccountName format for the username. Do not use the userPrincipalName format.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -560,24 +557,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><!-- -->
-         * 
-         * <p>true</p>
-         * <!-- -->
-         * 
-         * <p>(default)</p>
-         * <!-- -->
-         * </li>
-         * <li><!-- -->
-         * 
-         * <p>false</p>
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to grant local administrator permissions to users who use cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -589,7 +569,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access.</p>
+         * <p>Specifies whether public network access is enabled. This parameter indicates whether the feature is active.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -613,10 +593,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.<br>This parameter is empty by default.</p>
+         * <p>The name of the office network. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.<br>Default value: null.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>RD_Office_Network</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -626,15 +606,6 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
         /**
          * <p>The protocol type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li><p>Adaptive Streaming Protocol (ASP)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -646,7 +617,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -659,23 +630,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The AD connector type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>1: General</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>2: Advanced</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The AD Connector specification.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -687,7 +642,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The DNS address of the enterprise AD subdomain. If you specify <code>SubDomainName</code> but do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
+         * <p>The DNS address of the enterprise AD subdomain. If <code>SubDomainName</code> is specified but this parameter is not, the subdomain DNS is considered the same as the parent domain DNS.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -711,7 +666,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The array of the vSwitch IDs.</p>
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -720,7 +675,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain the verification code.</p>
+         * <p>The verification code. If the specified CenId belongs to another Alibaba Cloud account, you must first call <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> to obtain the verification code.</p>
          * 
          * <strong>example:</strong>
          * <p>12****</p>

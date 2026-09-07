@@ -116,7 +116,7 @@ public class ListVirtualBridgesRequest extends Request {
         } 
 
         /**
-         * BridgeId.
+         * <p>The list of virtual bridge IDs.</p>
          */
         public Builder bridgeId(java.util.List<String> bridgeId) {
             this.putQueryParameter("BridgeId", bridgeId);
@@ -125,7 +125,11 @@ public class ListVirtualBridgesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Valid values: 1 to 500.
+         * Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,7 +138,10 @@ public class ListVirtualBridgesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -143,7 +150,13 @@ public class ListVirtualBridgesRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * <blockquote>
+         * <p>The <code>DirectoryId</code> parameter will be deprecated. Use this parameter instead.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -152,6 +165,7 @@ public class ListVirtualBridgesRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

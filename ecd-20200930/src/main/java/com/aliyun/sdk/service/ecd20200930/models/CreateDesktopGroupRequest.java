@@ -908,13 +908,10 @@ public class CreateDesktopGroupRequest extends Request {
         } 
 
         /**
-         * <p>The types of the users.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The users of all shared cloud computer categories.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>true</p>
          */
         public Builder allClassifyUsers(Boolean allClassifyUsers) {
             this.putQueryParameter("AllClassifyUsers", allClassifyUsers);
@@ -923,12 +920,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable batch-based automatic creation of subscription cloud computers for the shared group. This parameter is required if you set <code>ChargeType</code> to <code>PrePaid</code>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: enables batch-based automatic creation of subscription cloud computers.</li>
-         * <li>1: disables batch-based automatic creation of subscription cloud computers.</li>
-         * </ul>
+         * <p>Specifies whether to allow automatic creation of cloud computers within subscription shared cloud computers. This parameter takes effect and is required only when ChargeType is set to PrePaid.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -940,14 +932,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of pay-as-you-go cloud computers that can be reserved in the shared group. This parameter is required if you set <code>ChargeType</code> to <code>PostPaid</code>. Valid values:</p>
-         * <ul>
-         * <li>0: does not reserve any cloud computers.</li>
-         * <li>N: reserves N cloud computers (1≤ N ≤ 100).</li>
-         * </ul>
-         * <blockquote>
-         * <p> Setting this parameter to 0 means no cloud computers will be reserved in the shared group. In this case, the system must create, start, and assign cloud computers to end users upon request, which can be time-consuming. To improve user experience, we recommend that you reserve a specific number of cloud computers.</p>
-         * </blockquote>
+         * <p>The number of reserved cloud computers allowed in pay-as-you-go shared cloud computers. This parameter takes effect and is required only when ChargeType is set to PostPaid. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -959,7 +944,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically complete the payment for subscription orders.</p>
+         * <p>Specifies whether automatic payment is enabled for the subscription order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -971,12 +956,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the shared subscription group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable auto-renewal for the subscription shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -988,13 +968,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of concurrent sessions of the multi-session shared group.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The number of concurrent sessions allowed per cloud computer in multi-session shared cloud computers.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2</p>
          */
         public Builder bindAmount(Long bindAmount) {
             this.putQueryParameter("BindAmount", bindAmount);
@@ -1003,7 +980,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer template.</p>
+         * <p>The cloud computer template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b-je9hani001wfn****</p>
@@ -1016,8 +993,7 @@ public class CreateDesktopGroupRequest extends Request {
 
         /**
          * <ul>
-         * <li>For shared subscription groups, this parameter defines the initial number of cloud computers to be created. Valid values: 0 to 200.</li>
-         * <li>For shared pay-as-you-go groups, this parameter defines the minimum initial number of cloud computers to be created. Valid values: 0 to <code>MaxDesktopsCount</code>. Default value: 1.</li>
+         * <li>For subscription shared cloud computers: the initial number of cloud computers to create. Valid values: 0 to 200.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1030,12 +1006,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the shared group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PostPaid: pay-as-you-go.</li>
-         * <li>PrePaid: subscription.</li>
-         * </ul>
+         * <p>The billing method of the cloud computer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1048,15 +1019,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud computers in the shared group.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>teacher: cloud computers designed for teachers.</li>
-         * <li>student: cloud computers designed for students.</li>
-         * </ul>
+         * <p>The type of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>teacher</p>
@@ -1080,10 +1043,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the shared group.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>comment</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -1092,10 +1055,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which each session remains connected. The session is automatically disconnected once the specified maximum time limit is reached. Unit: milliseconds. Valid values: 900000 to 345600000. That is, the session can be connected for 15 to 5,760 minutes (4 days).</p>
+         * <p>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
          * 
          * <strong>example:</strong>
-         * <p>300000</p>
+         * <p>900000</p>
          */
         public Builder connectDuration(Long connectDuration) {
             this.putQueryParameter("ConnectDuration", connectDuration);
@@ -1104,12 +1067,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The category of the data disk.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cloud_auto: the standard SSD.</li>
-         * <li>cloud_essd: the ESSD.</li>
-         * </ul>
+         * <p>The data cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -1121,12 +1079,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The PL of the data disk of the ESSD category. Default value: PL0.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PL1</li>
-         * <li>PL0</li>
-         * </ul>
+         * <p>The performance level of the ESSD. Default value: PL0.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -1138,12 +1091,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The size of the data disk. Unit: GB. Valid values: 0 to 16380. The value must be an integral multiple of 20.</p>
-         * <ul>
-         * <li>A value of 0 means no data disk is attached.</li>
-         * <li>If the selected plan includes a standard SSD, the data disk size must be at least 20 GB.</li>
-         * </ul>
-         * <p>Default value: 0.</p>
+         * <p>The size of the attached data cloud disk. Unit: GB. Valid values: 0 to 16380. The value must be a multiple of 20.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1155,7 +1103,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The default number of cloud computers that you want to create at the same time in the shared group. Default value: 1.</p>
+         * <p>The default number of cloud computers to create when you create multiple shared cloud computers. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1167,14 +1115,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The language of the OS.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>en-US: English.</li>
-         * <li>zh-HK: Traditional Chinese.</li>
-         * <li>zh-CN: Simplified Chinese</li>
-         * <li>ja-JP: Japanese.</li>
-         * </ul>
+         * <p>The system language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -1186,7 +1127,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * DeleteDuration.
+         * <p>The retention period before cloud computers in the cloud computer pool are automatically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder deleteDuration(Long deleteDuration) {
             this.putQueryParameter("DeleteDuration", deleteDuration);
@@ -1195,10 +1139,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the shared group. The name can be up to 30 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the shared cloud computer. The name can be up to 30 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
-         * <p>desktopGroupName1</p>
+         * <p>SharedComputers01</p>
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -1207,7 +1151,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the cloud computer. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query all the supported specifications.</p>
+         * <p>The cloud computer specification. You can call <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the specification IDs supported by cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.16c64g</p>
@@ -1219,13 +1163,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>hide</p>
+         * <p>dri-uf62w3qzt4aigvlcb****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -1234,7 +1175,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the end users.</p>
+         * <p>The list of user IDs for the shared cloud computer.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -1243,7 +1184,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the shared group is exclusive. You must set this parameter to <code>Exclusive</code> when <code>SessionType</code> is set to <code>MultipleSession</code>.</p>
+         * <p>Creates a static pool. This parameter is required when the <code>SessionType</code> parameter is set to <code>MultipleSession</code>. Set the value to <code>Exclusive</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Exclusive</p>
@@ -1255,13 +1196,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The ID of the NAS file system used for user data roaming.</p>
          * 
          * <strong>example:</strong>
-         * <p>04f314****</p>
+         * <p>kegd-nas-****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -1270,7 +1208,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of shared groups for the single-cloud computer type. You must specify this parameter if you set <code>MultiResource</code> to <code>false</code>. Valid values: 1 to 5. Default value: 1.</p>
+         * <p>The number of single shared cloud computers to create. This parameter is required only when the <code>MultiResource</code> parameter is set to <code>false</code>. Valid values: 1 to 5. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1282,7 +1220,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The version of the shared group.</p>
+         * <p>The version of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1294,18 +1232,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The hostname series of the cloud computer. This parameter is supported exclusively when the office network operates on Active Directory (AD) and the cloud computer runs on a Windows operating system.</p>
-         * <p>Naming conventions:</p>
-         * <ul>
-         * <li>A hostname must be 2 to 15 characters in length</li>
-         * <li>and can contain only letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
-         * </ul>
-         * <p>If you want to create multiple cloud computers, specify their hostnames in the <code>name_prefix[begin_number,bits]name_suffix</code> format. For example, if you set Hostname to ecd-[1,4]-test, the hostnames of the cloud computers will be assigned sequentially as ecd-0001-test, ecd-0002-test, and so on.</p>
-         * <ul>
-         * <li><code>name_prefix</code>: the prefix of the hostname.</li>
-         * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. The <code>begin_number</code> value is the starting number. Valid values of begin_number: 0 to 999999. Default value: 0. The <code>bits</code> value is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
-         * <li><code>name_suffix</code>: the suffix of the hostname.</li>
-         * </ul>
+         * <p>The custom hostname of the cloud computer. Only Settings for cloud computers that run the Windows operating system in AD office networks are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>testhost</p>
@@ -1317,14 +1244,14 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The duration after which a session is terminated if no keyboard or mouse activity is detected. When an end user connects to a cloud computer, a session is initiated. If no input from the keyboard or mouse is detected within this specified timeframe, the session is automatically closed. Unit: milliseconds. Valid values: 360000 to 3600000 (6 minutes to 60 minutes)</p>
-         * <p>The system prompts end users to save their data 30 seconds before a session is disconnected. To avoid data loss, end users must save their session data upon receiving the prompt.</p>
+         * <p>The maximum idle duration after a user session is established. If no keyboard or mouse activity occurs within this duration, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
+         * <p>30 seconds before this duration is reached, the end user in the session receives a prompt to save document data. The end user must save document data promptly to avoid data loss.</p>
          * <blockquote>
-         * <p> This parameter is suitable only for cloud computers whose image version is v1.0.2 or later.</p>
+         * <p>Applicable only to cloud computers with an image version of 1.0.2 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>300000</p>
+         * <p>360000</p>
          */
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
             this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
@@ -1333,7 +1260,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-gx2x1dhsmusr2****</p>
@@ -1345,11 +1272,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The duration for which each session remains active after disconnection. Valid values: 180000 (3 minutes) to 345600000 (4 days). Unit: milliseconds. If you set this parameter to 0, the session is permanently retained after disconnection.</p>
-         * <p>When a session is disconnected, take note of the following items: 1. If the end user does not resume the session within the specified duration, the session will close, and all unsaved data will be cleared. 2. If the end user resumes the session within the specified duration, the session data will remain accessible for continued use.</p>
+         * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
          * 
          * <strong>example:</strong>
-         * <p>6000</p>
+         * <p>180000</p>
          */
         public Builder keepDuration(Long keepDuration) {
             this.putQueryParameter("KeepDuration", keepDuration);
@@ -1358,15 +1284,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The load balancing policy of the multi-session shared group.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: depth-first</li>
-         * <li>1: breadth first</li>
-         * </ul>
+         * <p>The load balancing policy for multi-session shared cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1378,7 +1296,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of pay-as-you-go cloud computers that can be automatically provisioned at the same time in the shared group. Valid values: 0 to 500.</p>
+         * <p>The maximum number of pay-as-you-go shared cloud computers. Valid values: 0 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1390,7 +1308,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of subscription cloud computers that can be automatically provisioned at the same time in the shared group. This parameter is required if you set <code>ChargeType</code> to <code>PrePaid</code>. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</p>
+         * <p>The maximum number of cloud computers that can be used for automatic creation for subscription shared cloud computers. This parameter takes effect and is required only when ChargeType is set to PrePaid. Default value: 1. Valid values: 0 to the value of MaxDesktopsCount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1402,12 +1320,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the shared group is a multi-cloud computer type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: a multi-cloud computer type.</li>
-         * <li>false: a single-cloud computer type.</li>
-         * </ul>
+         * <p>Specifies whether the cloud computers are multi-resource shared cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1419,7 +1332,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The ID of the office network to which the shared cloud computer belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1432,15 +1345,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The session type of the shared group.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: single-session.</li>
-         * <li>1: multi-session.</li>
-         * </ul>
+         * <p>The type of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1452,26 +1357,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the shared group. This parameter is required if you set <code>ChargeType</code> to <code>PrePaid</code>. You must specify the subscription duration unit by using <code>PeriodUnit</code>.</p>
-         * <ul>
-         * <li><p>If you set <code>PeriodUnit</code> to <code>Month</code>, valid values of this parameter:</p>
-         * <ul>
-         * <li>1</li>
-         * <li>2</li>
-         * <li>3</li>
-         * <li>6</li>
-         * </ul>
-         * </li>
-         * <li><p>If you set <code>PeriodUnit</code> to <code>Year</code>, valid values of this parameter:</p>
-         * <ul>
-         * <li>1</li>
-         * <li>2</li>
-         * <li>3</li>
-         * <li>4</li>
-         * <li>5</li>
-         * </ul>
-         * </li>
-         * </ul>
+         * <p>The subscription duration of the shared cloud computer. This parameter takes effect and is required only when ChargeType is set to PrePaid. The unit is specified by PeriodUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1483,7 +1369,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration.</p>
+         * <p>The unit of the subscription billable methods duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -1495,7 +1381,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The ID of the policy associated with the shared cloud computer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1509,9 +1395,6 @@ public class CreateDesktopGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable user data roaming.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1523,7 +1406,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the coupon.</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_*****</p>
@@ -1535,11 +1418,11 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The threshold for the ratio of connected sessions. This parameter defines the condition that activates automatic scaling of cloud computers in a multi-session shared group. The ratio of connected sessions is calculated by using the following formula:</p>
-         * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code>.</p>
-         * <p>If the connected session ratio exceeds the specified threshold, new cloud computers are provisioned. If the ratio falls below the threshold, idle cloud computers are deleted.</p>
+         * <p>The session occupancy threshold used as the automatic scaling trigger condition for multi-session shared cloud computers. The session occupancy is calculated by using the following formula:</p>
+         * <p><code>Session occupancy = Number of bound sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
+         * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1552,7 +1435,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1565,7 +1448,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of the resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -1574,14 +1460,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The reset option of the shared group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: Reset is not required.</li>
-         * <li>1: Only the system disk is reset.</li>
-         * <li>2: Only the data disk is reset.</li>
-         * <li>3: Both the system disk and the data disk are reset.</li>
-         * </ul>
+         * <p>The reset type of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1593,13 +1472,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scaling policy.</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The scaling policy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>hide</p>
+         * <p>ss-f9dkjz6vw3aaw****</p>
          */
         public Builder scaleStrategyId(String scaleStrategyId) {
             this.putQueryParameter("ScaleStrategyId", scaleStrategyId);
@@ -1608,12 +1484,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the session.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SingleSession</li>
-         * <li>MultipleSession</li>
-         * </ul>
+         * <p>The session type.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleSession</p>
@@ -1625,7 +1496,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * SimpleUserGroupId.
+         * <p>The ID of the convenience user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-3f6c8a2b****</p>
          */
         public Builder simpleUserGroupId(String simpleUserGroupId) {
             this.putQueryParameter("SimpleUserGroupId", simpleUserGroupId);
@@ -1646,7 +1520,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum period of inactivity allowed before a cloud computer is automatically stopped. If the idle duration reaches the specified limit, the system stops the cloud computer. When an end user reconnects to the stopped cloud computer, it automatically restarts. Unit: milliseconds.</p>
+         * <p>The idle shutdown duration. When the cloud computer has been idle for this duration, it is automatically shut down. If a user connects after shutdown, the cloud computer automatically starts. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300000</p>
@@ -1658,12 +1532,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The category of the system disk.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cloud_auto: the standard SSD.</li>
-         * <li>cloud_essd: the Enterprise SSD (ESSD).</li>
-         * </ul>
+         * <p>The system cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -1675,12 +1544,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the system disk of the ESSD category. Default value: PL0.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PL1</li>
-         * <li>PL0</li>
-         * </ul>
+         * <p>The performance level of the ESSD. Default value: PL0.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -1692,10 +1556,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GiB.</p>
-         * <blockquote>
-         * <p> The system disk must be at least as large as the image.</p>
-         * </blockquote>
+         * <p>The system cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1707,7 +1568,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The tags. You can specify up to 20 tags.</p>
+         * <p>The list of tags. A maximum of 20 tags can be specified.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1716,7 +1577,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the timer group.</p>
+         * <p>The ID of the scheduled task group.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-0caoeogrk9m5****</p>
@@ -1728,7 +1589,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * UserGroupName.
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Group</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);
@@ -1737,7 +1601,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * UserOuPath.
+         * <p>The organizational unit (OU) path of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder userOuPath(String userOuPath) {
             this.putQueryParameter("UserOuPath", userOuPath);
@@ -1758,7 +1625,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain a list of KMS keys.</p>
+         * <p>The ID of the KMS key used for disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -1770,13 +1637,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The VPC ID of the office network to which the shared cloud computer belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>hide</p>
+         * <p>vpc-uf6w8u60n8xbkg5el****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1846,7 +1710,7 @@ public class CreateDesktopGroupRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1858,7 +1722,7 @@ public class CreateDesktopGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

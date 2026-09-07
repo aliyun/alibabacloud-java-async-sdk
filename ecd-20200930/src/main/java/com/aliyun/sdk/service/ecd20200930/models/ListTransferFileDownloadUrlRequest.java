@@ -73,7 +73,7 @@ public class ListTransferFileDownloadUrlRequest extends Request {
         } 
 
         /**
-         * FileIds.
+         * <p>The list of file IDs to query.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {
             this.putQueryParameter("FileIds", fileIds);
@@ -82,7 +82,10 @@ public class ListTransferFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trt-hffhi4nmqoi4****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

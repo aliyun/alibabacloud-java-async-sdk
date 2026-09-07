@@ -80,7 +80,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The NAS file systems.</p>
+         * <p>The NAS file system information.</p>
          */
         public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -88,7 +88,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. This parameter is empty if no additional results exist.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -99,7 +99,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
@@ -168,7 +168,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-0bz55ibznu9p7****</p>
@@ -179,7 +179,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the delivery group.</p>
+             * <p>The delivery group name.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoDeliveryGroup</p>
@@ -249,7 +249,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud computer share.</p>
+             * <p>The shared cloud computer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-9eeyf15b25nyl****</p>
@@ -260,7 +260,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer share.</p>
+             * <p>The shared cloud computer name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_dg</p>
@@ -330,7 +330,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the office network.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -341,7 +341,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the office network.</p>
+             * <p>The office network name.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoOfficeNetwork</p>
@@ -723,9 +723,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>Indicates whether operations on user directories (adding users, deleting data) are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowOperateUserDrive(Boolean allowOperateUserDrive) {
                 this.allowOperateUserDrive = allowOperateUserDrive;
@@ -733,7 +734,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application delivery groups that are associated with the UPM-supported NAS file systems.</p>
+             * <p>The list of cloud application delivery group objects bound to the UPM-supported NAS file system.</p>
              */
             public Builder appInstanceGroups(java.util.List<AppInstanceGroups> appInstanceGroups) {
                 this.appInstanceGroups = appInstanceGroups;
@@ -743,8 +744,8 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             /**
              * <p>The total capacity of the NAS file system. Unit: GiB.</p>
              * <ul>
-             * <li>The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</li>
-             * <li>The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</li>
+             * <li>If the storage type is Capacity, the capacity is fixed at 10 PiB (10485760 GiB).</li>
+             * <li>If the storage type is Performance, the capacity is fixed at 1 PiB (1048576 GiB).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -778,7 +779,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer shares that are associated with the UPM-supported NAS file systems.</p>
+             * <p>The list of shared cloud computer objects bound to the UPM-supported NAS file system.</p>
              */
             public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
                 this.desktopGroups = desktopGroups;
@@ -797,7 +798,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAS file system.</p>
+             * <p>The NAS file system ID.</p>
              * 
              * <strong>example:</strong>
              * <p>04f314****</p>
@@ -819,15 +820,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the NAS file system. The possible values include:</p>
-             * <ul>
-             * <li>Pending: The NAS file system is being created.</li>
-             * <li>Running: The NAS file system is running.</li>
-             * <li>Stopped: The NAS file system is stopped.</li>
-             * <li>Deleting: The NAS file system is being deleted.</li>
-             * <li>Deleted: The NAS file system is deleted.</li>
-             * <li>Invalid: The NAS file system is invalid.</li>
-             * </ul>
+             * <p>The status of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -838,7 +831,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the NAS file system. The only valid value is <code>standard</code>.</p>
+             * <p>The type of the NAS file system. Currently, only the general-purpose type is supported, which is <code>standard</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -860,7 +853,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the mount target.</p>
+             * <p>The mount target domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
@@ -871,14 +864,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the mount target. The possible values include:</p>
-             * <ul>
-             * <li>Pending: The mount target is being created.</li>
-             * <li>Active: The mount target is enabled.</li>
-             * <li>Inactive: The mount target is disabled.</li>
-             * <li>Deleting: The mount target is being deleted.</li>
-             * <li>Invalid: The mount target is invalid.</li>
-             * </ul>
+             * <p>The mount target status.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -889,7 +875,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the office network.</p>
+             * <p>The office network ID (deprecated).</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -900,7 +886,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the office network.</p>
+             * <p>The office network name (deprecated).</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -911,7 +897,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office networks.</p>
+             * <p>The list of office networks.</p>
              */
             public Builder officeSites(java.util.List<OfficeSites> officeSites) {
                 this.officeSites = officeSites;
@@ -938,7 +924,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type of the file system. Valid values:</p>
+             * <ul>
+             * <li>NFS: NFS file protocol.</li>
+             * <li>SMB: SMB file protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SMB</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -946,7 +939,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -957,12 +950,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the NAS file system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Upm: the UPM-supported NAS file system.</li>
-             * <li>ShareNas: the shared NAS file system.</li>
-             * </ul>
+             * <p>The storage mode of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>Upm</p>
@@ -981,11 +969,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the NAS file system. Valid values:</p>
-             * <ul>
-             * <li>Capacity</li>
-             * <li>Performance</li>
-             * </ul>
+             * <p>The storage type of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>Capacity</p>
@@ -996,7 +980,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.</p>
+             * <p>Indicates whether the SMB ACL feature is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1007,7 +991,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone where the NAS file system resides.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-f</p>

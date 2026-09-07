@@ -131,7 +131,10 @@ public class StopDesktopsRequest extends Request {
         } 
 
         /**
-         * CreateSnapshot.
+         * <p>Specifies whether to create a snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder createSnapshot(String createSnapshot) {
             this.putQueryParameter("CreateSnapshot", createSnapshot);
@@ -140,7 +143,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
+         * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +156,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Whether to perform a patch update when the update is ready. A value of true indicates that a patch update is performed.</p>
+         * <p>Specifies whether to perform a patch update when an update is ready. A value of true indicates that the patch update is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -165,7 +168,10 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * <p>The patch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KB5082063</p>
          */
         public Builder patchId(String patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -174,7 +180,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,23 +193,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The billing mode after you stop the cloud computer.</p>
-         * <p>Default value: StopCharging. Valid values:</p>
-         * <ul>
-         * <li><p>StopCharging: After the cloud computer is stopped, the system automatically reclaims computing resources. You are no longer charged for computing resources. However, you are still charged for storage resources.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>KeepCharging: After the cloud computer is stopped, the system does not reclaim resources to prevent insufficient resources and startup failures. You are still charged for the resources.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The billing mode after the cloud computers are stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>StopCharging</p>

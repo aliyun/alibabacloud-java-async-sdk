@@ -106,7 +106,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration groups.</p>
+         * <p>The configuration group information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -147,7 +147,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -346,7 +346,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of resources that are bound to the configuration group.</p>
+             * <p>The number of resources bound to the configuration group.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -357,7 +357,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of bound cloud computers.</p>
+             * <p>The quantity information of resources bound to the configuration group.</p>
              */
             public Builder bindCountMap(java.util.Map<String, Integer> bindCountMap) {
                 this.bindCountMap = bindCountMap;
@@ -368,7 +368,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
              * <p>The description of the configuration group.</p>
              * 
              * <strong>example:</strong>
-             * <p>ScheduledTask</p>
+             * <p>Scheduled task information</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -376,7 +376,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the configuration group.</p>
+             * <p>The configuration group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ccg-0cid8v30an12****</p>
@@ -387,7 +387,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InnerTimerDesc.
+             * <p>Used for frontend display. The code for the system scheduled task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
              */
             public Builder innerTimerDesc(String innerTimerDesc) {
                 this.innerTimerDesc = innerTimerDesc;
@@ -395,7 +398,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InnerTimerName.
+             * <p>Used for frontend display. The mapping code for the system scheduled task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
              */
             public Builder innerTimerName(String innerTimerName) {
                 this.innerTimerName = innerTimerName;
@@ -403,7 +409,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IsBind.
+             * <p>Used by system scheduled task check. The current scheduled task does not support unbinding or binding.</p>
              */
             public Builder isBind(Boolean isBind) {
                 this.isBind = isBind;
@@ -411,7 +417,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IsUpdate.
+             * <p>Used by system scheduled task check. The current scheduled task does not support modification.</p>
              */
             public Builder isUpdate(Boolean isUpdate) {
                 this.isUpdate = isUpdate;
@@ -419,10 +425,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the configuration group.</p>
+             * <p>The configuration group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ScheduledTask</p>
+             * <p>Scheduled task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -430,11 +436,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type of the configuration group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-             * </ul>
+             * <p>The product type used by the configuration group.</p>
              * 
              * <strong>example:</strong>
              * <p>CLOUD_DESKTOP</p>
@@ -445,14 +447,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the configuration group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AVAILABLE: The configuration group is available.</li>
-             * <li>UNAVAILABLE: The configuration group is deleted.</li>
-             * <li>DELETING: The configuration group is being deleted.</li>
-             * <li>UPDATING: The configuration group is being modified.</li>
-             * </ul>
+             * <p>The configuration group status.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -463,11 +458,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the configuration group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Timer: the scheduled task type.</li>
-             * </ul>
+             * <p>The configuration group type.</p>
              * 
              * <strong>example:</strong>
              * <p>Timer</p>

@@ -118,7 +118,7 @@ public class VerifyCenRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,10 +131,12 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the CEN instance belongs.</p>
          * <ul>
-         * <li>If you own the CEN instance, you can skip this parameter.</li>
-         * <li>If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.</li>
+         * <li><p>If the specified CenId belongs to your Alibaba Cloud account, you do not need to configure this parameter.</p>
+         * </li>
+         * <li><p>If the specified CenId belongs to another Alibaba Cloud account, specify the ID of that Alibaba Cloud account.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,11 +149,11 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * <p>The IPv4 CIDR block of the associated office network.</p>
+         * <p>The IPv4 CIDR block of the office network.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>47.100.XX.XX</p>
+         * <p>192.168.0.0/16</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -160,7 +162,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * <p>The verification code. If you do not own the CEN instance, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain a verification code.</p>
+         * <p>The verification code. If the specified CenId belongs to another Alibaba Cloud account, you must first call <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> to obtain the verification code.</p>
          * 
          * <strong>example:</strong>
          * <p>12****</p>

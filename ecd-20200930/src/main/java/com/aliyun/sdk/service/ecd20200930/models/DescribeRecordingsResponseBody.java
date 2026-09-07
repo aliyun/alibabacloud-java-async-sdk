@@ -80,7 +80,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nbCQ7ar+fECeh1IuWQXi39R5eoJ68zWp99mTAKRRNRhw==</p>
@@ -91,7 +91,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The screen recording files.</p>
+         * <p>The collection of cloud computer screen recording information.</p>
          */
         public Builder recordings(java.util.List<Recordings> recordings) {
             this.recordings = recordings;
@@ -294,7 +294,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the recording.</p>
+             * <p>The end time of the recording. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-10T07:26:06Z</p>
@@ -305,7 +305,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end user IDs.</p>
+             * <p>The list of end user IDs.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -314,9 +314,6 @@ public class DescribeRecordingsResponseBody extends TeaModel {
 
             /**
              * <p>The file path.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pg-4w5nk44zo5yl129dd/1mk78dugw344.mp4</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -327,7 +324,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
              * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>pg-6dn811rzrwh9ws4z6</p>
+             * <p>pg-6dn811rzrwh9w****</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -335,7 +332,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the screen recording file. Unit: bytes.</p>
+             * <p>The size of the recording file. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1742845</p>
@@ -346,16 +343,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of event that triggers the recording.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>byaction_cmd_ft: triggered by copy-paste or file transfer events.</li>
-             * <li>period: triggered at scheduled intervals.</li>
-             * <li>session: triggered by session lifecycle monitoring.</li>
-             * <li>byaction_commands: triggered by copy-paste only.</li>
-             * <li>alltime: continuous recording.</li>
-             * <li>byaction_file_transfer: triggered by file transfer only.</li>
-             * </ul>
+             * <p>The recording type.</p>
              * 
              * <strong>example:</strong>
              * <p>alltime</p>
@@ -374,7 +362,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the recording.</p>
+             * <p>The start time of the recording. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-10T07:26:06Z</p>

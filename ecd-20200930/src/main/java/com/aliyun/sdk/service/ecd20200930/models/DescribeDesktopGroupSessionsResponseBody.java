@@ -93,7 +93,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the start of the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2</p>
@@ -115,7 +115,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sessions.</p>
+         * <p>The list of session data.</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -123,7 +123,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of sessions.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -218,7 +218,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the terminal.</p>
+             * <p>The terminal device model.</p>
              * 
              * <strong>example:</strong>
              * <p>wuying_mac_x86_64</p>
@@ -240,7 +240,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Terminal Serial Number</p>
+             * <p>The terminal serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
@@ -251,7 +251,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The terminal UUID.</p>
+             * <p>The UUID of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>EBFDC7773BEBAD418A9F89429652****</p>
@@ -581,7 +581,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>账号类型</p>
+             * <p>The account type.</p>
              * 
              * <strong>example:</strong>
              * <p>SIMPLE</p>
@@ -592,7 +592,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client.</p>
+             * <p>The client IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>172.21.XX.XX</p>
@@ -606,7 +606,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
              * <p>The operating system of the client.</p>
              * 
              * <strong>example:</strong>
-             * <p>windows_&quot;Windows10Enterprise&quot;10.0(Build22000)</p>
+             * <p>windows</p>
              */
             public Builder clientOS(String clientOS) {
                 this.clientOS = clientOS;
@@ -614,10 +614,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the client.</p>
+             * <p>The client version.</p>
              * 
              * <strong>example:</strong>
-             * <p>2.0.0-R-20221030.08****</p>
+             * <p>7.8.0</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -636,10 +636,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer share.</p>
+             * <p>The name of the shared cloud computer.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>DemoCCGroup</p>
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -647,7 +647,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the session status is Connected, it indicates the ID of the cloud computer that is currently connected. If the session status is Disconnected, it indicates the ID of the cloud computer that was last connected.</p>
+             * <p>The cloud computer ID. If the session status is Connected, this value indicates the ID of the currently connected cloud computer. If the session status is Disconnected, this value indicates the ID of the most recently connected cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-g6t1ukbaea****</p>
@@ -658,7 +658,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>办公网络类型</p>
+             * <p>The office network type.</p>
              * 
              * <strong>example:</strong>
              * <p>SIMPLE</p>
@@ -669,7 +669,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the end user applies for administrator assistance.</p>
+             * <p>The point in time when the user requested administrator assistance. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1678794261000</p>
@@ -680,10 +680,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the terminal that connects to the session.</p>
+             * <p>The ID of the end user connected to the session.</p>
              * 
              * <strong>example:</strong>
-             * <p>xianqiu</p>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -691,10 +691,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the most recent connection.</p>
+             * <p>The end time of the most recent connection. Time format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-08-31 06:56:45</p>
+             * <p>2022-08-31 07:56:45</p>
              */
             public Builder lastSessionEndTime(String lastSessionEndTime) {
                 this.lastSessionEndTime = lastSessionEndTime;
@@ -702,7 +702,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the most recent connection.</p>
+             * <p>The start time of the most recent connection. Time format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-31 06:56:45</p>
@@ -713,7 +713,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the most recent session. Unit: seconds.</p>
+             * <p>The duration of the most recent connection. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -724,7 +724,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network ID.</p>
+             * <p>The ID of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-8904****</p>
@@ -735,10 +735,10 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network name.</p>
+             * <p>The name of the office network.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>DemoOfficeNetwork</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -747,11 +747,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
             /**
              * <p>The operating system type of the cloud computer.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>linux.</li>
-             * <li>Windows.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -762,12 +757,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the session.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>0: single-session</li>
-             * <li>1: multi-session</li>
-             * </ul>
+             * <p>The session type.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -778,12 +768,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type supported by the rule.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>High-definition Experience (HDX).</li>
-             * <li>ASP.</li>
-             * </ul>
+             * <p>The protocol type.</p>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -805,23 +790,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the session.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Connected</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Disconnected</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The session connection status.</p>
              * 
              * <strong>example:</strong>
              * <p>Connected</p>
@@ -832,7 +801,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Terminal Info</p>
+             * <p>The terminal information.</p>
              */
             public Builder terminalInfo(TerminalInfo terminalInfo) {
                 this.terminalInfo = terminalInfo;
@@ -840,7 +809,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total duration of the sessions. Unit: seconds.</p>
+             * <p>The total connection duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>

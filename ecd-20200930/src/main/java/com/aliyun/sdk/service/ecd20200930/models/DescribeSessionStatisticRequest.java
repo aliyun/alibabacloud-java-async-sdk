@@ -129,7 +129,7 @@ public class DescribeSessionStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time of the query. UNIX timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1677808889806</p>
@@ -153,7 +153,7 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * <p>The query interval. Unit: seconds. Valid values:</p>
+         * <p>The query interval, in seconds. Valid values:</p>
          * <ul>
          * <li>60</li>
          * <li>120</li>
@@ -181,7 +181,7 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * <p>Specifies to search for session information by region ID. This parameter is used to filter desktop information of a specific region.</p>
+         * <p>The region ID used to filter desktop information in a specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -193,7 +193,7 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time of the query. UNIX timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679449506572</p>

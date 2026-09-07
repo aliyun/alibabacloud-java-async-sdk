@@ -93,7 +93,7 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the cloud computers.</p>
+         * <p>The cloud desktop IDs. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.desktopId = desktopId;
@@ -101,7 +101,7 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -112,7 +112,7 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -123,7 +123,10 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The file transfer task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_abc123</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

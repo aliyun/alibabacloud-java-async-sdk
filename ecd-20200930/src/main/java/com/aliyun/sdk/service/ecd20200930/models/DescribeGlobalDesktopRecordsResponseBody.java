@@ -99,7 +99,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the enterprise resource group.</p>
+             * <p>The enterprise resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-f3s3dgt8dtb0vlqc8</p>
@@ -179,7 +179,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried resource group name.</p>
+             * <p>The resource group name.</p>
              * 
              * <strong>example:</strong>
              * <p>dms_test</p>
@@ -260,7 +260,8 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the session was created.</p>
+             * <p>The session creation time.
+             * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-31T06:56:45Z</p>
@@ -655,7 +656,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection status of the cloud desktop.</p>
+             * <p>The connection status.</p>
              * 
              * <strong>example:</strong>
              * <p>Connected</p>
@@ -677,7 +678,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time of the cloud desktop. The time is in the ISO 8601 standard (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-06T08:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -685,7 +689,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud computer share.</p>
+             * <p>The shared cloud desktop ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-iaqu3bi2xtie****</p>
@@ -696,7 +700,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer share.</p>
+             * <p>The shared cloud desktop name.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoCCGroup</p>
@@ -707,7 +711,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer IDs.</p>
+             * <p>The cloud desktop ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-g6t1ukbaea****</p>
@@ -718,7 +722,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer name.</p>
+             * <p>The cloud desktop name.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoComputer</p>
@@ -729,7 +733,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>桌面状态</p>
+             * <p>The desktop status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -751,7 +755,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of assigned terminal user IDs.</p>
+             * <p>The list of assigned end user IDs.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -759,7 +763,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the GPU memory.</p>
+             * <p>The GPU memory size.</p>
              * 
              * <strong>example:</strong>
              * <p>8GiB</p>
@@ -770,7 +774,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the last connection to the cloud computer. Unit: seconds</p>
+             * <p>The duration of the most recent connection to the cloud desktop. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -781,7 +785,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory of the cloud computer. Unit: MiB.</p>
+             * <p>The memory of the cloud desktop. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
              * <p>4096</p>
@@ -814,7 +818,10 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteType.
+             * <p>The office network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Simple</p>
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -822,7 +829,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS type. Valid values:</p>
+             * <p>The operating system type. Valid values:</p>
              * <ul>
              * <li>Windows</li>
              * <li>Linux</li>
@@ -837,7 +844,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific model of the operating system.</p>
+             * <p>The specific operating system model.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows 10</p>
@@ -848,7 +855,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Protocol type.</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
              * <li>HDX</li>
              * <li>ASP</li>
@@ -863,7 +870,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the instance resides.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -874,7 +881,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the enterprise resource group.</p>
+             * <p>The enterprise resource group names.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -882,7 +889,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle duration of the session. Unit: minutes.</p>
+             * <p>The session idle duration. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -901,7 +908,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the status of the cloud computer was changed.</p>
+             * <p>The UNIX timestamp of the cloud desktop status change. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1760583xxxx</p>
@@ -912,11 +919,11 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cloud computer. Valid values:</p>
+             * <p>The billing method of the cloud desktop. Valid values:</p>
              * <ul>
-             * <li>prePaid: The monthly purchase is unlimited.</li>
-             * <li>postPaid: pay-as-you-go</li>
-             * <li>monthPackage: monthly duration.</li>
+             * <li>prePaid: monthly subscription with unlimited usage duration.</li>
+             * <li>postPaid: pay-as-you-go.</li>
+             * <li>monthPackage: monthly duration package.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -928,7 +935,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total connection duration. Unit: seconds</p>
+             * <p>The total connection duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>240</p>
@@ -939,7 +946,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The startup duration of the cloud computer. Unit: seconds</p>
+             * <p>The cloud desktop uptime. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>

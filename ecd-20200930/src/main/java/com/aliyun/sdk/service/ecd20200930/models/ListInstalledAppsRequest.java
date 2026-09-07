@@ -101,7 +101,8 @@ public class ListInstalledAppsRequest extends Request {
         }
 
         /**
-         * <p>The page number.<br>Default value: 1.</p>
+         * <p>The page number.\
+         * Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,7 +114,8 @@ public class ListInstalledAppsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.<br>Default value: 20.</p>
+         * <p>The number of entries per page.\
+         * Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

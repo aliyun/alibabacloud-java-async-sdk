@@ -67,7 +67,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The specifications.</p>
+         * <p>The details of the specifications.</p>
          */
         public Builder desktopTypes(java.util.List<DesktopTypes> desktopTypes) {
             this.desktopTypes = desktopTypes;
@@ -75,7 +75,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -350,7 +350,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>The data cloud disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -361,7 +361,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the NAS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -369,7 +372,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud desktop type.</p>
+             * <p>The specification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd.graphics.xlarge</p>
@@ -380,7 +383,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.</p>
+             * <p>The specification status. A value of <code>SUFFICIENT</code> indicates that the specification resources are sufficient.</p>
              * 
              * <strong>example:</strong>
              * <p>SUFFICIENT</p>
@@ -391,7 +394,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvId.
+             * <p>The environment ID. This parameter is not publicly available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adifa****</p>
              */
             public Builder envId(String envId) {
                 this.envId = envId;
@@ -399,7 +405,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment type. This parameter is not publicly available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -407,7 +416,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of GPUs.</p>
+             * <p>The number of GPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -418,7 +427,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU memory size. For GPU-accelerated cloud computers, this return value is significant. Unit: MB.</p>
+             * <p>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud computers. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>2048</p>
@@ -440,7 +449,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The family of the cloud desktop type.</p>
+             * <p>The instance family.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd.graphics</p>
@@ -451,7 +460,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sessions supported by the specification.</p>
+             * <p>The number of multi-sessions supported by the current specification.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -473,7 +482,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SaleTypes.
+             * <p>The supported desktop type sale categories.</p>
              */
             public Builder saleTypes(java.util.List<String> saleTypes) {
                 this.saleTypes = saleTypes;
@@ -481,7 +490,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sales modes of the specifications.</p>
+             * <p>The list of billing methods for the specification.</p>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
@@ -489,12 +498,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inventory status of the specification.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Insufficient</li>
-             * <li>Sufficient</li>
-             * </ul>
+             * <p>The stock status.</p>
              * 
              * <strong>example:</strong>
              * <p>Sufficient</p>
@@ -505,7 +509,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The system cloud disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>

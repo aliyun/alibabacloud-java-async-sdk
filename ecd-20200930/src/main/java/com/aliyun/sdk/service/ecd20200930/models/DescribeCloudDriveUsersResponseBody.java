@@ -80,7 +80,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudDriveUsers.
+         * <p>A list of user personal drives.</p>
          */
         public Builder cloudDriveUsers(java.util.List<CloudDriveUsers> cloudDriveUsers) {
             this.cloudDriveUsers = cloudDriveUsers;
@@ -88,7 +88,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page of results. An empty value indicates that all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F083AAE5-7AA9-53BB-9060-AFFB2C18****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +233,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * DriveId.
+             * <p>The ID of the user personal drive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -235,7 +244,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The ID of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -243,7 +255,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the user personal drive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -251,7 +266,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>Maximum storage capacity for the user’s personal drive, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104857600</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -259,7 +277,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UsedSize.
+             * <p>The used storage space, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10485760</p>
              */
             public Builder usedSize(Long usedSize) {
                 this.usedSize = usedSize;
@@ -267,7 +288,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The internal ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@cn-shanghai.148875033399">alice@cn-shanghai.148875033399</a>****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -275,7 +299,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

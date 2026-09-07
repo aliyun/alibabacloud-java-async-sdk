@@ -174,7 +174,14 @@ public class DescribeCenterPolicyListRequest extends Request {
         } 
 
         /**
-         * AcademicProxy.
+         * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder academicProxy(String academicProxy) {
             this.putQueryParameter("AcademicProxy", academicProxy);
@@ -184,11 +191,6 @@ public class DescribeCenterPolicyListRequest extends Request {
 
         /**
          * <p>The business type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: public cloud</li>
-         * <li>8: commercial edition.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +203,14 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * ModelLibrary.
+         * <p>Specifies whether to enable the model library feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder modelLibrary(String modelLibrary) {
             this.putQueryParameter("ModelLibrary", modelLibrary);
@@ -210,7 +219,7 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * <p>The page number.<br>Default value: 1.</p>
+         * <p>The page number of the current page in a paged query. This parameter implements paging.<br>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +231,7 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of rows per page in a paged query. This parameter implements paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -234,7 +243,7 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer policies.</p>
+         * <p>The list of Cloud Desktop policy IDs.</p>
          */
         public Builder policyGroupId(java.util.List<String> policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -243,7 +252,14 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * PortProxy.
+         * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder portProxy(String portProxy) {
             this.putQueryParameter("PortProxy", portProxy);
@@ -253,11 +269,6 @@ public class DescribeCenterPolicyListRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>app: cloud applications.</li>
-         * <li>desktop: cloud computers.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,12 +281,7 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * <p>The effective scope of the cloud computer policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>IP: The policy applies to specific IP addresses.</li>
-         * <li>GLOBAL: The policy applies globally.</li>
-         * </ul>
+         * <p>The effective scope of the Cloud Desktop policy.</p>
          * 
          * <strong>example:</strong>
          * <p>GLOBAL</p>

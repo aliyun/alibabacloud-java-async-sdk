@@ -173,7 +173,10 @@ public class DescribeOfficeSitesRequest extends Request {
         } 
 
         /**
-         * AccountType.
+         * <p>The account type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -182,9 +185,9 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page for a paginated query.    </p>
          * <ul>
-         * <li>Maximum value: 100.</li>
+         * <li>Maximum value: 100.    </li>
          * <li>Default value: 10.</li>
          * </ul>
          * 
@@ -198,7 +201,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -210,7 +213,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The office network IDs. You can specify the IDs of 1 to 100 office networks.</p>
+         * <p>The office network ID. You can specify 1 to 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -222,23 +225,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The account type of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>SIMPLE: convenience account</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>AD_CONNECTOR: enterprise Active Directory (AD) account</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The account system type of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -250,7 +237,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,12 +250,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The security protection setting of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SASE: SASE is configured.</li>
-         * <li>OFF: No security protection setting is configured.</li>
-         * </ul>
+         * <p>The security protection configuration of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>SASE</p>
@@ -281,71 +263,6 @@ public class DescribeOfficeSitesRequest extends Request {
 
         /**
          * <p>The office network status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>REGISTERING: The office network is being registered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DEREGISTERING: The office network is being deregistered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>REGISTERED: The office network is registered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NEEDCONFIGTRUST: A trust relationship is required for the office network.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DEREGISTERED: The office network is deregistered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ERROR: One or more configurations of the office network are invalid.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CONFIGTRUSTING: A trust relationship is being configured for the office network.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NEEDCONFIGUSER: Users are required for the office network.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>REGISTERED</p>
@@ -357,10 +274,13 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID of the office network for shared cloud computers.</p>
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>vpc-uf6bpyqivwl5f3pvoxxu0</p>
+         * <p>vpc-uf6w8u60n8xbkg5el****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

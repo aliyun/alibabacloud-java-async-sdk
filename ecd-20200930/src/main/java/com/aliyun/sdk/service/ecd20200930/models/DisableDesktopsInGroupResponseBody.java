@@ -54,7 +54,7 @@ public class DisableDesktopsInGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34FB4D97-C0D9-5534-ABC6-90C7EBD5****</p>

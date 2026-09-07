@@ -89,12 +89,7 @@ public class AddDevicesRequest extends Request {
         } 
 
         /**
-         * <p>The type of the client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: hardware client.</li>
-         * <li>2: software client.</li>
-         * </ul>
+         * <p>The device type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +102,7 @@ public class AddDevicesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the devices. You can specify up to 200 IDs.</p>
+         * <p>The list of device IDs. You can specify 1 to 200 device IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deviceIds(java.util.List<String> deviceIds) {
@@ -117,7 +112,7 @@ public class AddDevicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

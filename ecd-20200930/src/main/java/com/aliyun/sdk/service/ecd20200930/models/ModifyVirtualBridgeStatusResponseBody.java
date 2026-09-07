@@ -54,7 +54,10 @@ public class ModifyVirtualBridgeStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

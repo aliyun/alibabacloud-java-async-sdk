@@ -103,7 +103,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,9 +116,9 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The number of entries per page for a paged query.    </p>
          * <ul>
-         * <li>Maximum value: 100.</li>
+         * <li>Maximum value: 100.    </li>
          * <li>Default value: 10.</li>
          * </ul>
          * 
@@ -132,7 +132,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l3d+SWeOobbIlDLjwhjkTk</p>
@@ -144,7 +144,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

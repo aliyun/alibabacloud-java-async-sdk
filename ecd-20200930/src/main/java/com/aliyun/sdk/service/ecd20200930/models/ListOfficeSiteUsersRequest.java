@@ -173,7 +173,12 @@ public class ListOfficeSiteUsersRequest extends Request {
         } 
 
         /**
-         * AssignedInfo.
+         * <blockquote>
+         * <p>This parameter is not publicly available. You can only pass in <code>1</code> or leave it empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder assignedInfo(String assignedInfo) {
             this.putQueryParameter("AssignedInfo", assignedInfo);
@@ -182,7 +187,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * <p>The query string for fuzzy query.</p>
+         * <p>The fuzzy query character string.</p>
          * 
          * <strong>example:</strong>
          * <p><em>jin</em></p>
@@ -194,7 +199,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * IncludeAssignedUser.
+         * <p>Specifies whether to return only users who are assigned cloud computers.</p>
          */
         public Builder includeAssignedUser(Boolean includeAssignedUser) {
             this.putQueryParameter("IncludeAssignedUser", includeAssignedUser);
@@ -203,9 +208,9 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.    </p>
          * <ul>
-         * <li>Valid values: 1 to 100.</li>
+         * <li>Maximum value: 100.    </li>
          * <li>Default value: 10.</li>
          * </ul>
          * 
@@ -219,7 +224,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Leave this parameter empty for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -231,7 +236,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * <p>The organizational unit (OU) of the specified AD domain.</p>
+         * <p>The specified AD domain organizational unit (OU).</p>
          * 
          * <strong>example:</strong>
          * <p>example.com/Domain Controllers</p>
@@ -243,7 +248,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * <p>The office network ID. The office network must be of the enterprise AD account type.</p>
+         * <p>The office network ID. Only office networks based on enterprise AD accounts are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +261,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +274,10 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sorting method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);

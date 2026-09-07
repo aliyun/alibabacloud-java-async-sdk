@@ -143,7 +143,14 @@ public class DescribeEcdReportTasksRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The business channel. Valid values:</p>
+         * <ul>
+         * <li>Enterprise: Enterprise Edition.</li>
+         * <li>Business: Business Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -152,7 +159,7 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,10 +171,10 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page. Maximum value: 200.</p>
+         * <p>The number of entries per page. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
-         * <p>20。</p>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,14 +184,6 @@ public class DescribeEcdReportTasksRequest extends Request {
 
         /**
          * <p>The task status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>INIT: initializing</li>
-         * <li>FAILED</li>
-         * <li>RUNNING</li>
-         * <li>EXPIRED</li>
-         * <li>FINISHED</li>
-         * </ul>
          */
         public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
@@ -193,11 +192,7 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * <p>The sub-type of the report export task.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>DESKTOP: cloud computer</li>
-         * </ul>
+         * <p>The subtype of the report task.</p>
          * 
          * <strong>example:</strong>
          * <p>DESKTOP</p>
@@ -209,7 +204,7 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the report export task.</p>
+         * <p>The report task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ret-sfkdsjfi*****</p>
@@ -221,11 +216,7 @@ public class DescribeEcdReportTasksRequest extends Request {
         }
 
         /**
-         * <p>The type of the report.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>RESOURCE_REPORT</li>
-         * </ul>
+         * <p>The report type.</p>
          * 
          * <strong>example:</strong>
          * <p>RESOURCE_REPORT</p>

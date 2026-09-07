@@ -80,7 +80,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -102,7 +102,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The usernames of the AD accounts.<br>If the only Administrator and Guest users exist in the enterprise AD directory, an empty User array is returned.</p>
+         * <p>The array of AD account usernames. If the enterprise AD contains only the Administrator and Guest users and no other users, an empty Users array is returned.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -233,7 +233,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignedDesktopNumber.
+             * <p>The number of assigned cloud computers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder assignedDesktopNumber(Integer assignedDesktopNumber) {
                 this.assignedDesktopNumber = assignedDesktopNumber;
@@ -244,7 +247,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
              * <p>The display name of the AD account.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alice</p>
+             * <p>aduser</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -252,7 +255,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameNew.
+             * <p>The new display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder displayNameNew(String displayNameNew) {
                 this.displayNameNew = displayNameNew;
@@ -260,7 +266,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user@example.com">user@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -271,7 +280,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
              * <p>The username of the AD account.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alice</p>
+             * <p>aduser</p>
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;
@@ -279,7 +288,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130********</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -287,7 +299,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The user principal name (UPN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

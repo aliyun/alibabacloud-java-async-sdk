@@ -200,7 +200,7 @@ public class DescribeRecordingsRequest extends Request {
         } 
 
         /**
-         * <p>The cloud computer ID. If this parameter is not specified, the screen recording files on all cloud computers in the designated region will be queried.</p>
+         * <p>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-hlh41mk78dugw****</p>
@@ -212,7 +212,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the <code>YYYYMMDDhhmmss</code> format. The time must be in UTC+8.</p>
+         * <p>The end time of the query. Specify the time in UTC+8 in the <code>YYYYMMDDhhmmss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>20230424004441</p>
@@ -224,7 +224,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -238,12 +238,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return a URL.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
-         * </ul>
+         * <p>Specifies whether to return the URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -255,7 +250,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
@@ -279,7 +274,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +299,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC+0.</p>
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in UTC+0 in the <code>yyyy-mm-ddthh:mm:ssz</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-27T02:30:10Z</p>
@@ -316,7 +311,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC+0.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in UTC+0 in the <code>yyyy-mm-ddthh:mm:ssz</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-27T02:20:10Z</p>
@@ -328,7 +323,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the <code>YYYYMMDDhhmmss</code> format. The time must be in UTC+8.</p>
+         * <p>The start time of the query. Specify the time in UTC+8 in the <code>YYYYMMDDhhmmss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>20230424000000</p>

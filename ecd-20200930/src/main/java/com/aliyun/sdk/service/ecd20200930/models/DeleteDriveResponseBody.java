@@ -106,7 +106,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value 200 indicates that the request was successful.</p>
+         * <p>The response code. 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the delete operation was successful.</p>
+         * <p>The deletion result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +128,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +139,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B7AA****</p>
@@ -150,7 +150,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

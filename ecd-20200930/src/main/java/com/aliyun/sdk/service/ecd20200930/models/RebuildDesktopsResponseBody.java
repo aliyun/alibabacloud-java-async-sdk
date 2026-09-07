@@ -67,7 +67,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The recreation results.</p>
+         * <p>The collection of rebuild results.</p>
          */
         public Builder rebuildResults(java.util.List<RebuildResults> rebuildResults) {
             this.rebuildResults = rebuildResults;
@@ -75,7 +75,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -157,7 +157,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The recreation result code. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+             * <p>The rebuild result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>IncorrectDesktopStatus</p>
@@ -168,7 +168,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the cloud computers.</p>
+             * <p>The cloud computer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-gx2x1dhsmucyy****</p>
@@ -179,7 +179,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is invalid if the value of <code>Code</code> is <code>success</code>.</p>
+             * <p>The error message. This parameter is not returned when <code>Code</code> is <code>success</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>The current status of the desktop does not support this operation.</p>

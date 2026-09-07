@@ -93,7 +93,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the shared group.</p>
+         * <p>The ID of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -104,7 +104,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the shared groups.</p>
+         * <p>The list of shared cloud computer IDs.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.desktopGroupIds = desktopGroupIds;
@@ -112,7 +112,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the orders.</p>
+         * <p>The order IDs.</p>
          */
         public Builder orderIds(java.util.List<String> orderIds) {
             this.orderIds = orderIds;
@@ -120,7 +120,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3EB7FCEE-D731-4948-85A3-4B2C341CA983</p>

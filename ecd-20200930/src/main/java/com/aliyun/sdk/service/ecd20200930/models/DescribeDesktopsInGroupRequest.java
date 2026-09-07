@@ -160,7 +160,10 @@ public class DescribeDesktopsInGroupRequest extends Request {
         } 
 
         /**
-         * CustomEndTimePeriod.
+         * <p>The end time of the custom time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder customEndTimePeriod(Long customEndTimePeriod) {
             this.putQueryParameter("CustomEndTimePeriod", customEndTimePeriod);
@@ -169,7 +172,10 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * CustomStartTimePeriod.
+         * <p>The start time of the custom time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder customStartTimePeriod(Long customStartTimePeriod) {
             this.putQueryParameter("CustomStartTimePeriod", customStartTimePeriod);
@@ -178,7 +184,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud desktop.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,12 +197,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to ignore deletion flags.</p>
-         * <p>Default value: true. Valid values:</p>
-         * <ul>
-         * <li>true: ignores deletion flags. The cloud computers that were deleted are returned.</li>
-         * <li>false: does not ignore deletion flags. The cloud computers that were deleted are not returned.</li>
-         * </ul>
+         * <p>Specifies whether to ignore the deletion flag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -208,11 +209,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
-         * <ul>
-         * <li>Default value: 10.</li>
-         * <li>Maximum value: 100.</li>
-         * </ul>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -224,7 +221,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -236,7 +233,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the cloud computer share.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -248,7 +245,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

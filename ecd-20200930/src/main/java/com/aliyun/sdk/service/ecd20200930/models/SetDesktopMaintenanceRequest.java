@@ -90,7 +90,7 @@ public class SetDesktopMaintenanceRequest extends Request {
         } 
 
         /**
-         * <p>A list of cloud computer IDs for which you want to set maintenance mode. A maximum of 100 cloud computer IDs are supported.</p>
+         * <p>The IDs of the cloud computers for which you want to set the maintenance mode. You can specify up to 100 cloud computer IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
@@ -100,12 +100,7 @@ public class SetDesktopMaintenanceRequest extends Request {
         }
 
         /**
-         * <p>Enter or exit cloud computer maintenance mode.</p>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>ENTER: The enters the maintenance mode.</li>
-         * <li>EXIT: The exits the maintenance mode.</li>
-         * </ul>
+         * <p>Specifies whether to enter or exit maintenance mode for the cloud computer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +113,7 @@ public class SetDesktopMaintenanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

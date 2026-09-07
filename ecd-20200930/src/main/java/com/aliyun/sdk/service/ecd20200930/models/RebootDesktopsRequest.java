@@ -117,7 +117,7 @@ public class RebootDesktopsRequest extends Request {
         } 
 
         /**
-         * CreateSnapshot.
+         * <p>Specifies whether to create a snapshot.</p>
          */
         public Builder createSnapshot(Boolean createSnapshot) {
             this.putQueryParameter("CreateSnapshot", createSnapshot);
@@ -126,7 +126,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+         * <p>The cloud computer ID. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * OsUpdate.
+         * <p>Specifies whether to install system patches.</p>
          */
         public Builder osUpdate(Boolean osUpdate) {
             this.putQueryParameter("OsUpdate", osUpdate);
@@ -148,7 +148,10 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * <p>The patch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KB5082063</p>
          */
         public Builder patchId(String patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -157,7 +160,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

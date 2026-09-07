@@ -131,7 +131,10 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * AfterStatus.
+         * <p>The target status of the cloud computer after the rebuild is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder afterStatus(String afterStatus) {
             this.putQueryParameter("AfterStatus", afterStatus);
@@ -140,7 +143,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</p>
+         * <p>The cloud computer ID. You can specify 1 to 20 IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +156,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the new image.</p>
+         * <p>The ID of the new image to use after the change.</p>
          * 
          * <strong>example:</strong>
          * <p>m-84mztzatmlnys****</p>
@@ -165,14 +168,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The OS language. Only system images are supported, and Linux cloud computers support only English.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>en-US: English</li>
-         * <li>zh-HK: Traditional Chinese (Hong Kong, China)</li>
-         * <li>zh-CN: Simplified Chinese</li>
-         * <li>ja-JP: Japanese</li>
-         * </ul>
+         * <p>The operating system language. Currently, only system images are supported, and Linux computers only support English.</p>
          * 
          * <strong>example:</strong>
          * <p>en-US</p>
@@ -184,25 +180,21 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The operation type on the data disk.</p>
+         * <p>The operation type for the data cloud disk.</p>
          * <blockquote>
-         * <p> This parameter is empty by default regardless of whether data disks are attached to the cloud computer.</p>
+         * <p>Regardless of whether the cloud computer has a data cloud disk, no field value is passed in by default when you call this operation.</p>
          * </blockquote>
          * <ul>
-         * <li><p>No data disks are attached to the cloud computer:<br>No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.</p>
-         * </li>
-         * <li><p>Data disks are attached to the cloud computer:</p>
-         * <ol>
-         * <li><p>The OS of the cloud computer is the same as the OS of the destination image:</p>
-         * <ul>
-         * <li>If you set the OperateType parameter to <code>replace</code>, the data in the data disks of the cloud computer is replaced.</li>
-         * <li>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.</li>
+         * <li>If the cloud computer has no data cloud disk:<br>  No data cloud disk operation is performed regardless of the field value passed in.</li>
+         * <li>If the cloud computer has a data cloud disk:<ol>
+         * <li>When the operating system of the cloud computer is the same as that of the target image:<ul>
+         * <li>If the field value is <code>replace</code>, the data cloud disk of the cloud computer is replaced.</li>
+         * <li>If no field value is passed in, the original data cloud disk of the cloud computer is retained.</li>
          * </ul>
          * </li>
-         * <li><p>The OS of the cloud computer is different from the OS of the destination image:</p>
-         * <ul>
-         * <li>If you set the OperateType parameter to <code>replace</code>, the data in the data disks of the cloud computer is replaced.</li>
-         * <li>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.</li>
+         * <li>When the operating system of the cloud computer is different from that of the target image:<ul>
+         * <li>If the field value is <code>replace</code>, the data cloud disk of the cloud computer is replaced.</li>
+         * <li>If no field value is passed in, the data cloud disk of the cloud computer is cleared.</li>
          * </ul>
          * </li>
          * </ol>
@@ -219,7 +211,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

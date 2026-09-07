@@ -341,7 +341,7 @@ public class DescribeBundlesRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
+         * <p>The list of cloud computer template IDs. You can specify 1 to 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
@@ -353,23 +353,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud computer template.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>SYSTEM: system template</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CUSTOM: custom template</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The cloud computer templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -381,7 +365,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the inventory status of the cloud computer instance type.</p>
+         * <p>Specifies whether to query the stock status of the cloud computer instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -393,7 +377,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs contained in the cloud computer instance type.</p>
+         * <p>The number of vCPUs included in the cloud computer instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -405,13 +389,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The instance family of the cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>eds.graphics: graphical instance families</li>
-         * <li>eds.hf: instance families with high clock speeds</li>
-         * <li>eds.general: general-purpose instance families</li>
-         * </ul>
+         * <p>The cloud computer instance family.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.general</p>
@@ -424,11 +402,11 @@ public class DescribeBundlesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not available for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>This parameter is now in invitational preview and unavailable.</p>
+         * <p>example</p>
          */
         public Builder fotaChannel(String fotaChannel) {
             this.putQueryParameter("FotaChannel", fotaChannel);
@@ -437,23 +415,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the cloud computers in the template belong to a cloud computer pool.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether the template belongs to a cloud computer pool.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -465,7 +427,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The number of GPUs contained in the cloud computer instance type.</p>
+         * <p>The number of GPUs included in the cloud computer instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -478,13 +440,6 @@ public class DescribeBundlesRequest extends Request {
 
         /**
          * <p>The GPU driver type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>T4</li>
-         * <li>A10</li>
-         * <li>G28</li>
-         * <li>G39</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>T4</p>
@@ -496,7 +451,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The image IDs.</p>
+         * <p>The list of image IDs.</p>
          */
         public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -505,9 +460,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Maximum value: 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -519,7 +472,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The memory size of the cloud computer instance type. Unit: GiB.</p>
+         * <p>The memory size included in the cloud computer instance type. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -531,7 +484,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to start the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -543,23 +496,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The type of the OS.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Linux</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Windows</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -572,11 +509,6 @@ public class DescribeBundlesRequest extends Request {
 
         /**
          * <p>The protocol type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>HDX: High-definition Experience (HDX) protocol</li>
-         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -588,7 +520,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -601,7 +533,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The scenario to use the image.</p>
+         * <p>Scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>FastBuy</p>
@@ -613,7 +545,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The desktop template that is selected based on specific criteria.</p>
+         * <p>The selected template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -625,11 +557,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The type of the session. Valide values:</p>
-         * <ul>
-         * <li>SingleSession</li>
-         * <li>MultipleSession</li>
-         * </ul>
+         * <p>The session type.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleSession</p>
@@ -641,7 +569,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return multi-session cloud computer templates. Default value: false.</p>
+         * <p>Specifies whether to return multi-session cloud computer templates when querying the cloud computer list. Multi-session templates are not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

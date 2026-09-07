@@ -354,7 +354,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         } 
 
         /**
-         * AccessAttribute.
+         * <p>The access attribute of the office network (workspace).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder accessAttribute(String accessAttribute) {
             this.putQueryParameter("AccessAttribute", accessAttribute);
@@ -363,7 +366,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>The account type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -372,7 +378,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * AuthorityHost.
+         * <p>The authority URL of the identity authentication service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a></p>
          */
         public Builder authorityHost(String authorityHost) {
             this.putQueryParameter("AuthorityHost", authorityHost);
@@ -381,7 +390,8 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <code>EnableInternetAccess</code> to <code>true</code>.</p>
+         * <p>The peak Internet bandwidth. Valid values: 10 to 200. Unit: Mbit/s.
+         * You can specify this parameter when <code>EnableInternetAccess</code> is set to <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -393,9 +403,9 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN) instance.</p>
          * <blockquote>
-         * <p> If you want end users to connect to cloud computers from Alibaba Cloud Workspace clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.</p>
+         * <p>To connect to cloud desktops over a VPC connection, add the office network to a CEN instance. The CEN instance is the one that the on-premises network connects to by using a VPN or Express Connect circuit.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -408,10 +418,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the CEN instance belongs.</p>
          * <ul>
-         * <li>If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</li>
-         * <li>If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</li>
+         * <li>If CenId is not specified or the specified CEN instance belongs to the current Alibaba Cloud account, you do not need to specify this parameter.</li>
+         * <li>If the specified CEN instance belongs to another Alibaba Cloud account, specify the Alibaba Cloud account ID of that account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,11 +434,11 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IPv4 CIDR block that you want the office network to use in the virtual private cloud (VPC) of the office network. The system automatically creates a VPC for the office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
+         * <p>The IPv4 CIDR block of the VPC for the office network. This parameter is required for advanced office networks. The system uses automatic creation of a VPC based on the specified IPv4 CIDR block. Use one of the following CIDR blocks or their subnets:</p>
          * <ul>
-         * <li><code>10.0.0.0/12</code> (subnet mask range: 12 to 14 bits)</li>
-         * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
-         * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
+         * <li><code>10.0.0.0/12</code> (valid mask range: 12 to 24 bits)</li>
+         * <li><code>172.16.0.0/12</code> (valid mask range: 12 to 24 bits)</li>
+         * <li><code>192.168.0.0/16</code> (valid mask range: 16 to 24 bits)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +451,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * ClientId.
+         * <p>The client ID registered with the identity provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2c8f7e4-1b3d-4c5e-9f0a-6d7b8c9e****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -450,7 +463,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * ClientSecret.
+         * <p>The client secret registered with the identity provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sct-9f3e2d1c****</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("ClientSecret", clientSecret);
@@ -459,23 +475,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create a CloudBox-based office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether the office network is a CloudBox office network.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -487,9 +487,9 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+         * <p>The access method allowed when connecting to cloud desktops.</p>
          * <blockquote>
-         * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````</p>
+         * <p>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. If this parameter is set to <code>VPC</code> or <code>Any</code>, the system automatically activates the PrivateLink service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -502,7 +502,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name of the enterprise AD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain.local</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -511,7 +514,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Eid.
+         * <p>The enterprise ID (EID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-1234abcd****</p>
          */
         public Builder eid(String eid) {
             this.putQueryParameter("Eid", eid);
@@ -520,12 +526,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to grant local administrator permissions to users who use cloud desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -537,23 +538,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false (default)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to enable public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -577,7 +562,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the office network. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestOfficeSite_Simple</p>
@@ -589,7 +574,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -602,7 +587,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID of the identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72f988bf-86f1-41af-91ab-2d7cd011****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
@@ -611,7 +599,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.</p>
+         * <p>The ID of the vSwitch in the VPC. This parameter is required when you create a CloudBox office network.</p>
          */
         public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -620,7 +608,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/335132.html">SendVerifyCode</a> operation to obtain the verification code.</p>
+         * <p>The verification code. If the specified CEN instance belongs to another Alibaba Cloud account, call <a href="https://help.aliyun.com/document_detail/335132.html">SendVerifyCode</a> to obtain the verification code first.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -632,12 +620,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The network type of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>standard: advanced</li>
-         * <li>basic: basic</li>
-         * </ul>
+         * <p>The type of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>

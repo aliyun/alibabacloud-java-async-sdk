@@ -74,7 +74,7 @@ public class DescribeTimerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class DescribeTimerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

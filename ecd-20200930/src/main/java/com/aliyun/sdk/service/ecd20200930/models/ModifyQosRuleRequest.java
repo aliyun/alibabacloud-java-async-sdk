@@ -102,7 +102,10 @@ public class ModifyQosRuleRequest extends Request {
         } 
 
         /**
-         * Download.
+         * <p>The maximum downstream bandwidth. The unit is Mbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder download(Integer download) {
             this.putQueryParameter("Download", download);
@@ -111,6 +114,7 @@ public class ModifyQosRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the QoS rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ModifyQosRuleRequest extends Request {
         }
 
         /**
-         * QosRuleName.
+         * <p>The name of the QoS rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder qosRuleName(String qosRuleName) {
             this.putQueryParameter("QosRuleName", qosRuleName);
@@ -132,7 +139,10 @@ public class ModifyQosRuleRequest extends Request {
         }
 
         /**
-         * Upload.
+         * <p>The maximum upstream bandwidth. The unit is Mbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder upload(Integer upload) {
             this.putQueryParameter("Upload", upload);

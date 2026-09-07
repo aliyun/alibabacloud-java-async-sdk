@@ -60,6 +60,7 @@ public class DeleteQosRulesRequest extends Request {
         } 
 
         /**
+         * <p>A list of QoS rule IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder qosRuleId(java.util.List<String> qosRuleId) {

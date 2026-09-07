@@ -116,7 +116,7 @@ public class DownloadCdsFileRequest extends Request {
         } 
 
         /**
-         * <p>The enterprise drive ID.</p>
+         * <p>The enterprise cloud disk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+cds-643267****</p>

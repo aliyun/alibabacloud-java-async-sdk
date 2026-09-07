@@ -90,7 +90,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
+         * <p>The cloud computer IDs. You can specify 1 to 20 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -100,7 +100,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>The automatic snapshot policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

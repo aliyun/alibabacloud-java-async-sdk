@@ -171,7 +171,7 @@ public class DescribeConfigGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-i1ruuudp92qpj****</p>
@@ -183,7 +183,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the configuration groups.</p>
+         * <p>The list of configuration group IDs.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -192,10 +192,10 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>The configuration group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>Scheduled task configuration</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,7 +204,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -228,11 +228,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The service type of the configuration group.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The product type used by the configuration group.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
@@ -244,10 +240,10 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,7 +252,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The status of the configuration groups.</p>
+         * <p>The list of configuration group statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -265,11 +261,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the configuration group.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Timer: the scheduled task type.</li>
-         * </ul>
+         * <p>The configuration group type.</p>
          * 
          * <strong>example:</strong>
          * <p>Timer</p>

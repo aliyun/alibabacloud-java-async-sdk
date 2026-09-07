@@ -80,7 +80,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -91,7 +91,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of order IDs.</p>
+         * <p>The order IDs.</p>
          */
         public Builder orderIds(java.util.List<Long> orderIds) {
             this.orderIds = orderIds;
@@ -99,7 +99,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

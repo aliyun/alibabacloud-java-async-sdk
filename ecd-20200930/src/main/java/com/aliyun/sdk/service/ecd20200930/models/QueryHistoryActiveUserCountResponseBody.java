@@ -67,7 +67,7 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
         } 
 
         /**
-         * ActiveUserCount.
+         * <p>The active user count metrics.</p>
          */
         public Builder activeUserCount(ActiveUserCount activeUserCount) {
             this.activeUserCount = activeUserCount;
@@ -75,7 +75,10 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890abcdefg</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
             } 
 
             /**
-             * DailyActiveUserCount.
+             * <p>The daily active user count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder dailyActiveUserCount(Integer dailyActiveUserCount) {
                 this.dailyActiveUserCount = dailyActiveUserCount;
@@ -149,7 +155,10 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyActiveUserCount.
+             * <p>The monthly active user count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder monthlyActiveUserCount(Integer monthlyActiveUserCount) {
                 this.monthlyActiveUserCount = monthlyActiveUserCount;

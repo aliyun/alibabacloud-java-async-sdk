@@ -186,7 +186,7 @@ public class ListCdsFilesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the enterprise drive.</p>
+         * <p>The enterprise cloud drive ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,10 +199,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user to which the network disk is assigned.</p>
+         * <p>The ID of the user to whom the cloud drive is assigned.</p>
          * 
          * <strong>example:</strong>
-         * <p>testUser</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -211,7 +211,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the files to be queried.</p>
+         * <p>The list of file IDs to query.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
@@ -221,7 +221,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the team space.</p>
+         * <p>The team space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-i1ruuudp92qpj****</p>
@@ -233,7 +233,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 100.</p>
+         * <p>The maximum number of entries per page in a paging query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -245,10 +245,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the value of the <code>NextToken</code> parameter returned in the last call to the operation. You do not need to set this parameter when you call the operation for the first time.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
-         * <p>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</p>
+         * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -257,18 +257,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The sorting method of the files.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CreateTimeDesc: sorts the by creation time in descending order.</li>
-         * <li>ModifiedTimeAsc: sort the by modification time in ascending order.</li>
-         * <li>NameDesc: sorts the by file name in descending order.</li>
-         * <li>SizeAsc: sorts by file size in ascending order.</li>
-         * <li>ModifiedTimeDesc: sort the by modification time in descending order.</li>
-         * <li>CreateTimeAsc: sorts the by creation time in ascending order.</li>
-         * <li>SizeDesc: sorts by file size in descending order.</li>
-         * <li>NameAsc: sorts by file name in ascending order.</li>
-         * </ul>
+         * <p>The sort order of the file list.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateTimeDesc</p>
@@ -280,7 +269,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The parent folder ID. You can obtain the value by using the response parameter <code>FileId</code> of this operation.</p>
+         * <p>The parent file ID. You can obtain this value from the FileId response parameter of this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>63636837e47e5a24a8a940218bef395c210e****</p>
@@ -292,7 +281,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the logon region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by cloud computers.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -305,11 +294,6 @@ public class ListCdsFilesRequest extends Request {
 
         /**
          * <p>The file status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>available: returns only normal file.</li>
-         * <li>uploading: returns only the of objects that are being uploaded.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>available</p>

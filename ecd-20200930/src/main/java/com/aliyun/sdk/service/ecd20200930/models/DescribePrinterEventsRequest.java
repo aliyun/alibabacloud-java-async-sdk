@@ -215,7 +215,10 @@ public class DescribePrinterEventsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -224,7 +227,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * <p>The cloud computer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop-001</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -233,7 +239,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the current time is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-31T06:32:31Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -242,7 +251,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The logon user information, which is a RAM user ID or an Active Directory (AD) username. If you do not specify this parameter, events of all users in the region are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user001</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -251,7 +263,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * <p>The list of end user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -260,7 +272,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -269,7 +284,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -278,7 +296,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * PrinterDriver.
+         * <p>The printer driver name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HP LaserJet PCL 6</p>
          */
         public Builder printerDriver(String printerDriver) {
             this.putQueryParameter("PrinterDriver", printerDriver);
@@ -287,7 +308,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * PrinterName.
+         * <p>The printer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HP LaserJet Pro</p>
          */
         public Builder printerName(String printerName) {
             this.putQueryParameter("PrinterName", printerName);
@@ -296,7 +320,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * PrinterRedirType.
+         * <p>The printer redirection type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder printerRedirType(Integer printerRedirType) {
             this.putQueryParameter("PrinterRedirType", printerRedirType);
@@ -305,6 +332,7 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,7 +345,10 @@ public class DescribePrinterEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the query starts from the time that is calculated backward from the time specified by <code>EndTime</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T04:10:21Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

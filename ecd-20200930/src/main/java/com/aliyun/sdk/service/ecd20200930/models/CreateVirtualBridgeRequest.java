@@ -173,7 +173,10 @@ public class CreateVirtualBridgeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -182,7 +185,10 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -191,7 +197,10 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
-         * BridgeLevel.
+         * <p>The bridge specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vb.ultra</p>
          */
         public Builder bridgeLevel(String bridgeLevel) {
             this.putQueryParameter("BridgeLevel", bridgeLevel);
@@ -200,6 +209,7 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
+         * <p>The office network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +222,10 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The payment callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://wya.wuying.aliyun.com/mobileClaw">https://wya.wuying.aliyun.com/mobileClaw</a></p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -221,7 +234,29 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
+         * <ul>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * </ul>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -230,7 +265,10 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of duration for the subscription billable methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -239,7 +277,10 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -248,6 +289,7 @@ public class CreateVirtualBridgeRequest extends Request {
         }
 
         /**
+         * <p>The region ID. This feature is not region-specific. Set this parameter to cn-shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

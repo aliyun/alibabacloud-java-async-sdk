@@ -243,7 +243,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         } 
 
         /**
-         * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.</p>
+         * <p>The hostname of the domain controller. The hostname must comply with Windows hostname naming conventions.</p>
          * 
          * <strong>example:</strong>
          * <p>beijing-ad01</p>
@@ -255,7 +255,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The hostname of the secondary domain controller.</p>
+         * <p>The hostname of the backup domain controller.</p>
          * 
          * <strong>example:</strong>
          * <p>dc002</p>
@@ -267,7 +267,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the DNS server corresponding to the secondary domain controller.</p>
+         * <p>The DNS address of the backup domain controller.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.2.100</p>
@@ -279,7 +279,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses of the DNS servers corresponding to the enterprise ADs. You can specify only one DNS IP address.</p>
+         * <p>The IP address of the DNS server corresponding to the enterprise AD. Currently, only one IP address can be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.<em>.</em></p>
@@ -291,7 +291,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the enterprise AD system. You can register each domain name only once.</p>
+         * <p>The domain name of the enterprise AD. The same domain name can be registered only once.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -303,7 +303,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The password of the domain administrator. The username can be up to 64 characters in length.</p>
+         * <p>The password of the domain administrator. The password can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>testPassword</p>
@@ -317,7 +317,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         /**
          * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
          * <blockquote>
-         * <p>Specify the value of the sAMAccountName parameter instead of the value of the userPrincipalName parameter as the username.</p>
+         * <p>Use sAMAccountName for the username. Do not use userPrincipalName.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -331,22 +331,6 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
 
         /**
          * <p>Specifies whether to enable multi-factor authentication (MFA).</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -358,10 +342,10 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The name of the organizational unit (OU) in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to obtain OUs.</p>
+         * <p>The organizational unit (OU) of the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the value.</p>
          * 
          * <strong>example:</strong>
-         * <p>oldad.com/Domain Controllers</p>
+         * <p>example.com/Domain Controllers</p>
          */
         public Builder OUName(String OUName) {
             this.putQueryParameter("OUName", OUName);
@@ -383,7 +367,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The office network name. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -395,7 +379,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -408,7 +392,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses of the DNS servers corresponding to the enterprise AD subdomains. You can specify only one DNS IP address. If you specify <code>SubDomainName</code> and leave this parameter empty, the value is the same as that of the enterprise AD domain.</p>
+         * <p>The DNS address of the enterprise AD subdomain. Currently, only one address can be specified. If <code>SubDomainName</code> is specified but this parameter is not, the subdomain DNS defaults to the same value as the parent domain.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.<em>.</em></p>
@@ -420,10 +404,10 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * <p>The name of the subdomain in the enterprise AD domain.</p>
+         * <p>The domain name of the enterprise AD subdomain.</p>
          * 
          * <strong>example:</strong>
-         * <p>childexample.com</p>
+         * <p>child.example.com</p>
          */
         public Builder subDomainName(String subDomainName) {
             this.putQueryParameter("SubDomainName", subDomainName);

@@ -80,7 +80,7 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         } 
 
         /**
-         * AvgMetricList.
+         * <p>The list of average values of monitoring metrics.</p>
          */
         public Builder avgMetricList(java.util.List<AvgMetricList> avgMetricList) {
             this.avgMetricList = avgMetricList;
@@ -88,7 +88,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>269BDB16-2CD8-4865-84BD-11C40BC2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * EndUserId.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -196,7 +205,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * EstablishmentTime.
+             * <p>The time when the session was created. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-17T14:51:53Z</p>
              */
             public Builder establishmentTime(String establishmentTime) {
                 this.establishmentTime = establishmentTime;
@@ -204,7 +216,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalUserName.
+             * <p>The external username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUserName</p>
              */
             public Builder externalUserName(String externalUserName) {
                 this.externalUserName = externalUserName;
@@ -212,7 +227,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sz-sygc-07-03</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -474,7 +492,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgValue.
+             * <p>The aggregated metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder avgValue(Float avgValue) {
                 this.avgValue = avgValue;
@@ -482,7 +503,15 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method of the cloud desktop. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: Pay-as-you-go.</li>
+             * <li>PrePaid: Subscription.</li>
+             * </ul>
+             * <p>Default value: PostPaid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -490,7 +519,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -498,7 +530,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * <p>The cloud desktop pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-bogo95eob5avnis9k</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -506,7 +541,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-bx9i0nsjd3zmibnzq</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -514,7 +552,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The desktop name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C-051</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -522,7 +563,20 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * <p>The cloud desktop status. Valid values:</p>
+             * <ul>
+             * <li>Stopped: Stopped.</li>
+             * <li>Starting: Starting.</li>
+             * <li>Rebuilding: Rebuilding.</li>
+             * <li>Running: Running.</li>
+             * <li>Stopping: Stopping.</li>
+             * <li>Expired: Expired.</li>
+             * <li>Deleted: Deleted.</li>
+             * <li>Pending: Pending.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -530,7 +584,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopType.
+             * <p>The desktop specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.enterprise_office.8c16g</p>
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -538,7 +595,7 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * <p>The list of authorized users.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -546,7 +603,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * <p>The GPU memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -554,7 +614,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlag.
+             * <p>The management flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -562,7 +625,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -570,7 +636,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * MultiResource.
+             * <p>Indicates whether the cloud desktop is a multi-resource shared type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder multiResource(Boolean multiResource) {
                 this.multiResource = multiResource;
@@ -578,7 +647,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The system image type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Winserver2025</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -586,7 +658,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -594,7 +669,7 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The list of session information.</p>
              */
             public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
@@ -602,7 +677,10 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * SubPayType.
+             * <p>The payment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>monthPackage</p>
              */
             public Builder subPayType(String subPayType) {
                 this.subPayType = subPayType;

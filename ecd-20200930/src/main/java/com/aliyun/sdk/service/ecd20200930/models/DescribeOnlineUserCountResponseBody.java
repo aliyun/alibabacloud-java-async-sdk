@@ -106,7 +106,10 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AdAssignedUserCount.
+         * <p>The number of AD users with assigned desktops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder adAssignedUserCount(Long adAssignedUserCount) {
             this.adAssignedUserCount = adAssignedUserCount;
@@ -114,7 +117,10 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
         }
 
         /**
-         * AssignedUserCount.
+         * <p>The number of users with assigned desktops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder assignedUserCount(Long assignedUserCount) {
             this.assignedUserCount = assignedUserCount;
@@ -122,7 +128,10 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
         }
 
         /**
-         * OnlineUserCount.
+         * <p>The number of online users, including convenience users and AD users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder onlineUserCount(Long onlineUserCount) {
             this.onlineUserCount = onlineUserCount;
@@ -130,7 +139,10 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
         }
 
         /**
-         * SimpleAssignedUserCount.
+         * <p>The number of convenience users with assigned desktops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder simpleAssignedUserCount(Long simpleAssignedUserCount) {
             this.simpleAssignedUserCount = simpleAssignedUserCount;

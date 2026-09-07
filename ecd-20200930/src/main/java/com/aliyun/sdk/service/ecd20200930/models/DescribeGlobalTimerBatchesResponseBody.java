@@ -93,7 +93,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -101,7 +104,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E54EB497-D7B7-5F04-B744-D8DFA7B******</p>
@@ -120,7 +126,7 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -251,7 +257,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchId.
+             * <p>The batch ID of the scheduled task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccg-0cvfvf6u1enx1****</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -259,7 +268,11 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the record was created.
+             * The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-03T08:27:29Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -267,7 +280,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * <p>The number of tasks that failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(Integer failedCount) {
                 this.failedCount = failedCount;
@@ -275,7 +291,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             }
 
             /**
-             * RunningCount.
+             * <p>The number of tasks that are being executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -283,7 +302,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             }
 
             /**
-             * SkippedCount.
+             * <p>The number of tasks that were skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder skippedCount(Integer skippedCount) {
                 this.skippedCount = skippedCount;
@@ -291,7 +313,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             }
 
             /**
-             * SucceedCount.
+             * <p>The total number of tasks that were executed successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder succeedCount(Integer succeedCount) {
                 this.succeedCount = succeedCount;
@@ -299,7 +324,10 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
             }
 
             /**
-             * TimerType.
+             * <p>The type of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TimerBoot</p>
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;

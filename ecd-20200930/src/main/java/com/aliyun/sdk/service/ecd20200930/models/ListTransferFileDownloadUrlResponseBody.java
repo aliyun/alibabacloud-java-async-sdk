@@ -67,7 +67,10 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1F01499-8F3D-5657-91AD-48177EB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Urls.
+         * <p>The list of file download URL information.</p>
          */
         public Builder urls(java.util.List<Urls> urls) {
             this.urls = urls;
@@ -167,7 +170,10 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trf-i4pz8emx2k2fr****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -175,7 +181,10 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>document.txt</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -183,7 +192,10 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +203,10 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The file download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx">http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

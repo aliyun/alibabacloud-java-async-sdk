@@ -88,7 +88,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to retrieve the list of regions supported by Alibaba Cloud Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * VpcAccessZone.
+         * <p>Specifies whether the zone supports VPC access.</p>
          */
         public Builder vpcAccessZone(Boolean vpcAccessZone) {
             this.putQueryParameter("VpcAccessZone", vpcAccessZone);
@@ -110,7 +110,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * <p>The type of the zone. Default value: <code>AvailabilityZone</code>. This value indicates Alibaba Cloud zones.</p>
+         * <p>The type of zone to query. Default value: <code>AvailabilityZone</code>, which indicates a standard cloud zone.</p>
          * 
          * <strong>example:</strong>
          * <p>AvailabilityZone</p>

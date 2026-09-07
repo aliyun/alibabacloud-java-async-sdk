@@ -88,7 +88,10 @@ public class DescribeCustomizedListHeadersRequest extends Request {
         } 
 
         /**
-         * LangType.
+         * <p>The language type for exporting the WUYING Workspace list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -97,7 +100,10 @@ public class DescribeCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * ListType.
+         * <p>The list type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder listType(String listType) {
             this.putQueryParameter("ListType", listType);
@@ -106,6 +112,7 @@ public class DescribeCustomizedListHeadersRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

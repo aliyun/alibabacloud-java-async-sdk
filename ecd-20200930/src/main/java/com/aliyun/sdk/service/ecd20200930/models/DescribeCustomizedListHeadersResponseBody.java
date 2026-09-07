@@ -67,7 +67,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The list of table headers.</p>
          */
         public Builder headers(java.util.List<Headers> headers) {
             this.headers = headers;
@@ -75,7 +75,10 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayType.
+             * <p>The display type of the table header. You can invoke <a href="https://help.aliyun.com/document_detail/452324.html">ModifyCustomizedListHeaders</a> to change it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>display</p>
              */
             public Builder displayType(String displayType) {
                 this.displayType = displayType;
@@ -162,7 +168,10 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * HeaderKey.
+             * <p>The key of the table header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pay_type</p>
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;
@@ -170,7 +179,10 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * HeaderName.
+             * <p>The name of the table header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System disk/Data disk</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;

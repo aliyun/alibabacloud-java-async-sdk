@@ -257,7 +257,7 @@ public class DescribeImagesRequest extends Request {
         } 
 
         /**
-         * <p>The instance type of the cloud computer. You can call the <a href="https://help.aliyun.com/document_detail/436816.html">DescribeDesktopTypes</a> operation to obtain the parameter value.</p>
+         * <p>The cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/436816.html">DescribeDesktopTypes</a> to obtain this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd.graphics.xlarge</p>
@@ -269,7 +269,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The image version.</p>
+         * <p>The image version information.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.3-R-20220616.133609</p>
@@ -281,23 +281,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the images are GPU-accelerated images.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether the image is a GPU image.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -309,7 +293,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The version of the GPU driver.</p>
+         * <p>The GPU driver version.</p>
          * 
          * <strong>example:</strong>
          * <p>417.22</p>
@@ -321,7 +305,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the images. You can specify one or more image IDs.</p>
+         * <p>The image ID. You can specify one or more image IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>m-gx2x1dhsmusr2****</p>
@@ -345,7 +329,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The state of the image.</p>
+         * <p>The image status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -357,7 +341,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The type of the image.</p>
+         * <p>The image type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -369,7 +353,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The language of the OS.</p>
+         * <p>The operating system language.</p>
          * 
          * <strong>example:</strong>
          * <p>en-US</p>
@@ -381,10 +365,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <ul>
-         * <li>Maximum value: 100.</li>
-         * <li>Default value: 10.</li>
+         * <li>Maximum value: 100</li>
+         * <li>Default value: 10</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +381,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.</p>
+         * <p>The pagination token for the next query. An empty value indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -409,23 +393,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The type of the operating system of the images. Default value: <code>null</code>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Linux</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Windows</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The operating system type. Default value: <code>null</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -438,11 +406,6 @@ public class DescribeImagesRequest extends Request {
 
         /**
          * <p>The protocol type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>HDX: High-definition Experience (HDX) protocol</li>
-         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -454,7 +417,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

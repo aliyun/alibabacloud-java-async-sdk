@@ -145,15 +145,10 @@ public class ModifyDiskSpecRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the automatic payment feature.</p>
+         * <p>Specifies whether to enable automatic payment.</p>
          * <ul>
-         * <li>If you set the value to <code>true</code>, ensure your account has sufficient balance to avoid generating abnormal orders.</li>
-         * <li>If you set the value to <code>false</code>, go to the <strong>Expenses and Costs</strong> page to complete the payment based on the order number.</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true (default): enables the automatic payment feature.</li>
-         * <li>false: generates the order and manually complete the payment.</li>
+         * <li>If you set this parameter to <code>true</code>, make sure that your account balance is sufficient. Otherwise, abnormal orders are generated.</li>
+         * <li>If you set this parameter to <code>false</code>, you can log on to the console and make the payment on the <strong>Expenses and Costs</strong> page based on the returned order ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,11 +161,11 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecd-2yjhqxo1monxxxxxx</p>
+         * <p>ecd-2yjhqxo1monbf****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -179,7 +174,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the sales promotion activity. You can call the DescribePrice operation to obtain the IDs of matching sales promotion activities.</p>
+         * <p>The promotion ID. You can obtain the list of matched promotion IDs by calling the pricing query operation.</p>
          * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -191,7 +186,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +199,10 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of the resource ownership in reseller mode. You do not need to specify this parameter if you are not in reseller mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -213,14 +211,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * <p>The PL of the system disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PL1</li>
-         * <li>PL0</li>
-         * <li>PL3</li>
-         * <li>PL2</li>
-         * </ul>
+         * <p>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -232,14 +223,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * <p>The PL of the data disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PL1</li>
-         * <li>PL0</li>
-         * <li>PL3</li>
-         * <li>PL2</li>
-         * </ul>
+         * <p>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>

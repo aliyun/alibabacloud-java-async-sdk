@@ -67,7 +67,7 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudDrivePermissionModels.
+         * <p>The list of permission settings for the enterprise cloud drive.</p>
          */
         public Builder cloudDrivePermissionModels(java.util.List<CloudDrivePermissionModels> cloudDrivePermissionModels) {
             this.cloudDrivePermissionModels = cloudDrivePermissionModels;
@@ -75,7 +75,10 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07E5B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndUsers.
+             * <p>The list of end user IDs.</p>
              */
             public Builder endUsers(java.util.List<String> endUsers) {
                 this.endUsers = endUsers;
@@ -149,7 +152,15 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Permission.
+             * <p>The file transfer permission between the enterprise cloud drive and the on-premises device for the user. Valid values:</p>
+             * <ul>
+             * <li>CDS_CREATE_DOWNLOAD: has both upload and download permissions.</li>
+             * <li>CDS_DOWNLOAD: has only download permission.</li>
+             * <li>CDS_CREATE: has only upload permission.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CDS_DOWNLOAD</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;

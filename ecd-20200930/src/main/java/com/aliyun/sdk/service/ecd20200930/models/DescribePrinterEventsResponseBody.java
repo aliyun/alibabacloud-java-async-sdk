@@ -80,7 +80,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Events.
+         * <p>The user events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -88,7 +88,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E54EB497-D7B7-5F04-B744-D8DFA7B******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -318,7 +324,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * DesktopId.
+             * <p>The cloud computer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-8fupvkhg0aayu****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -326,7 +335,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud computer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desktop-001</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -334,7 +346,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user001</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -342,7 +357,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5651188b-3070-d1cc-5311-75753d59****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -350,7 +368,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterDriver.
+             * <p>The printer driver name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HP LaserJet PCL 6</p>
              */
             public Builder printerDriver(String printerDriver) {
                 this.printerDriver = printerDriver;
@@ -358,7 +379,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterJobCopies.
+             * <p>The number of copies to print.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder printerJobCopies(Integer printerJobCopies) {
                 this.printerJobCopies = printerJobCopies;
@@ -366,7 +390,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterJobName.
+             * <p>The print job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report.pdf</p>
              */
             public Builder printerJobName(String printerJobName) {
                 this.printerJobName = printerJobName;
@@ -374,7 +401,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterJobPages.
+             * <p>The total number of pages in the print job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder printerJobPages(Integer printerJobPages) {
                 this.printerJobPages = printerJobPages;
@@ -382,7 +412,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterJobPrintedPages.
+             * <p>The number of printed pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder printerJobPrintedPages(Integer printerJobPrintedPages) {
                 this.printerJobPrintedPages = printerJobPrintedPages;
@@ -390,7 +423,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterJobSize.
+             * <p>The print job size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2632446</p>
              */
             public Builder printerJobSize(Long printerJobSize) {
                 this.printerJobSize = printerJobSize;
@@ -398,7 +434,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterJobTime.
+             * <p>The print job time, in millisecond-precision UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706140800000</p>
              */
             public Builder printerJobTime(Long printerJobTime) {
                 this.printerJobTime = printerJobTime;
@@ -406,7 +445,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterName.
+             * <p>The printer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HP LaserJet Pro</p>
              */
             public Builder printerName(String printerName) {
                 this.printerName = printerName;
@@ -414,7 +456,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterPort.
+             * <p>The printer port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USB001</p>
              */
             public Builder printerPort(String printerPort) {
                 this.printerPort = printerPort;
@@ -422,7 +467,10 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterRedirType.
+             * <p>The printer redirection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder printerRedirType(Integer printerRedirType) {
                 this.printerRedirType = printerRedirType;

@@ -106,7 +106,7 @@ public class ModifyTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The execution result of the operation. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class ModifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class ModifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -150,7 +150,7 @@ public class ModifyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values: true false</p>
+         * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

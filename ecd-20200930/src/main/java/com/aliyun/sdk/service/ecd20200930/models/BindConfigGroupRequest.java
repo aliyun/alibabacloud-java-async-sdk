@@ -89,7 +89,7 @@ public class BindConfigGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,10 +102,10 @@ public class BindConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,7 +114,7 @@ public class BindConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The resources to which you want to bind the configuration group.</p>
+         * <p>The resource information to associate.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceInfos(java.util.List<ResourceInfos> resourceInfos) {
@@ -209,11 +209,7 @@ public class BindConfigGroupRequest extends Request {
             } 
 
             /**
-             * <p>The service type of the resource.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-             * </ul>
+             * <p>The product type to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>CLOUD_DESKTOP</p>
@@ -224,7 +220,7 @@ public class BindConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-1bo4xotjvwyon****</p>
@@ -235,7 +231,7 @@ public class BindConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the resource.</p>
+             * <p>The region where the resource resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -246,12 +242,7 @@ public class BindConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RESOURCE_GROUP: the resource group</li>
-             * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-             * </ul>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>CLOUD_DESKTOP</p>

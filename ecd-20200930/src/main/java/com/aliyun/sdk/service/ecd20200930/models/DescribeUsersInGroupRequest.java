@@ -187,12 +187,7 @@ public class DescribeUsersInGroupRequest extends Request {
         } 
 
         /**
-         * <p>The status of the desktop connection for the end user.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: Disconnected.</li>
-         * <li>1: Connected.</li>
-         * </ul>
+         * <p>The connection state of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,7 +199,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud computer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +224,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the authorized users.</p>
+         * <p>The list of authorized user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -238,7 +233,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+         * <p>The fuzzy query string. All results that contain this character string are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -250,7 +245,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <ul>
          * <li>Maximum value: 100.</li>
          * <li>Default value: 10.</li>
@@ -266,7 +261,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * <p>The pagination token for the next query. An empty value indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -278,7 +273,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organization to which the end user belongs.</p>
+         * <p>The ID of the organization to which the user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>org-d0fua2oyukw8j****</p>
@@ -291,14 +286,9 @@ public class DescribeUsersInGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to query user details.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder queryUserDetail(Boolean queryUserDetail) {
             this.putQueryParameter("QueryUserDetail", queryUserDetail);
@@ -307,7 +297,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

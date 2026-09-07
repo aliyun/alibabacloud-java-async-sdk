@@ -132,7 +132,7 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The CRON expression.</p>
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 20 16 ? * 1,2,3,4,5,6,7</p>
@@ -144,7 +144,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The type of cloud disk for which the automatic snapshot policy creates snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -166,10 +169,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+         * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>Automatic system snapshot</p>
+         * <p>系统自动快照</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -178,7 +181,7 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,10 +194,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+         * <p>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>2</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);

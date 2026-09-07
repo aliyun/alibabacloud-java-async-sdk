@@ -67,7 +67,7 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The RAM directory ID.</p>
+         * <p>The ID of the RAM-type directory.</p>
          * 
          * <strong>example:</strong>
          * <p>dri-uf62w3qzt4aigvlcb****</p>

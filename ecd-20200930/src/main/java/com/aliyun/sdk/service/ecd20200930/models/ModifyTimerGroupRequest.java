@@ -116,7 +116,7 @@ public class ModifyTimerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The scheduled tasks.</p>
+         * <p>The configuration information of scheduled tasks.</p>
          */
         public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
             this.putQueryParameter("ConfigTimers", configTimers);
@@ -126,6 +126,9 @@ public class ModifyTimerGroupRequest extends Request {
 
         /**
          * <p>The description of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,7 +137,7 @@ public class ModifyTimerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +151,9 @@ public class ModifyTimerGroupRequest extends Request {
 
         /**
          * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -156,10 +162,10 @@ public class ModifyTimerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -435,7 +441,10 @@ public class ModifyTimerGroupRequest extends Request {
             } 
 
             /**
-             * AppointmentTimer.
+             * <p>The appointment timer for executing scheduled tasks at specified time points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764660600967</p>
              */
             public Builder appointmentTimer(Long appointmentTimer) {
                 this.appointmentTimer = appointmentTimer;
@@ -443,7 +452,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * CreateSnapshot.
+             * <p>Specifies whether to create a snapshot.</p>
              */
             public Builder createSnapshot(Boolean createSnapshot) {
                 this.createSnapshot = createSnapshot;
@@ -451,7 +460,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * EndCronExpression.
+             * <p>The cron expression for the end time of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 18 ? * 1-5</p>
              */
             public Builder endCronExpression(String endCronExpression) {
                 this.endCronExpression = endCronExpression;
@@ -459,7 +471,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * Enforce.
+             * <p>Specifies whether to forcefully execute the task. If this parameter is set to true, the scheduled task is forcefully executed regardless of the cloud desktop and connection status.</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -467,7 +479,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-4zfb6zj728hhr****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -475,7 +490,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>The time interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -483,7 +501,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * IpSegments.
+             * <p>The list of IP CIDR blocks that take effect.</p>
              */
             public Builder ipSegments(java.util.List<String> ipSegments) {
                 this.ipSegments = ipSegments;
@@ -491,7 +509,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * LockScreenTime.
+             * <p>The duration of inactivity before the screen is locked for the no-operation lock screen feature. Unit: minutes. Only AD-joined cloud desktops are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder lockScreenTime(Integer lockScreenTime) {
                 this.lockScreenTime = lockScreenTime;
@@ -499,7 +520,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * NotificationTime.
+             * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder notificationTime(Integer notificationTime) {
                 this.notificationTime = notificationTime;
@@ -507,7 +531,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * OperationType.
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shutdown</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -515,7 +542,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * ProcessWhitelist.
+             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -523,7 +550,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * ResetType.
+             * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -531,7 +561,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * StartCronExpression.
+             * <p>The cron expression for the start time of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 8 ? * 1-5</p>
              */
             public Builder startCronExpression(String startCronExpression) {
                 this.startCronExpression = startCronExpression;
@@ -539,7 +572,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * TimerOrder.
+             * <p>The execution order number of the timer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timerOrder(Integer timerOrder) {
                 this.timerOrder = timerOrder;
@@ -547,7 +583,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone used by the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -555,7 +594,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -563,7 +605,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * VerificationNotificationTime.
+             * <p>The advance notification time before verification is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder verificationNotificationTime(Integer verificationNotificationTime) {
                 this.verificationNotificationTime = verificationNotificationTime;
@@ -571,7 +616,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * VerificationTime.
+             * <p>The verification wait duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder verificationTime(Integer verificationTime) {
                 this.verificationTime = verificationTime;
@@ -755,7 +803,7 @@ public class ModifyTimerGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow end users to configure the scheduled task.</p>
+             * <p>Specifies whether to allow end users to configure scheduled tasks on their own.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -766,9 +814,9 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The cron expression specified in the scheduled task.</p>
+             * <p>The cron expression of the scheduled task.</p>
              * <blockquote>
-             * <p> The time must be in UTC. For example, if your local time is 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
+             * <p>Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -780,7 +828,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to forcibly execute the scheduled task. A value of true specifies the scheduled task will run forcefully, ignoring the cloud computer and connection status.</p>
+             * <p>Specifies whether to forcefully execute the task. If this parameter is set to true, the scheduled task is forcefully executed regardless of the cloud desktop and connection status.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -791,7 +839,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+             * <p>The time interval. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -802,7 +850,10 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * NotificationTime.
+             * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder notificationTime(Integer notificationTime) {
                 this.notificationTime = notificationTime;
@@ -810,12 +861,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Hibernate: scheduled hibernation.</li>
-             * <li>Shutdown: scheduled shutdown.</li>
-             * </ul>
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -826,7 +872,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</p>
+             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -834,13 +880,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The reset option.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
-             * <li>RESET_TYPE_USER_DISK: resets the data disk.</li>
-             * <li>RESET_TYPE_BOTH: resets the system disk and data disk.</li>
-             * </ul>
+             * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
              * 
              * <strong>example:</strong>
              * <p>RESET_TYPE_SYSTEM</p>
@@ -851,7 +891,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * SegmentTimers.
+             * <p>The list of segment timer configurations.</p>
              */
             public Builder segmentTimers(java.util.List<SegmentTimers> segmentTimers) {
                 this.segmentTimers = segmentTimers;
@@ -860,21 +900,9 @@ public class ModifyTimerGroupRequest extends Request {
 
             /**
              * <p>The type of the scheduled task.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
-             * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
-             * <li>TimerBoot: scheduled start.</li>
-             * <li>TimerReset: scheduled reset.</li>
-             * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
-             * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
-             * <li>TimerShutdown: scheduled shutdown.</li>
-             * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
-             * <li>TimerReboot: Restarts the cloud computers on schedule.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>TIMER_BOOT</p>
+             * <p>TimerBoot</p>
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;
@@ -882,12 +910,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The method to trigger the scheduled task upon inactivity.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Advanced: intelligent detection.</li>
-             * <li>Standard: standard detection.</li>
-             * </ul>
+             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>

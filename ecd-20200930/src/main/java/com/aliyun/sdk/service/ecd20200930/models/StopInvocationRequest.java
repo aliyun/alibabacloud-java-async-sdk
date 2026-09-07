@@ -105,7 +105,7 @@ public class StopInvocationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
+         * <p>t-hz059ngm63k****</p>
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);

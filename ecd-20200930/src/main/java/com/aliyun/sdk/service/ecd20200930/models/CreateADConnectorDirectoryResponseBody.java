@@ -93,7 +93,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of AD connectors.</p>
+         * <p>The information about AD Connectors.</p>
          */
         public Builder adConnectors(java.util.List<AdConnectors> adConnectors) {
             this.adConnectors = adConnectors;
@@ -112,7 +112,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3FE99D5E-93A1-493F-B1CB-0ABD4D05BEFF</p>
@@ -179,10 +179,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection address.</p>
+             * <p>The endpoint.</p>
              * 
              * <strong>example:</strong>
-             * <p><code>127.0.**.**</code></p>
+             * <p>127.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;

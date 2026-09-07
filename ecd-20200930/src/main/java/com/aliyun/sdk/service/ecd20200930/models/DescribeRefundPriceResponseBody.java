@@ -75,7 +75,7 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -144,7 +144,8 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unit of currency (USD).</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+             * &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -155,7 +156,7 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of the refund.</p>
+             * <p>The refund amount for this unsubscription.</p>
              * 
              * <strong>example:</strong>
              * <p>3990.75</p>

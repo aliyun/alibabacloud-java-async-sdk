@@ -256,7 +256,11 @@ public class DescribeDesktopMetadataRequest extends Request {
         } 
 
         /**
-         * CreationTimeStart.
+         * <p>The time when the cloud computer was created. The time is in UTC and follows the format:
+         * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01T12:00:00Z</p>
          */
         public Builder creationTimeStart(String creationTimeStart) {
             this.putQueryParameter("CreationTimeStart", creationTimeStart);
@@ -265,7 +269,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * DesktopIds.
+         * <p>The list of cloud computer IDs.</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -274,7 +278,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The end user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-user</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -283,7 +290,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The shared cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-i1ruuudp92qpj****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -292,7 +302,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * HostName.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASW-2F-SRV-YXYZ-4.SHPTG</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -301,7 +314,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -310,7 +326,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * IncludeDesktopGroup.
+         * <p>Specifies whether the response includes cloud computers in shared cloud computer groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeDesktopGroup(Boolean includeDesktopGroup) {
             this.putQueryParameter("IncludeDesktopGroup", includeDesktopGroup);
@@ -319,7 +338,12 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -328,7 +352,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -337,7 +364,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceIp.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         public Builder networkInterfaceIp(String networkInterfaceIp) {
             this.putQueryParameter("NetworkInterfaceIp", networkInterfaceIp);
@@ -346,7 +376,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty value indicates that there are no more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -355,7 +388,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-778418****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -364,7 +400,11 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * OperationTimeStart.
+         * <p>The start time of operations performed on the cloud computer. The time is in UTC and follows the format:
+         * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01T12:00:00Z</p>
          */
         public Builder operationTimeStart(String operationTimeStart) {
             this.putQueryParameter("OperationTimeStart", operationTimeStart);
@@ -373,7 +413,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -382,7 +425,10 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * SearchRegionId.
+         * <p>The ID of the region to search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder searchRegionId(String searchRegionId) {
             this.putQueryParameter("SearchRegionId", searchRegionId);

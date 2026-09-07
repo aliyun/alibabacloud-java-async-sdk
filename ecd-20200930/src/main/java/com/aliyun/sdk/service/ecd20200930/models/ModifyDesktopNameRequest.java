@@ -116,7 +116,7 @@ public class ModifyDesktopNameRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -128,7 +128,7 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * DesktopIds.
+         * <p>The list of cloud computer IDs.</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -137,15 +137,15 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * <p>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</p>
+         * <p>The new name of the cloud computer. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must be 1 to 64 characters in length.</li>
-         * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+         * <li>The name cannot exceed 64 characters in length.</li>
+         * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>DemoComputer01</p>
          */
         public Builder newDesktopName(String newDesktopName) {
             this.putQueryParameter("NewDesktopName", newDesktopName);
@@ -154,7 +154,7 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,10 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * UserAssignMode.
+         * <p>The user assignment mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder userAssignMode(String userAssignMode) {
             this.putQueryParameter("UserAssignMode", userAssignMode);

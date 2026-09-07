@@ -171,10 +171,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the enterprise drive.</p>
+         * <p>The ID of the enterprise NAS drive.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou+cds-7782057786</p>
+         * <p>cn-hangzhou+cds-778205****</p>
          */
         public Builder cdsId(String cdsId) {
             this.cdsId = cdsId;
@@ -182,7 +182,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the cloud disk that is created in Cloud Drive Service.</p>
+         * <p>The service name of the cloud storage.</p>
          * 
          * <strong>example:</strong>
          * <p>CDS_Windows_1126</p>
@@ -193,9 +193,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
          * <blockquote>
-         * <p> To allow end users to connect to cloud computers via virtual private clouds (VPCs), attach your office network to a CEN instance. The CEN instance connects to your on-premises network through VPN Gateway or Express Connect.</p>
+         * <p>To connect to cloud desktops over a VPC, you can add the office network to a CEN instance. This CEN instance is the one to which the on-premises network is connected by using a VPN or Express Connect circuit.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The existing enterprise drive or its order that conflicts with the enterprise drive being created.</p>
+         * <p>The existing NAS drive or NAS drive order that conflicts with the NAS drive to be created.</p>
          */
         public Builder conflictCdsAndOrder(ConflictCdsAndOrder conflictCdsAndOrder) {
             this.conflictCdsAndOrder = conflictCdsAndOrder;
@@ -215,7 +215,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain name of the enterprise AD office network.</p>
+         * <p>The AD domain name of the AD office network.</p>
          * 
          * <strong>example:</strong>
          * <p>test1.local</p>
@@ -237,10 +237,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum storage capacity of the enterprise drive. Unit: bytes.</p>
+         * <p>The maximum storage capacity of the enterprise NAS drive. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>213674622976</p>
+         * <p>5368709120</p>
          */
         public Builder maxSize(String maxSize) {
             this.maxSize = maxSize;
@@ -248,12 +248,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SIMPLE: convenience office network.</li>
-         * <li>AD_CONNECTOR: enterprise AD office network.</li>
-         * </ul>
+         * <p>The network type of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>AD_CONNECTOR</p>
@@ -264,7 +259,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order. You can obtain an order ID on the Orders page in the Expenses and Costs console.</p>
+         * <p>The order ID. You can obtain the order ID on the Orders page in the Alibaba Cloud User Center.</p>
          * 
          * <strong>example:</strong>
          * <p>214552063030752</p>
@@ -275,10 +270,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
+         * <p>062B1439-709A-580E-85DF-CE97A156****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -344,7 +339,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the enterprise drive.</p>
+             * <p>The ID of the enterprise NAS drive.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+cds-778205****</p>
@@ -355,7 +350,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+             * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -438,7 +433,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the enterprise drive. The enterprise drive cannot be used if the order is unpaid.</p>
+             * <p>The ID of the enterprise NAS drive. The order is not paid, and the NAS drive is unavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+cds-778205****</p>
@@ -449,7 +444,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order. You can obtain an order ID on the <strong>Orders</strong> page in the Expenses and Costs console.</p>
+             * <p>The order ID. You can obtain the order ID on the <strong>Orders</strong> page in the Alibaba Cloud User Center.</p>
              * 
              * <strong>example:</strong>
              * <p>22442411898****</p>
@@ -460,7 +455,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -530,7 +525,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conflicting enterprise drive.</p>
+             * <p>The information about the conflicting NAS drive.</p>
              */
             public Builder conflictCds(java.util.List<ConflictCds> conflictCds) {
                 this.conflictCds = conflictCds;
@@ -538,7 +533,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription orders of the conflicting enterprise drives that are unpaid.</p>
+             * <p>The information about the conflicting unpaid NAS drive order (subscription NAS drive order).</p>
              */
             public Builder conflictOrder(java.util.List<ConflictOrder> conflictOrder) {
                 this.conflictOrder = conflictOrder;

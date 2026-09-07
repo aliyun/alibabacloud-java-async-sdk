@@ -67,7 +67,10 @@ public class CreateQosRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * QosRuleId.
+         * <p>The rate limiting rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-5605u0gelk200****</p>
          */
         public Builder qosRuleId(String qosRuleId) {
             this.qosRuleId = qosRuleId;
@@ -75,7 +78,10 @@ public class CreateQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

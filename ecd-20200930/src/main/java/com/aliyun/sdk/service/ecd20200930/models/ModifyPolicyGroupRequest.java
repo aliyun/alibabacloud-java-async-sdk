@@ -887,10 +887,7 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether end users have the administrator permissions.</p>
-         * <blockquote>
-         * <p> This parameter is in invitational preview for specific users and not available to the public.</p>
-         * </blockquote>
+         * <p>Specifies whether the user has administrator permissions after logging on to the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -902,12 +899,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the anti-screenshot feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off (default)</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable the screenshot protection feature.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -919,7 +911,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The client IP address whitelists.</p>
+         * <p>The list of client IP whitelist entries.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -928,7 +920,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The security group rules.</p>
+         * <p>The list of security group rules.</p>
          */
         public Builder authorizeSecurityPolicyRule(java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
@@ -937,12 +929,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the webcam redirection feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on (default)</li>
-         * </ul>
+         * <p>Specifies whether to enable local camera redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -954,7 +941,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
+         * <p>The list of logon method control rules.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -963,14 +950,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The permissions on the clipboard.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: specifies one-way transfer. You can copy files only from local devices to cloud computers.</li>
-         * <li>readwrite: specifies two-way transfer You can copy files between local devices and cloud computers.</li>
-         * <li>write: specifies one-way transfer. You can only copy files from cloud computers to local devices.</li>
-         * <li>off: disables both one-way and two-way transfer. Files cannot be copied between local devices and cloud computers.</li>
-         * </ul>
+         * <p>The clipboard permission.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -982,7 +962,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The device redirection rules.</p>
+         * <p>The list of device redirection rules.</p>
          */
         public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
             this.putQueryParameter("DeviceRedirects", deviceRedirects);
@@ -991,7 +971,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The custom peripheral rules.</p>
+         * <p>The list of custom peripheral rules.</p>
          */
         public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
             this.putQueryParameter("DeviceRules", deviceRules);
@@ -1000,15 +980,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the access control for domain names is enabled. Domain names support wildcards (*). Separate multiple domain names with commas (,).</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The domain names for access control. Domain names support the wildcard character (*). Separate multiple domain names with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>[black:],example1.com,example2.com</p>
+         * <p>on</p>
          */
         public Builder domainList(String domainList) {
             this.putQueryParameter("DomainList", domainList);
@@ -1017,7 +992,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The domain resolution rules.</p>
+         * <p>The domain name resolution policy details.</p>
          */
         public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
@@ -1026,12 +1001,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the domain name resolution rule.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>OFF</li>
-         * <li>ON</li>
-         * </ul>
+         * <p>The domain name resolution policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -1043,12 +1013,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on the Contact Administrator for Help switch.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable the feature that allows users to request administrator assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1060,12 +1025,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on the User Stream Collaboration switch.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable stream collaboration between users.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1077,12 +1037,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Image Quality Control feature for Graphic-based cloud computers. If you have high requirements on the performance and user experience in scenarios such as professional design, we recommend that you enable this feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable the image quality policy for graphics-type cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1094,15 +1049,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow web client access.</p>
-         * <blockquote>
-         * <p> We recommend that you specify the ClientType-related parameters to control the Alibaba Cloud Workspace client type for cloud computer connection.``</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The web client access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1114,14 +1061,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The file transfer feature on the web client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>all: Files can be uploaded and downloaded between local computers and the web client.</li>
-         * <li>download: Files on the web client can be downloaded to local computers.</li>
-         * <li>upload: Files on local computers can be uploaded to the web client.</li>
-         * <li>off (default): Files cannot be transferred between the web client and local computers.</li>
-         * </ul>
+         * <p>The web client file transfer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1133,12 +1073,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The protocol for network communication.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TCP (default): TCP</li>
-         * <li>BOTH: TCP and UDP</li>
-         * </ul>
+         * <p>The network communication protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>BOTH</p>
@@ -1150,13 +1085,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The permissions on local disk mapping.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: read-only. Local disk mapping is available on cloud computers. However, you can only read (copy) local files but cannot modify the files.</li>
-         * <li>readwrite: read and write. Local disk mapping is available on cloud computers. You can read (copy) and write (modify) local files.</li>
-         * <li>off (default): no permissions. Local disk mapping is unavailable on cloud computers.</li>
-         * </ul>
+         * <p>The local disk mapping permission.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1168,7 +1097,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum retry period for reconnecting to cloud computers when the cloud computers are disconnected due to none-human reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+         * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1180,7 +1109,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer policy.</p>
+         * <p>The Policy Name of the cloud computer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>testPolicyGroupName</p>
@@ -1192,15 +1121,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable network redirection.</p>
-         * <blockquote>
-         * <p> This parameter is in invitational preview for specific users and not available to the public.</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off (default)</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Network redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1212,7 +1133,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer policy.</p>
+         * <p>The cloud computer policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1225,14 +1146,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer preemption feature.</p>
+         * <p>The preemption policy for the cloud computer.</p>
          * <blockquote>
-         * <p> To ensure user experience and data security, when a cloud computer is used by an end user, other end users cannot connect to the cloud computer. By default, this parameter is set to <code>off</code>, which cannot be modified.</p>
+         * <p>To ensure the user experience and data security of end users who are currently using the cloud computer, preemption between multiple users is not allowed. This configuration is set to <code>off</code> by default and cannot be modified.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off (default): Multiple end users cannot connect to the same cloud computer at the same time.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1244,10 +1161,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The usernames that are allowed to connect to the cloud computer in use. You can specify up to five usernames.</p>
-         * <blockquote>
-         * <p> To ensure user experience and data security, other end users cannot connect to the cloud computer that is used by an end user.</p>
-         * </blockquote>
+         * <p>The usernames of users who can preempt the cloud computer. You can specify up to five usernames.</p>
          */
         public Builder preemptLoginUser(java.util.List<String> preemptLoginUser) {
             this.putQueryParameter("PreemptLoginUser", preemptLoginUser);
@@ -1256,12 +1170,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The printer redirection feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The printer redirection policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1273,12 +1182,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the custom screen recording feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off (default)</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable custom screen recording.</p>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -1290,7 +1194,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The duration in which the custom screen recording is valid. Default value: 30. Unit: days.</p>
+         * <p>The expiration time of custom screen recording files. Default value: 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1302,17 +1206,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the screen recording feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>byaction_cmd_ft: enables the operation-triggered screen recording upon command execution and file transfer.</li>
-         * <li>ALLTIME: enables the whole-process screen recording. That is, the recording starts when cloud computers are connected and ends when the cloud computers are disconnected.</li>
-         * <li>session: enables the screen recording for session lifecycle listening.</li>
-         * <li>PERIOD: enables the interval-based screen recording. You must specify an interval between the start time and end time of this type of recording.</li>
-         * <li>byaction_commands: enables the operation-triggered screen recording upon command execution.</li>
-         * <li>OFF: disables the screen recording feature.</li>
-         * <li>byaction_file_transfer: enables the operation-triggered screen recording upon file transfer.</li>
-         * </ul>
+         * <p>Specifies whether to enable screen recording.</p>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -1324,12 +1218,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to record the audio files generated from cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: records only video files.</li>
-         * <li>on: records video and audio files.</li>
-         * </ul>
+         * <p>The audio recording option for cloud desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1341,17 +1230,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The file length of the screen recording. Unit: minutes. Screen recording files are split based on the specified file length and uploaded to Object Storage Service (OSS) buckets. When a screen recording file reaches 300 MB in size, the system preferentially performs rolling update for the file.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>10</li>
-         * <li>20</li>
-         * <li>30</li>
-         * <li>60</li>
-         * </ul>
+         * <p>The duration of screen recording files, in minutes. Recording files are automatically split and uploaded to the storage space based on the duration you specify. When a file reaches 300 MB, it is rolled over first.</p>
          * 
          * <strong>example:</strong>
-         * <p>15</p>
+         * <p>10</p>
          */
         public Builder recordingDuration(Integer recordingDuration) {
             this.putQueryParameter("RecordingDuration", recordingDuration);
@@ -1360,7 +1242,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The time when the screen recording stops. Specify the value in the HH:MM:SS format. The value is meaningful only when you set <code>Recording</code> to <code>PERIOD</code>.</p>
+         * <p>The end time of screen recording. Format: HH:MM:SS. This parameter takes effect only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -1372,10 +1254,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</p>
+         * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
          * 
          * <strong>example:</strong>
-         * <p>30</p>
+         * <p>15</p>
          */
         public Builder recordingExpires(Long recordingExpires) {
             this.putQueryParameter("RecordingExpires", recordingExpires);
@@ -1384,14 +1266,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The frame rate of screen recording. Unit: fps.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>2</li>
-         * <li>5</li>
-         * <li>10</li>
-         * <li>15</li>
-         * </ul>
+         * <p>The frame rate of screen recording. Unit: FPS (frames per second).</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1403,7 +1278,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is meaningful only when you set the <code>Recording</code> parameter to <code>PERIOD</code>.</p>
+         * <p>The start time of screen recording. Format: HH:MM:SS. This parameter takes effect only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -1415,12 +1290,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the screen recording notification feature after end users log on to the Alibaba Cloud Workspace client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The client notification feature for screen recording.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1432,10 +1302,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The notification content of screen recording. By default, this parameter is left empty.</p>
+         * <p>The notification content for the screen recording client. Leave this parameter empty by default.</p>
          * 
          * <strong>example:</strong>
-         * <p>Your desktop is being recorded.</p>
+         * <p>Your cloud desktop is being recorded</p>
          */
         public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
             this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
@@ -1444,7 +1314,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1457,13 +1327,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The permissions on keyboard and mouse control during remote assistance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>optionalControl: By default, you are not granted the permissions. You can apply for the permissions.</li>
-         * <li>fullControl: You are granted the full permissions.</li>
-         * <li>disableControl: You are not granted the permissions.</li>
-         * </ul>
+         * <p>The keyboard and mouse control permissions for remote assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>fullControl</p>
@@ -1475,7 +1339,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The client IP address whitelists that you want to delete.</p>
+         * <p>The list of client IP whitelist entries to delete.</p>
          */
         public Builder revokeAccessPolicyRule(java.util.List<RevokeAccessPolicyRule> revokeAccessPolicyRule) {
             this.putQueryParameter("RevokeAccessPolicyRule", revokeAccessPolicyRule);
@@ -1484,7 +1348,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The security group rules that you want to delete.</p>
+         * <p>The list of security group rules to delete.</p>
          */
         public Builder revokeSecurityPolicyRule(java.util.List<RevokeSecurityPolicyRule> revokeSecurityPolicyRule) {
             this.putQueryParameter("RevokeSecurityPolicyRule", revokeSecurityPolicyRule);
@@ -1494,11 +1358,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
         /**
          * <p>The effective scope of the policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>IP: The policy takes effect based on the IP address.</li>
-         * <li>GLOBAL: The policy takes effect globally.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>GLOBAL</p>
@@ -1510,7 +1369,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required when the <code>Scope</code> parameter is set to <code>IP</code>.````</p>
+         * <p>This parameter is required when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
          */
         public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -1519,12 +1378,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the USB redirection feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The USB redirection policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1545,7 +1399,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The multimedia redirection feature.</p>
+         * <p>Multimedia redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1557,14 +1411,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The image display quality.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>high: high-definition (HD)</li>
-         * <li>low: smoothness</li>
-         * <li>lossless: no quality loss</li>
-         * <li>medium (default): scenario-specific adaptation</li>
-         * </ul>
+         * <p>The image display quality policy.</p>
          * 
          * <strong>example:</strong>
          * <p>low</p>
@@ -1576,13 +1423,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermarking feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>blind: Invisible watermarks are applied.</li>
-         * <li>off: The watermarking feature is disabled.</li>
-         * <li>on: Visible watermarks are applied.</li>
-         * </ul>
+         * <p>The watermark policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1594,12 +1435,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the anti-screen photo feature for invisible watermarks.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The anti-photography feature for invisible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1611,7 +1447,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The font color in red, green, and blue (RGB) of the watermark. Valid values: 0 to 16777215.</p>
+         * <p>The watermark font color. Valid values: 0 to 16777215.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1623,7 +1459,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark rotation. Valid values: -10 to -30.</p>
+         * <p>The watermark tilt angle. Valid values: -10 to -30.</p>
          * 
          * <strong>example:</strong>
          * <p>-10</p>
@@ -1648,11 +1484,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
         /**
          * <p>The watermark font style.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>plain</li>
-         * <li>bold</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>plain</p>
@@ -1664,13 +1495,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark enhancement feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>high</li>
-         * <li>low</li>
-         * <li>medium</li>
-         * </ul>
+         * <p>The enhancement feature for invisible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -1683,9 +1508,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
         /**
          * <p>The number of watermark rows.</p>
-         * <blockquote>
-         * <p> This parameter is not available for public use.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1697,12 +1519,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the security priority feature for invisible watermarks.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>The security priority rule for invisible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1714,13 +1531,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark transparency.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>LIGHT (default)</li>
-         * <li>DARK</li>
-         * <li>MIDDLE</li>
-         * </ul>
+         * <p>The transparency level of the watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>LIGHT</p>
@@ -1732,7 +1543,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark opacity. A larger value indicates more opaque watermarks. Valid values: 10 to 100.</p>
+         * <p>The watermark transparency. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1744,19 +1555,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark content. You can select up to three items as the watermark content. Separate multiple items with commas (,).</p>
-         * <blockquote>
-         * <p> If you set this parameter to <code>Custom</code>, you must specify <code>WatermarkCustomText</code>.</p>
-         * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>EndUserId: the username</li>
-         * <li>Custom: the custom text</li>
-         * <li>DesktopIp: the IP address of the cloud computer</li>
-         * <li>ClientIp: the IP address of the Alibaba Cloud Workspace client</li>
-         * <li>HostName: the rightmost 15 digits of the cloud computer ID</li>
-         * <li>ClientTime: the current time displayed on the cloud computer</li>
-         * </ul>
+         * <p>The watermark type. You can select up to three types, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>EndUserId</p>
@@ -1768,12 +1567,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the Xiaoying AI Assistant entry in the DesktopAssistant menu.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off: does not display the Xiaoying AI Assistant entry in the DesktopAssistant menu.</li>
-         * <li>on: displays the Xiaoying AI Assistant entry in the DesktopAssistant menu.</li>
-         * </ul>
+         * <p>Specifies whether to provide the WUYING AI Assistant entry in the floating ball when connecting to a cloud computer through a desktop client (including Windows client and macOS client).</p>
+         * <blockquote>
+         * <p>Applicable only to desktop clients of V7.7 or later.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1845,7 +1642,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The client CIDR block. Specify an IPv4 CIDR block.</p>
+             * <p>The client IP address range. The value is an IPv4 CIDR block.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1857,10 +1654,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP address whitelist.</p>
+             * <p>The description of the client IP whitelist entry.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Office network segment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1992,7 +1789,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
+             * <p>The target of the security group rule. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX/8</p>
@@ -2006,7 +1803,7 @@ public class ModifyPolicyGroupRequest extends Request {
              * <p>The description of the security group rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Allow access to the internal R&amp;D environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2015,17 +1812,9 @@ public class ModifyPolicyGroupRequest extends Request {
 
             /**
              * <p>The protocol type of the security group rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>UDP: the User Datagram Protocol (UDP) protocol.</li>
-             * <li>TCP: the Transmission Control Protocol (TCP) protocol.</li>
-             * <li>ALL: all protocols.</li>
-             * <li>GRE: the Generic Routing Encapsulation (GRE) protocol.</li>
-             * <li>ICMP: the Internet Control Message Protocol (ICMP) for (IPv4)</li>
-             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>tcp</p>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -2033,12 +1822,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The authorization of the security group rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</li>
-             * <li>accept: accepts all requests.</li>
-             * </ul>
+             * <p>The authorization policy of the security group rule.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -2049,14 +1833,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The port range of the security group rule. The value range of this parameter varies based on the value of the IpProtocol parameter.</p>
+             * <p>The port range of the security group rule. The valid values of this parameter are determined by the value of IpProtocol:</p>
              * <ul>
-             * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-             * <li>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</li>
-             * <li>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</li>
-             * <li>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</li>
+             * <li>TCP or UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP: -1/-1.</li>
+             * <li>GRE: -1/-1.</li>
+             * <li>If IpProtocol is set to all: -1/-1.</li>
              * </ul>
-             * <p>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -2067,7 +1851,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1</p>
+             * <p>The priority of the security group rule. A smaller number indicates a higher priority. Valid values: 1 to 60. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2079,11 +1863,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
             /**
              * <p>The direction of the security group rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>outflow: outbound</li>
-             * <li>inflow: inbound</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>inflow</p>
@@ -2153,18 +1932,10 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The type of the Alibaba Cloud Workspace client.</p>
+             * <p>Specifies the client type for logon method control.</p>
              * <blockquote>
-             * <p> If you do not specify the <code>ClientType</code> parameter, all types of the client are allowed by default.</p>
+             * <p>If you do not set <code>ClientType</code> parameters, all types of clients are allowed to log on to cloud desktops by default.</p>
              * </blockquote>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>html5: web client</li>
-             * <li>android: Android client</li>
-             * <li>windows: Windows client</li>
-             * <li>ios: iOS client</li>
-             * <li>macos: macOS client</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>windows</p>
@@ -2175,15 +1946,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow end users to use a specific type of the client to connect to cloud computers.</p>
-             * <blockquote>
-             * <p> If you do not specify the <code>ClientType</code> parameter, all types of the client are allowed by default.</p>
-             * </blockquote>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
+             * <p>Specifies whether to allow logon to cloud desktops from a specific client type.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -2253,14 +2016,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The peripheral type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>printer</li>
-             * <li>scanner</li>
-             * <li>camera</li>
-             * <li>adb: the Android Debug Bridge (ADB) device</li>
-             * </ul>
+             * <p>The peripheral device type.</p>
              * 
              * <strong>example:</strong>
              * <p>camera</p>
@@ -2272,12 +2028,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
             /**
              * <p>The redirection type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>deviceRedirect: device redirection</li>
-             * <li>usbRedirect: USB redirection</li>
-             * <li>off: redirection disabled</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>usbRedirect</p>
@@ -2423,7 +2173,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The product ID (PID).</p>
+             * <p>The product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>0x0781</p>
@@ -2434,20 +2184,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The peripheral type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>usbKey: UKeys</li>
-             * <li>other: other peripheral devices.</li>
-             * <li>graphicsTablet: graphics tablets.</li>
-             * <li>printer: printers.</li>
-             * <li>cardReader: card readers.</li>
-             * <li>scanner: scanners.</li>
-             * <li>storage: storage devices.</li>
-             * <li>camera: web cameras.</li>
-             * <li>adb: Android Debug Bridge (ADB) device</li>
-             * <li>networkInterfaceCard: NIC devices.</li>
-             * </ul>
+             * <p>The peripheral device type.</p>
              * 
              * <strong>example:</strong>
              * <p>storage</p>
@@ -2458,7 +2195,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0x55b1</p>
@@ -2469,7 +2206,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The link optimization command.</p>
+             * <p>The link optimization instruction.</p>
              * 
              * <strong>example:</strong>
              * <p>2:0</p>
@@ -2480,7 +2217,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * Platforms.
+             * <p>The platform types to which the device rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder platforms(String platforms) {
                 this.platforms = platforms;
@@ -2489,12 +2229,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
             /**
              * <p>The redirection type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>deviceRedirect: device redirection</li>
-             * <li>usbRedirect: USB redirection.</li>
-             * <li>off: redirection disabled</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>usbRedirect</p>
@@ -2580,7 +2314,7 @@ public class ModifyPolicyGroupRequest extends Request {
              * <p>The policy description.</p>
              * 
              * <strong>example:</strong>
-             * <p>description policy</p>
+             * <p>Policy description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2591,7 +2325,7 @@ public class ModifyPolicyGroupRequest extends Request {
              * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>*.igetget.com</p>
+             * <p>*.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -2600,14 +2334,9 @@ public class ModifyPolicyGroupRequest extends Request {
 
             /**
              * <p>The resolution policy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>allow</li>
-             * <li>block</li>
-             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>block</p>
+             * <p>allow</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -2674,7 +2403,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The client CIDR block that you want to delete. Specify an IPv4 CIDR block.</p>
+             * <p>The client IP address range to delete. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -2685,10 +2414,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP address whitelist that you want to delete.</p>
+             * <p>The description of the client IP whitelist entry to delete.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Office network segment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2820,7 +2549,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The object of the security group rule that you want to delete. The value is an IPv4 CIDR block.</p>
+             * <p>The target of the security group rule to delete. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -2831,10 +2560,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the security group rule that you want to delete.</p>
+             * <p>The description of the security group rule to delete.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Allow access to the internal R&amp;D environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2842,15 +2571,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the security group rule that you want to delete.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>TCP</li>
-             * <li>UDP</li>
-             * <li>ALL</li>
-             * <li>GRE</li>
-             * <li>ICMP</li>
-             * </ul>
+             * <p>The protocol type of the security group rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>
@@ -2861,12 +2582,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The authorization of the security group rule that you want to delete.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</li>
-             * <li>accept (default): accepts all requests.</li>
-             * </ul>
+             * <p>The authorization policy of the security group rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -2877,14 +2593,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The port range of the security group rule that you want to delete. The value range of this parameter varies based on the value of the IpProtocol parameter.</p>
+             * <p>The port range of the security group rule to be deleted. The valid values of this parameter are determined by the value of IpProtocol:</p>
              * <ul>
-             * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-             * <li>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</li>
-             * <li>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</li>
-             * <li>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</li>
+             * <li>TCP or UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP: -1/-1.</li>
+             * <li>GRE: -1/-1.</li>
+             * <li>If IpProtocol is set to all: -1/-1.</li>
              * </ul>
-             * <p>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For the common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -2895,7 +2611,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule that you want to delete. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1.</p>
+             * <p>The priority of the security group rule to delete. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2906,12 +2622,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The direction of the security group rule that you want to delete.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>outflow: outbound</li>
-             * <li>inflow: inbound</li>
-             * </ul>
+             * <p>The direction of the security group rule to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>outflow</p>
@@ -3057,7 +2768,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The device class. This parameter is required when <code>usbRuleType</code> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
+             * <p>The device class. This parameter is required when <code>usbRuleType</code> is set to 1. See <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0Eh</p>
@@ -3068,7 +2779,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The device subclass. This parameter is required when <code>usbRuleType</code> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
+             * <p>The device subclass. This parameter is required when <code>usbRuleType</code> is set to 1. See <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>xxh</p>
@@ -3079,7 +2790,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The product ID (PID).</p>
+             * <p>The product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08**</p>
@@ -3090,12 +2801,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow USB redirection.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>1: allows USB redirection.</li>
-             * <li>2: forbids USB redirection.</li>
-             * </ul>
+             * <p>The USB redirection type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3106,12 +2812,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the USB redirection rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>1: by device class</li>
-             * <li>2: by device vendor</li>
-             * </ul>
+             * <p>The USB redirection rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3122,7 +2823,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>04**</p>

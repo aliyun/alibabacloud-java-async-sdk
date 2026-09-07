@@ -89,7 +89,7 @@ public class DeleteCloudDriveGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>The enterprise network drive ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the teams that you want to delete. You can delete multiple teams at a time.</p>
+         * <p>The list of team space IDs.</p>
          */
         public Builder groupId(java.util.List<String> groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -111,7 +111,7 @@ public class DeleteCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

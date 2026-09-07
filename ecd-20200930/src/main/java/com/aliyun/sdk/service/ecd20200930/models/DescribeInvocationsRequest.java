@@ -215,12 +215,7 @@ public class DescribeInvocationsRequest extends Request {
         } 
 
         /**
-         * <p>The command type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RunPowerShellScript: the PowerShell command.</li>
-         * <li>RunBatScript: the Bat command.</li>
-         * </ul>
+         * <p>The command type of the O&amp;M script.</p>
          * 
          * <strong>example:</strong>
          * <p>RunPowerShellScript</p>
@@ -232,12 +227,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The encoding method of the command content and outputs.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Base64 (default): returns the Base64-encoded command content and command outputs.</li>
-         * <li>PlainText: returns the original command content and outputs in plain text.</li>
-         * </ul>
+         * <p>The encoding method of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>PlainText</p>
@@ -249,7 +239,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer ID. If you specify a cloud computer, all command execution records of the cloud computer are queried.</p>
+         * <p>The cloud desktop ID. If you specify a cloud desktop, all script execution records of the cloud desktop are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-7w78ozhjcwa3u****</p>
@@ -261,9 +251,9 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs.</p>
+         * <p>The list of cloud desktop IDs.</p>
          * <blockquote>
-         * <p> The <code>DesktopId</code> parameter will be deprecated. We recommend using the DesktopIds parameter to specify cloud computer IDs instead.</p>
+         * <p>The <code>DesktopId</code> parameter will be deprecated. Use this parameter to pass the list of cloud desktop IDs.</p>
          * </blockquote>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
@@ -276,7 +266,7 @@ public class DescribeInvocationsRequest extends Request {
          * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>test1</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -285,15 +275,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the execution results of the remote command on all cloud computers when executed across multiple cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * <p>Specifies whether to return the execution results of all cloud desktops when the remote command is executed on multiple cloud desktops.</p>
          */
         public Builder includeInvokeDesktops(Boolean includeInvokeDesktops) {
             this.putQueryParameter("IncludeInvokeDesktops", includeInvokeDesktops);
@@ -302,12 +284,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return command outputs in the response.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
-         * </ul>
+         * <p>Specifies whether to return the output information of the script execution in the results.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -319,7 +296,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The execution ID of the command. You can obtain the value by calling the <a href="~~RunCommand~~">RunCommand</a> operation.</p>
+         * <p>The execution ID of the script process. Obtained from the response of <a href="~~RunCommand~~">RunCommand</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>t-hz0jdfwd9f****</p>
@@ -331,15 +308,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The execution status of the command. The value of this parameter is determined by the execution states of the command on all participating cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Finished: The command execution completes on all cloud computers. Alternatively, the command execution is manually stopped on some cloud computers while it completes on the others.</li>
-         * <li>Stopped: The command execution stops.</li>
-         * <li>Failed: The command execution failed on all cloud computers.</li>
-         * <li>Running: Once there is a command execution in progress, the execution status defaults to Running.</li>
-         * <li>PartialFailed: If the command execution failed on part of the cloud computers, the execution status is considered partially failed.</li>
-         * </ul>
+         * <p>The overall execution status of the script. The overall execution status depends on the combined execution status of one or more cloud desktops in the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -351,9 +320,9 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.    </p>
          * <ul>
-         * <li>Valid values: 1 to 50.</li>
+         * <li>Maximum value: 50.</li>
          * <li>Default value: 10.</li>
          * </ul>
          * 
@@ -367,7 +336,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the NextToken value that is returned from the last call to the previous DescribeInvocations operation.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -379,7 +348,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about regions.</p>
+         * <p>The region information array.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -157,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the region, which varies based on the current language.</p>
+             * <p>The display name of the region, which is converted based on the current language setting.</p>
              * 
              * <strong>example:</strong>
              * <p>China (Hangzhou)</p>

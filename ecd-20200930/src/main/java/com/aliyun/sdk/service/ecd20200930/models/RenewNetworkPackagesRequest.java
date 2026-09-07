@@ -159,25 +159,7 @@ public class RenewNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the automatic payment feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true (default): enables the auto-payment feature.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -189,7 +171,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for subscription shared cloud desktops.</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -198,7 +180,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
+         * <p>The IDs of premium Internet bandwidth plans. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder networkPackageId(java.util.List<String> networkPackageId) {
@@ -208,12 +190,13 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+         * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
          * <ul>
-         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Week</code>, the valid value of the Period parameter is 1.</li>
-         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Month</code>, the valid values of the Period parameter are 1, 2, 3, and 6.</li>
-         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Year</code>, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Week</code>, the valid value is 1.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
          * </ul>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,12 +208,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
-         * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
-         * </ul>
-         * <p>Default value: Month.</p>
+         * <p>The unit of the renewal duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -254,7 +232,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +245,10 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);

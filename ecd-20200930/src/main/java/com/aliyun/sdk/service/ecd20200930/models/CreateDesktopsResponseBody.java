@@ -80,7 +80,7 @@ public class CreateDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the cloud computers that are created. If multiple cloud computers are created, multiple IDs are returned.</p>
+         * <p>The collection of cloud computer IDs. If multiple cloud computers are created in a single call, multiple cloud computer IDs are returned.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.desktopId = desktopId;
@@ -88,9 +88,9 @@ public class CreateDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * <blockquote>
-         * <p>This parameter is returned only when you set the ChargeType parameter to PrePaid.</p>
+         * <p>This parameter is returned only when the ChargeType request parameter is set to PrePaid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

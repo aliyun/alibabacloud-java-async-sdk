@@ -118,11 +118,11 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application for the coordinate permissions.</p>
+         * <p>The coordination stream ID. This value is the <code>Coid</code> returned by the <a href="~~ApplyCoordinationForMonitoring~~">ApplyCoordinationForMonitoring</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>co-fqsm6e8ee75w61fp9</p>
+         * <p>co-fqsm6e8ee75w6****</p>
          */
         public Builder coId(String coId) {
             this.putQueryParameter("CoId", coId);
@@ -131,10 +131,10 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The username of the end user.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhangsan</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -143,7 +143,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,8 +156,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The type of user who requires the coordinate permissions.</p>
-         * <p>Valid value: TENANT_ADMIN.</p>
+         * <p>The type of the coordination user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,10 +169,10 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <strong>About</strong> on the client logon page to view the identifier of the client.</p>
+         * <p>The UUID (unique identifier) of the device.</p>
          * 
          * <strong>example:</strong>
-         * <p>8b241d415da244a6936d6d6fa4f20f4d</p>
+         * <p>3E14A18BD4D088504B9F8A8751AB****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

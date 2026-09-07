@@ -150,6 +150,11 @@ public class DescribeFlowMetricRequest extends Request {
         } 
 
         /**
+         * <p>The end time. The following formats are supported:</p>
+         * <ul>
+         * <li>Unix timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
+         * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +167,11 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
+         * <p>The instance ID, which can be a cloud computer ID or a premium public bandwidth ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-fwq23f13**** or np-6inxqsvcyv6z8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -171,6 +180,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
+         * <p>The instance type. You can select the cloud computer type or the premium public bandwidth type. If you select the cloud computer type, set InstanceId and MetricType to the cloud computer ID and the corresponding traffic type of the cloud computer. The same applies to the premium public bandwidth type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +193,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
+         * <p>The monitoring metric type. Supports inbound and outbound bandwidth of cloud computers, and public inbound and outbound bandwidth of premium public bandwidth instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +206,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
+         * <p>The statistical period of the monitoring data. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +219,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,6 +232,11 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
+         * <p>The start time. The following formats are supported:</p>
+         * <ul>
+         * <li>Unix timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
+         * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

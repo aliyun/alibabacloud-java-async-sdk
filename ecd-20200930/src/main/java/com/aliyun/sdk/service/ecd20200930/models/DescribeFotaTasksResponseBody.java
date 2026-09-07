@@ -106,7 +106,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message. If the request was successful, a <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The result of the operation. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the image update task.</p>
+         * <p>The image upgrade task information.</p>
          */
         public Builder fotaTasks(java.util.List<FotaTasks> fotaTasks) {
             this.fotaTasks = fotaTasks;
@@ -125,10 +125,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message. This parameter is not returned if the Code value is a <code>success</code> message.</p>
+         * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>The parameter is not specified.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -307,7 +307,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The image version. You can call the <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> operation to obtain the value of this parameter.</p>
+             * <p>The image version. You can call <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> to obtain this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1-D-20220513.143129</p>
@@ -319,7 +319,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -331,7 +331,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of custom images that can be updated to this version.</p>
+             * <p>The number of custom images that can be upgraded to this version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -342,7 +342,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cloud computers whose images can be updated to this version.</p>
+             * <p>The number of cloud desktops that can be upgraded to this version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -353,7 +353,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image version available for update was published.</p>
+             * <p>The release time of the upgrade version. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-31T04:28:48Z</p>
@@ -364,10 +364,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image version available for update.</p>
+             * <p>The upgrade version description.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Fixed known issues and improved system stability</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -375,7 +375,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the update package. Unit: KB.</p>
+             * <p>The size of the upgrade package, in KB.</p>
              * 
              * <strong>example:</strong>
              * <p>568533470</p>
@@ -386,12 +386,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image update task is automatically pushed.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Running: automatically pushes the image update task.</li>
-             * <li>Pending: does not automatically push the image update task.</li>
-             * </ul>
+             * <p>Indicates whether the image upgrade task is automatically pushed.</p>
              * 
              * <strong>example:</strong>
              * <p>valid</p>

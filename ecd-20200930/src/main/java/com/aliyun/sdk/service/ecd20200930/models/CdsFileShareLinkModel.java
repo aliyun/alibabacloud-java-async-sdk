@@ -366,7 +366,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         } 
 
         /**
-         * AccessCount.
+         * <p>The number of times to access the shared file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder accessCount(Long accessCount) {
             this.accessCount = accessCount;
@@ -374,7 +377,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-04T03:30:36Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -382,7 +388,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The user that creates the file sharing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -390,7 +399,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -398,7 +410,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * DisableDownload.
+         * <p>The shared file is forbidden from being downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.disableDownload = disableDownload;
@@ -406,7 +421,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * DisablePreview.
+         * <p>The shared file is forbidden from being previewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.disablePreview = disablePreview;
@@ -414,7 +432,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * DisableSave.
+         * <p>The shared file is forbidden from being dumped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSave(Boolean disableSave) {
             this.disableSave = disableSave;
@@ -422,7 +443,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * DownloadCount.
+         * <p>The number of times that the shared file can be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder downloadCount(Long downloadCount) {
             this.downloadCount = downloadCount;
@@ -430,7 +454,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * DownloadLimit.
+         * <p>The maximum number of times that the shared file can be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.downloadLimit = downloadLimit;
@@ -438,7 +465,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * DriveId.
+         * <p>The team space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dri-g0877jp3hu1ox****</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -446,7 +476,13 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * Expiration.
+         * <p>The time when the file sharing link expires.</p>
+         * <blockquote>
+         * <p> The value must be in the FC3339 format. Example: 2020-06-28T11:33:00.000+08:00. If the parameter is left empty, the file sharing link is permanently valid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-28T11:33:00.000+08:00</p>
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;
@@ -454,7 +490,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * Expired.
+         * <p>Specifies whether the file sharing link expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder expired(Boolean expired) {
             this.expired = expired;
@@ -462,7 +501,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * FileIds.
+         * <p>The file sharing task IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;63886f1fe2014d9a5a3348768dcc27dfc57ee103\&quot;]</p>
          */
         public Builder fileIds(String fileIds) {
             this.fileIds = fileIds;
@@ -470,7 +512,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * ModifiyTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-04T04:30:36Z</p>
          */
         public Builder modifiyTime(String modifiyTime) {
             this.modifiyTime = modifiyTime;
@@ -478,7 +523,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * PreviewCount.
+         * <p>The number of times that the shared file is previewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder previewCount(Long previewCount) {
             this.previewCount = previewCount;
@@ -486,7 +534,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * PreviewLimit.
+         * <p>The maximum number of times that the shared file can be previewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder previewLimit(Long previewLimit) {
             this.previewLimit = previewLimit;
@@ -494,7 +545,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * ReportCount.
+         * <p>The number of times that the shared file is reported due to content violation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder reportCount(Long reportCount) {
             this.reportCount = reportCount;
@@ -502,7 +556,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * SaveCount.
+         * <p>The number of times that the shared files can be dumped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder saveCount(Long saveCount) {
             this.saveCount = saveCount;
@@ -510,7 +567,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * SaveLimit.
+         * <p>The maximum number of times that the shared file can be saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder saveLimit(Long saveLimit) {
             this.saveLimit = saveLimit;
@@ -518,7 +578,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * ShareId.
+         * <p>The file sharing task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1Fs****</p>
          */
         public Builder shareId(String shareId) {
             this.shareId = shareId;
@@ -526,7 +589,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * ShareLink.
+         * <p>The file sharing link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://stg109960.apps.aliyunpds.com/disk/s/7uLJanz">https://stg109960.apps.aliyunpds.com/disk/s/7uLJanz</a>****</p>
          */
         public Builder shareLink(String shareLink) {
             this.shareLink = shareLink;
@@ -534,7 +600,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * ShareName.
+         * <p>The shared file name. By default, the name of the first shared file is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view.txt</p>
          */
         public Builder shareName(String shareName) {
             this.shareName = shareName;
@@ -542,7 +611,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * SharePwd.
+         * <p>The access code. It must contain up to 64 characters in length. 0 characters indicates that there is no access code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder sharePwd(String sharePwd) {
             this.sharePwd = sharePwd;
@@ -550,7 +622,52 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the file sharing link.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>forbidden_disabled</p>
+         * <!-- -->
+         * 
+         * <p>: The file sharing link is canceled</p>
+         * <!-- -->
+         * 
+         * <p>after it</p>
+         * <!-- -->
+         * 
+         * <p>is not allowed.</p>
+         * </li>
+         * <li><p>forbidden</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The file sharing link is not allowed</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>disabled</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The file sharing link is canceled.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>enabled</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The file sharing link is valid.</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -558,7 +675,10 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * VideoPreviewCount.
+         * <p>The number of times that the audio and video file is played.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder videoPreviewCount(Long videoPreviewCount) {
             this.videoPreviewCount = videoPreviewCount;

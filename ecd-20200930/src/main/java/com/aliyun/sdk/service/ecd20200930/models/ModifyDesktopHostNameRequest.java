@@ -103,7 +103,7 @@ public class ModifyDesktopHostNameRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -115,7 +115,7 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * DesktopIds.
+         * <p>The list of cloud desktop IDs.</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -124,10 +124,10 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * <p>The new hostname of the cloud computer. The hostname must meet the following requirements:</p>
+         * <p>The new hostname of the cloud desktop. The hostname must meet the following requirements:</p>
          * <ul>
          * <li>The hostname must be 2 to 15 characters in length.</li>
-         * <li>The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+         * <li>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot contain only digits.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -141,7 +141,7 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

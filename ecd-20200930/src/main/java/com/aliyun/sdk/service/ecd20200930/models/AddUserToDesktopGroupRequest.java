@@ -172,7 +172,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence of a request</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -184,7 +184,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared cloud computer to which you want to add authorized users.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -196,7 +196,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer shares.</p>
+         * <p>The list of shared cloud computer IDs.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -205,7 +205,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the users to whom you want to grant permissions.</p>
+         * <p>The list of users to authorize.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -214,7 +214,10 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * OrgId.
+         * <p>The organization ID of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-aliyun-wy-org-id</p>
          */
         public Builder orgId(String orgId) {
             this.putQueryParameter("OrgId", orgId);
@@ -223,7 +226,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +239,10 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * SimpleUserGroupId.
+         * <p>The convenience user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-3f6c8a2b****</p>
          */
         public Builder simpleUserGroupId(String simpleUserGroupId) {
             this.putQueryParameter("SimpleUserGroupId", simpleUserGroupId);
@@ -245,7 +251,10 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * UserGroupName.
+         * <p>The user group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Group</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);
@@ -254,7 +263,10 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * UserOuPath.
+         * <p>The organizational unit (OU) path of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder userOuPath(String userOuPath) {
             this.putQueryParameter("UserOuPath", userOuPath);

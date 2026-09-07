@@ -80,7 +80,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The command execution records.</p>
+         * <p>The array of script execution records.</p>
          */
         public Builder invocations(java.util.List<Invocations> invocations) {
             this.invocations = invocations;
@@ -88,7 +88,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token that is returned from this call.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -99,7 +99,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -337,7 +337,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the command execution was performed.</p>
+             * <p>The creation time of the script process.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T06:15:54Z</p>
@@ -348,7 +348,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer ID.</p>
+             * <p>The cloud desktop ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-7w78ozhjcwa3u****</p>
@@ -359,7 +359,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer name.</p>
+             * <p>The cloud desktop name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo1234</p>
@@ -370,7 +370,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the text that is truncated and discarded when the Output value exceeds 24 KB in size.</p>
+             * <p>The length of the truncated and discarded text after the text length in the Output field exceeded 24 KB.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -381,22 +381,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code explaining why the command failed to be sent or executed. Valid values:</p>
+             * <p>The error code indicating the reason for command delivery failure or execution failure. Valid values:</p>
              * <ul>
-             * <li>Null: The command is executed successfully.</li>
-             * <li>InstanceNotExists: The specified cloud computer does not exist or is released.</li>
-             * <li>InstanceReleased: The cloud computer is released during the execution.</li>
-             * <li>InstanceNotRunning: The cloud computer is not running during the execution.</li>
-             * <li>CommandNotApplicable: The command cannot be executed on the specified cloud computer.</li>
-             * <li>ClientNotRunning: The Cloud Assistant agent is not running.</li>
-             * <li>ClientNotResponse: The Cloud Assistant agent does not respond.</li>
-             * <li>ClientIsUpgrading: The Cloud Assistant agent is being updated.</li>
-             * <li>ClientNeedUpgrade: The Cloud Assistant agent needs to be updated.</li>
-             * <li>DeliveryTimeout: The command sending times out.</li>
-             * <li>ExecutionTimeout: The command execution times out.</li>
-             * <li>ExecutionException: An exception occurs when the command is being executed.</li>
-             * <li>ExecutionInterrupted: The command execution is interrupted.</li>
-             * <li>ExitCodeNonzero: The command execution completes, but the exit code is not 0.</li>
+             * <li>Empty: The command ran normally.</li>
+             * <li>InstanceNotExists: The specified cloud desktop does not exist or has been released.</li>
+             * <li>InstanceReleased: The cloud desktop was released during task execution.</li>
+             * <li>InstanceNotRunning: The cloud desktop was not running when the task was created.</li>
+             * <li>CommandNotApplicable: The command is not applicable to the specified cloud desktop.</li>
+             * <li>ClientNotRunning: The Cloud Assistant client is not running.</li>
+             * <li>ClientNotResponse: The Cloud Assistant client is not responding.</li>
+             * <li>ClientIsUpgrading: The Cloud Assistant client is being upgraded.</li>
+             * <li>ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</li>
+             * <li>DeliveryTimeout: Command delivery timed out.</li>
+             * <li>ExecutionTimeout: Command execution timed out.</li>
+             * <li>ExecutionException: An exception occurred during command execution.</li>
+             * <li>ExecutionInterrupted: Command execution was interrupted.</li>
+             * <li>ExitCodeNonzero: Command execution completed with a non-zero exit code.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -408,22 +408,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message explaining why the command failed to be sent or executed. Valid values:</p>
+             * <p>The detailed reason for command delivery failure or execution failure. Valid values:</p>
              * <ul>
-             * <li>Null: The command is executed successfully.</li>
-             * <li>the specified instance does not exists: The specified cloud computer does not exist or is released.</li>
-             * <li>the instance has released when create task: The cloud computer is released during the execution.</li>
-             * <li>the instance is not running when create task: The cloud computer is not running during the execution.</li>
-             * <li>the command is not applicable: The command cannot be executed on the specified cloud computer.</li>
-             * <li>the aliyun service is not running on the instance: The Cloud Assistant agent is not running.</li>
-             * <li>the aliyun service in the instance does not response: The Cloud Assistant agent does not respond.</li>
-             * <li>the aliyun service in the instance is upgrading now: The Cloud Assistant agent is being updated.</li>
-             * <li>the aliyun service in the instance need upgrade: The Cloud Assistant agent needs to be updated.</li>
-             * <li>the command delivery has been timeout: The command sending times out.</li>
-             * <li>the command execution has been timeout: The command execution times out.</li>
-             * <li>the command execution got an exception: An exception occurs when the command is being executed.</li>
-             * <li>the command execution has been interrupted: The command execution is interrupted.</li>
-             * <li>the command execution exit code is not zero: The command execution completes, but the exit code is not 0.</li>
+             * <li>Empty: The command ran normally.</li>
+             * <li>the specified instance does not exists: The specified cloud desktop does not exist or has been released.</li>
+             * <li>the instance has released when create task: The cloud desktop was released during task execution.</li>
+             * <li>the instance is not running when create task: The cloud desktop was not running when the task was created.</li>
+             * <li>the command is not applicable: The command is not applicable to the specified cloud desktop.</li>
+             * <li>the aliyun service is not running on the instance: The Cloud Assistant client is not running.</li>
+             * <li>the aliyun service in the instance does not response: The Cloud Assistant client is not responding.</li>
+             * <li>the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.</li>
+             * <li>the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.</li>
+             * <li>the command delivery has been timeout: Command delivery timed out.</li>
+             * <li>the command execution has been timeout: Command execution timed out.</li>
+             * <li>the command execution got an exception: An exception occurred during command execution.</li>
+             * <li>the command execution has been interrupted: Command execution was interrupted.</li>
+             * <li>the command execution exit code is not zero: Command execution completed with a non-zero exit code.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exit code of the execution.</p>
+             * <p>The exit code of the script process.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -446,7 +446,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the command execution ended.</p>
+             * <p>The end time of the script process.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T06:15:56Z</p>
@@ -457,7 +457,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution progress of the command on a single cloud computer.</p>
+             * <p>The script process status on a single cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -468,7 +468,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * JvsAgentId.
+             * <p>jvs agent id。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jvs-7xjos2l****</p>
              */
             public Builder jvsAgentId(String jvsAgentId) {
                 this.jvsAgentId = jvsAgentId;
@@ -476,10 +479,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command output.</p>
+             * <p>The output information of the script process.</p>
              * <ul>
-             * <li>When the <code>IncludeOutput</code> parameter is set to false, the output is not returned.</li>
-             * <li>When the <code>ContentEncoding</code> parameter is set to Base64, the output is returned as a Base64-encoded string.</li>
+             * <li>If the request parameter <code>IncludeOutput</code> is set to false, Output is not returned.</li>
+             * <li>If the request parameter <code>ContentEncoding</code> is set to Base64, Output is the Base64-encoded output information.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -491,7 +494,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the command has been executed on the cloud computer.</p>
+             * <p>The number of times the command was executed on the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -502,7 +505,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the command execution.</p>
+             * <p>The time when the script process started running on the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T06:15:55Z</p>
@@ -513,7 +516,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stop time of the command execution (StopInvocatio).</p>
+             * <p>The time when the execution was stopped, if StopInvocation was called.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-25T09:15:47Z</p>
@@ -524,7 +527,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the execution status was updated.</p>
+             * <p>The update time of the task status.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-25T06:15:56Z</p>
@@ -698,7 +701,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Base64-encoded command content.</p>
+             * <p>The script content, transmitted in Base64 encoding.</p>
              * 
              * <strong>example:</strong>
              * <p>cnBtIC1xYSB8IGdyZXAgdnNm****</p>
@@ -709,7 +712,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the command.</p>
+             * <p>The script type.</p>
              * 
              * <strong>example:</strong>
              * <p>RunPowerShellScript</p>
@@ -720,7 +723,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the execution task is created.</p>
+             * <p>The creation time of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-19T09:15:46Z</p>
@@ -731,7 +734,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopScenario.
+             * <p>The cloud desktop scenario. Valid values:</p>
+             * <ul>
+             * <li>Classic: the classic cloud desktop scenario.</li>
+             * <li>JvsClaw: the JVS Claw cloud desktop scenario.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Classic</p>
              */
             public Builder desktopScenario(String desktopScenario) {
                 this.desktopScenario = desktopScenario;
@@ -739,7 +749,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the end user.</p>
+             * <p>The end user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>User1</p>
@@ -750,33 +760,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall execution status of the command. The value of this parameter depends on the execution status of the command on all the involved cloud computers. Valid values:</p>
+             * <p>The overall execution status of the script. The overall execution status depends on the combined execution status of all cloud desktops in this call. Valid values:</p>
              * <ul>
-             * <li><p>Pending: The command is being verified or sent. If the execution status is Pending on at least one cloud computer, the overall status is considered Pending.</p>
-             * </li>
-             * <li><p>Running: The command is being executed on cloud computers. If the execution status is Running on at least one cloud computer, the overall status is considered Running.</p>
-             * </li>
-             * <li><p>Success: If the execution status is Success on at least one cloud computer and either Success or Stopped on all other cloud computers, the overall status is considered Success.</p>
-             * </li>
-             * <li><p>Failed: If the execution status is Stopped or Failed on all cloud computers, the overall status is considered Failed. If any execution status on cloud computers matches one of the following values, Failed is returned.</p>
-             * <ul>
-             * <li>Invalid: The command is invalid.</li>
-             * <li>Aborted: The command failed to be sent.</li>
-             * <li>Failed: The command is executed, but the exit code is not 0.</li>
-             * <li>Timeout: The command execution timed out.</li>
-             * <li>Error: An error occurred when the command is being executed.</li>
+             * <li>Pending: The system is validating or sending the command. The overall execution status is Pending if at least one cloud desktop has a script execution status of Pending.</li>
+             * <li>Running: The command is running on the cloud desktop. The overall execution status is Running if at least one cloud desktop has a script execution status of Running.</li>
+             * <li>Success: The overall execution status is Success if the script execution status on each cloud desktop is Stopped or Success, and at least one cloud desktop has a script execution status of Success.</li>
+             * <li>Failed: The overall execution status is Failed if the script execution status on each cloud desktop is Stopped or Failed. The return value is Failed when one or more of the following statuses occur on a cloud desktop:<ul>
+             * <li>Command validation failed (Invalid)</li>
+             * <li>Command delivery failed (Aborted)</li>
+             * <li>Command execution completed with a non-zero exit code (Failed)</li>
+             * <li>Command execution timed out (Timeout)</li>
+             * <li>Command execution encountered an exception (Error)</li>
              * </ul>
              * </li>
-             * <li><p>Stopping: The command execution is being stopped. If the execution status is Stopping on at least one cloud computer, the overall status is considered Stopping.</p>
-             * </li>
-             * <li><p>Stopped: The command execution stops. If the execution status is Stopped on at least one cloud computer, the overall status is considered Stopped. If any execution status on cloud computers matches one of the following values, Stopped is returned.</p>
-             * <ul>
-             * <li>Cancelled: The command execution is canceled.</li>
-             * <li>Terminated: The command execution is terminated.</li>
+             * <li>Stopping: The task is being stopped. The overall execution status is Stopping if at least one instance has a script execution status of Stopping.</li>
+             * <li>Stopped: The task has been stopped. The overall execution status is Stopped if the script execution status on all instances is Stopped. The return value is Stopped when the script execution status on an instance is one of the following:<ul>
+             * <li>Task cancelled (Cancelled)</li>
+             * <li>Task terminated (Terminated)</li>
              * </ul>
              * </li>
-             * <li><p>PartialFailed: The command execution succeeded on some cloud computers but failed on others. If the execution status on any cloud computer is Success, Failed, or Stopped, the overall status is considered PartialFailed.</p>
-             * </li>
+             * <li>PartialFailed: The overall execution status is PartialFailed if some instances succeeded and some instances failed. The overall execution status is PartialFailed if the script execution status on each instance is Success, Failed, or Stopped.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -788,7 +791,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of cloud computers on which the command is executed.</p>
+             * <p>The total number of cloud desktops on which the script was executed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -799,7 +802,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of cloud computers on which the command execution succeeds.</p>
+             * <p>The total number of cloud desktops on which the script was executed successfully.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -810,7 +813,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computers on which the command is executed.</p>
+             * <p>The list of target cloud desktops for execution.</p>
              */
             public Builder invokeDesktops(java.util.List<InvokeDesktops> invokeDesktops) {
                 this.invokeDesktops = invokeDesktops;
@@ -818,7 +821,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the execution.</p>
+             * <p>The execution ID.</p>
              * 
              * <strong>example:</strong>
              * <p>t-hz0jdfwd9f****</p>

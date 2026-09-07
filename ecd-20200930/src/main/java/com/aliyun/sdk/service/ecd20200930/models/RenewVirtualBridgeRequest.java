@@ -159,7 +159,10 @@ public class RenewVirtualBridgeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -168,7 +171,10 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -177,6 +183,7 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
+         * <p>The virtual bridge ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +196,10 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The payment callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://edu.wuying.aliyun.com/edu/school-manage">https://edu.wuying.aliyun.com/edu/school-manage</a></p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -198,7 +208,15 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The renewal duration. The valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -207,7 +225,10 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the renewal duration, which is the unit of the <code>Period</code> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -216,7 +237,10 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003836003****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -225,6 +249,7 @@ public class RenewVirtualBridgeRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

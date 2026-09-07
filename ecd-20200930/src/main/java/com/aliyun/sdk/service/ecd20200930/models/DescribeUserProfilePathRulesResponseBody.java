@@ -67,10 +67,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +75,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The directory blacklist and whitelist.</p>
+         * UserProfilePathRule.
          */
         public Builder userProfilePathRule(UserProfilePathRule userProfilePathRule) {
             this.userProfilePathRule = userProfilePathRule;
@@ -144,10 +141,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The path.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AppLocal/Data</p>
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -155,26 +149,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>file</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>folder</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>file</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -241,10 +216,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The path.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>games</p>
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -252,26 +224,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>file</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>folder</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>folder</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +291,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The blacklist that is configured.</p>
+             * BlackPath.
              */
             public Builder blackPath(BlackPath blackPath) {
                 this.blackPath = blackPath;
@@ -346,7 +299,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directories in the whitelist.</p>
+             * WhitePaths.
              */
             public Builder whitePaths(java.util.List<WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;
@@ -426,10 +379,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The desktop group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dg-4i8fvpv6tfs03****</p>
+             * DesktopGroupId.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -437,7 +387,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory rules.</p>
+             * Rules.
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -445,26 +395,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory type that is configured for the directory.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>DesktopGroup</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Default</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Default</p>
+             * UserProfileRuleType.
              */
             public Builder userProfileRuleType(String userProfileRuleType) {
                 this.userProfileRuleType = userProfileRuleType;

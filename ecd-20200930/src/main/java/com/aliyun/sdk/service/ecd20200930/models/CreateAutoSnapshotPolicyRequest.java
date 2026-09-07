@@ -119,7 +119,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The CRON expression for periodic scheduling.</p>
+         * <p>The Cron expression for the scheduled snapshot creation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The cloud disk type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -141,7 +144,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+         * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. Default value: empty.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,11 +170,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+         * <p>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>30</p>
+         * <p>2</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);

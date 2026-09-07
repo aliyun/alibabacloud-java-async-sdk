@@ -132,7 +132,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -143,10 +143,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of file list entries.</p>
+         * <p>The total number of entries in the file list.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>2</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -154,7 +154,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The files.</p>
+         * <p>The file list.</p>
          */
         public Builder fileModels(java.util.List<FileModels> fileModels) {
             this.fileModels = fileModels;
@@ -162,7 +162,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -173,10 +173,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token used to start the next query. If the <code>NextToken</code> is empty, the next query does not exist.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
-         * <p>WyI2MzhmMjA2ZTFmZGZlZGVjZDk3OTRlNzVhZmIwMDFiZmM5NWQ3YTgwIiwibiIsIm4iLDEsLTEsMTY3MDMyNDMzNTAzMSwiNjM4ZjIwNmZjNDFkMzIwOTZmZWU0NGYxODkwY2I5ZjI0Mjg0NzM2****</p>
+         * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -184,7 +184,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40D86754-20FD-53DC-A9B8-25F7FECC****</p>
@@ -195,12 +195,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -516,7 +511,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>File type classification. The network disk will classify files according to their suffix and MIME Type. The main categories are <code>doc</code>, <code>image</code>, <code>audio</code> and <code>video</code>.</p>
+             * <p>The file category. The cloud drive categorizes files based on file name extensions and MIME types. The main categories include <code>doc</code>, <code>image</code>, <code>audio</code>, and <code>video</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>image</p>
@@ -538,7 +533,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T07:27:08Z</p>
@@ -549,10 +544,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file creator.</p>
+             * <p>The creator of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>user01</p>
+             * <p><a href="mailto:demo_user01@cn-shanghai.148875033399">demo_user01@cn-shanghai.148875033399</a>****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -571,7 +566,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download link. The default validity period is 15 minutes.</p>
+             * <p>The download URL. The URL is valid for 15 minutes by default.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
@@ -582,7 +577,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filename extension.</p>
+             * <p>The file name extension.</p>
              * 
              * <strong>example:</strong>
              * <p>pdf</p>
@@ -616,11 +611,6 @@ public class ListCdsFilesResponseBody extends TeaModel {
 
             /**
              * <p>The file type.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>file</li>
-             * <li>folder</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>file</p>
@@ -631,7 +621,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 hash of the object.</p>
+             * <p>The MD5 hash value of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>63c83ececb4e6926c51448fc5ecb****</p>
@@ -642,7 +632,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was last modified.</p>
+             * <p>The time when the file was last modified. The time follows the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T07:27:08Z</p>
@@ -653,10 +643,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier.</p>
+             * <p>The modifier of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>user02</p>
+             * <p><a href="mailto:demo_user02@cn-shanghai.148875033399">demo_user02@cn-shanghai.148875033399</a>****</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -664,10 +654,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>fvt-appcenterp4qwa</p>
+             * <p>SampleFile.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -675,7 +665,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was last opened.</p>
+             * <p>The time when the file was last opened. The time follows the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T07:27:08Z</p>
@@ -686,7 +676,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates the time when the file was last opened.</p>
+             * <p>The timestamp of the last time the file was opened.</p>
              * 
              * <strong>example:</strong>
              * <p>168951245231</p>
@@ -697,7 +687,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent folder.</p>
+             * <p>The parent folder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3343213ff2f63db8470984e6c92c3213dfdw****</p>
@@ -708,7 +698,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by cloud computers.</p>
+             * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -719,7 +709,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SHA1 hash of the data file.</p>
+             * <p>The SHA1 hash value of the data file.</p>
              * 
              * <strong>example:</strong>
              * <p>EA4942AA8761213890A5C386F88E6464D2C3****</p>
@@ -730,7 +720,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file. Unit: bytes.</p>
+             * <p>The file size. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>102400</p>
@@ -741,7 +731,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the thumbnail.</p>
+             * <p>The thumbnail URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>

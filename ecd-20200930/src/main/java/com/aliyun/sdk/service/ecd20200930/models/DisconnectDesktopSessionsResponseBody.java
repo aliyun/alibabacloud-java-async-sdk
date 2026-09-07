@@ -144,10 +144,10 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cloud desktop ID.</p>
+             * <p>The cloud computer ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ecd-2jv6wugbkp65pxxxx</p>
+             * <p>ecd-2jv6wugbkp65p****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -158,7 +158,7 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
              * <p>The end user ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>wy01</p>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;

@@ -75,7 +75,7 @@ public class LockVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,8 +88,7 @@ public class LockVirtualMFADeviceRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/206210.html">DescribeVirtualMFADevices</a> operation to query the serial number of the virtual MFA device bound to AD users.</p>
+         * <p>The serial number of the virtual MFA device, which is also its unique identifier. You can call <a href="~~DescribeVirtualMFADevices~~">DescribeVirtualMFADevices</a> to query the serial number of the virtual MFA device bound to an AD account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

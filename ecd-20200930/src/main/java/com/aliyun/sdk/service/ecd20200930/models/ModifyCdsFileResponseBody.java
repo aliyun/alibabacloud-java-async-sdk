@@ -106,7 +106,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The execution result of the operation. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,24 +117,8 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether data is returned.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>false: Data fails to be returned.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <p>: Data is returned.</p>
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the data is returned successfully.
+         * [_single.resp.200.props.Data.enum. false]Failed to return data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -145,7 +129,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -167,12 +151,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

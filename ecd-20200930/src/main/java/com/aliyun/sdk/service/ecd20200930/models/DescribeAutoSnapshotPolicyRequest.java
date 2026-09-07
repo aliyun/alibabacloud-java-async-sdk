@@ -117,10 +117,10 @@ public class DescribeAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * <ul>
-         * <li>Maximum value: 50.</li>
-         * <li>Default value: 50.</li>
+         * <li>Maximum value: 50</li>
+         * <li>Default value: 50</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class DescribeAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mqIGdPhID94rjhZFGsvpJo</p>
@@ -160,7 +160,7 @@ public class DescribeAutoSnapshotPolicyRequest extends Request {
          * <p>The name of the automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test 1201</p>
+         * <p>Test1201</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -169,7 +169,7 @@ public class DescribeAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

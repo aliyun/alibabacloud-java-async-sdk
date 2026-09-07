@@ -106,7 +106,7 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The operation result. The value <code>success</code> indicates that the operation is successful. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed. This parameter is not returned if the value of Code is success.</p>
+         * <p>The error message. This parameter is not returned when Code is success.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -150,7 +150,7 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the report export task.</p>
+         * <p>The report task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ret-g67ip******</p>

@@ -67,7 +67,7 @@ public class CreateImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-gx2x1dhsmusr2****</p>
@@ -78,7 +78,7 @@ public class CreateImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

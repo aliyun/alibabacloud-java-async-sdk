@@ -93,7 +93,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The download URL of the file.</p>
+         * <p>The URL for downloading the file.</p>
          */
         public Builder downloadFileModel(DownloadFileModel downloadFileModel) {
             this.downloadFileModel = downloadFileModel;
@@ -257,7 +257,10 @@ public class DownloadCdsFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder downloadType(String downloadType) {
                 this.downloadType = downloadType;
@@ -268,7 +271,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
              * <p>The download URL.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://pds-XXXX-bj-1693807057.oss-cn-beijing.aliyuncs.com/A0SKfLOp%2F2%2F6662612e0570fb2bdd5549759716d433439f0572%2F6662612ee3804e4901794928b14f9a7477640ee7?di=XXXX&dr=1030&f=667d5a322ebf7409e91c485d808fb3bd8a73efbb&response-content-disposition=attachment%3B%20">https://pds-XXXX-bj-1693807057.oss-cn-beijing.aliyuncs.com/A0SKfLOp%2F2%2F6662612e0570fb2bdd5549759716d433439f0572%2F6662612ee3804e4901794928b14f9a7477640ee7?di=XXXX&amp;dr=1030&amp;f=667d5a322ebf7409e91c485d808fb3bd8a73efbb&amp;response-content-disposition=attachment%3B%20</a></p>
+             * <p><a href="https://pds-****-bj-169380****.oss-cn-beijing.aliyuncs.com/A0SK****?di=****&dr=1030&f=667d****&response-content-disposition=attachment%3B%20">https://pds-****-bj-169380****.oss-cn-beijing.aliyuncs.com/A0SK****?di=****&amp;dr=1030&amp;f=667d****&amp;response-content-disposition=attachment%3B%20</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -276,7 +279,10 @@ public class DownloadCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder expirationSecond(String expirationSecond) {
                 this.expirationSecond = expirationSecond;
@@ -284,7 +290,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the download URL.</p>
+             * <p>The expiration time of the file download URL.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-18T02:55:49.795Z</p>
@@ -298,7 +304,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
              * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>667d5a322ebf7409e91c485d808fb3bd8a73efbb</p>
+             * <p>667d5a322ebf7409e91c485d808fb3bd8a73****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -306,7 +312,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file. Unit: bytes.</p>
+             * <p>The file size, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1594642</p>
@@ -317,7 +323,10 @@ public class DownloadCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder streamUrl(String streamUrl) {
                 this.streamUrl = streamUrl;

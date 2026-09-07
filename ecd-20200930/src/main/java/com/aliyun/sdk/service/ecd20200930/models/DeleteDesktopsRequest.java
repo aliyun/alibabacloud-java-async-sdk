@@ -89,7 +89,7 @@ public class DeleteDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+         * <p>The IDs of cloud computers. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -99,7 +99,7 @@ public class DeleteDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +112,10 @@ public class DeleteDesktopsRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The ID of the resource owner in reseller mode. You do not need to specify this parameter if you are not using reseller mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);

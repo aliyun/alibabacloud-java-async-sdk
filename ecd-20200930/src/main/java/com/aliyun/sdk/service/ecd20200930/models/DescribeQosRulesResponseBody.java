@@ -67,7 +67,7 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * QosRules.
+         * <p>The list of QoS rules.</p>
          */
         public Builder qosRules(java.util.List<QosRules> qosRules) {
             this.qosRules = qosRules;
@@ -75,7 +75,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * DesktopCount.
+             * <p>The number of cloud computers in the pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder desktopCount(String desktopCount) {
                 this.desktopCount = desktopCount;
@@ -214,7 +220,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupCount.
+             * <p>The number of cloud computer pools associated with the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder desktopGroupCount(Integer desktopGroupCount) {
                 this.desktopGroupCount = desktopGroupCount;
@@ -222,7 +231,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Download.
+             * <p>The downstream bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder download(String download) {
                 this.download = download;
@@ -230,7 +242,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkPackageId.
+             * <p>The premium Internet bandwidth ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-5cjh3sqs1ty3s02xq</p>
              */
             public Builder networkPackageId(String networkPackageId) {
                 this.networkPackageId = networkPackageId;
@@ -238,7 +253,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             }
 
             /**
-             * QosRuleId.
+             * <p>The QoS rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-chvkz5ekzgcb6bo0f</p>
              */
             public Builder qosRuleId(String qosRuleId) {
                 this.qosRuleId = qosRuleId;
@@ -246,7 +264,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             }
 
             /**
-             * QosRuleName.
+             * <p>The name of the QoS rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Office network QoS rule</p>
              */
             public Builder qosRuleName(String qosRuleName) {
                 this.qosRuleName = qosRuleName;
@@ -254,7 +275,10 @@ public class DescribeQosRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Upload.
+             * <p>The upstream bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder upload(String upload) {
                 this.upload = upload;

@@ -67,7 +67,10 @@ public class DescribeFlowMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The metric data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;instanceId\&quot;: \&quot;np-4wrye3ishxi47****\&quot;, \&quot;requestId\&quot;: \&quot;4F0CD5B6-70D6-5115-A2F7-7EAC3981****\&quot;, \&quot;dataPoints\&quot;: [{\&quot;timeStamp\&quot;: 1636510320000, \&quot;Average\&quot;: 293752.0}]}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DescribeFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6857EDCB-631F-5405-BE95-45CBB4C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

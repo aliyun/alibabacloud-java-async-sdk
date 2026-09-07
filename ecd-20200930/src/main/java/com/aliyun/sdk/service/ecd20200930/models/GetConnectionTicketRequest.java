@@ -186,10 +186,10 @@ public class GetConnectionTicketRequest extends Request {
         } 
 
         /**
-         * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</p>
+         * <p>Specifies a custom user-mode application that is automatically started after the credential is obtained.</p>
          * <ul>
-         * <li>appPath: the path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double slashes (\) as the delimiter. Type of the parameter value: string.</li>
-         * <li>appParameter: the startup arguments of the application. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate multiple arguments with spaces. Type of the parameter value: string.</li>
+         * <li>appPath: a value of the String type that specifies the application startup file path, such as <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double backslashes (\\) as path separators.</li>
+         * <li>appParameter: a value of the String type that specifies the application startup parameters, such as <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate parameters with spaces.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class GetConnectionTicketRequest extends Request {
          *                         &quot;sessionName&quot;: &quot;&quot;,
          *                         &quot;appList&quot;: [
          *                               {
-         *                                     &quot;appPath&quot;: &quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;,
+         *                                     &quot;appPath&quot;: &quot;C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe&quot;,
          *                                     &quot;appParameter&quot;: &quot;<a href="http://www.example.com">www.example.com</a> <a href="http://www.example1.com">www.example1.com</a>&quot;
          *                               }
          *                         ]
@@ -216,7 +216,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.</p>
+         * <p>The ID of the cloud computer for which to generate a connection credential. This parameter is required to generate the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -228,10 +228,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</p>
+         * <p>The username of the authorized user of the cloud computer. You must specify an existing authorized user of the cloud computer to generate the credential.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -249,7 +249,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The password of the current end user of the cloud computer.</p>
+         * <p>The password of the authorized user of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>Ab123456</p>
@@ -261,7 +261,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class GetConnectionTicketRequest extends Request {
          * <p>The ID of the cloud computer connection task.</p>
          * 
          * <strong>example:</strong>
-         * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
+         * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -304,7 +304,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <strong>About</strong> on the client logon page to view the identifier of the client.</p>
+         * <p>The unique identifier of the client. If you use the Wuying client, you can view this parameter in the <strong>About</strong> dialog box on the client logon page.</p>
          * 
          * <strong>example:</strong>
          * <p>28c80e90-f71e-4c23-93d6-1225329cf949</p>

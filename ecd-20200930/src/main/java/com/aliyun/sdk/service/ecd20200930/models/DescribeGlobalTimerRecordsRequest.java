@@ -241,7 +241,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the batch in which the scheduled task is executed.</p>
+         * <p>The batch ID of the scheduled task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-****</p>
@@ -253,7 +253,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs.</p>
+         * <p>The list of cloud computer IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEED</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -262,7 +265,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * DisplayResultName.
+         * <p>The display result name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED</p>
          */
         public Builder displayResultName(String displayResultName) {
             this.putQueryParameter("DisplayResultName", displayResultName);
@@ -283,9 +289,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Maximum value: 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -297,7 +301,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -309,7 +313,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -321,7 +325,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * <p>The list of resource types. If empty, all resource types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -330,14 +337,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The type of the execution result. You can specify this parameter to filter the execution results.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>FAILED: The execution is successful.</li>
-         * <li>FAILED: The execution failed.</li>
-         * <li>RUNNING: The execution is in progress.</li>
-         * <li>SKIPPED: The execution is skipped.</li>
-         * </ul>
+         * <p>Filters results by execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCEED</p>
@@ -349,7 +349,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * Retryable.
+         * <p>Specifies whether the task can be retried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder retryable(Boolean retryable) {
             this.putQueryParameter("Retryable", retryable);
@@ -358,7 +361,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the searched region. You can specify this parameter to filter cloud computers in specific regions.</p>
+         * <p>The region ID used to filter cloud computer information for a specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -371,15 +374,6 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
 
         /**
          * <p>The execution result of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CONNECTED_NOT_RUN: The cloud computer is connected, but the scheduled task is not executed.</li>
-         * <li>PAUSED: The scheduled task is suspended.</li>
-         * <li>COMPLETED: The scheduled task is executed.</li>
-         * <li>FAILED: The scheduled task failed to be executed.</li>
-         * <li>RUNNING: The scheduled task is being executed.</li>
-         * <li>TERMINATED: The scheduled task is stopped.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -391,7 +385,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The scheduled tasks.</p>
+         * <p>The list of scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder timerTypes(java.util.List<String> timerTypes) {
             this.putQueryParameter("TimerTypes", timerTypes);
@@ -400,7 +397,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * WuyingServerIds.
+         * <p>The list of Wuying server IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED</p>
          */
         public Builder wuyingServerIds(java.util.List<String> wuyingServerIds) {
             this.putQueryParameter("WuyingServerIds", wuyingServerIds);

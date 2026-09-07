@@ -67,7 +67,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The results.</p>
+         * <p>The assignment results.</p>
          */
         public Builder entitlements(Entitlements entitlements) {
             this.entitlements = entitlements;
@@ -168,7 +168,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorized user IDs for the cloud computer.</p>
+             * <p>The user IDs (usernames) authorized to use the cloud computer.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -176,15 +176,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assign result for each cloud computer.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>FAILED</li>
-             * <li>NOT_STARTED</li>
-             * <li>STARTED</li>
-             * <li>PROCESSING</li>
-             * <li>FINISHED</li>
-             * </ul>
+             * <p>The assignment result for a single cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>
@@ -267,7 +259,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The assignment results.</p>
+             * <p>The assignment result details.</p>
              */
             public Builder assignModels(java.util.List<AssignModels> assignModels) {
                 this.assignModels = assignModels;
@@ -275,15 +267,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>FAILED</li>
-             * <li>NOT_STARTED</li>
-             * <li>STARTED</li>
-             * <li>PROCESSING</li>
-             * <li>FINISHED</li>
-             * </ul>
+             * <p>The overall assignment result.</p>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>

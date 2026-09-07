@@ -174,7 +174,10 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -183,7 +186,10 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when the billing method is <code>PrePaid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -192,7 +198,11 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
+         * <p>The virtual bridge ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vb-sfjoasjfosdfj**</p>
          */
         public Builder bridgeId(String bridgeId) {
             this.putQueryParameter("BridgeId", bridgeId);
@@ -201,6 +211,7 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
+         * <p>The virtual bridge specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +224,10 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The payment callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://wya.wuying.aliyun.com/mobileClaw">https://wya.wuying.aliyun.com/mobileClaw</a></p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -222,7 +236,15 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -231,7 +253,10 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration for the prepaid cloud disk. This parameter takes effect and is required only when the <code>CdsChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -240,7 +265,10 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID. You can call the pricing query operation to obtain the list of matched promotion IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23141</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -249,6 +277,7 @@ public class ModifyVirtualBridgeLevelRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

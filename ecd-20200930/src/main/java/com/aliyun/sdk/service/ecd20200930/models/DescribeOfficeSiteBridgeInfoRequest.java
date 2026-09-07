@@ -88,7 +88,10 @@ public class DescribeOfficeSiteBridgeInfoRequest extends Request {
         } 
 
         /**
-         * BridgeId.
+         * <p>The virtual bridge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vb-sdfsifhisdhf****</p>
          */
         public Builder bridgeId(String bridgeId) {
             this.putQueryParameter("BridgeId", bridgeId);
@@ -97,7 +100,10 @@ public class DescribeOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -106,6 +112,7 @@ public class DescribeOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

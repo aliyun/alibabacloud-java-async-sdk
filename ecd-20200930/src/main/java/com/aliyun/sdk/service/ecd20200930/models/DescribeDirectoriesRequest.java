@@ -145,7 +145,7 @@ public class DescribeDirectoriesRequest extends Request {
         } 
 
         /**
-         * <p>Details of directory IDs. You can specify one or more directory IDs.</p>
+         * <p>The directory IDs. You can specify one or more directory IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
@@ -157,7 +157,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The directory status. This parameter is equivalent to <code>Status</code>.</p>
+         * <p>The directory status. This parameter is the same as Status.</p>
          * 
          * <strong>example:</strong>
          * <p>REGISTERED</p>
@@ -170,14 +170,9 @@ public class DescribeDirectoriesRequest extends Request {
 
         /**
          * <p>The directory type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>SIMPLE: the convenience directory.</li>
-         * <li>AD_CONNECTOR: the Active Directory (AD) directory.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RAM</p>
+         * <p>SIMPLE</p>
          */
         public Builder directoryType(String directoryType) {
             this.putQueryParameter("DirectoryType", directoryType);
@@ -186,7 +181,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -200,7 +195,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -212,7 +207,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,71 +221,6 @@ public class DescribeDirectoriesRequest extends Request {
 
         /**
          * <p>The directory status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>REGISTERING: The directory is being registered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DEREGISTERING: The directory is being deregistered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>REGISTERED: The directory is registered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NEEDCONFIGTRUST: A trust relationship needs to be configured for the directory.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the directory.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DEREGISTERED: The directory is deregistered.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ERROR: One or more configurations of the directory are invalid.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CONFIGTRUSTING: A trust relationship is being configured.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NEEDCONFIGUSER: Users need to be configured for the directory.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>REGISTERED</p>

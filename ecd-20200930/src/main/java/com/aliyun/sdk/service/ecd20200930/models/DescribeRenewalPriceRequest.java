@@ -158,11 +158,11 @@ public class DescribeRenewalPriceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. The value you specify depends on the resource type (ResourceType) you&quot;re querying the renewal price for.</p>
+         * <p>The instance ID. The value depends on the resource type (ResourceType) for which you want to query the renewal price:</p>
          * <ul>
-         * <li>When <code>ResourceType</code> is set to <code>Desktop</code>, you must provide the cloud computer ID as the value of <code>InstanceId</code>.</li>
-         * <li>When <code>ResourceType</code> is set to <code>DesktopGroup</code>, you must provide the share ID as the value of <code>InstanceId</code>.</li>
-         * <li>When <code>ResourceType</code> is set to <code>Bandwidth</code>, you must provide the ID of the premium bandwidth plan as the value of <code>InstanceId</code>.</li>
+         * <li>If <code>ResourceType</code> is set to <code>Desktop</code> (to query the renewal price of a cloud computer), set <code>InstanceId</code> to the cloud computer ID.</li>
+         * <li>If <code>ResourceType</code> is set to <code>DesktopGroup</code> (to query the renewal price of a cloud computer pool), set <code>InstanceId</code> to the cloud computer pool ID.</li>
+         * <li>If <code>ResourceType</code> is set to <code>Bandwidth</code> (to query the renewal price of premium Internet bandwidth), set <code>InstanceId</code> to the premium Internet bandwidth ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs. The value you specify depends on the resource type (ResourceType) you&quot;re querying the renewal price for.</p>
+         * <p>The instance IDs. The values depend on the resource type (ResourceType) for which you want to query the renewal price.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -184,10 +184,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The renewal duration. The valid values for this parameter depend on the value of <code>PeriodUnit</code>.</p>
+         * <p>The renewal duration. Valid values of this parameter are determined by the value of <code>PeriodUnit</code>.</p>
          * <ul>
-         * <li>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</li>
-         * <li>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
          * </ul>
          * <p>Default value: 1.</p>
          * 
@@ -201,12 +201,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal duration specified by <code>Period</code>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month (default)</li>
-         * <li>Year</li>
-         * </ul>
+         * <p>The unit of the renewal duration, which is the unit of the <code>Period</code> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -218,7 +213,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -227,7 +225,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +238,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of the resource ownership user in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1017457975738750</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -250,12 +251,6 @@ public class DescribeRenewalPriceRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Desktop (default): cloud computers.</li>
-         * <li>Bandwidth: premium bandwidth plans.</li>
-         * <li>DesktopGroup: cloud computer shares.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Desktop</p>

@@ -139,6 +139,9 @@ public class ModifyTemplateBaseInfoRequest extends Request {
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shanghai template1</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);

@@ -203,24 +203,11 @@ public class ModifyDesktopSpecRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Specifies whether to enable automatic payment.</p>
          * <p>Default value: true. Valid values:</p>
          * <ul>
-         * <li><p>true: enables the auto-payment feature.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, an exception occurs on your order.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</p>
-         * <!-- --></li>
+         * <li>true: Automatic payment is enabled. Make sure that your Alibaba Cloud account balance is sufficient. Otherwise, abnormal orders may be generated.</li>
+         * <li>false: Only an order is generated. Automatic payment is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +220,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of a cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-4543qyik164a4****</p>
@@ -245,7 +232,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The destination instance type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</p>
+         * <p>The target instance type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the instance types supported by cloud computers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +245,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the promotional activity.</p>
+         * <p>The promotion ID.</p>
          * 
          * <strong>example:</strong>
          * <p>500033080110596</p>
@@ -270,7 +257,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +270,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of the resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -292,7 +282,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The array of resource specification templates.</p>
+         * <p>The resource specification templates.</p>
          */
         public Builder resourceSpecs(java.util.List<ResourceSpecs> resourceSpecs) {
             this.putQueryParameter("ResourceSpecs", resourceSpecs);
@@ -303,7 +293,7 @@ public class ModifyDesktopSpecRequest extends Request {
         /**
          * <p>The resource type.</p>
          * <blockquote>
-         * <p>This parameter is optional for non-subscribed cloud computers.</p>
+         * <p>This parameter is not required for non-subscription cloud computers.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -316,7 +306,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
+         * <p>The system cloud disk size after the change. Unit: GiB. Valid values: 80 to 500. The value must be a multiple of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -328,36 +318,13 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the data disk. Default value: PL0.</p>
+         * <p>The performance level (PL) of the data cloud disk. Default value: PL0.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>PL1</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>PL0</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>PL3</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>PL2</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,10 +337,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * <p>The destination data disk size. Unit: GiB.</p>
+         * <p>The data cloud disk size after the change. Unit: GiB.</p>
          * <ul>
-         * <li>The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.</li>
-         * <li>The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.</li>
+         * <li>For non-graphics cloud computers, valid values: 20 to 1020. The value must be a multiple of 10.</li>
+         * <li>For graphics cloud computers, valid values: 40 to 1020. The value must be a multiple of 10.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +425,7 @@ public class ModifyDesktopSpecRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the cloud computer.</p>
+             * <p>The cloud computer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-4543qyik164a4****</p>
@@ -469,7 +436,7 @@ public class ModifyDesktopSpecRequest extends Request {
             }
 
             /**
-             * <p>The target size of the system disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</p>
+             * <p>The target system cloud disk size. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -480,7 +447,7 @@ public class ModifyDesktopSpecRequest extends Request {
             }
 
             /**
-             * <p>The target size of the data disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</p>
+             * <p>The target data cloud disk size. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

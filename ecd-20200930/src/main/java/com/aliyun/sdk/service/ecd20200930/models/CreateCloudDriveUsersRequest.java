@@ -105,7 +105,7 @@ public class CreateCloudDriveUsersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud disk.</p>
+         * <p>The enterprise network drive ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the end users.</p>
+         * <p>The list of end user IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
@@ -128,7 +128,7 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,11 +141,11 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * <p>The maximum storage space of an end user. Unit: bytes.</p>
+         * <p>The maximum storage capacity of the user\&quot;s personal drive. This value cannot exceed the remaining allocatable capacity of the enterprise network drive. Unit: bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1024</p>
+         * <p>209715200</p>
          */
         public Builder userMaxSize(Long userMaxSize) {
             this.putQueryParameter("UserMaxSize", userMaxSize);

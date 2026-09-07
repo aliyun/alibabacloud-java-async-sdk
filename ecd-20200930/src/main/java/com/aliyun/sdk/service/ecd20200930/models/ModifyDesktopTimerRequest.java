@@ -135,7 +135,7 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the <code>DesktopTimers</code>** parameter. Set the value to <code>true</code>**.</p>
+         * <p>Specifies whether to use the <code>DesktopTimers</code>\<em>\</em> parameter. Set the value to <code>true</code>\<em>\</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -284,7 +284,7 @@ public class ModifyDesktopTimerRequest extends Request {
             /**
              * <p>The cron expression of the schedule.</p>
              * <blockquote>
-             * <p>The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7</p>
+             * <p>The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

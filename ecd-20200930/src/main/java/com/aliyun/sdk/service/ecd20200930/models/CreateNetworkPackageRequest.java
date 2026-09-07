@@ -229,25 +229,7 @@ public class CreateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the automatic payment feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true (default): enables the auto-payment feature.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -259,23 +241,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -287,16 +253,16 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the premium bandwidth plan. Unit: Mbit/s.    </p>
          * <ul>
-         * <li>Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</li>
-         * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</li>
-         * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</li>
+         * <li>If the premium bandwidth plan uses the subscription billing method, the valid values are 2 to 1000.</li>
+         * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</li>
+         * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -305,7 +271,12 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * ChannelCookie.
+         * <blockquote>
+         * <p>This field is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PBKB1QbqEl2tslEuU6gRrLxvCFBU2M%2FVD0Eru6Oo%2FI9LTU3XQhvq3PGMWarE%2BPJdkNvCqT3blqlRSthNy4A%2BJQ%3D%3D</p>
          */
         public Builder channelCookie(String channelCookie) {
             this.putQueryParameter("ChannelCookie", channelCookie);
@@ -314,17 +285,15 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The charge type of the premium bandwidth plan.</p>
+         * <p>The billable methods of the premium bandwidth plan.</p>
          * <ul>
-         * <li><p>Valid value when the <code>PayType</code> parameter is set to <code>PrePaid</code>:</p>
-         * <ul>
-         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * <li>When the parameter <code>PayType</code> is set to <code>PrePaid</code>, the valid value is:<ul>
+         * <li>PayByBandwidth: billing by fixed bandwidth.</li>
          * </ul>
          * </li>
-         * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
-         * <ul>
-         * <li>PayByTraffic: charges by data transfer.</li>
-         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * <li>When the parameter <code>PayType</code> is set to <code>PostPaid</code>, the valid values are:<ul>
+         * <li>PayByTraffic: billing by data transfer.</li>
+         * <li>PayByBandwidth: billing by fixed bandwidth.</li>
          * </ul>
          * </li>
          * </ul>
@@ -351,12 +320,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the premium bandwidth plan.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PostPaid: pay-as-you-go</li>
-         * <li>PrePaid: subscription</li>
-         * </ul>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -368,11 +332,11 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <code>PayType</code> parameter is set to <code>PrePaid</code>. The valid values of this parameter vary based on the <code>PeriodUnit</code> value.</p>
+         * <p>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when PayType is set to PrePaid. Valid values are determined by the PeriodUnit parameter.</p>
          * <ul>
-         * <li>Valid value when the <code>PeriodUnit</code> parameter is set to <code>Week</code>: 1</li>
-         * <li>Valid values when the <code>PeriodUnit</code> parameter is set to <code>Month</code>: 1, 2, 3, and 6</li>
-         * <li>Valid values when the <code>PeriodUnit</code> parameter is set to <code>Year</code>: 1, 2, and 3</li>
+         * <li>If PeriodUnit is set to Week, the valid value is 1.</li>
+         * <li>If PeriodUnit is set to Month, the valid values are 1, 2, 3, and 6.</li>
+         * <li>If PeriodUnit is set to Year, the valid values are 1, 2, and 3.</li>
          * </ul>
          * <p>Default value: 1.</p>
          * 
@@ -386,33 +350,10 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <code>PayType</code> parameter is set to <code>PrePaid</code>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Month</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Year</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Week</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The unit of the subscription duration for the premium bandwidth plan. This parameter takes effect and is required only when PayType is set to PrePaid.</p>
          * 
          * <strong>example:</strong>
-         * <p>Month</p>
+         * <p>Week</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -421,7 +362,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the sales promotion.</p>
+         * <p>The promotion activity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23141</p>
@@ -433,7 +374,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -446,7 +387,10 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -455,7 +399,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags. A maximum of 20 tags are supported.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -523,7 +467,10 @@ public class CreateNetworkPackageRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -531,7 +478,10 @@ public class CreateNetworkPackageRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

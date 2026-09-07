@@ -80,7 +80,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the images.</p>
+         * <p>The collection of image information.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -88,7 +88,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * <p>The pagination token for the next query. An empty value indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -99,7 +99,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4636DBE0-BBB4-4076-8B8E-94D21A9A3CFB</p>
@@ -415,7 +415,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the image.</p>
+             * <p>The image version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -426,7 +426,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created.</p>
+             * <p>The time when the image was created. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-01-10T01:01:10Z</p>
@@ -437,7 +437,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>The data cloud disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -448,7 +448,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image.</p>
+             * <p>The image description.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -459,7 +459,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is a GPU-accelerated image.</p>
+             * <p>Specifies whether the image is a GPU image.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -470,7 +470,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the GPU driver.</p>
+             * <p>The GPU driver version.</p>
              * 
              * <strong>example:</strong>
              * <p>417.22</p>
@@ -481,7 +481,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>m-gx2x1dhsmusr2****</p>
@@ -492,23 +492,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>SYSTEM</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CUSTOM</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The image type.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -519,7 +503,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>testImageName</p>
@@ -530,7 +514,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system.</p>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>WINDOWS</p>
@@ -542,57 +526,6 @@ public class DescribeImagesResponseBody extends TeaModel {
 
             /**
              * <p>The operating system type of the image.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Ubuntu</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows Server 2022</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>UOS</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CentOS</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows Server 2019</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>SQL Server 2016</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows 10</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Windows Server 2019</p>
@@ -603,7 +536,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation progress of the image. Unit: %.</p>
+             * <p>The progress of image creation. Unit: %.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -615,11 +548,6 @@ public class DescribeImagesResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>HDX: High-definition Experience (HDX) protocol</li>
-             * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -630,14 +558,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image session.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>SINGLE_SESSION: single-session image.</p>
-             * </li>
-             * <li><p>MULTIPLE_SESSION: multi-session image.</p>
-             * </li>
-             * </ul>
+             * <p>The session type of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>MULTIPLE_SESSION</p>
@@ -659,7 +580,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GiB.</p>
+             * <p>The image size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -670,30 +591,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Creating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Available</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>CreateFailed</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The image status.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -704,7 +602,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The languages of the operating system.</p>
+             * <p>The operating system language.</p>
              */
             public Builder supportedLanguages(java.util.List<String> supportedLanguages) {
                 this.supportedLanguages = supportedLanguages;
@@ -712,7 +610,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was last modified.</p>
+             * <p>The time when the image was last modified. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-22T02:48:43Z</p>
@@ -734,7 +632,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+             * <p>The ID of the KMS key used for disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>

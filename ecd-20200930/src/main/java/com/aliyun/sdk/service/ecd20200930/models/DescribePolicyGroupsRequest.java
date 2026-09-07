@@ -173,7 +173,14 @@ public class DescribePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The business channel. Valid values:</p>
+         * <ul>
+         * <li>Enterprise: Enterprise Edition.</li>
+         * <li>Business: Business Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -182,7 +189,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The array of cloud computer policy IDs to be excluded.</p>
+         * <p>The list of cloud computer policy IDs to exclude from the query results.</p>
          */
         public Builder externalPolicyGroupIds(java.util.List<String> externalPolicyGroupIds) {
             this.putQueryParameter("ExternalPolicyGroupIds", externalPolicyGroupIds);
@@ -191,10 +198,10 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <ul>
-         * <li>Valid values: 1 to 100</li>
-         * <li>Default value: 10</li>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +214,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -219,7 +226,10 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -228,7 +238,10 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page for a paged query.<br>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -237,7 +250,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer policies.</p>
+         * <p>The list of cloud computer policy IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>system-all-enabled-policy</p>
@@ -249,7 +262,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,15 +276,9 @@ public class DescribePolicyGroupsRequest extends Request {
 
         /**
          * <p>The effective scope of the cloud computer policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ALL</li>
-         * <li>IP</li>
-         * <li>GLOBAL</li>
-         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ALL</p>
+         * <p>GLOBAL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

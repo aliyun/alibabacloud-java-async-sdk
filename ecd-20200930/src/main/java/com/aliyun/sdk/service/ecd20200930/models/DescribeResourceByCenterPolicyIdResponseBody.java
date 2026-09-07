@@ -633,6 +633,9 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
 
             /**
              * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>O&amp;M</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;

@@ -143,7 +143,10 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>The ID of the scheduled task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccg-i1ruuudp92qpj****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -152,7 +155,10 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -161,7 +167,10 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -170,7 +179,14 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <ul>
+         * <li>Shanghai</li>
+         * <li>Singapore</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +195,10 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * <p>The list of resource types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -188,7 +207,10 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         }
 
         /**
-         * SearchRegionId.
+         * <p>The region ID used to filter cloud desktop information for a specific region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder searchRegionId(String searchRegionId) {
             this.putQueryParameter("SearchRegionId", searchRegionId);
@@ -197,7 +219,18 @@ public class DescribeGlobalTimerBatchesRequest extends Request {
         }
 
         /**
-         * TimerType.
+         * <p>The type of the task to query. Only scheduled tasks have batch information.</p>
+         * <ul>
+         * <li>TimerBoot: scheduled startup</li>
+         * <li>TimerShutdown: scheduled shutdown</li>
+         * <li>TimerReboot: scheduled restart</li>
+         * <li>TimerReset: scheduled reset</li>
+         * <li>TimerMaintenance: scheduled maintenance mode</li>
+         * <li>TimerHibernate: scheduled hibernation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timerType(String timerType) {
             this.putQueryParameter("TimerType", timerType);

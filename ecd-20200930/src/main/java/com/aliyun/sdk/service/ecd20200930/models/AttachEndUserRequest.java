@@ -146,7 +146,7 @@ public class AttachEndUserRequest extends Request {
         } 
 
         /**
-         * <p>The address of the Active Directory (AD) office network.</p>
+         * <p>The address of the AD workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>xn--0zw****</p>
@@ -158,15 +158,11 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * <p>The type of the client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: hardware client.</li>
-         * </ul>
+         * <p>The device type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         public Builder clientType(Integer clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -175,11 +171,11 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * <p>The serial number (SN) of the hardware client.</p>
+         * <p>The serial number (SN) of the WUYING hardware terminal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>111810122200F0C24CF7F1BF-<em>05AY</em>***</p>
+         * <p>12OERSLDO7M3****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -188,7 +184,7 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the convenient office network.</p>
+         * <p>The ID of the convenience workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
@@ -200,11 +196,11 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user that you want to bind to the hardware client.</p>
+         * <p>The ID of the bound user to add to the WUYING hardware terminal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>moli</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -213,7 +209,7 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -225,12 +221,7 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * <p>The account type of the user.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AD: enterprise AD account.</li>
-         * <li>SIMPLE: convenience account</li>
-         * </ul>
+         * <p>The user account type.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>

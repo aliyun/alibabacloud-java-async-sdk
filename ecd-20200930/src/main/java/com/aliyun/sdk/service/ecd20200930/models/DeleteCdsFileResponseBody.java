@@ -106,7 +106,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The execution result of the operation. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The execution result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,12 +117,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the data is returned.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether data was returned successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -133,7 +128,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -156,11 +151,6 @@ public class DeleteCdsFileResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the operation was successful.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

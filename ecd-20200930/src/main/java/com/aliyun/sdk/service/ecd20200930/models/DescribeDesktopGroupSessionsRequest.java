@@ -213,7 +213,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of shared desktop groups.</p>
+         * <p>The list of shared desktop group IDs.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -234,7 +234,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time of the query. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;2022-08-31T06:56:45Z&quot;</p>
@@ -246,10 +246,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the terminal that connects to the session.</p>
+         * <p>The ID of the end user connected to the session.</p>
          * 
          * <strong>example:</strong>
-         * <p>xianqiu</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -258,7 +258,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>Whether to supplement terminal information.</p>
+         * <p>Specifies whether to include terminal information.</p>
          */
         public Builder fillTerminalInfo(Boolean fillTerminalInfo) {
             this.putQueryParameter("FillTerminalInfo", fillTerminalInfo);
@@ -267,7 +267,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type of the returned information.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -279,7 +279,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -291,10 +291,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;asdfdfsdfsdfds&quot;</p>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6ljnKKgSRjo8yXAIT5QSvkU</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -303,12 +303,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The type of the session.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: single-session</li>
-         * <li>1: multi-session</li>
-         * </ul>
+         * <p>The session type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -320,7 +315,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -332,23 +327,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The status of the session.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Connected</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Disconnected</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -360,7 +339,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time of the query. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;2022-08-31T06:56:45Z&quot;</p>

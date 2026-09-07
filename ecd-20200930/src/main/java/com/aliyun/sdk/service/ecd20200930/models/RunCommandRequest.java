@@ -161,9 +161,9 @@ public class RunCommandRequest extends Request {
         } 
 
         /**
-         * <p>The content of the command. The command content can be plaintext or Base64-encoded.<br>The Base64-encoded command content cannot exceed 16 KB in size.</p>
+         * <p>The plaintext or Base64-encoded content of the script.<br>The Base64-encoded script content cannot exceed 16 KB.</p>
          * <blockquote>
-         * <p>If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.</p>
+         * <p>If the script content is Base64-encoded, set the ContentEncoding parameter to Base64.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -177,7 +177,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * CommandRole.
+         * <p>The role used when the command is executed on the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder commandRole(String commandRole) {
             this.putQueryParameter("CommandRole", commandRole);
@@ -186,12 +189,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The encoding mode of the command content. Valid values:</p>
-         * <ul>
-         * <li>PlainText: The command content is not encoded.</li>
-         * <li>Base64: The command content is Base64-encoded.</li>
-         * </ul>
-         * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
+         * <p>The encoding method of the script content.</p>
+         * <blockquote>
+         * <p>If the specified value is not within the valid values, the value is treated as <code>PlainText</code>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Base64</p>
@@ -203,7 +204,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.<br>If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.</p>
+         * <p>The list of cloud computer IDs. Valid values of N: 1 to 50.<br>If multiple cloud computers are specified, the API call succeeds as long as the script is successfully executed on at least one cloud computer. If the script fails to execute on all specified cloud computers, reset this parameter.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -213,10 +214,13 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user. If you specify a value, you run the command as the end user that is granted specific permissions. Note: The end user has sessions on a cloud computer. That is, when the cloud computer is started, the end user logs on to an Alibaba Cloud Workspace client and connects to the cloud computer, and the cloud computer is not preempted by another end user during the connection. This parameter is not available for Linux cloud computers.</p>
+         * <p>The ID of the end user. If this parameter is specified, the command is executed with the permissions of the end user.</p>
+         * <blockquote>
+         * <p>The user must have a session record on the cloud computer (the user has logged on and connected to the cloud computer after it was started, and the session was not preempted by another user). This parameter is not supported for Linux cloud computers.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>User1</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -225,7 +229,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +242,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the command to run. Unit: seconds. Default value: 60.<br>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.</p>
+         * <p>The timeout period for executing the script. Unit: seconds. Default value: 300.<br>A timeout may occur when the script cannot run because of process issues, missing modules, or a missing Cloud Assistant client. After a timeout, the script process is forcefully terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -250,11 +254,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The language of the O&amp;M command. Valid values:</p>
-         * <ul>
-         * <li>RunBatScript</li>
-         * <li>RunPowerShellScript</li>
-         * </ul>
+         * <p>The language type of the O&amp;M script.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

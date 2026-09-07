@@ -80,7 +80,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>If the NextToken parameter is empty, no next page exists.</p>
+         * <p>The pagination token. If the NextToken parameter is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -102,7 +102,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The snapshots.</p>
+         * <p>The snapshot information.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -467,7 +467,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The point in time at which the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+             * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T14:52:28Z</p>
@@ -478,7 +478,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who creates the snapshot.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>Administrator</p>
@@ -489,7 +489,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the snapshot was deleted. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+             * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T14:52:28Z</p>
@@ -500,7 +500,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the snapshot.</p>
+             * <p>The snapshot description.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -522,7 +522,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer.</p>
+             * <p>The cloud computer name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -533,18 +533,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud computer.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Stopped</li>
-             * <li>Starting</li>
-             * <li>Rebuilding</li>
-             * <li>Running</li>
-             * <li>Stopping</li>
-             * <li>Expired</li>
-             * <li>Deleted</li>
-             * <li>Pending</li>
-             * </ul>
+             * <p>The cloud computer status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -555,7 +544,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskStatus.
+             * <p>The status of the cloud disk to which the snapshot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder diskStatus(String diskStatus) {
                 this.diskStatus = diskStatus;
@@ -587,7 +579,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The operating system type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -595,7 +590,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of creating the snapshot. Unit: %.</p>
+             * <p>The snapshot creation progress, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -607,22 +602,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>HDX: High-definition Experience (HDX) protocol</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ASP: in-house Adaptive Streaming Protocol (ASP)</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -633,9 +612,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining time that is required to complete the snapshot creation. Unit: seconds.</p>
+             * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
              * <blockquote>
-             * <p> When the <code>Status</code> value is <code>PROGRESSING</code>, the <code>RemainTime</code> value is <code>-1</code>. A value of -1 indicates that the system is calculating the remaining time.</p>
+             * <p>When <code>Status</code> is <code>PROGRESSING</code>, a <code>RemainTime</code> value of <code>-1</code> indicates that the remaining time is being calculated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -647,7 +626,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the restore point.</p>
+             * <p>The restore point ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rp-btgmaa20wkcju****</p>
@@ -658,7 +637,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the restore point.</p>
+             * <p>The restore point name.</p>
              * 
              * <strong>example:</strong>
              * <p>DataDiskBackup</p>
@@ -680,7 +659,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the snapshot.</p>
+             * <p>The snapshot name.</p>
              * 
              * <strong>example:</strong>
              * <p>testSnapshotName</p>
@@ -691,23 +670,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the snapshot.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>AUTO: automatic snapshot</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>USER: manual snapshot</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The snapshot creation type.</p>
              * 
              * <strong>example:</strong>
              * <p>USER</p>
@@ -718,7 +681,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the source disk. Unit: GiB.</p>
+             * <p>The capacity of the source cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -729,23 +692,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source disk.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>SYSTEM: system disk</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>DATA: data disk</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The type of the source cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -756,30 +703,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the snapshot.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>PROGRESSING: The snapshot is being created.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>FAILED: The snapshot fails to be created.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ACCOMPLISHED: The snapshot is created.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The snapshot status.</p>
              * 
              * <strong>example:</strong>
              * <p>ACCOMPLISHED</p>
@@ -790,7 +714,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether disk encryption is enabled.</p>
+             * <p>Indicates whether cloud disk encryption is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -801,7 +725,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+             * <p>The ID of the Key Management Service (KMS) key used for cloud disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>

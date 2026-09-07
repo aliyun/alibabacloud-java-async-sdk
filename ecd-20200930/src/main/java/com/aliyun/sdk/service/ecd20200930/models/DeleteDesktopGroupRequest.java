@@ -89,7 +89,7 @@ public class DeleteDesktopGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the shared Cloud Desktop.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,10 @@ public class DeleteDesktopGroupRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The ID of the resource ownership user in the reseller pattern. This parameter is not required in the non-reseller pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);

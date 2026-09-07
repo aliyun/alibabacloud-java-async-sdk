@@ -102,7 +102,7 @@ public class ModifyUserEntitlementRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computers to which you want to add end users.</p>
+         * <p>The list of cloud computer IDs for which to add authorized users.</p>
          */
         public Builder authorizeDesktopId(java.util.List<String> authorizeDesktopId) {
             this.putQueryParameter("AuthorizeDesktopId", authorizeDesktopId);
@@ -111,7 +111,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The ID of the users.</p>
+         * <p>The list of user IDs (usernames).</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -120,7 +120,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computers whose end users you want to remove.</p>
+         * <p>The list of cloud computer IDs for which to remove authorized users.</p>
          */
         public Builder revokeDesktopId(java.util.List<String> revokeDesktopId) {
             this.putQueryParameter("RevokeDesktopId", revokeDesktopId);

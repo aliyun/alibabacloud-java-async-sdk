@@ -284,7 +284,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to turn on the switch to check session status of cloud computers.</p>
+         * <p>Specifies whether to check the session status within the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -296,7 +296,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
+         * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -305,7 +305,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer.</p>
+         * <p>The cloud computer name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -317,7 +317,8 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end of the time range to query.
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-13T02:51:43Z</p>
@@ -329,10 +330,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The end user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>testUser</p>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -341,7 +342,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The user ID. This parameter functions the same as the <code>EndUserId</code> parameter. You only need to include one of them in your request.</p>
+         * <p>The end user ID. This parameter is the same as EndUserId. You only need to specify one of them.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -353,7 +354,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * <p>The list of end user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -362,7 +363,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * FillHardwareInfo.
+         * <p>Specifies whether to include terminal information in the response.</p>
          */
         public Builder fillHardwareInfo(Boolean fillHardwareInfo) {
             this.putQueryParameter("FillHardwareInfo", fillHardwareInfo);
@@ -371,7 +372,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language type of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -392,7 +396,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -404,7 +408,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -416,7 +420,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +433,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-f3s3dgt8dtb0vlqc8</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -438,12 +445,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The state of the session.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Connected</li>
-         * <li>Disconnected</li>
-         * </ul>
+         * <p>The session connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -455,7 +457,8 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query.</p>
+         * <p>The beginning of the time range to query.
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-28T02:31:43Z</p>
@@ -467,14 +470,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The billing method of cloud computers.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>duration: hourly plan (available for users in the whitelist)</li>
-         * <li>postPaid: pay-as-you-go</li>
-         * <li>monthPackage: monthly subscription (the 120-hour/250-hour computing plan)</li>
-         * <li>prePaid: monthly subscription (the Unlimited computing plan)</li>
-         * </ul>
+         * <p>The purchase method of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>monthPackage</p>

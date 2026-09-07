@@ -75,7 +75,7 @@ public class CancelCdsFileShareLinkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud disk.</p>
+         * <p>The ID of the enterprise network disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CancelCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file sharing task.</p>
+         * <p>The share ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

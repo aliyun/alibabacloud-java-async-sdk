@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</p>
+     * <p>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</p>
      * 
      * @param request the request parameters of ActivateOfficeSite  ActivateOfficeSiteRequest
      * @return ActivateOfficeSiteResponse
@@ -36,7 +36,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.</p>
+     * <p>Each device can only be registered under one Alibaba Cloud account. If the device you attempt to register is already registered under another Alibaba Cloud account, an error is returned.</p>
      * 
      * @param request the request parameters of AddDevices  AddDevicesRequest
      * @return AddDevicesResponse
@@ -45,7 +45,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</p>
+     * <p>You can share a specified folder with other users and set access permissions for the folder.</p>
      * 
      * @param request the request parameters of AddFilePermission  AddFilePermissionRequest
      * @return AddFilePermissionResponse
@@ -71,10 +71,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateIpAddressResponse> allocateIpAddress(AllocateIpAddressRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-     * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</p>
-     * 
      * @param request the request parameters of ApplyAutoSnapshotPolicy  ApplyAutoSnapshotPolicyRequest
      * @return ApplyAutoSnapshotPolicyResponse
      */
@@ -94,7 +90,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers for which you want to allow image updates must be in the Running state.</p>
+     * <p>The cloud computer must be in the Running state.</p>
      * 
      * @param request the request parameters of ApproveFotaUpdate  ApproveFotaUpdateRequest
      * @return ApproveFotaUpdateResponse
@@ -121,11 +117,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>A CEN instance is created.</li>
-     * <li>The office network is an advanced office network, and the account system type is convenient account.<blockquote>
-     * <p> The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.</p>
+     * <li>A CEN instance is available.</li>
+     * <li>The office network is an advanced office network, and the account system type is convenience account.<blockquote>
+     * <p>An AD office network is already added to a CEN instance during creation. An office network can be added to only one CEN instance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -143,10 +139,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  The cloud computers for which you want to change their policies must be in the Running state.</p>
      * <ul>
-     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
-     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * <li>The cloud computers must be in the Running state.</li>
+     * <li>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter: <code>ASSIGNING</code> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</li>
+     * <li>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
      * @param request the request parameters of BatchModifyEntitlement  BatchModifyEntitlementRequest
@@ -228,7 +224,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>An AD directory is used to connect to an enterprise\&quot;s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
+     * <p>AD directories are used to connect to your enterprise Active Directory (AD) and are suitable for large-scale cloud computer deployments. Connecting to an enterprise AD incurs directory fees. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
      * 
      * @param request the request parameters of CreateADConnectorDirectory  CreateADConnectorDirectoryRequest
      * @return CreateADConnectorDirectoryResponse
@@ -237,17 +233,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
-     * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:</p>
+     * <p>When you create an AD office network, the system performs automatic creation of an AD Connector to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
+     * After you call this operation to create an AD office network, you must complete the AD domain configurations. The procedure is as follows:</p>
      * <ol>
-     * <li>Configure a conditional forwarder in a Domain Name System (DNS) server.</li>
-     * <li>Configure a trust relationship in an AD domain controller and call the <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> operation to configure the trust relationship with the AD office network.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to query a list of organizational units (OUs) of the AD domain, and call the <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> operation to specify an OU and administrator for the AD office network.<blockquote>
-     * <p> When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage enterprise AD office networks</a>.</p>
+     * <li><p>Configure a conditional forwarder on the DNS server.</p>
+     * </li>
+     * <li><p>Configure a trust relationship on the AD domain server, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure the trust relationship for the AD office network.</p>
+     * </li>
+     * <li><p>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the organizational unit (OU) information of the AD domain, and then call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OU and administrator for the AD office network.</p>
+     * <blockquote>
+     * <p>When you create an AD office network, if you specify the domain administrator and password (DomainUserName and DomainPassword), you only need to configure the conditional forwarder afterward. If you do not specify the domain administrator and password, you must complete the configurations of the conditional forwarder, trust relationship, and OU as described above.</p>
      * </blockquote>
      * </li>
      * </ol>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage an AD-based office network</a>.</p>
      * 
      * @param request the request parameters of CreateADConnectorOfficeSite  CreateADConnectorOfficeSiteRequest
      * @return CreateADConnectorOfficeSiteResponse
@@ -261,9 +260,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAndBindNasFileSystemResponse> createAndBindNasFileSystem(CreateAndBindNasFileSystemRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.</p>
-     * 
      * @param request the request parameters of CreateAutoSnapshotPolicy  CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
      */
@@ -277,7 +273,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
+     * <p>Cloud computer templates are classified into system templates and custom templates. System templates are default templates provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
      * 
      * @param request the request parameters of CreateBundle  CreateBundleRequest
      * @return CreateBundleResponse
@@ -286,7 +282,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.</p>
+     * <p>Call this API to create a folder directly in the enterprise cloud disk. To upload a file, call this API to obtain an upload URL. Then use that URL with the <a href="https://help.aliyun.com/document_detail/2247620.html">CompleteCdsFile</a> API to complete the upload.</p>
      * 
      * @param request the request parameters of CreateCdsFile  CreateCdsFileRequest
      * @return CreateCdsFileResponse
@@ -307,7 +303,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The list of teams of a cloud disk in Cloud Drive Service is synchronized from the Organization tab in the Elastic Desktop Service (EDS) console. You can choose Users &gt; Manager User &gt; User &gt; Organization in the console. If you want to authorize a user to use a team space, you must move the user to the corresponding organization. After you move the user, the user can view the menu bar of the team space on a Cloud Drive Service client.</p>
+     * <p>The disk team list is synchronized from the EDS client -&gt; User Management -&gt; organization chart. If a user wants to use a team space, you can move the user to the specified organization in the User Management interface. The user can then see the team space menu bar in the disk client.</p>
      * 
      * @param request the request parameters of CreateCloudDriveGroup  CreateCloudDriveGroupRequest
      * @return CreateCloudDriveGroupResponse
@@ -316,7 +312,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of enterprise NAS drives. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Enterprise NAS drive overview</a>.</p>
      * 
      * @param request the request parameters of CreateCloudDriveService  CreateCloudDriveServiceRequest
      * @return CreateCloudDriveServiceResponse
@@ -337,9 +333,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</li>
+     * <li>For information about the features, common scenarios, limits, and scaling policies of shared cloud computers, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared cloud computers (formerly cloud computer pools) overview</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDesktopGroup  CreateDesktopGroupRequest
@@ -355,17 +350,95 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you create cloud computers, complete the following preparations:</p>
+     * <p>Before creating cloud computers, complete the following preparations:</p>
      * <ul>
-     * <li>An office network (formerly called workspace) and users are created. For more information, see:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>Active Directory (AD) office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create an AD user</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
-     * <li>Make sure a cloud computer template exists. If no cloud computer template exists, call the <a href="https://help.aliyun.com/document_detail/188883.html">CreateBundle</a> operation to create a template.</li>
-     * <li>Make sure a policy exists. If no policy exists, call the <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> operation to create a policy.
-     * If you want the cloud computers to automatically execute a custom command script, you can use the <code>UserCommands</code> field to configure a custom command.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+     * <strong>Call examples:</strong><details>
+     * <summary>Example of creating with a template</summary></li>
      * </ul>
+     * <pre><code>{
+     *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
+     *   &quot;Amount&quot;: &quot;1&quot;,
+     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
+     *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
+     *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
+     *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
+     * }
+     * </code></pre>
+     * </details>
+     * <details>
+     * <summary>Example of creating without a template</summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "PolicyGroupId": "system-all-enabled-policy",
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "ImageId": "desktopimage-windows-server-2022-64-asp",
+     *     "SystemDiskSize": "40",
+     *     "DataDiskSize": "0",
+     *     "DefaultLanguage": "zh-CN",
+     *     "DesktopType": "eds.enterprise_office.4c8g"
+     *   }
+     * }
+     * ```
+     * </details>
+     * <details>
+     * <summary>Example of creating a monthly hourly package</summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "PolicyGroupId": "system-all-enabled-policy",
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "ImageId": "desktopimage-windows-server-2022-64-asp",
+     *     "SystemDiskSize": "40",
+     *     "DataDiskSize": "0",
+     *     "DefaultLanguage": "zh-CN",
+     *     "DesktopType": "eds.enterprise_office.4c8g"
+     *   },
+     *   "MonthDesktopSetting": {
+     *     "UseDuration": "120"
+     *   },
+     *   "Period": "1",
+     *   "PeriodUnit": "Month"
+     * }
+     * ```
+     * </details>
+     * <details>
+     * <summary>Example of creating an Agent resource</summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "BundleId": "b-openclaw-linux",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "DesktopType": "cloud.space.4c.8g"
+     *   },
+     *   "PurchaseOptions": {
+     *     "MonthlyCredits": "120"
+     *   },
+     *   "Period": "1",
+     *   "PeriodUnit": "Month"
+     * }
+     * ```
+     * </details>
+     * To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * @param request the request parameters of CreateDesktops  CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -404,17 +477,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
-     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
-     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
-     * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
-     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
-     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</li>
+     * <li>You can create one NAS file system for each standard office network to share files among cloud computers within the office network.</li>
+     * <li>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</li>
+     * <li>The NAS file system uses the pay-as-you-go billing method by default. You are charged for the actual storage usage. You can also purchase resource plans to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateNASFileSystem  CreateNASFileSystemRequest
@@ -436,7 +503,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * <p>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
      * 
      * @param request the request parameters of CreateOfficeSiteAccelerator  CreateOfficeSiteAcceleratorRequest
      * @return CreateOfficeSiteAcceleratorResponse
@@ -445,7 +512,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud computer policy is a collection of rules that primarily includes configurations for cloud computer performance and security, such as basic policies like disk mapping, USB redirection, and watermarks, as well as rules like DNS management. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -453,6 +520,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Cloud computer templates include system templates and custom templates. System templates are default templates provided by Alibaba Cloud. Call this operation to create a custom template.</p>
+     * 
      * @param request the request parameters of CreateQosRule  CreateQosRuleRequest
      * @return CreateQosRuleResponse
      */
@@ -460,10 +530,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you create a RAM directory, complete the following preparations:</p>
+     * <p>Before creating a RAM-type directory, complete the following preparations:</p>
      * <ul>
-     * <li>Call the <code>CreateVpc</code> operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.</li>
-     * <li>Call the <code>CreateVSwitch</code> operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> operation to obtain the most recent zone list for a region supported by Elastic Desktop Service</li>
+     * <li>Call <code>CreateVpc</code> to create a virtual private cloud (VPC) in a region supported by cloud computers.</li>
+     * <li>Call <code>CreateVSwitch</code> to create a vSwitch in the same VPC. The zone of the vSwitch must be a zone supported by cloud computers in that region. Call <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> to query the zones supported by Elastic Desktop Service in a specific region.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRAMDirectory  CreateRAMDirectoryRequest
@@ -512,10 +582,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following item:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
-     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * <li>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</li>
+     * <li>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
@@ -524,6 +594,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</p>
+     * 
      * @param request the request parameters of CreateVirtualBridge  CreateVirtualBridgeRequest
      * @return CreateVirtualBridgeResponse
      */
@@ -573,10 +646,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</p>
      * <ul>
-     * <li>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</li>
-     * <li>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</li>
+     * <li>Before calling this operation, make sure that the shared Cloud Desktop does not contain any connected Cloud Desktops or authorized users.</li>
+     * <li>For subscription shared Cloud Desktops, if the subscription Cloud Desktops within the pool have not expired, the shared Cloud Desktop cannot be deleted.</li>
+     * <li>For pay-as-you-go shared Cloud Desktops, deleting the shared Cloud Desktop also releases the pay-as-you-go Cloud Desktops within it.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDesktopGroup  DeleteDesktopGroupRequest
@@ -628,8 +701,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Images include system images and custom images. System images cannot be deleted.</p>
      * <ul>
+     * <li>Images include system images and custom images. System images cannot be deleted.</li>
      * <li>If an image that you want to delete is referenced by a cloud computer template, call the <a href="https://help.aliyun.com/document_detail/436972.html">DeleteBundles</a> operation to delete the cloud computer template before you delete the image.</li>
      * </ul>
      * 
@@ -642,7 +715,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Before you delete a File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
      * <blockquote>
-     * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
+     * <p>Warning: 
+     * If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteNASFileSystems  DeleteNASFileSystemsRequest
@@ -674,7 +748,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>All cloud computers in the office network are released.</li>
      * <li>The data that you want to retain is backed up.<blockquote>
-     * <p> Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
+     * <p>Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -686,8 +760,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</p>
      * <ul>
+     * <li>You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</li>
      * <li>You cannot delete the cloud computer policies that are associated with cloud computers.</li>
      * </ul>
      * 
@@ -737,7 +811,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleting a template does not affect cloud computers created from it or the associated resources.</p>
+     * <p>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
      * 
      * @param request the request parameters of DeleteTemplates  DeleteTemplatesRequest
      * @return DeleteTemplatesResponse
@@ -745,6 +819,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTemplatesResponse> deleteTemplates(DeleteTemplatesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</p>
+     * 
      * @param request the request parameters of DeleteVirtualBridge  DeleteVirtualBridgeRequest
      * @return DeleteVirtualBridgeResponse
      */
@@ -766,9 +843,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAclEntriesResponse> describeAclEntries(DescribeAclEntriesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment &gt; Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.</p>
-     * 
      * @param request the request parameters of DescribeAutoSnapshotPolicy  DescribeAutoSnapshotPolicyRequest
      * @return DescribeAutoSnapshotPolicyResponse
      */
@@ -799,21 +873,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCenterPolicyListResponse> describeCenterPolicyList(DescribeCenterPolicyListRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.</p>
-     * 
      * @param request the request parameters of DescribeClientEvents  DescribeClientEventsRequest
      * @return DescribeClientEventsResponse
      */
     CompletableFuture<DescribeClientEventsResponse> describeClientEvents(DescribeClientEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
+     * 
      * @param request the request parameters of DescribeCloudDiskGroupDrives  DescribeCloudDiskGroupDrivesRequest
      * @return DescribeCloudDiskGroupDrivesResponse
      */
     CompletableFuture<DescribeCloudDiskGroupDrivesResponse> describeCloudDiskGroupDrives(DescribeCloudDiskGroupDrivesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After security protection is enabled, the system automatically scans Cloud Desktop instances for system vulnerabilities on a periodic basis (once a day).</p>
+     * 
      * @param request the request parameters of DescribeCloudDiskGroups  DescribeCloudDiskGroupsRequest
      * @return DescribeCloudDiskGroupsResponse
      */
@@ -868,6 +945,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDesktopInfoResponse> describeDesktopInfo(DescribeDesktopInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</p>
+     * 
      * @param request the request parameters of DescribeDesktopMetadata  DescribeDesktopMetadataRequest
      * @return DescribeDesktopMetadataResponse
      */
@@ -893,7 +973,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can only query data within the last 30 days.</p>
+     * <p>Only data within the last 30 days can be queried.</p>
      * 
      * @param request the request parameters of DescribeDesktopSessions  DescribeDesktopSessionsRequest
      * @return DescribeDesktopSessionsResponse
@@ -901,9 +981,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDesktopSessionsResponse> describeDesktopSessions(DescribeDesktopSessionsRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>When no values are specified for the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters for a cloud desktop, all types of cloud desktops are queried.</p>
-     * 
      * @param request the request parameters of DescribeDesktopTypes  DescribeDesktopTypesRequest
      * @return DescribeDesktopTypesResponse
      */
@@ -971,11 +1048,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
      * <ul>
-     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
-     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
-     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * <li>China site users should select Shanghai as the site. International site users should select Singapore.</li>
+     * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
+     * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
+     * <li>Sort conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeGlobalDesktopRecords  DescribeGlobalDesktopRecordsRequest
@@ -984,6 +1061,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalDesktopRecordsResponse> describeGlobalDesktopRecords(DescribeGlobalDesktopRecordsRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation uses a centralized endpoint. The access point is Shanghai or Singapore. Other regions are not supported.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeGlobalTimerBatches  DescribeGlobalTimerBatchesRequest
      * @return DescribeGlobalTimerBatchesResponse
      */
@@ -1024,9 +1106,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  After you run a command, it may not succeed. You can call this operation to query the execution result.</p>
      * <ul>
-     * <li>You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.</li>
+     * <li>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</li>
+     * <li>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInvocations  DescribeInvocationsRequest
@@ -1071,6 +1153,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNetworkPackagesResponse> describeNetworkPackages(DescribeNetworkPackagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before deleting an office network, ensure that the following operations are completed:</p>
+     * <ul>
+     * <li>All cloud computers in the office network are released.</li>
+     * <li>Related data that needs to be retained is backed up.<blockquote>
+     * <p>Warning: Related resources and data cannot be recovered after deletion. Proceed with caution.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeOfficeSiteBridgeInfo  DescribeOfficeSiteBridgeInfoRequest
      * @return DescribeOfficeSiteBridgeInfoResponse
      */
@@ -1083,10 +1175,82 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOfficeSitesResponse> describeOfficeSites(DescribeOfficeSitesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that you are familiar with the resource types and product types of WUYING Workspace before you call this operation.</p>
+     * 
      * @param request the request parameters of DescribeOnlineUserCount  DescribeOnlineUserCountRequest
      * @return DescribeOnlineUserCountResponse
      */
     CompletableFuture<DescribeOnlineUserCountResponse> describeOnlineUserCount(DescribeOnlineUserCountRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</p>
+     * <h2>Request examples</h2>
+     * <p>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</p>
+     * <h3>Query official printer drivers</h3>
+     * <p>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</p>
+     * <pre><code class="language-json">{
+     *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+     *   &quot;Version&quot;: &quot;2020-09-30&quot;,
+     *   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+     *   &quot;Brand&quot;: &quot;hp&quot;,
+     *   &quot;DeviceType&quot;: &quot;printer&quot;,
+     *   &quot;Filter&quot;: &quot;LaserJet&quot;,
+     *   &quot;PageSize&quot;: 20,
+     *   &quot;PageNumber&quot;: 1
+     * }
+     * </code></pre>
+     * <h3>Query drivers by driver ID in batches</h3>
+     * <pre><code class="language-json">{
+     *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+     *   &quot;Version&quot;: &quot;2020-09-30&quot;,
+     *   &quot;DriverIds&quot;: [
+     *     &quot;11111111-2222-4333-8444-555555555555&quot;,
+     *     &quot;66666666-7777-4888-8999-000000000000&quot;
+     *   ],
+     *   &quot;PageSize&quot;: 20,
+     *   &quot;PageNumber&quot;: 1
+     * }
+     * </code></pre>
+     * <p>When you construct request parameters directly, expand DriverIds by sequence number:</p>
+     * <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+     * DriverIds.2=66666666-7777-4888-8999-000000000000
+     * </code></pre>
+     * <p>When you use an SDK, pass in a string array and the SDK handles the encoding.</p>
+     * <h2>Response examples</h2>
+     * <p>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</p>
+     * <h3>Successful query</h3>
+     * <pre><code class="language-json">{
+     *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+     *   &quot;Count&quot;: 1,
+     *   &quot;DriverInfos&quot;: [
+     *     {
+     *       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+     *       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+     *       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+     *       &quot;Brand&quot;: &quot;hp&quot;,
+     *       &quot;DeviceType&quot;: &quot;printer&quot;,
+     *       &quot;OsType&quot;: &quot;Windows&quot;,
+     *       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+     *       &quot;Source&quot;: &quot;Wuying&quot;,
+     *       &quot;OwnerType&quot;: &quot;WUYING&quot;
+     *     }
+     *   ]
+     * }
+     * </code></pre>
+     * <h3>No matching results</h3>
+     * <pre><code class="language-json">{
+     *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+     *   &quot;Count&quot;: 0,
+     *   &quot;DriverInfos&quot;: []
+     * }
+     * </code></pre>
+     * 
+     * @param request the request parameters of DescribePeripheralDrivers  DescribePeripheralDriversRequest
+     * @return DescribePeripheralDriversResponse
+     */
+    CompletableFuture<DescribePeripheralDriversResponse> describePeripheralDrivers(DescribePeripheralDriversRequest request);
 
     /**
      * @param request the request parameters of DescribePolicyGroups  DescribePolicyGroupsRequest
@@ -1095,18 +1259,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolicyGroupsResponse> describePolicyGroups(DescribePolicyGroupsRequest request);
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:</p>
-     * <ul>
-     * <li>If you set ResourceType to OfficeSite, you must specify InstanceType.</li>
-     * <li>If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.</li>
-     * <li>If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.<blockquote>
-     * <p>Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop types</a>.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request the request parameters of DescribePrice  DescribePriceRequest
      * @return DescribePriceResponse
      */
@@ -1131,6 +1283,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePriceForRenewDesktopOversoldGroupResponse> describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</p>
+     * 
      * @param request the request parameters of DescribePrinterEvents  DescribePrinterEventsRequest
      * @return DescribePrinterEventsResponse
      */
@@ -1198,9 +1353,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
      * <ul>
-     * <li>You can query session statistics for the past hour.</li>
+     * <li>This is a centralized operation that can be called only through the service in the China (Shanghai) region.</li>
+     * <li>You can query real-time statistics for up to 1 hour.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSessionStatistic  DescribeSessionStatisticRequest
@@ -1275,6 +1430,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVirtualMFADevicesResponse> describeVirtualMFADevices(DescribeVirtualMFADevicesRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</li>
+     * <li>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeVulDesktops  DescribeVulDesktopsRequest
+     * @return DescribeVulDesktopsResponse
+     */
+    CompletableFuture<DescribeVulDesktopsResponse> describeVulDesktops(DescribeVulDesktopsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</p>
+     * 
+     * @param request the request parameters of DescribeVulnerability  DescribeVulnerabilityRequest
+     * @return DescribeVulnerabilityResponse
+     */
+    CompletableFuture<DescribeVulnerabilityResponse> describeVulnerability(DescribeVulnerabilityRequest request);
+
+    /**
      * @param request the request parameters of DescribeZones  DescribeZonesRequest
      * @return DescribeZonesResponse
      */
@@ -1336,23 +1512,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</p>
+     * <p>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</p>
      * <ul>
-     * <li>Cloud computer ID and name</li>
-     * <li>Office network ID and name</li>
-     * <li>The instance type, OS and protocol of the cloud computer</li>
-     * <li>System disk and data disk of the cloud computer</li>
-     * <li>The status</li>
-     * <li>Purchase method</li>
-     * <li>The time when the cloud computer expires</li>
-     * <li>Remaining duration and total duration</li>
-     * <li>Number of assigned users and number of current users</li>
+     * <li>Cloud desktop ID/Cloud desktop name</li>
+     * <li>Office network ID/Office network name</li>
+     * <li>Specifications/System/Protocol</li>
+     * <li>System cloud disk/Data cloud disk</li>
+     * <li>Status</li>
+     * <li>Billing method</li>
+     * <li>Expiration time</li>
+     * <li>Remaining duration/Total duration</li>
+     * <li>Number of assigned users/Current user</li>
      * <li>Office network type</li>
-     * <li>The time when the cloud computer was created</li>
+     * <li>Creation time</li>
      * <li>Tags</li>
-     * <li>Encryption status</li>
+     * <li>Encrypted or not</li>
      * <li>IP</li>
-     * <li>The hostname</li>
+     * <li>Hostname</li>
      * </ul>
      * 
      * @param request the request parameters of ExportDesktopListInfo  ExportDesktopListInfoRequest
@@ -1368,7 +1544,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</p>
      * 
      * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -1394,18 +1570,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOfficeSiteSsoStatusResponse> getOfficeSiteSsoStatus(GetOfficeSiteSsoStatusRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</p>
-     * 
      * @param request the request parameters of GetSpMetadata  GetSpMetadataRequest
      * @return GetSpMetadataResponse
      */
     CompletableFuture<GetSpMetadataResponse> getSpMetadata(GetSpMetadataRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.</p>
-     * 
      * @param request the request parameters of HibernateDesktops  HibernateDesktopsRequest
      * @return HibernateDesktopsResponse
      */
@@ -1418,9 +1588,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCdsFilesResponse> listCdsFiles(ListCdsFilesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.</p>
-     * 
      * @param request the request parameters of ListDirectoryUsers  ListDirectoryUsersRequest
      * @return ListDirectoryUsersResponse
      */
@@ -1452,7 +1619,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use at least one of the following parameters in the request to determine the object that you want to query: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, and <code>Tag.N.Value</code>.</p>
+     * <p>You must specify at least one of the following parameters in the request to specify the query object: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, or <code>Tag.N.Value</code>.</p>
      * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -1478,6 +1645,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserAdOrganizationUnitsResponse> listUserAdOrganizationUnits(ListUserAdOrganizationUnitsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * 
      * @param request the request parameters of ListVirtualBridges  ListVirtualBridgesRequest
      * @return ListVirtualBridgesResponse
      */
@@ -1485,7 +1655,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</p>
+     * <p>After the device is locked, its status changes to Locked. The corresponding AD account cannot log on to the WUYING terminal because MFA authentication fails. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
      * 
      * @param request the request parameters of LockVirtualMFADevice  LockVirtualMFADeviceRequest
      * @return LockVirtualMFADeviceResponse
@@ -1515,7 +1685,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the <code>ERROR</code> or <code>REGISTERED</code> state. The parameters include <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
+     * <p>Only AD office networks in the <code>ERROR</code> or <code>REGISTERING</code> state support modifications to domain name and DNS-related parameters, including <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
      * 
      * @param request the request parameters of ModifyADConnectorOfficeSite  ModifyADConnectorOfficeSiteRequest
      * @return ModifyADConnectorOfficeSiteResponse
@@ -1524,7 +1694,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.</p>
+     * <p>You can set different public network access control policies at different granularities to achieve a composite policy effect. For example, you can access control policy at the office network granularity to deny public network access, and access control policy at the specified cloud computer granularity to allow public network access. The result is that all cloud computers in the office network are denied public network access except for the specified cloud computers.</p>
      * 
      * @param request the request parameters of ModifyAclEntries  ModifyAclEntriesRequest
      * @return ModifyAclEntriesResponse
@@ -1538,9 +1708,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Only custom desktop templates can be modified.</p>
-     * 
      * @param request the request parameters of ModifyBundle  ModifyBundleRequest
      * @return ModifyBundleResponse
      */
@@ -1571,6 +1738,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCloudDriveGroupsResponse> modifyCloudDriveGroups(ModifyCloudDriveGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When accessing the file storage within WUYING Workspace, file uploads and downloads between them are always allowed because both reside in a secure environment. However, if the visibility of the file storage on WUYING Terminal has been enabled, end users can directly access the file storage through the WUYING Terminal interface.
+     * To prevent end users from transferring sensitive data from WUYING Workspace to on-premises devices via the file storage, the default policy allows users to upload files from on-premises devices to the enterprise file storage but prohibits downloading files from the enterprise file storage to on-premises devices. This default policy applies to all users of the file storage, and you do not need to configure its scope.
+     * If needed, you can invoke this API to control user permissions for file transfer between the enterprise file storage and on-premises devices. Users added here will be exempt from the default policy.</p>
+     * 
      * @param request the request parameters of ModifyCloudDrivePermission  ModifyCloudDrivePermissionRequest
      * @return ModifyCloudDrivePermissionResponse
      */
@@ -1596,10 +1768,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.</li>
-     * <li>After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.</li>
+     * <li>Before you invoke this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</li>
+     * <li>When you invoke this operation, make sure that the cloud desktops are in the Running or Stopped state and that no overdue payments exist.</li>
+     * <li>After the order is paid, the system starts to convert the billing method of the cloud desktops. During the conversion, the cloud desktops are in the Upgrade/Downgrade state and do not support other operations such as starting, stopping, or changing specifications.
+     * &lt;props=&quot;china&quot;&gt;When you convert the billing method from subscription to pay-as-you-go, refund quota limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Switch from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDesktopChargeType  ModifyDesktopChargeTypeRequest
@@ -1609,7 +1782,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</p>
+     * <p>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</p>
      * 
      * @param request the request parameters of ModifyDesktopGroup  ModifyDesktopGroupRequest
      * @return ModifyDesktopGroupResponse
@@ -1618,7 +1791,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.</p>
+     * <p>Only the hostname of a Windows cloud desktop in an AD office network can be modified. After the hostname is modified, the cloud desktop is rebuilt.</p>
      * 
      * @param request the request parameters of ModifyDesktopHostName  ModifyDesktopHostNameRequest
      * @return ModifyDesktopHostNameResponse
@@ -1688,9 +1861,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</p>
+     * <p>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</p>
      * <blockquote>
-     * <p> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * <p>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDiskSpec  ModifyDiskSpecRequest
@@ -1749,7 +1922,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</p>
+     * <p>When a NAS file system is created, the system automatically generates a mount target. By default, the mount target does not need to be modified. If the mount target is accidentally deleted, you need to specify a new mount target for the NAS file system of the workspace. You can call <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> to create a mount target.</p>
      * 
      * @param request the request parameters of ModifyNASDefaultMountTarget  ModifyNASDefaultMountTargetRequest
      * @return ModifyNASDefaultMountTargetResponse
@@ -1784,6 +1957,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyOfficeSiteAttributeResponse> modifyOfficeSiteAttribute(ModifyOfficeSiteAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only AD office networks in the <code>ERROR</code> or <code>REGISTERING</code> state support modifications to domain name and DNS-related parameters, including <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
+     * 
      * @param request the request parameters of ModifyOfficeSiteBridgeInfo  ModifyOfficeSiteBridgeInfoRequest
      * @return ModifyOfficeSiteBridgeInfoResponse
      */
@@ -1839,9 +2015,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><strong>Warning</strong> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
      * @return ModifyTemplateResponse
@@ -1850,7 +2026,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
+     * <p>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
      * 
      * @param request the request parameters of ModifyTemplateBaseInfo  ModifyTemplateBaseInfoRequest
      * @return ModifyTemplateBaseInfoResponse
@@ -1865,7 +2041,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can modify end users only for cloud computers that are in the Running state.</p>
+     * <p>Only cloud computers in the Running state support modifying authorized users.</p>
      * 
      * @param request the request parameters of ModifyUserEntitlement  ModifyUserEntitlementRequest
      * @return ModifyUserEntitlementResponse
@@ -1879,12 +2055,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyUserToDesktopGroupResponse> modifyUserToDesktopGroup(ModifyUserToDesktopGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</p>
+     * 
      * @param request the request parameters of ModifyVirtualBridgeLevel  ModifyVirtualBridgeLevelRequest
      * @return ModifyVirtualBridgeLevelResponse
      */
     CompletableFuture<ModifyVirtualBridgeLevelResponse> modifyVirtualBridgeLevel(ModifyVirtualBridgeLevelRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only custom images in the active (Available) state can be modified.</p>
+     * 
      * @param request the request parameters of ModifyVirtualBridgeStatus  ModifyVirtualBridgeStatusRequest
      * @return ModifyVirtualBridgeStatusResponse
      */
@@ -1897,24 +2079,83 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveCdsFileResponse> moveCdsFile(MoveCdsFileRequest request);
 
     /**
+     * @param request the request parameters of QueryActiveUserStatistic  QueryActiveUserStatisticRequest
+     * @return QueryActiveUserStatisticResponse
+     */
+    CompletableFuture<QueryActiveUserStatisticResponse> queryActiveUserStatistic(QueryActiveUserStatisticRequest request);
+
+    /**
+     * @param request the request parameters of QueryEndUserHistoryUsage  QueryEndUserHistoryUsageRequest
+     * @return QueryEndUserHistoryUsageResponse
+     */
+    CompletableFuture<QueryEndUserHistoryUsageResponse> queryEndUserHistoryUsage(QueryEndUserHistoryUsageRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>The <code>AliUid</code> parameter is automatically parsed from the AK/SK and does not need to be manually provided.</li>
+     * <li><code>BusinessChannel</code> defaults to Enterprise Edition, but you can also select other business channels.</li>
+     * <li><code>DataDate</code> supports a custom statistical date and defaults to the previous day (T-1). Ensure that the input format is &quot;YYYY-MM-DD&quot;.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryHistoryActiveUserCount  QueryHistoryActiveUserCountRequest
      * @return QueryHistoryActiveUserCountResponse
      */
     CompletableFuture<QueryHistoryActiveUserCountResponse> queryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request);
 
     /**
+     * @param request the request parameters of QueryHistoryActiveUserStatistic  QueryHistoryActiveUserStatisticRequest
+     * @return QueryHistoryActiveUserStatisticResponse
+     */
+    CompletableFuture<QueryHistoryActiveUserStatisticResponse> queryHistoryActiveUserStatistic(QueryHistoryActiveUserStatisticRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation retrieves the historical average monitoring metrics of desktop resources filtered by specified conditions within a given time period.</li>
+     * <li>The <code>DataDate</code> and <code>EndDate</code> parameters define the query time range. The default value is the previous day.</li>
+     * <li>Filtering by desktop ID and name is supported. You can also customize numeric ranges to further refine query results.</li>
+     * <li>The response includes detailed information about each matching desktop resource and its corresponding average values.</li>
+     * <li>The pagination parameters <code>PageNum</code> and <code>PageSize</code> allow you to control the amount of returned data to meet different display requirements.</li>
+     * <li>Note: When using the <code>Ranges</code> parameter, ensure that the provided ranges are reasonable. Otherwise, query performance may be affected or invalid results may be returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryHistoryAvgMetricList  QueryHistoryAvgMetricListRequest
      * @return QueryHistoryAvgMetricListResponse
      */
     CompletableFuture<QueryHistoryAvgMetricListResponse> queryHistoryAvgMetricList(QueryHistoryAvgMetricListRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Enterprise Edition and Commercial Edition business channels are supported. By default, T-1 (yesterday) data statistics are used.</p>
+     * <ul>
+     * <li><strong>BusinessChannel</strong>: Enterprise Edition by default. Commercial Edition is optional.</li>
+     * <li><strong>StartDate &amp; EndDate</strong>: The default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</li>
+     * <li><strong>MetricName</strong>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</li>
+     * <li><strong>Ranges</strong>: Allows you to define multiple custom value ranges for more granular data analytics. You can set the minimum value, maximum value, and whether to include border values for each range.
+     * Settings:</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryHistoryMetricDistribution  QueryHistoryMetricDistributionRequest
      * @return QueryHistoryMetricDistributionResponse
      */
     CompletableFuture<QueryHistoryMetricDistributionResponse> queryHistoryMetricDistribution(QueryHistoryMetricDistributionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><strong>Date range</strong>: Supports querying data within a maximum of 90 days.</li>
+     * <li><strong>Paged query</strong>: Pagination is implemented through the <code>NextToken</code> parameter, which is obtained from the previous response.</li>
+     * <li><strong>Default and maximum limits</strong>: 5 records are returned by default, with a maximum of 200.</li>
+     * <li><strong>Authentication</strong>: Uses AccessKey for identity verification.</li>
+     * <li><strong>Caller account information</strong>: You do not need to manually pass in AliUid. The system automatically parses it.</li>
+     * <li><strong>Billing</strong>: This API call is free of charge.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryHistoryUsageDurationRank  QueryHistoryUsageDurationRankRequest
      * @return QueryHistoryUsageDurationRankResponse
      */
@@ -1922,7 +2163,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to restart must be in the Running state.</p>
+     * <p>The cloud computers must be in the Running state.</p>
      * 
      * @param request the request parameters of RebootDesktops  RebootDesktopsRequest
      * @return RebootDesktopsResponse
@@ -1931,13 +2172,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you proceed, take note of the following limits:</p>
+     * <p>The change image operation has the following limits:</p>
      * <ul>
-     * <li>You cannot convert a cloud computer\&quot;s operating system image from one type to another (e.g., Windows to Linux or vice versa) in China (Hong Kong) or overseas regions.</li>
-     * <li>GPU and non-GPU images are not interchangeable, as graphic-based cloud computers can only use GPU-accelerated images, while other cloud computers are limited to non-GPU-accelerated images.
-     * When a cloud computer’s image is updated, the system initializes its system disk by using the new image, resulting in the following effects:</li>
-     * <li>All data on the original system disk is erased. Snapshots created from the original system disk become unavailable and are automatically deleted.</li>
-     * <li>If the OS changes, data on the original data disk is cleared, and snapshots created from the original data disk become unavailable and are automatically deleted. If the OS remains the same, data on the original data disk is retained, and snapshots from the original data disk remain available.</li>
+     * <li>Cloud computers in Hong Kong (China) and regions outside China do not support changing to an image of a different operating system (for example, changing from a Windows image to a Linux image).</li>
+     * <li>Changing between GPU images and non-GPU images is not supported. Graphics-type cloud computers can only use GPU images, and non-graphics-type cloud computers can only use non-GPU images.
+     * After the image is changed, the system uses the new image to initialize the system cloud disk of the cloud computer. The impacts are as follows:</li>
+     * <li>Data on the original system cloud disk of the cloud computer is cleared. Snapshots created based on the original system cloud disk become unusable, and the system automatically deletes the related snapshots.</li>
+     * <li>If the operating system of the image is changed, data on the original data cloud disk of the cloud computer is cleared, snapshots created based on the original data cloud disk become unusable, and the system automatically deletes the related snapshots. If the operating system of the image is not changed, data on the original data cloud disk is retained, and the related snapshots remain usable.</li>
      * </ul>
      * 
      * @param request the request parameters of RebuildDesktops  RebuildDesktopsRequest
@@ -1994,6 +2235,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewNetworkPackagesResponse> renewNetworkPackages(RenewNetworkPackagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * 
      * @param request the request parameters of RenewVirtualBridge  RenewVirtualBridgeRequest
      * @return RenewVirtualBridgeResponse
      */
@@ -2002,7 +2246,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to reset only cloud computers from a cloud computer share.</p>
+     * <p>This operation applies only to resetting cloud computers within a shared cloud computer. It does not support resetting regular cloud computers.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetDesktops  ResetDesktopsRequest
@@ -2012,7 +2256,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</p>
+     * <p>When you create a NAS file system, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</p>
      * 
      * @param request the request parameters of ResetNASDefaultMountTarget  ResetNASDefaultMountTargetRequest
      * @return ResetNASDefaultMountTargetResponse
@@ -2021,13 +2265,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the following operations are performed:</p>
+     * <p>When calling this interface, ensure the following:</p>
      * <ul>
-     * <li>The data that you want to retain is backed up.<blockquote>
-     * <p>The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.</p>
+     * <li>You must back up any data on the disk that you want to save.<blockquote>
+     * <p>Data recovery is an irreversible operation. After you call this interface, the disk will revert to its state at the time the snapshot was created. Any data created between the snapshot creation time and the current time will be lost. Therefore, back up important data.</p>
      * </blockquote>
      * </li>
-     * <li>The cloud computer to which the disk belongs is stopped.</li>
+     * <li>You must shut down the cloud computer to which the disk belongs.</li>
      * </ul>
      * 
      * @param request the request parameters of ResetSnapshot  ResetSnapshotRequest
@@ -2042,9 +2286,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeCoordinatePrivilegeResponse> revokeCoordinatePrivilege(RevokeCoordinatePrivilegeRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
-     * 
      * @param request the request parameters of RunCommand  RunCommandRequest
      * @return RunCommandResponse
      */
@@ -2052,7 +2293,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the phone number associated with the Alibaba Cloud account.
+     * &lt;props=&quot;intl&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the email address associated with the Alibaba Cloud account.</p>
      * 
      * @param request the request parameters of SendVerifyCode  SendVerifyCodeRequest
      * @return SendVerifyCodeResponse
@@ -2079,7 +2321,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</p>
+     * <p>If you need to perform maintenance operations on a cloud computer and want to prevent end users from connecting to and using the cloud computer during this period, you can switch it to maintenance mode.</p>
      * 
      * @param request the request parameters of SetDesktopMaintenance  SetDesktopMaintenanceRequest
      * @return SetDesktopMaintenanceResponse
@@ -2088,7 +2330,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for AD directories, not for RAM directories.</p>
+     * <p>This operation has the same function as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. We recommend that you use the <code>SetOfficeSiteSsoStatus</code> operation.</p>
      * 
      * @param request the request parameters of SetDirectorySsoStatus  SetDirectorySsoStatusRequest
      * @return SetDirectorySsoStatusResponse
@@ -2096,9 +2338,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDirectorySsoStatusResponse> setDirectorySsoStatus(SetDirectorySsoStatusRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</p>
-     * 
      * @param request the request parameters of SetIdpMetadata  SetIdpMetadataRequest
      * @return SetIdpMetadataResponse
      */
@@ -2118,7 +2357,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to start must be in the Stopped state.</p>
+     * <p>The cloud computers must be in the Stopped state.</p>
      * 
      * @param request the request parameters of StartDesktops  StartDesktopsRequest
      * @return StartDesktopsResponse
@@ -2127,7 +2366,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to stop must be in the Running state.</p>
+     * <p>The cloud computers must be in the Running state.</p>
      * 
      * @param request the request parameters of StopDesktops  StopDesktopsRequest
      * @return StopDesktopsResponse
@@ -2145,7 +2384,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If TagKey is specified, the new TagValue value overrides the original TagValue value.</p>
+     * <p>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</p>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
@@ -2194,7 +2433,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can upload only Windows images.</p>
+     * <p>Only Windows operating system images can be uploaded.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UploadImage  UploadImageRequest
@@ -2210,7 +2449,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only cloud computers that are in the Hibernated state can be waked up.</p>
+     * <p>You can wake up only cloud computers that are in the Hibernated state.</p>
      * 
      * @param request the request parameters of WakeupDesktops  WakeupDesktopsRequest
      * @return WakeupDesktopsResponse

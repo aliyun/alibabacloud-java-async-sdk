@@ -158,7 +158,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The modification result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -169,7 +169,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The templates.</p>
+         * <p>The list of queried template information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -177,7 +177,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -188,7 +188,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -199,7 +199,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -232,7 +232,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -243,7 +243,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of templates.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>94</p>
@@ -312,13 +312,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The PL of the data disk.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>PL1: a PL1 ESSD.</li>
-             * <li>PL0: a PL0 ESSD.</li>
-             * <li>AutoPL: an AutoPL SSD.</li>
-             * </ul>
+             * <p>The performance level of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>AutoPL</p>
@@ -329,7 +323,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>The data cloud disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -503,7 +497,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of vCPUs included in the cloud computer specification.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -514,7 +508,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU memory information. This parameter is supported only by Graphics cloud computer types.</p>
+             * <p>The GPU memory information. This field is displayed only when the specification is a graphics-accelerated type.</p>
              * 
              * <strong>example:</strong>
              * <p>4GiB</p>
@@ -558,7 +552,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud computer type.</p>
+             * <p>The cloud computer specification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.enterprise_office.4c8g</p>
@@ -602,7 +596,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the disk.</p>
+             * <p>The KMS key ID used when disk encryption is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>3bc77be0-cbce-4a29-b07b-13f16394****</p>
@@ -683,10 +677,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>8vCPUs16GiB</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -753,7 +747,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用管控策略ID</p>
+             * <p>The application control policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bwr-5a5371e0*******</p>
@@ -764,7 +758,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>站点名称。</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>mainland</p>
@@ -1159,7 +1153,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoPay.
+             * <p>Indicates whether automatic payment is enabled for subscription orders.</p>
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
@@ -1167,7 +1161,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenew.
+             * <p>Indicates whether auto-renewal is enabled for the subscription shared cloud computer.</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1175,7 +1169,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing type of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1183,7 +1180,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sizes of the data disks.</p>
+             * <p>The size and specification configurations of data cloud disks.</p>
              */
             public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
                 this.dataDiskList = dataDiskList;
@@ -1191,14 +1188,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default language of the template.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>en-US: English.</li>
-             * <li>zh-HK: Chinese, Traditional (Hong Kong, China).</li>
-             * <li>zh-CN: Simplified Chinese.</li>
-             * <li>ja-JP: Japanese.</li>
-             * </ul>
+             * <p>The default startup language configured in the template.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-CN</p>
@@ -1210,6 +1200,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
             /**
              * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTemplate</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1217,7 +1210,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+             * <p>The creation time of the template (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -1228,7 +1221,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The update time of the template (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -1251,13 +1244,6 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
             /**
              * <p>The image type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>User: a custom image.</li>
-             * <li>Shared: a shared image.</li>
-             * <li>System: a system image.</li>
-             * <li>Community: a community image.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>User</p>
@@ -1268,7 +1254,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p>The subscription duration of the subscription shared cloud computer. This parameter takes effect only when ChargeType is set to PrePaid, and is required in that case. The unit is specified by PeriodUnit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -1276,7 +1265,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * <p>The unit of the subscription billing duration. Billable methods use this parameter to specify the time unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -1284,7 +1276,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The policy group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-0caoeogkhz*****</p>
@@ -1295,7 +1287,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidAfterUsedUp.
+             * <p>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration plan is exhausted.</p>
              */
             public Builder postPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
                 this.postPaidAfterUsedUp = postPaidAfterUsedUp;
@@ -1303,11 +1295,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>CloudDesktop: cloud computers.</li>
-             * </ul>
+             * <p>The product type.</p>
              * 
              * <strong>example:</strong>
              * <p>CLOUD_DESKTOP</p>
@@ -1318,7 +1306,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region-related settings.</p>
+             * <p>The region-related configuration parameters.</p>
              */
             public Builder regionConfigList(java.util.List<RegionConfigList> regionConfigList) {
                 this.regionConfigList = regionConfigList;
@@ -1337,7 +1325,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-a5fqjjqaejt***</p>
@@ -1348,7 +1336,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags added to cloud computers. A tag is a key-value pair.</p>
+             * <p>The cloud computer tags in key-value format.</p>
              */
             public Builder resourceTagList(java.util.List<ResourceTagList> resourceTagList) {
                 this.resourceTagList = resourceTagList;
@@ -1356,7 +1344,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>区域配置管理</p>
+             * <p>The site configuration management.</p>
              */
             public Builder siteConfigList(java.util.List<SiteConfigList> siteConfigList) {
                 this.siteConfigList = siteConfigList;
@@ -1364,13 +1352,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the system disk.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>PL1: a PL1 Enterprise SSD (ESSD).</li>
-             * <li>PL0: a PL0 ESSD.</li>
-             * <li>AutoPL: an AutoPL SSD.</li>
-             * </ul>
+             * <p>The system cloud disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>AutoPL</p>
@@ -1381,7 +1363,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The system cloud disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1404,6 +1386,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
             /**
              * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTemplate001</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1411,12 +1396,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>USER_TEMPLATE: custom templates.</li>
-             * <li>SYSTEM_TEMPLATE: system templates.</li>
-             * </ul>
+             * <p>The templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>USER_TEMPLATE</p>
@@ -1427,7 +1407,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduled task group.</p>
+             * <p>The scheduled task group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bcc-dweha*****</p>
@@ -1438,7 +1418,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserDuration.
+             * <p>The per-user usage duration plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder userDuration(String userDuration) {
                 this.userDuration = userDuration;

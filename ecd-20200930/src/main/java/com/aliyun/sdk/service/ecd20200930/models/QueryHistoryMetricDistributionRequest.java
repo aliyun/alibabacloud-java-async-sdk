@@ -101,7 +101,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>The end date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-01</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -110,7 +113,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * <p>The monitoring metrics type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOAD_SCORE</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -119,7 +125,7 @@ public class QueryHistoryMetricDistributionRequest extends Request {
         }
 
         /**
-         * Ranges.
+         * <p>The custom value ranges.</p>
          */
         public Builder ranges(java.util.List<Ranges> ranges) {
             this.putQueryParameter("Ranges", ranges);
@@ -128,7 +134,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-01</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -235,7 +244,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
             } 
 
             /**
-             * IncludeMax.
+             * <p>Specifies whether to include the maximum value. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder includeMax(Boolean includeMax) {
                 this.includeMax = includeMax;
@@ -243,7 +255,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
             }
 
             /**
-             * IncludeMin.
+             * <p>Specifies whether to include the minimum value. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder includeMin(Boolean includeMin) {
                 this.includeMin = includeMin;
@@ -251,7 +266,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
             }
 
             /**
-             * Label.
+             * <p>The range label, which is used in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>label-02\&quot;</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -259,7 +277,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder max(Float max) {
                 this.max = max;
@@ -267,7 +288,10 @@ public class QueryHistoryMetricDistributionRequest extends Request {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Float min) {
                 this.min = min;

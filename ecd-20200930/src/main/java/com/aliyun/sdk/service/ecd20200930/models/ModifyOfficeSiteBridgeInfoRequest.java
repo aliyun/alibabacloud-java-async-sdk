@@ -144,7 +144,10 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         } 
 
         /**
-         * BridgeId.
+         * <p>The virtual bridge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vb-fsifhaiushfishf***</p>
          */
         public Builder bridgeId(String bridgeId) {
             this.putQueryParameter("BridgeId", bridgeId);
@@ -153,7 +156,10 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
-         * BridgeLevel.
+         * <p>The virtual bridge specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vb.pro</p>
          */
         public Builder bridgeLevel(String bridgeLevel) {
             this.putQueryParameter("BridgeLevel", bridgeLevel);
@@ -162,7 +168,10 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
-         * BridgeType.
+         * <p>The third-party plugin type of the virtual bridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unsr</p>
          */
         public Builder bridgeType(String bridgeType) {
             this.putQueryParameter("BridgeType", bridgeType);
@@ -171,7 +180,10 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
-         * EnableBridge.
+         * <p>Specifies whether to enable the bridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBridge(Boolean enableBridge) {
             this.putQueryParameter("EnableBridge", enableBridge);
@@ -180,7 +192,10 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
-         * License.
+         * <p>The activation code object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab5b76f4c0bf4a5abd06ea23991a47afa1a4bb4acb4e4204882b40795f946e74</p>
          */
         public Builder license(String license) {
             this.putQueryParameter("License", license);
@@ -189,7 +204,10 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-387822****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -198,6 +216,7 @@ public class ModifyOfficeSiteBridgeInfoRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

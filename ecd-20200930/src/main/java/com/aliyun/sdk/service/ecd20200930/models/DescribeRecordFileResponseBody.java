@@ -80,7 +80,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         } 
 
         /**
-         * RecordFiles.
+         * <p>The details of the recording files.</p>
          */
         public Builder recordFiles(java.util.List<RecordFiles> recordFiles) {
             this.recordFiles = recordFiles;
@@ -88,7 +88,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>05C2791F-41A7-5E7C-B5E4-1401FD0E****</p>
@@ -99,7 +99,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +181,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             } 
 
             /**
-             * EventName.
+             * <p>The event details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\n\t\&quot;messageInfo\&quot; : \&quot;mouse_move\&quot;,\n\t\&quot;messageType\&quot; : \&quot;UserInput\&quot;\n}\n&quot;</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -186,7 +192,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event occurred. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder eventTime(Integer eventTime) {
                 this.eventTime = eventTime;
@@ -194,7 +203,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserInput</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -430,7 +442,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             } 
 
             /**
-             * DesktopId.
+             * <p>The Cloud Desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-7yulhw1g1attet7d2</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -438,7 +453,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The name of the Cloud Desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fvt-ecd</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -446,7 +464,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -454,7 +475,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * EventDetails.
+             * <p>The event details.</p>
              */
             public Builder eventDetails(java.util.List<EventDetails> eventDetails) {
                 this.eventDetails = eventDetails;
@@ -462,7 +483,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task3</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -470,7 +494,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The size of the file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -478,7 +505,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-**</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -486,7 +516,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * RecordEndTime.
+             * <p>The time when the recording ended. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:02:25Z</p>
              */
             public Builder recordEndTime(String recordEndTime) {
                 this.recordEndTime = recordEndTime;
@@ -494,7 +527,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * RecordExpire.
+             * <p>The expiration time of the screen recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774656000000</p>
              */
             public Builder recordExpire(Long recordExpire) {
                 this.recordExpire = recordExpire;
@@ -502,7 +538,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * RecordStartTime.
+             * <p>The time when the recording started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:02:25Z</p>
              */
             public Builder recordStartTime(String recordStartTime) {
                 this.recordStartTime = recordStartTime;
@@ -510,7 +549,16 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>The type of the screen recording file. Valid values:</p>
+             * <ul>
+             * <li>alltime: full-time recording.</li>
+             * <li>period: interval recording.</li>
+             * <li>event: event-based recording.</li>
+             * <li>session: session recording.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder recordType(Integer recordType) {
                 this.recordType = recordType;
@@ -518,7 +566,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region where the recorded Cloud Desktop is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -526,7 +577,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-f3s3dgt8dtb0vlqc8</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -534,7 +588,10 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resource</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -542,7 +599,14 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the screen recording file. Valid values:</p>
+             * <ul>
+             * <li>0: uploaded.</li>
+             * <li>1: uploading.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

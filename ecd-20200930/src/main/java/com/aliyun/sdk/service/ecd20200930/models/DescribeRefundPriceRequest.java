@@ -103,7 +103,7 @@ public class DescribeRefundPriceRequest extends Request {
         } 
 
         /**
-         * <p>ID of cloud computer N. Valid values of N: 1 to 20.</p>
+         * <p>The list of cloud computer IDs. You can specify one or more IDs. Valid values of N: 1 to 20.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -114,11 +114,6 @@ public class DescribeRefundPriceRequest extends Request {
 
         /**
          * <p>The unsubscription type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RemainRefund: refunds the remaining balance and releases resources.</li>
-         * <li>RenewRefund: refunds only the renewal fee and adjusts the expiration date accordingly.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RemainRefund</p>
@@ -130,7 +125,7 @@ public class DescribeRefundPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +138,10 @@ public class DescribeRefundPriceRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID of the resource ownership in resale pattern. You do not need to specify this parameter if you are not using resale pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);

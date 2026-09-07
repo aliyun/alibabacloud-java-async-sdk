@@ -356,7 +356,8 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The DNS address of the existing AD subdomain.<br>If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
+         * <p>The DNS address of the existing AD subdomain.\
+         * If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
          * 
          * <strong>example:</strong>
          * <p><code>127.0.**.**</code></p>

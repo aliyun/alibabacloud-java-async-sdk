@@ -132,30 +132,7 @@ public class CreateRAMDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>The method in which the cloud computer is connected.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>VPC</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Internet (default)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Any</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The method allowed for connecting to cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -167,7 +144,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The directory name. The name must be 2 to 255 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,24 +157,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><!-- -->
-         * 
-         * <p>true</p>
-         * <!-- -->
-         * 
-         * <p>(default)</p>
-         * <!-- -->
-         * </li>
-         * <li><!-- -->
-         * 
-         * <p>false</p>
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to grant local administrator permissions to users who use cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -209,23 +169,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Specifies whether to enable public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -237,7 +181,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +194,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch IDs. You can configure only one vSwitch.</p>
+         * <p>The vSwitch ID. Only one vSwitch can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vSwitchId(java.util.List<String> vSwitchId) {

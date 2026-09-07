@@ -115,7 +115,10 @@ public class QueryHistoryUsageDurationRankRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -124,7 +127,10 @@ public class QueryHistoryUsageDurationRankRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date of the query. Format: YYYY-MM-DD. Supports querying data within a maximum of 90 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-19</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -133,7 +139,10 @@ public class QueryHistoryUsageDurationRankRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of results to return. Default value: 5. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -142,7 +151,10 @@ public class QueryHistoryUsageDurationRankRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The paging token for the next query. Obtained from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +163,10 @@ public class QueryHistoryUsageDurationRankRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date of the query. Format: YYYY-MM-DD. Supports querying data within a maximum of 90 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

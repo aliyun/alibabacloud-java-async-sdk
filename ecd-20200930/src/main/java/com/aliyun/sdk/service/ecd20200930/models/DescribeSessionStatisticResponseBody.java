@@ -91,7 +91,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics.</p>
+         * <p>The statistics information.</p>
          */
         public Builder statistic(java.util.List<Statistic> statistic) {
             this.statistic = statistic;
@@ -99,7 +99,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of sessions returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of sessions in the time range.</p>
+             * <p>The total number of sessions within the interval.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -179,7 +179,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time.</p>
+             * <p>The time point. UNIX timestamp, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1690164443508</p>

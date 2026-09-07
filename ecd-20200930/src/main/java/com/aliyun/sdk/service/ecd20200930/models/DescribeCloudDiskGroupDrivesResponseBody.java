@@ -106,7 +106,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudDriveGroups.
+         * <p>The list of cloud disk team spaces.</p>
          */
         public Builder cloudDriveGroups(java.util.List<CloudDriveGroups> cloudDriveGroups) {
             this.cloudDriveGroups = cloudDriveGroups;
@@ -114,7 +114,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -122,7 +125,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTA0MjA=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B9F9CBBE-8A9F-5FE5-8A72-0E81C2401A91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +307,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-11T07:44:21Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -303,7 +318,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-959593****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -311,7 +329,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * DriveId.
+             * <p>The space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -319,7 +340,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The team space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-e70ga4ixp30ur****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -327,7 +351,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The team space name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTeam1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -335,7 +362,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The organization ID of the team.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-aliyun-wy-org-id</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -343,7 +373,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The team space status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +384,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total capacity of the cloud disk team space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5368709120</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -359,7 +395,10 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedSize.
+             * <p>The used space size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024000000</p>
              */
             public Builder usedSize(String usedSize) {
                 this.usedSize = usedSize;

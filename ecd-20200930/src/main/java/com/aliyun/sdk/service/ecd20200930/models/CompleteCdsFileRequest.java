@@ -133,7 +133,7 @@ public class CompleteCdsFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the enterprise drive.</p>
+         * <p>The enterprise network disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the team space. You must specify at least one of <code>EndUserId</code> and <code>GroupId</code>.</p>
+         * <p>The team workspace ID. You must specify at least one of <code>EndUserId</code> and <code>GroupId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-i1ruuudp92qpj****</p>
@@ -183,7 +183,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file upload task. Callable interface <a href="https://help.aliyun.com/document_detail/2247619.html">CreateCdsFile</a>.</p>
+         * <p>The ID of the file upload task. You can call <a href="https://help.aliyun.com/document_detail/2247619.html">CreateCdsFile</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

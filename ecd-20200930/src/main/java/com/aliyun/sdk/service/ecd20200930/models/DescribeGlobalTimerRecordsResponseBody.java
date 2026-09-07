@@ -93,7 +93,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -104,7 +104,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</p>
@@ -126,7 +126,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The result information.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -361,7 +361,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionType.
+             * <p>The type of action that was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REBOOT</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -369,7 +372,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the batch in which the scheduled task is executed.</p>
+             * <p>The batch ID of the scheduled task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>ccg-0cvfvf6u1enx1****</p>
@@ -380,7 +383,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Context.
+             * <p>The record information during the execution of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -388,7 +394,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the execution record was created.</p>
+             * <p>The time when the record was created.
+             * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-03T08:27:29Z</p>
@@ -410,7 +417,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer name.</p>
+             * <p>The name of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>DesktopName</p>
@@ -421,7 +428,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayResultName.
+             * <p>The display result name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKIPPED</p>
              */
             public Builder displayResultName(String displayResultName) {
                 this.displayResultName = displayResultName;
@@ -429,7 +439,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the scheduled task ended.</p>
+             * <p>The time when the task ended.
+             * The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-21T02:00:45Z</p>
@@ -451,7 +462,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceParentId.
+             * <p>The ID of the resource parent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-xxx</p>
              */
             public Builder resourceParentId(String resourceParentId) {
                 this.resourceParentId = resourceParentId;
@@ -459,7 +473,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Retryable.
+             * <p>Specifies whether the task can be retried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retryable(Boolean retryable) {
                 this.retryable = retryable;
@@ -478,7 +495,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TimerRecordId.
+             * <p>The ID of the scheduled record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxx</p>
              */
             public Builder timerRecordId(String timerRecordId) {
                 this.timerRecordId = timerRecordId;

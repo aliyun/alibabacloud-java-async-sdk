@@ -118,6 +118,7 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         } 
 
         /**
+         * <p>The enterprise cloud disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The team space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Team1</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -139,7 +143,14 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query.</p>
+         * <ul>
+         * <li>Maximum value: 100</li>
+         * <li>Default value: 20</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,7 +159,10 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTA0MjA=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,6 +171,7 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The authorized users of the cloud computer.</p>
+         * <p>The list of accounts in the cloud computer image.</p>
          */
         public Builder desktopUsers(java.util.List<DesktopUsers> desktopUsers) {
             this.desktopUsers = desktopUsers;
@@ -75,7 +75,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F7B4B17B-5C8A-514C-AA4D-F8090E3A63E9</p>
@@ -157,10 +157,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the end user.</p>
+             * <p>The display name of the account in the cloud computer image.</p>
              * 
              * <strong>example:</strong>
-             * <p>alice_1365*****</p>
+             * <p>demo_user01_1488****</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -168,10 +168,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the end user.</p>
+             * <p>The end user ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>alice</p>
+             * <p>demo_user01</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -179,10 +179,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password of the end user.</p>
+             * <p>The password of the account in the cloud computer image.</p>
              * 
              * <strong>example:</strong>
-             * <p>tes123</p>
+             * <p>3q8p-NDey-2Nac-TWcQ-****</p>
              */
             public Builder password(String password) {
                 this.password = password;

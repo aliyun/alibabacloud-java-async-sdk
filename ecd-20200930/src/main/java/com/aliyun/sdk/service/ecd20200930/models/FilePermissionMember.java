@@ -95,6 +95,7 @@ public class FilePermissionMember extends TeaModel {
         } 
 
         /**
+         * <p>The object that you want to grant permissions. The object can be a user or a group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder cdsIdentity(CdsIdentity cdsIdentity) {
@@ -103,7 +104,10 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * DisinheritSubGroup.
+         * <p>Indicates whether to disable the permission from users in the subgroup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disinheritSubGroup(Boolean disinheritSubGroup) {
             this.disinheritSubGroup = disinheritSubGroup;
@@ -111,7 +115,10 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1633598866642</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -119,7 +126,27 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
+         * <p>The role.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SystemFileEditorWithoutShareLink: The role that can edit but cannot share files.</li>
+         * <li>SystemFileUploaderAndDownloaderWithShareLink: The role that can upload, download, and share files.</li>
+         * <li>SystemFileDownloader: The role that can download files.</li>
+         * <li>SystemFileEditorWithoutDelete: The role that can edit but cannot edit files.</li>
+         * <li>SystemFileOwner: The role that can collaborate with others on files.</li>
+         * <li>SystemFileDownloaderWithShareLink: The role that can download and share files.</li>
+         * <li>SystemFileUploaderAndViewer: The role that can preview and upload files.</li>
+         * <li>SystemFileViewer: The role that can preview files.</li>
+         * <li>SystemFileEditor: The role that can edit files.</li>
+         * <li>SystemFileUploaderWithShareLink: The role that can upload and share files.</li>
+         * <li>SystemFileUploader: The role that can upload files.</li>
+         * <li>SystemFileUploaderAndDownloader: The role that can upload and download files.</li>
+         * <li>SystemFileMetaViewer: The role that can view file list.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemFileEditor</p>
          */
         public Builder roleId(String roleId) {
             this.roleId = roleId;
@@ -187,7 +214,11 @@ public class FilePermissionMember extends TeaModel {
             } 
 
             /**
+             * <p>The user ID or a team ID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16435bdf934248b788b7b3771ee9****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -195,7 +226,16 @@ public class FilePermissionMember extends TeaModel {
             }
 
             /**
+             * <p>The object type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>IT_Group: team</li>
+             * <li>IT_User: user</li>
+             * </ul>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT_User</p>
              */
             public Builder type(String type) {
                 this.type = type;

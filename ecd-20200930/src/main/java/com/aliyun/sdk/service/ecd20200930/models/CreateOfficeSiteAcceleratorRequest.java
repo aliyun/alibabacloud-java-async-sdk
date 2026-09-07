@@ -118,7 +118,7 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
         } 
 
         /**
-         * <p>The regions to include in global acceleration.</p>
+         * <p>The list of acceleration region information for the access points.</p>
          * <p>This parameter is required.</p>
          */
         public Builder accelerateRegion(java.util.List<AccelerateRegion> accelerateRegion) {
@@ -266,7 +266,7 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the region to include in global acceleration.</p>
+             * <p>The ID of the acceleration region.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
             }
 
             /**
-             * <p>The bandwidth that you want to allocate to the acceleration region. Unit: Mbit/s.</p>
+             * <p>The bandwidth allocated to the acceleration region. Unit: Mbit/s.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -290,16 +290,10 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
             }
 
             /**
-             * <p>The IP version used to connect to the GA instance.</p>
+             * <p>The IP address protocol used to connect to the GA service.</p>
              * <blockquote>
-             * <p> Only pay-as-you-go standard GA instances support <code>DUAL_STACK</code>.</p>
+             * <p>The <code>DUAL_STACK</code> type is supported only by standard pay-as-you-go GA instances.</p>
              * </blockquote>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>DUAL_STACK: IPv4 and IPv6.</li>
-             * <li>IPv6: IPv6.</li>
-             * <li>IPv4 (default): IPv4.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>IPv4</p>
@@ -310,20 +304,13 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
             }
 
             /**
-             * <p>The line type of the elastic IP address (EIP) in the acceleration region.</p>
+             * <p>The public network line type of the acceleration region.</p>
              * <blockquote>
+             * <ul>
+             * <li>Configure this parameter for GA instances that use the <strong>pay-by-data-transfer</strong> billing method.</li>
+             * <li>The supported public network line types vary by acceleration region.</li>
+             * </ul>
              * </blockquote>
-             * <ul>
-             * <li><p>This parameter is required only if the bandwidth metering method of the GA instance is <strong>pay-by-data transfer</strong>.</p>
-             * </li>
-             * <li><p>Different acceleration regions support different line types of EIPs.</p>
-             * </li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>BGP: BGP (Multi-ISP) lines.</li>
-             * <li>BGP_PRO: BGP (Multi-ISP) Pro.</li>
-             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

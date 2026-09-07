@@ -67,7 +67,7 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud computer policy ID.</p>
+         * <p>The cloud desktop policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-gx2x1dhsmthe9****</p>
@@ -78,7 +78,7 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

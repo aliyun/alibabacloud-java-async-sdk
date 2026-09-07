@@ -67,7 +67,7 @@ public class RenewDesktopGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The order IDs.</p>
+         * <p>The list of order IDs.</p>
          */
         public Builder orderId(java.util.List<String> orderId) {
             this.orderId = orderId;

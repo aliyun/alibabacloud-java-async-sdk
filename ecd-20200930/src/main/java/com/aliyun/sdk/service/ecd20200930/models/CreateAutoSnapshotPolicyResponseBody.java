@@ -67,7 +67,7 @@ public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>The automatic snapshot policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-3hpa78d0qyt99****</p>

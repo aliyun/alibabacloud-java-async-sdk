@@ -284,7 +284,7 @@ public class DescribeClientEventsRequest extends Request {
         } 
 
         /**
-         * <p>The cloud desktop ID. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.</p>
+         * <p>The cloud computer ID. If this parameter is not specified, all cloud computers in the region are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-8fupvkhg0aayu****</p>
@@ -296,7 +296,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the cloud desktop. If you do not specify a value for this parameter, the events of all cloud desktops in the specified region are queried.</p>
+         * <p>The IP address of the cloud computer. If this parameter is not specified, events of all cloud computers in the region are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.<em>.</em></p>
@@ -308,10 +308,10 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Finance cloud computer</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -320,10 +320,12 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not available to the public.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
+         * <p>To be hidden.</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -332,7 +334,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.<br>If you do not specify a value for this parameter, the current time is used.</p>
+         * <p>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If this parameter is not specified, the current time is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-31T06:32:31Z</p>
@@ -344,7 +346,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The information about the end user that connects to the cloud desktop from the Elastic Desktop Service (EDS) client. The information can be a Resource Access Management (RAM) user ID or an Active Directory (AD) username. If you do not specify a value for this parameter, the events of all end users in the specified region are queried.</p>
+         * <p>The logon user information, which is a Resource Access Management (RAM) user ID or AD username. If this parameter is not specified, events of all users in the region are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>28961708130834****</p>
@@ -356,7 +358,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * <p>The list of end user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -365,65 +367,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The type of the events that you want to query. If you specify multiple values for the EventTypes parameter, the events of all specified types are returned. If you do not specify values for the EventTypes and EventType parameters, all events of end users in the specified region are returned.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>DESKTOP_STOP: End users stop the cloud desktop.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>GET_LITE_CONNECTION_TICKET: End users obtain the credential for reconnecting to the cloud desktop upon disconnection.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DESKTOP_DISCONNECT: End users disconnect desktop sessions.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>GET_CONNECTION_TICKET: End users request to connect to the cloud desktop.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CLIENT_LOGIN: End users log on to the cloud desktop.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DESKTOP_REBOOT: End users restart the cloud desktop.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DESKTOP_CONNECT: End users establish desktop sessions.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DESKTOP_START: End users start the cloud desktop.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The event type to query. If EventTypes is not empty, the EventTypes combination is used as the query filter condition. If both EventTypes and EventType are empty, all events are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>DESKTOP_DISCONNECT</p>
@@ -435,7 +379,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The array of event types that you want to query. You can specify multiple event types. The response contains all or specified types of events.</p>
+         * <p>The combination of event types to query. You can specify multiple event types. The query results include all events of the specified types.</p>
          */
         public Builder eventTypes(java.util.List<String> eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
@@ -444,7 +388,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * FillHardwareInfo.
+         * <p>Specifies whether to include terminal information in the response.</p>
          */
         public Builder fillHardwareInfo(Boolean fillHardwareInfo) {
             this.putQueryParameter("FillHardwareInfo", fillHardwareInfo);
@@ -453,7 +397,10 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language type of the returned information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -462,7 +409,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.<br>Default value: 100.</p>
+         * <p>The number of entries per page for a paged query. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -474,7 +421,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -486,7 +433,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the cloud desktop belongs. If you do not specify a value for this parameter, the events of all workspaces in the specified region are queried.</p>
+         * <p>The ID of the office network to which the cloud computer belongs. If this parameter is not specified, user events in all office networks in the region are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
@@ -498,10 +445,10 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>R&amp;D office network</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -510,7 +457,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -523,7 +470,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.<br>If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for <code>EndTime</code> are queried.</p>
+         * <p>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If this parameter is not specified, events are queried backward from the time specified by <code>EndTime</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-30T06:32:31Z</p>

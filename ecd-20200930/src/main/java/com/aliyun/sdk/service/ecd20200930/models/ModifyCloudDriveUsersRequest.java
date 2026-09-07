@@ -118,6 +118,7 @@ public class ModifyCloudDriveUsersRequest extends Request {
         } 
 
         /**
+         * <p>The enterprise cloud disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
+         * <p>A list of end user IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
@@ -139,6 +141,7 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

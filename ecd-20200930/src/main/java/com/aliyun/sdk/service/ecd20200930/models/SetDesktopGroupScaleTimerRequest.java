@@ -89,7 +89,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>The cloud computer pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         }
 
         /**
-         * <p>The information about the scheduled auto scaling task.</p>
+         * <p>The list of scheduled task information for automatic scaling.</p>
          */
         public Builder scaleTimerInfos(java.util.List<ScaleTimerInfos> scaleTimerInfos) {
             this.putQueryParameter("ScaleTimerInfos", scaleTimerInfos);
@@ -261,7 +261,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             } 
 
             /**
-             * <p>One option for the auto scaling policy. This option specifies the number of cloud computers that you want to create in the cloud computer pool. Valid values: 0 to 200.</p>
+             * <p>The number of cloud computers to purchase, which is one of the scaling policy parameters. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -272,7 +272,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * <p>The cron expression of the trigger time.</p>
+             * <p>The cron expression for the trigger time.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 12 ? * 1</p>
@@ -283,11 +283,11 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * <p>The keep-alive duration of a session after the session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session always keeps alive.</p>
-             * <p>If a session is disconnected by the end user or accidentally due to a factor and the end user does not re-establish a connection with the session within the keep-alive duration, the session expires and unsaved data is deleted. If the end user successfully re-establishes a connection with the session within the keep-alive duration, the end user returns to the session and can still access the original data.</p>
+             * <p>The duration for which a session is retained after disconnection. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
+             * <p>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the timer starts from the moment of disconnection. If the user does not reconnect to the session within this retention duration, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within this retention duration, the user can still access the original session and the data that existed before the disconnection.</p>
              * 
              * <strong>example:</strong>
-             * <p>1000</p>
+             * <p>180000</p>
              */
             public Builder keepDuration(Long keepDuration) {
                 this.keepDuration = keepDuration;
@@ -296,11 +296,6 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
 
             /**
              * <p>The load balancing policy for the multi-session cloud computer pool.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>0: depth-first</li>
-             * <li>1: breadth first.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -311,7 +306,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * <p>One option for the auto scaling policy. This option specifies the maximum number of cloud computers that you can create in the cloud computer pool. Valid values: 0 to 200.</p>
+             * <p>The maximum number of cloud computers, which is one of the scaling policy parameters. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -322,7 +317,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * <p>One option for the auto scaling policy. This option specifies the minimum number of cloud computers that you must create in the cloud computer pool. Valid values: 0 to 200.</p>
+             * <p>The minimum number of cloud computers, which is one of the scaling policy parameters. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -333,12 +328,12 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. Formula:</p>
-             * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code>.</p>
-             * <p>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</p>
+             * <p>The session occupancy threshold, which is used as the trigger condition for automatic scaling of the multi-session cloud computer pool. The session occupancy is calculated by using the following formula:</p>
+             * <p><code>Session occupancy = Number of attached sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
+             * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy does not reach this threshold, excess cloud computers are deleted.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.9</p>
+             * <p>0.85</p>
              */
             public Builder ratioThreshold(Float ratioThreshold) {
                 this.ratioThreshold = ratioThreshold;
@@ -346,37 +341,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * <p>The type of the auto scaling policy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>drop</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>normal</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>peak</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>rise</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>rise</p>

@@ -78,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of zones.</p>
+         * <p>The collection of zone information.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;

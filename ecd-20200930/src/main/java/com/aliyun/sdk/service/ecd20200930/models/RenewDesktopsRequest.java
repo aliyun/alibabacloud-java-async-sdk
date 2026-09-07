@@ -173,12 +173,7 @@ public class RenewDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the auto-payment feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true (default): enables the auto-payment feature. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated.</li>
-         * <li>false: disables the auto-payment feature. In this case, an order is generated but you need to complete the payment. You can log on to the EDS console and complete the payment based on the order ID on the Orders page.</li>
-         * </ul>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -190,7 +185,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the auto-renewal feature.</p>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -202,7 +197,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs. You can only renew monthly subscription cloud computers.</p>
+         * <p>The list of cloud computer IDs. Only monthly subscription cloud computers can be renewed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,8 +212,10 @@ public class RenewDesktopsRequest extends Request {
         /**
          * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
          * <ul>
-         * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Month</code>: 1, 2, 3, and 6</li>
-         * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Year</code>: 1, 2, 3, 4, 5, and 6</li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1 to 5.</p>
+         * </li>
          * </ul>
          * <p>Default value: 1.</p>
          * 
@@ -232,23 +229,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal duration specified by the <code>Period</code> parameter.</p>
-         * <p>Default value: Month. Valid values:</p>
-         * <ul>
-         * <li><p>Month</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Year</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The unit of the renewal duration, which is the unit of the <code>Period</code> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -260,10 +241,10 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the promotional activity.</p>
+         * <p>The promotion ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>500030980150146</p>
+         * <p>50003098015****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -272,7 +253,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +266,10 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * ResellerOwnerUid.
+         * <p>The user ID for resource ownership in the reselling pattern. You do not need to specify this parameter if you are not using the reselling pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1422724566551XXX</p>
          */
         public Builder resellerOwnerUid(Long resellerOwnerUid) {
             this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
@@ -295,11 +279,11 @@ public class RenewDesktopsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This field is not available for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>Desktop</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

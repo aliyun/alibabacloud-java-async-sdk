@@ -67,7 +67,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The basic information about cloud computers.</p>
+         * <p>The basic information of cloud computers.</p>
          */
         public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
@@ -249,11 +249,6 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
             /**
              * <p>The connection status of the user.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Connected</li>
-             * <li>Disconnected</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Disconnected</p>
@@ -264,7 +259,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the cloud computer image.</p>
+             * <p>The image version number of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4.0-R-***</p>
@@ -275,7 +270,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud computer pool.</p>
+             * <p>The cloud computer pool ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-3uiojcc0j4kh7****</p>
@@ -286,7 +281,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud computer.</p>
+             * <p>The cloud computer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-gx2x1dhsmucyy****</p>
@@ -298,17 +293,6 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
             /**
              * <p>The status of the cloud computer.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Stopped</li>
-             * <li>Failed</li>
-             * <li>Starting</li>
-             * <li>Running</li>
-             * <li>Stopping</li>
-             * <li>Expired</li>
-             * <li>Deleted</li>
-             * <li>Pending</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -319,7 +303,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about flags that are used to manage cloud computers.</p>
+             * <p>The management flags.</p>
              */
             public Builder managementFlag(java.util.List<String> managementFlag) {
                 this.managementFlag = managementFlag;
@@ -327,7 +311,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the update package. Unit: KB.</p>
+             * <p>The size of the upgrade package, in KB.</p>
              * 
              * <strong>example:</strong>
              * <p>568533470</p>
@@ -338,7 +322,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the image that can be updated on the cloud computer.</p>
+             * <p>The image version number to which the cloud computer can be upgraded.</p>
              * 
              * <strong>example:</strong>
              * <p>1.6.0-R-***</p>
@@ -349,10 +333,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image version that can be updated.</p>
+             * <p>The description of the image version to which the cloud computer can be upgraded.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test package 03-07</p>
+             * <p>Test upgrade package 03-07</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -360,7 +344,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud computer was first started.</p>
+             * <p>The time when the cloud computer was first started. The time is in the ISO 8601 standard (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-06T08:31Z</p>

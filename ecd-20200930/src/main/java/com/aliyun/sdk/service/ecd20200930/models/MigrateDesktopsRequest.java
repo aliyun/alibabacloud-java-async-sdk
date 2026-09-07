@@ -118,7 +118,7 @@ public class MigrateDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+         * <p>The IDs of cloud computers. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -128,7 +128,7 @@ public class MigrateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,10 @@ public class MigrateDesktopsRequest extends Request {
         }
 
         /**
-         * TargetMemberIp.
+         * <p>The member IP address of the destination node for migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.10</p>
          */
         public Builder targetMemberIp(String targetMemberIp) {
             this.putQueryParameter("TargetMemberIp", targetMemberIp);
@@ -164,11 +167,11 @@ public class MigrateDesktopsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is for internal use only.</p>
+         * <p>This parameter is not yet available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>vsw-bp1m3o4kbjxwe****</p>
          */
         public Builder targetSubnetId(String targetSubnetId) {
             this.putQueryParameter("TargetSubnetId", targetSubnetId);

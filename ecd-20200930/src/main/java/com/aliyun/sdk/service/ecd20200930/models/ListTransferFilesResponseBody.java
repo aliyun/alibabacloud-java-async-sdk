@@ -303,6 +303,9 @@ public class ListTransferFilesResponseBody extends TeaModel {
 
             /**
              * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test file</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -316,6 +319,9 @@ public class ListTransferFilesResponseBody extends TeaModel {
              * <ul>
              * <li>A value is returned for this parameter only when the object is stored in a custom OSS bucket.</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Test file_0982836423402342</p>
              */
             public Builder ossFileName(String ossFileName) {
                 this.ossFileName = ossFileName;
@@ -353,9 +359,12 @@ public class ListTransferFilesResponseBody extends TeaModel {
              * <p>The file status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>DELETING</li>
-             * <li>DELETED</li>
-             * <li>UPLOADED</li>
+             * <li><p>DELETING</p>
+             * </li>
+             * <li><p>DELETED</p>
+             * </li>
+             * <li><p>UPLOADED</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

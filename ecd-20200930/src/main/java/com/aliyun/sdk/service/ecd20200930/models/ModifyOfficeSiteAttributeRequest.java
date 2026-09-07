@@ -229,7 +229,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         } 
 
         /**
-         * AuthorityHost.
+         * <p>The Authority URL of the identity authentication service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a></p>
          */
         public Builder authorityHost(String authorityHost) {
             this.putQueryParameter("AuthorityHost", authorityHost);
@@ -238,7 +241,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * ClientId.
+         * <p>The client ID registered with the identity provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2c8f7e4-1b3d-4c5e-9f0a-6d7b8c9e****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -247,7 +253,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * ClientSecret.
+         * <p>The client secret registered with the identity provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sct-9f3e2d1c****</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("ClientSecret", clientSecret);
@@ -256,16 +265,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+         * <p>The access method allowed when connecting to cloud computers.</p>
          * <blockquote>
-         * <p> VPC connection relies on the Alibaba Cloud PrivateLink service. You can use PrivateLink for free. When you set this parameter to <code>VPC</code> or <code>Any</code>, the system automatically activates PrivateLink.</p>
+         * <p>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. If this parameter is set to <code>VPC</code> or <code>Any</code>, the system automatically activates the PrivateLink service for you.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>INTERNET (default): allows end users to connect to cloud computers over the Internet.</li>
-         * <li>VPC: allows end users to connect to cloud computers over VPCs.</li>
-         * <li>ANY: allows end users to connect to cloud computers over the Internet and VPCs. When end users connect to cloud computers from Elastic Desktop Service, you can choose a connection method based on your business requirements.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -277,7 +280,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name of the enterprise AD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain.local</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -286,12 +292,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to grant local administrator permissions to cloud computer users.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -303,7 +304,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable two-factor verification when an end user logs on to an Alibaba Cloud Workspace client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.</p>
+         * <p>This parameter applies only to convenience account-based office networks. Specifies whether secondary authentication is required during logon. If logon secondary authentication is enabled, the system checks whether the logon account has security risks when a convenience user logs on to the client. If a risk is detected, the system sends a verification code to the email address associated with the account. The convenience user can log on to the client only after passing the verification code check.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -315,7 +316,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable device verification. This parameter is required only for convenience office networks. This parameter is left empty for enterprise Active Directory (AD) office networks.</p>
+         * <p>This parameter applies only to convenience account-based office networks. Specifies whether to enable device verification. For AD-based office networks, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -340,10 +341,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.<br>This parameter is empty by default.</p>
+         * <p>The office network name. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).<br>Default value: empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>R&amp;D_Office_Network</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -352,7 +353,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +366,10 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID of the identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72f988bf-86f1-41af-91ab-2d7cd011****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
@@ -374,7 +378,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID. Only one vSwitch is supported.</p>
          */
         public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

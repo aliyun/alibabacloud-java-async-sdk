@@ -89,6 +89,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
         } 
 
         /**
+         * <p>WUYING Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>List of end user IDs.</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -110,6 +111,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
         }
 
         /**
+         * <p>Region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

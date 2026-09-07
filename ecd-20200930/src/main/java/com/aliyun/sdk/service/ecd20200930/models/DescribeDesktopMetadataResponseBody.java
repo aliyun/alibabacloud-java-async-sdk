@@ -80,7 +80,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         } 
 
         /**
-         * Desktops.
+         * <p>The cloud desktop details.</p>
          */
         public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
@@ -88,7 +88,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty value indicates that there are no more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -383,7 +389,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentProviderList.
+             * <p>The agents supported by the current cloud computer.</p>
              */
             public Builder agentProviderList(java.util.List<String> agentProviderList) {
                 this.agentProviderList = agentProviderList;
@@ -391,7 +397,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing type of the cloud desktop. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go.</li>
+             * <li>PrePaid: subscription.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -399,7 +412,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-06T08:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -407,7 +423,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * <p>The shared cloud computer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-3uiojcc0j4kh7****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -415,7 +434,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The cloud desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsmucyy****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -423,7 +445,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud desktop name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDesktopName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -431,7 +456,20 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * <p>The cloud desktop status. Valid values:</p>
+             * <ul>
+             * <li>Stopped: stopped.</li>
+             * <li>Starting: starting.</li>
+             * <li>Rebuilding: rebuilding.</li>
+             * <li>Running: running.</li>
+             * <li>Stopping: stopping.</li>
+             * <li>Expired: expired.</li>
+             * <li>Deleted: deleted.</li>
+             * <li>Pending: pending.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -439,7 +477,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopType.
+             * <p>The cloud desktop specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.general.2c8g</p>
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -447,7 +488,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method. The time format follows the ISO 8601 standard (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-31T15:59Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -455,7 +499,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-4zfb6zj728hhr****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -463,7 +510,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>The local name of the region to which the cloud desktop belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东2（上海）</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -471,7 +521,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlags.
+             * <p>The management status of the cloud computer.</p>
              */
             public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
@@ -479,7 +529,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * MemberEniIp.
+             * <p>The IP address of the member elastic network interface (ENI) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.2.1</p>
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -487,7 +540,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-363353****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -495,7 +551,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The operating system platform information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -503,7 +562,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -511,7 +573,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-f3s3dgt8dtb0vlqc8</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -519,7 +584,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serverless_new</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -527,7 +595,10 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the cloud desktop was started. The time is in the ISO 8601 standard (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-06T08:31Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

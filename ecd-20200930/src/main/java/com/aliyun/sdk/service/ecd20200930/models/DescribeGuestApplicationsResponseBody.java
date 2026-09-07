@@ -302,7 +302,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
              * <p>The path to the process.</p>
              * 
              * <strong>example:</strong>
-             * <p>C:\Program Files\Google\Chrome\Application\ch****.exe</p>
+             * <p>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -585,7 +585,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
              * <p>The path to the process.</p>
              * 
              * <strong>example:</strong>
-             * <p>C:\Program Files\Google\Chrome\Application\ch****.exe</p>
+             * <p>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;

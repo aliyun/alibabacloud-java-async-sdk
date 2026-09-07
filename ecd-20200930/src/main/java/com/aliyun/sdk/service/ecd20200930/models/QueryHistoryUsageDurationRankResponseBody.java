@@ -93,7 +93,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The paging token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWvmfbFWy0uSlxZ6pIAKAnuwt1ezsRqxI6hPibm27fMH</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +104,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +126,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         }
 
         /**
-         * UsageDurationList.
+         * <p>The list of user usage duration metrics.</p>
          */
         public Builder usageDurationList(java.util.List<UsageDurationList> usageDurationList) {
             this.usageDurationList = usageDurationList;
@@ -235,7 +244,16 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The billing type. Valid values:</p>
+             * <ul>
+             * <li>POST_PAID: pay-as-you-go.</li>
+             * <li>PRE_PAID: subscription.</li>
+             * <li>MONTH_PACKAGE: monthly package.</li>
+             * <li>DURATION: duration-based package.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -243,7 +261,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The cloud desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-8cndajrdrd424sb99</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -251,7 +272,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud desktop name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -259,7 +283,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>endUserId</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -267,7 +294,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -275,7 +305,10 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
             }
 
             /**
-             * UsageDuration.
+             * <p>The usage duration, in seconds. This value is of the Long type. Handle precision conversion on the frontend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder usageDuration(Long usageDuration) {
                 this.usageDuration = usageDuration;

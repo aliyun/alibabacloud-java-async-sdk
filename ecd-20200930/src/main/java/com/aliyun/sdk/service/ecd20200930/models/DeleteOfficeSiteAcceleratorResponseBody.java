@@ -54,7 +54,7 @@ public class DeleteOfficeSiteAcceleratorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE9472BC-0B5D-5458-85CD-C52BDD******</p>

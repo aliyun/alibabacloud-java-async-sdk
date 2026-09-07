@@ -185,7 +185,7 @@ public class CreateDriveRequest extends Request {
         } 
 
         /**
-         * <p>The ID of your Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1202****</p>
@@ -209,9 +209,9 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * <p>The ID of the storage resource.</p>
+         * <p>The storage resource ID.</p>
          * <blockquote>
-         * <p> Call the DescribeDrives operation to retrieve the storage resource ID.</p>
+         * <p>You can call the DescribeDrives operation to obtain this value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,9 +236,9 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * <p>The ID of the external storage resource.</p>
+         * <p>The external storage resource ID.</p>
          * <blockquote>
-         * <p> Call the DescribeDrives operation to retrieve the external storage resource ID.</p>
+         * <p>You can call the DescribeDrives operation to obtain this value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class CreateDriveRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -279,12 +279,7 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * <p>The type of the storage resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>NAS: File Storage NAS</li>
-         * <li>PDS: Drive and Photo Service</li>
-         * </ul>
+         * <p>The storage resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>NAS</p>
@@ -296,12 +291,7 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * <p>The usage of the storage resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DESKTOP: data disk space</li>
-         * <li>USER_PROFILE: space for personal data of the user</li>
-         * </ul>
+         * <p>The purpose of the storage resource.</p>
          * 
          * <strong>example:</strong>
          * <p>USER_PROFILE</p>

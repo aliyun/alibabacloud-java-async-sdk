@@ -183,7 +183,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the promotion rule.</p>
+             * <p>The promotion rule description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -194,10 +194,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the promotion.</p>
+             * <p>The promotion description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Get started with new services with a discount.</p>
+             * <p>New product launch with special discount</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -219,7 +219,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The promotion name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Special Offer</p>
+             * <p>Featured deals</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -227,7 +227,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an item is selected.</p>
+             * <p>Indicates whether the promotion is selected.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -362,10 +362,11 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unit of currency (USD).</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+             * &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</p>
              * 
              * <strong>example:</strong>
-             * <p>CNY</p>
+             * <p>CNY/USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -373,10 +374,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted amount.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>15.8</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -384,7 +385,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The orders.</p>
+             * <p>The order information.</p>
              */
             public Builder orderLines(java.util.Map<String, String> orderLines) {
                 this.orderLines = orderLines;
@@ -395,7 +396,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The original price.</p>
              * 
              * <strong>example:</strong>
-             * <p>2.796</p>
+             * <p>79.0</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -403,7 +404,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotions.</p>
+             * <p>The promotion information.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -411,7 +412,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price under an effective savings plan.</p>
+             * <p>The price under the savings plan.</p>
              * 
              * <strong>example:</strong>
              * <p>50.00</p>
@@ -422,10 +423,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual price. The original price minus the discounted amount equals the actual price.</p>
+             * <p>The actual payment price. The value is the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
-             * <p>2.796</p>
+             * <p>63.2</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -492,10 +493,10 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the rule.</p>
+             * <p>The rule description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Receive a 15% discount on a one-year subscription.</p>
+             * <p>Get 15% off the list price when you purchase for one year or longer</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -599,7 +600,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether a free enterprise drive is available.</p>
+             * <p>Indicates whether a free enterprise cloud disk is available.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -610,7 +611,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The free capacity provided by the enterprise drive. Unit: GiB.</p>
+             * <p>The free capacity of the enterprise cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -621,7 +622,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price.</p>
+             * <p>The price information.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -629,7 +630,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the promotion rules.</p>
+             * <p>The promotion rule information.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

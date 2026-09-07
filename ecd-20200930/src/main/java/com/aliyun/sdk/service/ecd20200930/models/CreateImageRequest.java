@@ -186,7 +186,7 @@ public class CreateImageRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to <code>true</code>, the custom image clears the data directories, excluding the <code>Administrator</code> and <code>Public</code> directories, in the <code>C:\Users</code> directory.</p>
+         * <p>Specifies whether to clear personal user data. If this parameter is set to <code>true</code>, the created image clears data in all directories under <code>C:\\Users</code> except the <code>Administrator</code> and <code>Public</code> directories.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -198,7 +198,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * DataSnapshotIds.
+         * <p>The list of data cloud disk snapshot IDs. To include data cloud disks when creating an image, specify the corresponding data cloud disk snapshot IDs. A maximum of 100 IDs are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;s-bp67acfmxazb4ph****&quot;, &quot;s-bp67acfmxazb5qh****&quot;]</p>
          */
         public Builder dataSnapshotIds(java.util.List<String> dataSnapshotIds) {
             this.putQueryParameter("DataSnapshotIds", dataSnapshotIds);
@@ -207,7 +210,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -219,7 +222,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-7w78ozhjcwa3u****</p>
@@ -231,12 +234,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The disk data that is contained in the custom image.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SYSTEM: only contain data from system disks.</li>
-         * <li>ALL: contain data from system disks and user disks. [default]</li>
-         * </ul>
+         * <p>The disk data included in the image.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -248,7 +246,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testImageName</p>
@@ -263,7 +261,7 @@ public class CreateImageRequest extends Request {
          * <p>This parameter is not publicly available.</p>
          * 
          * <strong>example:</strong>
-         * <p>To be hidden.</p>
+         * <p>deprecated</p>
          */
         public Builder imageResourceType(String imageResourceType) {
             this.putQueryParameter("ImageResourceType", imageResourceType);
@@ -272,7 +270,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +283,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>s-2zefuwk8l6ytcgd3bf4o</p>
@@ -297,7 +295,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the snapshots.</p>
+         * <p>The list of snapshot IDs.</p>
          */
         public Builder snapshotIds(java.util.List<String> snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);

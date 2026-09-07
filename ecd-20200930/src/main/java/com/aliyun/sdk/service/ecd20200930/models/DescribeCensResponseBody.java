@@ -106,7 +106,7 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the CEN instances.</p>
+         * <p>The details of the CEN instances.</p>
          */
         public Builder cens(java.util.List<Cens> cens) {
             this.cens = cens;
@@ -114,7 +114,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +203,7 @@ public class DescribeCensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the bandwidth plan that is bound to the CEN instance.</p>
+             * <p>The ID of the bandwidth package bound to the CEN instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cenbwp-4c2zaavbvh5f42****</p>
@@ -273,7 +273,7 @@ public class DescribeCensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey</p>
@@ -284,7 +284,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue</p>
@@ -445,7 +445,7 @@ public class DescribeCensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CEN instance.</p>
+             * <p>The CEN instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cen-3gwy16dojz1m65****</p>
@@ -456,7 +456,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the CEN instance was created.</p>
+             * <p>The time when the CEN instance was created. The time is in the ISO 8601 standard (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-16T08:46Z</p>
@@ -470,7 +470,7 @@ public class DescribeCensResponseBody extends TeaModel {
              * <p>The description of the CEN instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Production environment CEN</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -480,17 +480,8 @@ public class DescribeCensResponseBody extends TeaModel {
             /**
              * <p>The IPv6 level.</p>
              * <blockquote>
-             * <p> IPv6 is not supported.</p>
+             * <p>IPv6 is not supported.</p>
              * </blockquote>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li><p>DISABLED</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>DISABLED</p>
@@ -512,7 +503,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth plans that are bound to the CEN instance.</p>
+             * <p>The list of bandwidth packages bound to the CEN instance.</p>
              */
             public Builder packageIds(java.util.List<PackageIds> packageIds) {
                 this.packageIds = packageIds;
@@ -520,11 +511,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tolerated level of CIDR block conflict.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</li>
-             * </ul>
+             * <p>The level of CIDR block overlap conflicts.</p>
              * 
              * <strong>example:</strong>
              * <p>REDUCED</p>
@@ -536,29 +523,6 @@ public class DescribeCensResponseBody extends TeaModel {
 
             /**
              * <p>The status of the CEN instance.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Creating</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Active</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Deleting</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
