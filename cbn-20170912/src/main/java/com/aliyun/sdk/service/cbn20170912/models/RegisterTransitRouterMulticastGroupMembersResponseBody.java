@@ -54,7 +54,7 @@ public class RegisterTransitRouterMulticastGroupMembersResponseBody extends TeaM
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EB985B7E-2CF8-5EC9-A7DB-F7C82ABD3ACE</p>

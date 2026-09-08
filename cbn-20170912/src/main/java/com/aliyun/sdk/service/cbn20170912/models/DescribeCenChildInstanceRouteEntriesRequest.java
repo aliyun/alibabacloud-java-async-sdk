@@ -216,7 +216,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The network instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,8 +242,8 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the network instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the network instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -255,7 +255,8 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.</p>
+         * <p>The routing table ID of the network instance.
+         * If you do not specify a routing table ID when querying route entries of a VPC-connected instance, the system queries route entries in the system routing table of the VPC-connected instance by default.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-p0wxx3apzgn6uqp3r****</p>
@@ -269,10 +270,14 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
-         * <li><strong>ECR</strong>: Express Connect Router (ECR)</li>
+         * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router (VBR).</p>
+         * </li>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network (CCN).</p>
+         * </li>
+         * <li><p><strong>ECR</strong>: Express Connect Router (ECR).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -304,7 +309,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,7 +321,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging queries. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -346,13 +351,18 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The status of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong>: available</li>
-         * <li><strong>Candidate</strong>: standby</li>
-         * <li><strong>Rejected</strong>: rejected</li>
-         * <li><strong>Prohibited</strong>: prohibited</li>
-         * <li><strong>All</strong> (default): all routes</li>
+         * <li><p><strong>Active</strong>: active.</p>
+         * </li>
+         * <li><p><strong>Candidate</strong>: candidate.</p>
+         * </li>
+         * <li><p><strong>Rejected</strong>: rejected.</p>
+         * </li>
+         * <li><p><strong>Prohibited</strong>: prohibited.</p>
+         * </li>
+         * <li><p><strong>All</strong> (default): queries route entries in all states of the network instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

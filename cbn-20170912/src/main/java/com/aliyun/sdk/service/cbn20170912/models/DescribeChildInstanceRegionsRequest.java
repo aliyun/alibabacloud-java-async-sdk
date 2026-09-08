@@ -129,7 +129,7 @@ public class DescribeChildInstanceRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).</p>
+         * <p>The supported language. Valid values: Chinese: zh-CN (default) English: en-US Japanese: ja.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -161,9 +161,12 @@ public class DescribeChildInstanceRegionsRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * <li><p><strong>VPC</strong>: virtual private cloud (VPC) instance.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router (VBR) instance.</p>
+         * </li>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network (CCN) instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

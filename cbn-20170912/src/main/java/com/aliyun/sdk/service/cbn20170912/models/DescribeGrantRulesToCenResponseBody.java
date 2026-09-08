@@ -106,7 +106,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permissions that are granted to the CEN instance.</p>
+         * GrantRules.
          */
         public Builder grantRules(GrantRules grantRules) {
             this.grantRules = grantRules;
@@ -115,8 +115,8 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>If no value is specified for <strong>MaxResults</strong>, query results are returned in one batch. The value of <strong>MaxResults</strong> indicates the total number of entries.</li>
-         * <li>If a value is specified for <strong>MaxResults</strong>, it indicates that you need to query results in batches. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch.</li>
+         * <li>If you did not specify the <strong>MaxResults</strong> request parameter, pagination is not required. The <strong>MaxResults</strong> value in the response indicates the total number of entries.</li>
+         * <li>If you specified the <strong>MaxResults</strong> request parameter, pagination is required. The <strong>MaxResults</strong> value in the response indicates the number of entries in the current page.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,10 +128,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value of <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,10 +314,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CEN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-nye53d7p3hzyu4****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -325,10 +322,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1210123456123456</p>
+             * CenOwnerId.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -336,10 +330,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp1rgeww9mdstuuar****</p>
+             * ChildInstanceId.
              */
             public Builder childInstanceId(String childInstanceId) {
                 this.childInstanceId = childInstanceId;
@@ -347,10 +338,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1250123456123456</p>
+             * ChildInstanceOwnerId.
              */
             public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
                 this.childInstanceOwnerId = childInstanceOwnerId;
@@ -358,10 +346,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the network instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * ChildInstanceRegionId.
              */
             public Builder childInstanceRegionId(String childInstanceRegionId) {
                 this.childInstanceRegionId = childInstanceRegionId;
@@ -369,16 +354,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network instance. Valid values:</p>
-             * <ul>
-             * <li><strong>VPC</strong>: VPC</li>
-             * <li><strong>VBR</strong>: VBR</li>
-             * <li><strong>CCN</strong>: CCN instance</li>
-             * <li><strong>VPN</strong>: IPsec-VPN connection</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * ChildInstanceType.
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
@@ -386,11 +362,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the permissions were granted to the CEN instance.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-24T16:27Z</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -406,14 +378,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity that pays the fees of the network instance. Valid values:</p>
-             * <ul>
-             * <li><strong>PayByCenOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</li>
-             * <li><strong>PayByResourceOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PayByCenOwner</p>
+             * OrderType.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

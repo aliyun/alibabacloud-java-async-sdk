@@ -54,7 +54,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7E61D334-4025-41EF-9145-FC327B35301D</p>

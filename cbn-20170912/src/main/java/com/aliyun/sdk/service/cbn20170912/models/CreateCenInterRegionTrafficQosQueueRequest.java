@@ -215,10 +215,12 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         } 
 
         /**
-         * <p>The maximum absolute bandwidth value that can be allocated to the queue. Unit: Mbit/s.</p>
+         * <p>The maximum inter-region bandwidth that the queue can use when bandwidth is allocated by absolute value. Unit: Mbit/s.</p>
          * <ul>
-         * <li>The value specifies an absolute bandwidth. For example, a value of 20 specifies that the queue can consume at most 20 Mbit/s of bandwidth.</li>
-         * <li>The sum of the bandwidth values specified for all queues that belong to the same inter-region connection cannot exceed the maximum bandwidth of the inter-region connection.</li>
+         * <li><p>The bandwidth value is calculated as an absolute value. For example, if you enter 20, the queue can use up to 20 Mbit/s of inter-region bandwidth.</p>
+         * </li>
+         * <li><p>The sum of the bandwidth values of all queues under an inter-region connection cannot exceed the inter-region bandwidth value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +236,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value of each API request is different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,8 +251,8 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, the request format, and the service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the queue is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,8 +265,8 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The differentiated services code point (DSCP) value that matches the current queue.</p>
-         * <p>You can specify at most 20 DSCP values for a queue in each call. Separate DSCP values with commas (,).</p>
+         * <p>The DSCP values to be matched by the queue.</p>
+         * <p>You can specify up to 20 DSCP values at a time. Separate multiple DSCP values with commas (,).</p>
          * <p>This parameter is required.</p>
          */
         public Builder dscps(java.util.List<Integer> dscps) {
@@ -293,7 +295,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The description of the queue.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -306,7 +308,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The name of the queue.</p>
-         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -318,10 +320,12 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The maximum percentage of inter-region bandwidth that can be allocated to the queue.</p>
+         * <p>The maximum inter-region bandwidth that the queue can use when bandwidth is allocated by percentage.</p>
          * <ul>
-         * <li>Unit: percentage. For example, a value of 20 specifies that the queue can consume at most 20% of inter-region bandwidth.</li>
-         * <li>The sum of the percentage values specified for all queues that belong to the same inter-region connection cannot exceed 100%.</li>
+         * <li><p>The bandwidth value is calculated as a percentage. For example, if you enter 20, the queue can use up to 20% of the inter-region bandwidth.</p>
+         * </li>
+         * <li><p>The sum of the bandwidth percentages of all queues under an inter-region connection cannot exceed 100%.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,7 +356,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The ID of the traffic scheduling policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the cloud services.</p>
+         * RouteServiceEntries.
          */
         public Builder routeServiceEntries(RouteServiceEntries routeServiceEntries) {
             this.routeServiceEntries = routeServiceEntries;
@@ -147,7 +147,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -348,10 +348,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region where the cloud service is accessed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * AccessRegionId.
              */
             public Builder accessRegionId(String accessRegionId) {
                 this.accessRegionId = accessRegionId;
@@ -359,10 +356,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the CEN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-pfa6ugf3xl0qsd****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -370,7 +364,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service addresses of the cloud service.</p>
+             * Cidrs.
              */
             public Builder cidrs(Cidrs cidrs) {
                 this.cidrs = cidrs;
@@ -378,10 +372,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>descname</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -389,10 +380,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service address of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.118.28.0/24</p>
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -400,10 +388,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * HostRegionId.
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -411,10 +396,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC associated with the cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp1h8vbrbcgohcju5****</p>
+             * HostVpcId.
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -422,15 +404,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud service. Valid values:</p>
-             * <ul>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Active</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

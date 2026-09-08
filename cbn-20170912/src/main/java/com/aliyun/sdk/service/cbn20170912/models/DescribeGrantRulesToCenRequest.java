@@ -216,7 +216,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         } 
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The instance ID of the CEN instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance that you want to query.</p>
+         * <p>The instance ID of the network instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-rj9gt5nll27onu7****</p>
@@ -244,7 +244,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
          * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>125012345612****</p>
+         * <p>1250123456123456</p>
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -253,10 +253,10 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable IPv6.</p>
+         * <p>Specifies whether IPv6 is enabled:</p>
          * <ol>
-         * <li>This parameter takes effect only if ProductType is set to VPC.</li>
-         * <li>true: enables IPv6. false: disables IPv6. If you do not specify a value, network instances are not filtered based on this parameter.</li>
+         * <li>This parameter takes effect only when ProductType is set to &quot;VPC&quot;.</li>
+         * <li>A value of true indicates that IPv6 is enabled. A value of false indicates that IPv6 is not enabled. If this parameter is left empty, results are not filtered by this parameter.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -270,8 +270,8 @@ public class DescribeGrantRulesToCenRequest extends Request {
 
         /**
          * <ul>
-         * <li>If you do not set <strong>MaxResults</strong>, it indicates that you do not need to query results in batches. The value of <strong>MaxResults</strong> in the response indicates the total number of entries returned.</li>
-         * <li>If you specify a value for <strong>MaxResults</strong>, it indicates that you need to query results in batches. The value of <strong>MaxResults</strong> indicates the number of entries to return in each batch. Valid values: <strong>1</strong> to <strong>100</strong>. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
+         * <li>If you do not specify the <strong>MaxResults</strong> parameter, pagination is not required. The <strong>MaxResults</strong> value in the response indicates the total number of entries.</li>
+         * <li>If you specify the <strong>MaxResults</strong> parameter, pagination is required. The <strong>MaxResults</strong> value specifies the number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. The <strong>MaxResults</strong> value in the response indicates the number of entries in the current page. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,10 +284,10 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+         * <li>If a subsequent query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,10 +320,16 @@ public class DescribeGrantRulesToCenRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>VBR</strong></li>
-         * <li><strong>CCN</strong></li>
-         * <li><strong>VPN</strong></li>
+         * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router (VBR).</p>
+         * </li>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network (CCN).</p>
+         * </li>
+         * <li><p><strong>VPN</strong>: IPsec connection.</p>
+         * </li>
+         * <li><p><strong>ECR</strong>: Express Connect Router (ECR).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -337,8 +343,8 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the network instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the network instance.                   </p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

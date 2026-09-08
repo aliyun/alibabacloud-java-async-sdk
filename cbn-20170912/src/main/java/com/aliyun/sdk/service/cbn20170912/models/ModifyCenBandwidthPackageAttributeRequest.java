@@ -144,7 +144,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bandwidth plan.</p>
+         * <p>The instance ID of the bandwidth plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,11 +157,11 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new description of the bandwidth plan.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The new description of the bandwidth plan instance.  </p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
-         * <p>Bandwidth Plans</p>
+         * <p>Bandwidth package</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -170,8 +170,8 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new name of the bandwidth plan.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The new name of the bandwidth plan instance.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

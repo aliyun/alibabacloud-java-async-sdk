@@ -203,7 +203,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -216,10 +216,10 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+         * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the custom route table is created.</li>
-         * <li><strong>true</strong>: prechecks the request but does not create the custom route table. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</li>
+         * <li><strong>false</strong> (default): sends a normal request and creates the custom route table after the request passes the verification.</li>
+         * <li><strong>true</strong>: sends a check request without creating the custom route table. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>The features of the route table.</p>
+         * <p>The route table options.</p>
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -277,8 +277,8 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -287,7 +287,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
 
         /**
          * <p>The description of the custom route table.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -314,7 +314,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
 
         /**
          * <p>The name of the custom route table.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -372,10 +372,10 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
+             * <p>The multi-region equal-cost multi-path (ECMP) routing setting. Valid values:</p>
              * <ul>
-             * <li><strong>disable</strong>(default) If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
-             * <li><strong>enable</strong> If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>disable</strong> (default): disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions prefer the transit router whose Region ID is the smallest (sorted alphabetically) as the next hop when other route attributes are the same. This may change traffic latency and bandwidth consumption between regions. Make sure that you fully evaluate the impact before disabling this feature.</li>
+             * <li><strong>enable</strong>: enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This may change traffic latency and bandwidth consumption between regions. Make sure that you fully evaluate the impact before enabling this feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -446,9 +446,9 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -459,9 +459,9 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>

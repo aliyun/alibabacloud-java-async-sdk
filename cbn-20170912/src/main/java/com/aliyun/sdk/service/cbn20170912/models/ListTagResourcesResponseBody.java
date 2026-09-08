@@ -80,10 +80,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>Indicates whether a next query token exists. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li><p>If <strong>NextToken</strong> is empty, no next query exists.</p>
+         * </li>
+         * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +97,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>165B5C86-2033-5954-A89D-4CD83BA06C85</p>
@@ -106,7 +108,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of resources and tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -198,10 +200,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CEN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-8z69wtwqel33lq****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -209,20 +208,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values:</p>
-             * <p><strong>Cen</strong>: CEN instance</p>
-             * <p><strong>BandwidthPackage</strong>: bandwidth plan</p>
-             * <p><strong>TransitRouter</strong>: transit router</p>
-             * <p><strong>TransitRouterVpcAttachment</strong>: virtual private cloud (VPC) connection</p>
-             * <p><strong>TransitRouterVbrAttachment</strong>: virtual border router (VBR) connection</p>
-             * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection</p>
-             * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection</p>
-             * <p><strong>TransitRouterRouteTable</strong>: route table</p>
-             * <p><strong>Flowlog</strong>: flow log</p>
-             * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CEN</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -230,10 +216,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -241,10 +224,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Bp</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

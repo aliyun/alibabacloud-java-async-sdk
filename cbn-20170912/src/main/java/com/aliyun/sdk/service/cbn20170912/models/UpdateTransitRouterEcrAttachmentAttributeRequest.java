@@ -187,9 +187,9 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -202,10 +202,10 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run for this modification request, including permission and instance status checks. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a request ID is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the transit router instance information is directly modified.</li>
+         * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,10 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The payer of the network instance. The payer of the ECR connection cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -264,7 +267,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The new description of the ECR connection.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -290,7 +293,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The new name of the ECR connection.</p>
-         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>

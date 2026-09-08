@@ -163,7 +163,7 @@ public class PublishRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The network instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,8 +189,8 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the network instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the network instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>The route table ID of the network instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,8 +218,7 @@ public class PublishRouteEntriesRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>VPC</strong>: virtual private cloud.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -233,7 +232,7 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route that you want to advertise.</p>
+         * <p>The destination CIDR block of the route entry to be published.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

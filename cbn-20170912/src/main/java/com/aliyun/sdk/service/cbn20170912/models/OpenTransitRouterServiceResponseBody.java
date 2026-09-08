@@ -67,7 +67,7 @@ public class OpenTransitRouterServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>21370700730****</p>
@@ -78,7 +78,7 @@ public class OpenTransitRouterServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>866DEBE1-6411-51EC-80D8-975349B9FB4A</p>

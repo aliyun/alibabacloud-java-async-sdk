@@ -184,7 +184,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-5mv960yjhja0dh****</p>
@@ -195,8 +195,8 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The time when the network instance was attached to the CEN instance.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time when the network instance was attached.</p>
+         * <p>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-30T07:53Z</p>
@@ -207,7 +207,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The details about the network instance.</p>
+         * <p>The details of the network instance.</p>
          */
         public Builder childInstanceAttributes(ChildInstanceAttributes childInstanceAttributes) {
             this.childInstanceAttributes = childInstanceAttributes;
@@ -215,7 +215,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The network instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zebdboka7d7t37vo****</p>
@@ -259,11 +259,14 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The type of the network instance. Valid values:</p>
+         * <p>The type of the network instance.</p>
          * <ul>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>VBR</strong>: VBR</li>
-         * <li><strong>CCN</strong>: CCN instance</li>
+         * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router.</p>
+         * </li>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +278,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ManagedService.
+         * <p>The cloud service to which the network instance belongs. This parameter is returned only when a VPC occupied by a cloud service is connected to a transit router. If the VPC is managed by you, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>swas</p>
          */
         public Builder managedService(String managedService) {
             this.managedService = managedService;
@@ -283,7 +289,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADD98358-D265-4060-87CB-A2427F5A8944</p>
@@ -294,11 +300,11 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>Indicates whether the network instance is attached to the CEN instance.</p>
+         * <p>The attachment status of the network instance.</p>
          * <ul>
-         * <li><strong>Attaching</strong>: The network instance is being attached to the CEN instance.</li>
-         * <li><strong>Attached</strong>: The network instance is attached to the CEN instance.</li>
-         * <li><strong>Detaching</strong>: The network instance is being detached from the CEN instance.</li>
+         * <li><strong>Attaching</strong>: being attached.</li>
+         * <li><strong>Attached</strong>: attached.</li>
+         * <li><strong>Detaching</strong>: being detached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,10 +374,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The IPv6 CIDR block of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2408:XXXX:0:6a::/56</p>
+             * Ipv6CidrBlock.
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -379,19 +382,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
-             * <ul>
-             * <li>BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</li>
-             * <li>ChinaMobile: China Mobile (single line)</li>
-             * <li>ChinaUnicom: China Unicom (single line)</li>
-             * <li>ChinaTelecom: China Telecom (single line)</li>
-             * </ul>
-             * <blockquote>
-             * <p> If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>BGP</p>
+             * Ipv6Isp.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -614,7 +605,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * <p>The IPv6 CIDR blocks of the VPC.</p>
+             * Ipv6CidrBlocks.
              */
             public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
                 this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -622,7 +613,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * <p>The information about the VPC secondary CIDR block.</p>
+             * SecondaryCidrBlocks.
              */
             public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
                 this.secondaryCidrBlocks = secondaryCidrBlocks;

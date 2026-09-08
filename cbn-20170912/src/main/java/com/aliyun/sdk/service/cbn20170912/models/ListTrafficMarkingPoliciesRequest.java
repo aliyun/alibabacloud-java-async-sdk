@@ -185,7 +185,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,10 +197,10 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-         * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+         * <li>If a subsequent query exists, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
 
         /**
          * <p>The description of the traffic marking policy.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -275,7 +275,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
 
         /**
          * <p>The name of the traffic marking policy.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -287,7 +287,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The ID of the transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1rmwxnk221e3fas****</p>

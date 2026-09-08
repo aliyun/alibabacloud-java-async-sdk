@@ -54,7 +54,10 @@ public class RefreshTransitRouteTableAggregationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

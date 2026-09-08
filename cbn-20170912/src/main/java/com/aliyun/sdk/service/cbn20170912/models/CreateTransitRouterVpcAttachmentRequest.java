@@ -313,10 +313,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:</p>
+         * <p>Specifies whether to allow the Enterprise Edition transit router to automatically publish routing entries to the VPC instance.</p>
          * <ul>
-         * <li><strong>false:</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): No.</li>
+         * <li><strong>true</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
          * 
          * <strong>example:</strong>
          * <p>cen-j3jzhw1zpau2km****</p>
@@ -341,7 +341,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The billing method. The default value is <strong>POSTPAY</strong>, which specifies the pay-as-you-go billing method.</p>
+         * <p>The billing method. Default value: <strong>POSTPAY</strong>, which indicates pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -354,9 +354,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -369,10 +369,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to execute a dry run, including permission and instance status verification. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request and creates the VPC connection after the request passes the check.</li>
+         * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the VPC connection is not created. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,7 +385,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The collection of feature attributes.</p>
          */
         public Builder options(Options options) {
             String optionsShrink = shrink(options, "Options", "json");
@@ -413,8 +413,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPC is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPC-connected instance.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -444,8 +444,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The list of tags.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -455,7 +455,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
         /**
          * <p>The description of the VPC connection.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -468,7 +468,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
         /**
          * <p>The name of the VPC connection.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -480,7 +480,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The instance ID of the Enterprise Edition transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1su1ytdxtataupl****</p>
@@ -492,7 +492,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Feature configurations of the VPC connection.</p>
+         * <p>The list of feature attributes for the VPC connection (to be deprecated, use the new parameter Options instead).</p>
          */
         public Builder transitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
             String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
@@ -502,7 +502,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The instance ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -515,9 +515,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID to which the VPC-connected instance belongs. The default value is the Alibaba Cloud account ID of the current logon user.</p>
          * <blockquote>
-         * <p>If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+         * <p>This parameter is required if you want to load a cross-account network instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -530,8 +530,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * <p>A zone that supports Enterprise Edition transit routers.</p>
-         * <p>You can specify at most 10 zones.</p>
+         * <p>Select a vSwitch instance in a zone supported by the Enterprise Edition transit router.</p>
+         * <p>You can add up to 10 entries at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
@@ -600,7 +600,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             } 
 
             /**
-             * ApplianceModeSupport.
+             * <p>Specifies whether to enable the appliance mode.</p>
+             * <ul>
+             * <li><strong>disable</strong> (default): No.</li>
+             * <li><strong>enable</strong>: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder applianceModeSupport(String applianceModeSupport) {
                 this.applianceModeSupport = applianceModeSupport;
@@ -608,7 +615,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * Ipv6Support.
+             * <p>Specifies whether IPv6 is supported.</p>
+             * <ul>
+             * <li><strong>disable</strong> (default): No.</li>
+             * <li><strong>enable</strong>: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder ipv6Support(String ipv6Support) {
                 this.ipv6Support = ipv6Support;
@@ -675,9 +689,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>
@@ -688,9 +702,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>
@@ -762,8 +776,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             } 
 
             /**
-             * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
-             * <p>You can specify vSwitches for at most 10 zones in each call.</p>
+             * <p>The ID of the vSwitch instance in a zone supported by the Enterprise Edition transit router.</p>
+             * <p>You can select vSwitch instances for up to 10 zones at a time.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -775,9 +789,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
-             * <p>You can specify at most 10 zones in each call.</p>
+             * <p>The ID of a zone supported by the Enterprise Edition transit router.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
+             * <p>You can select up to 10 zones at a time.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

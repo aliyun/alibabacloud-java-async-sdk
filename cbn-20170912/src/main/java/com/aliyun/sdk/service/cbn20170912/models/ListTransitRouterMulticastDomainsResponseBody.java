@@ -106,7 +106,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the IGMP feature is enabled for the multicast domain.</p>
+             * <p>Indicates whether IGMP is enabled for the multicast domain.</p>
              * 
              * <strong>example:</strong>
              * <p>enable</p>
@@ -231,7 +231,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * StrictSourceControl.
+             * <p>Indicates whether strict multicast source control is enabled for the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder strictSourceControl(String strictSourceControl) {
                 this.strictSourceControl = strictSourceControl;
@@ -470,10 +473,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CEN instance ID.</p>
+             * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cen-a7syd349kne38g****</p>
+             * <p>cen-h19xdb0qy2b3ir****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -481,7 +484,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Multicast domain feature.</p>
+             * <p>The feature options of the multicast domain.</p>
              */
             public Builder options(Options options) {
                 this.options = options;
@@ -490,7 +493,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
             /**
              * <p>The region ID of the transit router.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -502,7 +505,11 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
             /**
              * <p>The status of the multicast domain.</p>
-             * <p>The valid value is <strong>Active</strong>, which indicates that the multicast domain is available.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><code>Active</code>: The multicast domain is available.</li>
+             * <li><code>Modifying</code>: The multicast domain is being modified.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -513,7 +520,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -521,7 +528,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transit router ID.</p>
+             * <p>The transit router instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-bp1c23ijrl6d6c226h***</p>

@@ -106,7 +106,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of areas.</p>
+         * GeographicSpanModels.
          */
         public Builder geographicSpanModels(GeographicSpanModels geographicSpanModels) {
             this.geographicSpanModels = geographicSpanModels;
@@ -114,7 +114,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>09780287-BC24-4164-8334-773432E32696</p>
@@ -147,7 +147,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,10 +229,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the pair of connected areas.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>china_asia-pacific</p>
+             * GeographicSpanId.
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -240,10 +237,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the local area.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>asia-pacific</p>
+             * LocalGeoRegionId.
              */
             public Builder localGeoRegionId(String localGeoRegionId) {
                 this.localGeoRegionId = localGeoRegionId;
@@ -251,10 +245,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the peer area.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>china</p>
+             * OppositeGeoRegionId.
              */
             public Builder oppositeGeoRegionId(String oppositeGeoRegionId) {
                 this.oppositeGeoRegionId = oppositeGeoRegionId;

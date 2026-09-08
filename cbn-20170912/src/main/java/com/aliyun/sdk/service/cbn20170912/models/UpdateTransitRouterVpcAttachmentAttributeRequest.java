@@ -228,10 +228,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to allow the Enterprise Edition transit router to advertise routes to the VPC. Valid values:</p>
+         * <p>Specifies whether to allow the Enterprise Edition forward router to automatically publish route entry to the VPC-connected instance.</p>
          * <ul>
-         * <li><strong>false:</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: no.</li>
+         * <li><strong>true</strong>: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,9 +245,9 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -260,10 +260,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Default values:</p>
+         * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the VPC connection are modified.</li>
+         * <li><strong>true</strong>: Sends a check request. Only the verification is performed, and the name and description of the VPC connection are not modified. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The collection of feature attributes.</p>
          */
         public Builder options(Options options) {
             String optionsShrink = shrink(options, "Options", "json");
@@ -286,7 +286,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The payer of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -332,7 +335,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The description of the VPC connection.</p>
-         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -358,7 +361,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The name of the VPC connection.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -370,7 +373,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>The features of the VPC connection.</p>
+         * <p>The list of feature attributes of the VPC connection (to be deprecated. Use the new parameter Options instead).</p>
          */
         public Builder transitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
             String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
@@ -439,7 +442,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
             } 
 
             /**
-             * ApplianceModeSupport.
+             * <p>Specifies whether to enable the appliance mode for traffic redirection.</p>
+             * <ul>
+             * <li><strong>disable</strong> (default): no.</li>
+             * <li><strong>enable</strong>: yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder applianceModeSupport(String applianceModeSupport) {
                 this.applianceModeSupport = applianceModeSupport;
@@ -447,7 +457,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
             }
 
             /**
-             * Ipv6Support.
+             * <p>Specifies whether IPv6 is supported.</p>
+             * <ul>
+             * <li><strong>disable</strong> (default): no.</li>
+             * <li><strong>enable</strong>: yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder ipv6Support(String ipv6Support) {
                 this.ipv6Support = ipv6Support;

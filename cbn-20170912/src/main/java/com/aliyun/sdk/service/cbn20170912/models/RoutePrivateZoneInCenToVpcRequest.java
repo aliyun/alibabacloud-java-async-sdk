@@ -161,9 +161,9 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where PrivateZone is accessed.</p>
-         * <p>This region refers to the region in which PrivateZone is accessed by clients.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region that accesses the PrivateZone service.</p>
+         * <p>The access region is the region from which the PrivateZone service is accessed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where PrivateZone is deployed.</p>
+         * <p>The ID of the region where the PrivateZone service is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC that is associated with PrivateZone.</p>
+         * <p>The VPC-connected instance ID associated with the PrivateZone service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>A list of inter-region connections.</p>
+         * CenInterRegionBandwidthLimits.
          */
         public Builder cenInterRegionBandwidthLimits(CenInterRegionBandwidthLimits cenInterRegionBandwidthLimits) {
             this.cenInterRegionBandwidthLimits = cenInterRegionBandwidthLimits;
@@ -114,7 +114,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -294,10 +294,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The maximum bandwidth of the inter-region connection. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * BandwidthLimit.
              */
             public Builder bandwidthLimit(Long bandwidthLimit) {
                 this.bandwidthLimit = bandwidthLimit;
@@ -305,10 +302,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the bandwidth plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cenbwp-uenczwb592fnvv****</p>
+             * BandwidthPackageId.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -316,14 +310,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The bandwidth allocation method. Valid values:</p>
-             * <ul>
-             * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
-             * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>BandwidthPackage</p>
+             * BandwidthType.
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -331,10 +318,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The CEN instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-pfa6ugf3xl0qsd****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -342,10 +326,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The IDs of the local and peer regions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>china_china</p>
+             * GeographicSpanId.
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -353,11 +334,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the local region.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-cn-shanghai</p>
+             * LocalRegionId.
              */
             public Builder localRegionId(String localRegionId) {
                 this.localRegionId = localRegionId;
@@ -365,10 +342,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the peer region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * OppositeRegionId.
              */
             public Builder oppositeRegionId(String oppositeRegionId) {
                 this.oppositeRegionId = oppositeRegionId;
@@ -376,14 +350,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The bandwidth status of the inter-region connection. Valid values:</p>
-             * <ul>
-             * <li><strong>Active</strong></li>
-             * <li><strong>Modifying</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

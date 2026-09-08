@@ -106,7 +106,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -117,7 +117,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>The token that determines the start point of the query.</p>
+         * <p>The token for the next query in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>dd20****</p>
@@ -128,7 +128,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04C81E0D-945E-4D61-A561-3DEA322F243B</p>
@@ -139,7 +139,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -150,7 +150,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>A list of route learning correlations.</p>
+         * <p>The list of route learning relationships.</p>
          */
         public Builder transitRouterPropagations(java.util.List<TransitRouterPropagations> transitRouterPropagations) {
             this.transitRouterPropagations = transitRouterPropagations;
@@ -255,7 +255,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The ID of the network instance.</p>
+             * <p>The network instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -266,12 +266,12 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The type of the network instance. Valid values:</p>
+             * <p>The network instance type. Valid values:</p>
              * <ul>
-             * <li><strong>VPC</strong>: VPC</li>
-             * <li><strong>VBR</strong>: VBR</li>
-             * <li><strong>TR</strong>: transit router</li>
-             * <li><strong>VPN</strong>: VPN connection</li>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+             * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
+             * <li><strong>TR</strong>: transit router instance.</li>
+             * <li><strong>VPN</strong>: VPN connection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -283,11 +283,11 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The status of the route learning correlation. Valid values:</p>
+             * <p>The status of the route learning relationship. Valid values:</p>
              * <ul>
-             * <li><strong>Enabling</strong>: being enabled</li>
-             * <li><strong>Disabling</strong>: being disabled</li>
-             * <li><strong>Active</strong>: available</li>
+             * <li><strong>Enabling</strong>: being enabled.</li>
+             * <li><strong>Disabling</strong>: being disabled.</li>
+             * <li><strong>Active</strong>: active.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The ID of the network instance connection.</p>
+             * <p>The network instance connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-vx6iwhjr1x1j78****</p>
@@ -310,7 +310,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+             * <p>The ID of the Enterprise Edition transit router route table.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-bp1dudbh2d5na6b50****</p>

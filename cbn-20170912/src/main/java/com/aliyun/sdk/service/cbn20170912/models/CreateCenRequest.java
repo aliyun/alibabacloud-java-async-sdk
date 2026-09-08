@@ -172,9 +172,9 @@ public class CreateCenRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class CreateCenRequest extends Request {
 
         /**
          * <p>The level of CIDR block overlapping.</p>
-         * <p>Set the value to <strong>REDUCED</strong> (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+         * <p>Valid values: <strong>REDUCED</strong> (default): CIDR blocks can overlap but cannot be identical.</p>
          * 
          * <strong>example:</strong>
          * <p>REDUCED</p>
@@ -262,8 +262,8 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can specify up to 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -331,9 +331,9 @@ public class CreateCenRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify up to 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>
@@ -344,9 +344,9 @@ public class CreateCenRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * <p>Each tag key has a corresponding tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>

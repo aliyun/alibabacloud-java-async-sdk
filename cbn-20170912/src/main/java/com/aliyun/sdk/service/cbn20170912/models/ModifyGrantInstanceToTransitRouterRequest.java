@@ -160,6 +160,7 @@ public class ModifyGrantInstanceToTransitRouterRequest extends Request {
         } 
 
         /**
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,14 @@ public class ModifyGrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -181,6 +189,7 @@ public class ModifyGrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
+         * <p>The network instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +202,7 @@ public class ModifyGrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
+         * <p>The payer of the network instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

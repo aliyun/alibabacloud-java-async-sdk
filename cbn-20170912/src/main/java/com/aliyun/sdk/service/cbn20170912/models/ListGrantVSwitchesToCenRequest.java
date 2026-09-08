@@ -217,7 +217,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable IPv6. true: enables IPv6. false: disables IPv6. If you do not specify a value, vSwitches are not filtered based on this attribute.</p>
+         * <p>Specifies whether IPv6 is enabled. A value of true indicates that IPv6 is enabled. A value of false indicates that IPv6 is not enabled. If you leave this parameter empty, the system does not filter by this property.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -247,7 +247,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -259,7 +259,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -271,8 +271,8 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPC.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPC-connected instance.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC-connected instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,12 +316,12 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * <ul>
-         * <li>If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</li>
-         * <li>If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</li>
+         * <li>If you specify a zone ID, the system queries only the vSwitches that are in the specified zone of the VPC-connected instance.</li>
+         * <li>If you do not specify a zone ID, the system queries the vSwitches in all active zones of the VPC-connected instance by default.</li>
          * </ul>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

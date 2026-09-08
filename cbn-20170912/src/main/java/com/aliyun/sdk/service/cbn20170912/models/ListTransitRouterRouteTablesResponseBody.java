@@ -106,7 +106,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page when entries are returned by page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
-         * <li>If a value of <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>82678F4A-C9F7-4CC1-8BF0-D619A63BFC57</p>
@@ -154,7 +154,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of route tables.</p>
+         * <p>The list of route tables.</p>
          */
         public Builder transitRouterRouteTables(java.util.List<TransitRouterRouteTables> transitRouterRouteTables) {
             this.transitRouterRouteTables = transitRouterRouteTables;
@@ -207,10 +207,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether ECMP routing is enabled. Valid values:</p>
+             * <p>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
              * <ul>
-             * <li><strong>disable</strong> If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
-             * <li><strong>enable</strong> If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>disable</strong>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions select the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before disabling this feature.</li>
+             * <li><strong>enable</strong>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before enabling this feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -467,7 +467,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
             /**
              * <p>The time when the route table was created.</p>
-             * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+             * <p>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-15T09:39Z</p>
@@ -478,7 +478,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the Enterprise Edition transit router.</p>
+             * <p>The region ID of the Enterprise Edition transit router instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -489,7 +489,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The features of the route table.</p>
+             * <p>The route table feature options.</p>
              */
             public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
                 this.routeTableOptions = routeTableOptions;
@@ -497,7 +497,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -505,7 +505,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transit router ID.</p>
+             * <p>The transit router instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-8vb8bie2koduo5awz****</p>
@@ -527,7 +527,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table.</p>
+             * <p>The route table ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-bp1dudbh2d5na6b50****</p>
@@ -549,11 +549,11 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the route table. Valid values:</p>
+             * <p>The status of the route table.</p>
              * <ul>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * <li><strong>Active</strong></li>
+             * <li><strong>Creating</strong>: being created.</li>
+             * <li><strong>Deleting</strong>: being deleted.</li>
+             * <li><strong>Active</strong>: active.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -565,10 +565,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the route table. Valid values:</p>
+             * <p>The type of the route table.</p>
              * <ul>
-             * <li><strong>Custom</strong></li>
-             * <li><strong>System</strong></li>
+             * <li><strong>Custom</strong>: custom route table.</li>
+             * <li><strong>System</strong>: system default route table.</li>
              * </ul>
              * 
              * <strong>example:</strong>

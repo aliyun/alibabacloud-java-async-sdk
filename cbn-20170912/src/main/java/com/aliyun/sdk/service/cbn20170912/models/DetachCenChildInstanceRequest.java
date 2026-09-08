@@ -202,7 +202,7 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the CEN instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1688000000000000</p>
@@ -214,7 +214,7 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance that you want to detach from the CEN instance.</p>
+         * <p>The instance ID of the network instance to uninstall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1699000000000000</p>
@@ -239,8 +239,8 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the network instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the network instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,9 +255,12 @@ public class DetachCenChildInstanceRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router.</p>
+         * </li>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

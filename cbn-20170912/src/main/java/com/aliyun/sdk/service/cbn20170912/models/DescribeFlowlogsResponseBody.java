@@ -119,7 +119,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the flow log.</p>
+         * FlowLogs.
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -127,7 +127,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +149,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
@@ -160,10 +160,12 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the current API call is successful.</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,10 +246,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,10 +254,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -548,10 +544,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-7qthudw0ll6jmc****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -559,11 +552,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the flow log was created.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-07-24T13:00:52Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -571,10 +560,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myFlowlog</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -582,10 +568,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>flowlog-m5evbtbpt****</p>
+             * FlowLogId.
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -593,10 +576,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myFlowlog</p>
+             * FlowLogName.
              */
             public Builder flowLogName(String flowLogName) {
                 this.flowLogName = flowLogName;
@@ -604,11 +584,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flow log version.</p>
-             * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * FlowLogVersion.
              */
             public Builder flowLogVersion(String flowLogVersion) {
                 this.flowLogVersion = flowLogVersion;
@@ -616,10 +592,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time window for collecting log data. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * Interval.
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -627,11 +600,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The string that defines the format of the flow log. Format:</p>
-             * <p><code>${Field 1}${Field 2}${Field 3}</code></p>
-             * 
-             * <strong>example:</strong>
-             * <p>${srcaddr}${dstaddr}${bytes}</p>
+             * LogFormatString.
              */
             public Builder logFormatString(String logFormatString) {
                 this.logFormatString = logFormatString;
@@ -639,10 +608,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Logstore that stores the captured traffic data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FlowLogStore</p>
+             * LogStoreName.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -650,10 +616,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the project that stores the captured traffic data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FlowLogProject</p>
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -661,10 +624,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -672,14 +632,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the flow log. Valid values:</p>
-             * <ul>
-             * <li><strong>Active</strong>: The flow log is enabled.</li>
-             * <li><strong>Inactive</strong>: The flow log is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -687,7 +640,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -695,10 +648,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network instance connection</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tr-attach-5x4o4ynzuqbv6g****</p>
+             * TransitRouterAttachmentId.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -706,10 +656,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transit router.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tr-bp1g9313sx675zr1lajmj</p>
+             * TransitRouterId.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

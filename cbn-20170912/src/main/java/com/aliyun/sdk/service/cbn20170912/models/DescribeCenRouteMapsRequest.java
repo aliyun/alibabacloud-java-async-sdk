@@ -200,7 +200,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,8 +213,8 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the routing policy.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the route map is applied.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -244,7 +244,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -256,7 +256,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -286,7 +286,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The routing policy ID.</p>
+         * <p>The ID of the route map.</p>
          * 
          * <strong>example:</strong>
          * <p>cenrmap-y40mxdvf7joc12****</p>
@@ -298,7 +298,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+         * <p>The ID of the transit router route table associated with the route map.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-gw8nx3515m1mbd1z1****</p>
@@ -310,15 +310,15 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The direction in which the routing policy is applied. Valid values:</p>
+         * <p>The direction in which the route map is applied. Valid values:</p>
          * <ul>
-         * <li><strong>RegionIn</strong>: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</li>
+         * <li><strong>RegionIn</strong>: Routes are advertised to the regional gateway of the CEN instance.</li>
          * </ul>
-         * <p>For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
+         * <p> For example, routes are advertised from a network instance in the local region to the local regional gateway, or routes are advertised from a regional gateway in another region to the local regional gateway.</p>
          * <ul>
-         * <li><strong>RegionOut</strong>: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</li>
+         * <li><strong>RegionOut</strong>: Routes are advertised from the regional gateway of the CEN instance.</li>
          * </ul>
-         * <p>For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
+         * <p> For example, routes are advertised from the local regional gateway to network instances in the local region, or routes are advertised from the local regional gateway to regional gateways in other regions.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionOut</p>

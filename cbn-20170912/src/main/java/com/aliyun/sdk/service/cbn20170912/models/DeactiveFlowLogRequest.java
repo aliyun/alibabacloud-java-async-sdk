@@ -159,7 +159,7 @@ public class DeactiveFlowLogRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-7qthudw0ll6jmc****</p>
@@ -172,9 +172,9 @@ public class DeactiveFlowLogRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request is different.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the flow log.</p>
+         * <p>The flow log ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,8 +218,8 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the flow log is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the flow log.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

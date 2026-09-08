@@ -187,7 +187,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
 
         /**
          * <p>The region ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,7 +230,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page during paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -260,13 +260,18 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The route status. Valid values:</p>
+         * <p>The status of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong> (default): available</li>
-         * <li><strong>Candidate</strong>: standby</li>
-         * <li><strong>Rejected</strong>: rejected</li>
-         * <li><strong>Prohibited</strong>: prohibited</li>
-         * <li><strong>All</strong> (default value): all routes</li>
+         * <li><p><strong>Active</strong> (default): active.</p>
+         * </li>
+         * <li><p><strong>Candidate</strong>: backup.</p>
+         * </li>
+         * <li><p><strong>Rejected</strong>: rejected.</p>
+         * </li>
+         * <li><p><strong>Prohibited</strong>: prohibited.</p>
+         * </li>
+         * <li><p><strong>All</strong>: queries route entries in all states in the current region.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

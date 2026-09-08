@@ -54,7 +54,10 @@ public class TempUpgradeCenBandwidthPackageSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB0A026C-A8E5-40AB-977E-3A87DD78F694</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

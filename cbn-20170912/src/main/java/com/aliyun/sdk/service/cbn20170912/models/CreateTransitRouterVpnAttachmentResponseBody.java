@@ -67,7 +67,7 @@ public class CreateTransitRouterVpnAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8B5DD40A-3A29-5AC0-B8DA-05FD10D5C893</p>
@@ -78,7 +78,7 @@ public class CreateTransitRouterVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPN attachment.</p>
+         * <p>The ID of the VPN connection.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-y5dup2qwfyh9lu****</p>

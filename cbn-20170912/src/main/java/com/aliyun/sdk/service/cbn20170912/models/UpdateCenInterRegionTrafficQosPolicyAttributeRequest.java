@@ -187,8 +187,10 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the dry run, the name and description of the traffic scheduling policy are modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,8 +239,8 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * <p>The new description of the QoS policy.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The new description of the traffic scheduling policy.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -250,7 +252,7 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The ID of the traffic scheduling policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,8 +265,8 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * <p>The new name of the QoS policy.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The new name of the traffic scheduling policy.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>

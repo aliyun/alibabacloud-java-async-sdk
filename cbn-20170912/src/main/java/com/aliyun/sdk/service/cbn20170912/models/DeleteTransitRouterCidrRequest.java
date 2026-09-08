@@ -175,9 +175,9 @@ public class DeleteTransitRouterCidrRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,8 +192,8 @@ public class DeleteTransitRouterCidrRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run without deleting the transit router CIDR block. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and then deletes the transit router CIDR block after the request passes the check.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,8 +224,8 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the transit router instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,8 +256,8 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CIDR block.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a CIDR block.</p>
+         * <p>The ID of the transit router CIDR block.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a transit router CIDR block.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

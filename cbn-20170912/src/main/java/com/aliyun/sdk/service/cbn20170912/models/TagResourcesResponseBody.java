@@ -54,7 +54,7 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>

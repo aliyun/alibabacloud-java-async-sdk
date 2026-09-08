@@ -67,7 +67,7 @@ public class ModifyFlowLogAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9A411874-2EC8-4633-9D30-9012DCE89DD1</p>
@@ -78,10 +78,12 @@ public class ModifyFlowLogAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the call is successful.</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

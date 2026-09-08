@@ -132,7 +132,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-7qthudw0ll6jmc****</p>
@@ -143,7 +143,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address of the DNS server used by PrivateZone.</p>
+         * <p>The IP address of the DNS server for the PrivateZone service.</p>
          * 
          * <strong>example:</strong>
          * <p>100.100.XX.XX/32,100.100.XX.XX/32</p>
@@ -176,7 +176,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed configuration of PrivateZone.</p>
+         * PrivateZoneInfos.
          */
         public Builder privateZoneInfos(PrivateZoneInfos privateZoneInfos) {
             this.privateZoneInfos = privateZoneInfos;
@@ -184,7 +184,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>461EC1B5-04A8-4706-8764-8F5BCEF48A6F</p>
@@ -290,10 +290,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region where PrivateZone is accessed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * AccessRegionId.
              */
             public Builder accessRegionId(String accessRegionId) {
                 this.accessRegionId = accessRegionId;
@@ -301,10 +298,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where PrivateZone is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * HostRegionId.
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -312,10 +306,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC that is associated with PrivateZone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp18sth14qii3pnvo****</p>
+             * HostVpcId.
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -323,15 +314,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of PrivateZone. Valid values:</p>
-             * <ul>
-             * <li><strong>Creating</strong>: being created</li>
-             * <li><strong>Active</strong>: available</li>
-             * <li><strong>Deleting</strong>: being deleted</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

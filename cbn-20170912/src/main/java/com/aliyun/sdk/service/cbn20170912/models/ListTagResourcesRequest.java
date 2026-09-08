@@ -186,10 +186,12 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>Specifies whether a next query token exists. Valid values:</p>
          * <ul>
-         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li><p>If this is the first query or no next query exists, you do not need to specify this parameter.</p>
+         * </li>
+         * <li><p>If a next query exists, set the value to the NextToken value returned by the previous API call.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +222,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -232,8 +234,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the resource is deployed.</p>
-         * <p>You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.</p>
+         * <p>The region ID of the resource instance.</p>
+         * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. This parameter is required for all other resource types.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -245,8 +247,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the CEN instances.</p>
-         * <p>You can specify at most 20 IDs in each call.</p>
+         * <p>The CEN instance ID.</p>
+         * <p>You can specify up to 20 CEN instance IDs at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-8z69wtwqel33lq****</p>
@@ -276,17 +278,17 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource to which you want to add the tag. Valid values:</p>
-         * <p><strong>Cen</strong>: CEN instance</p>
-         * <p><strong>BandwidthPackage</strong>: bandwidth plan</p>
-         * <p><strong>TransitRouter</strong>: transit router</p>
-         * <p><strong>TransitRouterVpcAttachment</strong>: virtual private cloud (VPC) connection</p>
-         * <p><strong>TransitRouterVbrAttachment</strong>: virtual border router (VBR) connection</p>
-         * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection</p>
-         * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection</p>
-         * <p><strong>TransitRouterRouteTable</strong>: route table</p>
-         * <p><strong>Flowlog</strong>: flow log</p>
-         * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain</p>
+         * <p>The resource type. Valid values:</p>
+         * <p><strong>Cen</strong>: CEN instance.</p>
+         * <p><strong>BandwidthPackage</strong>: bandwidth package instance.</p>
+         * <p><strong>TransitRouter</strong>: transit router instance.</p>
+         * <p><strong>TransitRouterVpcAttachment</strong>: VPC connection instance.</p>
+         * <p><strong>TransitRouterVbrAttachment</strong>: VBR connection instance.</p>
+         * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection instance.</p>
+         * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection instance.</p>
+         * <p><strong>TransitRouterRouteTable</strong>: route table instance.</p>
+         * <p><strong>Flowlog</strong>: flow log instance.</p>
+         * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,8 +301,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags that are added to the CEN instance.</p>
-         * <p>You can query at most 20 tags in each call.</p>
+         * <p>The tag information of the CEN instance.</p>
+         * <p>You can query up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -369,8 +371,8 @@ public class ListTagResourcesRequest extends Request {
 
             /**
              * <p>The tag key.</p>
-             * <p>The tag key cannot exceed 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>A tag key can contain up to 64 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -382,8 +384,8 @@ public class ListTagResourcesRequest extends Request {
 
             /**
              * <p>The tag value.</p>
-             * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag values.</p>
+             * <p>A tag value can contain up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>Bp</p>

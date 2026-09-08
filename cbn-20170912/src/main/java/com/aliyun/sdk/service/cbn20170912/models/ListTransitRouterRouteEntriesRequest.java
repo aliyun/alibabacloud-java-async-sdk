@@ -328,7 +328,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page when entries are returned in pages. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -340,10 +340,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>You do not need to specify this parameter for the first query or if no subsequent query is to be sent.</li>
+         * <li>If a subsequent query is to be sent, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,7 +374,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The prefix list ID.</p>
+         * <p>The ID of the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-6ehtn5kqxgeyy08fi****</p>
@@ -404,7 +404,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>The filter conditions for route entry CIDR blocks.</p>
          */
         public Builder routeFilter(java.util.List<RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
@@ -413,7 +413,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route. <strong>This parameter is to be deprecated. We recommend that you use the RouteFilter parameter</strong>.</p>
+         * <p>The destination CIDR block of the route entry (<strong>This parameter will be deprecated. Use the RouteFilter parameter instead</strong>).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/24</p>
@@ -425,7 +425,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The route ID.</p>
+         * <p>The IDs of the route entries.</p>
          * 
          * <strong>example:</strong>
          * <p>rte-oklkgwmj97z6dn****</p>
@@ -437,7 +437,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The route name.</p>
+         * <p>The names of the route entries.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -449,7 +449,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+         * <p>The ID of the network instance connection associated with the next hop of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-nls9fzkfat8934****</p>
@@ -461,7 +461,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The next hop ID.</p>
+         * <p>The instance ID of the next hop of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-m5ent6du8deaq5*****</p>
@@ -473,12 +473,12 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The next hop type. Valid values:</p>
+         * <p>The type of the next hop instance of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>VBR</strong></li>
-         * <li><strong>TR</strong></li>
-         * <li><strong>VPN</strong></li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+         * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance.</li>
+         * <li><strong>TR</strong>: transit router instance.</li>
+         * <li><strong>VPN</strong>: IPsec connection instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,8 +493,8 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         /**
          * <p>The next hop type. Valid values:</p>
          * <ul>
-         * <li><strong>BlackHole</strong>: routes network traffic to a black hole.</li>
-         * <li><strong>Attachment</strong>: routes network traffic to a network instance connection.</li>
+         * <li><strong>BlackHole</strong>: the route entry is a blackhole route.</li>
+         * <li><strong>Attachment</strong>: the next hop of the route entry is a network instance connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -507,7 +507,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The source instance ID.</p>
+         * <p>The instance ID of the origin of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-m5ent6du8deaq5*****</p>
@@ -519,12 +519,12 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The source instance type. Valid values:</p>
+         * <p>The type of the origin instance of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>VBR</strong></li>
-         * <li><strong>TR</strong></li>
-         * <li><strong>VPN</strong></li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+         * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance.</li>
+         * <li><strong>TR</strong>: transit router instance.</li>
+         * <li><strong>VPN</strong>: IPsec connection instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -537,16 +537,16 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The status of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong></li>
-         * <li><strong>Active</strong> (default)</li>
-         * <li><strong>Rejected</strong></li>
-         * <li><strong>Prohibited</strong></li>
-         * <li><strong>Standby</strong></li>
-         * <li><strong>Candidate</strong></li>
+         * <li><strong>All</strong>: queries route entries in all states.</li>
+         * <li><strong>Active (default)</strong>: queries only route entries in the active state.</li>
+         * <li><strong>Rejected</strong>: queries only route entries that are rejected due to route conflicts.</li>
+         * <li><strong>Prohibited</strong>: queries only route entries that are prohibited because they match a routing policy.</li>
+         * <li><strong>Standby</strong>: queries only route entries that serve as standby routes.</li>
+         * <li><strong>Candidate</strong>: queries only route entries that serve as candidate routes.</li>
          * </ul>
-         * <p>If you do not specify a value, routes in the active state are queried.</p>
+         * <p>If you do not specify this parameter, only route entries in the active state are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -558,10 +558,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The route type. Valid values:</p>
+         * <p>The type of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>Propagated</strong>: automatically learned by the route table.</li>
-         * <li><strong>Static</strong>: static routes.</li>
+         * <li><strong>Propagated</strong>: generated by automatic learning on the current route table.</li>
+         * <li><strong>Static</strong>: generated by static configuration on the current route table.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -574,7 +574,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router route table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -646,14 +646,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
             } 
 
             /**
-             * <p>The match pattern for filtering CIDR blocks. Valid values:</p>
+             * <p>The filter condition. Valid values:</p>
              * <ul>
-             * <li><strong>PrefixExactMatchCidrs</strong>: exact matching.</li>
-             * <li><strong>LongestPrefixMatchCidrs</strong>: longest prefix matching. You can specify IP addresses and CIDR blocks.</li>
-             * <li><strong>SubnetOfMatchCidrs</strong>: subnet matching. The subnets of the specified CIDR blocks, including the CIDR block, are matches against the match conditions.</li>
-             * <li><strong>SupernetOfMatchCidrs</strong>: supernet matching. The supernets of the CIDR block, including the CIDR block, are matched against the match conditions.</li>
+             * <li><strong>PrefixExactMatchCidrs</strong>: exact match.</li>
+             * <li><strong>LongestPrefixMatchCidrs</strong>: longest prefix match. IP addresses and CIDR blocks are supported.</li>
+             * <li><strong>SubnetOfMatchCidrs</strong>: subnet match. Matches subnets of the specified CIDR block, including the specified CIDR block itself.</li>
+             * <li><strong>SupernetOfMatchCidrs</strong>: supernet match. Matches supernets of the specified CIDR block, including the specified CIDR block itself.</li>
              * </ul>
-             * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</p>
+             * <p>Multiple filter conditions have an <strong>AND</strong> relationship by default, which means that a route entry must meet all filter conditions to be considered a match. You cannot specify the same filter condition more than once.</p>
              * 
              * <strong>example:</strong>
              * <p>PrefixExactMatchCidrs</p>
@@ -664,7 +664,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The filter value.</p>
+             * <p>The list of filter condition values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

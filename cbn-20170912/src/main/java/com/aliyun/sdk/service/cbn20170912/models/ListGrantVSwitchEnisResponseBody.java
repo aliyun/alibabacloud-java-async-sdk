@@ -106,7 +106,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the ENI.</p>
+         * <p>The list of network interface controller (NIC) information.</p>
          */
         public Builder grantVSwitchEnis(java.util.List<GrantVSwitchEnis> grantVSwitchEnis) {
             this.grantVSwitchEnis = grantVSwitchEnis;
@@ -114,7 +114,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The maximum number of entries returned for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token returned for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -136,7 +136,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DBFE1736-2F33-5309-9954-875B11E9519D</p>
@@ -149,7 +149,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         /**
          * <p>The total number of entries returned.</p>
          * <blockquote>
-         * <p>If MaxResults and NextToken are sued to query results by page, ignore this parameter.</p>
+         * <p>Notice: When you use the MaxResults and NextToken parameters for paging, the returned Total parameter value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ENI description.</p>
+             * <p>The description of the elastic network interfaces (ENIs). This describes the network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>created by CBN</p>
@@ -295,7 +295,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ENI ID.</p>
+             * <p>The ID of the elastic network interfaces (ENIs). This is the network interface controller (NIC) identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-p0w172vv82kxzb49****</p>
@@ -306,7 +306,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ENI name.</p>
+             * <p>The name of the elastic network interfaces (ENIs). This is the network interface controller (NIC) name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-eni-name</p>
@@ -317,10 +317,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary private IPv4 address of the ENI.</p>
+             * <p>The primary private IP IPv4 address of the elastic network interfaces (ENIs). This is the network interface controller (NIC) primary private IP address.</p>
              * 
              * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * <p><code>192.168.**.**</code></p>
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -328,12 +328,12 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ENI is created by a transit router. Valid values:</p>
+             * <p>Indicates whether the elastic network interface (ENI) is created by a transit router for routing and forwarding purposes.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The ENI is created by a transit router.</li>
+             * <li><strong>false</strong>: The ENI is not created by a transit router.</li>
              * </ul>
-             * <p>ENIs that are created by transit routers cannot be used as multicast sources or members.</p>
+             * <p>Elastic network interfaces (ENIs) created by transit routers cannot serve as multicast sources or multicast members.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -355,7 +355,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-p0w9alkte4w2htrqe****</p>

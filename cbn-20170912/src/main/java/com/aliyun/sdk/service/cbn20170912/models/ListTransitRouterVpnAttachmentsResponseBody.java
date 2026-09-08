@@ -106,7 +106,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paged query. This is used for paging the results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3D5530D2-3BBB-524E-8E98-59AB06A250E4</p>
@@ -154,7 +154,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the VPN attachment.</p>
+         * <p>The list of VPN connections.</p>
          */
         public Builder transitRouterAttachments(java.util.List<TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -289,7 +289,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
             /**
              * <p>The zone ID.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -541,10 +541,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:</p>
+             * <p>Indicates whether the transit router instance is allowed to automatically publish route entries to the IPsec connection. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
+             * <li><strong>true</strong>: allowed.</li>
+             * <li><strong>false</strong>: not allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -556,7 +556,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+             * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cen-j3jzhw1zpau2km****</p>
@@ -567,8 +567,8 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the VPN attachment.</p>
-             * <p>Only POSTPAY may be returned, which is the default pay-as-you-go billing method.</p>
+             * <p>The billing method of the VPN connection.</p>
+             * <p>The value is POSTPAY only, which indicates pay-as-you-go.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -580,7 +580,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
             /**
              * <p>The time when the VPN connection was created.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-07-08T08:45Z</p>
@@ -591,10 +591,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity that pays the fees of the network instance. Valid values:</p>
+             * <p>The payer of the VPN connection. Valid values:</p>
              * <ul>
-             * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
-             * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+             * <li><strong>PayByCenOwner</strong>: The fees generated by the network instance are paid by the account to which the CEN instance belongs.</li>
+             * <li><strong>PayByResourceOwner</strong>: The fees generated by the network instance are paid by the account to which the network instance belongs.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -606,8 +606,8 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of resource attached to the transit router.</p>
-             * <p>Only <strong>VPN</strong> may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
+             * <p>The resource type of the VPN connection.</p>
+             * <p>The value is <strong>VPN</strong> only, which indicates that the transit router is connected to an IPsec connection.</p>
              * 
              * <strong>example:</strong>
              * <p>VPN</p>
@@ -618,11 +618,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the VPN connection. Valid values:</p>
+             * <p>The status of the VPN connection.</p>
              * <ul>
-             * <li><strong>Attached</strong></li>
-             * <li><strong>Attaching</strong></li>
-             * <li><strong>Detaching</strong></li>
+             * <li><strong>Attached</strong>: attached.</li>
+             * <li><strong>Attaching</strong>: being attached.</li>
+             * <li><strong>Detaching</strong>: being detached.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -634,7 +634,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -642,7 +642,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the IPsec-VPN connection.</p>
+             * <p>The description of the VPN connection.</p>
              * 
              * <strong>example:</strong>
              * <p>desctest</p>
@@ -653,7 +653,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPN attachment.</p>
+             * <p>The ID of the VPN connection.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-a6p8voaodog5c0****</p>
@@ -664,7 +664,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPN attachment.</p>
+             * <p>The name of the VPN connection.</p>
              * 
              * <strong>example:</strong>
              * <p>nametest</p>
@@ -675,7 +675,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transit router.</p>
+             * <p>The transit router instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-p0wm740vjnbaprv0m****</p>
@@ -686,7 +686,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IPsec-VPN connection.</p>
+             * <p>The ID of the IPsec connection.</p>
              * 
              * <strong>example:</strong>
              * <p>vco-p0wtu1xgd0l7fjo7k****</p>
@@ -697,7 +697,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+             * <p>The ID of the Alibaba Cloud account to which the IPsec connection belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1210123456123456</p>
@@ -708,8 +708,8 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+             * <p>The region ID of the IPsec connection.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -720,7 +720,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zones in which the VPN attachment is deployed.</p>
+             * <p>The list of zones where the VPN connection is deployed.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

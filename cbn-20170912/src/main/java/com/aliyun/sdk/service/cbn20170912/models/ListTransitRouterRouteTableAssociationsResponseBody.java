@@ -106,7 +106,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F6B1D9AB-176D-4399-801D-8BC576F4EB0D</p>
@@ -154,7 +154,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * <p>A list of associated forwarding correlations.</p>
+         * <p>The list of route association relationships.</p>
          */
         public Builder transitRouterAssociations(java.util.List<TransitRouterAssociations> transitRouterAssociations) {
             this.transitRouterAssociations = transitRouterAssociations;
@@ -259,7 +259,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The ID of the next hop.</p>
+             * <p>The ID of the next hop resource.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -270,12 +270,12 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The type of next hop. Valid values:</p>
+             * <p>The type of the next hop resource. Valid values:</p>
              * <ul>
-             * <li><strong>VPC</strong>: VPC</li>
-             * <li><strong>VBR</strong>: VBR</li>
-             * <li><strong>TR</strong>: transit router</li>
-             * <li><strong>VPN</strong> :VPN attachment</li>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+             * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
+             * <li><strong>TR</strong>: transit router instance.</li>
+             * <li><strong>VPN</strong>: VPN connection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -287,12 +287,12 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The status of the associated forwarding correlation. Valid values:</p>
+             * <p>The status of the route association. Valid values:</p>
              * <ul>
-             * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
-             * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
-             * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
-             * <li><strong>Deleted</strong>: The associated forwarding correlation is deleted.</li>
+             * <li><strong>Active</strong>: active.</li>
+             * <li><strong>Associating</strong>: being associated.</li>
+             * <li><strong>Dissociating</strong>: being dissociated.</li>
+             * <li><strong>Deleted</strong>: deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+             * <p>The ID of the Enterprise Edition transit router route table.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-bp1dudbh2d5na6b50****</p>

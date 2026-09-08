@@ -284,7 +284,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -297,7 +297,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
 
         /**
          * <p>The IP address of the multicast group.</p>
-         * <p>Each multicast group is identified by its IP address.</p>
+         * <p>Each multicast group is identified by a multicast IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>239.XX.XX.2</p>
@@ -309,16 +309,16 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specified whether to query the multicast members. Valid values:</p>
+         * <p>Specifies whether to query multicast members. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: no.</li>
+         * <li><strong>true</strong>: yes.</li>
          * </ul>
          * <blockquote>
+         * <p>This parameter is used together with IsGroupSource.</p>
          * <ul>
-         * <li>This parameter must be specified together with the IsGroupMember parameter.</li>
-         * <li>If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</li>
-         * <li>If you set only one of them or both of them, the specified values prevail.</li>
+         * <li>If neither parameter is configured, both multicast sources and members are queried by default.</li>
+         * <li>If only one parameter is configured or both are configured, the query is based on the configured parameters.</li>
          * </ul>
          * </blockquote>
          * 
@@ -332,18 +332,16 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the multicast sources. Valid values:</p>
+         * <p>Specifies whether to query multicast sources. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: no.</li>
+         * <li><strong>true</strong>: yes.</li>
          * </ul>
          * <blockquote>
+         * <p>This parameter is used together with IsGroupMember.</p>
          * <ul>
-         * <li>This parameter must be specified together with the IsGroupMember parameter.</li>
-         * </ul>
-         * <ul>
-         * <li>If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</li>
-         * <li>If you specify only one of them or both of them, the specified values prevail.</li>
+         * <li>If neither parameter is configured, both multicast sources and members are queried by default.</li>
+         * <li>If only one parameter is configured or both are configured, the query is based on the configured parameters.</li>
          * </ul>
          * </blockquote>
          * 
@@ -357,7 +355,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -369,7 +367,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of ENIs.</p>
+         * <p>The list of elastic network interface (ENI) IDs.</p>
          */
         public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
@@ -378,10 +376,10 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
+         * <li>If a next query exists, set the value to the NextToken value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -412,7 +410,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the inter-region multicast domain.</p>
+         * <p>The list of cross-region multicast domain IDs.</p>
          */
         public Builder peerTransitRouterMulticastDomains(java.util.List<String> peerTransitRouterMulticastDomains) {
             this.putQueryParameter("PeerTransitRouterMulticastDomains", peerTransitRouterMulticastDomains);
@@ -421,7 +419,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource associated with the multicast resource.</p>
+         * <p>The resource ID associated with the multicast resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-p0w9alkte4w2htrqe****</p>
@@ -453,8 +451,8 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         /**
          * <p>The type of the multicast resource. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: queries multicast resources by VPC.</li>
-         * <li><strong>TR</strong>: queries multicast resources that are also deployed in a different region.</li>
+         * <li><strong>VPC</strong>: queries multicast resources in a virtual private cloud (VPC).</li>
+         * <li><strong>TR</strong>: queries cross-region multicast resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,8 +465,8 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance connection</p>
-         * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
+         * <p>The network instance connection ID.</p>
+         * <p>You must specify at least one of TransitRouterMulticastDomainId and TransitRouterAttachmentId.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-g3kz2k3u76amsk****</p>
@@ -480,8 +478,8 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the multicast domain.</p>
-         * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
+         * <p>The multicast domain ID.</p>
+         * <p>You must specify at least one of TransitRouterMulticastDomainId and TransitRouterAttachmentId.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-mcast-domain-5mjb5gjb6dgu98****</p>
@@ -493,7 +491,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch IDs.</p>
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

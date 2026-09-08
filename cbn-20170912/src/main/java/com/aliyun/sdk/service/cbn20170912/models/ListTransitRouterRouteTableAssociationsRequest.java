@@ -199,7 +199,7 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>50</strong>.</p>
+         * <p>The number of entries per page for a paged query. Default value: <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -211,10 +211,10 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-         * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+         * <li>If a subsequent query exists, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,11 +263,11 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The status of the associated forwarding correlation. Valid values:</p>
+         * <p>The status of the route association. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
-         * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
-         * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Associating</strong>: being associated.</li>
+         * <li><strong>Dissociating</strong>: being dissociated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the next hop resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -304,12 +304,12 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The type of next hop. Valid values:</p>
+         * <p>The type of the next hop resource. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-         * <li><strong>TR</strong>: transit router</li>
-         * <li><strong>VPN</strong>: VPN attachment</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
+         * <li><strong>TR</strong>: transit router instance.</li>
+         * <li><strong>VPN</strong>: VPN connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1dudbh2d5na6b50****</p>

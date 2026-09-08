@@ -106,7 +106,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         } 
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -119,8 +119,8 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         /**
          * <p>The token that determines the start point of the query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CD0969B-A605-5D2D-BFF0-699FD182FB7F</p>
@@ -154,7 +154,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         }
 
         /**
-         * <p>The information about the resource associated with the multicast domain.</p>
+         * <p>The list of associations.</p>
          */
         public Builder transitRouterMulticastAssociations(java.util.List<TransitRouterMulticastAssociations> transitRouterMulticastAssociations) {
             this.transitRouterMulticastAssociations = transitRouterMulticastAssociations;
@@ -308,7 +308,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
 
             /**
              * <p>The type of resource associated with the multicast domain.</p>
-             * <p>Valid value: <strong>VPC</strong>.</p>
+             * <p>Set the value to <strong>VPC</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -319,11 +319,11 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * <p>The association status. Valid values:</p>
+             * <p>The association status.</p>
              * <ul>
-             * <li><strong>Associated</strong>: The resource is associated with the multicast domain.</li>
-             * <li><strong>Associating</strong>: The resource is being associated with the multicast domain.</li>
-             * <li><strong>Dissociating</strong>: The resource is being disassociated from the multicast domain.</li>
+             * <li><strong>Associated</strong>: associated.</li>
+             * <li><strong>Associating</strong>: being associated.</li>
+             * <li><strong>Dissociating</strong>: being dissociated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * <p>The ID of the network instance connection.</p>
+             * <p>The network instance connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-p90y3ymbbwuvy5****</p>
@@ -346,7 +346,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * <p>The ID of the multicast domain.</p>
+             * <p>The multicast domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
@@ -357,7 +357,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-p0wxk12u6okfkr8xy****</p>

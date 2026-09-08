@@ -106,7 +106,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
          * <ul>
-         * <li>If the <strong>NextToken</strong> parameter is empty, no next page exists.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of inter-region connections.</p>
+         * <p>The list of inter-region connections.</p>
          */
         public Builder transitRouterAttachments(java.util.List<TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -522,10 +522,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:</p>
+             * <p>Indicates whether the Enterprise Edition transit router instance automatically advertises routes of the inter-region connection to the peer region.</p>
              * <ul>
-             * <li><strong>false</strong> (default)</li>
-             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default): No.</li>
+             * <li><strong>true</strong>: Yes.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -539,8 +539,8 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             /**
              * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
              * <ul>
-             * <li>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</li>
-             * <li>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</li>
+             * <li>If <strong>BandwidthType</strong> is set to <strong>BandwidthPackage</strong>, this parameter indicates the bandwidth that the inter-region connection can use.</li>
+             * <li>If <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>, this parameter indicates the bandwidth limit of the inter-region connection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -554,8 +554,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             /**
              * <p>The bandwidth allocation method. Valid values:</p>
              * <ul>
-             * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
-             * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+             * <li><p><strong>BandwidthPackage</strong>: Bandwidth is allocated from a bandwidth package.</p>
+             * </li>
+             * <li><p><strong>DataTransfer</strong>: No bandwidth is allocated to the inter-region connection. Data transfer is pay-as-you-go.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -567,7 +569,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
+             * <p>The ID of the bandwidth package associated with the inter-region connection.</p>
              * 
              * <strong>example:</strong>
              * <p>cenbwp-3xrxupouolw5ou****</p>
@@ -590,7 +592,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
 
             /**
              * <p>The time when the inter-region connection was created.</p>
-             * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+             * <p>The time is displayed in the ISO 8601 standard in UTC. Format: <code>YYYY-MM-DDThh:mmZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-16T02:50Z</p>
@@ -601,10 +603,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default line type.</p>
+             * <p>The default link type.</p>
              * <ul>
-             * <li><strong>Gold</strong> (default)</li>
-             * <li><strong>Platinum</strong></li>
+             * <li><strong>Gold</strong> (default): gold.</li>
+             * <li><strong>Platinum</strong>: Platinum.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -616,7 +618,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The areas that are connected by the bandwidth plan.</p>
+             * <p>The connected areas of the bandwidth package.</p>
              * 
              * <strong>example:</strong>
              * <p>china_china</p>
@@ -627,7 +629,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the peer transit router.</p>
+             * <p>The instance ID of the peer transit routing router.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-m5eq27g6bndum7e88****</p>
@@ -638,7 +640,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the peer transit router belongs.</p>
+             * <p>The ID of the account to which the peer transit router instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>253460731706911258</p>
@@ -649,7 +651,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the peer transit router.</p>
+             * <p>The region ID of the peer transit router instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-qingdao</p>
@@ -671,12 +673,12 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource to which the transit router is connected. Valid values:</p>
+             * <p>The type of resource associated with the connection.</p>
              * <ul>
-             * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-             * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
-             * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-             * <li><strong>TR</strong>: transit router</li>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+             * <li><strong>CCN</strong>: Cloud Connect Network instance.</li>
+             * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
+             * <li><strong>TR</strong>: transit router instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -688,12 +690,12 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the inter-region connection. Valid values:</p>
+             * <p>The status of the inter-region connection.</p>
              * <ul>
-             * <li><strong>Attached</strong></li>
-             * <li><strong>Attaching</strong></li>
-             * <li><strong>Detaching</strong></li>
-             * <li><strong>Detached</strong></li>
+             * <li><strong>Attached</strong>: attached.</li>
+             * <li><strong>Attaching</strong>: being attached.</li>
+             * <li><strong>Detaching</strong>: being detached.</li>
+             * <li><strong>Detached</strong>: detached.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -705,7 +707,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tags.</p>
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -724,7 +726,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the inter-region connection.</p>
+             * <p>The inter-region connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-5u4qbayfv2io5v****</p>
@@ -746,7 +748,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Enterprise Edition transit router.</p>
+             * <p>The Enterprise Edition transit router instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-bp1su1ytdxtataupl****</p>

@@ -218,7 +218,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,10 +231,10 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. The dry run checks items such as permissions and instance status. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request and directly creates the aggregate route after the request passes the check.</li>
+         * <li><strong>true</strong>: sends a check request without creating the aggregate route. The check items include required parameters and request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,12 +285,12 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         /**
          * <p>The destination CIDR block of the aggregate route.</p>
          * <blockquote>
-         * <p> The following CIDR blocks are not supported:</p>
-         * <ul>
-         * <li>CIDR blocks that start with 0 or 100.64.</li>
-         * <li>Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</li>
-         * </ul>
+         * <p>The following CIDR blocks are not supported:</p>
          * </blockquote>
+         * <ul>
+         * <li>CIDR blocks that start with &quot;0&quot; or &quot;100.64&quot;</li>
+         * <li>Multicast addresses (224.0.0.1 to 239.255.255.254)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
 
         /**
          * <p>The description of the aggregate route.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -317,7 +317,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
 
         /**
          * <p>The name of the aggregate route.</p>
-         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -329,8 +329,8 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * <p>The scope of networks to which the aggregate route is advertised.</p>
-         * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all VPCs that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+         * <p>The propagation scope of the aggregate route.</p>
+         * <p>Set the value to <strong>VPC</strong>, which indicates that the aggregate route is propagated to all VPC-connected instances that have established an associated forwarding relationship with the current Enterprise Edition transit router route table and have the route synchronization feature enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -342,9 +342,9 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * <p>The list of propagation ranges of the aggregation route.</p>
+         * <p>The propagation scope list of the aggregate route.</p>
          * <blockquote>
-         * <p> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</p>
+         * <p>You must specify at least one of the propagation scope and the propagation scope list. We recommend that you use the propagation scope list. The elements in the propagation scope list cannot duplicate the value of the propagation scope.</p>
          * </blockquote>
          */
         public Builder transitRouteTableAggregationScopeList(java.util.List<String> transitRouteTableAggregationScopeList) {
@@ -355,7 +355,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router route table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

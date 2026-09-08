@@ -106,7 +106,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -117,7 +117,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -128,7 +128,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of regions.</p>
+         * RegionIds.
          */
         public Builder regionIds(RegionIds regionIds) {
             this.regionIds = regionIds;
@@ -136,7 +136,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DC9EB0C9-60AF-4A09-A36C-608F70130274</p>
@@ -147,7 +147,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -203,11 +203,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>us-west-1</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -261,11 +257,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>us-west-1</p>
+             * RegionId.
              */
             public Builder regionId(java.util.List<RegionId> regionId) {
                 this.regionId = regionId;

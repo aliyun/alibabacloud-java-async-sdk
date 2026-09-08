@@ -54,7 +54,10 @@ public class ModifyGrantInstanceToTransitRouterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

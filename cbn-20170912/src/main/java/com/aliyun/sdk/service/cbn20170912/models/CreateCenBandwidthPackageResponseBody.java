@@ -80,7 +80,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the bandwidth plan.</p>
+         * <p>The instance ID of the new bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>cenbwp-4c2zaavbvh5fx****</p>
@@ -91,7 +91,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order for the bandwidth plan.</p>
+         * <p>The order ID of the bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>20156420004****</p>
@@ -102,7 +102,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</p>

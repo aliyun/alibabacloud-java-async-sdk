@@ -157,7 +157,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-pfa6ugf3xl0qsd****</p>
@@ -187,7 +187,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,7 +199,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The number of entries per page when using paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -230,7 +230,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
 
         /**
          * <p>The region ID of the transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region information corresponding to a region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccn-cn-shanghai</p>

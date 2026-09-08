@@ -173,6 +173,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,10 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query. Minimum value: <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -194,7 +198,14 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+         * <li>If a subsequent query exists, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -239,7 +250,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -248,6 +259,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of zone IDs.</p>
+         * <p>The list of zone IDs.</p>
          */
         public Builder availableZones(java.util.List<String> availableZones) {
             this.availableZones = availableZones;
@@ -114,7 +114,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of primary zones.</p>
+         * <p>The list of primary zone IDs.</p>
          */
         public Builder masterZones(java.util.List<String> masterZones) {
             this.masterZones = masterZones;
@@ -133,7 +133,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of secondary zone IDs.</p>
+         * <p>The list of secondary zone IDs.</p>
          */
         public Builder slaveZones(java.util.List<String> slaveZones) {
             this.slaveZones = slaveZones;
@@ -141,7 +141,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the zone supports the multicast feature.</p>
+         * <p>Indicates whether the zone information is for multicast-enabled zones.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

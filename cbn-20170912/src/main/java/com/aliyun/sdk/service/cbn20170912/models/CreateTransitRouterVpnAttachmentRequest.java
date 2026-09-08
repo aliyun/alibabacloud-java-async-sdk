@@ -284,10 +284,10 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:</p>
+         * <p>Specifies whether to allow the transit router instance to automatically publish route entries to the IPsec connection. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong> (default): allowed.</li>
+         * <li><strong>false</strong>: not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-rsgxs8ng2awen2****</p>
@@ -313,7 +313,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
 
         /**
          * <p>The billing method.</p>
-         * <p>Set the value to <strong>POSTPAY</strong>, which is the default value and specifies the pay-as-you-go billing method.</p>
+         * <p>Set the value to <strong>POSTPAY</strong> (default), which specifies the pay-as-you-go billable method based on usage.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -326,9 +326,9 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -344,7 +344,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the VPN connection is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -375,8 +375,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the transit router is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the transit router instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -406,8 +406,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information list.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -416,8 +416,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The description of the VPN attachment.</p>
-         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the VPN connection.</p>
+         * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -429,8 +429,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The name of the VPN attachment.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the VPN connection.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -442,7 +442,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-p0wm740vjnbaprv0m****</p>
@@ -454,7 +454,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IPsec-VPN attachment.</p>
+         * <p>The ID of the IPsec connection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -467,10 +467,10 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+         * <p>The Alibaba Cloud account ID of the Alibaba Cloud account to which the IPsec connection belongs.</p>
          * <ul>
-         * <li>If you do not set this parameter, the ID of the current Alibaba Cloud account is used.</li>
-         * <li>You must set VpnOwnerId if you want to connect the transit router to an IPsec-VPN connection that belongs to another Alibaba Cloud account.</li>
+         * <li>If you do not specify this parameter, the Alibaba Cloud account ID of the current logon account is used by default.</li>
+         * <li>This parameter is required if you want to connect to an IPsec connection that belongs to a different account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -483,8 +483,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in the current region.</p>
-         * <p>Resources are deployed in the specified zone.</p>
+         * <p>The zone ID in the current region.</p>
+         * <p>The system creates resources in the zone that you specify.</p>
+         * <blockquote>
+         * <p>If the bindeded IPsec connection uses the dual-tunnel mode, leave this parameter empty.</p>
+         * </blockquote>
          */
         public Builder zone(java.util.List<Zone> zone) {
             this.putQueryParameter("Zone", zone);
@@ -552,9 +555,9 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey</p>
@@ -565,9 +568,9 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue</p>
@@ -624,8 +627,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             } 
 
             /**
-             * <p>The zone ID of the read-only instance.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the most recent zone list.</p>
+             * <p>The zone ID.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query zone IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>

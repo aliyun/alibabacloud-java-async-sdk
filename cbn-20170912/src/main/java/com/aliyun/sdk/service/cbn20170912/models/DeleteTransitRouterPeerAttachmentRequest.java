@@ -158,10 +158,10 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>The client token that you want to use to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,10 +174,10 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform a dry run for this deletion request, including permission and instance status checks. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails to pass the check, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the inter-region connection is deleted.</li>
+         * <li><strong>true</strong>: Sends a check request. Only the check is performed without actually deleting the inter-region connection. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,10 +190,10 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully delete the inter-region connection. Valid values:</p>
+         * <p>Specifies whether to force delete the inter-region connection. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): Check for relevant resources, including associated forwarding and route learning, before deleting the inter-region connection. If such a resource exists, the VPC connection is not deleted and an error message is returned.</li>
-         * <li><strong>true</strong>: Delete the inter-region connection and all relevant resources.</li>
+         * <li><strong>false</strong> (default): Before deleting the inter-region connection, the system checks whether related resource dependencies exist, such as associated forwarding and route learning. If related dependencies exist, the deletion is not allowed and the corresponding error is returned.</li>
+         * <li><strong>true</strong>: When deleting the inter-region connection, all related dependencies are deleted by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>

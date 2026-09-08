@@ -54,7 +54,7 @@ public class AssociateTransitRouterAttachmentWithRouteTableResponseBody extends 
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>

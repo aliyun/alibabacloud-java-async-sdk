@@ -286,12 +286,14 @@ public class CreateCenBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to automatically complete the payment of the bandwidth plan. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment for the bill of the bandwidth plan instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><p><strong>true</strong>: enables automatic payment.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): disables automatic payment.</p>
+         * </li>
          * </ul>
-         * <p>If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.</p>
+         * <p>If you set this parameter to false, go to the Order Center in the console to complete the payment after you invoke this operation. Otherwise, the instance cannot be created.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -303,17 +305,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the auto-renewal feature. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: enables auto-renewal.</li>
-         * <li><strong>false</strong> (default): disables auto-renewal.</li>
-         * </ul>
-         * <blockquote>
-         * <p>Only subscription bandwidth plans support auto-renewal.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * AutoRenew.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -322,10 +314,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal duration. Unit: months. Valid values: <strong>0</strong> to <strong>2147483647</strong>. Default value: <strong>1</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * AutoRenewDuration.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -347,7 +336,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the bandwidth plan. Set the value to <strong>PREPAY</strong>, which indicates that the billing method is pay-as-you-go.</p>
+         * <p>The billing method of the bandwidth plan. Valid values: <strong>PREPAY</strong>, which indicates the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PREPAY</p>
@@ -360,7 +349,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>02fb3da4-130e-11e9-8e44-001****</p>
@@ -373,6 +362,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
 
         /**
          * <p>The description of the bandwidth plan.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>namedesc</p>
@@ -384,12 +374,12 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>The area where the network instance is deployed. Valid values:</p>
+         * <p>The area to which the network instance belongs. Valid values:</p>
          * <ul>
-         * <li><strong>China</strong>: Chinese mainland</li>
-         * <li><strong>North-America</strong>: North America</li>
-         * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
-         * <li><strong>Europe</strong>: Europe</li>
+         * <li><strong>China</strong>: the Chinese mainland.</li>
+         * <li><strong>North-America</strong>: North America.</li>
+         * <li><strong>Asia-Pacific</strong>: Asia Pacific.</li>
+         * <li><strong>Europe</strong>: Europe.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -403,12 +393,12 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>The area where the other network instance is deployed. Valid values: Valid values:</p>
+         * <p>The area to which the other network instance belongs. Valid values:</p>
          * <ul>
-         * <li><strong>China</strong>: Chinese mainland</li>
-         * <li><strong>North-America</strong>: North America</li>
-         * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
-         * <li><strong>Europe</strong>: Europe</li>
+         * <li><strong>China</strong>: the Chinese mainland.</li>
+         * <li><strong>North-America</strong>: North America.</li>
+         * <li><strong>Asia-Pacific</strong>: Asia Pacific.</li>
+         * <li><strong>Europe</strong>: Europe.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -423,7 +413,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
 
         /**
          * <p>The name of the bandwidth plan.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -455,8 +445,8 @@ public class CreateCenBandwidthPackageRequest extends Request {
         /**
          * <p>The subscription duration of the bandwidth plan. Default value: 1.</p>
          * <ul>
-         * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, set <strong>Period</strong> to a value from <strong>1</strong> to <strong>3</strong> or <strong>6</strong>.</li>
-         * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, set <strong>Period</strong> to a value from <strong>1</strong> to <strong>3</strong>.</li>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>3</strong> and <strong>6</strong>.</li>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>3</strong>.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is required when <strong>BandwidthPackageChargeType</strong> is set to <strong>PREPAY</strong>.</p>
@@ -474,8 +464,10 @@ public class CreateCenBandwidthPackageRequest extends Request {
         /**
          * <p>The billing cycle of the bandwidth plan. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong> (default): billed on a monthly basis.</li>
-         * <li><strong>Year</strong>: billed on an annual basis.</li>
+         * <li><p><strong>Month</strong> (default): billed on a monthly basis.</p>
+         * </li>
+         * <li><p><strong>Year</strong>: billed on a yearly basis.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -506,8 +498,8 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -575,9 +567,9 @@ public class CreateCenBandwidthPackageRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>
@@ -588,9 +580,9 @@ public class CreateCenBandwidthPackageRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
+             * <p>Each tag key has a unique tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>

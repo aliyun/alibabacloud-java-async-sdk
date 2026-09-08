@@ -67,7 +67,7 @@ public class CreateTransitRouterRouteEntryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>835E7F4B-B380-4E0F-96A5-6EA572388047</p>
@@ -78,7 +78,7 @@ public class CreateTransitRouterRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The ID of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>rte-75eg4jprkvk0pw****</p>

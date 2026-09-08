@@ -214,7 +214,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -226,7 +226,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,8 +240,8 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         /**
          * <p>The token that determines the start point of the query. Valid values:</p>
          * <ul>
-         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the value to the NextToken value returned in the previous call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
 
         /**
          * <p>The type of resource associated with the multicast domain.</p>
-         * <p>Valid value: <strong>VPC</strong>.</p>
+         * <p>Set the value to <strong>VPC</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -315,7 +315,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * <p>The ID of the network instance connection.</p>
+         * <p>The network instance connection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-p90y3ymbbwuvy5****</p>
@@ -327,7 +327,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * <p>The ID of the multicast domain.</p>
+         * <p>The multicast domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
@@ -339,7 +339,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * <p>The IDs of vSwitches.</p>
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

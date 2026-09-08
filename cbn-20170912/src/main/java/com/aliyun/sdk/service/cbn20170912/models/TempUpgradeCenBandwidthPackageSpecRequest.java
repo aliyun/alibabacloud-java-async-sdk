@@ -146,6 +146,8 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
+         * <p>The temporarily increased peak bandwidth. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the bandwidth plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,8 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
+         * <p>The expiration time of the temporary bandwidth upgrade.</p>
+         * <p>The time is expressed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

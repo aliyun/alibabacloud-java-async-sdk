@@ -247,7 +247,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,8 +260,8 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The description of the health check.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description.  </p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -273,7 +273,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: <strong>2</strong>. Valid values: <strong>2 to 3</strong>.</p>
+         * <p>The interval at which health check probe packets are sent. Unit: seconds. Default value: <strong>2</strong>. Valid values: <strong>2</strong> to <strong>3</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -285,16 +285,16 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable probing during the health check. Valid values:</p>
+         * <p>Specifies whether to enable only the health check detection feature. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable. 
+         * <li><p><strong>true</strong>: Only the detection feature is enabled.</p>
+         * <pre><code>  If only the health check detection feature is enabled, route switchover is not triggered when the health check detects that the link is down.
          * 
-         *   Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
+         *   &gt; Make sure that you have other methods to ensure link redundancy. Otherwise, enabling this feature may cause link interruptions.
          * </code></pre>
          * </li>
-         * <li><p><strong>false</strong> (default): no</p>
-         * <pre><code>Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
+         * <li><p><strong>false</strong> (default): The detection-only feature is not enabled.</p>
+         * <pre><code>  This feature is disabled by default. When the health check detects that the link is down, if redundant routes exist in the CEN instance, the health check immediately triggers a route switchover to use an available link.
          * </code></pre>
          * </li>
          * </ul>
@@ -309,10 +309,12 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The source IP address for the health check. You can set the source IP address in the following ways:</p>
+         * <p>The source IP address for health checks. The following configuration methods are supported:</p>
          * <ul>
-         * <li><strong>Automatic IP Address</strong> (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</li>
-         * <li><strong>Custom IP Address</strong>: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.</li>
+         * <li><p><strong>Automatically generated source IP</strong> (recommended): The system automatically allocates an IP address from the 100.96.0.0/16 CIDR block.</p>
+         * </li>
+         * <li><p><strong>Custom source IP</strong>: The source IP address can be any unused IP address within the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The IP address cannot cause an IP address conflict with addresses that need to communicate with each other in the CEN instance, or with the Alibaba Cloud-side or customer-side IP address of the VBR instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,8 +327,8 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The destination IP address for the health check.</p>
-         * <p>Set the destination IP address to the IP address of the VBR on the customer side.</p>
+         * <p>The destination IP address for health checks.</p>
+         * <p>The destination IP address is the customer-side IP address of the VBR instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,7 +341,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The number of probe packets that are sent during a health check. Unit: packets. Valid values: <strong>3 to 8</strong>. Default value: <strong>8</strong>.</p>
+         * <p>The number of probe packets sent during a health check. Unit: packets. Valid values: <strong>3</strong> to <strong>8</strong>. Default value: <strong>8</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -387,7 +389,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,9 +402,9 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the VBR instance.</p>
          * <blockquote>
-         * <p>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+         * <p>This parameter is required if the VBR instance and the CEN instance belong to different accounts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -415,8 +417,8 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VBR instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

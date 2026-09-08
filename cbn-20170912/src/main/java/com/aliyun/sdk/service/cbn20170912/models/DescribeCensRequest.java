@@ -172,7 +172,7 @@ public class DescribeCensRequest extends Request {
 
         /**
          * <p>The filter conditions.</p>
-         * <p>You can specify at most five filter conditions in each call.</p>
+         * <p>You can specify up to 5 filter conditions at a time.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -199,7 +199,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number to query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -253,8 +253,8 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -322,13 +322,13 @@ public class DescribeCensRequest extends Request {
             } 
 
             /**
-             * <p>The key of the filter. Valid values:</p>
+             * <p>The filter condition. Valid values:</p>
              * <ul>
-             * <li><strong>CenId</strong>: the ID of a CEN instance.</li>
-             * <li><strong>Name</strong>: the name of a CEN instance.</li>
+             * <li><strong>CenId</strong>: the CEN instance ID.</li>
+             * <li><strong>Name</strong>: the CEN instance name.</li>
              * </ul>
-             * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</p>
-             * <p>You can specify at most five filter conditions in each call.</p>
+             * <p>The relationship between multiple filter conditions is <strong>AND</strong>, which means that a record must match all filter conditions to be returned.</p>
+             * <p>You can specify up to 5 filter conditions at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>CenId</p>
@@ -340,8 +340,8 @@ public class DescribeCensRequest extends Request {
 
             /**
              * <p>The value of the filter condition.</p>
-             * <p>Specify a filter value based on the <strong>Key</strong> parameter. You can specify multiple values for a filter <strong>key</strong>. The logical operator among multiple filter values is <strong>OR</strong>. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.</p>
-             * <p>You can specify at most five values in each filter condition.</p>
+             * <p>Specify filter values based on the <strong>Key</strong> parameter. You can specify multiple filter values for a single <strong>Key</strong>. The relationship between multiple filter values is <strong>OR</strong>, which means that a record is returned if it matches any of the filter values.</p>
+             * <p>You can specify up to 5 filter values for each filter condition.</p>
              * 
              * <strong>example:</strong>
              * <p>cen-0xyeagctz5sfg9****</p>
@@ -411,9 +411,9 @@ public class DescribeCensRequest extends Request {
             } 
 
             /**
-             * <p>The tag keys.</p>
-             * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>
@@ -424,9 +424,9 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * <p>The tag values.</p>
-             * <p>The tag values can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>

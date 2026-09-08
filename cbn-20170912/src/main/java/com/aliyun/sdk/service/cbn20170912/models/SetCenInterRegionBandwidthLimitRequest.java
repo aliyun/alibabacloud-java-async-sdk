@@ -175,7 +175,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         } 
 
         /**
-         * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+         * <p>The inter-region bandwidth between the two regions. Unit: Mbit/s.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,9 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
 
         /**
          * <p>The bandwidth allocation method. Valid values:</p>
-         * <p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</p>
+         * <ul>
+         * <li><strong>BandwidthPackage</strong> (default): Bandwidth is allocated from the bandwidth package.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BandwidthPackage</p>
@@ -201,7 +203,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
 
         /**
          * <p>The ID of the local region.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query regions where you can attach network instances to a CEN instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query the regions of the network instances that can be attached to a CEN instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

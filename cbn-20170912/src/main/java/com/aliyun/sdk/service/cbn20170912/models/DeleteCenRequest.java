@@ -116,7 +116,7 @@ public class DeleteCenRequest extends Request {
         } 
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The instance ID of the CEN instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

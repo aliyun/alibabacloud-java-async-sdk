@@ -228,7 +228,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page when entries are returned by page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,10 +240,10 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+         * <li>If a next query exists, set this parameter to the value of <strong>NextToken</strong> returned in the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The features of the route table.</p>
+         * <p>The route table feature options.</p>
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -301,8 +301,8 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -311,7 +311,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The instance ID of the Enterprise Edition transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-uf654ttymmljlvh2x****</p>
@@ -324,7 +324,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
 
         /**
          * <p>The ID of the route table.</p>
-         * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+         * <p>You can query multiple route tables at a time. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1l8awdb4iuo9uwu****</p>
@@ -337,9 +337,9 @@ public class ListTransitRouterRouteTablesRequest extends Request {
 
         /**
          * <p>The name of the route table.</p>
-         * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+         * <p>You can query multiple route tables at a time. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
          * <blockquote>
-         * <p>If you set both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, make sure that the specified name and ID belong to the same route table.</p>
+         * <p>If you specify both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, the route table names and route table IDs must correspond to each other.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -354,9 +354,9 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         /**
          * <p>The status of the route table. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: The route table is being created.</li>
-         * <li><strong>Deleting</strong>: The route table is being deleted.</li>
-         * <li><strong>Active</strong>: The route table is available.</li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Active</strong>: active.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,8 +371,8 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         /**
          * <p>The type of the route table. Valid values:</p>
          * <ul>
-         * <li><strong>Custom</strong>: a custom route table</li>
-         * <li><strong>System</strong>: the default route table</li>
+         * <li><strong>Custom</strong>: custom route table.</li>
+         * <li><strong>System</strong>: system default route table.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -431,10 +431,10 @@ public class ListTransitRouterRouteTablesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</p>
+             * <p>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
              * <ul>
-             * <li><strong>disable</strong>: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
-             * <li><strong>enable</strong>: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>disable</strong>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions select the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before disabling this feature.</li>
+             * <li><strong>enable</strong>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before enabling this feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,9 +505,9 @@ public class ListTransitRouterRouteTablesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -518,9 +518,9 @@ public class ListTransitRouterRouteTablesRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

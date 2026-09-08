@@ -216,7 +216,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance to which the VPC is attached.</p>
+         * <p>The ID of the CEN instance to which the VPC-connected instance is connected.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,11 +229,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 10 to 500.</p>
+         * <p>The maximum number of entries per page for a paged query. Valid values: 10 to 500.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If you do not specify a value, the default value is 20.</li>
-         * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+         * <li>If you do not set this parameter, the default value is 20.</li>
+         * <li>If the value you set is greater than 500, the default value is 500.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The ID of ENI N. Valid values of N: 1 to 100.</p>
+         * <p>The IDs of network interface controllers (NICs).</p>
          */
         public Builder networkInterfaceId(java.util.List<String> networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -255,7 +255,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The name of the ENI.</p>
+         * <p>The name of the elastic network interfaces (ENIs). You can use this parameter to filter network interface controllers (NICs) by name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-eni-name</p>
@@ -267,7 +267,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is the first query or no next query exists, leave this parameter empty.</li>
+         * <li>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -297,10 +301,10 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The primary private IPv4 address of the ENI.</p>
+         * <p>The primary private IP IPv4 address of the elastic network interfaces (ENIs). You can use this parameter to filter network interface controllers (NICs) by primary private IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
+         * <p><code>192.168.**.**</code></p>
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -327,7 +331,8 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</p>
+         * <p>The ID of a vSwitch in the VPC-connected instance.</p>
+         * <p>You can query network interface controller (NIC) information for only one vSwitch at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +345,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

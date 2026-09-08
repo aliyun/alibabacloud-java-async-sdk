@@ -149,7 +149,7 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
 
         /**
          * <p>The region ID of the Enterprise Edition transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,12 +180,12 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only the zones in which the multicast feature is supported. Valid values:</p>
+         * <p>Specifies whether to query only the multicast-enabled zones.</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * <p>After you call <strong>ListTransitRouterAvailableResource</strong>, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.</p>
+         * <li><p><strong>true</strong>: queries only the multicast-enabled zones.</p>
+         * <p>  If the <strong>ListTransitRouterAvailableResource</strong> operation returns an empty result, the Enterprise Edition transit router in the current region does not support multicast.</p>
          * </li>
-         * <li><p><strong>false</strong> (default)</p>
+         * <li><p><strong>false</strong> (default): does not query only the multicast-enabled zones.</p>
          * </li>
          * </ul>
          * 

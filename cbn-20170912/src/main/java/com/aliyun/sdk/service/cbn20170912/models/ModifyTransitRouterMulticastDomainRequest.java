@@ -187,7 +187,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -199,10 +199,10 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the dry run, the name and description of the multicast domain are modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * <p>Multicast domain feature.</p>
+         * <p>The feature options of the multicast domain.</p>
          */
         public Builder options(Options options) {
             this.putQueryParameter("Options", options);
@@ -261,7 +261,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
 
         /**
          * <p>The new description of the multicast domain.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -358,10 +358,10 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <strong>enable</strong>.</p>
+             * <p>Specifies whether to enable the IGMP feature for the multicast domain. After this feature is enabled, hosts can dynamically join or leave multicast groups by using Internet Group Management Protocol (IGMP). Valid values: <strong>enable</strong>.</p>
              * <blockquote>
              * <ul>
-             * <li>The IGMP feature is in beta testing. To use it, contact your account manager.</li>
+             * <li>The IGMP feature is in public preview. To use this feature, contact your account manager to request access.</li>
              * <li>The IGMP feature cannot be disabled after it is enabled.</li>
              * </ul>
              * </blockquote>
@@ -375,7 +375,20 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
             }
 
             /**
-             * StrictSourceControl.
+             * <p>Specifies whether to enable the strict multicast source control feature. If this feature is disabled, all ECS instances in the associated vSwitch can serve as multicast sources. If this feature is enabled, only ENIs that are statically configured or have sent IGMP Join messages can serve as multicast sources. Valid values:</p>
+             * <ul>
+             * <li><code>enable</code>: enables the strict multicast source control feature.</li>
+             * <li><code>disable</code>: disables the strict multicast source control feature.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>The strict multicast source control feature takes effect only for multicast domains with the IGMP feature enabled.</li>
+             * <li>Only one multicast domain with the strict multicast source control feature disabled can be created under a transit router.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder strictSourceControl(String strictSourceControl) {
                 this.strictSourceControl = strictSourceControl;

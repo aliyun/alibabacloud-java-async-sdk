@@ -54,7 +54,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentResponseBody extends Te
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A95A100B-3F3A-56F4-A5DE-19DB7E994807</p>

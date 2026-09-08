@@ -201,7 +201,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-dc4vwznpwbobrl****</p>
@@ -213,7 +213,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>The route table ID of the network instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -238,10 +238,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>Specifies whether a next query token (Token) exists. Valid values:</p>
          * <ul>
-         * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li>You do not need to specify this parameter for the first query or if no next query exists.</li>
+         * <li>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * <p>The filter condition for the destination CIDR block.</p>
+         * <p>The destination CIDR block filter.</p>
          */
         public Builder routeFilter(java.util.List<RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
@@ -299,7 +299,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * <p>Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.</p>
+         * <p>The type of route hosting. If this field is empty, the route is not hosted. Valid values: TR, which indicates that the hosting type is transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>TR</p>
@@ -383,7 +383,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             } 
 
             /**
-             * <p>The match mode of the route.</p>
+             * <p>The route match mode.</p>
              * <ul>
              * <li><strong>prefix-exact-match</strong>: exact match.</li>
              * </ul>
@@ -397,7 +397,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             }
 
             /**
-             * <p>The destination CIDR blocks.</p>
+             * <p>The list of destination CIDR blocks.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

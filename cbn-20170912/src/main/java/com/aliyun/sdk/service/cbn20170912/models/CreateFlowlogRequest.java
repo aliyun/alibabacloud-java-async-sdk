@@ -272,7 +272,7 @@ public class CreateFlowlogRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,9 +286,9 @@ public class CreateFlowlogRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -302,7 +302,7 @@ public class CreateFlowlogRequest extends Request {
 
         /**
          * <p>The description of the flow log.</p>
-         * <p>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>myFlowlog</p>
@@ -314,8 +314,8 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The flow log name.</p>
-         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name of the flow log.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>myFlowlog</p>
@@ -327,7 +327,7 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The time window for collecting log data. Unit: seconds. Valid values: <strong>60</strong> and <strong>600</strong>. Default value: <strong>600</strong>.</p>
+         * <p>The capture window duration of the flow log. Unit: seconds. Valid values: <strong>60</strong> and <strong>600</strong>. Default value: <strong>600</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -339,11 +339,12 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The strings that define the fields in the flow log.</p>
-         * <p>Format: <code>${Field 1}${Field 2}${Field 3}...{Field n}</code></p>
+         * <p>The string that defines custom flow log record fields. </p>
+         * <p>The format is defined as:
+         * <code>${field 1}${field 2}${field 3}...${field n}</code></p>
          * <ul>
-         * <li>If you do not configure this parameter, all fields are included in the flow log.</li>
-         * <li>If you configure this parameter, start the string with <code>${srcaddr}${dstaddr}${bytes}</code> because <code>${srcaddr}${dstaddr}${bytes}</code> are required variables. For more information about the fields supported by flow logs, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</li>
+         * <li>If you leave this parameter empty, all default fields are recorded.</li>
+         * <li>If you specify this parameter, because <code>${srcaddr}${dstaddr}${bytes}</code> are required fields, the string must start with <code>${srcaddr}${dstaddr}${bytes}</code>. For all supported flow log fields, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,22 +357,23 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The Logstore that stores the captured traffic data.</p>
+         * <p>The Logstore that stores the caught traffic.</p>
          * <ul>
-         * <li><p>If a Logstore is already created in the selected region, enter the name of the Logstore.</p>
+         * <li><p>If you have already created a Logstore in the current region, enter the name of the existing Logstore.</p>
          * </li>
-         * <li><p>If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:</p>
+         * <li><p>If you have not created a Logstore in the current region, specify a custom name for the Logstore. The system automatically creates the Logstore.
+         *   The naming rules for the Logstore are as follows:</p>
          * <ul>
-         * <li>The name must be unique in a project.</li>
+         * <li>The Logstore name must be unique within the same project.</li>
          * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The name must start and end with a lowercase letter or a digit.</li>
-         * <li>The name must be 3 to 63 characters in length,</li>
+         * <li>The name must start and end with a lowercase letter or digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>FlowLogStore</p>
+         * <p>flowlog-logstore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -398,23 +400,23 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The project that stores the captured traffic data.</p>
+         * <p>The project that stores the caught traffic.</p>
          * <ul>
-         * <li><p>If a project is already created in the selected region, enter the name of the project.</p>
+         * <li><p>If you have already created a project in the current region, enter the name of the existing project.</p>
          * </li>
-         * <li><p>If no projects are created in the selected region, enter a name and the system automatically creates a project.</p>
-         * <p>The project name must be unique in a region. You cannot change the name after the project is created. The name must meet the following requirements:</p>
+         * <li><p>If you have not created a project in the current region, specify a custom name for the project. The system automatically creates the project.</p>
+         * <p>  The project name must be globally unique within the Alibaba Cloud region and cannot be modified after creation. The naming rules are as follows:</p>
          * <ul>
-         * <li>The name must be globally unique.</li>
+         * <li>The project name must be globally unique.</li>
          * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
-         * <li>The name must start and end with a lowercase letter or a digit.</li>
-         * <li>The name must be 3 to 63 characters in length,</li>
+         * <li>The name must start and end with a lowercase letter or digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>FlowLogProject</p>
+         * <p>flowlog-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -423,8 +425,8 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the flow log is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the flow log.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -455,8 +457,8 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can specify at most 20 tags.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -466,7 +468,7 @@ public class CreateFlowlogRequest extends Request {
 
         /**
          * <p>The ID of the VPC connection, VPN connection, VBR connection, ECR connection, or inter-region connection.</p>
-         * <p>If you create the flow log for a transfer router, skip this parameter.</p>
+         * <p>Leave this parameter empty if you want to configure a flow log for a transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-r6g0m3epjehw57****</p>
@@ -478,7 +480,7 @@ public class CreateFlowlogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit routing instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1rmwxnk221e3fas****</p>
@@ -549,9 +551,9 @@ public class CreateFlowlogRequest extends Request {
             } 
 
             /**
-             * <p>The tag keys.</p>
-             * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length. The tag keys cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys in each call.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey</p>
@@ -562,9 +564,9 @@ public class CreateFlowlogRequest extends Request {
             }
 
             /**
-             * <p>The tag values.</p>
-             * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue</p>

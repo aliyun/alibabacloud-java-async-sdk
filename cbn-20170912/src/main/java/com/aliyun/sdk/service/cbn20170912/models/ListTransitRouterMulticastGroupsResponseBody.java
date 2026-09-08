@@ -106,7 +106,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FB3C4A16-0933-5850-9D43-0C3EA37BCBFB</p>
@@ -154,7 +154,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of multicast groups.</p>
+         * <p>The list of multicast group information.</p>
          */
         public Builder transitRouterMulticastGroups(java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups) {
             this.transitRouterMulticastGroups = transitRouterMulticastGroups;
@@ -387,10 +387,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the multicast resource is a multicast member. Valid values:</p>
+             * <p>Indicates whether the current multicast resource is a multicast member. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
+             * <li><strong>true</strong>: The multicast resource is a multicast member.</li>
+             * <li><strong>false</strong>: The multicast resource is not a multicast member.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -402,10 +402,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the multicast resource is a multicast source. Valid values:</p>
+             * <p>Indicates whether the current multicast resource is a multicast source. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
+             * <li><strong>true</strong>: The multicast resource is a multicast source.</li>
+             * <li><strong>false</strong>: The multicast resource is not a multicast source.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -417,8 +417,13 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the multicast source.</p>
-             * <p>If the value is <strong>Static</strong>, the multicast source is manually specified.</p>
+             * <p>The type of the multicast member. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Static</strong>: The multicast member is manually specified.</p>
+             * </li>
+             * <li><p><strong>IGMPv2</strong>: The multicast member dynamically joined the multicast group through the IGMP protocol.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Static</p>
@@ -429,7 +434,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENI, which is a multicast resource.</p>
+             * <p>The elastic network interface (ENI) ID, which is the multicast resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-p0weuda3lszwzjly****</p>
@@ -440,7 +445,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the multicast domain associated with the multicast resource that is deployed across regions.</p>
+             * <p>The ID of the multicast domain associated with the cross-region multicast resource.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
@@ -451,7 +456,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource associated with the multicast resource.</p>
+             * <p>The resource ID associated with the multicast resource.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-p0w9alkte4w2htrqe****</p>
@@ -465,7 +470,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
              * <p>The ID of the Alibaba Cloud account to which the multicast resource belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>253460731706911258</p>
+             * <p>11081188765****</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -475,8 +480,8 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             /**
              * <p>The type of the multicast resource. Valid values:</p>
              * <ul>
-             * <li><strong>VPC</strong>: The multicast resource is in a VPC.</li>
-             * <li><strong>TR</strong>: The multicast resource is deployed across regions.</li>
+             * <li><strong>VPC</strong>: The multicast resource is a resource in a VPC.</li>
+             * <li><strong>TR</strong>: The multicast resource is a cross-region resource.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -488,8 +493,13 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the multicast member.</p>
-             * <p>If the value is <strong>Static</strong>, the multicast member is manually specified.</p>
+             * <p>The type of the multicast source. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Static</strong>: The multicast source is manually specified.</p>
+             * </li>
+             * <li><p><strong>IGMPv2</strong>: The multicast source dynamically joined the multicast group through the IGMP protocol.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Static</p>
@@ -502,9 +512,9 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             /**
              * <p>The status of the multicast resource. Valid values:</p>
              * <ul>
-             * <li><strong>Registering</strong>: being created</li>
-             * <li><strong>Registered</strong>: available</li>
-             * <li><strong>Deregistering</strong>: being deleted</li>
+             * <li><strong>Registering</strong>: being created.</li>
+             * <li><strong>Registered</strong>: available.</li>
+             * <li><strong>Deregistering</strong>: being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -516,7 +526,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network instance connection.</p>
+             * <p>The network instance connection ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-g3kz2k3u76amsk****</p>
@@ -527,7 +537,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the multicast domain.</p>
+             * <p>The multicast domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-mcast-domain-kx0vk0v7fz8kx4****</p>

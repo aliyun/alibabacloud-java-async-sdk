@@ -106,7 +106,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the query.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> was not returned in the previous query, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>113BFD47-63DF-5D9D-972C-033FB9C360CD</p>
@@ -154,7 +154,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of QoS policies.</p>
+         * <p>The list of traffic scheduling policies.</p>
          */
         public Builder trafficQosPolicies(java.util.List<TrafficQosPolicies> trafficQosPolicies) {
             this.trafficQosPolicies = trafficQosPolicies;
@@ -285,7 +285,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If the QoS queues are assigned absolute bandwidth values, this parameter indicates the absolute bandwidth value that is allocated to the queue.</p>
+             * <p>The inter-region bandwidth allocated to the current queue when the bandwidth guarantee type is set to the absolute value mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -296,7 +296,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The differentiated services code point (DSCP) value that is used to match packets.</p>
+             * <p>The DSCP values of the traffic packets to be matched by the current queue.</p>
              */
             public Builder dscps(java.util.List<Integer> dscps) {
                 this.dscps = dscps;
@@ -304,7 +304,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual bandwidth value of the current queue.</p>
+             * <p>The actual effective bandwidth of the current queue.</p>
              * 
              * <strong>example:</strong>
              * <p>1.35</p>
@@ -326,7 +326,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queue ID.</p>
+             * <p>The ID of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>qos-queue-njcrmr9fiu1jii****</p>
@@ -348,7 +348,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the QoS queues are assigned bandwidth percentages, this parameter indicates the percentage of bandwidth that is allocated to the queue.</p>
+             * <p>The percentage of inter-region bandwidth occupied by the current queue when the bandwidth guarantee type is set to the percentage mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -496,10 +496,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The guaranteed bandwidth mode.</p>
+             * <p>The bandwidth guarantee type. Valid values:</p>
              * <ul>
-             * <li><strong>byBandwidth</strong>: allocates absolute bandwidth values to QoS queues.</li>
-             * <li><strong>byBandwidthPercent</strong>: assigns bandwidth percentages to QoS queues.</li>
+             * <li><strong>byBandwidth</strong>: configures QoS queues by absolute bandwidth value.</li>
+             * <li><strong>byBandwidthPercent</strong>: configures QoS queues by bandwidth percentage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -511,7 +511,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the QoS policy.</p>
+             * <p>The description of the traffic scheduling policy.</p>
              * 
              * <strong>example:</strong>
              * <p>desctest</p>
@@ -522,7 +522,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the QoS policy.</p>
+             * <p>The ID of the traffic scheduling policy.</p>
              * 
              * <strong>example:</strong>
              * <p>qos-rnghap5gc8155x****</p>
@@ -533,7 +533,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the QoS policy.</p>
+             * <p>The name of the traffic scheduling policy.</p>
              * 
              * <strong>example:</strong>
              * <p>nametest</p>
@@ -544,12 +544,12 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the QoS policy.</p>
+             * <p>The status of the traffic scheduling policy.</p>
              * <ul>
-             * <li><strong>Creating</strong>: The QoS policy is being created.</li>
-             * <li><strong>Active</strong>: The QoS policy is available.</li>
-             * <li><strong>Modifying</strong>: The policy is being modified.</li>
-             * <li><strong>Deleting</strong>: The QoS policy is being deleted.</li>
+             * <li><strong>Creating</strong>: being created.</li>
+             * <li><strong>Active</strong>: active.</li>
+             * <li><strong>Modifying</strong>: being modified.</li>
+             * <li><strong>Deleting</strong>: being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -561,7 +561,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of queues.</p>
+             * <p>The list of queues.</p>
              */
             public Builder trafficQosQueues(java.util.List<TrafficQosQueues> trafficQosQueues) {
                 this.trafficQosQueues = trafficQosQueues;
@@ -580,7 +580,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the transit router.</p>
+             * <p>The transit router instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-2ze4ta4v32umj0rb***</p>

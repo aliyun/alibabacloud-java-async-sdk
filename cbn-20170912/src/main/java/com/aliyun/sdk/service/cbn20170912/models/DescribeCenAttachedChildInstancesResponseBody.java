@@ -106,7 +106,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the network instances.</p>
+         * ChildInstances.
          */
         public Builder childInstances(ChildInstances childInstances) {
             this.childInstances = childInstances;
@@ -114,7 +114,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B2063B16-852B-5B66-B73D-4ED4D1A5E5C2</p>
@@ -147,7 +147,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -294,10 +294,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CEN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-j3jzhw1zpau2km****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -305,11 +302,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the network instance was attached to the CEN instance.</p>
-             * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-08-10T06:27Z</p>
+             * ChildInstanceAttachTime.
              */
             public Builder childInstanceAttachTime(String childInstanceAttachTime) {
                 this.childInstanceAttachTime = childInstanceAttachTime;
@@ -317,10 +310,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-8vb1lu55yt9rlwgxl****</p>
+             * ChildInstanceId.
              */
             public Builder childInstanceId(String childInstanceId) {
                 this.childInstanceId = childInstanceId;
@@ -328,10 +318,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1688000000000000</p>
+             * ChildInstanceOwnerId.
              */
             public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
                 this.childInstanceOwnerId = childInstanceOwnerId;
@@ -339,10 +326,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the network instance is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-zhangjiakou</p>
+             * ChildInstanceRegionId.
              */
             public Builder childInstanceRegionId(String childInstanceRegionId) {
                 this.childInstanceRegionId = childInstanceRegionId;
@@ -350,15 +334,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network instance. Valid values:</p>
-             * <ul>
-             * <li><strong>VPC</strong>: VPC</li>
-             * <li><strong>VBR</strong>: VBR</li>
-             * <li><strong>CCN</strong>: CCN instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * ChildInstanceType.
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
@@ -374,15 +350,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Attaching</strong>: The network instance is being created on the transit router.</li>
-             * <li><strong>Attached</strong>: The network instance has been created on the transit router.</li>
-             * <li><strong>Detaching</strong>: The network instance is being deleted from the transit router.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Attached</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

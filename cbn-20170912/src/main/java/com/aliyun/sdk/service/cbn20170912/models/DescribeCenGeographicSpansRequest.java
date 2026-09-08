@@ -143,9 +143,9 @@ public class DescribeCenGeographicSpansRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the areas that are connected by the CEN instance.</p>
+         * <p>The ID of the connected areas.</p>
          * <blockquote>
-         * <p>If you do not set this parameter, the system queries the information about all areas supported by CEN.</p>
+         * <p>If you do not specify this parameter, the system queries information about all connected areas supported by CEN.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class DescribeCenGeographicSpansRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DescribeCenGeographicSpansRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

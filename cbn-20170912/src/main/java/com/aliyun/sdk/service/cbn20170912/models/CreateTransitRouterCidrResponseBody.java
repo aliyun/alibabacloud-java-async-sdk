@@ -67,7 +67,7 @@ public class CreateTransitRouterCidrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
@@ -78,7 +78,7 @@ public class CreateTransitRouterCidrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the CIDR block.</p>
+         * <p>The ID of the transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>cidr-0zv0q9crqpntzz****</p>

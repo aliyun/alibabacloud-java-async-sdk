@@ -243,10 +243,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
+         * <p>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes of the inter-region connection to the peer region.</p>
          * <ul>
-         * <li><strong>false</strong> (default): no</li>
-         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no.</li>
+         * <li><strong>true</strong>: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,8 +261,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         /**
          * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
          * <ul>
-         * <li>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</li>
-         * <li>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</li>
+         * <li>If <strong>BandwidthType</strong> is set to <strong>BandwidthPackage</strong>, this parameter specifies the bandwidth that the inter-region connection can use.</li>
+         * <li>If <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>, this parameter specifies the bandwidth limit of the inter-region connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,8 +277,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         /**
          * <p>The bandwidth allocation method. Valid values:</p>
          * <ul>
-         * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
-         * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+         * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth package.</li>
+         * <li><strong>DataTransfer</strong>: does not allocate bandwidth to the inter-region connection. Billing is based on the traffic volume.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,9 +291,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
+         * <p>The ID of the bandwidth package to be associated with the inter-region connection.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;If you do not specify a bandwidth package ID, the test bandwidth is used. The default test bandwidth is 1 Kbit/s and is intended only for testing (IPv4) network connectivity.</p>
          * <blockquote>
-         * <p> If you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>, you do not need to set this parameter.</p>
+         * <p>If <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>, you do not need to configure this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,9 +308,9 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -322,9 +323,9 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>The default line type.</p>
-         * <p>Valid values: Platinum and Gold.</p>
-         * <p>Platinum is supported only when BandwidthType is set to DataTransfer.</p>
+         * <p>The default link type.</p>
+         * <p>Valid values: Platinum and Gold. Default value: Gold.</p>
+         * <p>The value can be set to Platinum only when the bandwidth allocation method is pay-by-data-transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>Gold</p>
@@ -336,10 +337,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</p>
+         * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * <li><strong>false</strong> (default): sends a normal request and directly modifies the configuration of the inter-region connection after the request passes the check.</li>
+         * <li><strong>true</strong>: sends a check request. Only the check is performed and the configuration of the inter-region connection is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,7 +390,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
 
         /**
          * <p>The new description of the inter-region connection.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>

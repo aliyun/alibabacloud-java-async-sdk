@@ -116,6 +116,7 @@ public class DeleteCenBandwidthPackageRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the bandwidth plan to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

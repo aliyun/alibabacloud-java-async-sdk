@@ -106,7 +106,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The health check configuration of the VBR.</p>
+         * VbrHealthChecks.
          */
         public Builder vbrHealthChecks(VbrHealthChecks vbrHealthChecks) {
             this.vbrHealthChecks = vbrHealthChecks;
@@ -307,10 +307,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CEN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-6hpdgj7ni6pz1k****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -318,10 +315,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>healthcheck_description</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -329,10 +323,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time interval at which probe packets are sent during the health check. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * HealthCheckInterval.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -340,20 +331,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether probing is enabled. Valid values:</p>
-             * <ul>
-             * <li><p><strong>true</strong>: Probing is enabled.</p>
-             * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable.
-             * </code></pre>
-             * </li>
-             * <li><p><strong>false</strong>: Probing is disabled.</p>
-             * <pre><code>  If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
-             * </code></pre>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * HealthCheckOnly.
              */
             public Builder healthCheckOnly(Boolean healthCheckOnly) {
                 this.healthCheckOnly = healthCheckOnly;
@@ -361,10 +339,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.XX.XX.1</p>
+             * HealthCheckSourceIp.
              */
             public Builder healthCheckSourceIp(String healthCheckSourceIp) {
                 this.healthCheckSourceIp = healthCheckSourceIp;
@@ -372,10 +347,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination IP address of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.XX.XX.1</p>
+             * HealthCheckTargetIp.
              */
             public Builder healthCheckTargetIp(String healthCheckTargetIp) {
                 this.healthCheckTargetIp = healthCheckTargetIp;
@@ -383,10 +355,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of probe packets that are sent during the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8</p>
+             * HealthyThreshold.
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -394,10 +363,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VBR ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vbr-bp1kznorjeembsuhl****</p>
+             * VbrInstanceId.
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -405,10 +371,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the VBR is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * VbrInstanceRegionId.
              */
             public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
                 this.vbrInstanceRegionId = vbrInstanceRegionId;

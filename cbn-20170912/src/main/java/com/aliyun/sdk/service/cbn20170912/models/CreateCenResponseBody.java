@@ -67,7 +67,7 @@ public class CreateCenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The ID of the CEN instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-dc4vwznpwbobrl****</p>

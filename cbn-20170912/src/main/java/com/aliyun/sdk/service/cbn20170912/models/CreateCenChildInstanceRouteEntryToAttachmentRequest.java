@@ -189,11 +189,11 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         } 
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-bp1n6cbxcszp55vxo****</p>
+         * <p>cen-bp1n6cbxcszp55vxo****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -205,7 +205,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The destination CIDR block of the route entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,13 +231,13 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. The dry run checks parameter validity, user permissions, and instance status. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, a route entry is added to the network instance.</li>
+         * <li><strong>true</strong>: Sends a check request. No route entry is added to the network instance. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is not in use.</p>
+         * <p>This parameter is not currently in effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>The ID of the route table of the network instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

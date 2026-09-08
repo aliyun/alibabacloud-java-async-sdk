@@ -199,7 +199,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-7qthudw0ll6jmc****</p>
@@ -211,7 +211,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -223,10 +223,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that determines the start point of the next query. Valid values: </p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists. </li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,8 +257,8 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the transit router instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -288,8 +288,8 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can specify at most 20 tags.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -298,7 +298,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECR connection.</p>
+         * <p>The ECR connection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-nls9fzkfat8934****</p>
@@ -310,7 +310,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-6ehx7q2jze8ch5ji0****</p>
@@ -381,9 +381,9 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys in each call.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey</p>
@@ -394,9 +394,9 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue</p>

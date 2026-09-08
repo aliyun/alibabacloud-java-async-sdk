@@ -54,7 +54,7 @@ public class DeleteTransitRouterMulticastDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40194E53-2484-5831-BB53-E11D123C1A32</p>

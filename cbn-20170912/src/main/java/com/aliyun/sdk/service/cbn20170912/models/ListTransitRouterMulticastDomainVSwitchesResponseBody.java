@@ -106,7 +106,10 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,14 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +132,10 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0E7E43C-979A-5130-AA0D-B3ADA69E0827</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +143,10 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +154,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * VSwitchIds.
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;

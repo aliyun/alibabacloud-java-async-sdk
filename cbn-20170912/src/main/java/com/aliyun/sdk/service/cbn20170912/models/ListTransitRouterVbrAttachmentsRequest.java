@@ -199,7 +199,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the CEN instances.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-j3jzhw1zpau2km****</p>
@@ -211,7 +211,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The maximum number of entries to return per page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -223,7 +223,11 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the value to the NextToken value returned by the previous API call.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>dd20****</p>
@@ -253,8 +257,8 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Enterprise Edition transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Enterprise Edition transit router instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -284,8 +288,8 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -306,7 +310,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The Enterprise Edition forward routing instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1su1ytdxtataupl****</p>
@@ -377,9 +381,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>
@@ -390,9 +394,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>tagtest</p>

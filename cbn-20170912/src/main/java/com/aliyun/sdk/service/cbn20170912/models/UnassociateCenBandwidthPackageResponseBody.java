@@ -54,7 +54,7 @@ public class UnassociateCenBandwidthPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>

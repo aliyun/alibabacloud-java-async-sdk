@@ -54,7 +54,7 @@ public class DeleteTrafficMarkingPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5F1F3A57-A753-572B-8F71-4F964398C566</p>

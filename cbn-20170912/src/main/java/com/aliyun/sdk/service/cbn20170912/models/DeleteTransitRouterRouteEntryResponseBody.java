@@ -54,7 +54,7 @@ public class DeleteTransitRouterRouteEntryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2D69CCEA-42D0-48B2-8C9A-9BB207F76D6E</p>

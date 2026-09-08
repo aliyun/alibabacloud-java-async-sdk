@@ -200,7 +200,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the cloud service is accessed.</p>
+         * <p>The region ID from which the cloud service is accessed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -212,7 +212,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
 
         /**
          * <p>The region ID of the cloud service.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -251,7 +251,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC associated with the cloud service.</p>
+         * <p>The instance ID of the VPC-connected instance associated with the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -281,7 +281,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -293,7 +293,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The number of entries per page for paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

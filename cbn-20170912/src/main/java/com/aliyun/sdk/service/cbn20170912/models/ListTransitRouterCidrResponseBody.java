@@ -67,7 +67,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the CIDR block.</p>
+         * <p>The list of transit router CIDR blocks.</p>
          */
         public Builder cidrLists(java.util.List<CidrLists> cidrLists) {
             this.cidrLists = cidrLists;
@@ -75,7 +75,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
@@ -209,7 +209,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CIDR block of the transit router.</p>
+             * <p>The transit router CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.10.0/24</p>
@@ -220,7 +220,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the CIDR block.</p>
+             * <p>The description of the transit router CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>desctest</p>
@@ -231,8 +231,8 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the CIDR block.</p>
-             * <p>The value is <strong>IPv4</strong>, which indicates that the CIDR block is of the IPv4 type.</p>
+             * <p>The type of the transit router CIDR block.</p>
+             * <p>The value is <strong>IPv4</strong> only, which indicates that the transit router CIDR block is of the IPv4 type.</p>
              * 
              * <strong>example:</strong>
              * <p>IPv4</p>
@@ -243,7 +243,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the CIDR block.</p>
+             * <p>The name of the transit router CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>nametest</p>
@@ -254,14 +254,14 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:</p>
+             * <p>Indicates whether the system is allowed to automatically add a route for the transit router CIDR block to the transit router route table.</p>
              * <ul>
-             * <li><p><strong>true</strong></p>
-             * <p>A value of <strong>true</strong> indicates that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached.</p>
-             * <p>The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.</p>
-             * <p>The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.</p>
+             * <li><p><strong>true</strong>: allowed.</p>
+             * <p>  If the value of this parameter is <strong>true</strong>, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds a route entry to the transit router route table that has a route learning relationship with the VPN connection:</p>
+             * <p>The route entry is a blackhole route whose destination CIDR block is the transit router CIDR block from which gateway IP addresses have been allocated to the IPsec connection.</p>
+             * <p>The blackhole route is propagated only to the route tables of VBR instances associated with the transit router.</p>
              * </li>
-             * <li><p><strong>false</strong></p>
+             * <li><p><strong>false</strong>: not allowed.</p>
              * </li>
              * </ul>
              * 
@@ -285,7 +285,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transit router ID.</p>
+             * <p>The ID of the transit router instance.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-p0w3x8c9em72a40nw****</p>

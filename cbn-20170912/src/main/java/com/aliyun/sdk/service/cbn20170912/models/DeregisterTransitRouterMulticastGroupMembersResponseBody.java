@@ -54,7 +54,7 @@ public class DeregisterTransitRouterMulticastGroupMembersResponseBody extends Te
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>61D0A553-5E4E-53B5-9DA3-01CBA076A286</p>

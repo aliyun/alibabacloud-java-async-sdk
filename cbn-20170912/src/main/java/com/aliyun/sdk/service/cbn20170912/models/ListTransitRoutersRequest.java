@@ -241,7 +241,7 @@ public class ListTransitRoutersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-j3jzhw1zpau2km****</p>
@@ -253,7 +253,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to enable or disable a feature of the transit router.</p>
+         * <p>The feature filter for transit routers.</p>
          */
         public Builder featureFilter(java.util.List<FeatureFilter> featureFilter) {
             this.putQueryParameter("FeatureFilter", featureFilter);
@@ -280,7 +280,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -292,7 +292,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>. For more information about paging, see the related parameter descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -304,8 +304,8 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the transit router is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the transit router instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -335,13 +335,13 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The status of the transit router. Valid values:</p>
+         * <p>The status of the transit router instance. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: The transit router is being created.</li>
-         * <li><strong>Active</strong>: The transit router is available.</li>
-         * <li><strong>Modifying</strong>: The transit router is being modified</li>
-         * <li><strong>Deleting</strong>: The transit router is being deleted.</li>
-         * <li><strong>Upgrading</strong>: The transit router is being upgraded.</li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Upgrading</strong>: being upgraded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,8 +354,8 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags.</p>
-         * <p>You can specify at most 20 tags in each call.</p>
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags at a time.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -364,7 +364,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-uf654ttymmljlvh2x****</p>
@@ -376,8 +376,8 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The name of the Enterprise Edition transit router.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the transit router instance.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -389,10 +389,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * <p>The edition of the transit router. Valid values:</p>
+         * <p>The type of the transit router instance. Valid values:</p>
          * <ul>
-         * <li><strong>Enterprise</strong>: Enhance Edition</li>
-         * <li><strong>Basic</strong>: Basic Edition</li>
+         * <li><strong>Enterprise</strong>: Enterprise Edition transit router.</li>
+         * <li><strong>Basic</strong>: Basic Edition transit router.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -464,7 +464,7 @@ public class ListTransitRoutersRequest extends Request {
             } 
 
             /**
-             * <p>The value of the field that is used to enable or disable a feature of the transit router. Supported fields:</p>
+             * <p>The key of the feature filter for transit routers. Currently supported fields:</p>
              * <ul>
              * <li><strong>Multicast</strong>: the multicast feature.</li>
              * </ul>
@@ -478,10 +478,10 @@ public class ListTransitRoutersRequest extends Request {
             }
 
             /**
-             * <p>The fields that are used to enable or disable the features of the transit router. The <strong>Multicast</strong> field supports only one value. Valid values:</p>
+             * <p>The list of values for the feature filter of transit routers. When the key is <strong>Multicast</strong>, only one value is supported. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: enables multicast.</li>
-             * <li><strong>Disabled</strong>: disables multicast.</li>
+             * <li><strong>Enabled</strong>: multicast is supported.</li>
+             * <li><strong>Disabled</strong>: multicast is not supported.</li>
              * </ul>
              */
             public Builder value(java.util.List<String> value) {
@@ -549,9 +549,9 @@ public class ListTransitRoutersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>You can specify at most 20 tag keys.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey</p>
@@ -562,9 +562,9 @@ public class ListTransitRoutersRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue</p>

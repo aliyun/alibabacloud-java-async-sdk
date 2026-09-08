@@ -230,7 +230,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
         } 
 
         /**
-         * <p>The new CIDR block of the transit router.</p>
+         * <p>The new transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>
@@ -243,9 +243,9 @@ public class ModifyTransitRouterCidrRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
 
         /**
          * <p>The new description of the transit router CIDR block.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -273,8 +273,8 @@ public class ModifyTransitRouterCidrRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>: performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run without modifying the transit router CIDR block. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the transit router CIDR block is modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
 
         /**
          * <p>The new name of the transit router CIDR block.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -318,12 +318,13 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router. Valid values:</p>
+         * <p>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table.</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * <p>If you specify true, create a private VPN connection, and enable route learning for the VPN connection, the system automatically adds the following route to the transit router route table that is in route learning relationship with the VPN connection: a blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which IP addresses of IPsec-VPN connections are allocated. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.</p>
+         * <li><p><strong>true</strong>: allowed.</p>
+         * <p>   If you select allowed, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds a route entry to the transit router route table that has a route learning relationship with the VPN connection. The route entry is a blackhole route whose destination CIDR block is the transit router CIDR block from which gateway IP addresses have been allocated for the IPsec connection.
+         *   The blackhole route is propagated only to the route tables of Virtual Border Router (VBR) instances associated with the transit router.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: not allowed.</p>
          * </li>
          * </ul>
          * 
@@ -337,8 +338,8 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the transit router is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the transit router instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,8 +370,8 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CIDR block.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a CIDR block.</p>
+         * <p>The ID of the transit router CIDR block.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the transit router CIDR block ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,7 +384,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

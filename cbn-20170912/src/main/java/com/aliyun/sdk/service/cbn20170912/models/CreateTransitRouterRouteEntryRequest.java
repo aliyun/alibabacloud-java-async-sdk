@@ -217,9 +217,9 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,10 +232,10 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request and creates the route entry after the request passes the verification.</li>
+         * <li><strong>true</strong>: Sends a check request. Only the verification is performed. No route entry is created. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,8 +284,8 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The description of the route.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The description of the route entry.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -297,7 +297,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route entry. IPv4 and IPv6 addresses are supported.</p>
+         * <p>The destination CIDR block of the route entry. Both IPv4 and IPv6 addresses are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,8 +310,8 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The name of the route.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The name of the route entry.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -323,7 +323,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+         * <p>The ID of the network instance connection associated with the next hop of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-nls9fzkfat8934****</p>
@@ -335,10 +335,10 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The type of the next hop. Valid values:</p>
+         * <p>The next hop type. Valid values:</p>
          * <ul>
-         * <li><strong>BlackHole</strong>: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.</li>
-         * <li><strong>Attachment</strong>: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.</li>
+         * <li><strong>BlackHole</strong>: specifies the route entry as a blackhole route. All packets destined for the destination CIDR block are dropped. You do not need to specify next hop information.</li>
+         * <li><strong>Attachment</strong>: specifies the next hop of the route entry as a network instance connection. You must also specify the network instance connection ID. All packets destined for the destination CIDR block are forwarded to the specified network instance connection.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

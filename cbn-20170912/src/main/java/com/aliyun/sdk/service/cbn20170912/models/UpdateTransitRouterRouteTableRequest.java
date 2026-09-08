@@ -187,9 +187,9 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -202,10 +202,10 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Default values:</p>
+         * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
+         * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>The features of the route table.</p>
+         * <p>The route table feature options.</p>
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -264,7 +264,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
 
         /**
          * <p>The description of the route table.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -276,7 +276,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router route table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
 
         /**
          * <p>The name of the route table.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -348,10 +348,10 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether multi-region ECMP routing is enabled. Valid values:</p>
+             * <p>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
              * <ul>
-             * <li><strong>disable</strong>: If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
-             * <li><strong>enable</strong>: If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>disable</strong>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions will prefer the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. In this case, the traffic latency and bandwidth consumed between different regions may change. Make sure that you have fully evaluated the impact before disabling this feature.</li>
+             * <li><strong>enable</strong>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions will form equal-cost routes when other route attributes are the same. In this case, the traffic latency and bandwidth consumed between different regions may change. Make sure that you have fully evaluated the impact before enabling this feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -80,10 +80,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         } 
 
         /**
-         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <p>Indicates whether a next query token (Token) exists. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>530BC816-F575-412A-AAB2-435125D26328</p>
@@ -106,7 +106,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         }
 
         /**
-         * <p>The detailed information about the route.</p>
+         * <p>The details of the route entries.</p>
          */
         public Builder routeEntry(java.util.List<RouteEntry> routeEntry) {
             this.routeEntry = routeEntry;
@@ -224,7 +224,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             } 
 
             /**
-             * <p>The ID of the CEN instance.</p>
+             * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cen-9adwg6ghpq8oq4dp7q</p>
@@ -235,7 +235,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * <p>The ID of the route table configured on the network instance.</p>
+             * <p>The route table ID of the network instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-bp1tlaj1c4nxr2t3e****</p>
@@ -246,7 +246,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * <p>The destination CIDR block of the route.</p>
+             * <p>The destination CIDR block of the route entry.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -257,7 +257,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * <p>Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. A value of TR indicates that the route is hosted on a transit router.</p>
+             * <p>The type of route hosting. If this field is empty, the route is not hosted. Valid values: TR, which indicates that the hosting type is transit router.</p>
              * 
              * <strong>example:</strong>
              * <p>TR</p>
@@ -268,11 +268,11 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * <p>The status of the route. Valid values:</p>
+             * <p>The status of the route entry. Valid values:</p>
              * <ul>
-             * <li><strong>Available</strong>: The route is available.</li>
-             * <li><strong>Pending</strong>: The route is being configured.</li>
-             * <li><strong>Modifying</strong>: the route is being modified.</li>
+             * <li><strong>Available</strong>: available.</li>
+             * <li><strong>Pending</strong>: being configured.</li>
+             * <li><strong>Modifying</strong>: being modified.</li>
              * </ul>
              * 
              * <strong>example:</strong>

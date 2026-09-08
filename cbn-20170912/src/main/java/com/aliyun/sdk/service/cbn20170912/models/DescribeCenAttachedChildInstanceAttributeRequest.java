@@ -161,7 +161,7 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance that is attached to the CEN instance.</p>
+         * <p>The instance ID of the network instance loaded to the CEN instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,8 +187,8 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the network instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the network instance.                   </p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,9 +203,12 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router.</p>
+         * </li>
+         * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -159,9 +159,9 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -176,8 +176,8 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run without deleting the VPN connection. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and then deletes the VPN connection after the request passes the dry run.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,10 +190,10 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully delete the VPN attachment. Valid values:</p>
+         * <p>Specifies whether to force delete the VPN connection. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): Check for resource dependencies, such as associated forwarding and route learning, before the VPN attachment is deleted. If such resources exist, the VPN attachment is not deleted and an error message is returned.</li>
-         * <li><strong>true</strong>: Delete the resource dependencies along with the VPN attachment.</li>
+         * <li><strong>false</strong> (default): checks whether related resource dependencies exist before deleting the VPN connection, such as associated forwarding and routing learning. If dependencies exist, the VPN connection is not deleted and the corresponding error is returned.</li>
+         * <li><strong>true</strong>: deletes the VPN connection along with all related dependencies.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN attachment.</p>
+         * <p>The ID of the VPN connection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

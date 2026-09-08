@@ -175,8 +175,8 @@ public class DescribeGrantRulesToResourceRequest extends Request {
 
         /**
          * <ul>
-         * <li>If you do not specify a value for <strong>MaxResults</strong>, entries are returned in one response. After you send the request, the value of <strong>MaxResults</strong> includes all entries.</li>
-         * <li>If you specify a value for <strong>MaxResults</strong>, entries are returned in batches. The value of <strong>MaxResults</strong> indicates the total number of entries returned per batch. Valid values: <strong>1</strong> to <strong>100</strong>. After you send the request, the value of <strong>MaxResults</strong> indicates the number of entries returned in the current response. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
+         * <li>If you do not specify the <strong>MaxResults</strong> parameter, paged query is not required. The value of <strong>MaxResults</strong> in the response indicates the total number of entries.</li>
+         * <li>If you specify the <strong>MaxResults</strong> parameter, paged query is required. The value of <strong>MaxResults</strong> specifies the number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current page. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,10 +189,10 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of the <strong>NextToken</strong> parameter.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+         * <li>If a subsequent query exists, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,12 +223,12 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * <p>The type of network instance. Valid values:</p>
+         * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-         * <li><strong>ExpressConnect</strong>: virtual border router (VBR)</li>
-         * <li><strong>VPN</strong>: IPsec-VPN connection</li>
-         * <li><strong>ECR</strong>: Express Connect Router (ECR)</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+         * <li><strong>ExpressConnect</strong>: Virtual border router (VBR) instance.</li>
+         * <li><strong>VPN</strong>: IPsec connection.</li>
+         * <li><strong>ECR</strong>: Express Connect Router (ECR) instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -243,7 +243,7 @@ public class DescribeGrantRulesToResourceRequest extends Request {
 
         /**
          * <p>The region ID of the network instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

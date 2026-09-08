@@ -163,7 +163,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the attached network instance.</p>
+         * <p>The network instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,8 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the attached network instance is created.</p>
+         * <p>The region ID of the network instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +203,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the attached network instance.</p>
+         * <p>The ID of the route table of the network instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,8 +216,10 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The type of the attached network instance.</p>
-         * <p>Set the value to <strong>VPC</strong>, which indicates a virtual private cloud (VPC).</p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,11 +232,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route that you want to withdraw.</p>
+         * <p>The destination CIDR block of the route entry to withdraw.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.XX.XX.0/24</p>
+         * <p>172.16.1.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

@@ -54,7 +54,7 @@ public class DisableTransitRouterRouteTablePropagationResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A7C43F99-B1E5-4A53-AB64-4BAE8AF4484E</p>

@@ -106,7 +106,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page when entries are returned in pages.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -154,7 +154,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of route entries.</p>
+         * <p>The list of route entries.</p>
          */
         public Builder transitRouterRouteEntries(java.util.List<TransitRouterRouteEntries> transitRouterRouteEntries) {
             this.transitRouterRouteEntries = transitRouterRouteEntries;
@@ -272,7 +272,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The route AS path.</p>
+             * <p>The list of AS Path attributes of the route entry.</p>
              */
             public Builder asPaths(java.util.List<String> asPaths) {
                 this.asPaths = asPaths;
@@ -280,7 +280,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route community.</p>
+             * <p>The list of Community attributes of the route entry.</p>
              */
             public Builder communities(java.util.List<String> communities) {
                 this.communities = communities;
@@ -288,7 +288,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source instance ID.</p>
+             * <p>The instance ID of the original instance from which the route entry originates.</p>
              * 
              * <strong>example:</strong>
              * <p>vbr-m5ent6du8deaq5*****</p>
@@ -299,13 +299,13 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source instance type. Valid values:</p>
+             * <p>The type of the instance from which the route originates.</p>
              * <ul>
-             * <li><strong>VPC</strong></li>
-             * <li><strong>VBR</strong></li>
-             * <li><strong>TR</strong></li>
-             * <li><strong>VPN</strong></li>
-             * <li><strong>CCN</strong></li>
+             * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+             * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance.</li>
+             * <li><strong>TR</strong>: transit router instance.</li>
+             * <li><strong>VPN</strong>: IPsec connection instance.</li>
+             * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -317,13 +317,13 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route type. Valid values:</p>
+             * <p>The original route type when the route was generated.</p>
              * <ul>
-             * <li><strong>System</strong></li>
-             * <li><strong>Custom</strong></li>
-             * <li><strong>static</strong></li>
-             * <li><strong>BGP</strong></li>
-             * <li><strong>BlackHole</strong></li>
+             * <li><strong>System</strong>: system route.</li>
+             * <li><strong>Custom</strong>: custom route.</li>
+             * <li><strong>Static</strong>: static route.</li>
+             * <li><strong>BGP</strong>: BGP route.</li>
+             * <li><strong>BlackHole</strong>: blackhole route.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route priority.</p>
+             * <p>The priority of the route entry.</p>
              * <p>A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
@@ -602,9 +602,9 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
 
             /**
              * <p>The time when the route entry was created.</p>
-             * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+             * <p>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</p>
              * <blockquote>
-             * <p> This parameter is returned only for static routes.</p>
+             * <p>This parameter is returned only for statically configured routes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -616,10 +616,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the route can be managed. Valid values:</p>
+             * <p>Indicates whether the current route entry can be modified.</p>
              * <ul>
-             * <li><strong>true</strong>: The route can be managed. You can delete the route.</li>
-             * <li><strong>false</strong>: The route cannot be managed because it is automatically generated by the system.</li>
+             * <li><strong>true</strong>: the route entry can be modified. You can delete the route entry.</li>
+             * <li><strong>false</strong>: the route entry cannot be modified. The route entry is automatically generated by the system and does not support editing.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -631,7 +631,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route attributes.</p>
+             * <p>The path attributes of the route.</p>
              */
             public Builder pathAttributes(PathAttributes pathAttributes) {
                 this.pathAttributes = pathAttributes;
@@ -639,7 +639,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix list ID.</p>
+             * <p>The ID of the prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-k1ainl66z3527773d****</p>
@@ -650,10 +650,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route tag.</p>
-             * <p>Only <strong>PermitVbr</strong> may be returned, which indicates that the route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router.</p>
+             * <p>The tag of the route entry.</p>
+             * <p>The only valid value is <strong>PermitVbr</strong>, which indicates that the current route entry is propagated only to the route tables of VBR instances under the transit router instance.</p>
              * <blockquote>
-             * <p> This parameter is returned only for routes whose CIDR blocks are automatically generated by the system.</p>
+             * <p>This parameter is returned only for system-generated routes for transit router CIDR blocks.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -665,9 +665,9 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route description.</p>
+             * <p>The description of the route entry.</p>
              * <blockquote>
-             * <p> This parameter is returned only for static routes.</p>
+             * <p>This parameter is returned only for statically configured routes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -679,7 +679,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block of the route entry. An IPv4 or IPv6 CIDR block is returned.</p>
+             * <p>The destination CIDR block of the route entry. An IPv4 CIDR block or an IPv6 CIDR block is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/24</p>
@@ -690,9 +690,9 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route ID.</p>
+             * <p>The ID of the route entry.</p>
              * <blockquote>
-             * <p> This parameter is returned only for static routes.</p>
+             * <p>This parameter is returned only for statically configured routes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -704,9 +704,9 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route name.</p>
+             * <p>The name of the route entry.</p>
              * <blockquote>
-             * <p> This parameter is returned only for static routes.</p>
+             * <p>This parameter is returned only for statically configured routes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -718,7 +718,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next hop ID. This parameter is not returned if the route is a blackhole route.</p>
+             * <p>The next hop ID of the route entry. This parameter is not returned for blackhole routes.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-vx6iwhjr1x1j78****</p>
@@ -729,7 +729,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next hop ID.</p>
+             * <p>The instance ID of the next hop of the route entry.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m5ent6du8deaq5*****</p>
@@ -740,12 +740,12 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next hop type. Valid values:</p>
+             * <p>The type of the next hop instance of the route entry.</p>
              * <ul>
-             * <li><strong>VPC</strong></li>
-             * <li><strong>VBR</strong></li>
-             * <li><strong>TR</strong></li>
-             * <li><strong>VPN</strong></li>
+             * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+             * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance.</li>
+             * <li><strong>TR</strong>: transit router instance.</li>
+             * <li><strong>VPN</strong>: IPsec connection instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -757,10 +757,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next hop type. Valid values:</p>
+             * <p>The next hop type of the route entry.</p>
              * <ul>
-             * <li><strong>BlackHole</strong>: a blackhole route. Packets destined for the destination CIDR block of the route are dropped.</li>
-             * <li><strong>Attachment</strong>: a network instance connection. Packets destined for the destination CIDR block of the route are forwarded to the specified network instance connection.</li>
+             * <li><strong>BlackHole</strong>: the route entry is a blackhole route. All traffic destined for the destination CIDR block is dropped.</li>
+             * <li><strong>Attachment</strong>: the next hop of the route entry is a network instance connection. All traffic destined for the destination CIDR block is forwarded to the specified network instance connection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -772,7 +772,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source instance ID.</p>
+             * <p>The instance ID of the origin of the route entry.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m5ent6du8deaq5*****</p>
@@ -783,12 +783,12 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source instance type. Valid values:</p>
+             * <p>The type of the origin instance of the route entry.</p>
              * <ul>
-             * <li><strong>VPC</strong></li>
-             * <li><strong>VBR</strong></li>
-             * <li><strong>TR</strong></li>
-             * <li><strong>VPN</strong></li>
+             * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+             * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance.</li>
+             * <li><strong>TR</strong>: transit router instance.</li>
+             * <li><strong>VPN</strong>: IPsec connection instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -800,15 +800,15 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route status. Valid values:</p>
+             * <p>The status of the route entry.</p>
              * <ul>
-             * <li><strong>Active</strong></li>
-             * <li><strong>Rejected</strong></li>
-             * <li><strong>Prohibited</strong></li>
-             * <li><strong>Standby</strong></li>
-             * <li><strong>Candidate</strong></li>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Deleting</strong></li>
+             * <li><strong>Active</strong>: active.</li>
+             * <li><strong>Rejected</strong>: rejected due to a route conflict.</li>
+             * <li><strong>Prohibited</strong>: prohibited by a routing policy.</li>
+             * <li><strong>Standby</strong>: standby.</li>
+             * <li><strong>Candidate</strong>: candidate.</li>
+             * <li><strong>Creating</strong>: being created.</li>
+             * <li><strong>Deleting</strong>: being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -820,10 +820,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the route. Valid values:</p>
+             * <p>The type of the route entry.</p>
              * <ul>
-             * <li><strong>Static</strong>: static routes.</li>
-             * <li><strong>Propagated</strong>: automatically learned by the route table.</li>
+             * <li><strong>Static</strong>: a statically configured route entry.</li>
+             * <li><strong>Propagated</strong>: a route entry generated by automatic learning.</li>
              * </ul>
              * 
              * <strong>example:</strong>

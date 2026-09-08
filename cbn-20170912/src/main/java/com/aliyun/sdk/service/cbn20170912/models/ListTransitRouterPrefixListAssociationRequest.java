@@ -257,9 +257,9 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the next hop connection.</p>
          * <blockquote>
-         * <p>Set the value to <strong>BlackHole</strong> if you want to query the prefix list that generates blackhole routes.</p>
+         * <p>To query information about a prefix list that generates blackhole routes, set this parameter to <strong>BlackHole</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance associated with the next hop connection.</p>
+         * <p>The network instance ID associated with the next hop connection.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-6eh7fp9hdqa2wv85t****</p>
@@ -284,12 +284,12 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The type of the next hop. Valid values:</p>
+         * <p>The next hop type. Valid values:</p>
          * <ul>
-         * <li><strong>BlackHole</strong>: The prefix list that generates blackhole routes.</li>
-         * <li><strong>VPC</strong>: The prefix list whose next hop is a virtual private cloud (VPC) connection.</li>
-         * <li><strong>VBR</strong>: The prefix list whose next hop is a virtual border router (VBR) connection.</li>
-         * <li><strong>TR</strong>: The prefix list whose next hop is an inter-region connection on the transit router.</li>
+         * <li><strong>BlackHole</strong>: queries information about prefix lists that generate blackhole routes.</li>
+         * <li><strong>VPC</strong>: queries information about prefix lists whose next hop is a Virtual Private Cloud (VPC) connection.</li>
+         * <li><strong>VBR</strong>: queries information about prefix lists whose next hop is a Virtual Border Router (VBR) connection.</li>
+         * <li><strong>TR</strong>: queries information about prefix lists whose next hop is an inter-region connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list to query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -344,7 +344,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -368,8 +368,8 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the transit router is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the transit router instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,10 +400,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The status of the prefix list. Valid values:</p>
+         * <p>The status of the prefix list.</p>
          * <ul>
-         * <li><strong>Active</strong></li>
-         * <li><strong>Updating</strong></li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Updating</strong>: being updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +429,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table of the transit router.</p>
+         * <p>The ID of the transit router route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-6ehgc262hr170qgyc****</p>

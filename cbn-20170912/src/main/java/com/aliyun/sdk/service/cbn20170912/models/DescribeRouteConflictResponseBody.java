@@ -106,7 +106,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page during paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE3A2CC7-41F1-58DB-8306-CFC99D9C747B</p>
@@ -139,7 +139,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of overlapping routes.</p>
+         * RouteConflicts.
          */
         public Builder routeConflicts(RouteConflicts routeConflicts) {
             this.routeConflicts = routeConflicts;
@@ -147,7 +147,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,10 +255,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The destination CIDR block of the overlapping route.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.0.0/16</p>
+             * DestinationCidrBlock.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -266,10 +263,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the peer network instance on which the overlapping routes are found.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-0q3b7oviikmm9h****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -277,15 +271,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the peer network instance on which the overlapping routes are found.</p>
-             * <ul>
-             * <li><strong>VPC</strong>: VPC</li>
-             * <li><strong>VBR</strong>: VBR</li>
-             * <li><strong>CCN</strong>: CCN instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CCN</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -293,10 +279,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the peer network instance on which the overlapping routes are found is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-cn-shanghai</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -304,14 +287,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the route error. Valid values:</p>
-             * <ul>
-             * <li><strong>conflict</strong>: The routes have the same destination CIDR block.</li>
-             * <li><strong>overflow</strong>: The number of routes in the route table configured on another network instance has reached the upper limit.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>conflict</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -175,7 +175,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the cloud service is accessed.</p>
+         * <p>The region ID from which the Alibaba Cloud service is accessed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses or CIDR blocks of the cloud service.</p>
+         * <p>The IP address or CIDR block of the Alibaba Cloud service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,8 +214,8 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cloud service.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Alibaba Cloud service.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</p>
+         * <p>The ID of the VPC that is associated with the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1t36rn9l53iwbsf****</p>
