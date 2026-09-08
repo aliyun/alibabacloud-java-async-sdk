@@ -101,7 +101,7 @@ public class ListConnectionsRequest extends Request {
         } 
 
         /**
-         * <p>The key word that you specify to query connections. Connections can be queried by prefixes.</p>
+         * <p>The prefix of the connection configuration name. Supports fuzzy match by prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>connection-name</p>
@@ -113,7 +113,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging.</p>
+         * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
          * <ul>
          * <li>Default value: 10.</li>
          * </ul>
@@ -128,9 +128,9 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * <p>If you set the Limit parameter and excess return values exist, this parameter is returned.</p>
+         * <p>The pagination token. If the number of results exceeds the value of MaxResults, a NextToken value is returned.</p>
          * <ul>
-         * <li>Default value: 0.</li>
+         * <li>The NextToken value starts from 0. Default value: 0.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * <p>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch、OSS_TABLES、SLS、OTS、MaxCompute、MongoDB、Redis、SQLServer、ClickHouse、Oracle、Hive、Iceberg、lakehouse。不传则返回所有类型</p>
+         * <p>Filters query results by connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, and lakehouse. If this parameter is not specified, all types are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>

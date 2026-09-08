@@ -102,7 +102,7 @@ public class GetTableRequest extends Request {
         } 
 
         /**
-         * <p>表所属的数据目录名称。可通过 ListCatalogs 获取</p>
+         * <p>Data catalog</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -114,7 +114,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>用于保证请求幂等性的Token。建议使用 UUID</p>
+         * <p>Idempotent token</p>
          * 
          * <strong>example:</strong>
          * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -126,7 +126,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>要查询的事件表名称。需同时指定所属 Catalog 和 Namespace。可通过 ListTables 获取已有表列表</p>
+         * <p>Table name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>表所属的命名空间名称。可通过 ListNamespaces 获取</p>
+         * <p>Namespace</p>
          * 
          * <strong>example:</strong>
          * <p>my_namespace</p>

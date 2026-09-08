@@ -152,7 +152,10 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. A maximum of 100 entries can be returned in a call.</p>
+         * <p>The maximum number of entries returned per request. You can use this parameter together with NextToken to implement paging.</p>
+         * <blockquote>
+         * <p>Notice: The maximum number of entries returned per request cannot exceed 100.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -164,7 +167,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The name of the event stream that you want to query.</p>
+         * <p>The name prefix of the event stream.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -176,7 +179,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+         * <p>If the number of entries exceeds the value of Limit, a NextToken is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -200,7 +203,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+         * <p>The ARN of the event source.</p>
          */
         public Builder sourceArn(String sourceArn) {
             this.putBodyParameter("SourceArn", sourceArn);
@@ -209,7 +212,7 @@ public class ListEventStreamingsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags used for filtering.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -277,7 +280,10 @@ public class ListEventStreamingsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mns</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -285,7 +291,10 @@ public class ListEventStreamingsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mnstest</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -223,7 +223,10 @@ public class AskLumaLogEntry extends TeaModel {
         } 
 
         /**
-         * AgentName.
+         * <p>Agent name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent</p>
          */
         public Builder agentName(String agentName) {
             this.agentName = agentName;
@@ -231,7 +234,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * ClarificationNeeded.
+         * <p>Whether clarification is needed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder clarificationNeeded(Boolean clarificationNeeded) {
             this.clarificationNeeded = clarificationNeeded;
@@ -239,7 +245,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * ClarificationQuestion.
+         * <p>Clarification question text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您指的是哪张表？</p>
          */
         public Builder clarificationQuestion(String clarificationQuestion) {
             this.clarificationQuestion = clarificationQuestion;
@@ -247,7 +256,7 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>Structured result body</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -255,7 +264,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * ConversationId.
+         * <p>Conversation ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conv_xxx</p>
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
@@ -263,7 +275,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>Creation time (milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717200000000</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -271,7 +286,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * DurationMs.
+         * <p>Invocation duration (milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3200</p>
          */
         public Builder durationMs(Long durationMs) {
             this.durationMs = durationMs;
@@ -279,7 +297,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExecutionFailed</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -287,7 +308,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -295,7 +319,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * IsError.
+         * <p>Whether it is an error</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isError(Boolean isError) {
             this.isError = isError;
@@ -303,7 +330,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>Message ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg_xxx</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -311,7 +341,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * Question.
+         * <p>Input question</p>
+         * 
+         * <strong>example:</strong>
+         * <p>帮我统计一下最近的订单数据。</p>
          */
         public Builder question(String question) {
             this.question = question;
@@ -319,7 +352,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>Log source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MCP, CHAT</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -327,7 +363,10 @@ public class AskLumaLogEntry extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Execution status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING, SUCCEEDED, FAILED, TIMEOUT</p>
          */
         public Builder status(String status) {
             this.status = status;

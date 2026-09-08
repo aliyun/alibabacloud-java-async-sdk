@@ -104,7 +104,7 @@ public class QueryEventHouseWithTimeRangeRequest extends Request {
         } 
 
         /**
-         * <p>查询内部EventHouse数据的开始时间，使用Unix时间戳，单位为秒。时间区间包含该时刻。</p>
+         * <p>The start time for querying internal EventHouse data. Specify a UNIX timestamp in seconds. The time range includes this point in time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class QueryEventHouseWithTimeRangeRequest extends Request {
         }
 
         /**
-         * <p>查询内部EventHouse数据的结束时间，使用Unix时间戳，单位为秒。时间区间不包含该时刻，且必须大于BeginTime。</p>
+         * <p>The end time for querying internal EventHouse data. Specify a UNIX timestamp in seconds. The time range excludes this point in time. The value must be greater than BeginTime.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class QueryEventHouseWithTimeRangeRequest extends Request {
         }
 
         /**
-         * <p>本次查询允许返回的最大结果行数。</p>
+         * <p>The maximum number of result rows that can be returned for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -142,7 +142,7 @@ public class QueryEventHouseWithTimeRangeRequest extends Request {
         }
 
         /**
-         * <p>要执行的单条只读SQL语句。支持查询内部EventHouse，也支持与挂载的外部数据源进行联合查询。</p>
+         * <p>The single read-only SQL statement to execute. You can query internal EventHouse data or perform federated queries with mounted external data sources.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

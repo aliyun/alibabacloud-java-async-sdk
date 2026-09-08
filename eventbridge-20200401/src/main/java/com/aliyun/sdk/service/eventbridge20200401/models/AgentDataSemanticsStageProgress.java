@@ -69,6 +69,7 @@ public class AgentDataSemanticsStageProgress extends TeaModel {
         } 
 
         /**
+         * <p>The stage name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +81,7 @@ public class AgentDataSemanticsStageProgress extends TeaModel {
         }
 
         /**
+         * <p>The stage status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

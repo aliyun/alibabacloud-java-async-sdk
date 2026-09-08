@@ -145,7 +145,7 @@ public class EventHouseRuntime extends TeaModel {
         } 
 
         /**
-         * <p>EventHouse Runtime 最后成功生效的 CU 数量</p>
+         * <p>The number of CUs that last took effect for the EventHouse Runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -156,7 +156,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>创建或变配失败时返回的稳定错误码</p>
+         * <p>The stable error code returned when the creation or specification change operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNTIME_OPERATION_TIMEOUT</p>
@@ -167,7 +167,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>创建或变配失败时返回的脱敏错误信息</p>
+         * <p>The desensitized error message returned when the creation or specification change operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Runtime operation timed out</p>
@@ -178,7 +178,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>EventHouse Runtime 名称。首期通常为 default</p>
+         * <p>The name of the EventHouse Runtime. Typically set to default in the initial phase.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -189,7 +189,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>当前创建或变配操作的进度，取值范围为 0 到 100</p>
+         * <p>The progress of the current creation or specification change operation. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -200,7 +200,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>当前创建或变配操作所处阶段</p>
+         * <p>The current stage of the creation or specification change operation.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNTIME_HEALTH_CHECK</p>
@@ -211,7 +211,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>EventHouse Runtime 当前状态。RUNNING 表示 Runtime 已就绪且可以承接查询。可能值为 CREATING、RUNNING、UPDATING、RECOVERING、CLOSED、CREATE_FAILED、UPDATE_FAILED</p>
+         * <p>The current status of the EventHouse Runtime. RUNNING indicates that the Runtime is ready and can accept queries. Valid values: CREATING, RUNNING, UPDATING, RECOVERING, CLOSED, CREATE_FAILED, and UPDATE_FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -222,7 +222,7 @@ public class EventHouseRuntime extends TeaModel {
         }
 
         /**
-         * <p>创建、变配或对应失败状态下的目标 CU 数量，稳定运行时不返回</p>
+         * <p>The target number of CUs during creation, specification change, or the corresponding failed state. This parameter is not returned when the Runtime is running stably.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

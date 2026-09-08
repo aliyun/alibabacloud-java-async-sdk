@@ -143,7 +143,7 @@ public class ListRulesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>C7043799-F4DA-5290-9249-97C359876D97</p>
+         * <p>C7043799-F4DA-5290-9249-97C35987****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -288,7 +288,7 @@ public class ListRulesResponseBody extends TeaModel {
              * <p>The ID of the custom event target.</p>
              * 
              * <strong>example:</strong>
-             * <p>177</p>
+             * <p>Mlm123456JHd2Rs****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -299,7 +299,7 @@ public class ListRulesResponseBody extends TeaModel {
              * <p>The transformer that is used to push events.</p>
              * 
              * <strong>example:</strong>
-             * <p>MATCHED_EVENT</p>
+             * <p>PARAM_TRANSFORMER</p>
              */
             public Builder pushSelector(String pushSelector) {
                 this.pushSelector = pushSelector;
@@ -516,7 +516,7 @@ public class ListRulesResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;source&quot;:[&quot;acs.oss&quot;],&quot;type&quot;:[&quot;oss:BucketQueried:GetBucketStat&quot;]}</p>
+             * <p>{\&quot;source\&quot;:[\&quot;acs.oss\&quot;],\&quot;type\&quot;:[\&quot;oss:BucketQueried:GetBucketStat\&quot;]}</p>
              */
             public Builder filterPattern(String filterPattern) {
                 this.filterPattern = filterPattern;

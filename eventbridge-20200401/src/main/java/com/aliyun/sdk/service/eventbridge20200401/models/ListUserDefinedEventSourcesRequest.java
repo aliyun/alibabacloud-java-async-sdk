@@ -113,7 +113,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.</p>
+         * <p>The maximum number of entries to return per request. You can use this parameter with NextToken for pagination. The maximum value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * <p>The name of the event source.</p>
+         * <p>The prefix of the event source name.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -137,7 +137,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+         * <p>The token used to retrieve the next page of results. Set this parameter to the NextToken value returned from a previous call.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

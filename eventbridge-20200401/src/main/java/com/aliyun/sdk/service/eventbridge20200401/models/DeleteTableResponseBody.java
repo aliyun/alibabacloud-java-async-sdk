@@ -93,7 +93,10 @@ public class DeleteTableResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteTableResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message of the API</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DeleteTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

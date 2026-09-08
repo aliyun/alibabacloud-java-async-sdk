@@ -110,6 +110,7 @@ public class AgentDataSemanticsJoin extends TeaModel {
         } 
 
         /**
+         * <p>The join condition.</p>
          * <p>This parameter is required.</p>
          */
         public Builder condition(AgentDataSemanticsJoinCondition condition) {
@@ -118,7 +119,10 @@ public class AgentDataSemanticsJoin extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The join usage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Use this join when analyzing customer attributes associated with sales transactions</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -126,6 +130,7 @@ public class AgentDataSemanticsJoin extends TeaModel {
         }
 
         /**
+         * <p>The full name of the left table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +142,10 @@ public class AgentDataSemanticsJoin extends TeaModel {
         }
 
         /**
-         * RelationshipType.
+         * <p>The table relationship type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>many_to_one</p>
          */
         public Builder relationshipType(String relationshipType) {
             this.relationshipType = relationshipType;
@@ -145,6 +153,7 @@ public class AgentDataSemanticsJoin extends TeaModel {
         }
 
         /**
+         * <p>The full name of the right table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

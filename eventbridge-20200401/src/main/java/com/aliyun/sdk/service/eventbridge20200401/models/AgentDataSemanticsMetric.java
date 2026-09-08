@@ -110,7 +110,10 @@ public class AgentDataSemanticsMetric extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The usage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Use totalPrice to calculate total sales for sales performance comparison</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -118,10 +121,11 @@ public class AgentDataSemanticsMetric extends TeaModel {
         }
 
         /**
+         * <p>The name of the SQL expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>总销售额</p>
+         * <p>TotalSales</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -129,6 +133,7 @@ public class AgentDataSemanticsMetric extends TeaModel {
         }
 
         /**
+         * <p>The SQL expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +145,10 @@ public class AgentDataSemanticsMetric extends TeaModel {
         }
 
         /**
-         * Synonyms.
+         * <p>The list of synonyms. A maximum of 10 items are supported. Each item can contain up to 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Sales&quot;,&quot;Revenue&quot;,&quot;GMV&quot;]</p>
          */
         public Builder synonyms(java.util.List<String> synonyms) {
             this.synonyms = synonyms;
@@ -148,6 +156,7 @@ public class AgentDataSemanticsMetric extends TeaModel {
         }
 
         /**
+         * <p>The type of the SQL expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

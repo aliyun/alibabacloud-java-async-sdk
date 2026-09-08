@@ -80,10 +80,10 @@ public class UpdateConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Valid value: 200, which indicates that the request was successful.</p>
+         * <p>The API status or POP error code. Valid values: 200: Success.</p>
          * 
          * <strong>example:</strong>
-         * <p>Success</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;

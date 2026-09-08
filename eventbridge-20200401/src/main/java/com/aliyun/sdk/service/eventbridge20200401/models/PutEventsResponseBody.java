@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link PutTargetsResponseBody} extends {@link TeaModel}
+ * {@link PutEventsResponseBody} extends {@link TeaModel}
  *
- * <p>PutTargetsResponseBody</p>
+ * <p>PutEventsResponseBody</p>
  */
-public class PutTargetsResponseBody extends TeaModel {
+public class PutEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class PutTargetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private PutTargetsResponseBody(Builder builder) {
+    private PutEventsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class PutTargetsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PutTargetsResponseBody create() {
+    public static PutEventsResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class PutTargetsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(PutTargetsResponseBody model) {
+        private Builder(PutEventsResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,16 +106,10 @@ public class PutTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
-         * <ul>
-         * <li><p>Success: The request was successful.</p>
-         * </li>
-         * <li><p>Other values indicate an error. For details, see Error codes.</p>
-         * </li>
-         * </ul>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
-         * <p>Success</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -134,7 +128,7 @@ public class PutTargetsResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The event rule not existed!</p>
+         * <p>EventBusNotExist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,10 +136,10 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID that Alibaba Cloud generates for the request.</p>
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
+         * <p>2BC1857D-E633-5E79-B2C2-43EF5F7730D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +147,7 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns true if the operation is successful.</p>
+         * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,47 +157,44 @@ public class PutTargetsResponseBody extends TeaModel {
             return this;
         }
 
-        public PutTargetsResponseBody build() {
-            return new PutTargetsResponseBody(this);
+        public PutEventsResponseBody build() {
+            return new PutEventsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link PutTargetsResponseBody} extends {@link TeaModel}
+     * {@link PutEventsResponseBody} extends {@link TeaModel}
      *
-     * <p>PutTargetsResponseBody</p>
+     * <p>PutEventsResponseBody</p>
      */
-    public static class ErrorEntries extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("EntryId")
-        private String entryId;
-
+    public static class EntryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        private ErrorEntries(Builder builder) {
-            this.entryId = builder.entryId;
+        @com.aliyun.core.annotation.NameInMap("EventId")
+        private String eventId;
+
+        @com.aliyun.core.annotation.NameInMap("TraceId")
+        private String traceId;
+
+        private EntryList(Builder builder) {
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.eventId = builder.eventId;
+            this.traceId = builder.traceId;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ErrorEntries create() {
+        public static EntryList create() {
             return builder().build();
-        }
-
-        /**
-         * @return entryId
-         */
-        public String getEntryId() {
-            return this.entryId;
         }
 
         /**
@@ -220,36 +211,41 @@ public class PutTargetsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        /**
+         * @return eventId
+         */
+        public String getEventId() {
+            return this.eventId;
+        }
+
+        /**
+         * @return traceId
+         */
+        public String getTraceId() {
+            return this.traceId;
+        }
+
         public static final class Builder {
-            private String entryId; 
             private String errorCode; 
             private String errorMessage; 
+            private String eventId; 
+            private String traceId; 
 
             private Builder() {
             } 
 
-            private Builder(ErrorEntries model) {
-                this.entryId = model.entryId;
+            private Builder(EntryList model) {
                 this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
+                this.eventId = model.eventId;
+                this.traceId = model.traceId;
             } 
-
-            /**
-             * <p>The ID of the failed event target.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Mlm123456JHd2RsRoKw</p>
-             */
-            public Builder entryId(String entryId) {
-                this.entryId = entryId;
-                return this;
-            }
 
             /**
              * <p>The error code.</p>
              * 
              * <strong>example:</strong>
-             * <p>EventRuleTargetIdDuplicate</p>
+             * <p>Success indicates success. Other values indicate exceptions</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -257,18 +253,40 @@ public class PutTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the error.</p>
+             * <p>The detailed error description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The id of event target is duplicate!</p>
+             * <p>triggerPicture failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
                 return this;
             }
 
-            public ErrorEntries build() {
-                return new ErrorEntries(this);
+            /**
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4c8b7500-2aea-4f5a-b7dd-9d9dd986c07d</p>
+             */
+            public Builder eventId(String eventId) {
+                this.eventId = eventId;
+                return this;
+            }
+
+            /**
+             * <p>The trace ID, which is used to query the exact call information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4E17C677F5357FB23D1A7FF964CD1999</p>
+             */
+            public Builder traceId(String traceId) {
+                this.traceId = traceId;
+                return this;
+            }
+
+            public EntryList build() {
+                return new EntryList(this);
             } 
 
         } 
@@ -276,20 +294,20 @@ public class PutTargetsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link PutTargetsResponseBody} extends {@link TeaModel}
+     * {@link PutEventsResponseBody} extends {@link TeaModel}
      *
-     * <p>PutTargetsResponseBody</p>
+     * <p>PutEventsResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ErrorEntries")
-        private java.util.List<ErrorEntries> errorEntries;
+        @com.aliyun.core.annotation.NameInMap("EntryList")
+        private java.util.List<EntryList> entryList;
 
-        @com.aliyun.core.annotation.NameInMap("ErrorEntriesCount")
-        private Integer errorEntriesCount;
+        @com.aliyun.core.annotation.NameInMap("FailedEntryCount")
+        private Integer failedEntryCount;
 
         private Data(Builder builder) {
-            this.errorEntries = builder.errorEntries;
-            this.errorEntriesCount = builder.errorEntriesCount;
+            this.entryList = builder.entryList;
+            this.failedEntryCount = builder.failedEntryCount;
         }
 
         public static Builder builder() {
@@ -301,51 +319,47 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorEntries
+         * @return entryList
          */
-        public java.util.List<ErrorEntries> getErrorEntries() {
-            return this.errorEntries;
+        public java.util.List<EntryList> getEntryList() {
+            return this.entryList;
         }
 
         /**
-         * @return errorEntriesCount
+         * @return failedEntryCount
          */
-        public Integer getErrorEntriesCount() {
-            return this.errorEntriesCount;
+        public Integer getFailedEntryCount() {
+            return this.failedEntryCount;
         }
 
         public static final class Builder {
-            private java.util.List<ErrorEntries> errorEntries; 
-            private Integer errorEntriesCount; 
+            private java.util.List<EntryList> entryList; 
+            private Integer failedEntryCount; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.errorEntries = model.errorEntries;
-                this.errorEntriesCount = model.errorEntriesCount;
+                this.entryList = model.entryList;
+                this.failedEntryCount = model.failedEntryCount;
             } 
 
             /**
-             * <p>Details about the event targets that failed to be processed.</p>
+             * <p>The collection of event sending results.</p>
              */
-            public Builder errorEntries(java.util.List<ErrorEntries> errorEntries) {
-                this.errorEntries = errorEntries;
+            public Builder entryList(java.util.List<EntryList> entryList) {
+                this.entryList = entryList;
                 return this;
             }
 
             /**
-             * <p>The number of event targets that failed to be processed. A value of 0 indicates that all event targets were processed successfully.</p>
-             * <ul>
-             * <li></li>
-             * <li></li>
-             * </ul>
+             * <p>The number of events that failed to be sent.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>2</p>
              */
-            public Builder errorEntriesCount(Integer errorEntriesCount) {
-                this.errorEntriesCount = errorEntriesCount;
+            public Builder failedEntryCount(Integer failedEntryCount) {
+                this.failedEntryCount = failedEntryCount;
                 return this;
             }
 

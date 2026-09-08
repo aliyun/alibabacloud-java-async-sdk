@@ -126,7 +126,11 @@ public class UpdateEventStreamingBusinessOptionRequest extends Request {
         }
 
         /**
+         * <p>The billing mode. Valid values are CapacityUnitMode for the CU mode and EventNumMode for the pay-by-event mode.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CapacityUnitMode</p>
          */
         public Builder businessMode(String businessMode) {
             this.putBodyParameter("BusinessMode", businessMode);
@@ -135,6 +139,7 @@ public class UpdateEventStreamingBusinessOptionRequest extends Request {
         }
 
         /**
+         * <p>The name of the event stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +152,10 @@ public class UpdateEventStreamingBusinessOptionRequest extends Request {
         }
 
         /**
-         * MaxCapacityUnitCount.
+         * <p>The maximum number of CUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxCapacityUnitCount(Long maxCapacityUnitCount) {
             this.putBodyParameter("MaxCapacityUnitCount", maxCapacityUnitCount);
@@ -156,7 +164,10 @@ public class UpdateEventStreamingBusinessOptionRequest extends Request {
         }
 
         /**
-         * MinCapacityUnitCount.
+         * <p>The minimum number of CUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minCapacityUnitCount(Long minCapacityUnitCount) {
             this.putBodyParameter("MinCapacityUnitCount", minCapacityUnitCount);

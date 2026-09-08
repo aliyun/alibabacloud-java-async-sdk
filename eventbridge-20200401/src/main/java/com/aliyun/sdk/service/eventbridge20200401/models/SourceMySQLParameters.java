@@ -210,7 +210,7 @@ public class SourceMySQLParameters extends TeaModel {
         } 
 
         /**
-         * DatabaseName.
+         * <p>The name of the database.</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -218,7 +218,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * HostName.
+         * <p>The hostname or IP address of the database server.</p>
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -226,7 +226,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * IncludeSchemaChanges.
+         * <p>Indicates whether to include schema changes.</p>
          */
         public Builder includeSchemaChanges(String includeSchemaChanges) {
             this.includeSchemaChanges = includeSchemaChanges;
@@ -234,7 +234,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type.</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -242,7 +242,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The password for the user.</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -250,7 +250,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The database server port.</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -258,7 +258,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region that contains the data source.</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -266,7 +266,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group.</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -274,7 +274,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * SnapshotMode.
+         * <p>The snapshot mode.</p>
          */
         public Builder snapshotMode(String snapshotMode) {
             this.snapshotMode = snapshotMode;
@@ -282,7 +282,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * TableNames.
+         * <p>The names of tables to synchronize. Separate multiple table names with a comma.</p>
          */
         public Builder tableNames(String tableNames) {
             this.tableNames = tableNames;
@@ -290,7 +290,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The database username.</p>
          */
         public Builder user(String user) {
             this.user = user;
@@ -298,7 +298,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The VSwitch IDs. Separate multiple IDs with a comma.</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -306,7 +306,7 @@ public class SourceMySQLParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC.</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

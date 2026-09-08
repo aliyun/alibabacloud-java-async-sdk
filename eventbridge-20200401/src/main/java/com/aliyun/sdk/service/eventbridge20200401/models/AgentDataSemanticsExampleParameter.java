@@ -97,6 +97,7 @@ public class AgentDataSemanticsExampleParameter extends TeaModel {
         } 
 
         /**
+         * <p>The data type of the parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,7 +109,10 @@ public class AgentDataSemanticsExampleParameter extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The lower bound of the transaction date</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -116,6 +120,7 @@ public class AgentDataSemanticsExampleParameter extends TeaModel {
         }
 
         /**
+         * <p>The parameter name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +132,7 @@ public class AgentDataSemanticsExampleParameter extends TeaModel {
         }
 
         /**
+         * <p>The example value of the parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

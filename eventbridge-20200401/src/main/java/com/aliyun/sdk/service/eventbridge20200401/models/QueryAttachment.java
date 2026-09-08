@@ -80,7 +80,10 @@ public class QueryAttachment extends TeaModel {
         } 
 
         /**
-         * Query.
+         * <p>The query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;SELECT city, COUNT(*) AS cnt FROM events GROUP BY city&quot;</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -88,7 +91,7 @@ public class QueryAttachment extends TeaModel {
         }
 
         /**
-         * <p>对应本次真实 SQL 工具执行的稳定标识，用于结果追踪和解释</p>
+         * <p>The stable identifier for the actual SQL tool execution, used for result tracking and interpretation.</p>
          * 
          * <strong>example:</strong>
          * <p>sqlx-0-a1b2c3d4</p>
@@ -99,7 +102,7 @@ public class QueryAttachment extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The query execution result.</p>
          */
         public Builder result(ExecutionResult result) {
             this.result = result;

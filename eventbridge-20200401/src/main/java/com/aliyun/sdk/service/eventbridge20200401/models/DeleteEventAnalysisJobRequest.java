@@ -60,7 +60,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
         } 
 
         /**
-         * <p>指定需要删除的数据源资源标识，包含Kafka或RocketMQ的定位信息。系统根据此标识定位并删除对应的作业及其关联的事件流和事件仓表</p>
+         * <p>The identifier of the source resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             } 
 
             /**
-             * <p>Kafka实例ID，可通过消息队列Kafka版控制台获取</p>
+             * <p>The instance ID of the Kafka instance.</p>
              * 
              * <strong>example:</strong>
              * <p>alikafka_post-cn-xxx</p>
@@ -157,7 +157,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             }
 
             /**
-             * <p>Kafka实例所在地域ID</p>
+             * <p>The region of the Kafka instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -168,7 +168,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             }
 
             /**
-             * <p>Kafka Topic名称</p>
+             * <p>The name of the Kafka topic.</p>
              * 
              * <strong>example:</strong>
              * <p>my_topic</p>
@@ -264,7 +264,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             } 
 
             /**
-             * <p>RocketMQ实例ID，可通过消息队列RocketMQ版控制台获取</p>
+             * <p>The instance ID of the RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-xxx</p>
@@ -275,7 +275,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             }
 
             /**
-             * <p>RocketMQ实例版本类型，可选值：Cloud_4（4.x版本）、Cloud_5（5.x版本）</p>
+             * <p>The type of the RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Cloud_5</p>
@@ -286,7 +286,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             }
 
             /**
-             * <p>RocketMQ实例所在地域ID</p>
+             * <p>The region of the RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -297,7 +297,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             }
 
             /**
-             * <p>RocketMQ Topic名称</p>
+             * <p>The name of the RocketMQ topic.</p>
              * 
              * <strong>example:</strong>
              * <p>my_topic</p>
@@ -367,7 +367,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             } 
 
             /**
-             * <p>Kafka数据源定位信息，指定Kafka实例和Topic。与RocketMQ二选一，不能同时指定</p>
+             * <p>The Kafka data source.</p>
              */
             public Builder kafka(Kafka kafka) {
                 this.kafka = kafka;
@@ -375,7 +375,7 @@ public class DeleteEventAnalysisJobRequest extends Request {
             }
 
             /**
-             * <p>RocketMQ数据源定位信息，指定RocketMQ实例和Topic。与Kafka二选一，不能同时指定</p>
+             * <p>The RocketMQ data source.</p>
              */
             public Builder rocketMQ(RocketMQ rocketMQ) {
                 this.rocketMQ = rocketMQ;

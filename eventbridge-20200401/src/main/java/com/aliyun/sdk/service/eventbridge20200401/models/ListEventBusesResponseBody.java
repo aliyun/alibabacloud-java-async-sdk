@@ -143,7 +143,7 @@ public class ListEventBusesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30FAD2D</p>
+         * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +271,7 @@ public class ListEventBusesResponseBody extends TeaModel {
              * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs:eventbridge:cn-hangzhou:123456789098***:eventbus/default</p>
+             * <p>acs:eventbridge:cn-hangzhou:12345678909****:eventbus/default</p>
              */
             public Builder eventBusARN(String eventBusARN) {
                 this.eventBusARN = eventBusARN;

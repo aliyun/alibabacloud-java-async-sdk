@@ -106,7 +106,14 @@ public class UpdateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The operation was successful.                                 </li>
+         * <li>Other values: An error code was returned. For more information, see error codes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the operation was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidArgument</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>382E6272-XXXXX-A8AF0BFAC1A5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,10 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Returns true if the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

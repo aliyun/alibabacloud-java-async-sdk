@@ -106,7 +106,10 @@ public class SaveAgentDataSemanticsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class SaveAgentDataSemanticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The update result. If the save is successful, an empty object is returned with no additional business fields. If none of the four knowledge categories are specified, the target state is all four categories empty: if a non-empty current version exists, an all-empty version is published. If the current version is already all empty or no current version exists, the operation succeeds idempotently and the current round of pending generation results is finalized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class SaveAgentDataSemanticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid data semantics request.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class SaveAgentDataSemanticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DAF96FB-A4DF-548C-B8A1-F2A8D2F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class SaveAgentDataSemanticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

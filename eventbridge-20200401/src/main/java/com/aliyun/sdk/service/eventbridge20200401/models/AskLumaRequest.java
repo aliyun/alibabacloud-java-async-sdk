@@ -103,6 +103,7 @@ public class AskLumaRequest extends Request {
         } 
 
         /**
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class AskLumaRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID. This parameter is required for multi-turn conversations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conv_1474xxx32_593b9d08-9</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -124,7 +128,10 @@ public class AskLumaRequest extends Request {
         }
 
         /**
-         * MaxRows.
+         * <p>The maximum number of rows to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxRows(Integer maxRows) {
             this.putBodyParameter("MaxRows", maxRows);
@@ -133,7 +140,11 @@ public class AskLumaRequest extends Request {
         }
 
         /**
+         * <p>The natural language question.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Help me collect statistics on recent order data</p>
          */
         public Builder question(String question) {
             this.putBodyParameter("Question", question);

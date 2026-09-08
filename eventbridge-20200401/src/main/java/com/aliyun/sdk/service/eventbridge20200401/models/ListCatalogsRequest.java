@@ -73,7 +73,7 @@ public class ListCatalogsRequest extends Request {
         } 
 
         /**
-         * <p>每页返回的最大数据条数。不传时默认 10，最大 100</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -85,7 +85,7 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * <p>分页查询的起始Token。首次查询不传或传 &quot;0&quot;；后续翻页使用上一次响应中返回的 NextToken 值</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

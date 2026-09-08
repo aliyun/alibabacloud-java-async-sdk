@@ -102,7 +102,10 @@ public class CreateAgentRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>连接配置描述信息</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -111,7 +114,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Metadata.
+         * <p>The associated metadata.</p>
          */
         public Builder metadata(Metadata metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
@@ -121,6 +124,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +137,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>You are an IoT data analytics assistant...</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我想要她，你这样增加请求头获取用户IP CF-Connecting-IP%3B</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
@@ -201,7 +208,10 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * Arn.
+             * <p>The ARN of the attached metadata object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-XXX/table/order</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -209,7 +219,10 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * MimeType.
+             * <p>The object type of the attached metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner-resource/event-table</p>
              */
             public Builder mimeType(String mimeType) {
                 this.mimeType = mimeType;
@@ -263,7 +276,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * Attachments.
+             * <p>The array of attached metadata objects.</p>
              */
             public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;

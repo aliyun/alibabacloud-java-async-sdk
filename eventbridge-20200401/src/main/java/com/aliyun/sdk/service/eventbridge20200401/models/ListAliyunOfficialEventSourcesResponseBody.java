@@ -245,7 +245,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The name of the event source.</p>
              * 
              * <strong>example:</strong>
-             * <p>name</p>
+             * <p>acs.arms</p>
              */
             public Builder eventSourceName(String eventSourceName) {
                 this.eventSourceName = eventSourceName;
@@ -256,7 +256,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The name of the group to which the event type belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>aliyuncvc:MeetingEvent</p>
+             * <p>ActionTrail</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -267,7 +267,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The full name of the event type.</p>
              * 
              * <strong>example:</strong>
-             * <p>aliyuncvc:MeetingEvent:MeetingStateEvent</p>
+             * <p>arms:ActionTrail:AliyunServiceEvent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +278,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The short name of the event type.</p>
              * 
              * <strong>example:</strong>
-             * <p>MeetingStateEvent</p>
+             * <p>AliyunServiceEven</p>
              */
             public Builder shortName(String shortName) {
                 this.shortName = shortName;
@@ -439,7 +439,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs:eventbridge:cn-hangzhou:SYSTEM:eventsource/acs.aliyuncvc</p>
+             * <p>acs:eventbridge:cn-hangzhou:SYSTEM:eventbus/default/eventsource/acs.arms</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -450,7 +450,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The time when the event source was created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>1607071602000</p>
+             * <p>1602730025890</p>
              */
             public Builder ctime(Float ctime) {
                 this.ctime = ctime;
@@ -459,6 +459,9 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
             /**
              * <p>The description of the event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -469,7 +472,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The name of the event source to which the event type belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs.aliyuncvc</p>
+             * <p>default</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -488,7 +491,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The full name of the event source.</p>
              * 
              * <strong>example:</strong>
-             * <p>E-MapReduce</p>
+             * <p>Application Real-Time Monitoring Service</p>
              */
             public Builder fullName(String fullName) {
                 this.fullName = fullName;
@@ -499,7 +502,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The name of the event source.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs.aliyuncvc</p>
+             * <p>acs.arms</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -521,7 +524,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
              * <p>The type of the event source.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>AliyunOfficial</p>
              */
             public Builder type(String type) {
                 this.type = type;

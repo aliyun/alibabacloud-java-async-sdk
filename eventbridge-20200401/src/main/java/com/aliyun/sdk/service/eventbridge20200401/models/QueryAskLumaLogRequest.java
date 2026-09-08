@@ -88,7 +88,10 @@ public class QueryAskLumaLogRequest extends Request {
         } 
 
         /**
-         * After.
+         * <p>The cursor. Set this parameter to the messageId of the last entry on the previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0cyI6MTcxN...</p>
          */
         public Builder after(String after) {
             this.putBodyParameter("After", after);
@@ -97,7 +100,10 @@ public class QueryAskLumaLogRequest extends Request {
         }
 
         /**
-         * AgentName.
+         * <p>The agent name. If this parameter is left empty, all agents are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-luma-agent</p>
          */
         public Builder agentName(String agentName) {
             this.putBodyParameter("AgentName", agentName);
@@ -106,7 +112,10 @@ public class QueryAskLumaLogRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of entries to return. Default value: 20. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("Limit", limit);

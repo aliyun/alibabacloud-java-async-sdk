@@ -60,6 +60,7 @@ public class GetAgentDataSemanticsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class ExecutionResult extends TeaModel {
         } 
 
         /**
-         * IsTruncated.
+         * <p>Whether truncated due to the maxRows limit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +117,10 @@ public class ExecutionResult extends TeaModel {
         }
 
         /**
-         * RowCount.
+         * <p>Number of rows returned this time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder rowCount(Integer rowCount) {
             this.rowCount = rowCount;
@@ -122,7 +128,10 @@ public class ExecutionResult extends TeaModel {
         }
 
         /**
-         * Rows.
+         * <p>Two-dimensional array, one array per row</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[[&quot;北京&quot;,120],[&quot;上海&quot;,98]]</p>
          */
         public Builder rows(String rows) {
             this.rows = rows;
@@ -130,7 +139,7 @@ public class ExecutionResult extends TeaModel {
         }
 
         /**
-         * Schema.
+         * <p>Schema information</p>
          */
         public Builder schema(java.util.List<SchemaColumn> schema) {
             this.schema = schema;
@@ -138,7 +147,10 @@ public class ExecutionResult extends TeaModel {
         }
 
         /**
-         * TotalRows.
+         * <p>Total number of rows that meet the criteria. Different from RowCount when IsTruncated=true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRows(Integer totalRows) {
             this.totalRows = totalRows;

@@ -97,7 +97,7 @@ public class DeleteEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The name of the event stream that you want to delete.</p>
+         * <p>The name of the event stream to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DeleteEventStreamingRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to force delete the event stream. If set to true, system label-based deletion protection is bypassed. Default value: false.</p>
          */
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);

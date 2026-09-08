@@ -126,7 +126,7 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 0 to 10000. Default value: 100.</p>
+         * <p>The maximum number of results to return. Valid values: 0 to 10,000. The default value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -138,7 +138,7 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * <p>用来标记当前开始读取的位置。置空表示从头开始。</p>
+         * <p>The token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -304,9 +304,6 @@ public class EventCenterQueryEventsRequest extends Request {
 
             /**
              * <p>The column name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>source</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -315,9 +312,6 @@ public class EventCenterQueryEventsRequest extends Request {
 
             /**
              * <p>The operator.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>COUNT_DISTINCT</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -325,7 +319,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>A list of values to use with the operator.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -442,7 +436,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * NestedFilterCombination.
+             * <p>The logical operator for combining nested filters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder nestedFilterCombination(String nestedFilterCombination) {
                 this.nestedFilterCombination = nestedFilterCombination;
@@ -450,7 +447,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * NestedFilters.
+             * <p>A list of nested filters.</p>
              */
             public Builder nestedFilters(java.util.List<NestedFilters> nestedFilters) {
                 this.nestedFilters = nestedFilters;
@@ -469,7 +466,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The values that are used together with the operator.</p>
+             * <p>The values to use with the operator.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -560,7 +557,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to sort the query results in descending order.</p>
+             * <p>Specifies whether to sort the results in descending order.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -758,7 +755,7 @@ public class EventCenterQueryEventsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to further split the dataset based on the column name.</p>
+             * <p>An array of column names to use as dimensions for splitting the dataset.</p>
              */
             public Builder breakdowns(java.util.List<String> breakdowns) {
                 this.breakdowns = breakdowns;
@@ -766,7 +763,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The operator that is used to calculate the specified column.</p>
+             * <p>The calculations to perform on specified columns.</p>
              */
             public Builder calculations(java.util.List<Calculations> calculations) {
                 this.calculations = calculations;
@@ -774,7 +771,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The timestamp that specifies the end of the time range to query. Unit: milliseconds.</p>
+             * <p>The end timestamp for the event query. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687861201814</p>
@@ -785,7 +782,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The logic used to filter the combination of conditions.</p>
+             * <p>The logical operator for combining filter conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>AND</p>
@@ -796,7 +793,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The filter conditions.</p>
+             * <p>A list of filter conditions.</p>
              */
             public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
@@ -804,7 +801,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The minimum time unit for querying time series data. Minimum value: 1. Unit: seconds. The value of this parameter is a recommended value. The actual value returned shall prevail.</p>
+             * <p>The time granularity, in seconds, for querying time series data. The minimum value is 1. This is a suggested value; the actual granularity is returned in the response.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -815,7 +812,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of events to query. Valid values: 1 to 10000.</p>
+             * <p>The maximum number of events to query. Valid values: 1 to 10,000.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -826,7 +823,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The offset of the start position for this query. The offset starts from 0.</p>
+             * <p>The starting position of the query. The count starts from 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -837,7 +834,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The order of the query results. This parameter is valid only if you set QueryType to table.</p>
+             * <p>The sort order for the query results. This parameter applies only when QueryType is set to table.</p>
              */
             public Builder orders(java.util.List<Orders> orders) {
                 this.orders = orders;
@@ -845,7 +842,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The timestamp that specifies the beginning of the time range to query. Unit: milliseconds.</p>
+             * <p>The start timestamp for the event query. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687860901814</p>
@@ -856,7 +853,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The time range during which events are queried. Minimum value: 1000. Unit: milliseconds.</p>
+             * <p>The time range. Unit: milliseconds. The minimum value is 1,000.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -953,9 +950,12 @@ public class EventCenterQueryEventsRequest extends Request {
             /**
              * <p>The query type. Valid values:</p>
              * <ul>
-             * <li><strong>timeseries</strong>: queries time series data.</li>
-             * <li><strong>table</strong>: queries table data.</li>
-             * <li><strong>timeseries_and_table</strong>: queries time series data and table data at the same time.</li>
+             * <li><p><strong>timeseries</strong>: queries time series data.</p>
+             * </li>
+             * <li><p><strong>table</strong>: queries table data.</p>
+             * </li>
+             * <li><p><strong>timeseries_and_table</strong>: queries both time series data and table data.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

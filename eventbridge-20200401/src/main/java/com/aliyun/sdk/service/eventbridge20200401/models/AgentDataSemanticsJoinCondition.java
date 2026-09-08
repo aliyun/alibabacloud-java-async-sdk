@@ -97,7 +97,10 @@ public class AgentDataSemanticsJoinCondition extends TeaModel {
         } 
 
         /**
-         * LeftColumn.
+         * <p>The left table field name in form mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customerID</p>
          */
         public Builder leftColumn(String leftColumn) {
             this.leftColumn = leftColumn;
@@ -105,6 +108,7 @@ public class AgentDataSemanticsJoinCondition extends TeaModel {
         }
 
         /**
+         * <p>The conditional expression method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +120,10 @@ public class AgentDataSemanticsJoinCondition extends TeaModel {
         }
 
         /**
-         * RightColumn.
+         * <p>The right table field name in form mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customerID</p>
          */
         public Builder rightColumn(String rightColumn) {
             this.rightColumn = rightColumn;
@@ -124,7 +131,10 @@ public class AgentDataSemanticsJoinCondition extends TeaModel {
         }
 
         /**
-         * SQLExpression.
+         * <p>The join SQL expression in SQL mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sales_transactions.customerID = customers.customerID</p>
          */
         public Builder SQLExpression(String SQLExpression) {
             this.SQLExpression = SQLExpression;

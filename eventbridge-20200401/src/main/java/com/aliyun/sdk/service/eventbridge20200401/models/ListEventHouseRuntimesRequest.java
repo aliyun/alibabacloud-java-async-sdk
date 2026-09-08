@@ -73,7 +73,7 @@ public class ListEventHouseRuntimesRequest extends Request {
         } 
 
         /**
-         * <p>每页最多返回的 Runtime 数量。未传或传 0 时使用默认值 20，最大值为 100</p>
+         * <p>The maximum number of runtimes to return per page. If this parameter is not specified or set to 0, the default value 20 is used. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -85,7 +85,7 @@ public class ListEventHouseRuntimesRequest extends Request {
         }
 
         /**
-         * <p>首次查询无需传入。后续查询使用上一次响应返回的 NextToken；为空表示没有下一页</p>
+         * <p>Not required for the first query. For subsequent queries, use the NextToken returned in the previous response. An empty value indicates that no more pages are available.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

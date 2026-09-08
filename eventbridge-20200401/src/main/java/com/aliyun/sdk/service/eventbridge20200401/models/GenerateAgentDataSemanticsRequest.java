@@ -60,6 +60,7 @@ public class GenerateAgentDataSemanticsRequest extends Request {
         } 
 
         /**
+         * <p>The agent name. If no current official version exists or all four knowledge categories are empty, a first-time generation is performed. If at least one knowledge category is non-empty, only Text is regenerated while existing Metrics, Joins, and Examples are retained. The caller cannot specify the generation mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -74,7 +74,7 @@ public class DeleteEventSourceRequest extends Request {
         } 
 
         /**
-         * EventBusName.
+         * <p>The event bus to which the event source is attached.</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putBodyParameter("EventBusName", eventBusName);

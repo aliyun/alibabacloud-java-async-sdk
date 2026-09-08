@@ -106,7 +106,7 @@ public class SinkApiDestinationParameters extends TeaModel {
         } 
 
         /**
-         * BodyParameters.
+         * <p>The parameters for the HTTP request body, specified as key-value pairs.</p>
          */
         public Builder bodyParameters(BodyParameters bodyParameters) {
             this.bodyParameters = bodyParameters;
@@ -114,7 +114,7 @@ public class SinkApiDestinationParameters extends TeaModel {
         }
 
         /**
-         * HeaderParameters.
+         * <p>The custom HTTP header parameters to add to the request, specified as key-value pairs.</p>
          */
         public Builder headerParameters(HeaderParameters headerParameters) {
             this.headerParameters = headerParameters;
@@ -122,7 +122,7 @@ public class SinkApiDestinationParameters extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the API destination.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -130,7 +130,7 @@ public class SinkApiDestinationParameters extends TeaModel {
         }
 
         /**
-         * QueryStringParameters.
+         * <p>The query string parameters to add to the endpoint URL, specified as key-value pairs.</p>
          */
         public Builder queryStringParameters(QueryStringParameters queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
@@ -138,7 +138,7 @@ public class SinkApiDestinationParameters extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout for the API call, in seconds. If the endpoint does not respond within this period, the call fails. The valid range is 1 to 60.</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -217,7 +217,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>Defines how the parameter\&quot;s value is created. Use <code>CONSTANT</code> to specify a static string in the <code>value</code> field. Use <code>JSONPATH</code> to extract data from the event payload with a JSONPath expression in the <code>value</code> field. Use <code>TEMPLATE</code> to build the value from the <code>template</code> field.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -225,7 +225,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template to use to build the parameter value. This field is used only when the <code>form</code> is set to <code>TEMPLATE</code>. You can use variables, such as <code>${event.id}</code>, in the template to reference event data.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -233,7 +233,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The static value or JSONPath expression for the parameter. This field applies only when the <code>form</code> is set to <code>CONSTANT</code> or <code>JSONPATH</code>.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -313,7 +313,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>Defines how the parameter\&quot;s value is created. Use <code>CONSTANT</code> to specify a static string in the <code>value</code> field. Use <code>JSONPATH</code> to extract data from the event payload with a JSONPath expression in the <code>value</code> field. Use <code>TEMPLATE</code> to build the value from the <code>template</code> field.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -321,7 +321,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template to use to build the parameter value. This field is used only when the <code>form</code> is set to <code>TEMPLATE</code>. You can use variables, such as <code>${event.id}</code>, in the template to reference event data.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -329,7 +329,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The static value or JSONPath expression for the parameter. This field applies only when the <code>form</code> is set to <code>CONSTANT</code> or <code>JSONPATH</code>.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -409,7 +409,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>Defines how the parameter\&quot;s value is created. Use <code>CONSTANT</code> to specify a static string in the <code>value</code> field. Use <code>JSONPATH</code> to extract data from the event payload with a JSONPath expression in the <code>value</code> field. Use <code>TEMPLATE</code> to build the value from the <code>template</code> field.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -417,7 +417,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template to use to build the parameter value. This field is used only when the <code>form</code> is set to <code>TEMPLATE</code>. You can use variables, such as <code>${event.id}</code>, in the template to reference event data.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -425,7 +425,7 @@ public class SinkApiDestinationParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The static value or JSONPath expression for the parameter. This field applies only when the <code>form</code> is set to <code>CONSTANT</code> or <code>JSONPATH</code>.</p>
              */
             public Builder value(String value) {
                 this.value = value;

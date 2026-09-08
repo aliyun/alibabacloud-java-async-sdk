@@ -59,7 +59,7 @@ public class DiscoverEventSourceRequest extends Request {
         } 
 
         /**
-         * SourceMySQLParameters.
+         * <p>The MySQL source parameters.</p>
          */
         public Builder sourceMySQLParameters(SourceMySQLParameters sourceMySQLParameters) {
             String sourceMySQLParametersShrink = shrink(sourceMySQLParameters, "SourceMySQLParameters", "json");
@@ -271,7 +271,10 @@ public class DiscoverEventSourceRequest extends Request {
             } 
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database1</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -279,7 +282,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * HostName.
+             * <p>The database endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-xxx.mysql.rds.aliyuncs.com</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -287,7 +293,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * Limit.
+             * <p>The maximum number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder limit(String limit) {
                 this.limit = limit;
@@ -295,7 +304,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -303,7 +315,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * Offset.
+             * <p>The offset for paging the query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder offset(String offset) {
                 this.offset = offset;
@@ -311,7 +326,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The database password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234xxx</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -319,7 +337,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The connection port of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -327,7 +348,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -335,7 +359,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1ic0vsbwyv176e9inx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -343,7 +370,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The name of the database table. The database name must be added as a prefix in the ${DatabaseName}.${TableName} format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database1.table1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -351,7 +381,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * User.
+             * <p>The database username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -359,7 +392,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-gw824tpaptxtlo256lqub</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -367,7 +403,10 @@ public class DiscoverEventSourceRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the Virtual Private Cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6hwiei8u5uil3bfahc1</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

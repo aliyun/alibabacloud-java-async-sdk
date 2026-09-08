@@ -55,10 +55,11 @@ public class AgentDataSemanticsText extends TeaModel {
         } 
 
         /**
+         * <p>The content of the Markdown-formatted text knowledge.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <h2>数据说明</h2>
+         * <h2>Data description</h2>
          */
         public Builder content(String content) {
             this.content = content;

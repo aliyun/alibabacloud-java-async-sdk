@@ -106,10 +106,12 @@ public class CreateEventSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned response code. Valid values:</p>
+         * <p>The response code.</p>
          * <ul>
-         * <li>Success: The request is successful.</li>
-         * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+         * <li><p><code>Success</code>: The request was successful.</p>
+         * </li>
+         * <li><p>Other values indicate errors. For more information, see the &quot;Error codes&quot; section.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +123,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned by the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,7 +131,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message returned if the request is unsuccessful.</p>
          * 
          * <strong>example:</strong>
          * <p>Remote error. requestId: [A8EFABD2-95B9-1C46-9E01-xxxx], error code: [CreateRelatedResourceFailed], message: [Create related resource failed, EntityNotExist.Role : The role not exists: xxxx. \r\nRequestId : xxxx-168C-54ED-8FEB-BF11CB70AEB7]</p>
@@ -151,7 +153,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+         * <p>Indicates whether the request was successful. A value of <code>true</code> indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +209,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/mymns.source</p>

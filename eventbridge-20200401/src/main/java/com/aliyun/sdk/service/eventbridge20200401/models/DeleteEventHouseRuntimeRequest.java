@@ -60,7 +60,7 @@ public class DeleteEventHouseRuntimeRequest extends Request {
         } 
 
         /**
-         * <p>EventHouse Runtime 名称。不传时使用默认 Runtime。首期通常无需填写</p>
+         * <p>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is used. In most cases, you do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

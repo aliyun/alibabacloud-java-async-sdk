@@ -106,7 +106,10 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. Success indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The Runtime information.</p>
          */
         public Builder data(EventHouseRuntime data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DeleteEventHouseRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

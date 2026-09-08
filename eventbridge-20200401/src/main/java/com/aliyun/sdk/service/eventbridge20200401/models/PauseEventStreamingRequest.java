@@ -60,7 +60,7 @@ public class PauseEventStreamingRequest extends Request {
         } 
 
         /**
-         * <p>The name of the event stream that you want to stop.</p>
+         * <p>The name of the event stream to be paused.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

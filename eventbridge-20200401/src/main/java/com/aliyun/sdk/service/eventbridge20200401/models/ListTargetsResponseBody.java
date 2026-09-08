@@ -143,7 +143,7 @@ public class ListTargetsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>5DAF96FB-A4B6-548C-B999-0BFDCB2261B9</p>
+         * <p>5DAF96FB-A4B6-548C-B999-0BFDCB22****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -343,7 +343,7 @@ public class ListTargetsResponseBody extends TeaModel {
              * <p>The value of the event target parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;key&quot;=&quot;value&quot;}</p>
+             * <p>{\&quot;key\&quot;=\&quot;value\&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;

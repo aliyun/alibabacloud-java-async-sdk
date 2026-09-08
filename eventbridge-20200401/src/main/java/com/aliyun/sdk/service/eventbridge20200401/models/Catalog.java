@@ -119,10 +119,10 @@ public class Catalog extends TeaModel {
         } 
 
         /**
-         * <p>数据目录的备注描述信息</p>
+         * <p>The comment or description of the data catalog.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试数据目录</p>
+         * <p>Test data catalog</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -130,7 +130,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>挂载类型 Catalog 关联的连接名称。仅 Provider 为 MySQL/PostgreSQL/Elasticsearch/OSS_TABLES/SLS/OTS/MaxCompute/MongoDB/Redis/SQLServer/ClickHouse/Oracle/Hive/Iceberg 时有值</p>
+         * <p>The connection name associated with a mounted catalog. This parameter has a value only when Provider is set to MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, or Iceberg.</p>
          * 
          * <strong>example:</strong>
          * <p>my_connection</p>
@@ -141,7 +141,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>数据目录的唯一标识名称</p>
+         * <p>The unique identifier name of the data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -152,7 +152,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>扩展属性（JSON 对象）。Elasticsearch 类型包含 IndexPattern 等信息</p>
+         * <p>The extended properties (JSON object). For the Elasticsearch type, this includes information such as IndexPattern.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;IndexPattern&quot;:&quot;my-index-*&quot;}</p>
@@ -163,7 +163,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>数据源提供方。EventHouse 为内置存储，MySQL/PostgreSQL/Elasticsearch/OSS_TABLES/SLS/OTS/MaxCompute/MongoDB/Redis/SQLServer/ClickHouse/Oracle/Hive/Iceberg 为外部挂载</p>
+         * <p>The data source provider. EventHouse indicates built-in storage. MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, and Iceberg indicate externally mounted sources.</p>
          * 
          * <strong>example:</strong>
          * <p>EventHouse</p>
@@ -174,7 +174,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>数据目录类型，如 RELATIONAL</p>
+         * <p>The type of the data catalog, such as RELATIONAL.</p>
          * 
          * <strong>example:</strong>
          * <p>RELATIONAL</p>

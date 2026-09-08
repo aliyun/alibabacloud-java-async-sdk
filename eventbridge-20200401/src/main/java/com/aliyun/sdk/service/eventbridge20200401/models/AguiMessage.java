@@ -132,7 +132,10 @@ public class AguiMessage extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The text content of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据您的问题，我将查询过去7天的事件量...</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -140,7 +143,10 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique identifier of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg_123456_a1b2c3d4</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -148,7 +154,7 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The extension metadata.</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -164,7 +170,10 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assistant</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -172,7 +181,10 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * ToolCallId.
+         * <p>The associated tool invocation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call_xxx</p>
          */
         public Builder toolCallId(String toolCallId) {
             this.toolCallId = toolCallId;
@@ -180,7 +192,7 @@ public class AguiMessage extends TeaModel {
         }
 
         /**
-         * ToolCalls.
+         * <p>The tool invocation list.</p>
          */
         public Builder toolCalls(java.util.List<ToolCalls> toolCalls) {
             this.toolCalls = toolCalls;
@@ -246,7 +258,10 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the extension data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +269,10 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the extension data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner-resource/event-table</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -308,7 +326,7 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * Attachments.
+             * <p>The extension data.</p>
              */
             public Builder attachments(Attachments attachments) {
                 this.attachments = attachments;
@@ -375,7 +393,10 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * Arguments.
+             * <p>The arguments of the tool calling function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -383,7 +404,10 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the tool calling function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>discoverMetadata</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,7 +487,7 @@ public class AguiMessage extends TeaModel {
             } 
 
             /**
-             * Function.
+             * <p>The tool calling function.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -471,7 +495,10 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The tool calling ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_xxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -479,7 +506,10 @@ public class AguiMessage extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The tool calling type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>function</p>
              */
             public Builder type(String type) {
                 this.type = type;

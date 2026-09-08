@@ -106,7 +106,16 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * <ul>
+         * <li><p>Success: The request was successful.</p>
+         * </li>
+         * <li><p>Other values indicate an error. For more information, see the Error codes section.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +123,10 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the configuration was updated. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +134,10 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +145,10 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +156,10 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

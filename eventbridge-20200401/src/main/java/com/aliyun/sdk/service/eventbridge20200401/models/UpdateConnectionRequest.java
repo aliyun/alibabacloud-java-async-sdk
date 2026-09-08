@@ -132,7 +132,7 @@ public class UpdateConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The parameters that are configured for authentication.</p>
+         * <p>The authentication data structure.</p>
          */
         public Builder authParameters(AuthParameters authParameters) {
             String authParametersShrink = shrink(authParameters, "AuthParameters", "json");
@@ -142,7 +142,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the connection that you want to update. The name must be 2 to 127 characters in length.</p>
+         * <p>The name of the connection to update. Maximum length: 127 characters. Minimum length: 2 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,10 +155,10 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The description of the connection. The description can be up to 255 characters in length.</p>
+         * <p>The description. Maximum length: 255 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the connection.</p>
+         * <p>Description of the connection configuration</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -167,7 +167,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The parameters that are configured for the network.</p>
+         * <p>The data structure of the network configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder networkParameters(NetworkParameters networkParameters) {
@@ -178,7 +178,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</p>
+         * <p>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -191,7 +191,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、OSS_TABLES、SLS、OTS、MaxCompute、MongoDB、Redis、SQLServer、ClickHouse、Oracle、Hive、Iceberg、lakehouse、Http</p>
+         * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, Http.</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>
@@ -264,7 +264,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>The key of the API key.</p>
+             * <p>The key of the API Key.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -275,7 +275,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The value of the API key.</p>
+             * <p>The value of the API Key.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -347,7 +347,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>The password for basic authentication.</p>
+             * <p>The password for Basic authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -358,7 +358,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The username for basic authentication.</p>
+             * <p>The username for Basic authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -441,7 +441,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The AccessKey secret of the client.</p>
+             * <p>The client secret of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>ClientSecret</p>
@@ -524,7 +524,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable authentication.</p>
+             * <p>Specifies whether the value is used for authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -535,7 +535,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The key of the request body.</p>
+             * <p>The key of the body request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -546,7 +546,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The value of the request body.</p>
+             * <p>The value of the body request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -629,7 +629,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable authentication.</p>
+             * <p>Specifies whether the value is used for authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -640,7 +640,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The key of the request header.</p>
+             * <p>The key of the header parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -651,7 +651,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The value of the request header.</p>
+             * <p>The value of the header parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -734,7 +734,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable authentication.</p>
+             * <p>Specifies whether the value is used for authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -745,7 +745,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The key of the request path.</p>
+             * <p>The key of the URI of the request path parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -756,7 +756,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The value of the request path.</p>
+             * <p>The value of the URI of the request path parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -839,7 +839,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are configured for the request body.</p>
+             * <p>The list of body request parameter data structures.</p>
              */
             public Builder bodyParameters(java.util.List<BodyParameters> bodyParameters) {
                 this.bodyParameters = bodyParameters;
@@ -847,7 +847,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The parameters that are configured for the request header.</p>
+             * <p>The list of header parameter data structures.</p>
              */
             public Builder headerParameters(java.util.List<HeaderParameters> headerParameters) {
                 this.headerParameters = headerParameters;
@@ -855,7 +855,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The parameters that are configured for the request path.</p>
+             * <p>The data structure of the URI of the request path parameters.</p>
              */
             public Builder queryStringParameters(java.util.List<QueryStringParameters> queryStringParameters) {
                 this.queryStringParameters = queryStringParameters;
@@ -949,7 +949,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>The endpoint that is used to obtain the OAuth token. The endpoint can be up to 127 characters in length.</p>
+             * <p>The request URL for obtaining the OAuth token. Maximum length: 127 characters.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
@@ -960,7 +960,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The parameters that are configured for the client.</p>
+             * <p>The data structure for client parameters.</p>
              */
             public Builder clientParameters(ClientParameters clientParameters) {
                 this.clientParameters = clientParameters;
@@ -968,7 +968,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The HTTP request method. Valid values:</p>
+             * <p>The HTTP method for the probe request. Valid values:</p>
              * <ul>
              * <li>GET</li>
              * <li>POST</li>
@@ -987,7 +987,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The request parameters of OAuth authentication.</p>
+             * <p>The request parameters for OAuth authentication.</p>
              */
             public Builder oAuthHttpParameters(OAuthHttpParameters oAuthHttpParameters) {
                 this.oAuthHttpParameters = oAuthHttpParameters;
@@ -1080,7 +1080,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>The parameters configured for API key authentication.</p>
+             * <p>The data structure for API Key authentication.</p>
              */
             public Builder apiKeyAuthParameters(ApiKeyAuthParameters apiKeyAuthParameters) {
                 this.apiKeyAuthParameters = apiKeyAuthParameters;
@@ -1088,11 +1088,14 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The authentication type. Valid values:</p>
+             * <p>The authentication type:</p>
              * <ul>
-             * <li>BASIC: basic authentication. Basic authentication is a simple authentication scheme built into the HTTP protocol. When you use the HTTP protocol for communications, the authentication method that the HTTP server uses to authenticate user identities on the client is defined in the protocol. The request header is in the Authorization: Basic Base64-encoded string (<code>Username:Password</code>) format. If you use this authentication method, you must configure Username and Password.</li>
-             * <li>API_KEY_AUTH: API key authentication. The request header is in the Token: Token value format. If you use this authentication method, you must configure ApiKeyName and ApiKeyValue.</li>
-             * <li>OAUTH_AUTH: OAuth authentication. OAuth2.0 is an authentication mechanism. In normal cases, a system that does not use OAuth2.0 can access the resources of the server from the client. To ensure access security, access tokens are used to authenticate users in OAuth 2.0. The client must use an access token to access protected resources. This way, OAuth 2.0 protects resources from being accessed from malicious clients and improves system security. If you use this authentication method, you must configure AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod.</li>
+             * <li><p>BASIC: BASIC_AUTH. This authorization method is a basic authorization method implemented by browsers in compliance with the HTTP protocol. During HTTP communication, the HTTP protocol defines a basic authentication method that allows HTTP servers to verify client identities. Add Authorization: Basic Base64-encoded(<code>username:password</code>) in the request header in a fixed format. Username and Password are required.</p>
+             * </li>
+             * <li><p>API KEY: API_KEY_AUTH. Add Token: token value in the request header in a fixed format. ApiKeyName and ApiKeyValue are required.</p>
+             * </li>
+             * <li><p>OAUTH: OAUTH_AUTH. OAuth 2.0 is an authorization mechanism. Normally, without an authorization mechanism such as OAuth 2.0, clients can directly access resources on the resource server. To ensure secure data access, an Access Token mechanism is added. Clients must carry an Access Token to access protected resources. OAuth 2.0 prevents resources from being accessed by malicious clients, thereby improving system security. AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod are required.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1104,7 +1107,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The parameters that are configured for basic authentication.</p>
+             * <p>The data structure for Basic authentication.</p>
              */
             public Builder basicAuthParameters(BasicAuthParameters basicAuthParameters) {
                 this.basicAuthParameters = basicAuthParameters;
@@ -1112,7 +1115,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The parameters that are configured for OAuth authentication.</p>
+             * <p>The data structure for OAuth authentication parameters.</p>
              */
             public Builder oAuthParameters(OAuthParameters oAuthParameters) {
                 this.oAuthParameters = oAuthParameters;
@@ -1207,11 +1210,13 @@ public class UpdateConnectionRequest extends Request {
 
             /**
              * <ul>
-             * <li>PublicNetwork: the Internet.</li>
-             * <li>PrivateNetwork: virtual private cloud (VPC).</li>
+             * <li><p>Public network: PublicNetwork</p>
+             * </li>
+             * <li><p>Virtual private cloud (VPC): PrivateNetwork</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If you set this parameter to PrivateNetwork, you must also configure VpcId, VswitchId, and SecurityGroupId.</p>
+             * <p>If you select PrivateNetwork, VpcId, VswitcheId, and SecurityGroupId are required.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1235,7 +1240,7 @@ public class UpdateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>eb-test/vpc-bp1symadadwnwgmqud</p>

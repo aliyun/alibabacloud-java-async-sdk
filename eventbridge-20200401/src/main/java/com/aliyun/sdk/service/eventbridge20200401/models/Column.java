@@ -93,7 +93,10 @@ public class Column extends TeaModel {
         } 
 
         /**
-         * IsNull.
+         * <p>Whether the value is NULL. When true, it should be treated as NULL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isNull(Boolean isNull) {
             this.isNull = isNull;
@@ -101,7 +104,10 @@ public class Column extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +115,10 @@ public class Column extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Column type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +126,10 @@ public class Column extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Column value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_info</p>
          */
         public Builder value(String value) {
             this.value = value;

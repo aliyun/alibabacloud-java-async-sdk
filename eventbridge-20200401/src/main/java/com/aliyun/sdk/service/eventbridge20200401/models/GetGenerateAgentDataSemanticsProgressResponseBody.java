@@ -106,7 +106,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
         } 
 
         /**
-         * Code.
+         * <p>The response code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
         }
 
         /**
-         * Data.
+         * <p>The generation progress details. When the initial generation is complete, a full snapshot of the current generation round is returned. When regeneration is complete, the current Metrics, Joins, Examples, and new Text are returned. To discard a regeneration, first call Get to retrieve the current official version, and then call Save with the four types of content unchanged to idempotently clean up temporary results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>The response message. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data semantics generation task not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DAF96FB-A4DF-548C-B8A1-F2A8D2F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +294,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code returned when the generation task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataSemanticsGenerateFailed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -290,7 +305,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the generation task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to generate data semantics. Please retry later.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -298,7 +316,7 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * Examples.
+             * <p>The SQL example knowledge returned when the generation is complete. A maximum of 50 items can be returned.</p>
              */
             public Builder examples(java.util.List<AgentDataSemanticsExample> examples) {
                 this.examples = examples;
@@ -306,7 +324,7 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * Joins.
+             * <p>The data association knowledge returned when the generation is complete. A maximum of 100 items can be returned.</p>
              */
             public Builder joins(java.util.List<AgentDataSemanticsJoin> joins) {
                 this.joins = joins;
@@ -314,7 +332,7 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * Metrics.
+             * <p>The SQL expression knowledge returned when the generation is complete. A maximum of 100 items can be returned.</p>
              */
             public Builder metrics(java.util.List<AgentDataSemanticsMetric> metrics) {
                 this.metrics = metrics;
@@ -322,7 +340,7 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * Progress.
+             * <p>The four-phase stage progress. This parameter may not be returned when the overall generation is complete.</p>
              */
             public Builder progress(java.util.List<AgentDataSemanticsStageProgress> progress) {
                 this.progress = progress;
@@ -330,7 +348,10 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * Stage.
+             * <p>The current overall stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERATE</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -338,7 +359,7 @@ public class GetGenerateAgentDataSemanticsProgressResponseBody extends TeaModel 
             }
 
             /**
-             * Text.
+             * <p>The Markdown text knowledge returned when the generation is complete.</p>
              */
             public Builder text(AgentDataSemanticsText text) {
                 this.text = text;

@@ -96,7 +96,10 @@ public class AgentDataSemanticsExample extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The example usage description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Use this example when a user asks about high-value customers based on weekly statistics</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -104,10 +107,11 @@ public class AgentDataSemanticsExample extends TeaModel {
         }
 
         /**
+         * <p>The example name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>任意一周销售额超过 150 的高价值客户</p>
+         * <p>High-value customers with weekly sales exceeding 150</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -115,7 +119,7 @@ public class AgentDataSemanticsExample extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The SQL example parameter list. A maximum of 20 items are supported.</p>
          */
         public Builder parameters(java.util.List<AgentDataSemanticsExampleParameter> parameters) {
             this.parameters = parameters;
@@ -123,6 +127,7 @@ public class AgentDataSemanticsExample extends TeaModel {
         }
 
         /**
+         * <p>The standard SQL example.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

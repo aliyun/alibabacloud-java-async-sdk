@@ -74,7 +74,10 @@ public class QueryEventHouseRequest extends Request {
         } 
 
         /**
-         * Limit.
+         * <p>The maximum number of rows to return. If a LIMIT clause is already specified in the SQL statement, the SQL\&quot;s own LIMIT takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -83,6 +86,7 @@ public class QueryEventHouseRequest extends Request {
         }
 
         /**
+         * <p>The query statement. Typically uses a three-part table name in the format catalog.namespace.table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

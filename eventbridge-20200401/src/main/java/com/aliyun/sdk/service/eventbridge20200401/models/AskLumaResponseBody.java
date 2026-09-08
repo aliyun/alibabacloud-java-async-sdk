@@ -106,7 +106,10 @@ public class AskLumaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgentNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response body.</p>
          */
         public Builder data(AskLumaResult data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This value is null if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97FB3BAE-XXXXXX-36435495B7EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class AskLumaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

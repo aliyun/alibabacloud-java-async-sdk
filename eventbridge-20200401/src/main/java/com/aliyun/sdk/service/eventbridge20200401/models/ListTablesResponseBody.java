@@ -106,7 +106,10 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;测试事件表&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +232,10 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * NextToken.
+             * <p>Next page token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -225,7 +243,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * <p>Table entities. Each element represents a specific table, including but not limited to information such as table name and table ID.</p>
              */
             public Builder tables(java.util.List<Table> tables) {
                 this.tables = tables;
@@ -233,7 +251,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

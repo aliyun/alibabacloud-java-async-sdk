@@ -60,7 +60,7 @@ public class StartEventStreamingRequest extends Request {
         } 
 
         /**
-         * <p>The name of the event stream that you want to enable.</p>
+         * <p>The name of the event stream to enable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

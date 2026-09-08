@@ -59,7 +59,10 @@ public class CheckServiceLinkedRoleForProductRequest extends Request {
         } 
 
         /**
-         * ProductName.
+         * <p>The name of the service-linked role (SLR) for the cloud product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForEventBridgeConnectVPC</p>
          */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);

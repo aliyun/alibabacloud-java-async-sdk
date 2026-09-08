@@ -197,7 +197,10 @@ public class AskLumaResult extends TeaModel {
         } 
 
         /**
-         * ClarificationNeeded.
+         * <p>Indicates whether clarification is needed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder clarificationNeeded(Boolean clarificationNeeded) {
             this.clarificationNeeded = clarificationNeeded;
@@ -205,7 +208,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * ClarificationQuestion.
+         * <p>The clarification question text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Which database does the employee table you are referring to belong to?</p>
          */
         public Builder clarificationQuestion(String clarificationQuestion) {
             this.clarificationQuestion = clarificationQuestion;
@@ -213,7 +219,7 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * Constraints.
+         * <p>The query constraints.</p>
          */
         public Builder constraints(Constraints constraints) {
             this.constraints = constraints;
@@ -221,7 +227,7 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The structured result body.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -229,7 +235,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID, used for multi-turn follow-up questions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conv_xxx</p>
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
@@ -237,7 +246,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExecutionFailed, Timeout, RateLimited, InternalError, ConversationExpired</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -245,7 +257,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -253,7 +268,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * IsError.
+         * <p>Indicates whether an error occurred. A value of false indicates that the query succeeded or a clarification is needed (including empty result sets). A value of true indicates that the execution failed due to a timeout, throttling, or internal error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isError(Boolean isError) {
             this.isError = isError;
@@ -261,7 +279,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID, used for polling with PollAskResult.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg_xxx</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -269,7 +290,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The submit status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING, SUCCEEDED, FAILED, TIMEOUT</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -277,7 +301,10 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * StorageTruncated.
+         * <p>Indicates whether the result was truncated because it exceeded the storage limit. This field is returned only for large result sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder storageTruncated(Boolean storageTruncated) {
             this.storageTruncated = storageTruncated;
@@ -285,7 +312,7 @@ public class AskLumaResult extends TeaModel {
         }
 
         /**
-         * <p>本次回答实际使用的业务 Wiki 版本。Agent 未配置 Wiki 时不返回</p>
+         * <p>The business Wiki version that was actually used for this response. This field is not returned if the agent does not have a Wiki configured.</p>
          * 
          * <strong>example:</strong>
          * <p>eventhouse-multisource-demo-v1</p>

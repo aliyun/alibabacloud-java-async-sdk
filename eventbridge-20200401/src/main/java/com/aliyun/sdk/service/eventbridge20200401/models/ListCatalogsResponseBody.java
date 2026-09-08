@@ -106,7 +106,10 @@ public class ListCatalogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,7 @@ public class ListCatalogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Catalogs.
+             * <p>The list of catalogs.</p>
              */
             public Builder catalogs(java.util.List<Catalog> catalogs) {
                 this.catalogs = catalogs;
@@ -225,7 +237,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -233,7 +248,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

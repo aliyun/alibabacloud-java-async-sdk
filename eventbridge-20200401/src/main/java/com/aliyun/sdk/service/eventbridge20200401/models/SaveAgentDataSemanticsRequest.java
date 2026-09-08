@@ -116,6 +116,7 @@ public class SaveAgentDataSemanticsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class SaveAgentDataSemanticsRequest extends Request {
         }
 
         /**
-         * Examples.
+         * <p>The SQL example knowledge. If this parameter is specified, the current content is saved. If this parameter is not specified, the existing content is cleared. A maximum of 50 entries are supported, and the maximum size of each knowledge category is 16 KB.</p>
          */
         public Builder examples(java.util.List<AgentDataSemanticsExample> examples) {
             String examplesShrink = shrink(examples, "Examples", "json");
@@ -138,7 +139,7 @@ public class SaveAgentDataSemanticsRequest extends Request {
         }
 
         /**
-         * Joins.
+         * <p>The data association knowledge. If this parameter is specified, the current content is saved. If this parameter is not specified, the existing content is cleared. A maximum of 100 entries are supported, and the maximum size of each knowledge category is 16 KB.</p>
          */
         public Builder joins(java.util.List<AgentDataSemanticsJoin> joins) {
             String joinsShrink = shrink(joins, "Joins", "json");
@@ -148,7 +149,7 @@ public class SaveAgentDataSemanticsRequest extends Request {
         }
 
         /**
-         * Metrics.
+         * <p>The SQL expression knowledge. If this parameter is specified, the current content is saved. If this parameter is not specified, the existing content is cleared. A maximum of 100 entries are supported, and the maximum size of each knowledge category is 16 KB.</p>
          */
         public Builder metrics(java.util.List<AgentDataSemanticsMetric> metrics) {
             String metricsShrink = shrink(metrics, "Metrics", "json");
@@ -158,7 +159,7 @@ public class SaveAgentDataSemanticsRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The text knowledge in Markdown format. If this parameter is specified, the current content is saved. If this parameter is not specified, the existing content is cleared. The maximum size of each knowledge category is 16 KB.</p>
          */
         public Builder text(AgentDataSemanticsText text) {
             String textShrink = shrink(text, "Text", "json");

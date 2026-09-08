@@ -126,7 +126,7 @@ public class ListApiDestinationsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>96D7C0AB-DCE5-5E82-96B8-4725E1706BB1</p>
+         * <p>96D7C0AB-DCE5-5E82-96B8-4725E170****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

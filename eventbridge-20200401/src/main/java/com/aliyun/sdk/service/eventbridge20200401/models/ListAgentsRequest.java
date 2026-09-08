@@ -87,7 +87,10 @@ public class ListAgentsRequest extends Request {
         } 
 
         /**
-         * After.
+         * <p>The name of the agent from which the next page of results starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent</p>
          */
         public Builder after(String after) {
             this.putBodyParameter("After", after);
@@ -96,7 +99,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -105,7 +111,14 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc</li>
+         * <li>asc.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);

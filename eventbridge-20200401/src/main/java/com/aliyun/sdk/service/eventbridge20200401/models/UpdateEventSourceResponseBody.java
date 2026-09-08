@@ -113,7 +113,7 @@ public class UpdateEventSourceResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -146,7 +146,7 @@ public class UpdateEventSourceResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>c057d379-ea65-41ec-a8a8-90627a968204</p>
+         * <p>c057d379-ea65-41ec-a8a8-90627a9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

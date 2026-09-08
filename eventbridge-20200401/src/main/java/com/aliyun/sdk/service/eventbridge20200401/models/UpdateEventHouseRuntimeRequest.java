@@ -75,7 +75,7 @@ public class UpdateEventHouseRuntimeRequest extends Request {
         } 
 
         /**
-         * <p>EventHouse Runtime 的 CU 数量。0 表示关闭 Runtime 并释放计算资源，大于 0 表示变配或重新开启 Runtime</p>
+         * <p>The number of CUs for the EventHouse Runtime. The value must be greater than 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UpdateEventHouseRuntimeRequest extends Request {
         }
 
         /**
-         * <p>EventHouse Runtime 名称。不传时使用默认 Runtime。首期通常无需填写</p>
+         * <p>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is used. In most cases, you do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

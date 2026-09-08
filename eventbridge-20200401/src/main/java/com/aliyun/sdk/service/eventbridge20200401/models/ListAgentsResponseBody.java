@@ -106,7 +106,10 @@ public class ListAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code or POP error code. Valid values: Success: The operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to list agents</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7DA60DED-CD36-5837-B848-C01A23D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Returns true if the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +242,7 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Agents.
+             * <p>The list of agents.</p>
              */
             public Builder agents(java.util.List<Agent> agents) {
                 this.agents = agents;
@@ -238,7 +250,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstId.
+             * <p>The ID of the first record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uat-agent</p>
              */
             public Builder firstId(String firstId) {
                 this.firstId = firstId;
@@ -246,7 +261,16 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * <p>Indicates whether more pages are available. Valid values:</p>
+             * <ul>
+             * <li><p>true: More pages are available.</p>
+             * </li>
+             * <li><p>false: No more pages are available.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMore(String hasMore) {
                 this.hasMore = hasMore;
@@ -254,7 +278,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * LastId.
+             * <p>The ID of the last record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>last-agent</p>
              */
             public Builder lastId(String lastId) {
                 this.lastId = lastId;

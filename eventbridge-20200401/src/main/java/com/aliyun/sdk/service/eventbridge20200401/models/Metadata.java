@@ -54,7 +54,7 @@ public class Metadata extends TeaModel {
         } 
 
         /**
-         * Attachments.
+         * <p>Associated data</p>
          */
         public Builder attachments(java.util.List<Attachments> attachments) {
             this.attachments = attachments;
@@ -120,7 +120,10 @@ public class Metadata extends TeaModel {
             } 
 
             /**
-             * Arn.
+             * <p>ARN of the associated data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -128,7 +131,10 @@ public class Metadata extends TeaModel {
             }
 
             /**
-             * MimeType.
+             * <p>Data type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner-resource/event-table</p>
              */
             public Builder mimeType(String mimeType) {
                 this.mimeType = mimeType;

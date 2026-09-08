@@ -87,7 +87,7 @@ public class ListNamespacesRequest extends Request {
         } 
 
         /**
-         * <p>要查询的数据目录名称。可通过 ListCatalogs 接口获取</p>
+         * <p>Data catalog</p>
          * 
          * <strong>example:</strong>
          * <p>my_catalog</p>
@@ -99,7 +99,7 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * <p>每页返回的最大数据条数。不传时默认 10，最大 100</p>
+         * <p>Items per page</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,7 +111,7 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * <p>分页查询的起始Token。首次查询不传或传 &quot;0&quot;；后续翻页使用上一次响应中返回的 NextToken 值</p>
+         * <p>Pagination Token</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -67,7 +67,10 @@ public class Constraints extends TeaModel {
         } 
 
         /**
-         * BeginTime.
+         * <p>Start of the query time window (Unix milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717200000000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.beginTime = beginTime;
@@ -75,7 +78,10 @@ public class Constraints extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>End of the query time window (Unix milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717200000000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;

@@ -93,7 +93,11 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request was successful.</li>
+         * <li>Other values: An error occurred. For more information, see error codes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +108,7 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The name [xxxx] of event streaming in request is already exist!</p>
@@ -115,7 +119,7 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0FDD73AA-7A2D-5BD4-B4C0-88AFEBF5F0F5</p>
@@ -126,7 +130,7 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * <p>Returns true if the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

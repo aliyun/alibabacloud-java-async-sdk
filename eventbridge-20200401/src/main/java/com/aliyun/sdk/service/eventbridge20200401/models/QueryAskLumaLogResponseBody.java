@@ -106,7 +106,12 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <p>200: The request was successful.    </p>
+         * <p>Other values: An error occurred. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +119,10 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(QueryAskLumaLogResult data) {
             this.data = data;
@@ -122,7 +130,10 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgentNotFound</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +141,10 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +152,10 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Returns true if the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

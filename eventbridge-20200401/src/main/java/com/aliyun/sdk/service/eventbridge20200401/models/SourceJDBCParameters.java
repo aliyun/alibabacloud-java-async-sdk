@@ -236,7 +236,7 @@ public class SourceJDBCParameters extends TeaModel {
         } 
 
         /**
-         * BatchSize.
+         * <p>The maximum number of rows returned per query. Default value: 1000. Maximum value: 10000.</p>
          */
         public Builder batchSize(Integer batchSize) {
             this.batchSize = batchSize;
@@ -244,7 +244,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * CustomQuery.
+         * <p>The custom SQL query statement (advanced mode). This parameter is mutually exclusive with TableName.</p>
          */
         public Builder customQuery(String customQuery) {
             this.customQuery = customQuery;
@@ -252,7 +252,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * IncrementingColumn.
+         * <p>The incrementing column name. Required when QueryMode is set to <code>incrementing</code> or <code>timestamp_incrementing</code>.</p>
          */
         public Builder incrementingColumn(String incrementingColumn) {
             this.incrementingColumn = incrementingColumn;
@@ -260,7 +260,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * JdbcUrl.
+         * <p>The JDBC connection URL. ClickHouse example: <code>jdbc:clickhouse://host:8123/database</code>; MySQL example: <code>jdbc:mysql://host:3306/database</code>. The system automatically identifies the database type.</p>
          */
         public Builder jdbcUrl(String jdbcUrl) {
             this.jdbcUrl = jdbcUrl;
@@ -268,7 +268,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * Network.
+         * <p>The network type. Valid values: <code>PublicNetwork</code> (public network); <code>PrivateNetwork</code> (VPC private network, requires VpcId, VSwitchIds, and SecurityGroupId to be configured).</p>
          */
         public Builder network(String network) {
             this.network = network;
@@ -276,7 +276,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The database password.</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -284,7 +284,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * PollingInterval.
+         * <p>The polling interval, in seconds. Minimum value: 10. Default value: 60.</p>
          */
         public Builder pollingInterval(Integer pollingInterval) {
             this.pollingInterval = pollingInterval;
@@ -292,7 +292,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * QueryMode.
+         * <p>The query mode. Valid values: <code>bulk</code> (full query); <code>incrementing</code> (incrementing column tracking); <code>timestamp</code> (timestamp tracking); <code>timestamp_incrementing</code> (timestamp and incrementing column dual tracking).</p>
          */
         public Builder queryMode(String queryMode) {
             this.queryMode = queryMode;
@@ -300,7 +300,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * QueryTimeout.
+         * <p>The SQL query timeout period, in seconds. Default value: 30. Maximum value: 300.</p>
          */
         public Builder queryTimeout(Integer queryTimeout) {
             this.queryTimeout = queryTimeout;
@@ -308,7 +308,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID. Required when Network is set to PrivateNetwork.</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -316,7 +316,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The target table name. This parameter is mutually exclusive with CustomQuery. Required when custom SQL is not used.</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -324,7 +324,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * TimestampColumn.
+         * <p>The timestamp column name. Required when QueryMode is set to <code>timestamp</code> or <code>timestamp_incrementing</code>.</p>
          */
         public Builder timestampColumn(String timestampColumn) {
             this.timestampColumn = timestampColumn;
@@ -332,7 +332,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The database username.</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -340,7 +340,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The vSwitch ID. Required when Network is set to PrivateNetwork.</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -348,7 +348,7 @@ public class SourceJDBCParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID. Required when Network is set to PrivateNetwork.</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

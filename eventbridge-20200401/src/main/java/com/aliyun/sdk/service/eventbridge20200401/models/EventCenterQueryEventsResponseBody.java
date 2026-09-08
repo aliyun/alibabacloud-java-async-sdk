@@ -106,7 +106,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status of the API call, which can be Success or a POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Limit is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DAF96FB-A4B6-548C-B999-XXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +203,13 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * RowData.
+             * <p>A query result entry, represented as a key-value pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;id&quot;:&quot;xxx&quot;,
+             *   &quot;source&quot;:&quot;acs.ecs&quot;
+             * }</p>
              */
             public Builder rowData(java.util.Map<String, ?> rowData) {
                 this.rowData = rowData;
@@ -258,7 +276,13 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * RowData.
+             * <p>A query result entry, represented as a key-value pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;id&quot;:&quot;xxx&quot;,
+             *   &quot;source&quot;:&quot;acs.ecs&quot;
+             * }</p>
              */
             public Builder rowData(java.util.Map<String, ?> rowData) {
                 this.rowData = rowData;
@@ -266,7 +290,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683561600000</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -372,7 +399,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -380,7 +410,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -388,7 +421,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Table.
+             * <p>The query results for the <code>table</code> query type.</p>
              */
             public Builder table(java.util.List<Table> table) {
                 this.table = table;
@@ -396,7 +429,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeSeries.
+             * <p>The query results for the <code>time series</code> query type.</p>
              */
             public Builder timeSeries(java.util.List<TimeSeries> timeSeries) {
                 this.timeSeries = timeSeries;
@@ -404,7 +437,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries that meet the filter conditions. This parameter is optional and is not returned by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

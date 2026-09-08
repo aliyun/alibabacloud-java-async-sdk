@@ -60,7 +60,7 @@ public class GetEventHouseRuntimeRequest extends Request {
         } 
 
         /**
-         * <p>EventHouse Runtime 名称。不传时查询默认 Runtime</p>
+         * <p>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

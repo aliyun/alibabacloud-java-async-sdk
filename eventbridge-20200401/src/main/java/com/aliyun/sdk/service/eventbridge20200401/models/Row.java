@@ -54,7 +54,7 @@ public class Row extends TeaModel {
         } 
 
         /**
-         * Columns.
+         * <p>Column data for each row.</p>
          */
         public Builder columns(java.util.List<Column> columns) {
             this.columns = columns;

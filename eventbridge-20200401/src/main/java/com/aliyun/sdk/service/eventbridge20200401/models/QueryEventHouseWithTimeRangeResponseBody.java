@@ -106,7 +106,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>接口返回码。Success表示调用成功，其他取值表示具体错误码。</p>
+         * <p>The return code of the operation. Success indicates a successful call. Other values indicate specific error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>SQL查询返回的结构化结果数据。</p>
+         * <p>The structured result data returned by the SQL query.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口调用成功时返回成功信息，调用失败时返回具体错误信息。</p>
+         * <p>A success message if the call succeeds, or a specific error message if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -136,7 +136,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求的唯一标识，可用于问题排查。</p>
+         * <p>The unique ID of the request. You can use this ID for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口调用是否成功。true表示成功，false表示失败。</p>
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>本次SQL查询返回的结果行列表。</p>
+             * <p>The list of result rows returned by the SQL query.</p>
              */
             public Builder rows(java.util.List<Row> rows) {
                 this.rows = rows;
@@ -224,7 +224,7 @@ public class QueryEventHouseWithTimeRangeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>本次查询实际返回的结果行数。</p>
+             * <p>The number of result rows actually returned by the query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

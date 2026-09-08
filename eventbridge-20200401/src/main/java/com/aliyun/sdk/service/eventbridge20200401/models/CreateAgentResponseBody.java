@@ -106,7 +106,16 @@ public class CreateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><p>Success: The request was successful.</p>
+         * </li>
+         * <li><p>Other values: An error occurred. For more information, see Error codes.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +123,7 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +131,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent with name \&quot;XXX\&quot; already exists for account 12345</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +142,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B896B484-XXXXXX-DD0E5C361108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +153,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

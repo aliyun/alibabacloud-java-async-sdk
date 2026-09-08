@@ -106,7 +106,10 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status or POP error code. Valid values: Success: succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Agent data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0FFAB67-XXXXXX-CAD4D37448C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Returns true if the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -67,7 +67,10 @@ public class SchemaColumn extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>Column name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,10 @@ public class SchemaColumn extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Column type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
          */
         public Builder type(String type) {
             this.type = type;

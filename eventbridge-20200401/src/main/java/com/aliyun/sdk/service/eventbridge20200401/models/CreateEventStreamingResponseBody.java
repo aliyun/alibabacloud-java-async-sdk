@@ -106,14 +106,10 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Valid values:</p>
-         * <ul>
-         * <li>Success: The request is successful.</li>
-         * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
-         * </ul>
+         * <p>The response code:</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +125,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The name [xxxx] of event streaming in request is already exist!</p>
@@ -143,7 +139,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>B896B484-F16D-59DE-9E23-DD0E5C361108</p>
+         * <p>B896B484-F16D-59DE-9E23-DD0E5C36****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +147,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+         * <p>Returns true if the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +203,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ARN of the event stream.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the event stream.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventstreaming/myeventstreaming</p>

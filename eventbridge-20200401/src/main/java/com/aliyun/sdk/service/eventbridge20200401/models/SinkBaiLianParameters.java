@@ -158,7 +158,7 @@ public class SinkBaiLianParameters extends TeaModel {
         } 
 
         /**
-         * After.
+         * <p>The post-processing logic that runs after the main operation completes.</p>
          */
         public Builder after(After after) {
             this.after = after;
@@ -166,7 +166,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * ApplicationType.
+         * <p>The type of the Model Studio application to invoke.</p>
          */
         public Builder applicationType(String applicationType) {
             this.applicationType = applicationType;
@@ -174,7 +174,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * Before.
+         * <p>The pre-processing logic to apply to an event before it is sent to the target.</p>
          */
         public Builder before(Before before) {
             this.before = before;
@@ -182,7 +182,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * Context.
+         * <p>Context information for the application. The value must be a JSON object.</p>
          */
         public Builder context(Object context) {
             this.context = context;
@@ -190,7 +190,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * Extend.
+         * <p>Additional key-value pairs to pass to the target. The value must be a valid JSON object.</p>
          */
         public Builder extend(Object extend) {
             this.extend = extend;
@@ -198,7 +198,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * Offset.
+         * <p>The offset for reading events from a stream or queue, used for stateful processing.</p>
          */
         public Builder offset(Offset offset) {
             this.offset = offset;
@@ -206,7 +206,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * Op.
+         * <p>The operation that the Model Studio application will perform.</p>
          */
         public Builder op(Op op) {
             this.op = op;
@@ -214,7 +214,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * Partition.
+         * <p>The partition key for the event. This key routes events to a specific partition in the target service, ensuring ordered processing.</p>
          */
         public Builder partition(Partition partition) {
             this.partition = partition;
@@ -222,7 +222,7 @@ public class SinkBaiLianParameters extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The unique ID of the Model Studio workspace.</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -301,7 +301,7 @@ public class SinkBaiLianParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -309,7 +309,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -317,7 +317,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -397,7 +397,7 @@ public class SinkBaiLianParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -405,7 +405,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -413,7 +413,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -493,7 +493,7 @@ public class SinkBaiLianParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -501,7 +501,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -509,7 +509,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -589,7 +589,7 @@ public class SinkBaiLianParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -597,7 +597,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -605,7 +605,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -685,7 +685,7 @@ public class SinkBaiLianParameters extends TeaModel {
             } 
 
             /**
-             * Form.
+             * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -693,7 +693,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -701,7 +701,7 @@ public class SinkBaiLianParameters extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
              */
             public Builder value(String value) {
                 this.value = value;

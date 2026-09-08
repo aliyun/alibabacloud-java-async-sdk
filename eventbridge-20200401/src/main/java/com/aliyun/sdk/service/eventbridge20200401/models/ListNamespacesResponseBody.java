@@ -106,7 +106,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code. 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the operation succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Namespaces.
+             * <p>Namespace list</p>
              */
             public Builder namespaces(java.util.List<Namespace> namespaces) {
                 this.namespaces = namespaces;
@@ -225,7 +237,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>Next page token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -233,7 +248,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

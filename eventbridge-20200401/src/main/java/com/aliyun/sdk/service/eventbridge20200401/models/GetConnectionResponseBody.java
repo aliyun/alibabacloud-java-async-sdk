@@ -106,7 +106,10 @@ public class GetConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned response code. The value Success indicates that the request is successful.</p>
+         * <p>The API status or POP error code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request was successful.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +120,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +139,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -147,7 +150,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -216,7 +219,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the API key.</p>
+             * <p>The key name of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -297,7 +300,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The password of basic authentication.</p>
+             * <p>The password for basic authentication.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -308,7 +311,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of basic authentication.</p>
+             * <p>The username for basic authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -389,10 +392,10 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessKey secret of the client.</p>
+             * <p>The client secret of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>Qo57Q<del>F249</del>S74GmNPA36pZJoJK4f****</p>
+             * <p>Qo57Q<del>F249</del>S74GmNPA36pZJoJK4f4****</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -472,7 +475,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether authentication is enabled.</p>
+             * <p>Indicates whether the value is a secret.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -483,7 +486,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the request body.</p>
+             * <p>The key of the body request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>keyDemo</p>
@@ -494,7 +497,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the request body.</p>
+             * <p>The value of the body request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>valueDemo</p>
@@ -577,7 +580,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether authentication is enabled.</p>
+             * <p>Indicates whether the value is a secret.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -588,7 +591,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the request header.</p>
+             * <p>The key of the header parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>keyDemo</p>
@@ -599,7 +602,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the request header.</p>
+             * <p>The value of the header parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>keyDemo</p>
@@ -682,7 +685,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether authentication is enabled.</p>
+             * <p>Indicates whether the value is a secret.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -693,7 +696,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the request path.</p>
+             * <p>The key of the URI of the request query string parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>keyDemo</p>
@@ -704,7 +707,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the request path.</p>
+             * <p>The value of the URI of the request query string parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>valueDemo</p>
@@ -787,7 +790,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the request body.</p>
+             * <p>The list of request parameter data structures for the body.</p>
              */
             public Builder bodyParameters(java.util.List<BodyParameters> bodyParameters) {
                 this.bodyParameters = bodyParameters;
@@ -795,7 +798,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the request header.</p>
+             * <p>The list of header parameters.</p>
              */
             public Builder headerParameters(java.util.List<HeaderParameters> headerParameters) {
                 this.headerParameters = headerParameters;
@@ -803,7 +806,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the request path.</p>
+             * <p>The data structure of the URI of the request query string parameters.</p>
              */
             public Builder queryStringParameters(java.util.List<QueryStringParameters> queryStringParameters) {
                 this.queryStringParameters = queryStringParameters;
@@ -896,7 +899,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint that is used to obtain the OAuth token.</p>
+             * <p>The endpoint URL for obtaining the OAuth token.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
@@ -907,7 +910,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the client.</p>
+             * <p>The client parameter data structure.</p>
              */
             public Builder clientParameters(ClientParameters clientParameters) {
                 this.clientParameters = clientParameters;
@@ -915,7 +918,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP request method. Valid values:</p>
+             * <p>The HTTP method for the probe request. Valid values:</p>
              * <ul>
              * <li>GET</li>
              * <li>POST</li>
@@ -931,7 +934,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request parameters of OAuth authentication.</p>
+             * <p>The OAuth authentication request parameters.</p>
              */
             public Builder oAuthHttpParameters(OAuthHttpParameters oAuthHttpParameters) {
                 this.oAuthHttpParameters = oAuthHttpParameters;
@@ -1024,7 +1027,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about API key authentication.</p>
+             * <p>The API KEY data structure.</p>
              */
             public Builder apiKeyAuthParameters(ApiKeyAuthParameters apiKeyAuthParameters) {
                 this.apiKeyAuthParameters = apiKeyAuthParameters;
@@ -1032,11 +1035,14 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication method. Valid values:</p>
+             * <p>The authorization type. Valid values:</p>
              * <ul>
-             * <li>BASIC_AUTH: basic authentication.</li>
-             * <li>API_KEY_AUTH: API key authentication.</li>
-             * <li>OAUTH_AUTH: OAuth authentication.</li>
+             * <li><p>BASIC: BASIC_AUTH</p>
+             * </li>
+             * <li><p>API KEY: API_KEY_AUTH</p>
+             * </li>
+             * <li><p>OAUTH: OAUTH_AUTH</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1048,7 +1054,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about basic authentication.</p>
+             * <p>The basic authentication data structure.</p>
              */
             public Builder basicAuthParameters(BasicAuthParameters basicAuthParameters) {
                 this.basicAuthParameters = basicAuthParameters;
@@ -1056,7 +1062,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about OAuth authentication.</p>
+             * <p>The OAuth request parameter data structure.</p>
              */
             public Builder oAuthParameters(OAuthParameters oAuthParameters) {
                 this.oAuthParameters = oAuthParameters;
@@ -1150,8 +1156,10 @@ public class GetConnectionResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>PublicNetwork: the Internet.</li>
-             * <li>PrivateNetwork: virtual private cloud (VPC).</li>
+             * <li><p>Public network: PublicNetwork</p>
+             * </li>
+             * <li><p>Virtual private cloud (VPC): PrivateNetwork</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1333,7 +1341,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication methods.</p>
+             * <p>The authentication data structure.</p>
              */
             public Builder authParameters(AuthParameters authParameters) {
                 this.authParameters = authParameters;
@@ -1341,7 +1349,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection name.</p>
+             * <p>The connection configuration name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -1352,7 +1360,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection description.</p>
+             * <p>The description of the connection configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -1363,7 +1371,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the connection was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1669648905</p>
@@ -1385,7 +1393,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the network.</p>
+             * <p>The network configuration data structure.</p>
              */
             public Builder networkParameters(NetworkParameters networkParameters) {
                 this.networkParameters = networkParameters;
@@ -1393,7 +1401,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据源连接参数（JSON 对象）。仅数据源类型连接返回，Http 类型为空。字段定义参考 GetConnectionType 返回的 ParamsSchema</p>
+             * <p>The data source connection parameters (JSON object). Returned only for data source type connections. Empty for Http type. For field definitions, refer to the ParamsSchema returned by GetConnectionType.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -1404,7 +1412,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>连接类型。可选值：Http、MySQL、PostgreSQL、Elasticsearch、OSS_TABLES、SLS、OTS、MaxCompute、MongoDB、Redis、SQLServer、ClickHouse、Oracle、Hive、Iceberg、lakehouse</p>
+             * <p>The connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, and lakehouse.</p>
              * 
              * <strong>example:</strong>
              * <p>Http</p>
@@ -1461,7 +1469,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried connections.</p>
+             * <p>The list of connection configurations.</p>
              */
             public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;

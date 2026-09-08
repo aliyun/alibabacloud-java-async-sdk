@@ -80,7 +80,13 @@ public class DeleteAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status or POP error code. Valid values:</p>
+         * <ul>
+         * <li>Success: the operation is successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AgentNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +94,10 @@ public class DeleteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +105,10 @@ public class DeleteAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B896B484-F16D-59DE-9E23-DD0E5C361108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

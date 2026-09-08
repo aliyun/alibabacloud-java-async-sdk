@@ -93,7 +93,9 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned response code. The value Success indicates that the request is successful.</p>
+         * <p>The response code. Valid values:</p>
+         * <p>Success: The request was successful.    </p>
+         * <p>Other values: An error occurred. For more information about error codes, see error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +106,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The event streaming [xxxx] not existed!</p>
@@ -126,7 +128,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+         * <p>Returns true if the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -85,6 +85,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks for a service-linked role by name.</p>
+     * 
      * @param request the request parameters of CheckServiceLinkedRoleForProduct  CheckServiceLinkedRoleForProductRequest
      * @return CheckServiceLinkedRoleForProductResponse
      */
@@ -143,7 +146,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a connection.</p>
+     * <p>Creates a connection configuration.</p>
      * 
      * @param request the request parameters of CreateConnection  CreateConnectionRequest
      * @return CreateConnectionResponse
@@ -185,7 +188,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create an event source.</p>
+     * <p>Creates an external event source.</p>
      * 
      * @param request the request parameters of CreateEventSource  CreateEventSourceRequest
      * @return CreateEventSourceResponse
@@ -206,7 +209,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an event stream.</p>
+     * <p>Creates an event stream.</p>
      * 
      * @param request the request parameters of CreateEventStreaming  CreateEventStreamingRequest
      * @return CreateEventStreamingResponse
@@ -245,7 +248,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an event rule.</p>
+     * <p>Creates an event rule.</p>
      * 
      * @param request the request parameters of CreateRule  CreateRuleRequest
      * @return CreateRuleResponse
@@ -266,7 +269,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a service-linked role for your cloud service.</p>
+     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
      * 
      * @param request the request parameters of CreateServiceLinkedRoleForProduct  CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -286,6 +289,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an event target under the specified rule.</p>
+     * 
      * @param request the request parameters of CreateTable  CreateTableRequest
      * @return CreateTableResponse
      */
@@ -383,7 +389,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event bus.</p>
+     * <p>Deletes an event bus.</p>
      * 
      * @param request the request parameters of DeleteEventBus  DeleteEventBusRequest
      * @return DeleteEventBusResponse
@@ -422,7 +428,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event source.</p>
+     * <p>Deletes an event source.</p>
      * 
      * @param request the request parameters of DeleteEventSource  DeleteEventSourceRequest
      * @return DeleteEventSourceResponse
@@ -443,7 +449,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event stream.</p>
+     * <p>Deletes an event stream.</p>
      * 
      * @param request the request parameters of DeleteEventStreaming  DeleteEventStreamingRequest
      * @return DeleteEventStreamingResponse
@@ -562,6 +568,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Discovers information about an event source.</p>
+     * 
      * @param request the request parameters of DiscoverEventSource  DiscoverEventSourceRequest
      * @return DiscoverEventSourceResponse
      */
@@ -713,7 +722,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the configurations of a connection.</p>
+     * <p>Queries the configuration of a single connection.</p>
      * 
      * @param request the request parameters of GetConnection  GetConnectionRequest
      * @return GetConnectionResponse
@@ -773,7 +782,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the details of an event stream.</p>
+     * <p>Retrieves the details of an event stream.</p>
      * 
      * @param request the request parameters of GetEventStreaming  GetEventStreamingRequest
      * @return GetEventStreamingResponse
@@ -830,7 +839,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the details of an event rule.</p>
+     * <p>Gets the details of an event rule.</p>
      * 
      * @param request the request parameters of GetRule  GetRuleRequest
      * @return GetRuleResponse
@@ -947,7 +956,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query connections.</p>
+     * <p>Retrieves a list of connection configurations.</p>
      * 
      * @param request the request parameters of ListConnections  ListConnectionsRequest
      * @return ListConnectionsResponse
@@ -1007,7 +1016,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query event streams.</p>
+     * <p>Queries event streams.</p>
      * 
      * @param request the request parameters of ListEventStreamings  ListEventStreamingsRequest
      * @return ListEventStreamingsResponse
@@ -1103,7 +1112,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query custom event sources.</p>
+     * <p>Queries all custom event sources.</p>
      * 
      * @param request the request parameters of ListUserDefinedEventSources  ListUserDefinedEventSourcesRequest
      * @return ListUserDefinedEventSourcesResponse
@@ -1124,7 +1133,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to stop an event stream that is running.</p>
+     * <p>Pauses a running event stream.</p>
      * 
      * @param request the request parameters of PauseEventStreaming  PauseEventStreamingRequest
      * @return PauseEventStreamingResponse
@@ -1163,7 +1172,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create or update event targets under a rule.</p>
+     * <p>Sends one or more events to an event bus.</p>
+     * 
+     * @param request the request parameters of PutEvents  PutEventsRequest
+     * @return PutEventsResponse
+     */
+    @Override
+    public CompletableFuture<PutEventsResponse> putEvents(PutEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutEvents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates or updates event targets for a specified rule.</p>
      * 
      * @param request the request parameters of PutTargets  PutTargetsRequest
      * @return PutTargetsResponse
@@ -1241,7 +1271,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>执行单条只读SQL并返回结构化结果集。BeginTime和EndTime仅约束SQL中引用的内部EventHouse数据，不影响挂载的外部数据源。</p>
+     * <p>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</p>
      * 
      * @param request the request parameters of QueryEventHouseWithTimeRange  QueryEventHouseWithTimeRangeRequest
      * @return QueryEventHouseWithTimeRangeResponse
@@ -1304,7 +1334,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query event traces by time range.</p>
+     * <p>Queries for event traces within a specified time range.</p>
      * 
      * @param request the request parameters of QueryTracedEvents  QueryTracedEventsRequest
      * @return QueryTracedEventsResponse
@@ -1343,7 +1373,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to enable a created or deactivated event stream.</p>
+     * <p>Enables a created or disabled event stream.</p>
      * 
      * @param request the request parameters of StartEventStreaming  StartEventStreamingRequest
      * @return StartEventStreamingResponse
@@ -1364,7 +1394,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to check whether the event pattern matches the provided JSON format.</p>
+     * <p>Use this action to test an event pattern before you apply it to a rule.</p>
      * 
      * @param request the request parameters of TestEventPattern  TestEventPatternRequest
      * @return TestEventPatternResponse
@@ -1385,7 +1415,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all custom event sources.</p>
+     * <p>Returns a list of all external event sources.</p>
      * 
      * @param request the request parameters of TestEventSourceConfig  TestEventSourceConfigRequest
      * @return TestEventSourceConfigResponse
@@ -1445,7 +1475,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to update a connection.</p>
+     * <p>Updates connection configurations.</p>
      * 
      * @param request the request parameters of UpdateConnection  UpdateConnectionRequest
      * @return UpdateConnectionResponse
@@ -1526,7 +1556,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
      * 
      * @param request the request parameters of UpdateEventStreaming  UpdateEventStreamingRequest
      * @return UpdateEventStreamingResponse
@@ -1546,6 +1576,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</p>
+     * 
      * @param request the request parameters of UpdateEventStreamingBusinessOption  UpdateEventStreamingBusinessOptionRequest
      * @return UpdateEventStreamingBusinessOptionResponse
      */
@@ -1603,6 +1636,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of an event rule.</p>
+     * 
      * @param request the request parameters of UpdateTable  UpdateTableRequest
      * @return UpdateTableResponse
      */

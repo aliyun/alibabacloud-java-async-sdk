@@ -244,6 +244,9 @@ public class UpdateEventSourceRequest extends Request {
 
         /**
          * <p>The description of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RabbitMQ event source</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -281,7 +284,7 @@ public class UpdateEventSourceRequest extends Request {
          * <p>The configurations of the external data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;ConsumePosition&quot;:&quot;end&quot;,&quot;LogStore&quot;:&quot;oss_log&quot;,&quot;Project&quot;:&quot;slsaudit-center-5795350335281001-cn-beijing&quot;,&quot;RoleName&quot;:&quot;sls-beijing-tf&quot;}</p>
+         * <p>{\&quot;ConsumePosition\&quot;:\&quot;end\&quot;,\&quot;LogStore\&quot;:\&quot;oss_log\&quot;,\&quot;Project\&quot;:\&quot;slsaudit-center-5795350335281001-cn-beijing\&quot;,\&quot;RoleName\&quot;:\&quot;sls-beijing-tf\&quot;}</p>
          */
         public Builder externalSourceConfig(java.util.Map<String, ?> externalSourceConfig) {
             String externalSourceConfigShrink = shrink(externalSourceConfig, "ExternalSourceConfig", "json");
@@ -548,7 +551,7 @@ public class UpdateEventSourceRequest extends Request {
              * <ul>
              * <li>HTTP</li>
              * <li>HTTPS</li>
-             * <li>HTTP&amp;HTTPS</li>
+             * <li>HTTP\&amp;HTTPS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -737,7 +740,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the Message Queue for Apache Kafka instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>cbwp-bp1o3m66wcjgbkssm3k5m</p>
+             * <p>cbwp-bp1o3m66wcjgbkssm3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -792,7 +795,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.</p>
              * 
              * <strong>example:</strong>
-             * <p>sg-5wz3mjgo9wpvdnwpwnhkjdjwn</p>
+             * <p>sg-5wz3mjgo9wpvdnwpwnhkj****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -814,7 +817,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.</p>
              * 
              * <strong>example:</strong>
-             * <p>vsw-bp1xyntcxiwplhqxjybuk</p>
+             * <p>vsw-bp1xyntcxiwplhqxj****</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -825,7 +828,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-2zefu4vfmx6siogujmo0b</p>
+             * <p>vpc-2zefu4vfmx6sioguj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1239,7 +1242,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>bastionhost-cn-7mz2zkyff09</p>
+             * <p>bastionhost-cn-7mz2zky****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1557,7 +1560,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>dbaudit-cn-i7m2nx2or01</p>
+             * <p>dbaudit-cn-i7m2nx****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1638,7 +1641,7 @@ public class UpdateEventSourceRequest extends Request {
              * <p>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance resides.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-bp1a4gmlk31hyg6ptl3ss</p>
+             * <p>vpc-bp1a4gmlk31hyg6pt****</p>
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
