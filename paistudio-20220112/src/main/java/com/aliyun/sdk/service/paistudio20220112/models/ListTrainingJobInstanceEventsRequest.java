@@ -131,6 +131,7 @@ public class ListTrainingJobInstanceEventsRequest extends Request {
         } 
 
         /**
+         * <p>ID of the training job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class ListTrainingJobInstanceEventsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train76rcaupa2cz-master-0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -152,6 +156,7 @@ public class ListTrainingJobInstanceEventsRequest extends Request {
         }
 
         /**
+         * <p>End time in UTC, in ISO 8601 format. If empty, defaults to the current time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +169,10 @@ public class ListTrainingJobInstanceEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +181,10 @@ public class ListTrainingJobInstanceEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,6 +193,7 @@ public class ListTrainingJobInstanceEventsRequest extends Request {
         }
 
         /**
+         * <p>Start time in UTC, in ISO 8601 format. If empty, defaults to the training job start time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

@@ -184,7 +184,7 @@ public class SpotBidPreviewItem extends TeaModel {
         } 
 
         /**
-         * active.
+         * <p>Indicates whether the spot bid is active. If set to <code>false</code>, the bid is paused.</p>
          */
         public Builder active(Boolean active) {
             this.active = active;
@@ -192,7 +192,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * allowCrossHpnZone.
+         * <p>Determines whether instances can be deployed across different High-Performance Network (HPN) zones. Defaults to <code>false</code>.</p>
          */
         public Builder allowCrossHpnZone(Boolean allowCrossHpnZone) {
             this.allowCrossHpnZone = allowCrossHpnZone;
@@ -200,7 +200,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * clusterId.
+         * <p>The ID of the cluster where resources are provisioned.</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -208,7 +208,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * gcLevel.
+         * <p>The GC level for the spot instance.</p>
          */
         public Builder gcLevel(String gcLevel) {
             this.gcLevel = gcLevel;
@@ -216,7 +216,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * instanceType.
+         * <p>The type of compute instance.</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -224,7 +224,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * jobName.
+         * <p>The name of the associated job.</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -232,7 +232,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * maxDiscount.
+         * <p>The maximum discount percentage from the on-demand price.</p>
          */
         public Builder maxDiscount(Double maxDiscount) {
             this.maxDiscount = maxDiscount;
@@ -240,7 +240,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>A message that provides additional details about the current phase.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -248,7 +248,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the spot bid preview.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -256,7 +256,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * phase.
+         * <p>The current phase of the spot bid preview. Valid values are <code>Pending</code>, <code>Active</code>, and <code>Failed</code>.</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -264,7 +264,7 @@ public class SpotBidPreviewItem extends TeaModel {
         }
 
         /**
-         * replicas.
+         * <p>The number of instance replicas.</p>
          */
         public Builder replicas(Integer replicas) {
             this.replicas = replicas;

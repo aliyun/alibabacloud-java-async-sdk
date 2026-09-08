@@ -107,7 +107,10 @@ public class Channel extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>Channel description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型输出。</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -115,7 +118,11 @@ public class Channel extends TeaModel {
         }
 
         /**
+         * <p>Channel name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Model</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -123,7 +130,10 @@ public class Channel extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>Storage configuration of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
@@ -131,7 +141,10 @@ public class Channel extends TeaModel {
         }
 
         /**
-         * Required.
+         * <p>Indicates whether the channel must be configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder required(Boolean required) {
             this.required = required;
@@ -139,7 +152,7 @@ public class Channel extends TeaModel {
         }
 
         /**
-         * SupportedChannelTypes.
+         * <p>List of storage classes supported by the channel.</p>
          */
         public Builder supportedChannelTypes(java.util.List<String> supportedChannelTypes) {
             this.supportedChannelTypes = supportedChannelTypes;

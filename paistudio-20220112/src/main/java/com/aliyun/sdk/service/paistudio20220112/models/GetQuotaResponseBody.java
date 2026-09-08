@@ -26,6 +26,9 @@ public class GetQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("GPUType")
+    private String GPUType;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
@@ -96,6 +99,7 @@ public class GetQuotaResponseBody extends TeaModel {
         this.allocateStrategy = builder.allocateStrategy;
         this.creatorId = builder.creatorId;
         this.description = builder.description;
+        this.GPUType = builder.GPUType;
         this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.hyperZones = builder.hyperZones;
@@ -151,6 +155,13 @@ public class GetQuotaResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return GPUType
+     */
+    public String getGPUType() {
+        return this.GPUType;
     }
 
     /**
@@ -311,6 +322,7 @@ public class GetQuotaResponseBody extends TeaModel {
         private String allocateStrategy; 
         private String creatorId; 
         private String description; 
+        private String GPUType; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
         private java.util.List<String> hyperZones; 
@@ -341,6 +353,7 @@ public class GetQuotaResponseBody extends TeaModel {
             this.allocateStrategy = model.allocateStrategy;
             this.creatorId = model.creatorId;
             this.description = model.description;
+            this.GPUType = model.GPUType;
             this.gmtCreatedTime = model.gmtCreatedTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.hyperZones = model.hyperZones;
@@ -366,7 +379,10 @@ public class GetQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * AllocateStrategy.
+         * <p>The resource allocation strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ByNodeSpec</p>
          */
         public Builder allocateStrategy(String allocateStrategy) {
             this.allocateStrategy = allocateStrategy;
@@ -374,7 +390,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the quota creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1884692****</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -382,7 +401,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test quota</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -390,7 +412,21 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L20</p>
+         */
+        public Builder GPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+
+        /**
+         * <p>The time when the quota was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -398,7 +434,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the quota was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -406,7 +445,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * HyperZones.
+         * <p>The list of high-performance network zones.</p>
          */
         public Builder hyperZones(java.util.List<String> hyperZones) {
             this.hyperZones = hyperZones;
@@ -414,7 +453,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The labels of the quota.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -422,7 +461,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * LatestOperationId.
+         * <p>The ID of the latest quota operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation****</p>
          */
         public Builder latestOperationId(String latestOperationId) {
             this.latestOperationId = latestOperationId;
@@ -430,7 +472,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Min.
+         * <p>The minimum quota configuration.</p>
          */
         public Builder min(ResourceSpec min) {
             this.min = min;
@@ -438,7 +480,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ParentQuotaId.
+         * <p>The ID of the parent quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1ci8g79****</p>
          */
         public Builder parentQuotaId(String parentQuotaId) {
             this.parentQuotaId = parentQuotaId;
@@ -446,7 +491,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QueueStrategy.
+         * <p>The queuing strategy for tasks in the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiStrategyIntelligent</p>
          */
         public Builder queueStrategy(String queueStrategy) {
             this.queueStrategy = queueStrategy;
@@ -454,7 +502,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaCluster.
+         * <p>The cluster specifications and status composed of resources in the quota.</p>
          */
         public Builder quotaCluster(QuotaCluster quotaCluster) {
             this.quotaCluster = quotaCluster;
@@ -462,7 +510,15 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaConfig.
+         * <p>The quota configuration:</p>
+         * <ul>
+         * <li><p>VPC information</p>
+         * </li>
+         * <li><p>Whether RDMA is supported</p>
+         * </li>
+         * <li><p>ACS configuration (takes effect when the resource type is ACS)</p>
+         * </li>
+         * </ul>
          */
         public Builder quotaConfig(QuotaConfig quotaConfig) {
             this.quotaConfig = quotaConfig;
@@ -470,7 +526,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaDetails.
+         * <p>The details of the quota.</p>
          */
         public Builder quotaDetails(QuotaDetails quotaDetails) {
             this.quotaDetails = quotaDetails;
@@ -478,10 +534,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Quota Id</p>
+         * <p>The resource quota ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>quotajradxh43rgb</p>
+         * <p>quotajradxh4****</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -489,7 +545,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaName.
+         * <p>The name of the resource quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-quota</p>
          */
         public Builder quotaName(String quotaName) {
             this.quotaName = quotaName;
@@ -497,7 +556,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -505,7 +567,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The error reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -513,7 +578,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -521,7 +589,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>The resource group information associated with the resource quota.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.resourceGroupIds = resourceGroupIds;
@@ -529,7 +597,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -537,7 +608,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -545,7 +619,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * SubQuotas.
+         * <p>The list of sub-quotas under the quota.</p>
          */
         public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
@@ -553,7 +627,10 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version information. Takes effect when the resource type is ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -561,7 +638,7 @@ public class GetQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Workspaces.
+         * <p>The workspaces associated with the quota.</p>
          */
         public Builder workspaces(java.util.List<WorkspaceIdName> workspaces) {
             this.workspaces = workspaces;

@@ -74,7 +74,10 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * ExpireTime.
+         * <p>Time-to-live (TTL) of the share link in seconds. Default is 604800. Minimum is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -83,6 +86,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
+         * <p>ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -132,7 +132,10 @@ public class WorkspaceSpec extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Invalidity reason code when using guaranteed resources is invalid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class WorkspaceSpec extends TeaModel {
         }
 
         /**
-         * CodeType.
+         * <p>Type of invalidity reason when using guaranteed resources is invalid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder codeType(String codeType) {
             this.codeType = codeType;
@@ -148,7 +154,10 @@ public class WorkspaceSpec extends TeaModel {
         }
 
         /**
-         * IsGuaranteedValid.
+         * <p>Indicates whether the use of guaranteed resources is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isGuaranteedValid(Boolean isGuaranteedValid) {
             this.isGuaranteedValid = isGuaranteedValid;
@@ -156,7 +165,10 @@ public class WorkspaceSpec extends TeaModel {
         }
 
         /**
-         * IsOverSoldValid.
+         * <p>Indicates whether the use of oversold resources is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isOverSoldValid(Boolean isOverSoldValid) {
             this.isOverSoldValid = isOverSoldValid;
@@ -164,7 +176,10 @@ public class WorkspaceSpec extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>Invalidity reason content when using guaranteed resources is invalid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -172,7 +187,7 @@ public class WorkspaceSpec extends TeaModel {
         }
 
         /**
-         * Spec.
+         * <p>Specification resource information</p>
          */
         public Builder spec(ResourceAmount spec) {
             this.spec = spec;
@@ -180,7 +195,10 @@ public class WorkspaceSpec extends TeaModel {
         }
 
         /**
-         * SpecName.
+         * <p>Template Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spec_test</p>
          */
         public Builder specName(String specName) {
             this.specName = specName;

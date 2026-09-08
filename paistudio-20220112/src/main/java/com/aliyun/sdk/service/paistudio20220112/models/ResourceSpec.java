@@ -54,7 +54,7 @@ public class ResourceSpec extends TeaModel {
         } 
 
         /**
-         * NodeSpecs.
+         * <p>The resource node specifications.</p>
          */
         public Builder nodeSpecs(java.util.List<NodeSpec> nodeSpecs) {
             this.nodeSpecs = nodeSpecs;

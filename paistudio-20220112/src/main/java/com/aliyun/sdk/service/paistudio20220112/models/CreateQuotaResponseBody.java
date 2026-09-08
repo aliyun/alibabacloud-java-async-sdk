@@ -67,7 +67,7 @@ public class CreateQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Quota Id</p>
+         * <p>The resource quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>quotad2kd8ljpsno</p>
@@ -78,7 +78,10 @@ public class CreateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF05F13-B24C-5129-9048-4FA684DCD579</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

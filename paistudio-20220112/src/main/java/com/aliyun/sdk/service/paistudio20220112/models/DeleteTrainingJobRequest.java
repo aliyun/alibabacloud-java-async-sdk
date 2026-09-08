@@ -59,7 +59,10 @@ public class DeleteTrainingJobRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>The ID of the training task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train76rcaupa2cz</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);

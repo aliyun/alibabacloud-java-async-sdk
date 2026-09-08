@@ -80,7 +80,7 @@ public class ListTrainingJobInstanceEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Events.
+         * <p>List of events.</p>
          */
         public Builder events(java.util.List<String> events) {
             this.events = events;
@@ -88,7 +88,10 @@ public class ListTrainingJobInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListTrainingJobInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

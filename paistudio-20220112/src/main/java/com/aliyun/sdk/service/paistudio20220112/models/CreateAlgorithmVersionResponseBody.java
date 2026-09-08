@@ -67,7 +67,10 @@ public class CreateAlgorithmVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>ID of the training algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.algorithmId = algorithmId;
@@ -75,7 +78,10 @@ public class CreateAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmVersion.
+         * <p>Algorithm version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.0.1</p>
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.algorithmVersion = algorithmVersion;

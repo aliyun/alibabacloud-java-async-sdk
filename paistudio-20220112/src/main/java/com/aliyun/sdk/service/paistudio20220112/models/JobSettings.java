@@ -249,7 +249,7 @@ public class JobSettings extends TeaModel {
         } 
 
         /**
-         * AdvancedSettings.
+         * <p>Additional advanced parameter settings.</p>
          */
         public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
@@ -257,7 +257,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * BusinessUserId.
+         * <p>User ID associated with the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166924</p>
          */
         public Builder businessUserId(String businessUserId) {
             this.businessUserId = businessUserId;
@@ -265,7 +268,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Caller.
+         * <p>Caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SilkFlow</p>
          */
         public Builder caller(String caller) {
             this.caller = caller;
@@ -273,7 +279,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Driver.
+         * <p>NVIDIA driver configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535.54.03</p>
          */
         public Builder driver(String driver) {
             this.driver = driver;
@@ -281,7 +290,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableErrorMonitoringInAIMaster.
+         * <p>Enable job fault tolerance monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
             this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
@@ -289,7 +301,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableOssAppend.
+         * <p>Enable OSS append writes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOssAppend(Boolean enableOssAppend) {
             this.enableOssAppend = enableOssAppend;
@@ -297,7 +312,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableRDMA.
+         * <p>Enable the job to use RDMA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRDMA(Boolean enableRDMA) {
             this.enableRDMA = enableRDMA;
@@ -305,7 +323,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableSanityCheck.
+         * <p>Enable computing power health check for the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSanityCheck(Boolean enableSanityCheck) {
             this.enableSanityCheck = enableSanityCheck;
@@ -313,7 +334,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableTideResource.
+         * <p>Enable the job to use tide resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTideResource(Boolean enableTideResource) {
             this.enableTideResource = enableTideResource;
@@ -321,7 +345,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * ErrorMonitoringArgs.
+         * <p>Specify configuration parameters for fault tolerance monitoring, such as whether to enable log hang-based detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--enable-log-hang-detection true</p>
          */
         public Builder errorMonitoringArgs(String errorMonitoringArgs) {
             this.errorMonitoringArgs = errorMonitoringArgs;
@@ -329,7 +356,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * JobReservedMinutes.
+         * <p>Duration in minutes to retain the job after completion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder jobReservedMinutes(Integer jobReservedMinutes) {
             this.jobReservedMinutes = jobReservedMinutes;
@@ -337,7 +367,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * JobReservedPolicy.
+         * <p>Policy for retaining the job after completion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Always</p>
          */
         public Builder jobReservedPolicy(String jobReservedPolicy) {
             this.jobReservedPolicy = jobReservedPolicy;
@@ -345,7 +378,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * OversoldType.
+         * <p>Job\&quot;s oversold resource usage method (not accepted, accepted, or only accepted).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AcceptQuotaOverSold</p>
          */
         public Builder oversoldType(String oversoldType) {
             this.oversoldType = oversoldType;
@@ -353,7 +389,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * PipelineId.
+         * <p>Workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid-123456</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
@@ -361,7 +400,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * SanityCheckArgs.
+         * <p>Configuration parameters for computing power health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFai</p>
          */
         public Builder sanityCheckArgs(String sanityCheckArgs) {
             this.sanityCheckArgs = sanityCheckArgs;
@@ -369,7 +411,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>Custom tags.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;

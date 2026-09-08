@@ -67,7 +67,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ResourceGroup ID。</p>
+         * <p>Resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rgf0zhfqn1d4ity2</p>

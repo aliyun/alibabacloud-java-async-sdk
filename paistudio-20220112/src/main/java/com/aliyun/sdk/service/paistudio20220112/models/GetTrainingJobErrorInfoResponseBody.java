@@ -67,7 +67,7 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorInfo.
+         * <p>The fault error message.</p>
          */
         public Builder errorInfo(ErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
@@ -75,7 +75,10 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AdditionalInfo.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>additional info</p>
              */
             public Builder additionalInfo(String additionalInfo) {
                 this.additionalInfo = additionalInfo;
@@ -162,7 +168,10 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -170,7 +179,10 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The fault error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;

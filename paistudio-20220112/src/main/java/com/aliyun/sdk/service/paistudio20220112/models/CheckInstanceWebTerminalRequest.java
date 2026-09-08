@@ -89,6 +89,7 @@ public class CheckInstanceWebTerminalRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class CheckInstanceWebTerminalRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class CheckInstanceWebTerminalRequest extends Request {
         }
 
         /**
-         * CheckInfo.
+         * <p>The check information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wss://pai-dlc-proxy-cn-shanghai.aliyun.com/terminal/t1157703270994901/dlcmjzjt1dxbmx4h/dlcmjzjt1dxbmx4h-worker-0?Token=******</p>
          */
         public Builder checkInfo(String checkInfo) {
             this.putBodyParameter("CheckInfo", checkInfo);

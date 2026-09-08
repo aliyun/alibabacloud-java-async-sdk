@@ -23,6 +23,12 @@ public class ResourceAmount extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
+    @com.aliyun.core.annotation.NameInMap("GPUMemory")
+    private String GPUMemory;
+
+    @com.aliyun.core.annotation.NameInMap("GPUMemoryBytes")
+    private Long GPUMemoryBytes;
+
     @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
@@ -32,6 +38,8 @@ public class ResourceAmount extends TeaModel {
     private ResourceAmount(Builder builder) {
         this.CPU = builder.CPU;
         this.GPU = builder.GPU;
+        this.GPUMemory = builder.GPUMemory;
+        this.GPUMemoryBytes = builder.GPUMemoryBytes;
         this.GPUType = builder.GPUType;
         this.memory = builder.memory;
     }
@@ -63,6 +71,20 @@ public class ResourceAmount extends TeaModel {
     }
 
     /**
+     * @return GPUMemory
+     */
+    public String getGPUMemory() {
+        return this.GPUMemory;
+    }
+
+    /**
+     * @return GPUMemoryBytes
+     */
+    public Long getGPUMemoryBytes() {
+        return this.GPUMemoryBytes;
+    }
+
+    /**
      * @return GPUType
      */
     public String getGPUType() {
@@ -79,6 +101,8 @@ public class ResourceAmount extends TeaModel {
     public static final class Builder {
         private String CPU; 
         private String GPU; 
+        private String GPUMemory; 
+        private Long GPUMemoryBytes; 
         private String GPUType; 
         private String memory; 
 
@@ -88,12 +112,17 @@ public class ResourceAmount extends TeaModel {
         private Builder(ResourceAmount model) {
             this.CPU = model.CPU;
             this.GPU = model.GPU;
+            this.GPUMemory = model.GPUMemory;
+            this.GPUMemoryBytes = model.GPUMemoryBytes;
             this.GPUType = model.GPUType;
             this.memory = model.memory;
         } 
 
         /**
-         * CPU.
+         * <p>Total CPU</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -101,7 +130,10 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>Total GPU cards</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -109,7 +141,26 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * GPUMemory.
+         */
+        public Builder GPUMemory(String GPUMemory) {
+            this.GPUMemory = GPUMemory;
+            return this;
+        }
+
+        /**
+         * GPUMemoryBytes.
+         */
+        public Builder GPUMemoryBytes(Long GPUMemoryBytes) {
+            this.GPUMemoryBytes = GPUMemoryBytes;
+            return this;
+        }
+
+        /**
+         * <p>GPU card type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -117,7 +168,10 @@ public class ResourceAmount extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>Total memory</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100Gi</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;

@@ -80,7 +80,7 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>42F23B58-3684-5443-848A-8DA81FF99712</p>
@@ -91,7 +91,10 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of instances that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -99,7 +102,7 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * Workloads.
+         * <p>The list of workload information.</p>
          */
         public Builder workloads(java.util.List<QueueInfo> workloads) {
             this.workloads = workloads;

@@ -80,7 +80,7 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * Nodes.
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<Node> nodes) {
             this.nodes = nodes;
@@ -88,7 +88,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of nodes that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

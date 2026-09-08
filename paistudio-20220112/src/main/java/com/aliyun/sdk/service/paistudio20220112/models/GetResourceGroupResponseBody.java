@@ -236,7 +236,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterID.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb2c7bde30b774e46a329c</p>
          */
         public Builder clusterID(String clusterID) {
             this.clusterID = clusterID;
@@ -244,7 +247,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ComputingResourceProvider.
+         * <p>The provider of computing resources for the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder computingResourceProvider(String computingResourceProvider) {
             this.computingResourceProvider = computingResourceProvider;
@@ -252,7 +258,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CreatorID.
+         * <p>The ID of the user who created the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612285282502324</p>
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
@@ -260,7 +269,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -268,7 +280,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The time when the resource group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -276,7 +291,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the resource group was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -284,7 +302,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestResourceGroup</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -292,7 +313,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -300,7 +324,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of computing resource for the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -308,7 +335,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -316,7 +346,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRDMA.
+         * <p>Indicates whether the resource group supports RDMA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportRDMA(Boolean supportRDMA) {
             this.supportRDMA = supportRDMA;
@@ -324,7 +357,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>A list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -332,7 +365,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The details of the VPC connected to the resource group.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -348,7 +381,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35201</p>
          */
         public Builder workspaceID(String workspaceID) {
             this.workspaceID = workspaceID;
@@ -414,7 +450,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -422,7 +461,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

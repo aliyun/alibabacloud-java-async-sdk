@@ -67,7 +67,7 @@ public class ScaleQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Quota Id</p>
+         * <p>Quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>quotamtl37ge7gkvdz</p>
@@ -78,7 +78,10 @@ public class ScaleQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

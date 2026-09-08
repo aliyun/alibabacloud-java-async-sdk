@@ -80,7 +80,10 @@ public class NodeCordonParameters extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>User-configurable reason for disabling scheduling</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -88,7 +91,10 @@ public class NodeCordonParameters extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>Quota ID, used when disabling edge zone scheduling in a workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1dkoutl3tj1</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -96,7 +102,10 @@ public class NodeCordonParameters extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID, used when disabling edge zone scheduling in a workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

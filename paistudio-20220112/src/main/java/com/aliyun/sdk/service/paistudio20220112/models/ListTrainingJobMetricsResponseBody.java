@@ -80,7 +80,7 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Metrics.
+         * <p>The list of metrics.</p>
          */
         public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
@@ -88,7 +88,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +178,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accuracy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,6 +189,7 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timestamp when the metric was collected.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -194,7 +201,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.97</p>
              */
             public Builder value(Double value) {
                 this.value = value;

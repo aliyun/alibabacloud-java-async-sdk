@@ -118,7 +118,24 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Whether to detach all tags from the resource. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Detach all tags from the resource.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Do not detach all tags from the resource.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Default value: false.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>If you specify both TagKey and this parameter, this parameter is ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -127,6 +144,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Region</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +157,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Resource IDs. Maximum: 50 items.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -149,6 +168,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Resource type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +181,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>List of tag keys. Maximum: 20 items.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

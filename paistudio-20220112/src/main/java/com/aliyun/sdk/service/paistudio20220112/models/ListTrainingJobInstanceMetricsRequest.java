@@ -131,6 +131,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         } 
 
         /**
+         * <p>Training job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
+         * <p>End time in UTC, in ISO 8601 format. If empty, use the current time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trains930928remn-master-0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,6 +169,25 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
+         * <p>Metric type:</p>
+         * <ul>
+         * <li><p>GpuCoreUsage: POD GPU usage</p>
+         * </li>
+         * <li><p>GpuMemoryUsage: POD GPU memory usage</p>
+         * </li>
+         * <li><p>CpuCoreUsage: POD CPU usage</p>
+         * </li>
+         * <li><p>MemoryUsage: POD memory usage</p>
+         * </li>
+         * <li><p>NetworkInputRate: POD network input rate (TCP/IP) (MB/s)</p>
+         * </li>
+         * <li><p>NetworkOutputRate: POD network output rate (TCP/IP) (MB/s)</p>
+         * </li>
+         * <li><p>DiskReadRate: POD disk read rate (MB/s)</p>
+         * </li>
+         * <li><p>DiskWriteRate: POD disk write rate (MB/s)</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +200,7 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
+         * <p>Start time in UTC, in ISO 8601 format. If empty, use the job start time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +213,10 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * TimeStep.
+         * <p>Time interval. Valid values: 1h, 30m, 5m, 10s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10s</p>
          */
         public Builder timeStep(String timeStep) {
             this.putQueryParameter("TimeStep", timeStep);

@@ -366,7 +366,10 @@ public class Quota extends TeaModel {
         } 
 
         /**
-         * AllocateStrategy.
+         * <p>The resource allocation strategy. Currently, only ByNodeSpecs is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ByNodeSpec</p>
          */
         public Builder allocateStrategy(String allocateStrategy) {
             this.allocateStrategy = allocateStrategy;
@@ -374,7 +377,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the resource quota creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1884692****</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -382,7 +388,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The resource quota description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test quota</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -390,7 +399,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -398,7 +407,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The time when the resource quota was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -406,7 +418,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the resource quota was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -422,7 +437,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The resource quota labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -430,7 +445,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * LatestOperationId.
+         * <p>The ID of the latest operation on the resource quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation****</p>
          */
         public Builder latestOperationId(String latestOperationId) {
             this.latestOperationId = latestOperationId;
@@ -438,7 +456,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * Min.
+         * <p>The guaranteed resources.</p>
          */
         public Builder min(ResourceSpec min) {
             this.min = min;
@@ -446,7 +464,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * ParentQuotaId.
+         * <p>The parent resource quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder parentQuotaId(String parentQuotaId) {
             this.parentQuotaId = parentQuotaId;
@@ -454,7 +475,16 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * QueueStrategy.
+         * <p>The queue policy for the quota. Valid values:</p>
+         * <ul>
+         * <li>PaiStrategyIntelligent: intelligent policies.</li>
+         * <li>PaiStrategyBalance: balanced policy.</li>
+         * <li>PaiStrategyRoundRobin: resource-priority policy.</li>
+         * <li>PaiStrategyStrictFIFO: FIFO policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiStrategyIntelligent</p>
          */
         public Builder queueStrategy(String queueStrategy) {
             this.queueStrategy = queueStrategy;
@@ -470,7 +500,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * QuotaConfig.
+         * <p>The resource quota configuration.</p>
          */
         public Builder quotaConfig(QuotaConfig quotaConfig) {
             this.quotaConfig = quotaConfig;
@@ -478,7 +508,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * QuotaDetails.
+         * <p>The resource quota details.</p>
          */
         public Builder quotaDetails(QuotaDetails quotaDetails) {
             this.quotaDetails = quotaDetails;
@@ -486,7 +516,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The resource quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12345</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -494,7 +527,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * QuotaName.
+         * <p>The resource quota name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-quota</p>
          */
         public Builder quotaName(String quotaName) {
             this.quotaName = quotaName;
@@ -502,7 +538,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -510,7 +549,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The error reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -518,7 +560,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>The list of resource groups.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.resourceGroupIds = resourceGroupIds;
@@ -526,7 +568,15 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Lingjun</li>
+         * <li>ECS (default)</li>
+         * <li>ACS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -534,7 +584,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The resource quota status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -542,7 +595,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * SubQuotas.
+         * <p>The list of sub-quotas under the resource quota.</p>
          */
         public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
@@ -550,7 +603,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version.</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -558,7 +611,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * Workspaces.
+         * <p>The workspaces associated with the resource quota.</p>
          */
         public Builder workspaces(java.util.List<WorkspaceIdName> workspaces) {
             this.workspaces = workspaces;

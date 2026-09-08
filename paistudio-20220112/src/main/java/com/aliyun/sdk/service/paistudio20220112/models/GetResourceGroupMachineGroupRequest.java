@@ -89,6 +89,7 @@ public class GetResourceGroupMachineGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the machine group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GetResourceGroupMachineGroupRequest extends Request {
         }
 
         /**
+         * <p>The globally unique ID of the resource group. You can use this ID to retrieve details about the group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class GetResourceGroupMachineGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>A list of up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -182,7 +184,10 @@ public class GetResourceGroupMachineGroupRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -190,7 +195,10 @@ public class GetResourceGroupMachineGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

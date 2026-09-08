@@ -301,7 +301,7 @@ public class QuotaConfig extends TeaModel {
         } 
 
         /**
-         * ACS.
+         * <p>The ACS-related configurations.</p>
          */
         public Builder ACS(ACS ACS) {
             this.ACS = ACS;
@@ -309,7 +309,10 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster where the quota resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceeb3724255364***</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -325,7 +328,10 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * DefaultGPUDriver.
+         * <p>The default GPU driver version for the resource quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>470.199.02</p>
          */
         public Builder defaultGPUDriver(String defaultGPUDriver) {
             this.defaultGPUDriver = defaultGPUDriver;
@@ -341,7 +347,10 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnablePreemptSubquotaWorkloads.
+         * <p>Specifies whether workloads in sub-quotas can be preempted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePreemptSubquotaWorkloads(Boolean enablePreemptSubquotaWorkloads) {
             this.enablePreemptSubquotaWorkloads = enablePreemptSubquotaWorkloads;
@@ -349,7 +358,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnableSelfQuotaPreemption.
+         * <p>Specifies whether guaranteed resources within this quota can be preempted.</p>
          */
         public Builder enableSelfQuotaPreemption(Boolean enableSelfQuotaPreemption) {
             this.enableSelfQuotaPreemption = enableSelfQuotaPreemption;
@@ -357,7 +366,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * EnableSubQuotaPreemption.
+         * <p>Specifies whether resources in sub-quotas can be preempted.</p>
          */
         public Builder enableSubQuotaPreemption(Boolean enableSubQuotaPreemption) {
             this.enableSubQuotaPreemption = enableSubQuotaPreemption;
@@ -389,7 +398,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * ResourceSpecs.
+         * <p>The resource specification templates.</p>
          */
         public Builder resourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
             this.resourceSpecs = resourceSpecs;
@@ -413,7 +422,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * SubQuotaPreemptionConfig.
+         * <p>The configuration for the sub-quota preemption task.</p>
          */
         public Builder subQuotaPreemptionConfig(SubQuotaPreemptionConfig subQuotaPreemptionConfig) {
             this.subQuotaPreemptionConfig = subQuotaPreemptionConfig;
@@ -421,7 +430,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * SupportGPUDrivers.
+         * <p>The GPU driver versions supported by the resource quota.</p>
          */
         public Builder supportGPUDrivers(java.util.List<String> supportGPUDrivers) {
             this.supportGPUDrivers = supportGPUDrivers;
@@ -429,7 +438,10 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * SupportRDMA.
+         * <p>Specifies whether RDMA is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportRDMA(Boolean supportRDMA) {
             this.supportRDMA = supportRDMA;
@@ -445,7 +457,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The user VPC information.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;

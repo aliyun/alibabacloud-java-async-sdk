@@ -101,7 +101,10 @@ public class CreateAlgorithmRequest extends Request {
         } 
 
         /**
-         * AlgorithmDescription.
+         * <p>The description of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tongyi Qwen large language model training algorithm.</p>
          */
         public Builder algorithmDescription(String algorithmDescription) {
             this.putBodyParameter("AlgorithmDescription", algorithmDescription);
@@ -110,7 +113,10 @@ public class CreateAlgorithmRequest extends Request {
         }
 
         /**
-         * AlgorithmName.
+         * <p>The name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_training</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.putBodyParameter("AlgorithmName", algorithmName);
@@ -119,7 +125,10 @@ public class CreateAlgorithmRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large language model training</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -128,7 +137,10 @@ public class CreateAlgorithmRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

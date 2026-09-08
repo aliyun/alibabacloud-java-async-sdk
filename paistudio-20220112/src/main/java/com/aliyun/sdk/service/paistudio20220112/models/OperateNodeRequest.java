@@ -103,6 +103,7 @@ public class OperateNodeRequest extends Request {
         } 
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,12 @@ public class OperateNodeRequest extends Request {
         }
 
         /**
+         * <p>The operation. Valid values:	</p>
+         * <ul>
+         * <li>Cordon: disables scheduling</li>
+         * <li>Uncordon: enables scheduling</li>
+         * <li>Drain: evicts pods</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +134,7 @@ public class OperateNodeRequest extends Request {
         }
 
         /**
-         * OperationParameters.
+         * <p>The node operation parameter settings.</p>
          */
         public Builder operationParameters(NodeOperationParameters operationParameters) {
             this.putBodyParameter("OperationParameters", operationParameters);
@@ -136,7 +143,10 @@ public class OperateNodeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the resource node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgaekzbrflewn6jjq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

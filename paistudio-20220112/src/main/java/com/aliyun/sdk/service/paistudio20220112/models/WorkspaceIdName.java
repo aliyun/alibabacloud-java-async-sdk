@@ -67,7 +67,10 @@ public class WorkspaceIdName extends TeaModel {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws123***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -75,7 +78,7 @@ public class WorkspaceIdName extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

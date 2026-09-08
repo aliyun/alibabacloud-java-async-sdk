@@ -119,7 +119,7 @@ public class QuotaNodeStatistics extends TeaModel {
         } 
 
         /**
-         * ActualMinHyperNodeNum.
+         * <p>The guaranteed minimum number of hyper nodes available in the quota.</p>
          */
         public Builder actualMinHyperNodeNum(Long actualMinHyperNodeNum) {
             this.actualMinHyperNodeNum = actualMinHyperNodeNum;
@@ -127,7 +127,7 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * ActualMinNodeNum.
+         * <p>The guaranteed minimum number of nodes available in the quota.</p>
          */
         public Builder actualMinNodeNum(Long actualMinNodeNum) {
             this.actualMinNodeNum = actualMinNodeNum;
@@ -135,7 +135,7 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * AllocatedHyperNodeDetails.
+         * <p>The details of an allocated hyper node.</p>
          */
         public Builder allocatedHyperNodeDetails(java.util.List<AllocatedHyperNodeDetail> allocatedHyperNodeDetails) {
             this.allocatedHyperNodeDetails = allocatedHyperNodeDetails;
@@ -143,7 +143,7 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * AllocatedHyperNodeNum.
+         * <p>The number of hyper nodes currently allocated from the quota.</p>
          */
         public Builder allocatedHyperNodeNum(Long allocatedHyperNodeNum) {
             this.allocatedHyperNodeNum = allocatedHyperNodeNum;
@@ -151,7 +151,7 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * AllocatedNodeNum.
+         * <p>The number of nodes currently allocated from the quota.</p>
          */
         public Builder allocatedNodeNum(Long allocatedNodeNum) {
             this.allocatedNodeNum = allocatedNodeNum;
@@ -159,7 +159,7 @@ public class QuotaNodeStatistics extends TeaModel {
         }
 
         /**
-         * EmptyNodeNum.
+         * <p>The number of allocated nodes currently idle.</p>
          */
         public Builder emptyNodeNum(Long emptyNodeNum) {
             this.emptyNodeNum = emptyNodeNum;

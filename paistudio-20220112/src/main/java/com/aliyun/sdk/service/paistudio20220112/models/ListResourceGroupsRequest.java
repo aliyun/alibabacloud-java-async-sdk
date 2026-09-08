@@ -213,7 +213,10 @@ public class ListResourceGroupsRequest extends Request {
         } 
 
         /**
-         * ComputingResourceProvider.
+         * <p>The provider of the compute resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder computingResourceProvider(String computingResourceProvider) {
             this.putQueryParameter("ComputingResourceProvider", computingResourceProvider);
@@ -231,7 +234,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -240,7 +246,16 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><code>desc</code>: descending.</p>
+         * </li>
+         * <li><p><code>asc</code>: ascending.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -249,7 +264,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -258,7 +276,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +297,16 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p><code>ECS</code>: ECS.</p>
+         * </li>
+         * <li><p><code>Lingjun</code>: Lingjun intelligent computing resources.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Lingjun</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -285,7 +315,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ShowAll.
+         * <p>Specifies whether to return all results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showAll(Boolean showAll) {
             this.putQueryParameter("ShowAll", showAll);
@@ -294,7 +327,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort by. Valid values include: <code>DisplayName</code>, <code>GmtCreated</code>, <code>GmtModified</code>, <code>RegionID</code>, <code>Duration</code>, <code>PricingCycle</code>, and <code>PayType</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DisplayName</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -303,7 +339,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -312,7 +351,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Versions.
+         * <p>The version to filter by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder versions(String versions) {
             this.putQueryParameter("Versions", versions);

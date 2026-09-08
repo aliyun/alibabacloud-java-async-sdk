@@ -74,6 +74,7 @@ public class UpdateTrainingJobLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class UpdateTrainingJobLabelsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -154,7 +155,10 @@ public class UpdateTrainingJobLabelsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RootModelID</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +166,10 @@ public class UpdateTrainingJobLabelsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-ad8cv770kl</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -23,12 +23,16 @@ public class NodeOperationParameters extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DrainParameters")
     private NodeDrainParameters drainParameters;
 
+    @com.aliyun.core.annotation.NameInMap("ResizeDiskParameters")
+    private ResizeDiskParameters resizeDiskParameters;
+
     @com.aliyun.core.annotation.NameInMap("UncordonParameters")
     private NodeUncordonParameters uncordonParameters;
 
     private NodeOperationParameters(Builder builder) {
         this.cordonParameters = builder.cordonParameters;
         this.drainParameters = builder.drainParameters;
+        this.resizeDiskParameters = builder.resizeDiskParameters;
         this.uncordonParameters = builder.uncordonParameters;
     }
 
@@ -59,6 +63,13 @@ public class NodeOperationParameters extends TeaModel {
     }
 
     /**
+     * @return resizeDiskParameters
+     */
+    public ResizeDiskParameters getResizeDiskParameters() {
+        return this.resizeDiskParameters;
+    }
+
+    /**
      * @return uncordonParameters
      */
     public NodeUncordonParameters getUncordonParameters() {
@@ -68,6 +79,7 @@ public class NodeOperationParameters extends TeaModel {
     public static final class Builder {
         private NodeCordonParameters cordonParameters; 
         private NodeDrainParameters drainParameters; 
+        private ResizeDiskParameters resizeDiskParameters; 
         private NodeUncordonParameters uncordonParameters; 
 
         private Builder() {
@@ -76,11 +88,12 @@ public class NodeOperationParameters extends TeaModel {
         private Builder(NodeOperationParameters model) {
             this.cordonParameters = model.cordonParameters;
             this.drainParameters = model.drainParameters;
+            this.resizeDiskParameters = model.resizeDiskParameters;
             this.uncordonParameters = model.uncordonParameters;
         } 
 
         /**
-         * CordonParameters.
+         * <p>The parameter settings for disabling node scheduling.</p>
          */
         public Builder cordonParameters(NodeCordonParameters cordonParameters) {
             this.cordonParameters = cordonParameters;
@@ -88,7 +101,7 @@ public class NodeOperationParameters extends TeaModel {
         }
 
         /**
-         * DrainParameters.
+         * <p>The parameter settings for draining task instances from a node.</p>
          */
         public Builder drainParameters(NodeDrainParameters drainParameters) {
             this.drainParameters = drainParameters;
@@ -96,7 +109,15 @@ public class NodeOperationParameters extends TeaModel {
         }
 
         /**
-         * UncordonParameters.
+         * <p>The parameters for changing disk capacity.</p>
+         */
+        public Builder resizeDiskParameters(ResizeDiskParameters resizeDiskParameters) {
+            this.resizeDiskParameters = resizeDiskParameters;
+            return this;
+        }
+
+        /**
+         * <p>The parameter settings for enabling node scheduling.</p>
          */
         public Builder uncordonParameters(NodeUncordonParameters uncordonParameters) {
             this.uncordonParameters = uncordonParameters;

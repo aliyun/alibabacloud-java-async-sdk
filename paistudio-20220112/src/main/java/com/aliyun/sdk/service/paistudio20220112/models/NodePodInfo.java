@@ -145,7 +145,7 @@ public class NodePodInfo extends TeaModel {
         } 
 
         /**
-         * GPUIndexes.
+         * <p>The occupied GPU indexes.</p>
          */
         public Builder GPUIndexes(java.util.List<Integer> GPUIndexes) {
             this.GPUIndexes = GPUIndexes;
@@ -153,7 +153,10 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * Phase.
+         * <p>The Pod status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -161,7 +164,10 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * PodIP.
+         * <p>The IP address of the Pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.2.2</p>
          */
         public Builder podIP(String podIP) {
             this.podIP = podIP;
@@ -169,7 +175,10 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * PodName.
+         * <p>The Pod name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder podName(String podName) {
             this.podName = podName;
@@ -177,7 +186,10 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * PodNamespace.
+         * <p>The namespace of the Pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder podNamespace(String podNamespace) {
             this.podNamespace = podNamespace;
@@ -185,7 +197,7 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * ResourceSpec.
+         * <p>The resource usage information.</p>
          */
         public Builder resourceSpec(ResourceAmount resourceSpec) {
             this.resourceSpec = resourceSpec;
@@ -193,7 +205,10 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * WorkloadId.
+         * <p>The task ID or service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc19de9s6vn3acr</p>
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
@@ -201,7 +216,10 @@ public class NodePodInfo extends TeaModel {
         }
 
         /**
-         * WorkloadType.
+         * <p>The sub-product that the Pod belongs to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc</p>
          */
         public Builder workloadType(String workloadType) {
             this.workloadType = workloadType;

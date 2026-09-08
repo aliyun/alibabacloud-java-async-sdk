@@ -145,6 +145,7 @@ public class ListTrainingJobMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         /**
+         * <p>The end time in UTC, in ISO 8601 format. If you omit this parameter, the current time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accuracy</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -178,7 +183,10 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order of returned metrics. Valid values: ASC or DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -187,7 +195,10 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -196,7 +207,10 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,6 +219,7 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         /**
+         * <p>The start time in UTC, in ISO 8601 format. If you omit this parameter, the task start time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

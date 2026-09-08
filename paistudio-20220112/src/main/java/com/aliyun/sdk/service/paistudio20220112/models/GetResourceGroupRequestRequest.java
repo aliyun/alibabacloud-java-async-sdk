@@ -74,7 +74,15 @@ public class GetResourceGroupRequestRequest extends Request {
         } 
 
         /**
-         * PodStatus.
+         * <p>The container status. Valid values:</p>
+         * <ul>
+         * <li>Waiting</li>
+         * <li>Running</li>
+         * <li>Terminated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder podStatus(String podStatus) {
             this.putQueryParameter("PodStatus", podStatus);
@@ -83,6 +91,7 @@ public class GetResourceGroupRequestRequest extends Request {
         }
 
         /**
+         * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

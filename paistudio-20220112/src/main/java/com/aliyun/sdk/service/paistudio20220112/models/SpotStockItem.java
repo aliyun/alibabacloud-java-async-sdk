@@ -80,7 +80,7 @@ public class SpotStockItem extends TeaModel {
         } 
 
         /**
-         * instanceType.
+         * <p>The instance type.</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -88,7 +88,7 @@ public class SpotStockItem extends TeaModel {
         }
 
         /**
-         * internalInfo.
+         * <p>Internal information about the stock of the spot instance type.</p>
          */
         public Builder internalInfo(java.util.List<SpotStockInternalInfo> internalInfo) {
             this.internalInfo = internalInfo;
@@ -96,7 +96,7 @@ public class SpotStockItem extends TeaModel {
         }
 
         /**
-         * stockStatus.
+         * <p>The stock status of the instance type. Valid values are <code>Available</code> and <code>SoldOut</code>.</p>
          */
         public Builder stockStatus(String stockStatus) {
             this.stockStatus = stockStatus;

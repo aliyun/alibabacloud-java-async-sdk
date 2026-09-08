@@ -548,7 +548,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The training algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.algorithmId = algorithmId;
@@ -556,7 +559,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmName.
+         * <p>The algorithm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_training</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.algorithmName = algorithmName;
@@ -564,7 +570,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmProvider.
+         * <p>The algorithm provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.algorithmProvider = algorithmProvider;
@@ -572,7 +581,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmSpec.
+         * <p>The temporary algorithm definition.</p>
          */
         public Builder algorithmSpec(AlgorithmSpec algorithmSpec) {
             this.algorithmSpec = algorithmSpec;
@@ -580,7 +589,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmVersion.
+         * <p>The algorithm version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.0.1</p>
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.algorithmVersion = algorithmVersion;
@@ -596,7 +608,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ComputeResource.
+         * <p>The compute resource configuration.</p>
          */
         public Builder computeResource(ComputeResource computeResource) {
             this.computeResource = computeResource;
@@ -612,7 +624,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The running duration of the training job. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -620,7 +635,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Environments.
+         * <p>The environment variables of the training job.</p>
          */
         public Builder environments(java.util.Map<String, String> environments) {
             this.environments = environments;
@@ -628,7 +643,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ExperimentConfig.
+         * <p>The experiment configuration associated with the training job.</p>
          */
         public Builder experimentConfig(ExperimentConfig experimentConfig) {
             this.experimentConfig = experimentConfig;
@@ -636,7 +651,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the training job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -644,7 +662,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the training job status was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -652,7 +673,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * HyperParameters.
+         * <p>The training hyperparameter settings.</p>
          */
         public Builder hyperParameters(java.util.List<HyperParameters> hyperParameters) {
             this.hyperParameters = hyperParameters;
@@ -660,7 +681,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * InputChannels.
+         * <p>The training input data configurations.</p>
          */
         public Builder inputChannels(java.util.List<InputChannels> inputChannels) {
             this.inputChannels = inputChannels;
@@ -668,7 +689,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * <p>The list of training job instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -676,7 +697,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * IsTempAlgo.
+         * <p>Indicates whether a temporary algorithm is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTempAlgo(Boolean isTempAlgo) {
             this.isTempAlgo = isTempAlgo;
@@ -684,7 +708,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of training job labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -692,7 +716,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * LatestMetrics.
+         * <p>The list of training job metrics.</p>
          */
         public Builder latestMetrics(java.util.List<LatestMetrics> latestMetrics) {
             this.latestMetrics = latestMetrics;
@@ -700,7 +724,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * LatestProgress.
+         * <p>The latest progress of the training job.</p>
          */
         public Builder latestProgress(LatestProgress latestProgress) {
             this.latestProgress = latestProgress;
@@ -708,7 +732,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * OutputChannels.
+         * <p>The training output data configurations.</p>
          */
         public Builder outputChannels(java.util.List<OutputChannels> outputChannels) {
             this.outputChannels = outputChannels;
@@ -716,7 +740,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * OutputModel.
+         * <p>The model produced by the training job.</p>
          */
         public Builder outputModel(OutputModel outputModel) {
             this.outputModel = outputModel;
@@ -724,7 +748,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The job priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -732,7 +759,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * PythonRequirements.
+         * <p>The Python package configuration for the training job.</p>
          */
         public Builder pythonRequirements(java.util.List<String> pythonRequirements) {
             this.pythonRequirements = pythonRequirements;
@@ -740,7 +767,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The status code of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrainingJobSucceed</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -748,7 +778,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The error message of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -756,7 +789,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -764,7 +800,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role used for proxy authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::{accountID}:role/{roleName}</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -772,7 +811,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Scheduler.
+         * <p>The scheduling configuration of the training job.</p>
          */
         public Builder scheduler(Scheduler scheduler) {
             this.scheduler = scheduler;
@@ -780,7 +819,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Settings.
+         * <p>The additional parameter settings for the training node.</p>
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
@@ -788,7 +827,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -796,7 +838,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * StatusTransitions.
+         * <p>The list of training job status transitions.</p>
          */
         public Builder statusTransitions(java.util.List<StatusTransitions> statusTransitions) {
             this.statusTransitions = statusTransitions;
@@ -804,7 +846,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * TrainingJobDescription.
+         * <p>The description of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen2 large language model training.</p>
          */
         public Builder trainingJobDescription(String trainingJobDescription) {
             this.trainingJobDescription = trainingJobDescription;
@@ -812,7 +857,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * TrainingJobId.
+         * <p>The training job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>traini6hhxiq69eo</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.trainingJobId = trainingJobId;
@@ -820,7 +868,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * TrainingJobName.
+         * <p>The name of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen_llm</p>
          */
         public Builder trainingJobName(String trainingJobName) {
             this.trainingJobName = trainingJobName;
@@ -828,7 +879,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * TrainingJobUrl.
+         * <p>The URL of the training job details page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://pai.console.aliyun.com/?regionId=cn-hangzhou&workspaceId=1234#/training/jobs/train1ouyadsl8n4">https://pai.console.aliyun.com/?regionId=cn-hangzhou&amp;workspaceId=1234#/training/jobs/train1ouyadsl8n4</a></p>
          */
         public Builder trainingJobUrl(String trainingJobUrl) {
             this.trainingJobUrl = trainingJobUrl;
@@ -836,7 +890,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -844,7 +901,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The user VPC configuration.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -852,7 +909,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86995</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -957,7 +1017,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * CPU.
+             * <p>The number of CPU cores of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -965,7 +1028,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -973,7 +1039,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -981,7 +1050,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the instance, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -989,7 +1061,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * SharedMemory.
+             * <p>The shared memory size of the instance, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -1056,7 +1131,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * SpotDiscountLimit.
+             * <p>The maximum hourly price discount for the instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder spotDiscountLimit(Float spotDiscountLimit) {
                 this.spotDiscountLimit = spotDiscountLimit;
@@ -1064,7 +1142,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * <p>SpotStrategy: The bidding policy of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SpotWithPriceLimit</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1209,7 +1290,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * EcsCount.
+             * <p>The number of ECS instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecsCount(Long ecsCount) {
                 this.ecsCount = ecsCount;
@@ -1217,7 +1301,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * EcsSpec.
+             * <p>The ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn5-c8g1.2xlarge</p>
              */
             public Builder ecsSpec(String ecsSpec) {
                 this.ecsSpec = ecsSpec;
@@ -1225,7 +1312,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>The number of instances used by the resource quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -1233,7 +1323,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * <p>The instance specification of the resource quota.</p>
              */
             public Builder instanceSpec(InstanceSpec instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -1241,7 +1331,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quotam670lixikcl</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -1249,7 +1342,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The resource quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -1257,7 +1353,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * SpotSpec.
+             * <p>The spot instance configuration.</p>
              */
             public Builder spotSpec(SpotSpec spotSpec) {
                 this.spotSpec = spotSpec;
@@ -1265,7 +1361,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * UseSpotInstance.
+             * <p>Indicates whether spot instances are used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useSpotInstance(Boolean useSpotInstance) {
                 this.useSpotInstance = useSpotInstance;
@@ -1332,7 +1431,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ExperimentId.
+             * <p>The experiment ID associated with the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exp-ds9aefia90v</p>
              */
             public Builder experimentId(String experimentId) {
                 this.experimentId = experimentId;
@@ -1340,7 +1442,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentName.
+             * <p>The experiment name associated with the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>large_language_model_train</p>
              */
             public Builder experimentName(String experimentName) {
                 this.experimentName = experimentName;
@@ -1407,7 +1512,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>learning_rate</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1415,7 +1523,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0001</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1534,7 +1645,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-475megosidivjfgfq6</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -1542,7 +1656,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * InputUri.
+             * <p>The URI of the input data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/model/</p>
              */
             public Builder inputUri(String inputUri) {
                 this.inputUri = inputUri;
@@ -1550,7 +1667,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the input data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1558,7 +1678,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * <p>The file system parameters of the input data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ossAppendable=true</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -1566,7 +1689,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role used for proxy authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::{accountID}:role/{roleName}</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1574,7 +1700,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The dataset version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1654,7 +1783,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>train1oug3yehan4-master-0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1662,7 +1794,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The instance role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1670,7 +1805,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1737,7 +1875,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreatedBy</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1745,7 +1886,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuickStart</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1825,7 +1969,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loss</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1833,7 +1980,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the metric was collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1841,7 +1991,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.11</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -1908,7 +2061,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The progress timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-04T13:20:18Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1916,7 +2072,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The progress value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.75</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1983,7 +2142,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The progress timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-04T13:20:18Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1991,7 +2153,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The remaining time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2058,7 +2223,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * OverallProgress.
+             * <p>The overall progress of the training job execution.</p>
              */
             public Builder overallProgress(OverallProgress overallProgress) {
                 this.overallProgress = overallProgress;
@@ -2066,7 +2231,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingTime.
+             * <p>The estimated remaining time for the training job execution, in seconds.</p>
              */
             public Builder remainingTime(RemainingTime remainingTime) {
                 this.remainingTime = remainingTime;
@@ -2172,7 +2337,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-8o0hh35po15ejcdq2p</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -2180,7 +2348,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the output data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2188,7 +2359,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUri.
+             * <p>The URI of the output data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/model/</p>
              */
             public Builder outputUri(String outputUri) {
                 this.outputUri = outputUri;
@@ -2196,7 +2370,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role used for proxy authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::{accountID}:role/{roleName}</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -2204,7 +2381,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The dataset version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -2271,7 +2451,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * OutputChannelName.
+             * <p>The OutputChannel name corresponding to the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder outputChannelName(String outputChannelName) {
                 this.outputChannelName = outputChannelName;
@@ -2279,7 +2462,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The model URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/model/output/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -2346,7 +2532,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxRunningTimeInMinutes.
+             * <p>The maximum runtime in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxRunningTimeInMinutes(String maxRunningTimeInMinutes) {
                 this.maxRunningTimeInMinutes = maxRunningTimeInMinutes;
@@ -2354,7 +2543,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRunningTimeInSeconds.
+             * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRunningTimeInSeconds(String maxRunningTimeInSeconds) {
                 this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
@@ -2460,7 +2652,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -2468,7 +2663,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TrainingJobSucceed</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -2476,7 +2674,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The status update message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KubeDL job runs successfully</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -2484,7 +2685,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2492,7 +2696,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The training job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2585,7 +2792,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR block configuration.</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -2593,7 +2800,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-abcdef****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2601,7 +2811,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-abcdef****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

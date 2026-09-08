@@ -479,7 +479,15 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type. Valid values:</p>
+         * <ul>
+         * <li>CPU</li>
+         * <li>GPU</li>
+         * </ul>
+         * <p>Default value: empty, which indicates all types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -515,7 +523,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * FilterByQuotaId.
+         * <p>Used together with ResourceGroupIds to display nodes in the resource groups that are bound to the specified quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder filterByQuotaId(String filterByQuotaId) {
             this.putQueryParameter("FilterByQuotaId", filterByQuotaId);
@@ -524,7 +535,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * FilterByResourceGroupIds.
+         * <p>Used together with QuotaId to display nodes in the quota that belong to the specified resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg69rj0leslwdnbe</p>
          */
         public Builder filterByResourceGroupIds(String filterByResourceGroupIds) {
             this.putQueryParameter("FilterByResourceGroupIds", filterByResourceGroupIds);
@@ -533,7 +547,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T4</p>
          */
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
@@ -542,7 +559,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HealthCount.
+         * <p>The number of healthy nodes.</p>
          */
         public Builder healthCount(HealthCount healthCount) {
             String healthCountShrink = shrink(healthCount, "HealthCount", "json");
@@ -552,7 +569,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HealthRate.
+         * <p>The health rate of nodes (the proportion of healthy nodes).</p>
          */
         public Builder healthRate(HealthRate healthRate) {
             String healthRateShrink = shrink(healthRate, "HealthRate", "json");
@@ -580,7 +597,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * LayoutMode.
+         * <p>The layout mode.</p>
          */
         public Builder layoutMode(String layoutMode) {
             this.putQueryParameter("LayoutMode", layoutMode);
@@ -598,7 +615,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * NodeNames.
+         * <p>The node names to display, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjxxxx</p>
          */
         public Builder nodeNames(String nodeNames) {
             this.putQueryParameter("NodeNames", nodeNames);
@@ -607,7 +627,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * NodeStatuses.
+         * <p>The node statuses, separated by commas. If this parameter is not specified, nodes in all statuses are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder nodeStatuses(String nodeStatuses) {
             this.putQueryParameter("NodeStatuses", nodeStatuses);
@@ -616,7 +639,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * NodeTypes.
+         * <p>The resource node specifications, separated by commas. If this parameter is not configured, nodes of all node specifications are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.xlarge</p>
          */
         public Builder nodeTypes(String nodeTypes) {
             this.putQueryParameter("NodeTypes", nodeTypes);
@@ -625,7 +651,14 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc: Descending order.</li>
+         * <li>asc: Ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -634,7 +667,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * OrderInstanceIds.
+         * <p>The order ID information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260590501560397</p>
          */
         public Builder orderInstanceIds(String orderInstanceIds) {
             this.putQueryParameter("OrderInstanceIds", orderInstanceIds);
@@ -643,7 +679,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * OrderStatuses.
+         * <p>The order statuses of the nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder orderStatuses(String orderStatuses) {
             this.putQueryParameter("OrderStatuses", orderStatuses);
@@ -652,7 +691,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -661,7 +703,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for paged query. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -688,7 +733,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * QuotaId.
+         * <p>The resource quota ID to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -706,7 +754,16 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>The IDs of resource groups, separated by commas. Either this parameter or QuotaId is required.</p>
+         * <p>Constraints:</p>
+         * <ol>
+         * <li>The UserId of the specified ResourceGroupId must match the UserId of the request.</li>
+         * <li>The specified resource groups must be of the same type.</li>
+         * <li>The specified resource groups must be associated with the same VPC at this stage.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>rg69rj0leslwdnbe</p>
          */
         public Builder resourceGroupIds(String resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -715,7 +772,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group.</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -724,7 +781,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -733,7 +793,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to return resource usage information. This parameter takes effect only when QuotaId is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -819,7 +882,7 @@ public class ListNodesRequest extends Request {
             } 
 
             /**
-             * operation.
+             * <p>The comparison operator. Valid values: ge, gte, eq, lte, lt.</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -894,7 +957,7 @@ public class ListNodesRequest extends Request {
             } 
 
             /**
-             * operation.
+             * <p>The comparison operator. Valid values: ge, gte, eq, lte, lt.</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;

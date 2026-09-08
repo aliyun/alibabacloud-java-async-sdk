@@ -226,7 +226,7 @@ public class AlgorithmSpec extends TeaModel {
         } 
 
         /**
-         * CodeDir.
+         * <p>The custom code configuration.</p>
          */
         public Builder codeDir(Location codeDir) {
             this.codeDir = codeDir;
@@ -234,6 +234,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
+         * <p>The list of commands to run the training task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder command(java.util.List<String> command) {
@@ -242,7 +243,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * ComputeResource.
+         * <p>The compute resource definition.</p>
          */
         public Builder computeResource(ComputeResource computeResource) {
             this.computeResource = computeResource;
@@ -250,7 +251,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * Customization.
+         * <p>The custom configuration.</p>
          */
         public Builder customization(Customization customization) {
             this.customization = customization;
@@ -258,7 +259,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * HyperParameters.
+         * <p>The list of hyperparameter definitions.</p>
          */
         public Builder hyperParameters(java.util.List<HyperParameterDefinition> hyperParameters) {
             this.hyperParameters = hyperParameters;
@@ -266,7 +267,11 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
+         * <p>The training runtime image.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -274,7 +279,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * InputChannels.
+         * <p>The list of input channels for the algorithm.</p>
          */
         public Builder inputChannels(java.util.List<Channel> inputChannels) {
             this.inputChannels = inputChannels;
@@ -282,7 +287,11 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
+         * <p>The job type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TFJob</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -290,7 +299,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * MetricDefinitions.
+         * <p>The list of metric definitions for the training task.</p>
          */
         public Builder metricDefinitions(java.util.List<MetricDefinition> metricDefinitions) {
             this.metricDefinitions = metricDefinitions;
@@ -298,7 +307,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * OutputChannels.
+         * <p>The list of output channels for the algorithm.</p>
          */
         public Builder outputChannels(java.util.List<Channel> outputChannels) {
             this.outputChannels = outputChannels;
@@ -306,7 +315,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * ProgressDefinitions.
+         * <p>You can use this feature to monitor the training progress.</p>
          */
         public Builder progressDefinitions(ProgressDefinitions progressDefinitions) {
             this.progressDefinitions = progressDefinitions;
@@ -314,7 +323,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * ResourceRequirements.
+         * <p>The resource requirements.</p>
          */
         public Builder resourceRequirements(java.util.List<ConditionExpression> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
@@ -322,7 +331,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * SupportedInstanceTypes.
+         * <p>The list of supported elastic computing instance types for training.</p>
          */
         public Builder supportedInstanceTypes(java.util.List<String> supportedInstanceTypes) {
             this.supportedInstanceTypes = supportedInstanceTypes;
@@ -330,7 +339,10 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * SupportsDistributedTraining.
+         * <p>Indicates whether distributed training is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportsDistributedTraining(Boolean supportsDistributedTraining) {
             this.supportsDistributedTraining = supportsDistributedTraining;
@@ -398,7 +410,11 @@ public class AlgorithmSpec extends TeaModel {
             } 
 
             /**
+             * <p>Policy content, serialized from a JSON array.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;MinTotalCount\&quot;:1,\&quot;MaxTotalCount\&quot;:4,\&quot;RolePolicies\&quot;:{\&quot;chief\&quot;:{\&quot;Count\&quot;:1},\&quot;ps\&quot;:{\&quot;Count\&quot;:1},\&quot;worker\&quot;:{\&quot;Percentage\&quot;:100}}},{\&quot;MinTotalCount\&quot;:5,\&quot;MaxTotalCount\&quot;:10,\&quot;RolePolicies\&quot;:{\&quot;chief\&quot;:{\&quot;Count\&quot;:1},\&quot;ps\&quot;:{\&quot;Percentage\&quot;:20},\&quot;worker\&quot;:{\&quot;Percentage\&quot;:80}}},{\&quot;MinTotalCount\&quot;:11,\&quot;RolePolicies\&quot;:{\&quot;chief\&quot;:{\&quot;Count\&quot;:1},\&quot;ps\&quot;:{\&quot;Percentage\&quot;:40},\&quot;worker\&quot;:{\&quot;Percentage\&quot;:60}}}]</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -406,7 +422,11 @@ public class AlgorithmSpec extends TeaModel {
             }
 
             /**
+             * <p>Policy version.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -461,6 +481,7 @@ public class AlgorithmSpec extends TeaModel {
             } 
 
             /**
+             * <p>Computing resource configuration policy for the algorithm.</p>
              * <p>This parameter is required.</p>
              */
             public Builder policy(Policy policy) {
@@ -515,7 +536,10 @@ public class AlgorithmSpec extends TeaModel {
             } 
 
             /**
-             * CodeDir.
+             * <p>Indicates whether custom-mounted code is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder codeDir(Boolean codeDir) {
                 this.codeDir = codeDir;
@@ -582,7 +606,10 @@ public class AlgorithmSpec extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the monitoring definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>training progress</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -590,7 +617,10 @@ public class AlgorithmSpec extends TeaModel {
             }
 
             /**
-             * Regex.
+             * <p>The regular expression for monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^[0-9]+([.][0-9]+){0,1}$</p>
              */
             public Builder regex(String regex) {
                 this.regex = regex;
@@ -657,7 +687,10 @@ public class AlgorithmSpec extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the monitoring definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>training remaining time</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -665,7 +698,10 @@ public class AlgorithmSpec extends TeaModel {
             }
 
             /**
-             * Regex.
+             * <p>The regular expression for monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^[0-9]+([.][0-9]+){0,1}$</p>
              */
             public Builder regex(String regex) {
                 this.regex = regex;
@@ -732,7 +768,7 @@ public class AlgorithmSpec extends TeaModel {
             } 
 
             /**
-             * OverallProgress.
+             * <p>Monitors training progress.</p>
              */
             public Builder overallProgress(OverallProgress overallProgress) {
                 this.overallProgress = overallProgress;
@@ -740,7 +776,7 @@ public class AlgorithmSpec extends TeaModel {
             }
 
             /**
-             * RemainingTime.
+             * <p>The definition for monitoring the remaining training time.</p>
              */
             public Builder remainingTime(RemainingTime remainingTime) {
                 this.remainingTime = remainingTime;

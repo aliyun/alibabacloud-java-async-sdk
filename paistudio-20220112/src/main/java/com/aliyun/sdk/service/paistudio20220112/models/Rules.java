@@ -54,7 +54,7 @@ public class Rules extends TeaModel {
         } 
 
         /**
-         * Scheduling.
+         * <p>The node scheduling rule configuration.</p>
          */
         public Builder scheduling(SchedulingRule scheduling) {
             this.scheduling = scheduling;

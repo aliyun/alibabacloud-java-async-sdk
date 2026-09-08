@@ -143,7 +143,7 @@ public class UpdateQuotaRequest extends Request {
         } 
 
         /**
-         * <p>Quota ID</p>
+         * <p>Quota ID。</p>
          * 
          * <strong>example:</strong>
          * <p>quota-20210126170216-mtl37ge7gkvdz</p>
@@ -155,7 +155,10 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the resource quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test quota</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -164,7 +167,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The list of user-defined labels. This is a full update.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -182,7 +185,10 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * QueueStrategy.
+         * <p>The queuing strategy for jobs in the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiStrategyIntelligent</p>
          */
         public Builder queueStrategy(String queueStrategy) {
             this.putBodyParameter("QueueStrategy", queueStrategy);
@@ -191,7 +197,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * QuotaConfig.
+         * <p>The resource quota configuration.</p>
          */
         public Builder quotaConfig(QuotaConfig quotaConfig) {
             this.putBodyParameter("QuotaConfig", quotaConfig);
@@ -200,7 +206,10 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * QuotaName.
+         * <p>The resource quota name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder quotaName(String quotaName) {
             this.putBodyParameter("QuotaName", quotaName);

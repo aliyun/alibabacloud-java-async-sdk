@@ -80,7 +80,7 @@ public class ListTrainingJobLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Logs.
+         * <p>The list of logs.</p>
          */
         public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
@@ -88,7 +88,10 @@ public class ListTrainingJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF05F13-B24C-5129-9048-4FA684DCD579</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListTrainingJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of logs that match the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

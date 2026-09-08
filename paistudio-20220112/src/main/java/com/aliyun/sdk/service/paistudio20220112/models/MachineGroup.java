@@ -455,7 +455,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * CreatorID.
+         * <p>Machine group creator ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612285282502324</p>
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
@@ -463,7 +466,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * DefaultDriver.
+         * <p>Default driver supported by the machine group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>470.199.02</p>
          */
         public Builder defaultDriver(String defaultDriver) {
             this.defaultDriver = defaultDriver;
@@ -487,7 +493,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * EcsCount.
+         * <p>Resource count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ecsCount(Long ecsCount) {
             this.ecsCount = ecsCount;
@@ -495,7 +504,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * EcsSpec.
+         * <p>ECS specification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -503,7 +515,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>Creation Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -511,7 +526,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * GmtExpiredTime.
+         * <p>Expiration Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-22T00:00:00Z</p>
          */
         public Builder gmtExpiredTime(String gmtExpiredTime) {
             this.gmtExpiredTime = gmtExpiredTime;
@@ -519,7 +537,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Update Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -527,7 +548,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * GmtStartedTime.
+         * <p>Start At</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtStartedTime(String gmtStartedTime) {
             this.gmtStartedTime = gmtStartedTime;
@@ -559,7 +583,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * MachineGroupID.
+         * <p>Machine Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg1</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.machineGroupID = machineGroupID;
@@ -575,7 +602,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * OrderInstanceId.
+         * <p>Order ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder orderInstanceId(String orderInstanceId) {
             this.orderInstanceId = orderInstanceId;
@@ -583,7 +613,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * PaymentDuration.
+         * <p>Duration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder paymentDuration(String paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -591,7 +624,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * PaymentDurationUnit.
+         * <p>Region ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monthly</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.paymentDurationUnit = paymentDurationUnit;
@@ -599,7 +635,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * PaymentType.
+         * <p>Payment type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -607,7 +646,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>Machine group error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -615,7 +657,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>Machine group fault message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -623,7 +668,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -639,7 +687,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Machine group status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -647,7 +698,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * SupportedDrivers.
+         * <p>List of NVIDIA GPU driver versions supported by the machine group</p>
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;

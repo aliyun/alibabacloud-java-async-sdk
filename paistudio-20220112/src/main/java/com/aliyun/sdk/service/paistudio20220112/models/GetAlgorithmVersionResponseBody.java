@@ -158,7 +158,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The ID of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.algorithmId = algorithmId;
@@ -166,7 +169,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmName.
+         * <p>The name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_training</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.algorithmName = algorithmName;
@@ -174,7 +180,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmProvider.
+         * <p>The provider of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.algorithmProvider = algorithmProvider;
@@ -182,7 +191,7 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmSpec.
+         * <p>Details about the algorithm.</p>
          */
         public Builder algorithmSpec(AlgorithmSpec algorithmSpec) {
             this.algorithmSpec = algorithmSpec;
@@ -190,7 +199,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmVersion.
+         * <p>The version of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.0.1</p>
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.algorithmVersion = algorithmVersion;
@@ -198,7 +210,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the algorithm was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -206,7 +221,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the algorithm was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -214,7 +232,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant who owns the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -222,7 +243,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user who owns the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

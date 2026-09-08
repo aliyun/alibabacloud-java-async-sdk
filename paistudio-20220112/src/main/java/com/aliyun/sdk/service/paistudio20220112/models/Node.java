@@ -93,6 +93,12 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
+    @com.aliyun.core.annotation.NameInMap("NodeGPUMemory")
+    private String nodeGPUMemory;
+
+    @com.aliyun.core.annotation.NameInMap("NodeGPUMemoryBytes")
+    private Long nodeGPUMemoryBytes;
+
     @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
@@ -173,6 +179,8 @@ public class Node extends TeaModel {
         this.limitMemory = builder.limitMemory;
         this.machineGroupId = builder.machineGroupId;
         this.memory = builder.memory;
+        this.nodeGPUMemory = builder.nodeGPUMemory;
+        this.nodeGPUMemoryBytes = builder.nodeGPUMemoryBytes;
         this.nodeName = builder.nodeName;
         this.nodeStatus = builder.nodeStatus;
         this.nodeType = builder.nodeType;
@@ -381,6 +389,20 @@ public class Node extends TeaModel {
     }
 
     /**
+     * @return nodeGPUMemory
+     */
+    public String getNodeGPUMemory() {
+        return this.nodeGPUMemory;
+    }
+
+    /**
+     * @return nodeGPUMemoryBytes
+     */
+    public Long getNodeGPUMemoryBytes() {
+        return this.nodeGPUMemoryBytes;
+    }
+
+    /**
      * @return nodeName
      */
     public String getNodeName() {
@@ -532,6 +554,8 @@ public class Node extends TeaModel {
         private String limitMemory; 
         private String machineGroupId; 
         private String memory; 
+        private String nodeGPUMemory; 
+        private Long nodeGPUMemoryBytes; 
         private String nodeName; 
         private String nodeStatus; 
         private String nodeType; 
@@ -580,6 +604,8 @@ public class Node extends TeaModel {
             this.limitMemory = model.limitMemory;
             this.machineGroupId = model.machineGroupId;
             this.memory = model.memory;
+            this.nodeGPUMemory = model.nodeGPUMemory;
+            this.nodeGPUMemoryBytes = model.nodeGPUMemoryBytes;
             this.nodeName = model.nodeName;
             this.nodeStatus = model.nodeStatus;
             this.nodeType = model.nodeType;
@@ -601,7 +627,10 @@ public class Node extends TeaModel {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type of the resource node specifications (CPU/GPU).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -609,7 +638,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * AllocatableCPU.
+         * <p>The number of CPU cores that can be allocated to users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder allocatableCPU(String allocatableCPU) {
             this.allocatableCPU = allocatableCPU;
@@ -617,7 +649,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * AllocatableMemory.
+         * <p>The memory size that can be allocated to users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder allocatableMemory(String allocatableMemory) {
             this.allocatableMemory = allocatableMemory;
@@ -633,7 +668,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * AvailabilityZone.
+         * <p>The zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C</p>
          */
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = availabilityZone;
@@ -641,7 +679,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * BoundQuotas.
+         * <p>The list of bound quotas.</p>
          */
         public Builder boundQuotas(java.util.List<QuotaIdName> boundQuotas) {
             this.boundQuotas = boundQuotas;
@@ -649,7 +687,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * CPU.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -657,7 +698,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The creator of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>281044699048527748</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -689,7 +733,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -697,7 +744,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GPUMemory.
+         * <p>The GPU memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder GPUMemory(String GPUMemory) {
             this.GPUMemory = GPUMemory;
@@ -705,7 +755,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -713,7 +766,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -721,7 +777,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The creation time of the resource node.</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -729,7 +785,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GmtExpiredTime.
+         * <p>The expiration time of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-22T00:00:00Z</p>
          */
         public Builder gmtExpiredTime(String gmtExpiredTime) {
             this.gmtExpiredTime = gmtExpiredTime;
@@ -737,7 +796,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The update time of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -745,7 +807,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * HyperZone.
+         * <p>The high-speed interconnect zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3</p>
          */
         public Builder hyperZone(String hyperZone) {
             this.hyperZone = hyperZone;
@@ -753,7 +818,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * IsBound.
+         * <p>Indicates whether the resource node is bound to a quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isBound(Boolean isBound) {
             this.isBound = isBound;
@@ -761,7 +829,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * LimitCPU.
+         * <p>The maximum number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder limitCPU(String limitCPU) {
             this.limitCPU = limitCPU;
@@ -769,7 +840,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * LimitGPU.
+         * <p>The maximum number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder limitGPU(String limitGPU) {
             this.limitGPU = limitGPU;
@@ -777,7 +851,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * LimitMemory.
+         * <p>The maximum memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder limitMemory(String limitMemory) {
             this.limitMemory = limitMemory;
@@ -785,7 +862,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * MachineGroupId.
+         * <p>The ID of the machine group to which the resource node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg1234456</p>
          */
         public Builder machineGroupId(String machineGroupId) {
             this.machineGroupId = machineGroupId;
@@ -793,7 +873,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -801,7 +884,32 @@ public class Node extends TeaModel {
         }
 
         /**
-         * NodeName.
+         * <p>The GPU memory of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>640G</p>
+         */
+        public Builder nodeGPUMemory(String nodeGPUMemory) {
+            this.nodeGPUMemory = nodeGPUMemory;
+            return this;
+        }
+
+        /**
+         * <p>The GPU memory of the node in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>687194767360</p>
+         */
+        public Builder nodeGPUMemoryBytes(Long nodeGPUMemoryBytes) {
+            this.nodeGPUMemoryBytes = nodeGPUMemoryBytes;
+            return this;
+        }
+
+        /**
+         * <p>The name of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjxxxx</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -809,7 +917,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * NodeStatus.
+         * <p>The status of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder nodeStatus(String nodeStatus) {
             this.nodeStatus = nodeStatus;
@@ -817,7 +928,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The node specifications type of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c8i.xlarge</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -825,7 +939,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * OrderStatus.
+         * <p>The order status of the resource node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder orderStatus(String orderStatus) {
             this.orderStatus = orderStatus;
@@ -833,7 +950,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * PodNum.
+         * <p>The number of pods on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder podNum(Long podNum) {
             this.podNum = podNum;
@@ -841,7 +961,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -849,7 +972,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -857,7 +983,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * RequestCPU.
+         * <p>The number of requested CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder requestCPU(String requestCPU) {
             this.requestCPU = requestCPU;
@@ -865,7 +994,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * RequestGPU.
+         * <p>The number of requested GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestGPU(String requestGPU) {
             this.requestGPU = requestGPU;
@@ -873,7 +1005,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * RequestMemory.
+         * <p>The requested memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder requestMemory(String requestMemory) {
             this.requestMemory = requestMemory;
@@ -881,7 +1016,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the resource node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -889,7 +1027,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * ResourceGroupName.
+         * <p>The name of the resource group to which the resource node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
@@ -905,7 +1046,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * SubNodes.
+         * <p>The names of the child nodes.</p>
          */
         public Builder subNodes(java.util.List<String> subNodes) {
             this.subNodes = subNodes;
@@ -913,7 +1054,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * SystemReservedCPU.
+         * <p>The number of system-reserved CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder systemReservedCPU(String systemReservedCPU) {
             this.systemReservedCPU = systemReservedCPU;
@@ -921,7 +1065,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * SystemReservedMemory.
+         * <p>The system-reserved memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder systemReservedMemory(String systemReservedMemory) {
             this.systemReservedMemory = systemReservedMemory;
@@ -929,7 +1076,7 @@ public class Node extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The user information.</p>
          */
         public Builder users(java.util.List<UserInfo> users) {
             this.users = users;
@@ -937,7 +1084,10 @@ public class Node extends TeaModel {
         }
 
         /**
-         * WorkloadNum.
+         * <p>The number of workloads on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder workloadNum(Long workloadNum) {
             this.workloadNum = workloadNum;

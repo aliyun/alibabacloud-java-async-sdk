@@ -93,7 +93,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
         } 
 
         /**
-         * QuotaUserUsage.
+         * <p>The list of user resource usage details.</p>
          */
         public Builder quotaUserUsage(java.util.List<QuotaUser> quotaUserUsage) {
             this.quotaUserUsage = quotaUserUsage;
@@ -101,7 +101,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaUserUsages.
+         * <p>The user usage information.</p>
          */
         public Builder quotaUserUsages(java.util.List<QuotaUser> quotaUserUsages) {
             this.quotaUserUsages = quotaUserUsages;
@@ -120,7 +120,10 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of instances that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

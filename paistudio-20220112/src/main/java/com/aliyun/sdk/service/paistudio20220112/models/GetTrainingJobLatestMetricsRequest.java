@@ -74,6 +74,7 @@ public class GetTrainingJobLatestMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetTrainingJobLatestMetricsRequest extends Request {
         }
 
         /**
-         * Names.
+         * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loss</p>
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);

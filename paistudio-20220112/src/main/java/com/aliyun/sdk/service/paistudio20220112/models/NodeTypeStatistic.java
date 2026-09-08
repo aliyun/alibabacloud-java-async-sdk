@@ -80,7 +80,10 @@ public class NodeTypeStatistic extends TeaModel {
         } 
 
         /**
-         * CanBeBoundCount.
+         * <p>The number of resource nodes of the specification that can be bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder canBeBoundCount(Integer canBeBoundCount) {
             this.canBeBoundCount = canBeBoundCount;
@@ -88,7 +91,10 @@ public class NodeTypeStatistic extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The resource node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.4xlarge</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -96,7 +102,10 @@ public class NodeTypeStatistic extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of resource nodes of the specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

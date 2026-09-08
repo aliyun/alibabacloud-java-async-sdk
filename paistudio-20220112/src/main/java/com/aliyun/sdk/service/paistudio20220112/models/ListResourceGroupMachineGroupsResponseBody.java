@@ -80,7 +80,7 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * MachineGroups.
+         * <p>A list of machine groups.</p>
          */
         public Builder machineGroups(java.util.List<MachineGroup> machineGroups) {
             this.machineGroups = machineGroups;
@@ -88,7 +88,10 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of machine groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

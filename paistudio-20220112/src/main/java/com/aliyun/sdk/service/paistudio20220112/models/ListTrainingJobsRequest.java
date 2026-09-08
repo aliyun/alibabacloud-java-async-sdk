@@ -241,7 +241,10 @@ public class ListTrainingJobsRequest extends Request {
         } 
 
         /**
-         * AlgorithmName.
+         * <p>The algorithm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_train</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.putQueryParameter("AlgorithmName", algorithmName);
@@ -250,7 +253,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * AlgorithmProvider.
+         * <p>The algorithm provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.putQueryParameter("AlgorithmProvider", algorithmProvider);
@@ -259,7 +265,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the job creation time range for the query. Default value: current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T02:10:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -268,7 +277,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * IsTempAlgo.
+         * <p>Specifies whether the algorithm is a temporary algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTempAlgo(Boolean isTempAlgo) {
             this.putQueryParameter("IsTempAlgo", isTempAlgo);
@@ -277,7 +289,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The labels of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;project&quot;: &quot;sd-s3&quot;}</p>
          */
         public Builder labels(java.util.Map<String, ?> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -287,7 +302,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -296,7 +314,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -305,7 +326,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -314,7 +338,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModifiedTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -323,7 +350,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the job creation time range for the query. Default value: 7 days ago.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-22T01:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -332,7 +362,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -341,7 +374,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * TrainingJobId.
+         * <p>The training job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trains930928remn</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putQueryParameter("TrainingJobId", trainingJobId);
@@ -350,7 +386,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * TrainingJobName.
+         * <p>The name of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>large_language_model_training</p>
          */
         public Builder trainingJobName(String trainingJobName) {
             this.putQueryParameter("TrainingJobName", trainingJobName);
@@ -359,7 +398,10 @@ public class ListTrainingJobsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

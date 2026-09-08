@@ -67,7 +67,10 @@ public class QuotaIdName extends TeaModel {
         } 
 
         /**
-         * QuotaId.
+         * <p>Resource quota ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12345</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -75,7 +78,10 @@ public class QuotaIdName extends TeaModel {
         }
 
         /**
-         * QuotaName.
+         * <p>Resource quota name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-quota</p>
          */
         public Builder quotaName(String quotaName) {
             this.quotaName = quotaName;

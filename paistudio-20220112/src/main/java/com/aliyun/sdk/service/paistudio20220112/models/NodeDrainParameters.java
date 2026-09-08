@@ -88,7 +88,7 @@ public class NodeDrainParameters extends TeaModel {
         }
 
         /**
-         * PodFromSubProducts.
+         * <p>Delete pods of the specified job types</p>
          */
         public Builder podFromSubProducts(java.util.List<String> podFromSubProducts) {
             this.podFromSubProducts = podFromSubProducts;
@@ -96,7 +96,7 @@ public class NodeDrainParameters extends TeaModel {
         }
 
         /**
-         * PodNames.
+         * <p>Delete specified pods</p>
          */
         public Builder podNames(java.util.List<String> podNames) {
             this.podNames = podNames;

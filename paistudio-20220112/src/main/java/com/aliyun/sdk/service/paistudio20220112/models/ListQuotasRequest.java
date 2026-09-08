@@ -297,7 +297,10 @@ public class ListQuotasRequest extends Request {
         } 
 
         /**
-         * ClusterType.
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RayCluster</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -324,7 +327,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>Filters by label key and value. Separate multiple labels with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>official=true,gpu=false</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -333,7 +339,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * LayoutMode.
+         * <p>The display mode. Valid values: tree or list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tree</p>
          */
         public Builder layoutMode(String layoutMode) {
             this.putQueryParameter("LayoutMode", layoutMode);
@@ -342,7 +351,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values: desc or asc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -351,7 +363,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to query. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -360,7 +375,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -369,7 +387,18 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * ParentQuotaId.
+         * <p>Filters by ParentQuotaId:</p>
+         * <ul>
+         * <li><p>Not specified: lists all quotas under the tenant, including root quotas and child quotas.</p>
+         * </li>
+         * <li><p>Empty string: lists all root quotas.</p>
+         * </li>
+         * <li><p>Non-empty string: lists all child quotas of the specified ParentQuotaId.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>quotajradxh43rgb</p>
          */
         public Builder parentQuotaId(String parentQuotaId) {
             this.putQueryParameter("ParentQuotaId", parentQuotaId);
@@ -378,7 +407,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * QuotaIds.
+         * <p>Comma-separated QuotaIds for filtering. Only exact match is supported. A maximum of 100 IDs can be specified at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1ci8g793pgm,quotajradxh43rgb</p>
          */
         public Builder quotaIds(String quotaIds) {
             this.putQueryParameter("QuotaIds", quotaIds);
@@ -387,7 +419,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * QuotaName.
+         * <p>Filters by QuotaName. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotajradxh43rgb</p>
          */
         public Builder quotaName(String quotaName) {
             this.putQueryParameter("QuotaName", quotaName);
@@ -396,7 +431,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type of the quota (Lingjun/ECS/ACS). Default value: ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -405,7 +443,26 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results. Valid values:</p>
+         * <ul>
+         * <li><p>QuotaName</p>
+         * </li>
+         * <li><p>Status</p>
+         * </li>
+         * <li><p>CPU</p>
+         * </li>
+         * <li><p>Memory</p>
+         * </li>
+         * <li><p>GPU</p>
+         * </li>
+         * <li><p>GmtCreatedTime</p>
+         * </li>
+         * <li><p>GmtModifiedTime</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>status</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -414,7 +471,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>Comma-separated quota statuses for filtering. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder statuses(String statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -423,7 +483,14 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to display details. Valid values:</p>
+         * <ul>
+         * <li>true: Displays details.</li>
+         * <li>false: Does not display details.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -432,7 +499,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * Versions.
+         * <p>Filters by version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder versions(String versions) {
             this.putQueryParameter("Versions", versions);
@@ -441,7 +511,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * WorkspaceIds.
+         * <p>Comma-separated WorkspaceIds for filtering. Only exact match is supported. A maximum of 10 IDs can be specified at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21345,38727</p>
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);
@@ -450,7 +523,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the associated workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myshellprod</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);

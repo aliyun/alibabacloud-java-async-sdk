@@ -59,7 +59,10 @@ public class DeleteQuotaRequest extends Request {
         } 
 
         /**
-         * QuotaId.
+         * <p>The identifier of the quota to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1ci8g793pgm</p>
          */
         public Builder quotaId(String quotaId) {
             this.putPathParameter("QuotaId", quotaId);

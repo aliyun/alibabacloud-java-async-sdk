@@ -255,7 +255,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>The globally unique ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
@@ -264,7 +267,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * CreatorID.
+         * <p>The ID of the user who created the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612285282502326</p>
          */
         public Builder creatorID(String creatorID) {
             this.putQueryParameter("CreatorID", creatorID);
@@ -282,7 +288,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * EcsSpec.
+         * <p>The ECS instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.putQueryParameter("EcsSpec", ecsSpec);
@@ -291,7 +300,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * MachineGroupIDs.
+         * <p>The machine group IDs. Separate multiple IDs with a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg105ecqwfe49hwb</p>
          */
         public Builder machineGroupIDs(String machineGroupIDs) {
             this.putQueryParameter("MachineGroupIDs", machineGroupIDs);
@@ -300,7 +312,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -309,7 +324,16 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * <ul>
+         * <li><p><code>Asc</code>: Sorts the results in ascending order.</p>
+         * </li>
+         * <li><p><code>Desc</code>: Sorts the results in descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -318,7 +342,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * OrderInstanceId.
+         * <p>The ID of the purchase order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>236553689400333</p>
          */
         public Builder orderInstanceId(String orderInstanceId) {
             this.putQueryParameter("OrderInstanceId", orderInstanceId);
@@ -327,7 +354,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -336,7 +366,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -345,7 +378,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * PaymentDuration.
+         * <p>The payment duration. If <code>PaymentDurationUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paymentDuration(String paymentDuration) {
             this.putQueryParameter("PaymentDuration", paymentDuration);
@@ -354,7 +390,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * PaymentDurationUnit.
+         * <p>The billing duration unit of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.putQueryParameter("PaymentDurationUnit", paymentDurationUnit);
@@ -363,7 +402,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -372,7 +414,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreatedTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -381,7 +426,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status. <code>Creating</code>: The instance is being created. <code>Ready</code>: The instance is running. <code>Expiring</code>: The instance is expiring. <code>Expired</code>: The instance has expired. <code>Stopping</code>: The instance is being stopped. <code>Stopped</code>: The instance is stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

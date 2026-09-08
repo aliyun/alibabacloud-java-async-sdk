@@ -80,7 +80,7 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
         /**
-         * Quotas.
+         * <p>The list of resource quotas.</p>
          */
         public Builder quotas(java.util.List<Quota> quotas) {
             this.quotas = quotas;
@@ -88,7 +88,10 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

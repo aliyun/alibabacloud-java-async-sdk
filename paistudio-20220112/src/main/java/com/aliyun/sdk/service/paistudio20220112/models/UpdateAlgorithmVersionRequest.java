@@ -87,7 +87,10 @@ public class UpdateAlgorithmVersionRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-sidjc8134hv</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putPathParameter("AlgorithmId", algorithmId);
@@ -96,7 +99,10 @@ public class UpdateAlgorithmVersionRequest extends Request {
         }
 
         /**
-         * AlgorithmVersion.
+         * <p>The algorithm version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.0.1</p>
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.putPathParameter("AlgorithmVersion", algorithmVersion);
@@ -105,7 +111,7 @@ public class UpdateAlgorithmVersionRequest extends Request {
         }
 
         /**
-         * AlgorithmSpec.
+         * <p>The details of the algorithm.</p>
          */
         public Builder algorithmSpec(AlgorithmSpec algorithmSpec) {
             String algorithmSpecShrink = shrink(algorithmSpec, "AlgorithmSpec", "json");

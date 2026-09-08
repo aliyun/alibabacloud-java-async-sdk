@@ -88,6 +88,7 @@ public class GetResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The globally unique ID of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
-         * IsAIWorkspaceDataEnabled.
+         * <p>Optional. Defaults to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAIWorkspaceDataEnabled(Boolean isAIWorkspaceDataEnabled) {
             this.putQueryParameter("IsAIWorkspaceDataEnabled", isAIWorkspaceDataEnabled);
@@ -109,7 +113,7 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>A list of up to 20 tags to add to the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -178,7 +182,10 @@ public class GetResourceGroupRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -186,7 +193,10 @@ public class GetResourceGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -369,7 +369,10 @@ public class CreateTrainingJobRequest extends Request {
         } 
 
         /**
-         * AlgorithmName.
+         * <p>The algorithm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ev_classification</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.putBodyParameter("AlgorithmName", algorithmName);
@@ -378,7 +381,10 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * AlgorithmProvider.
+         * <p>The algorithm provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.putBodyParameter("AlgorithmProvider", algorithmProvider);
@@ -387,7 +393,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * AlgorithmSpec.
+         * <p>The algorithm configuration for the training job.</p>
          */
         public Builder algorithmSpec(AlgorithmSpec algorithmSpec) {
             this.putBodyParameter("AlgorithmSpec", algorithmSpec);
@@ -396,7 +402,10 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * AlgorithmVersion.
+         * <p>The algorithm version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.0.0</p>
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.putBodyParameter("AlgorithmVersion", algorithmVersion);
@@ -414,7 +423,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * CodeDir.
+         * <p>The code directory for the training job.</p>
          */
         public Builder codeDir(Location codeDir) {
             this.putBodyParameter("CodeDir", codeDir);
@@ -423,7 +432,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * ComputeResource.
+         * <p>The compute resource configuration.</p>
          */
         public Builder computeResource(ComputeResource computeResource) {
             this.putBodyParameter("ComputeResource", computeResource);
@@ -441,7 +450,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * Environments.
+         * <p>The environment variables for the training job.</p>
          */
         public Builder environments(java.util.Map<String, String> environments) {
             this.putBodyParameter("Environments", environments);
@@ -450,7 +459,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * ExperimentConfig.
+         * <p>The experiment configuration associated with the training job.</p>
          */
         public Builder experimentConfig(ExperimentConfig experimentConfig) {
             this.putBodyParameter("ExperimentConfig", experimentConfig);
@@ -459,7 +468,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * HyperParameters.
+         * <p>The training hyperparameter settings.</p>
          */
         public Builder hyperParameters(java.util.List<HyperParameters> hyperParameters) {
             this.putBodyParameter("HyperParameters", hyperParameters);
@@ -468,7 +477,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * InputChannels.
+         * <p>The training input data configuration.</p>
          */
         public Builder inputChannels(java.util.List<InputChannels> inputChannels) {
             this.putBodyParameter("InputChannels", inputChannels);
@@ -477,7 +486,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The training job labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -486,7 +495,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * OutputChannels.
+         * <p>The training output data configuration.</p>
          */
         public Builder outputChannels(java.util.List<OutputChannels> outputChannels) {
             this.putBodyParameter("OutputChannels", outputChannels);
@@ -495,7 +504,10 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -504,7 +516,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * PythonRequirements.
+         * <p>The Python package configuration for the training job.</p>
          */
         public Builder pythonRequirements(java.util.List<String> pythonRequirements) {
             this.putBodyParameter("PythonRequirements", pythonRequirements);
@@ -513,7 +525,10 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -522,7 +537,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * <p>The training job scheduling configuration.</p>
          */
         public Builder scheduler(Scheduler scheduler) {
             this.putBodyParameter("Scheduler", scheduler);
@@ -531,7 +546,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * Settings.
+         * <p>The additional parameter settings for the training node.</p>
          */
         public Builder settings(JobSettings settings) {
             this.putBodyParameter("Settings", settings);
@@ -540,7 +555,10 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * TrainingJobDescription.
+         * <p>The description of the training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen large language model training</p>
          */
         public Builder trainingJobDescription(String trainingJobDescription) {
             this.putBodyParameter("TrainingJobDescription", trainingJobDescription);
@@ -549,6 +567,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the training job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -561,7 +580,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * UserVpc.
+         * <p>The VPC configuration.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -570,6 +589,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -680,7 +700,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * CPU.
+             * <p>The number of CPU cores for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -688,7 +711,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -696,7 +722,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU type for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -704,7 +733,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -712,7 +744,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * SharedMemory.
+             * <p>The shared memory size of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -779,7 +814,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * SpotDiscountLimit.
+             * <p>The maximum hourly price discount for the instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder spotDiscountLimit(Float spotDiscountLimit) {
                 this.spotDiscountLimit = spotDiscountLimit;
@@ -787,7 +825,14 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * SpotStrategy.
+             * <p>The bidding strategy for the spot instance. Valid values:</p>
+             * <ul>
+             * <li>SpotWithPriceLimit: a spot instance with a maximum price limit.</li>
+             * <li>SpotAsPriceGo: the system automatically bids at the current market price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SpotWithPriceLimit</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -919,7 +964,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * EcsCount.
+             * <p>The number of ECS instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecsCount(Long ecsCount) {
                 this.ecsCount = ecsCount;
@@ -927,7 +975,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * EcsSpec.
+             * <p>The ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn5-c8g1.2xlarge</p>
              */
             public Builder ecsSpec(String ecsSpec) {
                 this.ecsSpec = ecsSpec;
@@ -935,7 +986,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * InstanceCount.
+             * <p>The number of instances used from the resource quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -943,7 +997,7 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * InstanceSpec.
+             * <p>The instance specification for the resource quota.</p>
              */
             public Builder instanceSpec(InstanceSpec instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -951,7 +1005,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quotam670lixikcs</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -959,7 +1016,7 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * SpotSpec.
+             * <p>The spot instance configuration.</p>
              */
             public Builder spotSpec(SpotSpec spotSpec) {
                 this.spotSpec = spotSpec;
@@ -967,7 +1024,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * UseSpotInstance.
+             * <p>Specifies whether to use spot instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useSpotInstance(Boolean useSpotInstance) {
                 this.useSpotInstance = useSpotInstance;
@@ -1021,7 +1081,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * ExperimentId.
+             * <p>The experiment ID associated with the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exp-ds9aefia90v</p>
              */
             public Builder experimentId(String experimentId) {
                 this.experimentId = experimentId;
@@ -1088,7 +1151,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>learning_rate</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1096,7 +1162,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0001</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1215,7 +1284,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-475megosidivjfgfq6</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -1223,7 +1295,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * InputUri.
+             * <p>The input data URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/modelscope/models/qwen2-0.5b/main/</p>
              */
             public Builder inputUri(String inputUri) {
                 this.inputUri = inputUri;
@@ -1231,7 +1306,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The input data name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1239,7 +1317,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * Options.
+             * <p>The input data parameter settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;appendable&quot;: true}</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -1247,7 +1328,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * RoleArn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1322,7 +1406,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreatedBy</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1330,7 +1417,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuickStart</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1436,7 +1526,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-475megosidivjfgfq6</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -1444,7 +1537,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The output data name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1452,7 +1548,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * OutputUri.
+             * <p>The output data URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/modelscope/models/qwen2-0.5b/main/</p>
              */
             public Builder outputUri(String outputUri) {
                 this.outputUri = outputUri;
@@ -1460,7 +1559,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * RoleArn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1535,7 +1637,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * MaxRunningTimeInMinutes.
+             * <p>The maximum training runtime in minutes. A value of 0 indicates no limit on the maximum runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRunningTimeInMinutes(Long maxRunningTimeInMinutes) {
                 this.maxRunningTimeInMinutes = maxRunningTimeInMinutes;
@@ -1543,7 +1648,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * MaxRunningTimeInSeconds.
+             * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRunningTimeInSeconds(Long maxRunningTimeInSeconds) {
                 this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
@@ -1649,7 +1757,10 @@ public class CreateTrainingJobRequest extends Request {
             } 
 
             /**
-             * DefaultRoute.
+             * <p>The default route interface. eth0 indicates that the default route uses the PAI VPC. eth1 indicates that the default route uses the user VPC. Default value: eth0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1657,7 +1768,7 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR block configuration.</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -1665,7 +1776,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-qdfasd13sdasf</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1673,7 +1787,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * SwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-icrc813vdsfol</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

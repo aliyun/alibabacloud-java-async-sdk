@@ -60,6 +60,7 @@ public class GetMachineGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the machine group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder machineGroupID(String machineGroupID) {

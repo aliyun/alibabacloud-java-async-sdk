@@ -93,7 +93,7 @@ public class SpotStockInternalInfo extends TeaModel {
         } 
 
         /**
-         * availableQuantity.
+         * <p>The number of available Spot Instances.</p>
          */
         public Builder availableQuantity(Integer availableQuantity) {
             this.availableQuantity = availableQuantity;
@@ -101,7 +101,7 @@ public class SpotStockInternalInfo extends TeaModel {
         }
 
         /**
-         * clusterId.
+         * <p>The ID of the cluster.</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -109,7 +109,7 @@ public class SpotStockInternalInfo extends TeaModel {
         }
 
         /**
-         * hpnZone.
+         * <p>The ID of the high-performance network (HPN) zone.</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.hpnZone = hpnZone;
@@ -117,7 +117,7 @@ public class SpotStockInternalInfo extends TeaModel {
         }
 
         /**
-         * totalQuantity.
+         * <p>The total number of Spot Instances.</p>
          */
         public Builder totalQuantity(Integer totalQuantity) {
             this.totalQuantity = totalQuantity;

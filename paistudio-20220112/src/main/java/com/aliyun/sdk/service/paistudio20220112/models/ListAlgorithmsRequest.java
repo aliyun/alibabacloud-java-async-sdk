@@ -129,7 +129,10 @@ public class ListAlgorithmsRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>Algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putQueryParameter("AlgorithmId", algorithmId);
@@ -138,7 +141,10 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * AlgorithmName.
+         * <p>Algorithm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_training</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.putQueryParameter("AlgorithmName", algorithmName);
@@ -147,7 +153,10 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * AlgorithmProvider.
+         * <p>Algorithm provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.putQueryParameter("AlgorithmProvider", algorithmProvider);
@@ -156,7 +165,10 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +177,10 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +189,10 @@ public class ListAlgorithmsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

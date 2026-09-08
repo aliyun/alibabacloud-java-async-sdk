@@ -67,7 +67,10 @@ public class TimeRangeFilter extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -75,7 +78,10 @@ public class TimeRangeFilter extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -67,7 +67,10 @@ public class CacheInfo extends TeaModel {
         } 
 
         /**
-         * MountPoint.
+         * <p>The mount point address of the datasource for service registration in the cache service, such as an OSS Bucket path or a CPFS path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://your-bucket.oss-cn-wulanchabu-internal.aliyuncs.com/</p>
          */
         public Builder mountPoint(String mountPoint) {
             this.mountPoint = mountPoint;
@@ -75,7 +78,10 @@ public class CacheInfo extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The port number that the cache service provides for external access to the datasource. The client must access cached data through this port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10080</p>
          */
         public Builder port(String port) {
             this.port = port;

@@ -134,7 +134,10 @@ public class HyperParameterDefinition extends TeaModel {
         } 
 
         /**
-         * DefaultValue.
+         * <p>The default value of the hyperparameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -142,7 +145,10 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the hyperparameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参数定义了训练的batch_size。</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,7 +156,10 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch Size</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -158,7 +167,11 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
+         * <p>The name of the parameter.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch_size</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -166,7 +179,7 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
-         * Range.
+         * <p>The value range of the parameter.</p>
          */
         public Builder range(HyperParameterRange range) {
             this.range = range;
@@ -174,7 +187,10 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
-         * Required.
+         * <p>Specifies whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder required(Boolean required) {
             this.required = required;
@@ -182,7 +198,11 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
+         * <p>The type of the hyperparameter.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Integer</p>
          */
         public Builder type(String type) {
             this.type = type;

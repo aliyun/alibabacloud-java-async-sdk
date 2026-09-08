@@ -115,7 +115,10 @@ public class UpdateResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
@@ -124,7 +127,10 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_new_havpn_tf</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -133,7 +139,10 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prophet</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -142,7 +151,10 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * Unbind.
+         * <p>Whether to detach the resource group from the currently connected VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder unbind(Boolean unbind) {
             this.putBodyParameter("Unbind", unbind);
@@ -151,7 +163,7 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * UserVpc.
+         * <p>Information about the VPC connected to the resource group.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);

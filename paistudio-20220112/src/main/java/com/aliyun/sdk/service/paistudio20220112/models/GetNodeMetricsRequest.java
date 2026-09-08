@@ -145,6 +145,7 @@ public class GetNodeMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
+         * <p>The name of the metric to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T10:17:06</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -178,7 +183,17 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type. Valid values:</p>
+         * <ul>
+         * <li>V100</li>
+         * <li>A100</li>
+         * <li>A10</li>
+         * <li>T4</li>
+         * <li>P100</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>V100</p>
          */
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
@@ -187,7 +202,10 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-08T02:23:30.292Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -196,7 +214,19 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
-         * TimeStep.
+         * <p>The time step. Default value: 5m. Valid values for the time unit:</p>
+         * <ul>
+         * <li><p>h: hours.</p>
+         * </li>
+         * <li><p>m: minutes.</p>
+         * </li>
+         * <li><p>s: seconds.</p>
+         * </li>
+         * </ul>
+         * <p>If no unit is specified, the default unit is s (seconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1h</p>
          */
         public Builder timeStep(String timeStep) {
             this.putQueryParameter("TimeStep", timeStep);
@@ -205,7 +235,12 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</p>
+         * <p>false: does not display non-essential information (default).
+         * true: displays non-essential information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);

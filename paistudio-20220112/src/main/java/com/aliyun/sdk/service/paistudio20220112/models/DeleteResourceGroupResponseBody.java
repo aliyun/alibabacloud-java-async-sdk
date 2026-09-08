@@ -67,7 +67,10 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>The globally unique ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgvl9d6utwcscukh</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;

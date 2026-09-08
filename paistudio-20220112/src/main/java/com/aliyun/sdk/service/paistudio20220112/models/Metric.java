@@ -67,7 +67,10 @@ public class Metric extends TeaModel {
         } 
 
         /**
-         * Time.
+         * <p>The UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg17tmvwiokh****</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -75,7 +78,10 @@ public class Metric extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23000</p>
          */
         public Builder value(String value) {
             this.value = value;

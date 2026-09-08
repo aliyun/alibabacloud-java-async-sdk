@@ -80,7 +80,10 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * MetricType.
+         * <p>The name of the queried metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DiskWriteRate</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -88,7 +91,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * NodesMetrics.
+         * <p>The node metric information.</p>
          */
         public Builder nodesMetrics(java.util.List<NodeMetric> nodesMetrics) {
             this.nodesMetrics = nodesMetrics;
@@ -96,7 +99,10 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;

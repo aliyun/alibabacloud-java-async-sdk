@@ -160,6 +160,7 @@ public class GetUserViewMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to obtain information about the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,14 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -181,6 +189,7 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +202,7 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +215,10 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModified</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -214,7 +227,19 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * TimeStep.
+         * <p>The time step. Default value: 5m. Valid values for the time unit:</p>
+         * <ul>
+         * <li><p>h: hours.</p>
+         * </li>
+         * <li><p>m: minutes.</p>
+         * </li>
+         * <li><p>s: seconds.</p>
+         * </li>
+         * </ul>
+         * <p>If no unit is specified, the default unit is s (seconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1h</p>
          */
         public Builder timeStep(String timeStep) {
             this.putQueryParameter("TimeStep", timeStep);
@@ -223,7 +248,10 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -232,7 +260,10 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86995</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

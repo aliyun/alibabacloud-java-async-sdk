@@ -50,11 +50,11 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shanghai-finance-1", "pai.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "pai.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "pai.us-southeast-1.aliyuncs.com"),
             new TeaPair("cn-zhongwei", "pai.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "pai.ap-northeast-2.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "pai.cn-guangzhou.aliyuncs.com"),
             new TeaPair("ap-southeast-8", "pai.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "pai.ap-northeast-2.aliyuncs.com")
+            new TeaPair("us-southeast-1", "pai.us-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -647,6 +647,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
+     * <li>NodeName and ResourceGroupId are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li>Optional parameters include OversoldTypes and GPUIndexes, which are used to further filter or specify conditions.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListNodePods  ListNodePodsRequest
      * @return ListNodePodsResponse
      */
@@ -665,6 +673,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Lists the node types that match the specified filter criteria.</li>
+     * <li>You must specify either the <code>ResourceGroupIds</code> or <code>QuotaId</code> parameter. The specified resource group IDs or quota ID must belong to the requesting user.</li>
+     * <li>You can filter the results by using parameters such as accelerator type and GPU type.</li>
+     * <li>The response includes details and statistics for each node type, indicating the availability of your resources.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListNodeTypes  ListNodeTypesRequest
      * @return ListNodeTypesResponse
      */
@@ -683,6 +700,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</p>
+     * 
      * @param request the request parameters of ListNodes  ListNodesRequest
      * @return ListNodesResponse
      */
@@ -701,6 +721,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the resource usage of users for a specified QuotaId.</p>
+     * 
      * @param request the request parameters of ListQuotaActiveUserUsages  ListQuotaActiveUserUsagesRequest
      * @return ListQuotaActiveUserUsagesResponse
      */
@@ -773,6 +796,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</p>
+     * 
      * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
      */
@@ -791,6 +817,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters to query for resources.</p>
+     * <ul>
+     * <li>ResourceId.N</li>
+     * <li>Tag.N (Tag.N.Key and Tag.N.Value)
+     * If you specify both parameters, the operation returns only resources that match both criteria.</li>
+     * <li>Tag.N and ResourceId.N</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -935,6 +970,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</p>
+     * 
      * @param request the request parameters of OperateNode  OperateNodeRequest
      * @return OperateNodeResponse
      */
@@ -989,6 +1027,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Alibaba Cloud checks the number of existing tags on the resource before attaching a new tag. If the limit is exceeded, an error message is returned.</p>
+     * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */

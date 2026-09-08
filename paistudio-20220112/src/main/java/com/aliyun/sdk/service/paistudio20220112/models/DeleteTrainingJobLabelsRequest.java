@@ -75,6 +75,7 @@ public class DeleteTrainingJobLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteTrainingJobLabelsRequest extends Request {
         }
 
         /**
+         * <p>The keys of the labels.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

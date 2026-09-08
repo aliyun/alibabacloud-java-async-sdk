@@ -67,7 +67,10 @@ public class CreateAlgorithmResponseBody extends TeaModel {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The ID of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.algorithmId = algorithmId;
@@ -75,7 +78,10 @@ public class CreateAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * OutputModels.
+         * <p>List of models produced by training.</p>
          */
         public Builder outputModels(java.util.List<OutputModels> outputModels) {
             this.outputModels = outputModels;
@@ -120,7 +120,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RootModelName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -128,7 +131,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen2-0.5</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -299,7 +305,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * CompressionSpec.
+             * <p>Model compression configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
                 this.compressionSpec = compressionSpec;
@@ -307,7 +316,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationSpec.
+             * <p>Model evaluation configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder evaluationSpec(java.util.Map<String, ?> evaluationSpec) {
                 this.evaluationSpec = evaluationSpec;
@@ -315,7 +327,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * InferenceSpec.
+             * <p>Model inference configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder inferenceSpec(java.util.Map<String, ?> inferenceSpec) {
                 this.inferenceSpec = inferenceSpec;
@@ -323,7 +338,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>List of tags.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -331,7 +346,21 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>Training job metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;Results&quot;: [
+             *           {
+             *             &quot;Dataset&quot;: {
+             *               &quot;Train&quot;: &quot;oss://somebucket.oss-cn-hangzhou.aliyuncs.com/datasets/Chinese-medical-dialogue-data/chinese_medical_train_sampled.json&quot;
+             *             },
+             *             &quot;Metrics&quot;: {
+             *               &quot;loss&quot;: 2.1276
+             *             }
+             *           }
+             *         ]
+             * }</p>
              */
             public Builder metrics(java.util.Map<String, ?> metrics) {
                 this.metrics = metrics;
@@ -339,7 +368,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputChannelName.
+             * <p>Name of the training output data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder outputChannelName(String outputChannelName) {
                 this.outputChannelName = outputChannelName;
@@ -347,7 +379,18 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>Source ID (optional):</p>
+             * <ul>
+             * <li><p>If the source is Custom, there are no format requirements.</p>
+             * </li>
+             * <li><p>If the source is PAIFlow, use the format: region=cn-shanghai,workspaceId=1345,kind=PipelineRun,id=run-sakdbaskjdf.</p>
+             * </li>
+             * <li><p>If the source is TrainingService, use the format: region=cn-shanghai,workspaceId=1345,kind=TrainingJob,id=job-sakdbaskjdf.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>region=cn-shanghai,workspaceId=1345,kind=PipelineRun,id=run-sakdbaskjdf</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -355,7 +398,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>Source (the type of job that produced the model). Default: Custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAIFlow</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -363,7 +409,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * TrainingSpec.
+             * <p>Model training configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder trainingSpec(java.util.Map<String, ?> trainingSpec) {
                 this.trainingSpec = trainingSpec;
@@ -371,7 +420,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>Link to the training output data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/output/channel/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;

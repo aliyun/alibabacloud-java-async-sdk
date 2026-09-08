@@ -340,7 +340,10 @@ public class UserViewMetric extends TeaModel {
         } 
 
         /**
-         * CPUNodeNumber.
+         * <p>Number of CPU nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CPUNodeNumber(Integer CPUNodeNumber) {
             this.CPUNodeNumber = CPUNodeNumber;
@@ -348,7 +351,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * CPUUsageRate.
+         * <p>CPU usage rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         public Builder CPUUsageRate(String CPUUsageRate) {
             this.CPUUsageRate = CPUUsageRate;
@@ -356,7 +362,7 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * CpuJobNames.
+         * <p>CPU jobs.</p>
          */
         public Builder cpuJobNames(java.util.List<String> cpuJobNames) {
             this.cpuJobNames = cpuJobNames;
@@ -364,7 +370,7 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * CpuNodeNames.
+         * <p>List of CPU nodes.</p>
          */
         public Builder cpuNodeNames(java.util.List<String> cpuNodeNames) {
             this.cpuNodeNames = cpuNodeNames;
@@ -372,7 +378,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * DiskReadRate.
+         * <p>Disk read rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder diskReadRate(String diskReadRate) {
             this.diskReadRate = diskReadRate;
@@ -380,7 +389,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * DiskWriteRate.
+         * <p>Disk write rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder diskWriteRate(String diskWriteRate) {
             this.diskWriteRate = diskWriteRate;
@@ -388,7 +400,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * GPUNodeNumber.
+         * <p>Number of GPU nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder GPUNodeNumber(Integer GPUNodeNumber) {
             this.GPUNodeNumber = GPUNodeNumber;
@@ -396,7 +411,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * GPUUsageRate.
+         * <p>GPU usage rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder GPUUsageRate(String GPUUsageRate) {
             this.GPUUsageRate = GPUUsageRate;
@@ -404,7 +422,7 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * GpuJobNames.
+         * <p>GPU jobs.</p>
          */
         public Builder gpuJobNames(java.util.List<String> gpuJobNames) {
             this.gpuJobNames = gpuJobNames;
@@ -412,7 +430,7 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * GpuNodeNames.
+         * <p>List of GPU nodes.</p>
          */
         public Builder gpuNodeNames(java.util.List<String> gpuNodeNames) {
             this.gpuNodeNames = gpuNodeNames;
@@ -420,7 +438,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>Job type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PyTorch</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -428,7 +449,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * MemoryUsageRate.
+         * <p>Memory usage rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder memoryUsageRate(String memoryUsageRate) {
             this.memoryUsageRate = memoryUsageRate;
@@ -436,7 +460,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * NetworkInputRate.
+         * <p>The network input rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkInputRate(String networkInputRate) {
             this.networkInputRate = networkInputRate;
@@ -444,7 +471,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * NetworkOutputRate.
+         * <p>Network output rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkOutputRate(String networkOutputRate) {
             this.networkOutputRate = networkOutputRate;
@@ -452,7 +482,7 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * NodeNames.
+         * <p>List of nodes.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
@@ -460,7 +490,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * RequestCPU.
+         * <p>Number of CPU cores allocated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder requestCPU(Integer requestCPU) {
             this.requestCPU = requestCPU;
@@ -468,7 +501,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * RequestGPU.
+         * <p>Number of GPU cores allocated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder requestGPU(Integer requestGPU) {
             this.requestGPU = requestGPU;
@@ -476,7 +512,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * RequestMemory.
+         * <p>Allocated memory, in KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102400000</p>
          */
         public Builder requestMemory(Long requestMemory) {
             this.requestMemory = requestMemory;
@@ -484,7 +523,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg17tmvwiokh****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -492,7 +534,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * TotalCPU.
+         * <p>Total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCPU(Integer totalCPU) {
             this.totalCPU = totalCPU;
@@ -500,7 +545,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * TotalGPU.
+         * <p>Total number of GPU cards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalGPU(Integer totalGPU) {
             this.totalGPU = totalGPU;
@@ -508,7 +556,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * TotalMemory.
+         * <p>Total memory, in KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder totalMemory(Long totalMemory) {
             this.totalMemory = totalMemory;
@@ -516,7 +567,10 @@ public class UserViewMetric extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16111111****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

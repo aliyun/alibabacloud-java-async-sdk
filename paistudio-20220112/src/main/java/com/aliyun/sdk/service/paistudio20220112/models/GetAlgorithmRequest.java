@@ -59,7 +59,10 @@ public class GetAlgorithmRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>Algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putPathParameter("AlgorithmId", algorithmId);

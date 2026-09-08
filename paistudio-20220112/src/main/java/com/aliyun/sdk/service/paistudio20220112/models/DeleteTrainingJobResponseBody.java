@@ -54,7 +54,10 @@ public class DeleteTrainingJobResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4cc83062-9bcb-4ab3-979e-2e571a35834f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

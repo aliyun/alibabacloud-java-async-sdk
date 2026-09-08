@@ -80,7 +80,7 @@ public class BindingPolicy extends TeaModel {
         } 
 
         /**
-         * ExcludeNodes.
+         * <p>A list of node IDs to exclude from scheduling.</p>
          */
         public Builder excludeNodes(java.util.List<String> excludeNodes) {
             this.excludeNodes = excludeNodes;
@@ -88,7 +88,7 @@ public class BindingPolicy extends TeaModel {
         }
 
         /**
-         * IncludeNodes.
+         * <p>A list of node IDs to include in the scheduling.</p>
          */
         public Builder includeNodes(java.util.List<String> includeNodes) {
             this.includeNodes = includeNodes;
@@ -96,7 +96,10 @@ public class BindingPolicy extends TeaModel {
         }
 
         /**
-         * NodeSpecCount.
+         * <p>The number of nodes to be selected by the scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder nodeSpecCount(Long nodeSpecCount) {
             this.nodeSpecCount = nodeSpecCount;

@@ -87,7 +87,10 @@ public class GetQuotaRequest extends Request {
         } 
 
         /**
-         * QuotaId.
+         * <p>The quota identifier for which to retrieve details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1ci8g79****</p>
          */
         public Builder quotaId(String quotaId) {
             this.putPathParameter("QuotaId", quotaId);
@@ -96,7 +99,10 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to display detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -105,7 +111,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * WithNodeMeta.
+         * <p>Specifies whether to return the node metadata bound to the quota.</p>
          */
         public Builder withNodeMeta(Boolean withNodeMeta) {
             this.putQueryParameter("WithNodeMeta", withNodeMeta);

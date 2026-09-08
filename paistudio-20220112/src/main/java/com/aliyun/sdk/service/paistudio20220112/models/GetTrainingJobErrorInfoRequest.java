@@ -60,6 +60,7 @@ public class GetTrainingJobErrorInfoRequest extends Request {
         } 
 
         /**
+         * <p>The training job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

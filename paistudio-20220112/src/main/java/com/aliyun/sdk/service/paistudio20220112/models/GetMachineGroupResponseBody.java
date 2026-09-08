@@ -275,7 +275,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of instances in the machine group.</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -283,7 +283,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultDriver.
+         * <p>The default driver.</p>
          */
         public Builder defaultDriver(String defaultDriver) {
             this.defaultDriver = defaultDriver;
@@ -291,7 +291,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -299,7 +299,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * EcsType.
+         * <p>The ECS instance type of the machine group.</p>
          */
         public Builder ecsType(String ecsType) {
             this.ecsType = ecsType;
@@ -307,7 +307,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The time when the machine group was created.</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -315,7 +315,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtExpired.
+         * <p>The expiration time. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
          */
         public Builder gmtExpired(String gmtExpired) {
             this.gmtExpired = gmtExpired;
@@ -323,7 +323,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the machine group was last modified.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -331,7 +331,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtStarted.
+         * <p>The time when the machine group started.</p>
          */
         public Builder gmtStarted(String gmtStarted) {
             this.gmtStarted = gmtStarted;
@@ -339,7 +339,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MachineGroupID.
+         * <p>The ID of the machine group.</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.machineGroupID = machineGroupID;
@@ -347,7 +347,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OrderID.
+         * <p>The order ID.</p>
          */
         public Builder orderID(String orderID) {
             this.orderID = orderID;
@@ -355,7 +355,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OrderInstanceId.
+         * <p>The instance ID of the order.</p>
          */
         public Builder orderInstanceId(String orderInstanceId) {
             this.orderInstanceId = orderInstanceId;
@@ -363,7 +363,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PAIResourceID.
+         * <p>The PAI resource ID.</p>
          */
         public Builder PAIResourceID(String PAIResourceID) {
             this.PAIResourceID = PAIResourceID;
@@ -371,7 +371,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The payment type. Valid values: <code>PostPay</code> (pay-as-you-go) and <code>PrePay</code> (subscription).</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -379,7 +379,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PricingCycle.
+         * <p>The billing cycle. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.pricingCycle = pricingCycle;
@@ -387,7 +387,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RegionID.
+         * <p>The region ID.</p>
          */
         public Builder regionID(String regionID) {
             this.regionID = regionID;
@@ -395,7 +395,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -403,7 +403,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the machine group.</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -411,7 +411,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SupportedDrivers.
+         * <p>The drivers that the machine group supports.</p>
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;

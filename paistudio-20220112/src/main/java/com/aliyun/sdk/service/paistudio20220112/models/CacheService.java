@@ -223,7 +223,7 @@ public class CacheService extends TeaModel {
         } 
 
         /**
-         * CacheInfos.
+         * <p>The list of data source cache information connected to the cache service. Each element corresponds to a data source and its access port.</p>
          */
         public Builder cacheInfos(java.util.List<CacheInfo> cacheInfos) {
             this.cacheInfos = cacheInfos;
@@ -231,7 +231,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * CacheServiceId.
+         * <p>The cache service ID. This is the unique identifier of the cache service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cachea1b2c3d4e5f</p>
          */
         public Builder cacheServiceId(String cacheServiceId) {
             this.cacheServiceId = cacheServiceId;
@@ -239,7 +242,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster where the cache service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -247,7 +253,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * CreatedBy.
+         * <p>The ID of the resource quota that created the cache service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1a2b3c4d5e6</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -255,7 +264,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The time when the cache service was created, in UTC in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-10T03:17:31Z</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -263,7 +275,7 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * IsSharded.
+         * <p>Indicates whether the service discovery of the cache service uses shard mode.</p>
          */
         public Builder isSharded(Boolean isSharded) {
             this.isSharded = isSharded;
@@ -271,7 +283,15 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The type of RDMA network interface controller used by the cache service. This parameter is returned only when SupportRDMA is set to true. Valid values:</p>
+         * <ul>
+         * <li>eic: EIC network interface controller.</li>
+         * <li>mlx: Mellanox network interface controller.</li>
+         * </ul>
+         * <p>This parameter is empty when RDMA is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eic</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -279,7 +299,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The ID of the resource quota to which the cache service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1a2b3c4d5e6</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -287,7 +310,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The current status of the cache service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -295,7 +321,7 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * SupportRDMA.
+         * <p>Indicates whether the cache service supports access through RDMA networks.</p>
          */
         public Builder supportRDMA(String supportRDMA) {
             this.supportRDMA = supportRDMA;
@@ -303,7 +329,7 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * SupportedClientQuotaIds.
+         * <p>The list of client quota IDs that are allowed to access the cache service.</p>
          */
         public Builder supportedClientQuotaIds(java.util.List<String> supportedClientQuotaIds) {
             this.supportedClientQuotaIds = supportedClientQuotaIds;
@@ -311,7 +337,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID to which the cache service belongs, which is the Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -319,7 +348,10 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user who created the cache service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789012345678</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -327,7 +359,7 @@ public class CacheService extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The VPC network information of the cache service, including the VPC, vSwitch, and security group configurations.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;

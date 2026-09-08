@@ -186,6 +186,7 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         } 
 
         /**
+         * <p>The quota identifier for which to retrieve detailed information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,14 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -207,7 +215,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +227,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +239,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * SelfOnly.
+         * <p>Specifies whether to view only the resource usage in the current quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder selfOnly(Boolean selfOnly) {
             this.putQueryParameter("SelfOnly", selfOnly);
@@ -234,7 +251,20 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the returned results. Valid values:</p>
+         * <ul>
+         * <li>QuotaId</li>
+         * <li>SubmittedCPU</li>
+         * <li>SubmittedMemory</li>
+         * <li>SubmittedGPU</li>
+         * <li>UsedCPU</li>
+         * <li>UsedMemory</li>
+         * <li>UsedGPU</li>
+         * <li>WorkloadCount</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -243,7 +273,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID for which to query resource usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200xxxxxx</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -252,7 +285,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username for which to query resource usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -270,7 +306,10 @@ public class ListQuotaActiveUserUsagesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

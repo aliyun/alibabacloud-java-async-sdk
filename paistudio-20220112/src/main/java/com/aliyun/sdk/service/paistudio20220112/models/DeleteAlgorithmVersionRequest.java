@@ -75,6 +75,7 @@ public class DeleteAlgorithmVersionRequest extends Request {
         } 
 
         /**
+         * <p>The algorithm ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteAlgorithmVersionRequest extends Request {
         }
 
         /**
+         * <p>The algorithm version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

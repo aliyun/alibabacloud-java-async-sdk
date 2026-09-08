@@ -103,6 +103,7 @@ public class ListNodePodsRequest extends Request {
         } 
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ListNodePodsRequest extends Request {
         }
 
         /**
-         * GPUIndexes.
+         * <p>The GPU index number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder GPUIndexes(String GPUIndexes) {
             this.putQueryParameter("GPUIndexes", GPUIndexes);
@@ -124,7 +128,10 @@ public class ListNodePodsRequest extends Request {
         }
 
         /**
-         * OversoldTypes.
+         * <p>The resource type used by the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForceQuotaOversold</p>
          */
         public Builder oversoldTypes(String oversoldTypes) {
             this.putQueryParameter("OversoldTypes", oversoldTypes);
@@ -133,6 +140,7 @@ public class ListNodePodsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource group to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

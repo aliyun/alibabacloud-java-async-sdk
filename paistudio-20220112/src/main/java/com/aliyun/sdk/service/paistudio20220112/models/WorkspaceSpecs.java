@@ -80,7 +80,10 @@ public class WorkspaceSpecs extends TeaModel {
         } 
 
         /**
-         * Product.
+         * <p>Applicable product (DLC, DSW, EAS, ...)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DLC</p>
          */
         public Builder product(String product) {
             this.product = product;
@@ -88,7 +91,7 @@ public class WorkspaceSpecs extends TeaModel {
         }
 
         /**
-         * Specs.
+         * <p>List of resource specifications</p>
          */
         public Builder specs(java.util.List<WorkspaceSpec> specs) {
             this.specs = specs;
@@ -96,7 +99,10 @@ public class WorkspaceSpecs extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122421</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

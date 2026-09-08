@@ -184,7 +184,7 @@ public class QueueMeta extends TeaModel {
         } 
 
         /**
-         * GmtDequeuedTime.
+         * <p>The time the entry was removed from the queue.</p>
          */
         public Builder gmtDequeuedTime(String gmtDequeuedTime) {
             this.gmtDequeuedTime = gmtDequeuedTime;
@@ -192,7 +192,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * GmtEnqueuedTime.
+         * <p>The time the entry was added to the queue.</p>
          */
         public Builder gmtEnqueuedTime(String gmtEnqueuedTime) {
             this.gmtEnqueuedTime = gmtEnqueuedTime;
@@ -200,7 +200,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * GmtPositionModifiedTime.
+         * <p>The last time the position of the entry was modified.</p>
          */
         public Builder gmtPositionModifiedTime(String gmtPositionModifiedTime) {
             this.gmtPositionModifiedTime = gmtPositionModifiedTime;
@@ -208,7 +208,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the queue entry.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -216,7 +216,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * Position.
+         * <p>The position of the entry in the queue.</p>
          */
         public Builder position(String position) {
             this.position = position;
@@ -224,7 +224,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * QueueStrategy.
+         * <p>The queuing strategy for the entry.</p>
          */
         public Builder queueStrategy(String queueStrategy) {
             this.queueStrategy = queueStrategy;
@@ -232,7 +232,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The ID of the associated quota.</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -240,7 +240,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * Resource.
+         * <p>The resources that the queue entry requires.</p>
          */
         public Builder resource(ResourceAmount resource) {
             this.resource = resource;
@@ -248,7 +248,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * ScheduledResource.
+         * <p>The resources scheduled for the entry.</p>
          */
         public Builder scheduledResource(String scheduledResource) {
             this.scheduledResource = scheduledResource;
@@ -256,7 +256,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The current status of the entry.</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -264,7 +264,7 @@ public class QueueMeta extends TeaModel {
         }
 
         /**
-         * UseOversoldResource.
+         * <p>Indicates whether the entry can use oversold resources.</p>
          */
         public Builder useOversoldResource(Boolean useOversoldResource) {
             this.useOversoldResource = useOversoldResource;

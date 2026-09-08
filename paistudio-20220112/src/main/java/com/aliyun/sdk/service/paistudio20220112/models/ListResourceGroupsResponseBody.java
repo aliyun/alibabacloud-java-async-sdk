@@ -81,7 +81,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CFA2665-1FFE-5929-8468-C14C25890486</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +92,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroups.
+         * <p>The list of resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RG1</p>
          */
         public Builder resourceGroups(java.util.List<ResourceGroup> resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -97,6 +103,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The total number of matching resource groups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

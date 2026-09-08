@@ -93,7 +93,10 @@ public class GetResourceGroupTotalResponseBody extends TeaModel {
         } 
 
         /**
-         * totalCPU.
+         * <p>The total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCPU(Integer totalCPU) {
             this.totalCPU = totalCPU;
@@ -101,7 +104,10 @@ public class GetResourceGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * totalGPU.
+         * <p>The total number of GPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder totalGPU(Integer totalGPU) {
             this.totalGPU = totalGPU;
@@ -109,7 +115,7 @@ public class GetResourceGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * totalGPUInfos.
+         * <p>The resources counted by GPU card type.</p>
          */
         public Builder totalGPUInfos(java.util.List<GPUInfo> totalGPUInfos) {
             this.totalGPUInfos = totalGPUInfos;
@@ -117,7 +123,10 @@ public class GetResourceGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * totalMemory.
+         * <p>The total memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder totalMemory(Integer totalMemory) {
             this.totalMemory = totalMemory;

@@ -67,7 +67,10 @@ public class Location extends TeaModel {
         } 
 
         /**
-         * LocationType.
+         * <p>The code location type. Valid values: OSS and NAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder locationType(String locationType) {
             this.locationType = locationType;
@@ -75,7 +78,10 @@ public class Location extends TeaModel {
         }
 
         /**
-         * LocationValue.
+         * <p>The code path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://${bucket_name}.oss-${region}.aliyuncs.com/oss/location/path/</p>
          */
         public Builder locationValue(java.util.Map<String, ?> locationValue) {
             this.locationValue = locationValue;

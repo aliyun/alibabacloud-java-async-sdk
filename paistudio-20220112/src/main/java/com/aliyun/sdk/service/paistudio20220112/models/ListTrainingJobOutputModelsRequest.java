@@ -60,6 +60,7 @@ public class ListTrainingJobOutputModelsRequest extends Request {
         } 
 
         /**
+         * <p>Training job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

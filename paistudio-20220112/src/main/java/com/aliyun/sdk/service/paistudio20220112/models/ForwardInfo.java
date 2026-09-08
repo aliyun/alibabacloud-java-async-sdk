@@ -67,7 +67,10 @@ public class ForwardInfo extends TeaModel {
         } 
 
         /**
-         * EipAllocationId.
+         * <p>EIP Allocation ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-h29r78ieufbih</p>
          */
         public Builder eipAllocationId(String eipAllocationId) {
             this.eipAllocationId = eipAllocationId;
@@ -75,7 +78,10 @@ public class ForwardInfo extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * <p>NAT Gateway ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-7j4mka9wguxj</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;

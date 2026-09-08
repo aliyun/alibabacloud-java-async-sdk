@@ -67,7 +67,10 @@ public class GetTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>Share token for the training task. Use this token as the Token parameter in the GetJob API to view details of the shared task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ql4OU830nJaF17LP6KTry4a9DvnjIXHP</p>
          */
         public Builder token(String token) {
             this.token = token;

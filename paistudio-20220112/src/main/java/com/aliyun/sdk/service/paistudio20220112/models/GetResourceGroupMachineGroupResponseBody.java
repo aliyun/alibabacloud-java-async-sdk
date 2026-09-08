@@ -382,7 +382,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The total number of CPU cores per machine in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(String cpu) {
             this.cpu = cpu;
@@ -390,7 +393,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultDriver.
+         * <p>The default GPU driver version per machine in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535</p>
          */
         public Builder defaultDriver(String defaultDriver) {
             this.defaultDriver = defaultDriver;
@@ -398,7 +404,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * EcsCount.
+         * <p>The number of ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ecsCount(Long ecsCount) {
             this.ecsCount = ecsCount;
@@ -406,7 +415,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * EcsSpec.
+         * <p>The ECS spec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -414,7 +426,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The creation time of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -422,7 +437,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtExpiredTime.
+         * <p>The expiration time of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtExpiredTime(String gmtExpiredTime) {
             this.gmtExpiredTime = gmtExpiredTime;
@@ -430,7 +448,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The last modification time of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -438,7 +459,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GmtStartedTime.
+         * <p>The start time of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtStartedTime(String gmtStartedTime) {
             this.gmtStartedTime = gmtStartedTime;
@@ -446,7 +470,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Gpu.
+         * <p>The number of GPUs per machine in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder gpu(String gpu) {
             this.gpu = gpu;
@@ -454,7 +481,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GpuType.
+         * <p>The GPU type per machine in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A100</p>
          */
         public Builder gpuType(String gpuType) {
             this.gpuType = gpuType;
@@ -462,7 +492,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MachineGroupID.
+         * <p>The ID of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mgmioirqjgw6c5lg</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.machineGroupID = machineGroupID;
@@ -470,7 +503,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The amount of memory per machine in the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -478,7 +514,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testMachineGroup</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -486,7 +525,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentDuration.
+         * <p>The payment duration. When PaymentDurationUnit is set to Month, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paymentDuration(String paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -494,7 +536,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentDurationUnit.
+         * <p>The unit of the billing cycle for the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.paymentDurationUnit = paymentDurationUnit;
@@ -502,7 +547,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentType.
+         * <p>The payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -510,7 +558,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -518,7 +569,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>The ID of the resource group. This ID is globally unique and can be used to retrieve information about the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -526,7 +580,17 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the machine group.
+         * Valid values:
+         * Creating: The machine group is being created.
+         * Ready: The machine group is running.
+         * Expiring: The machine group is about to expire.
+         * Expired: The machine group has expired.
+         * Stopping: The machine group is being stopped.
+         * Stopped: The machine group has been stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -534,7 +598,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SupportedDrivers.
+         * <p>The GPU driver versions supported by the machines in the machine group.</p>
          */
         public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
@@ -558,7 +622,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags attached to the machine group.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -624,7 +688,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -632,7 +699,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

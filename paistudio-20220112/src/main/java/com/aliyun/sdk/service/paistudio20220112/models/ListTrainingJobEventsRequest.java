@@ -117,10 +117,11 @@ public class ListTrainingJobEventsRequest extends Request {
         } 
 
         /**
+         * <p>Training task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>traineyfz0m2hsfv</p>
+         * <p>traineyfz0m2****</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);
@@ -129,6 +130,7 @@ public class ListTrainingJobEventsRequest extends Request {
         }
 
         /**
+         * <p>End UTC time (ISO8601 format). If empty, it is the current time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ListTrainingJobEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number (default is 1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -150,7 +155,10 @@ public class ListTrainingJobEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size (default is 100).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,6 +167,7 @@ public class ListTrainingJobEventsRequest extends Request {
         }
 
         /**
+         * <p>Start UTC time (ISO8601 format). If empty, it is the task start time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

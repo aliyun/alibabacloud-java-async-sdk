@@ -80,7 +80,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         } 
 
         /**
-         * Algorithms.
+         * <p>Algorithm list.</p>
          */
         public Builder algorithms(java.util.List<Algorithms> algorithms) {
             this.algorithms = algorithms;
@@ -88,7 +88,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total algorithms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +259,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlgorithmDescription.
+             * <p>Algorithm description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Large language model training.</p>
              */
             public Builder algorithmDescription(String algorithmDescription) {
                 this.algorithmDescription = algorithmDescription;
@@ -261,7 +270,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmId.
+             * <p>Algorithm ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>algo-sidjc8134hv</p>
              */
             public Builder algorithmId(String algorithmId) {
                 this.algorithmId = algorithmId;
@@ -269,7 +281,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmName.
+             * <p>Algorithm name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm_train</p>
              */
             public Builder algorithmName(String algorithmName) {
                 this.algorithmName = algorithmName;
@@ -277,7 +292,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmProvider.
+             * <p>Algorithm provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pai</p>
              */
             public Builder algorithmProvider(String algorithmProvider) {
                 this.algorithmProvider = algorithmProvider;
@@ -285,7 +303,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Algorithm display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM Train</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -293,7 +314,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>Algorithm creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-21T03:35:24Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -301,7 +325,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>Algorithm update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-25T02:15:40Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -309,7 +336,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Algorithm owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -317,7 +347,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>Workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

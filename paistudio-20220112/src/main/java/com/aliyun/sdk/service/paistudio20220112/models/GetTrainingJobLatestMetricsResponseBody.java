@@ -67,7 +67,7 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Metrics.
+         * <p>The metric information.</p>
          */
         public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
@@ -75,7 +75,10 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loss</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,6 +168,7 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timestamp when the metric was collected.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -173,7 +180,10 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.97</p>
              */
             public Builder value(Double value) {
                 this.value = value;

@@ -93,7 +93,10 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         } 
 
         /**
-         * requestCPU.
+         * <p>The total number of CPUs that have been assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder requestCPU(Integer requestCPU) {
             this.requestCPU = requestCPU;
@@ -101,7 +104,10 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         }
 
         /**
-         * requestGPU.
+         * <p>The total number of GPUs that have been assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder requestGPU(Integer requestGPU) {
             this.requestGPU = requestGPU;
@@ -109,7 +115,7 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         }
 
         /**
-         * requestGPUInfos.
+         * <p>The assigned GPU resources counted separately by GPU type.</p>
          */
         public Builder requestGPUInfos(java.util.List<GPUInfo> requestGPUInfos) {
             this.requestGPUInfos = requestGPUInfos;
@@ -117,7 +123,10 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         }
 
         /**
-         * requestMemory.
+         * <p>The total amount of memory that has been assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder requestMemory(Integer requestMemory) {
             this.requestMemory = requestMemory;

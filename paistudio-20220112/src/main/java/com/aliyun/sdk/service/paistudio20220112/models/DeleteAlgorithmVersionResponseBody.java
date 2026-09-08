@@ -54,7 +54,10 @@ public class DeleteAlgorithmVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

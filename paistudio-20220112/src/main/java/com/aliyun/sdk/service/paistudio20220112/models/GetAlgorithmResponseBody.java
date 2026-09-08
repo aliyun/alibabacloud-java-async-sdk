@@ -184,7 +184,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         } 
 
         /**
-         * AlgorithmDescription.
+         * <p>Algorithm description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large language model training.</p>
          */
         public Builder algorithmDescription(String algorithmDescription) {
             this.algorithmDescription = algorithmDescription;
@@ -192,7 +195,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmId.
+         * <p>Algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.algorithmId = algorithmId;
@@ -200,7 +206,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmName.
+         * <p>Algorithm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_training</p>
          */
         public Builder algorithmName(String algorithmName) {
             this.algorithmName = algorithmName;
@@ -208,7 +217,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * AlgorithmProvider.
+         * <p>Algorithm provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.algorithmProvider = algorithmProvider;
@@ -216,7 +228,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>Display name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm_training</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -224,7 +239,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>Time when the algorithm was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -232,7 +250,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Time when the algorithm was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -240,7 +261,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +272,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>Tenant ID of the algorithm owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -256,7 +283,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>User ID of the algorithm owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -264,7 +294,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

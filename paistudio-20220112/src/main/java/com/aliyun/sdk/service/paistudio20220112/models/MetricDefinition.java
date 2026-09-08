@@ -82,7 +82,10 @@ public class MetricDefinition extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>训练损失函数。</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -90,10 +93,11 @@ public class MetricDefinition extends TeaModel {
         }
 
         /**
+         * <p>The name of the metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>train:oob_score</p>
+         * <p>loss</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -101,10 +105,11 @@ public class MetricDefinition extends TeaModel {
         }
 
         /**
+         * <p>The regular expression to collect metrics from logs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>.<em>train:oob_score=([-+]?[0-9]</em>\.?[0-9]+(?:[eE][-+]?[0-9]+)?).*</p>
+         * <p>.<em>train:loss=([-+]?[0-9]</em>\\.?[0-9]+(?:[eE][-+]?[0-9]+)?).*</p>
          */
         public Builder regex(String regex) {
             this.regex = regex;

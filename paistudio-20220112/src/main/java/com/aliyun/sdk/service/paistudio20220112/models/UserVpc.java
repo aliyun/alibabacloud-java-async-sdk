@@ -132,7 +132,7 @@ public class UserVpc extends TeaModel {
         } 
 
         /**
-         * DefaultForwardInfo.
+         * <p>The default public gateway information.</p>
          */
         public Builder defaultForwardInfo(ForwardInfo defaultForwardInfo) {
             this.defaultForwardInfo = defaultForwardInfo;
@@ -140,7 +140,14 @@ public class UserVpc extends TeaModel {
         }
 
         /**
-         * DefaultRoute.
+         * <p>The default routing. Valid values:</p>
+         * <ul>
+         * <li>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.</li>
+         * <li>eth1: uses the user\&quot;s elastic network interfaces (ENIs) to access external networks through the private gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
          */
         public Builder defaultRoute(String defaultRoute) {
             this.defaultRoute = defaultRoute;
@@ -148,7 +155,7 @@ public class UserVpc extends TeaModel {
         }
 
         /**
-         * ExtendedCIDRs.
+         * <p>The secondary CIDR blocks.</p>
          */
         public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
             this.extendedCIDRs = extendedCIDRs;
@@ -156,7 +163,10 @@ public class UserVpc extends TeaModel {
         }
 
         /**
-         * RoleArn.
+         * <p>The OSS access authorization information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::25xxxx:role/AliyunPAIDLCDefaultRole</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -164,7 +174,10 @@ public class UserVpc extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-abcdef****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -172,7 +185,10 @@ public class UserVpc extends TeaModel {
         }
 
         /**
-         * SwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vs-abcdef****</p>
          */
         public Builder switchId(String switchId) {
             this.switchId = switchId;
@@ -180,7 +196,10 @@ public class UserVpc extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-abcdef****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

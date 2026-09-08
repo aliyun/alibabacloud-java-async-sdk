@@ -93,7 +93,7 @@ public class NodeSpec extends TeaModel {
         } 
 
         /**
-         * BindingPolicy.
+         * <p>Rule for attaching resource nodes.</p>
          */
         public Builder bindingPolicy(BindingPolicy bindingPolicy) {
             this.bindingPolicy = bindingPolicy;
@@ -101,7 +101,10 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>Number of resource nodes with this specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -109,7 +112,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * HyperType.
+         * <p>Type of supernode to use. You cannot specify both a node specification and a supernode type.</p>
          */
         public Builder hyperType(String hyperType) {
             this.hyperType = hyperType;
@@ -117,7 +120,10 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Type of the resource node specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.4xlarge</p>
          */
         public Builder type(String type) {
             this.type = type;

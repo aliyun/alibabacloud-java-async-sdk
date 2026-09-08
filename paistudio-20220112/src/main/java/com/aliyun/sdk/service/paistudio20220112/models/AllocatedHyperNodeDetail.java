@@ -93,7 +93,7 @@ public class AllocatedHyperNodeDetail extends TeaModel {
         } 
 
         /**
-         * AllocatedNodeNum.
+         * <p>The number of allocated nodes in the hyper node.</p>
          */
         public Builder allocatedNodeNum(Long allocatedNodeNum) {
             this.allocatedNodeNum = allocatedNodeNum;
@@ -101,7 +101,7 @@ public class AllocatedHyperNodeDetail extends TeaModel {
         }
 
         /**
-         * EmptyNodeNum.
+         * <p>The number of idle nodes in the hyper node.</p>
          */
         public Builder emptyNodeNum(Long emptyNodeNum) {
             this.emptyNodeNum = emptyNodeNum;
@@ -109,7 +109,7 @@ public class AllocatedHyperNodeDetail extends TeaModel {
         }
 
         /**
-         * HyperNodeName.
+         * <p>The name of the hyper node.</p>
          */
         public Builder hyperNodeName(String hyperNodeName) {
             this.hyperNodeName = hyperNodeName;
@@ -117,7 +117,7 @@ public class AllocatedHyperNodeDetail extends TeaModel {
         }
 
         /**
-         * TotalNodeNum.
+         * <p>The total number of nodes in the hyper node.</p>
          */
         public Builder totalNodeNum(Long totalNodeNum) {
             this.totalNodeNum = totalNodeNum;

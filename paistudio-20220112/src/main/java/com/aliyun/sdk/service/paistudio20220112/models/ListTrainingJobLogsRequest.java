@@ -145,6 +145,7 @@ public class ListTrainingJobLogsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the training task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class ListTrainingJobLogsRequest extends Request {
         }
 
         /**
+         * <p>The end UTC time in ISO 8601 format. If empty, the current time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class ListTrainingJobLogsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train129f212o89d-master-0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -178,7 +183,10 @@ public class ListTrainingJobLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -187,7 +195,10 @@ public class ListTrainingJobLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,6 +207,7 @@ public class ListTrainingJobLogsRequest extends Request {
         }
 
         /**
+         * <p>The start UTC time in ISO 8601 format. If empty, the task start time is used.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +220,10 @@ public class ListTrainingJobLogsRequest extends Request {
         }
 
         /**
-         * WorkerId.
+         * <p>The instance ID of the training task. This parameter is deprecated. Use InstanceId instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train129f212o89d-master-0</p>
          */
         public Builder workerId(String workerId) {
             this.putQueryParameter("WorkerId", workerId);

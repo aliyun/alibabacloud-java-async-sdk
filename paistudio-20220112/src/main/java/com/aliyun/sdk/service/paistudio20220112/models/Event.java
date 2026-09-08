@@ -184,7 +184,10 @@ public class Event extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The event content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -192,7 +195,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * EventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eventxxx</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -200,7 +206,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * EventType.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateQuota</p>
          */
         public Builder eventType(String eventType) {
             this.eventType = eventType;
@@ -208,7 +217,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * Function.
+         * <p>The reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Empty</p>
          */
         public Builder function(String function) {
             this.function = function;
@@ -216,7 +228,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * <p>Indicates whether the content is truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -224,7 +239,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>Object ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaxxx</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -232,7 +250,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The object type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -240,7 +261,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * TriggerTenantId.
+         * <p>The Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder triggerTenantId(String triggerTenantId) {
             this.triggerTenantId = triggerTenantId;
@@ -248,7 +272,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * TriggerTime.
+         * <p>The trigger time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
          */
         public Builder triggerTime(String triggerTime) {
             this.triggerTime = triggerTime;
@@ -256,7 +283,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * TriggerUserId.
+         * <p>The RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder triggerUserId(String triggerUserId) {
             this.triggerUserId = triggerUserId;
@@ -264,7 +294,10 @@ public class Event extends TeaModel {
         }
 
         /**
-         * TriggeredBy.
+         * <p>The trigger source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder triggeredBy(String triggeredBy) {
             this.triggeredBy = triggeredBy;

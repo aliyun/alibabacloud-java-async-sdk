@@ -197,7 +197,7 @@ public class QuotaDetails extends TeaModel {
         } 
 
         /**
-         * ActualMinQuota.
+         * <p>The total MinQuota actually allocated. For example, if the user configured 10 nodes but only 8 nodes are actually bound, this value returns the total resources of the 8 nodes.</p>
          */
         public Builder actualMinQuota(ResourceAmount actualMinQuota) {
             this.actualMinQuota = actualMinQuota;
@@ -205,7 +205,8 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * AllocatableQuota.
+         * <p>The user-allocatable quota amount. For general computing resources, each node has system-reserved resources. This value represents the quota resources that user workloads can occupy.
+         * ActualMin = AllocatableQuota + SystemReservedQuota.</p>
          */
         public Builder allocatableQuota(ResourceAmount allocatableQuota) {
             this.allocatableQuota = allocatableQuota;
@@ -213,7 +214,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * AllocatedQuota.
+         * <p>The total quota usage information, which is the total resources occupied by workloads after scheduling to nodes.</p>
          */
         public Builder allocatedQuota(ResourceAmount allocatedQuota) {
             this.allocatedQuota = allocatedQuota;
@@ -221,7 +222,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * AncestorsAllocatedQuota.
+         * <p>The ancestor quota usage information, which is the total resources of workloads submitted using ancestor quotas after they are scheduled to nodes.</p>
          */
         public Builder ancestorsAllocatedQuota(ResourceAmount ancestorsAllocatedQuota) {
             this.ancestorsAllocatedQuota = ancestorsAllocatedQuota;
@@ -229,7 +230,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * DescendantsAllocatedQuota.
+         * <p>The descendant quota usage information, which is the total resources of workloads submitted using descendant quotas after they are scheduled to nodes.</p>
          */
         public Builder descendantsAllocatedQuota(ResourceAmount descendantsAllocatedQuota) {
             this.descendantsAllocatedQuota = descendantsAllocatedQuota;
@@ -237,7 +238,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * DesiredMinQuota.
+         * <p>The total MinQuota desired by the user.</p>
          */
         public Builder desiredMinQuota(ResourceAmount desiredMinQuota) {
             this.desiredMinQuota = desiredMinQuota;
@@ -245,7 +246,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * NodeStatistics.
+         * <p>The statistics information of nodes within the quota.</p>
          */
         public Builder nodeStatistics(QuotaNodeStatistics nodeStatistics) {
             this.nodeStatistics = nodeStatistics;
@@ -253,7 +254,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * RequestedQuota.
+         * <p>The quota requested amount, which is the total resources occupied by workloads after they are dequeued.</p>
          */
         public Builder requestedQuota(ResourceAmount requestedQuota) {
             this.requestedQuota = requestedQuota;
@@ -261,7 +262,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * SelfAllocatedQuota.
+         * <p>The current-level quota usage information, which is the total resources of workloads submitted using this quota after they are scheduled to nodes.</p>
          */
         public Builder selfAllocatedQuota(ResourceAmount selfAllocatedQuota) {
             this.selfAllocatedQuota = selfAllocatedQuota;
@@ -269,7 +270,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * SelfSubmittedQuota.
+         * <p>The amount submitted to this quota, which is the total resources of workloads submitted to this quota, including workloads that are queued.</p>
          */
         public Builder selfSubmittedQuota(ResourceAmount selfSubmittedQuota) {
             this.selfSubmittedQuota = selfSubmittedQuota;
@@ -277,7 +278,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * SystemReservedQuota.
+         * <p>The system-reserved quota amount.</p>
          */
         public Builder systemReservedQuota(ResourceAmount systemReservedQuota) {
             this.systemReservedQuota = systemReservedQuota;
@@ -285,7 +286,7 @@ public class QuotaDetails extends TeaModel {
         }
 
         /**
-         * UsedQuota.
+         * <p>The quota used amount. This field is deprecating. Use AllocatedQuota instead.</p>
          */
         public Builder usedQuota(ResourceAmount usedQuota) {
             this.usedQuota = usedQuota;

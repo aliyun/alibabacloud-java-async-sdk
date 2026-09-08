@@ -87,7 +87,10 @@ public class UpdateAlgorithmRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-sidjc8134hv</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putPathParameter("AlgorithmId", algorithmId);
@@ -96,7 +99,10 @@ public class UpdateAlgorithmRequest extends Request {
         }
 
         /**
-         * AlgorithmDescription.
+         * <p>The algorithm description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large language model training.</p>
          */
         public Builder algorithmDescription(String algorithmDescription) {
             this.putBodyParameter("AlgorithmDescription", algorithmDescription);
@@ -105,7 +111,10 @@ public class UpdateAlgorithmRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LLM Train</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);

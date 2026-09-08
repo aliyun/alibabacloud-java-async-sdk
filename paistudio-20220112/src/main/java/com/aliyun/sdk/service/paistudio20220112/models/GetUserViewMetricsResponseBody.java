@@ -93,7 +93,10 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -101,7 +104,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The user monitoring data.</p>
          */
         public Builder summary(UserViewMetric summary) {
             this.summary = summary;
@@ -109,7 +112,10 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -117,7 +123,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * UserMetrics.
+         * <p>The metrics aggregated at the user dimension.</p>
          */
         public Builder userMetrics(java.util.List<UserViewMetric> userMetrics) {
             this.userMetrics = userMetrics;

@@ -67,7 +67,10 @@ public class UserInfo extends TeaModel {
         } 
 
         /**
-         * UserId.
+         * <p>User ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161222222222</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -75,7 +78,10 @@ public class UserInfo extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

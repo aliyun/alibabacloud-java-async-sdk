@@ -67,7 +67,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceMetrics.
+         * <p>List of all monitoring metrics that match the filter condition.</p>
          */
         public Builder instanceMetrics(java.util.List<InstanceMetrics> instanceMetrics) {
             this.instanceMetrics = instanceMetrics;
@@ -75,7 +75,10 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * Time.
+             * <p>UTC time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-08T16:00:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -149,7 +155,10 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -229,7 +238,10 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trainkxen7qjyg6y-master-0</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -237,7 +249,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>List of instance monitoring metrics.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -245,7 +257,10 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>Node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trains930928remn-master-0</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

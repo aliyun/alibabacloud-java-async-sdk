@@ -59,7 +59,10 @@ public class GetResourceGroupTotalRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>The ID of the Resource Group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putQueryParameter("ResourceGroupID", resourceGroupID);

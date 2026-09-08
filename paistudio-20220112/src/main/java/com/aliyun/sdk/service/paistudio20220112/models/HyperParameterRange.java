@@ -145,7 +145,7 @@ public class HyperParameterRange extends TeaModel {
         } 
 
         /**
-         * Enum.
+         * <p>Hyperparameter enumeration list.</p>
          */
         public Builder _enum(java.util.List<String> _enum) {
             this._enum = _enum;
@@ -153,7 +153,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * ExclusiveMaximum.
+         * <p>Whether the maximum value is exclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exclusiveMaximum(Boolean exclusiveMaximum) {
             this.exclusiveMaximum = exclusiveMaximum;
@@ -161,7 +164,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * ExclusiveMinimum.
+         * <p>Whether the minimum value is exclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exclusiveMinimum(Boolean exclusiveMinimum) {
             this.exclusiveMinimum = exclusiveMinimum;
@@ -169,7 +175,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * MaxLength.
+         * <p>Maximum length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxLength(Long maxLength) {
             this.maxLength = maxLength;
@@ -177,7 +186,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * Maximum.
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximum(String maximum) {
             this.maximum = maximum;
@@ -185,7 +197,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * MinLength.
+         * <p>Minimum length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minLength(Long minLength) {
             this.minLength = minLength;
@@ -193,7 +208,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * Minimum.
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minimum(String minimum) {
             this.minimum = minimum;
@@ -201,7 +219,10 @@ public class HyperParameterRange extends TeaModel {
         }
 
         /**
-         * Pattern.
+         * <p>Regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^\+?[1-9][0-9]*$</p>
          */
         public Builder pattern(String pattern) {
             this.pattern = pattern;

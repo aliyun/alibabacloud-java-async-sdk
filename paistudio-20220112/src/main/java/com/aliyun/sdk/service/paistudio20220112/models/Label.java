@@ -67,7 +67,10 @@ public class Label extends TeaModel {
         } 
 
         /**
-         * Key.
+         * <p>The key of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAccTag</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +78,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nihao</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -59,7 +59,10 @@ public class DeleteResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgvl9d6utwcscukh</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);

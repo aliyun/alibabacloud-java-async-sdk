@@ -80,7 +80,10 @@ public class NodeMetric extends TeaModel {
         } 
 
         /**
-         * GPUType.
+         * <p>The type of GPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GU108</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -88,7 +91,10 @@ public class NodeMetric extends TeaModel {
         }
 
         /**
-         * Metrics.
+         * <p>Performance Metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23000</p>
          */
         public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;
@@ -96,7 +102,10 @@ public class NodeMetric extends TeaModel {
         }
 
         /**
-         * NodeID.
+         * <p>Edge zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-i12****node</p>
          */
         public Builder nodeID(String nodeID) {
             this.nodeID = nodeID;

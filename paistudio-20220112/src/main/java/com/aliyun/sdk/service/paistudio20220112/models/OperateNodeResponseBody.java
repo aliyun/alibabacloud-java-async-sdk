@@ -67,7 +67,10 @@ public class OperateNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lingjunxxxx-mgxxx-xxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;

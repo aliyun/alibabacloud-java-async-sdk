@@ -115,7 +115,10 @@ public class ListNodeTypesRequest extends Request {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type used to filter the results. Valid values: <code>CPU</code> and <code>GPU</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -124,7 +127,10 @@ public class ListNodeTypesRequest extends Request {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type used to filter the results. Fuzzy matching is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A10</p>
          */
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
@@ -133,7 +139,10 @@ public class ListNodeTypesRequest extends Request {
         }
 
         /**
-         * NodeTypes.
+         * <p>A comma-separated list of node types. If omitted, all node types are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large,ecs.gn7i-c32g1.8xlarge</p>
          */
         public Builder nodeTypes(String nodeTypes) {
             this.putQueryParameter("NodeTypes", nodeTypes);
@@ -142,7 +151,10 @@ public class ListNodeTypesRequest extends Request {
         }
 
         /**
-         * QuotaId.
+         * <p>The quota ID. You must specify either this parameter or <code>ResourceGroupIds</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota123</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -151,7 +163,10 @@ public class ListNodeTypesRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>A comma-separated list of resource group IDs. You must specify either this parameter or <code>QuotaId</code>. The <code>UserId</code> for the specified <code>ResourceGroupId</code> must match the <code>UserId</code> of the requesting user. All specified <code>resource group</code> instances must be of the same type and associated with the same Virtual Private Cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg123,rg456</p>
          */
         public Builder resourceGroupIds(String resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);

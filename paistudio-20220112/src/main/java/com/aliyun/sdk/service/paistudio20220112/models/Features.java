@@ -54,7 +54,7 @@ public class Features extends TeaModel {
         } 
 
         /**
-         * Quota.
+         * <p>The Quota feature.</p>
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -107,7 +107,10 @@ public class Features extends TeaModel {
             } 
 
             /**
-             * IsEnabled.
+             * <p>Indicates whether the feature is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEnabled(Boolean isEnabled) {
                 this.isEnabled = isEnabled;

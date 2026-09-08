@@ -67,7 +67,10 @@ public class GPUInfo extends TeaModel {
         } 
 
         /**
-         * count.
+         * <p>Quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -75,7 +78,10 @@ public class GPUInfo extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T4</p>
          */
         public Builder type(String type) {
             this.type = type;

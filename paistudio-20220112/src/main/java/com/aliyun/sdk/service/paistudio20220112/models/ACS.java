@@ -67,7 +67,10 @@ public class ACS extends TeaModel {
         } 
 
         /**
-         * ACSQuotaId.
+         * <p>ACS resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rq-3kbt2gtimmyw7fgfgothocvh</p>
          */
         public Builder ACSQuotaId(String ACSQuotaId) {
             this.ACSQuotaId = ACSQuotaId;
@@ -75,7 +78,12 @@ public class ACS extends TeaModel {
         }
 
         /**
-         * AssociatedProducts.
+         * <p>Product codes that can use the ACS Quota.</p>
+         * <p>Constraints:<br>You can select multiple sub-products, but some sub-products are mutually exclusive. The following combinations can be selected simultaneously:  </p>
+         * <ul>
+         * <li>PAI-DLC, PAI-DSW  </li>
+         * <li>PAI-EAS</li>
+         * </ul>
          */
         public Builder associatedProducts(java.util.List<String> associatedProducts) {
             this.associatedProducts = associatedProducts;

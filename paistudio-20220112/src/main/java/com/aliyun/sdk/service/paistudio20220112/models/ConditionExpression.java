@@ -83,6 +83,7 @@ public class ConditionExpression extends TeaModel {
         } 
 
         /**
+         * <p>The type of required resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +95,7 @@ public class ConditionExpression extends TeaModel {
         }
 
         /**
+         * <p>The criterion for evaluation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +107,7 @@ public class ConditionExpression extends TeaModel {
         }
 
         /**
+         * <p>List of resource values.</p>
          * <p>This parameter is required.</p>
          */
         public Builder values(java.util.List<String> values) {

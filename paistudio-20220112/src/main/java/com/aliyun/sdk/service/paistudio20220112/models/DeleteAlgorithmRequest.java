@@ -59,7 +59,10 @@ public class DeleteAlgorithmRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-sidjc8134hv</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putPathParameter("AlgorithmId", algorithmId);

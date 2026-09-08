@@ -67,7 +67,10 @@ public class NodeUncordonParameters extends TeaModel {
         } 
 
         /**
-         * QuotaId.
+         * <p>Quota ID. You can use this ID when you start a workspace or disable scheduling nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota1ci8g793pgm</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -75,7 +78,10 @@ public class NodeUncordonParameters extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that contains the node to uncordon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

@@ -87,7 +87,10 @@ public class ListAlgorithmVersionsRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>The algorithm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-sidjc8134hv</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putPathParameter("AlgorithmId", algorithmId);
@@ -96,7 +99,10 @@ public class ListAlgorithmVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +111,10 @@ public class ListAlgorithmVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

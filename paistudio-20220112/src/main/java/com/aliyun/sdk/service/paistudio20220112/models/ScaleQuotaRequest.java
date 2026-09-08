@@ -87,7 +87,7 @@ public class ScaleQuotaRequest extends Request {
         } 
 
         /**
-         * <p>Quota ID</p>
+         * <p>Quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>quotamtl37ge7gkvdz</p>
@@ -99,7 +99,10 @@ public class ScaleQuotaRequest extends Request {
         }
 
         /**
-         * Min.
+         * <p>Scaling Min Quota.</p>
+         * <blockquote>
+         * <p>Notice: NodeSpecs specifies the post-scaling specifications and quantity. If the Count in NodeSpecs is less than the current Quota\&quot;s Count, it indicates scale-in. Otherwise, it indicates scale-out.</p>
+         * </blockquote>
          */
         public Builder min(ResourceSpec min) {
             this.putBodyParameter("Min", min);
@@ -108,7 +111,7 @@ public class ScaleQuotaRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>Resource group IDs.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putBodyParameter("ResourceGroupIds", resourceGroupIds);

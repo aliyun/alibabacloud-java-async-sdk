@@ -80,7 +80,10 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8BDA4440-DD3C-5F4B-BBDD-94A9CE1E75C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * SpotPriceHistory.
+         * <p>A list of historical spot instance price details</p>
          */
         public Builder spotPriceHistory(java.util.List<SpotPriceItem> spotPriceHistory) {
             this.spotPriceHistory = spotPriceHistory;
@@ -96,7 +99,10 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of historical spot instance prices</p>
+         * 
+         * <strong>example:</strong>
+         * <p>194</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

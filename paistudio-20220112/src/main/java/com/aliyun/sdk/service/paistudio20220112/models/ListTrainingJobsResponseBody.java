@@ -80,7 +80,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of training jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TrainingJobs.
+         * <p>The list of training job details.</p>
          */
         public Builder trainingJobs(java.util.List<TrainingJobs> trainingJobs) {
             this.trainingJobs = trainingJobs;
@@ -201,7 +207,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * CPU.
+             * <p>The number of CPU cores of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -209,7 +218,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -217,7 +229,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -225,7 +240,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size of the instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -233,7 +251,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SharedMemory.
+             * <p>The shared memory size of the instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -352,7 +373,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * EcsCount.
+             * <p>The number of ECS instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecsCount(Long ecsCount) {
                 this.ecsCount = ecsCount;
@@ -360,7 +384,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsSpec.
+             * <p>The ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn5-c8g1.2xlarge</p>
              */
             public Builder ecsSpec(String ecsSpec) {
                 this.ecsSpec = ecsSpec;
@@ -368,7 +395,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>The number of resource quota instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -376,7 +406,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * <p>The resource quota instance specification.</p>
              */
             public Builder instanceSpec(InstanceSpec instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -384,7 +414,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quotam670lixikcl</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -392,7 +425,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The resource quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -459,7 +495,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * ExperimentId.
+             * <p>The ID of the experiment associated with the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exp-ds9aefia90v</p>
              */
             public Builder experimentId(String experimentId) {
                 this.experimentId = experimentId;
@@ -467,7 +506,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentName.
+             * <p>The name of the experiment associated with the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>large_language_model</p>
              */
             public Builder experimentName(String experimentName) {
                 this.experimentName = experimentName;
@@ -534,7 +576,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>learning_rate</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +587,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.001</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -648,7 +696,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-475megosidivjfgfq6</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -656,7 +707,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InputUri.
+             * <p>The input data URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/channel/</p>
              */
             public Builder inputUri(String inputUri) {
                 this.inputUri = inputUri;
@@ -664,7 +718,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The input data name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -747,7 +804,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreatedBy</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -755,7 +815,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuickStart</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -861,7 +924,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-8o0hh35po15ejcdq2p</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -869,7 +935,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The output data name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -877,7 +946,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUri.
+             * <p>The output data URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/channel/</p>
              */
             public Builder outputUri(String outputUri) {
                 this.outputUri = outputUri;
@@ -947,7 +1019,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxRunningTimeInSeconds.
+             * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRunningTimeInSeconds(Long maxRunningTimeInSeconds) {
                 this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
@@ -1053,7 +1128,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1061,7 +1139,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TrainingJobSucceed</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1069,7 +1150,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The status update message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KubeDL job runs successfully</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1077,7 +1161,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1085,7 +1172,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1191,7 +1281,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultRoute.
+             * <p>The default route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth1</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1199,7 +1292,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR block configuration.</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -1207,7 +1300,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-abcdef****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1215,7 +1311,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-abcdef****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -1644,7 +1743,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlgorithmName.
+             * <p>The algorithm name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm_train</p>
              */
             public Builder algorithmName(String algorithmName) {
                 this.algorithmName = algorithmName;
@@ -1652,7 +1754,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmProvider.
+             * <p>The algorithm provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pai</p>
              */
             public Builder algorithmProvider(String algorithmProvider) {
                 this.algorithmProvider = algorithmProvider;
@@ -1660,7 +1765,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmVersion.
+             * <p>The algorithm version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.0.1</p>
              */
             public Builder algorithmVersion(String algorithmVersion) {
                 this.algorithmVersion = algorithmVersion;
@@ -1676,7 +1784,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeResource.
+             * <p>The compute resource configuration.</p>
              */
             public Builder computeResource(ComputeResource computeResource) {
                 this.computeResource = computeResource;
@@ -1700,7 +1808,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Environments.
+             * <p>The list of environment variables.</p>
              */
             public Builder environments(java.util.Map<String, String> environments) {
                 this.environments = environments;
@@ -1708,7 +1816,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentConfig.
+             * <p>The experiment configuration associated with the training job.</p>
              */
             public Builder experimentConfig(ExperimentConfig experimentConfig) {
                 this.experimentConfig = experimentConfig;
@@ -1716,7 +1824,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the training job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1724,7 +1835,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the training job status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-10T11:49:47Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1732,7 +1846,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * HyperParameters.
+             * <p>The hyperparameter settings for training.</p>
              */
             public Builder hyperParameters(java.util.List<HyperParameters> hyperParameters) {
                 this.hyperParameters = hyperParameters;
@@ -1740,7 +1854,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InputChannels.
+             * <p>The input data configuration for training.</p>
              */
             public Builder inputChannels(java.util.List<InputChannels> inputChannels) {
                 this.inputChannels = inputChannels;
@@ -1748,7 +1862,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IsTempAlgo.
+             * <p>Indicates whether a temporary algorithm is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTempAlgo(Boolean isTempAlgo) {
                 this.isTempAlgo = isTempAlgo;
@@ -1756,7 +1873,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The labels of the training job.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -1764,7 +1881,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputChannels.
+             * <p>The output data configuration for training.</p>
              */
             public Builder outputChannels(java.util.List<OutputChannels> outputChannels) {
                 this.outputChannels = outputChannels;
@@ -1772,7 +1889,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PythonRequirements.
+             * <p>The Python package configuration for the training job.</p>
              */
             public Builder pythonRequirements(java.util.List<String> pythonRequirements) {
                 this.pythonRequirements = pythonRequirements;
@@ -1780,7 +1897,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The status code of the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TrainingJobSucceed</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1788,7 +1908,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The error message of the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1796,7 +1919,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The role ARN used for delegated authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::{accountID}:role/{roleName}</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1804,7 +1930,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Scheduler.
+             * <p>The scheduling configuration of the training job.</p>
              */
             public Builder scheduler(Scheduler scheduler) {
                 this.scheduler = scheduler;
@@ -1812,7 +1938,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1820,7 +1949,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusTransitions.
+             * <p>The list of training job status transitions.</p>
              */
             public Builder statusTransitions(java.util.List<StatusTransitions> statusTransitions) {
                 this.statusTransitions = statusTransitions;
@@ -1828,7 +1957,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TrainingJobDescription.
+             * <p>The description of the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen2 large language model training.</p>
              */
             public Builder trainingJobDescription(String trainingJobDescription) {
                 this.trainingJobDescription = trainingJobDescription;
@@ -1836,7 +1968,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TrainingJobId.
+             * <p>The training job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>train1layo6js8ra</p>
              */
             public Builder trainingJobId(String trainingJobId) {
                 this.trainingJobId = trainingJobId;
@@ -1844,7 +1979,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TrainingJobName.
+             * <p>The name of the training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen2-7b</p>
              */
             public Builder trainingJobName(String trainingJobName) {
                 this.trainingJobName = trainingJobName;
@@ -1852,7 +1990,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1860,7 +2001,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserVpc.
+             * <p>The user VPC configuration.</p>
              */
             public Builder userVpc(UserVpc userVpc) {
                 this.userVpc = userVpc;
@@ -1868,7 +2009,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

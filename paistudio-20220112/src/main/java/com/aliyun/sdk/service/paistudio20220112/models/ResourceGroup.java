@@ -184,7 +184,10 @@ public class ResourceGroup extends TeaModel {
         } 
 
         /**
-         * CreatorID.
+         * <p>The user ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612285282502324</p>
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
@@ -192,7 +195,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * GmtCreatedTime.
+         * <p>The time the PAI resource group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtCreatedTime(String gmtCreatedTime) {
             this.gmtCreatedTime = gmtCreatedTime;
@@ -200,7 +206,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time the PAI resource group was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-22T00:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -208,7 +217,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the PAI resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RG1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -216,7 +228,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * NodeCount.
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = nodeCount;
@@ -224,7 +239,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>The ID of the PAI resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg17tmvwiokhzaxg</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -248,7 +266,7 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The VPC configuration.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -264,7 +282,10 @@ public class ResourceGroup extends TeaModel {
         }
 
         /**
-         * WorkspaceID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23000</p>
          */
         public Builder workspaceID(String workspaceID) {
             this.workspaceID = workspaceID;
