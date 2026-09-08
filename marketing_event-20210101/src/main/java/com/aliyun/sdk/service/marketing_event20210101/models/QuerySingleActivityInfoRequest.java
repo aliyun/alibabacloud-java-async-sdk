@@ -117,9 +117,6 @@ public class QuerySingleActivityInfoRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);

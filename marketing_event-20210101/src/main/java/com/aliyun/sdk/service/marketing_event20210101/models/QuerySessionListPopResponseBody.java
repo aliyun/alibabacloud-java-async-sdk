@@ -298,10 +298,7 @@ public class QuerySessionListPopResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>code</p>
-             * 
-             * <strong>example:</strong>
-             * <p>code</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -317,10 +314,7 @@ public class QuerySessionListPopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -328,10 +322,7 @@ public class QuerySessionListPopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>location</p>
-             * 
-             * <strong>example:</strong>
-             * <p>location</p>
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -339,10 +330,7 @@ public class QuerySessionListPopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

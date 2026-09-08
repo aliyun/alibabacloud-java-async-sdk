@@ -280,10 +280,7 @@ public class QuerySignInRecordPopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>nfcid</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cshdsaodhoashd</p>
+             * Rfid.
              */
             public Builder rfid(String rfid) {
                 this.rfid = rfid;
@@ -291,10 +288,7 @@ public class QuerySignInRecordPopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>sessionId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2001</p>
+             * SessionId.
              */
             public Builder sessionId(Long sessionId) {
                 this.sessionId = sessionId;

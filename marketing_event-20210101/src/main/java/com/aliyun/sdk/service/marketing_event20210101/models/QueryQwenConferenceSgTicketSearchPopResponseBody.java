@@ -106,10 +106,7 @@ public class QueryQwenConferenceSgTicketSearchPopResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
