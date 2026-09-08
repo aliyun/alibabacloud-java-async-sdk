@@ -91,7 +91,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instances created by the auto provisioning group. The values of the parameters in this array are returned only when AutoProvisioningGroupType is set to <code>instant</code>.</p>
+         * LaunchResults.
          */
         public Builder launchResults(LaunchResults launchResults) {
             this.launchResults = launchResults;
@@ -99,7 +99,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
@@ -300,10 +300,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of created instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Amount.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -319,10 +316,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the instance cannot be created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>InvalidParameter</p>
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -330,10 +324,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the instance cannot be created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Specific parameter is not valid.</p>
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -341,7 +332,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of created instances.</p>
+             * InstanceIds.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -349,10 +340,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g5.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -360,15 +348,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
-             * <ul>
-             * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-             * <li>SpotWithPriceLimit: The instance is a spot instance for which you specify the maximum hourly price.</li>
-             * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is used as the bid price.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NoSpot</p>
+             * SpotStrategy.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -376,10 +356,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-g</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

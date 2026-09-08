@@ -93,7 +93,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IPv6 prefixes of the ENI.</p>
+         * Ipv6PrefixSets.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -101,7 +101,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPv6 addresses assigned to the ENI.</p>
+         * Ipv6Sets.
          */
         public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
@@ -109,7 +109,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ENI ID.</p>
+         * <p>The ID of the elastic network interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1iqejowblx6h8j****</p>

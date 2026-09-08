@@ -106,7 +106,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the association between private pools and instances.</p>
+         * Instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -114,7 +114,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the instance status list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,10 +229,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -240,10 +237,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the private pool. If the value of <code>PrivatePoolOptionsMatchCriteria</code> is <code>Open</code>, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eap-bp67acfmxazb4****</p>
+             * PrivatePoolOptionsId.
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -251,15 +245,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The match mode of the private pool. Valid values:</p>
-             * <ul>
-             * <li>Open: open private pool. Instances automatically match an open private pool.</li>
-             * <li>Target: specified private pool. Instances match a specified private pool.</li>
-             * <li>None: no private pool. Instances do not use private pools.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Open</p>
+             * PrivatePoolOptionsMatchCriteria.
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;

@@ -119,7 +119,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The file sending records.</p>
+         * Invocations.
          */
         public Builder invocations(Invocations invocations) {
             this.invocations = invocations;
@@ -127,7 +127,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -138,7 +138,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the query result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of file sending tasks queried.</p>
+         * <p>The total number of scripts.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -318,10 +318,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the file sending task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-20T06:15:54Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -329,29 +326,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the file failed to be sent to the instance. Valid values:</p>
-             * <ul>
-             * <li>Null: The file is sent to the instance.</li>
-             * <li>InstanceNotExists: The instance does not exist or has been released.</li>
-             * <li>InstanceReleased: The instance is released while the file is being sent.</li>
-             * <li>InstanceNotRunning: The instance is not running when the file sending task is being created.</li>
-             * <li>AccountNotExists: The specified account does not exist.</li>
-             * <li>ClientNotRunning: Cloud Assistant Agent is not running.</li>
-             * <li>ClientNotResponse: Cloud Assistant Agent does not respond.</li>
-             * <li>ClientIsUpgrading: Cloud Assistant Agent is being upgraded.</li>
-             * <li>ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded.</li>
-             * <li>DeliveryTimeout: The file sending task timed out.</li>
-             * <li>FileCreateFail: The file failed to be created.</li>
-             * <li>FileAlreadyExists: A file with the same name exists in the specified directory.</li>
-             * <li>FileContentInvalid: The file content is invalid.</li>
-             * <li>FileNameInvalid: The file name is invalid.</li>
-             * <li>FilePathInvalid: The specified directory is invalid.</li>
-             * <li>FileAuthorityInvalid: The specified permissions on the file are invalid.</li>
-             * <li>UserGroupNotExists: The specified user group does not exist.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>InstanceNotExists</p>
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -359,32 +334,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the file failed to be sent or the file sending task failed to be executed. Valid values:</p>
-             * <ul>
-             * <li>Null: The file is sent to the instance.</li>
-             * <li>the specified instance does not exists</li>
-             * <li>the specified instance has been released</li>
-             * <li>the instance is not running when create task</li>
-             * <li>the specified account does not exists</li>
-             * <li>the aliyun service is not running on the instance</li>
-             * <li>the aliyun service in the instance does not response</li>
-             * <li>the aliyun service in the instance is upgrading now</li>
-             * <li>the aliyun service in the instance need upgrade</li>
-             * <li>the command delivery has been timeout</li>
-             * <li>the file creation is failed due to unknown error</li>
-             * <li>the authority of file is invalid</li>
-             * <li>File content is empty</li>
-             * <li>the content of file is invalid</li>
-             * <li>File already exists</li>
-             * <li>File name is invalid</li>
-             * <li>File path is invalid</li>
-             * <li>Owner not exists</li>
-             * <li>Group not exists</li>
-             * <li>Mode is invalid</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>the instance is not running when create task</p>
+             * ErrorInfo.
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -392,10 +342,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file sending task was completed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-20T06:15:54Z</p>
+             * FinishTime.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -403,10 +350,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-uf614fhehhz****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -414,20 +358,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the file sending task. Valid values:</p>
-             * <ul>
-             * <li>Pending: The file is being verified or sent.</li>
-             * <li>Invalid: The file is invalid.</li>
-             * <li>Running: The file is being sent to the instance.</li>
-             * <li>Aborted: The file failed to be sent to the instance.</li>
-             * <li>Success: The file is sent.</li>
-             * <li>Failed: The file failed to be created on the instance.</li>
-             * <li>Error: An error occurred and interrupted the file sending task.</li>
-             * <li>Timeout: The file sending task timed out.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * InvocationStatus.
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -435,10 +366,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file sending task started to be executed on the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-20T06:15:54Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -446,10 +374,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task status was last updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-20T06:15:54Z</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -570,10 +495,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the file sending task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>owner</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -581,10 +503,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the file sending task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhangsan</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -874,10 +793,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>#!/bin/bash  echo &quot;Current User is :&quot;  echo $(ps | grep &quot;$$&quot; | awk &quot;{print $2}&quot;)</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -885,14 +801,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file content. Valid values:</p>
-             * <ul>
-             * <li>PlainText: The file content is not encoded.</li>
-             * <li>Base64: The file content is encoded in Base64.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PlainText</p>
+             * ContentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -900,10 +809,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file sending task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-20T06:15:54Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -911,10 +817,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is a test file.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -922,10 +825,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * FileGroup.
              */
             public Builder fileGroup(String fileGroup) {
                 this.fileGroup = fileGroup;
@@ -933,10 +833,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permissions on the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>777</p>
+             * FileMode.
              */
             public Builder fileMode(String fileMode) {
                 this.fileMode = fileMode;
@@ -944,10 +841,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * FileOwner.
              */
             public Builder fileOwner(String fileOwner) {
                 this.fileOwner = fileOwner;
@@ -955,29 +849,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</p>
-             * <ul>
-             * <li><p>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</p>
-             * </li>
-             * <li><p>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</p>
-             * </li>
-             * <li><p>Success: If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</p>
-             * </li>
-             * <li><p>If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed. If the sending state of the file on one or more instances is one of the following values, the overall sending state of the file is Failed:</p>
-             * <ul>
-             * <li>Invalid: The file is invalid.</li>
-             * <li>Aborted: The file failed to be sent to the instances.</li>
-             * <li>Failed: The file failed to be created on the instances.</li>
-             * <li>Timeout: The file sending task timed out.</li>
-             * <li>Error: An error occurred and interrupted the file sending task.</li>
-             * </ul>
-             * </li>
-             * <li><p>PartialFailed: The file sending task was completed on some instances but failed on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * InvocationStatus.
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -985,10 +857,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file sending task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>f-hz0jdfwd9f****</p>
+             * InvokeId.
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -996,7 +865,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination instances.</p>
+             * InvokeInstances.
              */
             public Builder invokeInstances(InvokeInstances invokeInstances) {
                 this.invokeInstances = invokeInstances;
@@ -1004,10 +873,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test.txt</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1015,10 +881,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a file in the destination directory is overwritten if the file has the same name as the sent file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Overwrite.
              */
             public Builder overwrite(String overwrite) {
                 this.overwrite = overwrite;
@@ -1026,7 +889,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the file sending task.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1034,10 +897,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination directory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>/home/user</p>
+             * TargetDir.
              */
             public Builder targetDir(String targetDir) {
                 this.targetDir = targetDir;
@@ -1045,10 +905,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the destination instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * VmCount.
              */
             public Builder vmCount(Integer vmCount) {
                 this.vmCount = vmCount;

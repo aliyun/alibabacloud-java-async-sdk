@@ -306,7 +306,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the capacity reservation. You can specify this parameter to query only effective capacity reservations. To query capacity reservations that are released, you must specify PrivatePoolOptions.Ids.</p>
+         * <p>The instance type. You can use the instance type to query only active capacity reservations. Released capacity reservations can be queried only by using PrivatePoolOptions.Ids.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -318,8 +318,8 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
-         * <p>Maximum value: 100</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.</p>
+         * <p>The pagination token for the capacity reservation query. Obtain the value from the result of the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -364,9 +364,9 @@ public class DescribeCapacityReservationsRequest extends Request {
         /**
          * <p>The operating system of the instance. Valid values:</p>
          * <ul>
-         * <li>windows: Windows operating systems.</li>
-         * <li>linux: Linux operating systems.</li>
-         * <li>all: all operating system types.</li>
+         * <li>windows: queries only capacity reservations for Windows instances.</li>
+         * <li>linux: queries only capacity reservations for Linux instances.</li>
+         * <li>all: queries all capacity reservations.</li>
          * </ul>
          * <p>Default value: all.</p>
          * 
@@ -380,7 +380,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,9 +393,9 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the capacity reservation belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -428,14 +428,14 @@ public class DescribeCapacityReservationsRequest extends Request {
         /**
          * <p>The status of the capacity reservation. Valid values:</p>
          * <ul>
-         * <li>All: All states.</li>
-         * <li>Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</li>
-         * <li>Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</li>
-         * <li>Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</li>
-         * <li>Active: The capacity reservation is in effect.</li>
-         * <li>Released: The capacity reservation is manually or automatically released when it expires.</li>
+         * <li>All: all states.</li>
+         * <li>Pending: initializing. A capacity reservation that takes effect at a specified time enters the initializing state first.</li>
+         * <li>Preparing: being prepared. A capacity reservation that takes effect at a specified time is in the Preparing state during the resource delivery phase.</li>
+         * <li>Prepared: to take effect. A capacity reservation that takes effect at a specified time is in the Prepared state after resource delivery is complete but before the service takes effect.</li>
+         * <li>Active: active.</li>
+         * <li>Released: released, including manual release and automatic release upon expiration.</li>
          * </ul>
-         * <p>If you do not specify this parameter, capacity reservations in states other than Pending and Released are queried.</p>
+         * <p>If you do not specify this parameter, capacity reservations in all states except Pending and Released are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -447,7 +447,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The tags of the capacity reservation.</p>
+         * <p>The tags bound to the capacity reservation.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -514,7 +514,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             } 
 
             /**
-             * <p>The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).</p>
+             * <p>The list of capacity reservation IDs. The value can be a JSON array that consists of up to 100 IDs. Separate the IDs with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;crp-bp1gubrkqutenqdd****&quot;, &quot;crp-bp67acfmxazb5****&quot;]</p>
@@ -584,8 +584,8 @@ public class DescribeCapacityReservationsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
-             * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key. N indicates that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -596,7 +596,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
+             * <p>The tag value. N indicates that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

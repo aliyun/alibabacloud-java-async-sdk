@@ -54,7 +54,10 @@ public class DeletePlanMaintenanceWindowResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3CD6886-D8D0-4FEE-B93E-1B732396****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -321,7 +321,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the command.</p>
+         * <p>The command ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-hz01272yr52****</p>
@@ -333,10 +333,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
          * <ul>
-         * <li>PlainText: returns the original command content and command output.</li>
-         * <li>Base64: returns the Base64-encoded command content and command output.</li>
+         * <li>PlainText: Returns the original script content and output.</li>
+         * <li>Base64: Returns the Base64-encoded script content and output.</li>
          * </ul>
          * <p>Default value: Base64.</p>
          * 
@@ -351,8 +351,12 @@ public class DescribeCommandsRequest extends Request {
 
         /**
          * <p>The description of the command.</p>
-         * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
-         * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>test*</code>, all commands whose descriptions start with <code>test</code> are queried.</p>
+         * <ul>
+         * <li><p>When the <code>Provider</code> parameter is specified parameter query public commands, fuzzy match is supported by default.</p>
+         * </li>
+         * <li><p>When the <code>Provider</code> parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <code>test*</code> to search for all commands whose descriptions start with <code>test</code>, enter <code>*test</code> to search for all commands whose descriptions end with <code>test</code>, or enter <code>*test*</code> to search for all commands whose descriptions contain <code>test</code>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -364,10 +368,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.</p>
+         * <p>Specifies whether to query only the latest version of public commands when the query results include public commands. This parameter does not affect the query of private commands.</p>
          * <ul>
-         * <li>true: queries only the latest version of common commands.</li>
-         * <li>false: queries all versions of common commands.</li>
+         * <li><p>true: Queries only the latest version of public commands.</p>
+         * </li>
+         * <li><p>false: Queries all versions of public commands.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -381,8 +387,8 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
-         * <p>Valid values: 1 to 50.</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -396,8 +402,12 @@ public class DescribeCommandsRequest extends Request {
 
         /**
          * <p>The name of the command.</p>
-         * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
-         * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>command*</code>, all commands whose names start with <code>command</code> are queried.</p>
+         * <ul>
+         * <li><p>When the <code>Provider</code> parameter is specified parameter query public commands, fuzzy match is supported by default.</p>
+         * </li>
+         * <li><p>When the <code>Provider</code> parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <code>command*</code> to search for all commands whose names start with <code>command</code>, enter <code>*command</code> to search for all commands whose names end with <code>command</code>, or enter <code>*command*</code> to search for all commands whose names contain <code>command</code>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -409,7 +419,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -440,7 +450,7 @@ public class DescribeCommandsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paged query operations. For paging, use NextToken and MaxResults instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -454,7 +464,7 @@ public class DescribeCommandsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paged query operations. For paging, use NextToken and MaxResults instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -467,16 +477,13 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The provider of the common command. Take note of the following items:</p>
+         * <p>The provider of the public command. Valid values:</p>
          * <ul>
-         * <li><p>If you do not specify this parameter, all the commands that you created are queried.</p>
-         * </li>
-         * <li><p>If you set this parameter to <code>AlibabaCloud</code>, all the common commands provided by Alibaba Cloud are queried.</p>
-         * </li>
-         * <li><p>If you set this parameter to a specific provider, all the common commands provided by the provider are queried. Examples:</p>
-         * <ul>
-         * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOS, all the common commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
-         * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
+         * <li>If this parameter is not specified, all Cloud Assistant commands that you manually created are queried by default.</li>
+         * <li>If this parameter is set to <code>AlibabaCloud</code>, all public commands provided by Alibaba Cloud are queried.</li>
+         * <li>If this parameter is set to a specific public command provider, all public commands provided by that provider are queried. Examples:<ul>
+         * <li>If <code>Provider=AlibabaCloud.ECS.GuestOS</code>, public commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
+         * <li>If <code>Provider=AlibabaCloud.ECS.GuestOSDiagnose</code>, public commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
          * </ul>
          * </li>
          * </ul>
@@ -491,7 +498,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -534,7 +541,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -543,11 +550,11 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * <p>The type of the command. Valid values:</p>
+         * <p>The type of the command. Valid values: </p>
          * <ul>
-         * <li>RunBatScript: batch command, applicable to Windows instances</li>
-         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
-         * <li>RunShellScript: shell command, applicable to Linux instances</li>
+         * <li>RunBatScript: Bat script that runs on Windows instances.</li>
+         * <li>RunPowerShellScript: PowerShell script that runs on Windows instances.</li>
+         * <li>RunShellScript: Shell script that runs on Linux instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -619,9 +626,9 @@ public class DescribeCommandsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -632,8 +639,8 @@ public class DescribeCommandsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-             * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

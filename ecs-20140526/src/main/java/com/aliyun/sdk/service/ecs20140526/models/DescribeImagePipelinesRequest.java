@@ -224,7 +224,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of image templates. Valid values of N: 1 to 20.</p>
+         * <p>The image template ID. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -236,7 +236,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 500</p>
+         * <p>The maximum number of entries per page for paging queries. Valid values: 1 to 500.</p>
          * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The name of the image template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>testImagePipeline</p>
@@ -261,7 +261,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned by the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -291,7 +291,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,9 +304,9 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <p>The ID of the enterprise resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
          * <blockquote>
-         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -337,7 +337,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the image template.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -405,7 +405,7 @@ public class DescribeImagePipelinesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * <p>The tag key. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -416,7 +416,7 @@ public class DescribeImagePipelinesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * <p>The tag value. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

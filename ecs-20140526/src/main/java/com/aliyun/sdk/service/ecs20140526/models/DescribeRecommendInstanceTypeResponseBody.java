@@ -67,7 +67,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the recommended instance types.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -196,10 +196,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of vCPUs of the instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Cores.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -207,10 +204,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The generation of the instance family.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs-4</p>
+             * Generation.
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -218,10 +212,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.hfg6.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -229,10 +220,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.hfg6</p>
+             * InstanceTypeFamily.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -240,10 +228,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of the instance type. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8192</p>
+             * Memory.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -251,10 +236,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance type supports I/O optimization.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>optimized</p>
+             * SupportIoOptimized.
              */
             public Builder supportIoOptimized(String supportIoOptimized) {
                 this.supportIoOptimized = supportIoOptimized;
@@ -375,7 +357,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the network types of the instance type.</p>
+             * NetworkTypes.
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -383,10 +365,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone in which the instance type is available.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneNo.
              */
             public Builder zoneNo(String zoneNo) {
                 this.zoneNo = zoneNo;
@@ -611,10 +590,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The commodity code of the instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * CommodityCode.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -622,10 +598,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PostPaid</p>
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -633,7 +606,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the instance type.</p>
+             * InstanceType.
              */
             public Builder instanceType(InstanceType instanceType) {
                 this.instanceType = instanceType;
@@ -641,10 +614,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the ECS instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -652,10 +622,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority based on which the system sorts the instance types.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -663,10 +630,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance type is available.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -674,10 +638,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario in which the instance type is recommended.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CREATE</p>
+             * Scene.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -685,10 +646,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bidding policy for the spot instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NoSpot</p>
+             * SpotStrategy.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -696,10 +654,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone in which the instance type is available.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -707,7 +662,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the zones in which the instance type is available.</p>
+             * Zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

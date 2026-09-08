@@ -363,7 +363,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.items.description</p>
+         * <p>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>c-hz0jdfwcsr****</p>
@@ -375,7 +375,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.items.example</p>
+         * <p>The command name. If you also specify the <code>InstanceId</code> parameter, this parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>CommandTestName</p>
@@ -387,7 +387,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.items.enumValueTitles</p>
+         * <p>The command type. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: Bat script that runs on Windows instances.</li>
+         * <li>RunPowerShellScript: PowerShell script that runs on Windows instances.</li>
+         * <li>RunShellScript: Shell script that runs on Linux instances.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RunShellScript</p>
@@ -399,7 +404,15 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
+         * <ul>
+         * <li>PlainText: Returns the original command content and output.</li>
+         * <li>Base64: Returns the Base64-encoded command content and output.</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -408,7 +421,15 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * IncludeOutput.
+         * <p>Specifies whether to return the command output in the results.</p>
+         * <ul>
+         * <li>true: The output is returned. You must specify at least the <code>InvokeId</code> or <code>InstanceId</code> parameter.</li>
+         * <li>false: The output is not returned.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeOutput(Boolean includeOutput) {
             this.putQueryParameter("IncludeOutput", includeOutput);
@@ -417,7 +438,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.enumValueTitles</p>
+         * <p>The instance ID. If you specify this parameter, all command execution records for the instance are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1i7gg30r52z2em****</p>
@@ -429,7 +450,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.items.properties.Value.enumValueTitles</p>
+         * <p>The command execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-hz0jdfwd9f****</p>
@@ -441,7 +462,34 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.example</p>
+         * <p>The overall execution status of the command. The overall execution status depends on the common execution status across one or more instances in the execution. Valid values: </p>
+         * <ul>
+         * <li>Running:<ul>
+         * <li>Scheduled execution: The execution status remains Running until you manually stop the scheduled command.</li>
+         * <li>One-time execution: The overall execution status is Running as long as the command process is running on any instance.</li>
+         * </ul>
+         * </li>
+         * <li>Finished:<ul>
+         * <li>Scheduled execution: The command process cannot have a status of Finished.</li>
+         * <li>One-time execution: The command process has finished running on all instances, or the command process was manually stopped on some instances and finished running on the remaining instances.</li>
+         * </ul>
+         * </li>
+         * <li>Success: The command execution status on each instance is Stopped or Success, and the command execution status on at least one instance is Success. The overall execution status is Success.<ul>
+         * <li>Immediate task: The command execution is complete and the exit code is 0.</li>
+         * <li>Scheduled task: The last execution was successful with an exit code of 0, and all specified execution times have elapsed.</li>
+         * </ul>
+         * </li>
+         * <li>Failed:<ul>
+         * <li>Scheduled execution: The command process cannot have a status of Failed.</li>
+         * <li>One-time execution: The command process failed on all instances.</li>
+         * </ul>
+         * </li>
+         * <li>Stopped: The command has been stopped.</li>
+         * <li>Stopping: The command is being stopped.</li>
+         * <li>PartialFailed: The command succeeded on some instances but failed on others. This value does not take effect if you also specify the <code>InstanceId</code> parameter.</li>
+         * <li>Pending: The system is verifying or sending the command. The overall execution status is Pending if the command execution status on at least one instance is Pending.</li>
+         * <li>Scheduled: The scheduled command has been sent and is waiting to run. The overall execution status is Scheduled if the command execution status on at least one instance is Scheduled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -453,7 +501,9 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>acs:ecs:{#regionId}:{#accountId}:instance/*</p>
+         * <p>The maximum number of entries per page for a paging query.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -465,7 +515,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>Instance</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -495,7 +545,9 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>acs:ecs:{#regionId}:{#accountId}:command/*</p>
+         * <blockquote>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -507,7 +559,9 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>Command</p>
+         * <blockquote>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -519,7 +573,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.items.properties.Value.description</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -532,7 +586,14 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>FEATUREecsXZ3H4M</p>
+         * <p>The execution mode of the command. This parameter does not take effect if you also specify the <code>InstanceId</code> parameter. Valid values:</p>
+         * <ul>
+         * <li>Once: The command is immediately run.</li>
+         * <li>Period: The command is run on a schedule.</li>
+         * <li>NextRebootOnly: The command is automatically run the next time the instance starts.</li>
+         * <li>EveryReboot: The command is automatically run every time the instance starts.</li>
+         * </ul>
+         * <p>Default value: empty, which indicates that all execution modes are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Once</p>
@@ -544,7 +605,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.items.properties.Value.example</p>
+         * <p>The resource group ID of the command execution. After you specify this parameter, you must also specify ResourceGroupId when running the command to filter the corresponding command execution results.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -574,7 +635,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>dubbo</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -583,7 +644,16 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[15].schema.description</p>
+         * <p>Specifies whether the command will be automatically run in the future. Valid values:</p>
+         * <ul>
+         * <li>true: The command is run with the <code>RepeatMode</code> parameter set to <code>Period</code>, <code>NextRebootOnly</code>, or <code>EveryReboot</code> when <code>RunCommand</code> or <code>InvokeCommand</code> is called.</li>
+         * <li>false: Queries commands in the following two states:<ul>
+         * <li>The command is run with the <code>RepeatMode</code> parameter set to <code>Once</code> when <code>RunCommand</code> or <code>InvokeCommand</code> is called.</li>
+         * <li>The command has been canceled, stopped, or completed.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -654,7 +724,9 @@ public class DescribeInvocationsRequest extends Request {
             } 
 
             /**
-             * <p>The command task ID.</p>
+             * <p>The tag key of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, execute the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -665,7 +737,8 @@ public class DescribeInvocationsRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
+             * <p>The tag value of the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

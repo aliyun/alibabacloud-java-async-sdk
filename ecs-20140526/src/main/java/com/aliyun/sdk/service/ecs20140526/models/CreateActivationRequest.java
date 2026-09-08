@@ -251,7 +251,10 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -272,7 +275,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of times that you can use the activation code to register managed instances. Valid values: 1 to 1000.</p>
+         * <p>The maximum number of times that the activation code can be used to register managed instances. Valid values: 1 to 1000.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -285,9 +288,9 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The default instance name prefix. The prefix must be 2 to 50 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). The prefix must start with a letter and cannot start with a digit, a special character, <code>http://</code>, or <code>https://</code>.</p>
-         * <p>If you use the activation code that is created by calling the CreateActivation operation to register managed instances, the instances are assigned sequential names that include the value of this parameter as a prefix. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.</p>
-         * <p>If you specify InstanceName when you register a managed instance, an instance name in the <code>&lt;InstanceName&gt;-&lt;Number&gt;</code> format is generated. The number of digits in the &lt;Number&gt; value varies based on the number of digits in the <code>InstanceCount</code> value. Example: <code>001</code>. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.</p>
+         * <p>The default instance name prefix. The prefix must be 2 to 50 characters in length and must start with a letter. It cannot start with a special character or digit. It can contain only periods (.), underscores (_), hyphens (-), and colons (:). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>Instances registered with the activation code created by this operation use this name as a prefix to generate sequential instance names. You can also specify a new instance name when registering a managed instance to override this default value.</p>
+         * <p>When registering a managed instance, if you specify the InstanceName value, the name <code>&lt;InstanceName&gt;-001</code> is generated, where the number of digits in <code>001</code> depends on the number of digits in the <code>InstanceCount</code> value. If you do not specify the InstanceName value, the hostname of the host is used as the instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-InstanceName</p>
@@ -299,7 +302,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses of hosts that can use the activation code. The value can be IPv4 addresses, IPv6 addresses, or CIDR blocks.</p>
+         * <p>The IP addresses of hosts that are allowed to use the activation code. The value can be an IPv4 address, an IPv6 address, or a CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -329,7 +332,8 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
+         * You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the region IDs and other information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +346,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the activation code.</p>
+         * <p>The ID of the resource group to which the activation code belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-123******</p>
@@ -372,7 +376,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the activation code.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -381,7 +385,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours.</p>
+         * <p>The validity period of the activation code. After the validity period expires, the activation code cannot be used to register new instances. Unit: hours. Valid values: 1 to 4.</p>
          * <p>Default value: 4.</p>
          * 
          * <strong>example:</strong>
@@ -453,9 +457,9 @@ public class CreateActivationRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a>.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the managed instance activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -466,8 +470,8 @@ public class CreateActivationRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-             * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the managed instance activation code. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

@@ -169,7 +169,7 @@ public class ModifyInstanceVncPasswdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class ModifyInstanceVncPasswdRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class ModifyInstanceVncPasswdRequest extends Request {
         }
 
         /**
-         * <p>The new VNC password of the ECS instance.</p>
+         * <p>The new VNC logon password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

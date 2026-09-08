@@ -183,7 +183,7 @@ public class JoinSecurityGroupRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>If you configure this parameter, you cannot configure <code>NetworkInterfaceId</code>.</p>
+         * <p>If this parameter is specified, NetworkInterfaceId must be left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -196,9 +196,9 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The ENI ID.</p>
+         * <p>The Elastic Network Interface (ENI) ID.</p>
          * <blockquote>
-         * <p>If you configure this parameter, you cannot configure <code>InstanceId</code>.</p>
+         * <p>If this parameter is specified, InstanceId must be left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -229,10 +229,10 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <ul>
-         * <li>If you want to add an instance to a security group, you do not need to specify a region ID.</li>
-         * <li>If you want to add an ENI to a security group, you must specify the region ID of the ENI.</li>
+         * <li>The region ID is optional when adding an instance to a security group.</li>
+         * <li>The region ID is required when adding an Elastic Network Interface (ENI) to a security group. Specify the region where the network interface controller (NIC) resides.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +263,7 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query the most recent security group list.</p>
+         * <p>The security group ID. You can call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to query available security groups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

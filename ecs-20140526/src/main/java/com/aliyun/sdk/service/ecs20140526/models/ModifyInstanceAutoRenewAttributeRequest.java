@@ -210,10 +210,10 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal.</p>
+         * <p>Specifies whether to enable auto-renewal before the instance expires.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enables auto-renewal.</li>
+         * <li>false: disables auto-renewal.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -227,10 +227,22 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal period of the instance.</p>
+         * <p>The auto-renewal duration of the instance.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, 4, and 5.</li>
-         * <li>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;}.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</li>
+         * </ul>
+         * <p>&lt;props=&quot;partner&quot;&gt;</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +255,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).</p>
+         * <p>The instance IDs. You can specify up to 100 subscription instance IDs at a time. Separate multiple instance IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +286,19 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal period (<code>Duration</code>). Valid values:</p>
+         * <p>The unit of the renewal duration specified by the <code>Duration</code> parameter. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>Week</li>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>&lt;props=&quot;partner&quot;&gt;</p>
          * <ul>
          * <li>Month (default)</li>
          * <li>Year</li>
@@ -290,7 +314,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,14 +327,17 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal status of the instance. Valid values:</p>
+         * <p>The auto-renewal status of ECS instance. Valid values:</p>
          * <ul>
-         * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
-         * <li>Normal: Auto-renewal is disabled for the instance.</li>
-         * <li>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</li>
+         * <li><p>AutoRenewal: enables auto-renewal.</p>
+         * </li>
+         * <li><p>Normal: disables auto-renewal.</p>
+         * </li>
+         * <li><p>NotRenewal: does not renew ECS instance. After this value is specified, the system no longer sends expiration notifications. Only a non-renewal reminder is sent three days before ECS instance expires. You can change the value for an instance from NotRenewal to <code>Normal</code> and then manually renew ECS instance or configure auto-renewal.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p><code>RenewalStatus</code> takes precedence over <code>AutoRenew</code>. If you do not specify <code>RenewalStatus</code>, <code>AutoRenew</code> is used by default.</p>
+         * <p>The <code>RenewalStatus</code> parameter takes precedence over the <code>AutoRenew</code> parameter. If <code>RenewalStatus</code> is not specified, the <code>AutoRenew</code> parameter is used by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

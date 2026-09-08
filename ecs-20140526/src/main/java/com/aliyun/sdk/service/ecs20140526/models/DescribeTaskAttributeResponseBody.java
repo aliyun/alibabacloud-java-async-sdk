@@ -243,7 +243,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return data of the task.</p>
+         * OperationProgressSet.
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -251,7 +251,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the task.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -273,7 +273,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of completed tasks.</p>
+         * <p>The number of successful tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -284,10 +284,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</p>
+         * <p>Indicates whether the task can be canceled (<a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a>). Valid values: </p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The task can be canceled. </li>
+         * <li>false: The task cannot be canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the operation that generated the task.</p>
+         * <p>The name of the API operation associated with the task.</p>
          * 
          * <strong>example:</strong>
          * <p>ExportImage</p>
@@ -310,7 +310,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-ce946ntx4wr****</p>
@@ -321,7 +321,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The progress of the task.</p>
+         * <p>The task progress.</p>
          * 
          * <strong>example:</strong>
          * <p>100%</p>
@@ -332,7 +332,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -412,10 +412,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the related item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSSObject</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -423,10 +420,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the related item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MYOSSPRE_m-23f8tcp***_t-23ym6mv***.vhd</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -573,10 +567,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ParameterInvalid</p>
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -584,10 +575,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The specified RegionId parameter is invalid.</p>
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -595,10 +583,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the operation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * OperationStatus.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -606,7 +591,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of resource information.</p>
+             * RelatedItemSet.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;

@@ -191,12 +191,12 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully delete the custom image. Valid values:</p>
+         * <p>Specifies whether to force delete the custom image. Valid values: </p>
          * <ul>
-         * <li>true: forcefully deletes the custom image, regardless of whether the image is being used by instances.</li>
-         * <li>false: verifies that the custom image is not being used by instances and then deletes the image.</li>
+         * <li>true: Force deletes the custom image, regardless of whether the image is being used by other instances.</li>
+         * <li>false: Deletes the custom image only after checking that the image is not being used by other instances.</li>
          * </ul>
-         * <p>Default value: false</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -208,7 +208,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image. If the specified custom image does not exist, the request is ignored.</p>
+         * <p>The image ID. If the specified custom image does not exist, the request is ignored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

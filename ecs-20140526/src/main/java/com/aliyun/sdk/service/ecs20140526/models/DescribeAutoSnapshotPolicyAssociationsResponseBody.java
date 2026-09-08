@@ -80,7 +80,7 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The association of automatic snapshot policies.</p>
+         * AutoSnapshotPolicyAssociations.
          */
         public Builder autoSnapshotPolicyAssociations(AutoSnapshotPolicyAssociations autoSnapshotPolicyAssociations) {
             this.autoSnapshotPolicyAssociations = autoSnapshotPolicyAssociations;
@@ -88,7 +88,7 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
         }
 
         /**
-         * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -168,10 +168,7 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sp-bp12quk7gqhhuu1f****</p>
+             * AutoSnapshotPolicyId.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -179,10 +176,7 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
             }
 
             /**
-             * <p>The ID of the cloud disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp67acfmxazb4p****</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;

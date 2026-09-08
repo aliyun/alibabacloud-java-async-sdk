@@ -266,7 +266,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -275,9 +278,9 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
+         * <p>The command to run after the session is initiated. The command can be up to 512 characters in length.</p>
          * <blockquote>
-         * <p> If you specify the <code>CommandLine</code> parameter, you cannot specify the <code>PortNumber</code> or <code>TargetServer</code> parameter.</p>
+         * <p>After you specify CommandLine, you cannot specify PortNumber or TargetServer.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -290,10 +293,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The network type of the WebSocket URL required to connect to the instance. Valid values:</p>
+         * <p>The network type of the WebSocket URL required for the remote connection to the instance. Valid values:</p>
          * <ul>
-         * <li>Internet (default)</li>
-         * <li>Intranet</li>
+         * <li>Internet: public network. This is the default value.</li>
+         * <li>Intranet: internal network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +309,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * EncryptionOptions.
+         * <p>The session encryption configuration.</p>
          */
         public Builder encryptionOptions(EncryptionOptions encryptionOptions) {
             String encryptionOptionsShrink = shrink(encryptionOptions, "EncryptionOptions", "json");
@@ -316,7 +319,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceId(java.util.List<String> instanceId) {
@@ -344,7 +347,11 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * PasswordName.
+         * <p>The name of the password for the user when using Session Manager on a Windows instance. The name can be up to 255 characters in length.
+         * When you want to use Session Manager on a Windows instance as a non-default user (System), specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>axtSecretPassword</p>
          */
         public Builder passwordName(String passwordName) {
             this.putQueryParameter("PasswordName", passwordName);
@@ -353,8 +360,8 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</p>
-         * <p>This parameter is empty by default, which indicates that no port is configured to forward data.</p>
+         * <p>The port number of the ECS instance for data forwarding. After this parameter is set, the Cloud Assistant Agent forwards data to the specified port number for port forwarding. For example, SSH uses port 22.</p>
+         * <p>Default value: empty, which indicates that no port number is set for data forwarding.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -366,7 +373,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,9 +404,9 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</p>
+         * <p>The address of the destination server in the VPC that you want to access through the instance.</p>
          * <blockquote>
-         * <p> If this parameter is not empty, <code>PortNumber</code> specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
+         * <p>When this parameter is not empty, PortNumber specifies the port number of the destination server in the VPC that you want to access through the managed instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -412,7 +419,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The username used for connection establishment.</p>
+         * <p>The username used for the connection.</p>
          * 
          * <strong>example:</strong>
          * <p>testUser</p>
@@ -496,7 +503,10 @@ public class StartTerminalSessionRequest extends Request {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable end-to-end encryption for the session connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -504,7 +514,15 @@ public class StartTerminalSessionRequest extends Request {
             }
 
             /**
-             * KMSKeyId.
+             * <p>The KMS key ID.
+             * Note:</p>
+             * <ul>
+             * <li>Only KMS symmetric keys are supported.</li>
+             * <li>This parameter can be specified only when the encryption mode is set to Kms.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -512,7 +530,19 @@ public class StartTerminalSessionRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The encryption pattern. Valid values:</p>
+             * <ul>
+             * <li>Auto: Uses automatically negotiated secret key encryption for the session.</li>
+             * <li>Kms: Uses a KMS key to encrypt the session.</li>
+             * <li>Default value: Auto.</li>
+             * </ul>
+             * <p>Note:</p>
+             * <ul>
+             * <li>This parameter can be specified only when session encryption is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Auto</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;

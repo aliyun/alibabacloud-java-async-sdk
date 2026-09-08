@@ -159,7 +159,7 @@ public class ModifySnapshotGroupRequest extends Request {
         } 
 
         /**
-         * <p>The new description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The new description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>This is new description</p>
@@ -171,7 +171,7 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with a <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
+         * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), underscores (_), hyphens (-), or colons (:).</p>
          * 
          * <strong>example:</strong>
          * <p>testName02</p>
@@ -201,7 +201,7 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the snapshot-consistent group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> operation to query the IDs of available snapshot-consistent groups.</p>
+         * <p>The ID of the snapshot-consistent group. You can call <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> to query snapshot-consistent group IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

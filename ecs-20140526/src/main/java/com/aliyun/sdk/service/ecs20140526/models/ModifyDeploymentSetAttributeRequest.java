@@ -196,7 +196,13 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * Affinity.
+         * <p>The affinity level of the deployment set. Instances in the deployment set are distributed based on this affinity level. Valid values: 1 to 10. Default value: 1.</p>
+         * <blockquote>
+         * <p>Notice: The affinity setting is available only when the deployment strategy is set to high availability (<code>Strategy = Availability</code>).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder affinity(Long affinity) {
             this.putQueryParameter("Affinity", affinity);
@@ -218,7 +224,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>DeploymentSetTestName</p>
@@ -260,7 +266,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

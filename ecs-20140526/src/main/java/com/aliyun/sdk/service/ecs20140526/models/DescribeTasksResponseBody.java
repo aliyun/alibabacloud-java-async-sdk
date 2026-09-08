@@ -119,7 +119,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -163,7 +163,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the tasks.</p>
+         * TaskSet.
          */
         public Builder taskSet(TaskSet taskSet) {
             this.taskSet = taskSet;
@@ -305,10 +305,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-24T12:50Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -316,10 +313,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task ended.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-24T12:50Z</p>
+             * FinishedTime.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -327,10 +321,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>m-bp1i8huqm5u7****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -338,10 +329,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task can be canceled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * SupportCancel.
              */
             public Builder supportCancel(String supportCancel) {
                 this.supportCancel = supportCancel;
@@ -349,10 +337,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the operation that generates the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ImportImage</p>
+             * TaskAction.
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -360,10 +345,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>t-bp1hvgwromzv32iq****</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -371,10 +353,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Finished</p>
+             * TaskStatus.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

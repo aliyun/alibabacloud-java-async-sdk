@@ -80,8 +80,8 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
-         * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+         * <p>The launch template ID. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+         * <p>When you use a launch template to create an instance, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-bp1apo0bbbkuy0rj****</p>
@@ -92,7 +92,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the created version of the launch template.</p>
+         * <p>The version number of the launch template that is created.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -106,7 +106,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DExxxxx</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DEX****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

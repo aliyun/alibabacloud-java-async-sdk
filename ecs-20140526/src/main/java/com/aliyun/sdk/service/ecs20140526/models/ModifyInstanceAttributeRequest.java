@@ -358,12 +358,12 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <p>The running mode of the burstable instance. Valid values:</p>
          * <ul>
-         * <li>Standard</li>
-         * <li>Unlimited</li>
+         * <li>Standard: standard mode.</li>
+         * <li>Unlimited: unlimited mode.</li>
          * </ul>
-         * <p>For more information about the performance modes of burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</p>
+         * <p>For more information about the running modes of burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -375,9 +375,9 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance.</p>
+         * <p>The release protection attribute of the instance. Specifies whether the instance can be released from the console or by calling <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a>.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
+         * <p>This attribute is applicable only to pay-as-you-go instances. It can only restrict manual release operations and does not take effect on system-initiated release operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -402,16 +402,17 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
+         * <p>Specifies whether to enable the Jumbo Frame feature for the instance MTU. Valid values:</p>
          * <ul>
-         * <li>true: The Jumbo Frame feature is enabled for the instance.</li>
-         * <li>false: The Jumbo Frame feature is disabled for the instance.</li>
+         * <li>true: enables the feature.</li>
+         * <li>false: does not enable the feature.</li>
          * </ul>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</li>
-         * <li>The instance must reside in a VPC.</li>
-         * <li>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500. You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</li>
+         * <li>The instance must be in the Running or Stopped state.</li>
+         * <li>The instance must be a VPC-connected instance.</li>
+         * <li>After the Jumbo Frame feature is enabled, the MTU value of the instance changes to 8500. After the feature is disabled, the MTU value is rolled back to 1500.
+         * Only specific instance types support the Jumbo Frame feature. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,7 +425,17 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * EnableNetworkEncryption.
+         * <p>Specifies whether to enable VPC network traffic encryption. Valid values:</p>
+         * <ul>
+         * <li>true: enables the encryption.</li>
+         * <li>false: disables the encryption.<blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNetworkEncryption(Boolean enableNetworkEncryption) {
             this.putQueryParameter("EnableNetworkEncryption", enableNetworkEncryption);
@@ -433,15 +444,19 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The hostname of the instance. Take note of the following items:</p>
+         * <p>The hostname of the operating system. Take note of the following items:</p>
          * <ul>
-         * <li>The instance cannot be in the Creating (<code>Pending</code>) or Starting (<code>Starting</code>) state. Otherwise, the new hostname and the configurations in the <code>/etc/hosts</code> file may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance.</li>
-         * <li>The parameter takes effect after the instance is restarted. You can restart an instance in the ECS console. For more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance. The parameter cannot take effect if you restart an instance within the operating system.</li>
+         * <li><p>The instance cannot be in the Pending or Starting state. Otherwise, the hostname and <code>/etc/hosts</code> configuration may not take effect. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the current status of the instance.</p>
+         * </li>
+         * <li><p>The new hostname takes effect after you restart the instance. You can restart the instance in the ECS console (for more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>. Restarting the instance from within the operating system does not take effect.</p>
+         * </li>
          * </ul>
-         * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
+         * <p>The following limits apply to hostnames for different operating systems:</p>
          * <ul>
-         * <li>For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
-         * <li>For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or a hyphen (-).</li>
+         * <li><p>Windows Server: The hostname must be 2 to 15 characters in length and can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), cannot contain consecutive hyphens (-), and cannot contain only digits.</p>
+         * </li>
+         * <li><p>Other instances (such as Linux): The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain uppercase letters, lowercase letters, digits, and hyphens (-), but cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or hyphen (-).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,7 +482,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testInstanceName</p>
@@ -479,11 +494,11 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of queues supported by the primary elastic network interface (ENI) of the instance. Take note of the following items:</p>
+         * <p>The number of queues supported by the primary network interface controller (NIC). Take note of the following items:</p>
          * <ul>
-         * <li>The instance must be in the Stopped (<code>Stopped</code>) state.</li>
-         * <li>The number of queues supported by an ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on the instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues that an instance type allows for each ENI and the queue quota for the instance type, call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</li>
-         * <li>If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues of an ENI of each instance type, call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</li>
+         * <li>The instance must be in the Stopped state.</li>
+         * <li>The value cannot exceed the maximum number of queues per NIC allowed by the instance type. The total number of queues for all NICs on the instance cannot exceed the queue quota allowed by the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the maximum number of queues per NIC and the total queue quota for an instance type.</li>
+         * <li>If you set this parameter to -1, the number of queues on the primary NIC is reset to the default value for the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the default number of queues for Elastic Network Interfaces (ENIs) of an instance type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -514,17 +529,18 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <strong>( ) ` ~ ! @ # $ % ^ &amp; * - _ + = | { } [ ] : ; &quot; &lt; &gt; , . ? /</strong> The password of a Windows instance cannot start with a forward slash (/). Take note of the following items:</p>
+         * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <strong>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</strong>
+         * . For Windows instances, the password cannot start with a forward slash (/). Take note of the following items:</p>
          * <ul>
-         * <li>The instance cannot be in the Starting (<code>Starting</code>) state.</li>
-         * <li>The parameter takes effect after the instance is restarted. You can restart an instance in the ECS console. For more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance. The parameter cannot take effect if you restart an instance within the operating system.</li>
+         * <li>The instance cannot be in the Starting state.</li>
+         * <li>The new password takes effect after you restart the instance. You can restart the instance in the ECS console (for more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>. Restarting the instance from within the operating system does not take effect.</li>
          * </ul>
          * <blockquote>
-         * <p> For security reasons, we recommend that you use HTTPS to send requests if <code>Password</code> is specified.</p>
+         * <p>If you specify the Password parameter, use HTTPS to send the request to avoid password leaks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Test123456</p>
+         * <p>Test123456&amp;$</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -533,8 +549,8 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The private domain name options of the ECS instance.</p>
-         * <p>For information about private domain name resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</p>
+         * <p>The private domain name configuration of the instance.</p>
+         * <p>For more information about private private domain resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private private domain resolution</a>.</p>
          */
         public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
             this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
@@ -544,11 +560,11 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>hide</p>
+         * <p>true</p>
          */
         public Builder recyclable(Boolean recyclable) {
             this.putQueryParameter("Recyclable", recyclable);
@@ -558,7 +574,7 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          */
         public Builder remoteConnectionOptions(RemoteConnectionOptions remoteConnectionOptions) {
@@ -586,16 +602,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the new security groups to which to assign the instance. Take note of the following items:</p>
+         * <p>The IDs of the security groups to which the instance is reassigned. Take note of the following items:</p>
          * <ul>
-         * <li>The security group IDs in the array cannot be duplicate. The length of the array is related to the quota of security groups to which the instance can be assigned. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</li>
-         * <li>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the array.</li>
-         * <li>You can move the instance to security groups of a different type. However, the array cannot contain the IDs of both basic and advanced security groups.</li>
-         * <li>The security groups and the instance must belong to the same VPC.</li>
-         * <li>Security groups of instances in the classic network cannot be changed.</li>
+         * <li>Security group IDs in the array cannot be duplicated. The maximum length of the array depends on the maximum number of security groups to which the instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</li>
+         * <li>The instance is removed from the current security groups. To retain the current security groups, add their IDs to the array.</li>
+         * <li>You can switch between security group types, but the list cannot contain both basic security groups and advanced security groups at the same time.</li>
+         * <li>The security groups must belong to the same VPC as the instance.</li>
          * </ul>
          * <blockquote>
-         * <p> New security groups become valid for the instance after a short delay.</p>
+         * <p>Changes to security groups take effect on the instance shortly after the modification, but a slight delay may occur.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -608,13 +623,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The user data of the instance. We recommend that you encode the data in Base64. Take note of the following items:</p>
+         * <p>The instance user data. We recommend that you pass in Base64-encoded data. Take note of the following items:</p>
          * <ul>
-         * <li>The instance must meet the limits for user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Initialize an instance by using instance user data</a>.</li>
-         * <li>After you restart the instance, the new user data is displayed but not run as scripts.</li>
+         * <li>The instance must meet the usage limits for instance user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Create instance user data</a>.</li>
+         * <li>After you restart the instance, the new user data is displayed on the instance but is not run.</li>
          * </ul>
          * <blockquote>
-         * <p> The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</p>
+         * <p>Before Base64 encoding, the raw data cannot exceed 32 KB. Do not pass in sensitive information such as passwords and private keys in plaintext. If you must pass in sensitive information, encrypt the information, encode it in Base64, and then decrypt it in the same way within the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -751,7 +766,8 @@ public class ModifyInstanceAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The number of CPU cores. This parameter cannot be specified but only uses its default value.</p>
+             * <p>The number of CPU cores. This parameter does not support custom values and can only use the default value.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;Default value: see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -762,11 +778,14 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: <code>CpuOptions.Core</code> value × <code>CpuOptions.ThreadsPerCore</code> value.</p>
+             * <p>The number of threads per CPU core. The number of vCPUs of the ECS instance = <code>CpuOptions.Core</code> value × <code>CpuOptions.ThreadsPerCore</code> value.</p>
              * <ul>
-             * <li>If <code>CpuOptionsThreadPerCore</code> is set to 1, Hyper-Threading (HT) is disabled.</li>
-             * <li>This parameter is applicable only to specific instance types.</li>
+             * <li><p><code>CpuOptions.ThreadsPerCore=1</code> indicates that hyper-threading is disabled.</p>
+             * </li>
+             * <li><p>Only specific instance types support this parameter.</p>
+             * </li>
              * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;Valid values and default value: see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -779,16 +798,16 @@ public class ModifyInstanceAttributeRequest extends Request {
             /**
              * <p>The CPU topology type of the instance. Valid values:</p>
              * <ul>
-             * <li>ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</li>
-             * <li>DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core.</li>
+             * <li>ContinuousCoreToHTMapping: the hyper-threads (HTs) of the same core in the CPU topology of the instance are continuous.</li>
+             * <li>DiscreteCoreToHTMapping: the HTs of the same core in the instance are discrete.</li>
              * </ul>
-             * <p>This parameter is left empty by default.</p>
+             * <p>Default value: null.</p>
              * <p>Take note of the following items:</p>
              * <ul>
-             * <li>The instance must be in the Stopped (<code>Stopped</code>) state.</li>
+             * <li>The instance must be in the Stopped state.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is supported only for specific instance families. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify CPU topologies</a>.</p>
+             * <p>Only specific instance families support this parameter. For more information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology structure</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -816,7 +835,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * NestedVirtualization.
+             * <blockquote>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder nestedVirtualization(String nestedVirtualization) {
                 this.nestedVirtualization = nestedVirtualization;
@@ -930,10 +954,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</p>
+             * <p>Specifies whether to enable DNS resolution from the instance ID-based domain name to the IPv6 address. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: enables the resolution.</li>
+             * <li>false: disables the resolution.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -946,10 +970,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+             * <p>Specifies whether to enable DNS resolution from the instance ID-based domain name to the IPv4 address. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: enables the resolution.</li>
+             * <li>false: disables the resolution.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -962,10 +986,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+             * <p>Specifies whether to enable DNS resolution from the IP-based domain name to the IPv4 address. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: enables the resolution.</li>
+             * <li>false: disables the resolution.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -978,10 +1002,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</p>
+             * <p>Specifies whether to enable reverse DNS resolution from the IPv4 address to the IP-based domain name. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: enables the resolution.</li>
+             * <li>false: disables the resolution.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -994,10 +1018,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The type of the hostname. Valid values:</p>
+             * <p>The hostname type. Valid values:</p>
              * <ul>
-             * <li>Custom: custom hostname.</li>
-             * <li>IpBased: IP address-based hostname.</li>
+             * <li>Custom: custom.</li>
+             * <li>IpBased: IP-based hostname.</li>
              * <li>InstanceIdBased: instance ID-based hostname.</li>
              * </ul>
              * <p>Default value: Custom.</p>
@@ -1071,7 +1095,7 @@ public class ModifyInstanceAttributeRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1084,7 +1108,7 @@ public class ModifyInstanceAttributeRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

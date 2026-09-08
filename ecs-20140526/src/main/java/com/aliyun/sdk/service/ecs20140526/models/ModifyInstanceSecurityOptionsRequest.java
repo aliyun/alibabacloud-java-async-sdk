@@ -168,7 +168,10 @@ public class ModifyInstanceSecurityOptionsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +180,15 @@ public class ModifyInstanceSecurityOptionsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The secure boot setting of the instance is not modified.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the secure boot setting of the instance is modified.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -186,6 +197,12 @@ public class ModifyInstanceSecurityOptionsRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable UEFI Secure Boot. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +215,7 @@ public class ModifyInstanceSecurityOptionsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +237,10 @@ public class ModifyInstanceSecurityOptionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -154,7 +154,7 @@ public class DeleteImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image template.</p>
+         * <p>The image template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DeleteImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

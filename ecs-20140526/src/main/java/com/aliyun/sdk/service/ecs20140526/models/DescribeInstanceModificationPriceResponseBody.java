@@ -67,7 +67,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the prices and promotion rules.</p>
+         * <p>The price information, including the price and discount rule details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -144,10 +144,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the pricing rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>If you subscribe to an instance for one year, you can receive a 15% discount off the list price.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the pricing rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>315716429631488</p>
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -318,10 +312,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>655.2</p>
+             * DiscountPrice.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -329,10 +320,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4368</p>
+             * OriginalPrice.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -340,17 +328,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name. Valid values:</p>
-             * <ul>
-             * <li>InstanceType</li>
-             * <li>bandwidth</li>
-             * <li>image</li>
-             * <li>SystemDisk</li>
-             * <li>DataDisk</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>instanceType</p>
+             * Resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -358,7 +336,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing rules.</p>
+             * SubRules.
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;
@@ -366,10 +344,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3712.8</p>
+             * TradePrice.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -530,10 +505,6 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
             /**
              * <p>The currency unit. Valid values:</p>
-             * <ul>
-             * <li>Alibaba Cloud China site (aliyun.com): CNY</li>
-             * <li>Alibaba Cloud International site (alibabacloud.com): USD</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -544,10 +515,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the price.</p>
-             * <blockquote>
-             * <p> This parameter is returned only when ResourceType is set to instance.</p>
-             * </blockquote>
+             * DetailInfos.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -673,11 +641,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The currency unit. Valid values:</p>
-             * <ul>
-             * <li>Alibaba Cloud China site (aliyun.com): CNY</li>
-             * <li>Alibaba Cloud International site (alibabacloud.com): USD</li>
-             * </ul>
+             * <p>The currency unit.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -691,7 +655,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
              * <p>The discount.</p>
              * 
              * <strong>example:</strong>
-             * <p>61.320</p>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -702,7 +666,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
              * <p>The original price.</p>
              * 
              * <strong>example:</strong>
-             * <p>175.200</p>
+             * <p>100</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -713,7 +677,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
              * <p>The transaction price, which is equal to the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
-             * <p>113.880</p>
+             * <p>100</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -767,7 +731,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * MarketplaceImagePrice.
+             * <p>The Alibaba Cloud Marketplace image price.</p>
              */
             public Builder marketplaceImagePrice(MarketplaceImagePrice marketplaceImagePrice) {
                 this.marketplaceImagePrice = marketplaceImagePrice;
@@ -834,10 +798,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the promotion rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Upgrade offers</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -845,10 +806,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the promotion rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234567890</p>
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -990,7 +948,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedPrice.
+             * <p>The related price.</p>
              */
             public Builder relatedPrice(RelatedPrice relatedPrice) {
                 this.relatedPrice = relatedPrice;
@@ -998,7 +956,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the promotion rules.</p>
+             * Rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

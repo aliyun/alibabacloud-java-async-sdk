@@ -106,7 +106,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the tag list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page settings for the paged query. This is the paging size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -128,7 +128,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B04B8CF3-4489-432D-83BA-6F128E4F2295</p>
@@ -139,7 +139,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that match all filter conditions.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -346,10 +346,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of dedicated hosts to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Ddh.
              */
             public Builder ddh(Integer ddh) {
                 this.ddh = ddh;
@@ -357,10 +354,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of disks to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>15</p>
+             * Disk.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -368,10 +362,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ENIs to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * Eni.
              */
             public Builder eni(Integer eni) {
                 this.eni = eni;
@@ -379,10 +370,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of images to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * Image.
              */
             public Builder image(Integer image) {
                 this.image = image;
@@ -390,10 +378,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>45</p>
+             * Instance.
              */
             public Builder instance(Integer instance) {
                 this.instance = instance;
@@ -401,10 +386,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of key pairs to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>17</p>
+             * KeyPair.
              */
             public Builder keyPair(Integer keyPair) {
                 this.keyPair = keyPair;
@@ -412,10 +394,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of launch templates to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * LaunchTemplate.
              */
             public Builder launchTemplate(Integer launchTemplate) {
                 this.launchTemplate = launchTemplate;
@@ -423,10 +402,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of reserved instances to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * ReservedInstance.
              */
             public Builder reservedInstance(Integer reservedInstance) {
                 this.reservedInstance = reservedInstance;
@@ -434,10 +410,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of security groups to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * Securitygroup.
              */
             public Builder securitygroup(Integer securitygroup) {
                 this.securitygroup = securitygroup;
@@ -445,10 +418,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of snapshots to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>15</p>
+             * Snapshot.
              */
             public Builder snapshot(Integer snapshot) {
                 this.snapshot = snapshot;
@@ -456,10 +426,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of automatic snapshot policies to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * SnapshotPolicy.
              */
             public Builder snapshotPolicy(Integer snapshotPolicy) {
                 this.snapshotPolicy = snapshotPolicy;
@@ -467,10 +434,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of storage volumes to which the tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * Volume.
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -550,7 +514,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of resource types.</p>
+             * ResourceTypeCount.
              */
             public Builder resourceTypeCount(ResourceTypeCount resourceTypeCount) {
                 this.resourceTypeCount = resourceTypeCount;
@@ -558,10 +522,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -569,10 +530,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

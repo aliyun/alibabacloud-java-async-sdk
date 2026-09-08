@@ -168,7 +168,7 @@ public class DeleteHpcClusterRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -202,10 +202,7 @@ public class DeleteHpcClusterRequest extends Request {
         }
 
         /**
-         * <p>RAM用户的虚拟账号ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>155780923770</p>
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -214,7 +211,7 @@ public class DeleteHpcClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the HPC cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the HPC cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,10 +224,7 @@ public class DeleteHpcClusterRequest extends Request {
         }
 
         /**
-         * <p>资源主账号的账号名称。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EcsforCloud</p>
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -239,10 +233,7 @@ public class DeleteHpcClusterRequest extends Request {
         }
 
         /**
-         * <p>资源主账号的ID，亦即UID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>155780923770</p>
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

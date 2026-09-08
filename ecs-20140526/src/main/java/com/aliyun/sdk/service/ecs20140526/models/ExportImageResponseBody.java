@@ -102,7 +102,7 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task that is used to export the custom image.</p>
+         * <p>The ID of the image export task.</p>
          * 
          * <strong>example:</strong>
          * <p>tsk-bp67acfmxazb4p****</p>

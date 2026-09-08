@@ -67,7 +67,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deleted launch template versions.</p>
+         * LaunchTemplateVersions.
          */
         public Builder launchTemplateVersions(LaunchTemplateVersions launchTemplateVersions) {
             this.launchTemplateVersions = launchTemplateVersions;
@@ -144,10 +144,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lt-m5eiaupmvm2op9d****</p>
+             * LaunchTemplateId.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -155,10 +152,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * LaunchTemplateVersionNumber.
              */
             public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
                 this.launchTemplateVersionNumber = launchTemplateVersionNumber;

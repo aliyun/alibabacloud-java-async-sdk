@@ -139,10 +139,7 @@ public class DescribeInstanceTopologyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of one or more ECS instances. You can specify a maximum of 100 instance IDs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;i-bp67acfmxazb4p****&quot;]</p>
+         * InstanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -160,11 +157,7 @@ public class DescribeInstanceTopologyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

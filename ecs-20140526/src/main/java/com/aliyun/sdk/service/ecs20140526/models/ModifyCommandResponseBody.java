@@ -54,7 +54,7 @@ public class ModifyCommandResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0DE9B41E-EF0D-40A0-BB43-37749C5BDA9C</p>

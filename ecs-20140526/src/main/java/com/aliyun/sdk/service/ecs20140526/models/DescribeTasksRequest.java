@@ -266,7 +266,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The time range refers to the period of time during which the task is created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the creation time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-23T15:16:00Z</p>
@@ -296,8 +296,8 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>The page number of the results.</p>
+         * <p>Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -310,8 +310,8 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The number of entries per page for a paged query.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -324,7 +324,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -337,7 +337,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the resources associated with the task. Valid values of N: 1 to 100.</p>
+         * <p>The resource IDs. Valid values of N: 1 to 100.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -364,7 +364,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time range refers to the period of time during which the task is created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The beginning of the creation time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-23T15:10:00Z</p>
@@ -376,13 +376,13 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The name of the operation that generates the task. Valid values:</p>
+         * <p>The name of the API operation associated with the task. Valid values:</p>
          * <ul>
-         * <li>ImportImage</li>
-         * <li>ExportImage</li>
-         * <li>RedeployInstance</li>
-         * <li>ModifyDiskSpec</li>
-         * <li>ArchiveSnapshot</li>
+         * <li>ImportImage: import an image.</li>
+         * <li>ExportImage: export an image.</li>
+         * <li>RedeployInstance: redeploy an ECS instance.</li>
+         * <li>ModifyDiskSpec: change the cloud disk type.</li>
+         * <li>ArchiveSnapshot: archive a snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -395,7 +395,13 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * TaskGroupId.
+         * <p>The task group ID.</p>
+         * <blockquote>
+         * <p>This parameter is in invitational preview. When this parameter is specified, other query conditions do not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>g-2ze2op2grqpclwu7****</p>
          */
         public Builder taskGroupId(String taskGroupId) {
             this.putQueryParameter("TaskGroupId", taskGroupId);
@@ -404,7 +410,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The task IDs. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</p>
+         * <p>The task IDs. You can specify up to 100 task IDs at a time. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>t-bp1hvgwromzv32iq****,t-bp179lofu2pv768w****</p>
@@ -418,13 +424,13 @@ public class DescribeTasksRequest extends Request {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Finished</li>
-         * <li>Processing</li>
-         * <li>Failed</li>
+         * <li>Finished: The task is complete.</li>
+         * <li>Processing: The task is running.</li>
+         * <li>Failed: The task has failed.</li>
          * </ul>
-         * <p>This parameter is left empty by default.</p>
+         * <p>Default value: null.</p>
          * <blockquote>
-         * <p> The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</p>
+         * <p>Only tasks in the Finished, Processing, or Failed state can be queried. Other values do not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

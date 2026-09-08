@@ -266,10 +266,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
+         * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
          * <ul>
-         * <li>-1: The snapshot copy is retained until it is deleted.</li>
-         * <li>1 to 65535: The snapshot copy is retained for a specified number of days.</li>
+         * <li>-1: Snapshot replicas are permanently retained.</li>
+         * <li>1 to 65535: the number of days for which snapshot replicas are retained.</li>
          * </ul>
          * <p>Default value: -1.</p>
          * 
@@ -283,7 +283,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The encryption configurations for cross-region snapshot replication.</p>
+         * <p>The encryption parameter object for cross-region snapshot replication.</p>
          */
         public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
             this.putQueryParameter("CopyEncryptionConfiguration", copyEncryptionConfiguration);
@@ -292,10 +292,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cross-region replication for the automatic snapshot.</p>
+         * <p>Specifies whether to allow automatic cross-region replication.</p>
          * <ul>
-         * <li>true: enables cross-region replication for the automatic snapshot.</li>
-         * <li>false: disables cross-region replication for the automatic snapshot.</li>
+         * <li>true: allowed.</li>
+         * <li>false: not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The destination region to which to copy the snapshot. You can specify only a single destination region.</p>
+         * <p>The destination region to which snapshots are replicated. Currently, you can set only one destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -347,7 +347,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * TargetTags.
+         * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
+         * This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</p>
          */
         public Builder targetTags(java.util.List<TargetTags> targetTags) {
             this.putQueryParameter("TargetTags", targetTags);
@@ -356,7 +357,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query available automatic snapshot policies.</p>
+         * <p>The ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> to query available automatic snapshot policies.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +370,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.</p>
+         * <p>The name of the automatic snapshot policy. If this parameter is left empty, the name is not modified.</p>
          * 
          * <strong>example:</strong>
          * <p>SPTestName</p>
@@ -381,7 +382,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -394,11 +395,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</p>
-         * <p>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</p>
+         * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</p>
+         * <p>To create multiple automatic snapshots within a week, specify multiple days:</p>
          * <ul>
-         * <li>You can specify up to seven days over a one-week period.</li>
-         * <li>You must set this parameter to a JSON array such as <code>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</code>. Separate the values in the array with commas (,).</li>
+         * <li>You can specify up to 7 days.</li>
+         * <li>Specify multiple days in a JSON array, such as <code>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</code>. Separate the days with commas (,).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -411,10 +412,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
+         * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
          * <ul>
-         * <li>-1: The automatic snapshot is permanently retained.</li>
-         * <li>1 to 65536: The auto snapshot is retained for the specified number of days.</li>
+         * <li>-1: Automatic snapshots are permanently retained.</li>
+         * <li>1 to 65536: the number of days for which automatic snapshots are retained.</li>
          * </ul>
          * <p>Default value: -1.</p>
          * 
@@ -428,11 +429,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</p>
-         * <p>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</p>
+         * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00.</p>
+         * <p>To create multiple automatic snapshots within a day, specify multiple points in time:</p>
          * <ul>
          * <li>You can specify up to 24 points in time.</li>
-         * <li>You must set this parameter to a JSON array such as <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. Separate the points in time with commas (,).</li>
+         * <li>Specify multiple points in time in a JSON array, such as <code>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</code>. Separate the points in time with commas (,).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -632,8 +633,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             /**
              * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Encryption is enabled. </li>
+             * <li>false: Encryption is not enabled.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -646,7 +647,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key used for encryption in cross-region snapshot replication.</p>
+             * <p>The key ID of the KMS key used for encrypted cross-region snapshot replication.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -716,7 +717,9 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.
+             * Valid values of N: 1 to 10.
+             * The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -724,7 +727,9 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.
+             * Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+             * Note: If you pass in an empty value or an empty string, it indicates any value.</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -310,7 +310,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <code>ClientToken</code> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -323,7 +323,7 @@ public class CreateCapacityReservationRequest extends Request {
 
         /**
          * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -335,7 +335,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * <p>The expiration time of the capacity reservation. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-30T06:32:00Z</p>
@@ -349,8 +349,8 @@ public class CreateCapacityReservationRequest extends Request {
         /**
          * <p>The release mode of the capacity reservation. Valid values:</p>
          * <ul>
-         * <li>Limited: The capacity reservation is automatically released at a specified time. If you specify this parameter, you must specify the <code>EndTime</code> parameter.</li>
-         * <li>Unlimited: The capacity reservation is manually released. The capacity reservation can be released anytime.</li>
+         * <li>Limited: released at a specified time. You must also specify the <code>EndTime</code> parameter.</li>
+         * <li>Unlimited: manual release. No time limit is imposed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +363,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The total number of instances for which the capacity of an instance type is reserved.</p>
+         * <p>The total number of instances to reserve for a single instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -385,7 +385,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types provided by ECS.</p>
+         * <p>The instance type. Currently, you can set a capacity reservation for only one instance type. You can invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the instance types provided by Elastic Compute Service (ECS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,14 +416,14 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The operating system of the image used by the instance. This parameter corresponds to the <code>Platform</code> parameter of regional reserved instances. If the operating system of a capacity reservation matches the operating system of a regional reserved instance, you can apply the regional reserved instance to offset fees of the unused capacity of the capacity reservation. Valid values:</p>
+         * <p>The operating system type of the image used by the instance. This parameter corresponds to the <code>Platform</code> parameter of regional reserved instances. If the operating system type of the capacity reservation matches that of a regional reserved instance, the regional reserved instance can be used to offset the bill for unused capacity in the capacity reservation. Valid values:</p>
          * <ul>
-         * <li>Windows: Windows Server operating system</li>
-         * <li>Linux: Linux and UNIX-like operating system</li>
+         * <li>Windows: Windows Server operating system.</li>
+         * <li>Linux: Linux and Unix-like operating system.</li>
          * </ul>
          * <p>Default value: Linux.</p>
          * <blockquote>
-         * <p>This parameter is unavailable.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -436,7 +436,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which to create the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,7 +449,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which you want to assign the capacity reservation.</p>
+         * <p>The ID of the enterprise resource group to which the capacity reservation belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -479,9 +479,9 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The mode in which the capacity reservation takes effect. You can call the CreateCapacityReservation operation to create only immediate capacity reservations.</p>
+         * <p>The effective mode of the capacity reservation. Currently, only the immediate mode is supported when you call this API operation.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the capacity reservation immediately takes effect.</p>
+         * <p>If you leave this parameter empty, the capacity reservation immediately takes effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -494,7 +494,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the capacity reservation.</p>
+         * <p>The list of tag pairs bound to the capacity reservation.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -503,7 +503,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in which you want to create the capacity reservation. A capacity reservation can reserve resources within only one zone.</p>
+         * <p>The zone ID of the capacity reservation. Currently, you can create a capacity reservation in only one zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -575,10 +575,10 @@ public class CreateCapacityReservationRequest extends Request {
             } 
 
             /**
-             * <p>The type of the private pool to generate after the capacity reservation takes effect. Valid values:</p>
+             * <p>The type of the private pool generated after the capacity reservation takes effect. Valid values:</p>
              * <ul>
-             * <li>Open: open private pool</li>
-             * <li>Target: targeted private pool</li>
+             * <li>Open: open mode. The system automatically matches the open private pool capacity when an instance is started. If no matching private pool capacity is available, the system uses public pool resources to start the instance.</li>
+             * <li>Target: targeted mode. The instance is started by using the specified private pool capacity. If the specified private pool capacity is unavailable, the instance fails to start.</li>
              * </ul>
              * <p>Default value: Open.</p>
              * 
@@ -591,7 +591,7 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * <p>The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>crpTestName</p>
@@ -661,7 +661,7 @@ public class CreateCapacityReservationRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -672,7 +672,7 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+             * <p>The tag value of the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

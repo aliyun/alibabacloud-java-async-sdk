@@ -327,7 +327,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the ENI.</p>
+         * <p>The description of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -338,7 +338,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPv4 prefixes assigned to the ENI.</p>
+         * Ipv4PrefixSets.
          */
         public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
             this.ipv4PrefixSets = ipv4PrefixSets;
@@ -346,7 +346,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPv6 prefixes assigned to the ENI.</p>
+         * Ipv6PrefixSets.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -354,7 +354,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPv6 addresses assigned to the ENI.</p>
+         * Ipv6Sets.
          */
         public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
@@ -362,7 +362,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The media access control (MAC) address of the ENI.</p>
+         * <p>The MAC address of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:3e:12:<strong>:</strong></p>
@@ -373,7 +373,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp14v2sdd3v8htln****</p>
@@ -384,7 +384,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the ENI.</p>
+         * <p>The name of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>my-eni-name</p>
@@ -395,7 +395,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the account to which the ENI belongs.</p>
+         * <p>The ID of the account that owns the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -406,7 +406,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private IP address of the ENI.</p>
+         * <p>The private IP address of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p><code>172.17.**.**</code></p>
@@ -417,7 +417,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private IP addresses.</p>
+         * PrivateIpSets.
          */
         public Builder privateIpSets(PrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
@@ -436,7 +436,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the ENI belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-2ze88m67qx5z****</p>
@@ -447,7 +447,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the security groups to which the ENI belongs.</p>
+         * SecurityGroupIds.
          */
         public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
@@ -455,7 +455,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the distributor to which the ENI belongs.</p>
+         * <p>The ID of the Virtual Network Operator (VNO) to which the network interface controller (NIC) corresponds.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678910</p>
@@ -466,7 +466,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+         * <p>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -478,7 +478,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -490,7 +490,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the ENI.</p>
+         * <p>The status of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -501,7 +501,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags of the ENI.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -509,7 +509,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the ENI.</p>
+         * <p>The type of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>Secondary</p>
@@ -520,7 +520,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the vSwitch to which the ENI is connected.</p>
+         * <p>The ID of the vSwitch in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp16usj2p27htro3****</p>
@@ -542,7 +542,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID of the ENI.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>
@@ -598,10 +598,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv4 prefix assigned to the ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hide</p>
+             * Ipv4Prefix.
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -709,10 +706,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv6 prefix assigned to the ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hide</p>
+             * Ipv6Prefix.
              */
             public Builder ipv6Prefix(String ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
@@ -833,10 +827,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv6 address assigned to the ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2001:db8:1234:1a00::****</p>
+             * Ipv6Address.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -965,10 +956,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the private IP address is the primary private IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Primary.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -976,7 +964,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the instance.</p>
+             * <p>The private IP address of the network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p><code>172.17.**.**</code></p>
@@ -1154,10 +1142,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1165,10 +1150,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

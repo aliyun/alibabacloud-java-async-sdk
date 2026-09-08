@@ -106,7 +106,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the capacity reservations.</p>
+         * CapacityReservationSet.
          */
         public Builder capacityReservationSet(CapacityReservationSet capacityReservationSet) {
             this.capacityReservationSet = capacityReservationSet;
@@ -114,7 +114,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -147,7 +147,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,10 +229,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>105909559088****</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -240,10 +237,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>maxcompute.aliyuncs.com</p>
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -251,10 +245,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that are used by the Alibaba Cloud account or service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -453,10 +444,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * AvailableAmount.
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -464,7 +452,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of instance usage.</p>
+             * CapacityReservationUsages.
              */
             public Builder capacityReservationUsages(CapacityReservationUsages capacityReservationUsages) {
                 this.capacityReservationUsages = capacityReservationUsages;
@@ -480,10 +468,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.c6.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -499,10 +484,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of instances for which the capacity of an instance type is reserved.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * TotalAmount.
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -510,10 +492,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that have used the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -521,10 +500,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * zoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -645,10 +621,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -656,10 +629,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1027,7 +997,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the allocated resources.</p>
+             * AllocatedResources.
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -1035,10 +1005,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the capacity reservation owner.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100************7</p>
+             * CapacityReservationOwnerId.
              */
             public Builder capacityReservationOwnerId(String capacityReservationOwnerId) {
                 this.capacityReservationOwnerId = capacityReservationOwnerId;
@@ -1054,10 +1021,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1065,10 +1029,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the capacity reservation expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-02-19T03:02Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1076,14 +1037,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release mode of the capacity reservation. Valid values:</p>
-             * <ul>
-             * <li>Limited: The capacity reservation is automatically released at a specified time.</li>
-             * <li>Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Unlimited</p>
+             * EndTimeType.
              */
             public Builder endTimeType(String endTimeType) {
                 this.endTimeType = endTimeType;
@@ -1091,14 +1045,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instances created by using the capacity reservation. Valid values:</p>
-             * <ul>
-             * <li>PostPaid: pay-as-you-go.</li>
-             * <li>PrePaid: subscription.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PostPaid</p>
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1106,14 +1053,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the instances created by using the capacity reservation. Valid values:</p>
-             * <ul>
-             * <li>windows</li>
-             * <li>linux</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>linux</p>
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1121,10 +1061,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>crp-bp1gubrkqutenqdd****</p>
+             * PrivatePoolOptionsId.
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -1132,14 +1069,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the private pool generated after the capacity reservation takes effect. Valid values:</p>
-             * <ul>
-             * <li>Open: open private pool. If you use the capacity reservation to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the capacity reservation is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the instances.</li>
-             * <li>Target: targeted private pool. If you use the capacity reservation to create ECS instances, the targeted private pool that is associated with the capacity reservation is automatically matched. If no capacity is available in the private pool, the instances fail to be created.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Open</p>
+             * PrivatePoolOptionsMatchCriteria.
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -1147,10 +1077,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>crpTestName</p>
+             * PrivatePoolOptionsName.
              */
             public Builder privatePoolOptionsName(String privatePoolOptionsName) {
                 this.privatePoolOptionsName = privatePoolOptionsName;
@@ -1158,10 +1085,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1169,10 +1093,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the reserved instance used with the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ri-bpzhex2ulpzf53****</p>
+             * ReservedInstanceId.
              */
             public Builder reservedInstanceId(String reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;
@@ -1180,10 +1101,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the capacity reservation belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1191,10 +1109,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the savings plan used with the capacity reservation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>spn-c29b5e18pJMT****</p>
+             * SavingPlanId.
              */
             public Builder savingPlanId(String savingPlanId) {
                 this.savingPlanId = savingPlanId;
@@ -1202,10 +1117,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the capacity reservation takes effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-02-19T02:01Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1213,14 +1125,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode in which the capacity reservation takes effect. Valid values:</p>
-             * <ul>
-             * <li>Now: The capacity reservation takes effect immediately after it is created.</li>
-             * <li>Later: The capacity reservation takes effect at a specified time.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Now</p>
+             * StartTimeType.
              */
             public Builder startTimeType(String startTimeType) {
                 this.startTimeType = startTimeType;
@@ -1228,17 +1133,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the capacity reservation. Valid values:</p>
-             * <ul>
-             * <li>Pending: The capacity reservation is being initialized.</li>
-             * <li>Preparing: The capacity reservation is being prepared.</li>
-             * <li>Prepared: The capacity reservation is to take effect.</li>
-             * <li>Active: The capacity reservation is in effect.</li>
-             * <li>Released: The capacity reservation has been released manually or automatically when it expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1246,7 +1141,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the capacity reservation.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1254,12 +1149,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * TimeSlot.
              */
             public Builder timeSlot(String timeSlot) {
                 this.timeSlot = timeSlot;

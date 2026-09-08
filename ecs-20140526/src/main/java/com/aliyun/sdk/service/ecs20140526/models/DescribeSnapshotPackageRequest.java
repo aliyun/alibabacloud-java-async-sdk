@@ -186,8 +186,8 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
-         * <p>Default value: 1</p>
+         * <p>The page number of the OSS storage plan list. Minimum value: 1.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,8 +199,8 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 1 to 100.</p>
-         * <p>Default value: 10</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -212,7 +212,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The region ID of the snapshot. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

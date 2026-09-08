@@ -213,9 +213,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
          * <p>The extended attributes of the diagnostic report.</p>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *     &quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;
-         * }</p>
+         * <p>{&quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;}</p>
          */
         public Builder attributes(String attributes) {
             this.attributes = attributes;
@@ -234,7 +232,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+         * <p>The end time. This parameter was specified when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11T14:00:00Z</p>
@@ -245,7 +243,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the diagnostic report was complete.</p>
+         * <p>The time when the diagnostic report was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11T14:00:00Z</p>
@@ -256,7 +254,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The results of all diagnostic metrics in the diagnostic metric set.</p>
+         * MetricResults.
          */
         public Builder metricResults(MetricResults metricResults) {
             this.metricResults = metricResults;
@@ -275,7 +273,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the diagnostic report, which is the unique identifier of the report.</p>
+         * <p>The diagnostic report ID. The unique identifier of the resource diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>dr-uf6i0tv2refv8wz*****</p>
@@ -308,7 +306,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.</p>
+         * <p>The resource type. The supported type is instance.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -319,13 +317,13 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:</p>
+         * <p>The severity level of the report. This value represents the most severe level among all metrics. The severity levels in ascending order are:</p>
          * <ul>
-         * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
-         * <li>Normal: No exceptions were detected.</li>
-         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-         * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
-         * <li>Critical: Critical exceptions were detected.</li>
+         * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited abnormally. No diagnostic conclusion is available.</li>
+         * <li>Normal: The diagnosis is normal. No issues were found.</li>
+         * <li>Info: Related information is available and may be associated with an exception.</li>
+         * <li>Warn: Related information is available and may cause an exception.</li>
+         * <li>Critical: A critical exception exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,7 +335,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+         * <p>The start time. This parameter was specified when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11T12:00:00Z</p>
@@ -348,11 +346,11 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the diagnostic report. Valid values:</p>
+         * <p>The status of the diagnostic report. Valid values:</p>
          * <ul>
-         * <li>InProgress: The diagnostic is in progress.</li>
-         * <li>Finished: The diagnostic is complete.</li>
-         * <li>Failed: The diagnostic failed.</li>
+         * <li>InProgress: The diagnosis is in progress.</li>
+         * <li>Finished: The diagnosis is complete.</li>
+         * <li>Failed: The diagnosis failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,19 +472,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The additional data about the diagnosed issue. The value is a JSON string.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{
-             *   &quot;TotalPercent&quot;: 95,
-             *   &quot;TopUtilizationProcesses&quot;: [
-             *     {
-             *       &quot;Pid&quot;: &quot;1223&quot;,
-             *       &quot;CommandName&quot;: &quot;/usr/bin/mem.py&quot;,
-             *       &quot;PhysicalMemoryPercent&quot;: 50
-             *     }
-             *   ]
-             * }</p>
+             * Additional.
              */
             public Builder additional(String additional) {
                 this.additional = additional;
@@ -494,10 +480,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GuestOS.CPU.HighUtiliz*****</p>
+             * IssueId.
              */
             public Builder issueId(String issueId) {
                 this.issueId = issueId;
@@ -505,10 +488,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the diagnosed issue occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-07-11T14:00:00Z</p>
+             * OccurrenceTime.
              */
             public Builder occurrenceTime(String occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -532,15 +512,17 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the diagnosed issue. Valid values:</p>
+             * <p>The severity level of the report. This value represents the most severe level among all metrics. The severity levels in ascending order are:</p>
              * <ul>
-             * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-             * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
-             * <li>Critical: Critical exceptions were detected.</li>
+             * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited abnormally. No diagnostic conclusion is available.</li>
+             * <li>Normal: The diagnosis is normal. No issues were found.</li>
+             * <li>Info: Related information is available and may be associated with an exception.</li>
+             * <li>Warn: Related information is available and may cause an exception.</li>
+             * <li>Critical: A critical exception exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Info</p>
+             * <p>Normal</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -700,7 +682,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The diagnosed issues.</p>
+             * Issues.
              */
             public Builder issues(Issues issues) {
                 this.issues = issues;
@@ -708,10 +690,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the diagnostic metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CPU</p>
+             * MetricCategory.
              */
             public Builder metricCategory(String metricCategory) {
                 this.metricCategory = metricCategory;
@@ -719,10 +698,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the diagnostic metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GuestOS.WinFirewall</p>
+             * MetricId.
              */
             public Builder metricId(String metricId) {
                 this.metricId = metricId;
@@ -730,14 +706,13 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the diagnostic metric. Valid values:</p>
+             * <p>The severity level of the report. This value represents the most severe level among all metrics. The severity levels in ascending order are:</p>
              * <ul>
-             * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
-             * <li>Normal: No exceptions were detected.</li>
-             * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-             * <li>NotSupport: The version of the guest operating system does support diagnosing the metric.</li>
-             * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
-             * <li>Critical: Critical exceptions were detected.</li>
+             * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited abnormally. No diagnostic conclusion is available.</li>
+             * <li>Normal: The diagnosis is normal. No issues were found.</li>
+             * <li>Info: Related information is available and may be associated with an exception.</li>
+             * <li>Warn: Related information is available and may cause an exception.</li>
+             * <li>Critical: A critical exception exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -749,11 +724,11 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the diagnostic metric. Valid values:</p>
+             * <p>The status of the diagnostic report. Valid values:</p>
              * <ul>
-             * <li>InProgress.</li>
-             * <li>Finished.</li>
-             * <li>Failed.</li>
+             * <li>InProgress: The diagnosis is in progress.</li>
+             * <li>Finished: The diagnosis is complete.</li>
+             * <li>Failed: The diagnosis failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

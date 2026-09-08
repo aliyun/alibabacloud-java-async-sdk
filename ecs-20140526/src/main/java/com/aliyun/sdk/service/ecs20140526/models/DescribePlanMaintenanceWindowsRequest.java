@@ -181,7 +181,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether the window is enabled or disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -190,7 +193,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -199,7 +205,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -208,7 +217,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * PlanWindowId.
+         * <p>The ID of the O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pw-bp1jarob1aup7yvlrdt6</p>
          */
         public Builder planWindowId(String planWindowId) {
             this.putQueryParameter("PlanWindowId", planWindowId);
@@ -217,7 +229,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * PlanWindowName.
+         * <p>The name of the O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WIndowName</p>
          */
         public Builder planWindowName(String planWindowName) {
             this.putQueryParameter("PlanWindowName", planWindowName);
@@ -226,6 +241,7 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +254,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * TargetResourceGroupId.
+         * <p>The ID of the resource group to which the O&amp;M window applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-d85g5yocioezmdrll</p>
          */
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.putQueryParameter("TargetResourceGroupId", targetResourceGroupId);
@@ -247,7 +266,7 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
         }
 
         /**
-         * TargetResourceTags.
+         * <p>The tags to which the O&amp;M window applies.</p>
          */
         public Builder targetResourceTags(TargetResourceTags targetResourceTags) {
             String targetResourceTagsShrink = shrink(targetResourceTags, "TargetResourceTags", "json");
@@ -316,7 +335,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag to which the window applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +346,10 @@ public class DescribePlanMaintenanceWindowsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag to which the window applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

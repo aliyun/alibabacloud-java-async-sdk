@@ -196,7 +196,7 @@ public class ModifyInstanceClockOptionsRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The idempotency parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -210,8 +210,10 @@ public class ModifyInstanceClockOptionsRequest extends Request {
         /**
          * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. Otherwise, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, the authorization status of the RAM user, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is executed.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -225,7 +227,7 @@ public class ModifyInstanceClockOptionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,10 +258,12 @@ public class ModifyInstanceClockOptionsRequest extends Request {
         }
 
         /**
-         * <p>PTP status value. Valid values:</p>
+         * <p>The PTP status. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li><p>enabled: enables PTP.</p>
+         * </li>
+         * <li><p>disabled: disables PTP.</p>
+         * </li>
          * </ul>
          * <p>Default value: disabled.</p>
          * 
@@ -273,7 +277,7 @@ public class ModifyInstanceClockOptionsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

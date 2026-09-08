@@ -182,7 +182,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>The ID of the target automatic snapshot policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</p>
+         * <p>The IDs of one or more cloud disks. The value is a JSON array. Separate multiple cloud disk IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the automatic snapshot policy and the disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the automatic snapshot policy and cloud disks. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

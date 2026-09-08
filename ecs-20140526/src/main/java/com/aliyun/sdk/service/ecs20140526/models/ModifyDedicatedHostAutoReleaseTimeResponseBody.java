@@ -57,7 +57,7 @@ public class ModifyDedicatedHostAutoReleaseTimeResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

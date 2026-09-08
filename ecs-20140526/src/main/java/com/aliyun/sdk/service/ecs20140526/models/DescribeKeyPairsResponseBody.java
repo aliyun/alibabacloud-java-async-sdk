@@ -106,7 +106,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the key pairs.</p>
+         * KeyPairs.
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -114,7 +114,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -216,10 +216,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the key pair.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +224,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the key pair.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -403,10 +397,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the key pair was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2023-09-04T08:33Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -414,10 +405,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the key pair.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ABC1234567</p>
+             * KeyPairFingerPrint.
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -425,10 +413,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key pair.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testKeyPairName</p>
+             * KeyPairName.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -436,10 +421,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the public key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ssh-rsa****</p>
+             * PublicKey.
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;
@@ -447,10 +429,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-amnhr7u7c7hj****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -458,7 +437,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the key pair.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

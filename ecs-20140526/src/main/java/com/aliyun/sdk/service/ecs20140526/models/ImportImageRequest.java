@@ -349,11 +349,11 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The system architecture. Valid values:</p>
+         * <p>The system architecture. Valid values: </p>
          * <ul>
-         * <li>i386</li>
-         * <li>x86_64</li>
-         * <li>arm64</li>
+         * <li>i386.</li>
+         * <li>x86_64.</li>
+         * <li>arm64.</li>
          * </ul>
          * <p>Default value: x86_64.</p>
          * 
@@ -369,13 +369,14 @@ public class ImportImageRequest extends Request {
         /**
          * <p>The boot mode of the image. Valid values:</p>
          * <ul>
-         * <li>BIOS</li>
-         * <li>UEFI</li>
+         * <li>BIOS: Basic Input/Output System (BIOS) boot mode.</li>
+         * <li>UEFI: Unified Extensible Firmware Interface (UEFI) boot mode.</li>
          * </ul>
-         * <p>Default value: BIOS. If you set <code>Architecture</code> to arm64, set this parameter to UEFI.</p>
-         * <blockquote>
-         * <p>Make sure that you are aware of the boot modes supported by the specified image, as thehe modified boot mode needs to be supported by the image. This way, instances that use this image can start.</p>
-         * </blockquote>
+         * <p>Default value: BIOS. If <code>Architecture=arm64</code>, the default value is UEFI, and only UEFI can be specified.</p>
+         * <notice>
+         * 
+         * <p>To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot mode supported by the target image before you specify this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
+         * </notice>
          * 
          * <strong>example:</strong>
          * <p>BIOS</p>
@@ -387,7 +388,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -399,7 +400,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The image description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestDescription</p>
@@ -411,9 +412,9 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The mode in which to check the image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
+         * <p>The image detection strategy. If this parameter is not specified, detection is not triggered. Only the Standard detection mode is supported.</p>
          * <blockquote>
-         * <p> This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limits for image check</a>.</p>
+         * <p>Most Linux/Windows versions are supported. For more information about image detection items and operating system limitations, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image detection</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limitations for image detection</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -426,7 +427,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Details about the custom images.</p>
+         * <p>The information list of the custom image to create.</p>
          */
         public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -435,10 +436,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including the AccessKey validity, the authorization of the Resource Access Management (RAM) user, and required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and sends the Normal request. If the check succeeds, a 2XX HTTP status code is returned and the operation is performed.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -452,7 +453,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The attributes of the image.</p>
+         * <p>The image feature-related properties.</p>
          */
         public Builder features(Features features) {
             this.putQueryParameter("Features", features);
@@ -461,7 +462,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>acs:</code> or <code>aliyun</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The image name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>ImageTestName</p>
@@ -473,16 +474,15 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The type of the license used to activate the operating system after the image is imported. Valid values:</p>
+         * <p>The license type. This parameter specifies the authorization mode when instances are created by calling <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> with this image. This value takes effect only for Windows Server images. Valid values:</p>
          * <ul>
-         * <li>Auto: ECS checks the operating system of the image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by <code>Platform</code> has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.</li>
-         * <li>Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by <code>Platform</code>.</li>
-         * <li>BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key is eligible for use in Alibaba Cloud.</li>
+         * <li>Aliyun: Uses the Alibaba Cloud official license. After the instance starts, the system attempts to automatically connect to the Alibaba Cloud KMS server for activation. The billing for the instance includes the Windows Server license fee.</li>
+         * <li>BYOL: Bring Your Own License. After the instance starts, Alibaba Cloud does not automatically activate it. You must manually activate it by using your own valid license key. The billing for the instance does not include the Windows Server license fee.</li>
          * </ul>
-         * <p>Default value: Auto.</p>
+         * <p>Default value: Aliyun.</p>
          * 
          * <strong>example:</strong>
-         * <p>Auto</p>
+         * <p>BYOL</p>
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -491,10 +491,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The operating system platform. Valid values:</p>
+         * <p>The operating system type. Valid values: </p>
          * <ul>
-         * <li>windows</li>
-         * <li>linux</li>
+         * <li>windows. You must also set <code>LicenseType</code>.</li>
+         * <li>linux.</li>
          * </ul>
          * <p>Default value: linux.</p>
          * 
@@ -517,7 +517,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The operating system distribution. Valid values:</p>
+         * <p>The operating system distribution. Valid values: </p>
          * <ul>
          * <li>Aliyun</li>
          * <li>Anolis</li>
@@ -545,6 +545,7 @@ public class ImportImageRequest extends Request {
          * <li>Windows Server 2012</li>
          * <li>Windows Server 2008</li>
          * <li>Windows Server 2003</li>
+         * <li>Other Windows</li>
          * </ul>
          * <p>Default value: Others Linux.</p>
          * 
@@ -558,7 +559,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the source image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the source custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -571,7 +572,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the image.</p>
+         * <p>The ID of the enterprise resource group to which the imported image belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -613,11 +614,11 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the cloud box, which is used to uniquely identify a storage location in the cloud.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the CloudBox, which uniquely identifies the cloud storage location.</p>
          * <blockquote>
-         * <p> Specify this parameter only if you import an image from OSS on CloudBox. Otherwise, you do not need to specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/430190.html">What is OSS on CloudBox?</a></p>
+         * <p>You need to specify this parameter only when you import an image file from OSS on CloudBox. If you are not using OSS on CloudBox, do not set this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/430190.html">What is OSS on CloudBox</a>.</p>
          * </blockquote>
-         * <p>The ARN must be in the following format: <code>arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}</code>. Replace <code>{RegionId}</code> with the region ID of the cloud box, <code>{AliUid}</code> with the ID of the Alibaba Cloud account to which the cloud box belongs, and <code>{CloudBoxId}</code> with the ID of the cloud box.</p>
+         * <p>The correct ARN format is: <code>arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}</code>, where <code>{RegionId}</code> is the region ID where the CloudBox resides, <code>{AliUid}</code> is the Alibaba Cloud account ID, and <code>{CloudBoxId}</code> is the CloudBox ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:acs:cloudbox:cn-hangzhou:123456:cloudbox/cb-xx***123</p>
@@ -629,7 +630,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The image tags.</p>
+         * <p>The tag list of the image.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -749,9 +750,9 @@ public class ImportImageRequest extends Request {
             } 
 
             /**
-             * <p>The device name of disk N in the custom image.</p>
+             * <p>The device name of DiskDeviceMapping.N.Device in the custom image.</p>
              * <blockquote>
-             * <p> This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.</p>
+             * <p>This parameter will be deprecated. For better code compatibility, do not use this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -763,15 +764,15 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The size of disk N in the custom image. Unit: GiB.</p>
-             * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
+             * <p>The size of the custom image. Unit: GiB.</p>
+             * <p>The space consists of the system disk and data disks. Make sure that the system disk space is greater than or equal to the size of the imported image file. Valid values:</p>
              * <ul>
-             * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
-             * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
+             * <li>When N=1, the value indicates the system disk. Valid values: 1 GiB to 2048 GiB.</li>
+             * <li>When N=2 to 17, the value indicates a data disk. Valid values: 1 GiB to 2048 GiB.</li>
              * </ul>
-             * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+             * <p>After you upload the source image file to OSS, you can view the image file size in the OSS bucket.</p>
              * <blockquote>
-             * <p> This parameter will be removed in the future. We recommend that you use <code>DiskDeviceMapping.N.DiskImageSize</code> to ensure future compatibility.</p>
+             * <p>This parameter will be deprecated. For better compatibility, use <code>DiskDeviceMapping.N.DiskImageSize</code> instead.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -783,13 +784,13 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The size of disk N in the custom image after the source image is imported.</p>
-             * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
+             * <p>The space size of the custom image after the image is imported.</p>
+             * <p>The space consists of the system disk and data disks. Make sure that the system disk space is greater than or equal to the size of the imported image file. Valid values:</p>
              * <ul>
-             * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
-             * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
+             * <li>When N=1, the value indicates the system disk. Valid values: 1 GiB to 2048 GiB.</li>
+             * <li>When N=2 to 17, the value indicates a data disk. Valid values: 1 GiB to 2048 GiB.</li>
              * </ul>
-             * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+             * <p>After you upload the source image file to OSS, you can view the image file size in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -800,14 +801,14 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The format of the source image. Valid values:</p>
+             * <p>The image format. Valid values:</p>
              * <ul>
-             * <li>RAW</li>
-             * <li>VHD</li>
-             * <li>QCOW2</li>
-             * <li>VMDK (invitational preview)</li>
+             * <li>RAW.</li>
+             * <li>VHD.</li>
+             * <li>QCOW2.</li>
+             * <li>VMDK (in invitational preview).</li>
              * </ul>
-             * <p>This parameter is empty by default, which indicates that the system checks the image format and uses the check result as the value of this parameter.</p>
+             * <p>Default value: empty, which indicates that Alibaba Cloud automatically detects the image format and uses the detected format.</p>
              * 
              * <strong>example:</strong>
              * <p>QCOW2</p>
@@ -818,9 +819,9 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) bucket where the image file is stored.</p>
+             * <p>The OSS bucket where the image file is stored.</p>
              * <blockquote>
-             * <p> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <code>NoSetRoletoECSServiceAcount</code> error code is returned when you call the ImportImage operation. For more information, see <strong>Usage notes</strong>.</p>
+             * <p>Before importing an image to this OSS bucket for the first time, add the RAM authorization policy as described in the <strong>Operation description</strong> section of this topic. Otherwise, the <code>NoSetRoletoECSServiceAccount</code> error is reported.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -832,7 +833,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The name (key) of the object that the image file is stored as in the OSS bucket.</p>
+             * <p>The name (key) of the image file stored in the OSS bucket after the image is uploaded to OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>CentOS_5.4_32.raw</p>
@@ -902,10 +903,10 @@ public class ImportImageRequest extends Request {
             } 
 
             /**
-             * <p>The metadata access mode version of the image. Valid values:</p>
+             * <p>The metadata access mode of the image. Valid values:</p>
              * <ul>
-             * <li>v1: You cannot set the metadata access mode to security hardening when you create instances from the image.</li>
-             * <li>v2: You can set the metadata access mode to security hardening when you create instances from the image.</li>
+             * <li>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to &quot;hardened mode only&quot;.</li>
+             * <li>v2: When you create an ECS instance from this image, you can set the metadata access mode to &quot;hardened mode only&quot;.</li>
              * </ul>
              * <p>Default value: v1.</p>
              * 
@@ -918,10 +919,14 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+             * <p>Specifies whether the image supports NVMe.</p>
              * <ul>
-             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * <li>supported: The image has the NVMe driver installed.</li>
+             * <li>unsupported: The image does not have the NVMe driver installed.</li>
+             * <li>If this parameter is not specified or the value is empty, the default value is unsupported.<blockquote>
+             * <p>By default, imported images are considered as not supporting the NVMe protocol. If you plan to run the image on instance types that support NVMe (such as c8i and r9i), make sure that the image has a built-in NVMe driver and explicitly set this parameter to supported.</p>
+             * </blockquote>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -992,7 +997,7 @@ public class ImportImageRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1003,7 +1008,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+             * <p>The tag value of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

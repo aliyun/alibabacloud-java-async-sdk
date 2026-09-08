@@ -81,7 +81,7 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
-         * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+         * <p>When you use a launch template to create instances, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-bp1apo0bbbkuy0rj****</p>
@@ -92,7 +92,7 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The versions of the deleted launch template.</p>
+         * LaunchTemplateVersionNumbers.
          */
         public Builder launchTemplateVersionNumbers(LaunchTemplateVersionNumbers launchTemplateVersionNumbers) {
             this.launchTemplateVersionNumbers = launchTemplateVersionNumbers;

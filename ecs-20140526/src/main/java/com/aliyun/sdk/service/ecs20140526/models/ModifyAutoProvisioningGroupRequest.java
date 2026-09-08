@@ -256,7 +256,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         } 
 
         /**
-         * <p>The auto-provisioning group ID.</p>
+         * <p>The ID of the auto provisioning group.</p>
          * 
          * <strong>example:</strong>
          * <p>apg-bp67acfmxazb4ph****</p>
@@ -268,7 +268,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></p>
+         * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>apg-test</p>
@@ -280,10 +280,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</p>
+         * <p>The billing method of the capacity difference when the sum of PayAsYouGoTargetCapacity and SpotTargetCapacity is less than TotalTargetCapacity. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo: pay-as-you-go instances</li>
-         * <li>Spot: spot instances</li>
+         * <li>PayAsYouGo: pay-as-you-go instance.</li>
+         * <li>Spot: spot instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,10 +296,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
+         * <p>Specifies whether to release instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
          * <ul>
-         * <li>termination: releases the removed instances.</li>
-         * <li>no-termination: removes the instances from the auto-provisioning group but does not release them.</li>
+         * <li>termination: Releases the scaled-in instances.</li>
+         * <li>no-termination: Only removes the scaled-in instances from the auto provisioning group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The extended configurations of the launch template.</p>
+         * <p>The extended launch template list.</p>
          */
         public Builder launchTemplateConfig(java.util.List<LaunchTemplateConfig> launchTemplateConfig) {
             this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
@@ -321,9 +321,9 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum price of spot instances in the auto-provisioning group.</p>
+         * <p>The maximum price of spot instances in the auto provisioning group.</p>
          * <blockquote>
-         * <p>When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.</p>
+         * <p>If both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are specified, the lower value is used. LaunchTemplateConfig.N.MaxPrice is specified in Settings when the auto provisioning group is created and cannot be modified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The target capacity of pay-as-you-go instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+         * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: less than the parameter value of TotalTargetCapacity.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -366,7 +366,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the auto-provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the auto provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,7 +397,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The target capacity of spot instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+         * <p>The target capacity of spot instances in the auto provisioning group. Valid values: less than the parameter value of TotalTargetCapacity.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -409,10 +409,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:</p>
+         * <p>Specifies whether to release instances in the auto provisioning group when the group expires. Valid values:</p>
          * <ul>
-         * <li>true: releases instances that are located in the auto-provisioning group.</li>
-         * <li>false: removes instances from the auto-provisioning group but does not release them.</li>
+         * <li>true: Releases the instances in the group.</li>
+         * <li>false: Only removes the instances from the auto provisioning group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,8 +425,8 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * <p>The total target capacity of the auto-provisioning group. The value must be a positive integer.</p>
-         * <p>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of spot instances specified by the SpotTargetCapacity parameter.</p>
+         * <p>The total target capacity of the auto provisioning group. Valid values: positive integers.</p>
+         * <p>The total capacity must be greater than or equal to the sum of PayAsYouGoTargetCapacity (the target capacity of pay-as-you-go instances) and SpotTargetCapacity (the target capacity of spot instances).</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -536,7 +536,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             } 
 
             /**
-             * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+             * <p>The instance type specified in the extension launch template. Valid values of N: 1 to 20. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g5.large</p>
@@ -547,7 +547,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The maximum price of spot instances in extended configuration N.</p>
+             * <p>The maximum price of the spot instance in the extended launch template.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -558,7 +558,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.</p>
+             * <p>The priority of the extended launch template. A value of 0 indicates the highest priority. Valid values: greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -569,7 +569,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch in extended configuration N. The zone of the instances created from the extended configuration is determined by the vSwitch.</p>
+             * <p>The ID of the vSwitch to which the ECS instance belongs in the extended launch template. The zone of the ECS instance launched from the extended template is determined by the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-sn5bsitu4lfzgc5o7****</p>
@@ -580,11 +580,11 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</p>
-             * <p>The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</p>
+             * <p>The weight of the instance type specified in the extended launch template. A higher value indicates that a single instance can meet more computing requirements, which means fewer instances are required. Valid values: greater than 0.</p>
+             * <p>You can calculate the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB:</p>
              * <ul>
-             * <li>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</li>
-             * <li>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</li>
+             * <li>The weight of an instance type with 8 vCPUs and 60 GiB can be set to 1.</li>
+             * <li>The weight of an instance type with 16 vCPUs and 120 GiB can be set to 2.</li>
              * </ul>
              * 
              * <strong>example:</strong>

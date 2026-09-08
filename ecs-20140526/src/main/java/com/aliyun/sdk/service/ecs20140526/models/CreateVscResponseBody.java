@@ -67,7 +67,10 @@ public class CreateVscResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD38F-12VBW2-**EKX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateVscResponseBody extends TeaModel {
         }
 
         /**
-         * VscId.
+         * <p>The ID of the Virtual Storage Channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-b*d31dq</p>
          */
         public Builder vscId(String vscId) {
             this.vscId = vscId;

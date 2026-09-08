@@ -47,6 +47,10 @@ public class DescribeDedicatedHostsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedHostDetail")
+    private String needHostDetail;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -113,6 +117,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         this.dedicatedHostType = builder.dedicatedHostType;
         this.lockReason = builder.lockReason;
         this.maxResults = builder.maxResults;
+        this.needHostDetail = builder.needHostDetail;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -189,6 +194,13 @@ public class DescribeDedicatedHostsRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return needHostDetail
+     */
+    public String getNeedHostDetail() {
+        return this.needHostDetail;
     }
 
     /**
@@ -297,6 +309,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         private String dedicatedHostType; 
         private String lockReason; 
         private Integer maxResults; 
+        private String needHostDetail; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -325,6 +338,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             this.dedicatedHostType = request.dedicatedHostType;
             this.lockReason = request.lockReason;
             this.maxResults = request.maxResults;
+            this.needHostDetail = request.needHostDetail;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -363,7 +377,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The list of DDH IDs. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
+         * <p>The list of dedicated host IDs. You can specify up to 100 IDs, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;dh-bp165p6xk2tlw61e****&quot;, &quot;dh-bp1f9vxmno7emy96****&quot;]</p>
@@ -387,7 +401,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The type of the DDH. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of DDH types.</p>
+         * <p>The type of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> to query the most recent list of dedicated host types.</p>
          * 
          * <strong>example:</strong>
          * <p>ddh.g5</p>
@@ -402,7 +416,7 @@ public class DescribeDedicatedHostsRequest extends Request {
          * <p>The reason why the dedicated host is locked. Valid values:</p>
          * <ul>
          * <li>financial: The dedicated host is locked due to overdue payments.</li>
-         * <li>security: The dedicated host is locked due to security reasons.</li>
+         * <li>security: The dedicated host is locked for security reasons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,8 +429,8 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. If you specify this parameter, both MaxResults and NextToken are used for a paged query.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries per page for a paged query. If you set this parameter, it indicates that the paging method using the MaxResults and NextToken parameters is used.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +443,19 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The detailed information of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder needHostDetail(String needHostDetail) {
+            this.putQueryParameter("NeedHostDetail", needHostDetail);
+            this.needHostDetail = needHostDetail;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>e71d8a535bd9cc11</p>
@@ -460,7 +486,7 @@ public class DescribeDedicatedHostsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. You can use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paged query operations for paging.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -474,7 +500,7 @@ public class DescribeDedicatedHostsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. You can use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paged query operations for paging.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -496,7 +522,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -509,9 +535,9 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <p>The ID of the resource group to which the dedicated host belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -542,19 +568,18 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display socket information. You can view the remaining resources (vCPUs, memory usage, remaining resources, and total resources) based on the capacity information of the socket dimension. Then you can determine whether ECS instances of the corresponding specifications can be created. Valid values:</p>
+         * <p>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPUs, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</p>
          * <ul>
-         * <li>true Only some DDHs support the information about resources in the socket dimension. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export information about DDHs</a>.</li>
-         * <li>false</li>
+         * <li>true: Display socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</li>
+         * <li>false: Do not display socket-level capacity information.</li>
          * </ul>
          * <blockquote>
-         * <p> Each DDH generally has two CPUs, and each CPU corresponds to Socket 0 and Socket 1. To maximize the performance of an ECS instance on a DDH, ECS instances are not created across sockets.</p>
+         * <p>Notice: </p>
          * </blockquote>
+         * <p>Each dedicated host typically has two CPUs, numbered Socket 0 and Socket 1. On a dedicated host, ECS instances are not created across sockets to ensure maximum performance. An ECS instance is created based on a single socket only.</p>
          * <ul>
-         * <li><p>If one socket has available computing resources for creating the ECS instance, creation succeeds.</p>
-         * </li>
-         * <li><p>If not, creation fails even if the combined available resources of both sockets are sufficient. Although the remaining resources of the two sockets on the DDH are larger than the ECS instance type, the ECS instance cannot be created.</p>
-         * </li>
+         * <li>If the remaining computing resources of one socket are greater than or equal to the ECS instance type to be created, the ECS instance is created.</li>
+         * <li>If the remaining computing resources of each socket are less than the ECS instance type to be created, the ECS instance fails to be created, even if the combined remaining resources of both sockets exceed the ECS instance type requirements.</notice></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -567,13 +592,18 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The service state of the dedicated host. Valid values:</p>
+         * <p>The usage status of the dedicated host. Valid values:</p>
          * <ul>
-         * <li>Available: The dedicated host is running normally.</li>
-         * <li>UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</li>
-         * <li>PermanentFailure: The dedicated host encounters permanent failures and is unavailable.</li>
-         * <li>TempUnavailable: The dedicated host is temporarily unavailable.</li>
-         * <li>Redeploying: The dedicated host is being restored.</li>
+         * <li><p>Available: The dedicated host is running as expected.</p>
+         * </li>
+         * <li><p>UnderAssessment: The physical machine has potential risks. The physical machine is available but may cause issues for ECS instances on the dedicated host.</p>
+         * </li>
+         * <li><p>PermanentFailure: The dedicated host has a permanent failure and is unavailable.</p>
+         * </li>
+         * <li><p>TempUnavailable: The dedicated host is temporarily unavailable.</p>
+         * </li>
+         * <li><p>Redeploying: The dedicated host is being restored.</p>
+         * </li>
          * </ul>
          * <p>Default value: Available.</p>
          * 
@@ -587,7 +617,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. The list length ranges from 0 to 20.</p>
+         * <p>The tags. Valid values of N: 0 to 20.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -596,7 +626,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the most recent zone list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
@@ -667,7 +697,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the DDH. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the dedicated host. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -678,7 +708,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the DDH. You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the dedicated host. If you specify this parameter, the value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

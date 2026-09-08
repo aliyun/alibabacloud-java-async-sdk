@@ -106,7 +106,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the image components.</p>
+         * ImageComponent.
          */
         public Builder imageComponent(ImageComponent imageComponent) {
             this.imageComponent = imageComponent;
@@ -114,7 +114,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the &quot;Usage notes&quot; section of this topic.</p>
+         * <p>The pagination token returned in this call. For more information about how to use this token, refer to the operation description.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -229,10 +229,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * DefaultValue.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -240,10 +237,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,16 +245,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the parameter.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>String</li>
-             * <li>Number</li>
-             * <li>Boolean</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -381,10 +366,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -392,10 +374,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -646,10 +625,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Build</p>
+             * ComponentType.
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -657,10 +633,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * ComponentVersion.
              */
             public Builder componentVersion(String componentVersion) {
                 this.componentVersion = componentVersion;
@@ -668,10 +641,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>RESTART</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -679,10 +649,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image component was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-24T06:00:00Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -690,10 +657,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -701,10 +665,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ic-bp67acfmxazb4p****</p>
+             * ImageComponentId.
              */
             public Builder imageComponentId(String imageComponentId) {
                 this.imageComponentId = imageComponentId;
@@ -712,10 +673,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testComponent</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -723,14 +681,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image component. Valid values:</p>
-             * <ul>
-             * <li>SELF: the custom component that you created.</li>
-             * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SELF</p>
+             * Owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -738,7 +689,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters contained in the image component.</p>
+             * Parameters.
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -746,10 +697,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the image component belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -757,10 +705,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system supported by the image component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Linux</p>
+             * SystemType.
              */
             public Builder systemType(String systemType) {
                 this.systemType = systemType;
@@ -768,7 +713,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image component.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

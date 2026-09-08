@@ -168,11 +168,11 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries per page for paging. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If this parameter is left empty, the default value is 10.</li>
-         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * <li>If this parameter is not set, the default value is 10.</li>
+         * <li>If the value you set is greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -197,7 +197,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of diagnostic reports.</p>
+         * <p>The list of diagnostic report IDs.</p>
          */
         public Builder reportIds(java.util.List<String> reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
@@ -219,7 +219,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resources. You can specify up to 100 resource IDs.</p>
+         * <p>The list of resource IDs. A maximum of 100 IDs are supported.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -228,13 +228,13 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The severity level of the diagnostic report. Valid values:</p>
+         * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</li>
-         * <li>Normal: No exceptions were detected.</li>
-         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-         * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
-         * <li>Critical: Critical exceptions were detected.</li>
+         * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited abnormally. No diagnostic conclusion is available.</li>
+         * <li>Normal: The diagnosis is normal and no issues are found.</li>
+         * <li>Info: Related information is available and may be associated with an exception.</li>
+         * <li>Warn: Related information is available and may cause an exception.</li>
+         * <li>Critical: A critical exception exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,11 +247,11 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The status of the diagnostic report. Valid values:</p>
+         * <p>The report status. Valid values:</p>
          * <ul>
-         * <li>InProgress</li>
-         * <li>Failed</li>
-         * <li>Finished</li>
+         * <li>InProgress: The diagnosis is in progress.</li>
+         * <li>Failed: The diagnosis failed.</li>
+         * <li>Finished: The diagnosis is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>

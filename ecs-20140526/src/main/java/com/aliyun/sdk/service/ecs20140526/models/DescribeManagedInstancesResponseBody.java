@@ -119,7 +119,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried managed instances.</p>
+         * <p>The list of managed instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -127,7 +127,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -138,7 +138,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the managed instance list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of queried managed instances.</p>
+         * <p>The total number of managed instances queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -240,9 +240,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources that have the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -253,7 +253,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
              * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -506,7 +506,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the activation code.</p>
+             * <p>The activation code ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3704F543-F768-43FA-9864-897F75B3****</p>
@@ -528,10 +528,12 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the managed instance is connected. Valid values:</p>
+             * <p>Indicates whether the managed instance is connected.</p>
              * <ul>
-             * <li>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</li>
-             * <li>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</li>
+             * <li><p>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</p>
+             * </li>
+             * <li><p>false: The managed instance is not connected. The server may be shut down or Cloud Assistant Agent may not be properly installed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -554,7 +556,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the managed instance.</p>
+             * <p>The managed instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mi-hz018jrc1o0****</p>
@@ -598,7 +600,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+             * <p>The number of times that Cloud Assistant tasks were run on the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -609,7 +611,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last Cloud Assistant task was executed.</p>
+             * <p>The time when the last Cloud Assistant task was run.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T09:00:40Z</p>
@@ -620,7 +622,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine code of the managed instance.</p>
+             * <p>The machine ID of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>e03231b37ab14e53b5795ad625fc****</p>
@@ -631,7 +633,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the managed instance.</p>
+             * <p>The operating system of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Linux</p>
@@ -642,7 +644,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version information of the operating system.</p>
+             * <p>The version of the operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>
@@ -653,7 +655,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the managed instance was registered.</p>
+             * <p>The registration time of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T08:57:56Z</p>
@@ -675,7 +677,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the managed instance.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

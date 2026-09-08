@@ -191,10 +191,12 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * <ul>
-         * <li>Valid values: 1 to 100.</li>
-         * <li>Default value: 10.</li>
+         * <li><p>Maximum value: 100.</p>
+         * </li>
+         * <li><p>Default value: 10.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +209,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.</p>
+         * <p>The pagination token for the capacity reservation query. Obtain the value from the result of the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -237,7 +239,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -167,10 +167,10 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li>false: performs a dry run and sends the request. If the request passes the dry run, the ECS instance is restarted.</li>
+         * <li>true: Performs only a dry run without restarting the instance. The system checks the required parameters, request syntax, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: Performs a dry run and sends the request. If the check succeeds, the instance is restarted.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -184,10 +184,12 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully stop the ECS instance before the instance is restarted. Valid values:</p>
+         * <p>Specifies whether to forcefully stop ECS instance before restarting it. Valid values:</p>
          * <ul>
-         * <li>true: forcefully stops the ECS instance. If you set this parameter to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
-         * <li>false: normally stops the ECS instance.</li>
+         * <li><p>true: Forcefully stops ECS instance. This is equivalent to a power-off operation. Cached data that has not been written to storage devices is lost.</p>
+         * </li>
+         * <li><p>false: Normally stops ECS instance.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -201,7 +203,7 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

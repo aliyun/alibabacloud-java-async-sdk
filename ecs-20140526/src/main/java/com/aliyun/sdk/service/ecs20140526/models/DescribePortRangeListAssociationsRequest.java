@@ -182,8 +182,8 @@ public class DescribePortRangeListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The number of entries per page for paging queries.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class DescribePortRangeListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> that was returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh15YZPnzqF7Vs2EB6Ix327v</p>
@@ -226,7 +226,7 @@ public class DescribePortRangeListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the port list.</p>
+         * <p>The port range list ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class DescribePortRangeListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the port range list. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

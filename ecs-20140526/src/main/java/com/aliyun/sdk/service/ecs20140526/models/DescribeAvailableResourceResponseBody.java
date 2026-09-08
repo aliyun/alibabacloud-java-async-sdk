@@ -67,7 +67,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the availability of resources in the zones.</p>
+         * AvailableZones.
          */
         public Builder availableZones(AvailableZones availableZones) {
             this.availableZones = availableZones;
@@ -75,7 +75,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0041D94C-FB92-4C49-B115-259DA1C*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -546,16 +549,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource status based on the stock level in the zone. Valid value:</p>
-             * <ul>
-             * <li>WithStock: The resources are available and can be continuously replenished.</li>
-             * <li>ClosedWithStock: Inventory is available, but resources will not be replenished. The ability to guarantee the supply of inventory is low. We recommend selecting a product specification in the WithStock state.</li>
-             * <li>WithoutStock: The resource is out of stock and will be replenished. We recommend using other resources that are in stock.</li>
-             * <li>ClosedWithoutStock: The resource is out of stock and will no longer be replenished. We recommend using other resources that are in stock.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>WithStock</p>
+             * StatusCategory.
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;

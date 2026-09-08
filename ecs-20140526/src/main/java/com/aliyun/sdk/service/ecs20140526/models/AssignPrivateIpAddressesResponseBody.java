@@ -67,7 +67,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
+         * <p>The information about the elastic network interfaces (ENIs) to which secondary private IP addresses are assigned.</p>
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -265,7 +265,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details about the assigned IPv4 prefixes.</p>
+             * Ipv4PrefixSet.
              */
             public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;
@@ -273,7 +273,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ENI ID.</p>
+             * <p>The elastic network interfaces (ENIs) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-bp125p95hhdhn3ot****</p>
@@ -284,7 +284,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secondary private IP addresses that are assigned to the ENI.</p>
+             * PrivateIpSet.
              */
             public Builder privateIpSet(PrivateIpSet privateIpSet) {
                 this.privateIpSet = privateIpSet;

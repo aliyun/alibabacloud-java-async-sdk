@@ -132,7 +132,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</p>
+         * <p>The pagination token returned in this invoke. If this value is empty when you use MaxResults and NextToken for paged query with paging, no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>e71d8a535bd9cc11</p>
@@ -143,9 +143,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * <blockquote>
-         * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         /**
          * <p>The number of entries per page.</p>
          * <blockquote>
-         * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the security groups.</p>
+         * SecurityGroups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -201,7 +201,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of security groups returned. If <code>MaxResults</code> and <code>NextToken</code> are specified in the request, the value of this parameter is not returned.</p>
+         * <p>The total number of security groups. This parameter is not returned when you use <code>MaxResults</code> and <code>NextToken</code> parameter query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -270,10 +270,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -281,10 +278,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -561,14 +555,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of private IP addresses that can be added to the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
-             * <p>If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.</p>
-             * <blockquote>
-             * <p> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * AvailableInstanceAmount.
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -576,10 +563,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the security group was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-08-31T03:12:29Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -587,10 +571,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -598,14 +579,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of private IP addresses that are contained in the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
-             * <p>If you set IsQueryEcsCount to True, the return value of EcsCount is valid.</p>
-             * <blockquote>
-             * <p> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * EcsCount.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -613,10 +587,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that reference security groups in the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * GroupToGroupRuleCount.
              */
             public Builder groupToGroupRuleCount(Integer groupToGroupRuleCount) {
                 this.groupToGroupRuleCount = groupToGroupRuleCount;
@@ -624,10 +595,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the security group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -635,10 +603,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules in the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * RuleCount.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -646,10 +611,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp67acfmxazb4p****</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -657,10 +619,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SGTestName</p>
+             * SecurityGroupName.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -668,14 +627,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the security group. Valid values:</p>
-             * <ul>
-             * <li>normal: basic security group</li>
-             * <li>enterprise: advanced security group</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * SecurityGroupType.
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;
@@ -683,10 +635,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the distributor to which the security group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345678910</p>
+             * ServiceID.
              */
             public Builder serviceID(Long serviceID) {
                 this.serviceID = serviceID;
@@ -694,10 +643,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * ServiceManaged.
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -705,7 +651,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the security group.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -713,10 +659,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the security group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp67acfmxazb4p****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

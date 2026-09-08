@@ -67,7 +67,7 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the simulated events.</p>
+         * EventIdSet.
          */
         public Builder eventIdSet(EventIdSet eventIdSet) {
             this.eventIdSet = eventIdSet;

@@ -67,7 +67,10 @@ public class CloneDisksResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CloneDisksResponseBody extends TeaModel {
         }
 
         /**
-         * TaskGroupId.
+         * <p>The task group ID of the disk cloning task. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describetasks">DescribeTasks</a> to query the task execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-2ze2op2grqpclwu7****</p>
          */
         public Builder taskGroupId(String taskGroupId) {
             this.taskGroupId = taskGroupId;

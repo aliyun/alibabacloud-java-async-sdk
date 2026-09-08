@@ -210,10 +210,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.</p>
-         * <p>For information about how to synchronize the expiration dates of instances, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of instances</a>.</p>
+         * <p>The unified expiration date. If you specify this parameter, the price for renewing the instance to the unified expiration date is queried. Valid values: 1 to 28.</p>
+         * <p>For more information about the unified expiration date feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Unified instance expiration date</a>.</p>
          * <blockquote>
-         * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and the <code>ExpectedRenewDay</code> parameter are mutually exclusive.</p>
+         * <p>The renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration date parameter (<code>ExpectedRenewDay</code>) cannot be set at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,14 +244,14 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The renewal period. Valid values:</p>
+         * <p>The renewal duration. Valid values:</p>
          * <ul>
-         * <li>Valid values when the <code>PriceUnit</code> parameter is set to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-         * <li>Valid values when the <code>PriceUnit</code> parameter is set to <code>Year</code>: 1, 2, 3.</li>
+         * <li>When <code>PriceUnit</code> is set to <code>Month</code>: 1 to 9.</li>
+         * <li>When <code>PriceUnit</code> is set to <code>Year</code>: 1 to 3.</li>
          * </ul>
          * <p>Default value: 1.</p>
          * <blockquote>
-         * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and the <code>ExpectedRenewDay</code> parameter are mutually exclusive.</p>
+         * <p>The renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration date parameter (<code>ExpectedRenewDay</code>) cannot be set at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -264,10 +264,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal period. Valid values:</p>
+         * <p>The unit of the renewal duration. Valid values:</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
+         * <li>Month: The renewal duration is measured in months.</li>
+         * <li>Year: The renewal duration is measured in years.</li>
          * </ul>
          * <p>Default value: Month.</p>
          * 
@@ -281,7 +281,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource. If the <code>ResourceType</code> parameter is set to<code> instance</code>, the value of the <code>ResourceId</code> parameter is the ID of the specified instance.``</p>
+         * <p>The ID of the resource for which to query the renewal price. When <code>ResourceType</code> is set to <code>instance</code>, <code>ResourceId</code> is equivalent to <code>InstanceId</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to instance.</p>
+         * <p>The type of the resource for which to query the renewal price. Valid values: instance.</p>
          * <p>Default value: instance.</p>
          * 
          * <strong>example:</strong>

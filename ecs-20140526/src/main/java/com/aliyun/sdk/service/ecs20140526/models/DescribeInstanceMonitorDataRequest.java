@@ -183,7 +183,7 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is rounded up to the next minute.</p>
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically rounded up to the next minute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID of the instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,11 +227,20 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</p>
+         * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values: </p>
          * <ul>
-         * <li>60</li>
-         * <li>600</li>
-         * <li>3600</li>
+         * <li><ol start="60">
+         * <li></li>
+         * </ol>
+         * </li>
+         * <li><ol start="600">
+         * <li></li>
+         * </ol>
+         * </li>
+         * <li><ol start="3600">
+         * <li></li>
+         * </ol>
+         * </li>
          * </ul>
          * <p>Default value: 60.</p>
          * 
@@ -263,7 +272,7 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is rounded up to the next minute.</p>
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically rounded up to the next minute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

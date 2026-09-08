@@ -153,7 +153,7 @@ public class ReActivateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance that you want to reactivate.</p>
+         * <p>The instance ID of the instance that you want to restart.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class ReActivateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

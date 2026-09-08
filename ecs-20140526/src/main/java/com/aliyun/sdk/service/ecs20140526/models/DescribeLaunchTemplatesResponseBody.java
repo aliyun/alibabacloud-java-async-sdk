@@ -106,7 +106,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried launch templates.</p>
+         * LaunchTemplateSets.
          */
         public Builder launchTemplateSets(LaunchTemplateSets launchTemplateSets) {
             this.launchTemplateSets = launchTemplateSets;
@@ -114,7 +114,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page set for the paged query. This is the paging settings value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -216,10 +216,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag value of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +224,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -442,11 +436,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the launch template was created.</p>
-             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-14T14:18:00Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -454,10 +444,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234567890</p>
+             * CreatedBy.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -465,10 +452,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version number of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DefaultVersionNumber.
              */
             public Builder defaultVersionNumber(Long defaultVersionNumber) {
                 this.defaultVersionNumber = defaultVersionNumber;
@@ -476,10 +460,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest version number of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * LatestVersionNumber.
              */
             public Builder latestVersionNumber(Long latestVersionNumber) {
                 this.latestVersionNumber = latestVersionNumber;
@@ -487,10 +468,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lt-m5e3ofjr1zn1aw7q****</p>
+             * LaunchTemplateId.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -498,10 +476,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>wd-152630748****</p>
+             * LaunchTemplateName.
              */
             public Builder launchTemplateName(String launchTemplateName) {
                 this.launchTemplateName = launchTemplateName;
@@ -509,11 +484,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when a version was added to or deleted from the launch template.</p>
-             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-14T14:18:00Z</p>
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -521,10 +492,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the launch template belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -532,10 +500,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the launch template.</p>
-             * <blockquote>
-             * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
-             * </blockquote>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

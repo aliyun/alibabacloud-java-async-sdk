@@ -289,7 +289,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The information about data disks.</p>
+         * <p>The information about data disk types.</p>
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -298,7 +298,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the temporary bandwidth upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-06T22Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -307,7 +310,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * ISP.
+         * <p>The Internet Service Provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -316,7 +322,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -325,7 +334,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
+         * <p>The instance ID of the instance for which you want to query the upgrade price.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,10 +347,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The new instance type. We recommend that you call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types available for configuration upgrades in a specified zone.</p>
-         * <blockquote>
-         * <p>When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: <code>InstanceType</code> and <code>DataDisk.N.*</code>.</p>
-         * </blockquote>
+         * <p>The target instance type for the upgrade. We recommend that you call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6e.large</p>
@@ -353,7 +359,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * <p>The network billing method to convert to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -362,7 +371,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * <p>The maximum outbound public bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -389,7 +401,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -420,7 +432,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the temporary bandwidth upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-05T22:40Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -501,7 +516,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>The category of the system disk.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -509,7 +524,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -517,7 +535,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -610,16 +631,16 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             } 
 
             /**
-             * <p>The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:</p>
+             * <p>The type of the data disk. Specify this parameter to query the price of a new subscription data disk attached to an ECS instance. Valid values of N: 1 to 16. Valid values:</p>
              * <ul>
-             * <li>cloud_efficiency: utra disk.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
-             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_essd: enterprise SSD.</li>
              * <li>cloud: basic disk.</li>
              * </ul>
-             * <p>This parameter is empty by default.</p>
+             * <p>Default value: null.</p>
              * <blockquote>
-             * <p> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: <code>InstanceType</code> and <code>DataDisk.N.*</code>.</p>
+             * <p>When you call this operation, the instance type parameter (<code>InstanceType</code>) and the data disk parameters (<code>DataDisk.N.*</code>) cannot both be empty. Specify at least one of them.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -631,7 +652,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * DiskId.
+             * <p>The ID of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bf4rupt9****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -639,15 +663,15 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+             * <p>The performance level of the data disk when the disk type is enterprise SSD. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * <p>Default value: PL1.</p>
-             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -658,24 +682,20 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The capacity of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+             * <p>The capacity of the data disk. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
-             * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
-             * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
-             * <ul>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+             * <li>cloud_efficiency: 20 to 32768.</li>
+             * <li>cloud_ssd: 20 to 32768.</li>
+             * <li>cloud_essd: The valid value range depends on the value of <code>DataDisk.N.PerformanceLevel</code>.    <ul>
+             * <li>PL0: 1 to 32768.</li>
+             * <li>PL1: 20 to 32768.</li>
+             * <li>PL2: 461 to 32768.</li>
+             * <li>PL3: 1261 to 32768.</li>
              * </ul>
              * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
-             * </li>
+             * <li>cloud: 5 to 2000.</li>
              * </ul>
-             * <p>The default value is the minimum capacity allowed for the specified data disk category.</p>
+             * <p>Default value: the minimum capacity for the specified data disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

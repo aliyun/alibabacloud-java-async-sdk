@@ -67,7 +67,7 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique ID of the diagnostic report.</p>
+         * <p>The diagnostic report ID, which is the unique identifier of the resource diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>dr-uf6i0tv2refv8wz*****</p>

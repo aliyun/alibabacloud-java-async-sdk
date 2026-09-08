@@ -224,7 +224,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The IDs of Alibaba Cloud accounts to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * <p>The Alibaba Cloud account ID to which you want to grant authorization for the shared image. Valid values of N: 1 to 10. If you submit more than 10 Alibaba Cloud accounts in a single request, the system processes only the first 10 and ignores the rest.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -245,9 +245,9 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the shared custom image.</p>
+         * <p>The ID of the custom image to be shared.</p>
          * <blockquote>
-         * <p> You can share images encrypted by using CMKs but cannot share images encrypted by using service keys. When you share an image encrypted by using a service key, an error is reported.</p>
+         * <p>Notice: Images encrypted with a service key can no longer be shared. Only images encrypted with a customer master key (CMK) can be shared. An error is returned if you attempt to share an image that is encrypted with a service key.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -261,10 +261,10 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to publish or unpublish a community image. Valid values:</p>
+         * <p>Specifies whether to publish or delist the image as a community image. Valid values:</p>
          * <ul>
-         * <li>true: publishes the custom image as a community image.</li>
-         * <li>false: unpublishes a community image. The unpublish operation takes effect only on community images.</li>
+         * <li>true: Publishes the image as a community image.</li>
+         * <li>false: Delists the image to a regular image. If the image is already a regular image, no change is made.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -279,7 +279,7 @@ public class ModifyImageSharePermissionRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The IDs of Alibaba Cloud accounts from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * <p>The Alibaba Cloud account ID from which you want to delete image sharing. Valid values of N: 1 to 10. If you submit more than 10 Alibaba Cloud accounts in a single request, the system processes only the first 10 and ignores the rest.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>

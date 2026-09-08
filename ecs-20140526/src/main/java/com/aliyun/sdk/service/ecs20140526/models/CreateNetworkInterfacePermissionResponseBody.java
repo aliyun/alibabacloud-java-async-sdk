@@ -67,7 +67,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about permissions on the ENI.</p>
+         * <p>The information about the network interface controller (NIC) permissions.</p>
          */
         public Builder networkInterfacePermission(NetworkInterfacePermission networkInterfacePermission) {
             this.networkInterfacePermission = networkInterfacePermission;
@@ -75,7 +75,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0FCD3DEF-63D3-4605-A818-805C8BD7DB87</p>
@@ -196,7 +196,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud partner (a certified ISV).</p>
+             * <p>The ID of the Alibaba Cloud partner (certified ISV) account.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890</p>
@@ -207,7 +207,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENI.</p>
+             * <p>The ID of the network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>eni-bp14v2sdd3v8htln****</p>
@@ -218,7 +218,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the permission on the ENI.</p>
+             * <p>The ID of the network interface controller (NIC) permission.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -229,7 +229,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission on the ENI.</p>
+             * <p>The network interface controller (NIC) permission.</p>
              * 
              * <strong>example:</strong>
              * <p>InstanceAttach</p>
@@ -240,12 +240,12 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the permission on the ENI. Valid values:</p>
+             * <p>The status of the network interface controller (NIC) permission. Valid values:</p>
              * <ul>
-             * <li>Pending: The permission is being granted.</li>
-             * <li>Granted: The permission is granted.</li>
-             * <li>Revoking: The permission is being revoked.</li>
-             * <li>Revoked: The permission is revoked.</li>
+             * <li>Pending: Authorization in progress.</li>
+             * <li>Granted: Authorization granted.</li>
+             * <li>Revoking: Authorization being revoked.</li>
+             * <li>Revoked: Authorization revoked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud service.</p>
+             * <p>The Alibaba Cloud service name.</p>
              * 
              * <strong>example:</strong>
              * <p>Elastic Compute Service</p>

@@ -279,7 +279,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * Affinity.
+         * <p>The affinity level of the deployment set. Instances in the deployment set are distributed based on this affinity level. Valid values: 1 to 10. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder affinity(Long affinity) {
             this.putQueryParameter("Affinity", affinity);
@@ -288,7 +291,8 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+         * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -300,7 +304,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the deployment set. The name must be 2 to 128 characters in length and must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDeploymentSetName</p>
@@ -312,12 +316,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:</p>
-         * <ul>
-         * <li>CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.</li>
-         * <li>KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</li>
-         * </ul>
-         * <p>Default value: CancelMembershipAndStart.</p>
+         * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -330,11 +329,11 @@ public class CreateDeploymentSetRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Default</p>
+         * <p>null</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -344,11 +343,11 @@ public class CreateDeploymentSetRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>host</p>
+         * <p>null</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -357,12 +356,11 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The deployment strategy. Valid values:</p>
-         * <ul>
-         * <li>Availability: high availability strategy.</li>
-         * <li>AvailabilityGroup: high availability group strategy.</li>
-         * </ul>
-         * <p>Default value: Availability.</p>
+         * <p>The number of groups for the high availability group strategy. Valid values: 1 to 7.</p>
+         * <p>Default value: 3.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <code>Strategy=AvailabilityGroup</code>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,7 +372,12 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The emergency solution to use when an instance in the deployment set cannot be evenly distributed to available inventory after a failover. Valid values: </p>
+         * <ul>
+         * <li>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after the failover.</li>
+         * <li>KeepStopped: Keeps the deployment set attributes of the instance and leaves the instance in the Stopped state.</li>
+         * </ul>
+         * <p>Default value: CancelMembershipAndStart.</p>
          * 
          * <strong>example:</strong>
          * <p>CancelMembershipAndStart</p>
@@ -404,7 +407,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>Creates a deployment set in a specific region.</p>
+         * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,9 +440,9 @@ public class CreateDeploymentSetRequest extends Request {
         /**
          * <p>The deployment strategy. Valid values:</p>
          * <ul>
-         * <li>Availability: high availability strategy</li>
-         * <li>AvailabilityGroup: high availability group strategy</li>
-         * <li>LowLatency: low latency strategy</li>
+         * <li>Availability: High availability strategy.</li>
+         * <li>AvailabilityGroup: High availability group strategy.</li>
+         * <li>LowLatency: Low network latency strategy.</li>
          * </ul>
          * <p>Default value: Availability.</p>
          * 
@@ -453,7 +456,16 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The deployment type. Valid values:</p>
+         * <ul>
+         * <li>host: physical server</li>
+         * <li>sw: vSwitch</li>
+         * <li>rack: rack</li>
+         * </ul>
+         * <p>Default value: host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

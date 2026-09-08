@@ -106,7 +106,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the disks or Shared Block Storage devices in the storage set.</p>
+         * Disks.
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -114,10 +114,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -125,10 +122,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -136,10 +130,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>49765E79-0D5D-4451-B3AE-580A20831846</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of storage sets.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -294,10 +282,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the disk or Shared Block Storage device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_ssd</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -305,10 +290,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the disk or Shared Block Storage device was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-06-01T00:00:00Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -316,10 +298,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the disk or Shared Block Storage device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp67acfmxazb4p****</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -327,10 +306,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the disk or Shared Block Storage device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDiskName</p>
+             * DiskName.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -338,10 +314,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the disk or Shared Block Storage device belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -349,10 +322,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the storage set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ss-bp67acfmxazb4p****</p>
+             * StorageSetId.
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -360,10 +330,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partitions in the storage set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * StorageSetPartitionNumber.
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -371,10 +338,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone to which the disk or Shared Block Storage device belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-g</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

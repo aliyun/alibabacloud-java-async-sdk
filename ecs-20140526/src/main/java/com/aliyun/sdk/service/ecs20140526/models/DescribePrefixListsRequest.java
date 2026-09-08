@@ -238,12 +238,12 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The IP address family. Valid values:</p>
+         * <p>The address family of the prefix list. Valid values:</p>
          * <ul>
          * <li>IPv4</li>
          * <li>IPv6</li>
          * </ul>
-         * <p>This parameter is empty by default, which indicates that all prefix lists are queried.</p>
+         * <p>Default value: empty, which indicates that information about all prefix lists is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -255,8 +255,8 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The number of entries per page for a paged query.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. Set the value to the <code>NextToken</code> value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.</p>
+         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -299,7 +299,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of prefix lists. Valid values of N: 0 to 100.</p>
+         * <p>The prefix list ID. Valid values of N: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -323,7 +323,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,7 +366,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * <p>The tags of the prefix list.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -434,7 +434,7 @@ public class DescribePrefixListsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the prefix list. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http:// or https://</code>.</p>
+             * <p>The tag key of the prefix list. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -445,8 +445,8 @@ public class DescribePrefixListsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the prefix list. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http:// or https://</code>.</p>
+             * <p>The tag value of the prefix list. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

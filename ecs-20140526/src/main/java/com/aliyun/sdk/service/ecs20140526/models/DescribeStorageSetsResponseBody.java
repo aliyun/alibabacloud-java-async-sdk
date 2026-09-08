@@ -106,10 +106,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -117,10 +114,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -128,10 +122,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,7 +130,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.</p>
+         * StorageSets.
          */
         public Builder storageSets(StorageSets storageSets) {
             this.storageSets = storageSets;
@@ -147,10 +138,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of storage sets.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -436,10 +424,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the storage set was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-06-01T00:00:00Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -447,10 +432,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the storage set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,10 +440,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region to which the storage set belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -477,10 +456,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the storage set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ss-bp1d6tsvznfghy7y****</p>
+             * StorageSetId.
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -488,10 +464,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the storage set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testStorageSetName</p>
+             * StorageSetName.
              */
             public Builder storageSetName(String storageSetName) {
                 this.storageSetName = storageSetName;
@@ -499,10 +472,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of partitions supported by the storage set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * StorageSetPartitionNumber.
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -518,10 +488,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone to which the storage set belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-g</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

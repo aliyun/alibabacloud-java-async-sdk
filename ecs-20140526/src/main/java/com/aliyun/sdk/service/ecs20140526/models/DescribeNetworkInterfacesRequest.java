@@ -393,7 +393,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to which the ENI is attached.</p>
+         * <p>The instance ID of the instance to which the network interface controller (NIC) is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1e2l6djkndyuli****</p>
@@ -405,7 +405,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+         * <p>The IPv6 address of the network interface controller (NIC). N indicates that you can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
@@ -417,11 +417,11 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
-         * <p>Default values:</p>
+         * <p>The maximum number of entries per page for paging. Valid values: 10 to 500.</p>
+         * <p>Default value:</p>
          * <ul>
-         * <li>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</li>
-         * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+         * <li>If you do not set this parameter or set it to a value less than 10, the default value is 10.</li>
+         * <li>If you set this parameter to a value greater than 500, the default value is 500.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.</p>
+         * <p>The network interface controller (NIC) ID. Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp125p95hhdhn3ot****</p>
@@ -446,7 +446,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The name of the ENI.</p>
+         * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain characters from the Unicode letter categorization (which includes English letters, Chinese characters, and digits). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>test-eni-name</p>
@@ -458,8 +458,8 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to this operation.</p>
-         * <p>For more information about how to check the responses returned by this operation, see the preceding &quot;Description&quot; section.</p>
+         * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the previous API call.</p>
+         * <p>For information about how to view the returned data, refer to the operation description above.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -489,11 +489,8 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is deprecated. Use the MaxResults and NextToken parameters for pagination.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -506,11 +503,8 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 1000.</p>
-         * <p>Default value: 10.</p>
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is deprecated. Use the MaxResults and NextToken parameters for pagination.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -523,7 +517,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The primary private IPv4 address of the ENI.</p>
+         * <p>The primary private IP address of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
@@ -535,7 +529,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</p>
+         * <p>The secondary private IP address of the network interface controller (NIC). Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
@@ -547,7 +541,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -560,9 +554,9 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+         * <p>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -593,10 +587,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which the secondary ENI belongs.</p>
+         * <p>The security group ID of the secondary ENI.</p>
          * <ul>
-         * <li>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</li>
-         * <li>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <code>SecurityGroupId</code> parameter.</li>
+         * <li>To query information about a secondary ENI by security group ID, specify this parameter.</li>
+         * <li>To query information about a primary ENI by security group ID, call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> and specify the <code>SecurityGroupId</code> parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -609,7 +603,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+         * <p>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a Virtual Network Operator (VNO).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -621,15 +615,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The state of the ENI. Valid values:</p>
+         * <p>The status of the network interface controller (NIC). Valid values:</p>
          * <ul>
-         * <li>Available: The ENI is available.</li>
-         * <li>Attaching: The ENI is being attached to an instance.</li>
-         * <li>InUse: The ENI is attached to an instance.</li>
-         * <li>Detaching: The ENI is being detached from an instance.</li>
-         * <li>Deleting: The ENI is being deleted.</li>
+         * <li>Available: available.</li>
+         * <li>Attaching: being attached.</li>
+         * <li>InUse: attached.</li>
+         * <li>Detaching: being detached.</li>
+         * <li>Deleting: being deleted.</li>
          * </ul>
-         * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
+         * <p>Default value: null, which indicates that all statuses are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -641,7 +635,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The tags to use for query.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -650,12 +644,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The type of the ENI. Valid values:</p>
+         * <p>The type of the Elastic Network Interface (ENI). Valid values:</p>
          * <ul>
-         * <li>Primary</li>
-         * <li>Secondary</li>
+         * <li>Primary: primary network interface controller (NIC).</li>
+         * <li>Secondary: secondary ENI.</li>
          * </ul>
-         * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
+         * <p>Default value: null, which indicates that all types are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Secondary</p>
@@ -667,7 +661,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch with which the ENI is associated.</p>
+         * <p>The vSwitch ID of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp16usj2p27htro3****</p>
@@ -679,10 +673,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</p>
+         * <p>The virtual private cloud (VPC) ID of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp16usj2p27htro3****</p>
+         * <p>vpc-bp1j7w3gc1cexjqd****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -750,7 +744,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the ENI. Valid values of N: 1 to 20.</p>
+             * <p>The tag key of the network interface controller (NIC). Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -761,8 +755,8 @@ public class DescribeNetworkInterfacesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the ENI. Valid values of N: 1 to 20.</p>
-             * <p>If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag value of the network interface controller (NIC). Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

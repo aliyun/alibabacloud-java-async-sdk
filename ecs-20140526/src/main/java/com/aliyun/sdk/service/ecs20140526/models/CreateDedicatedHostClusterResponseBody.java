@@ -67,7 +67,7 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the host group.</p>
+         * <p>The ID of the dedicated host cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>dc-bp12wlf6bw0vz9v2****</p>

@@ -277,10 +277,12 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the configurations of the launch template. Valid values:</p>
+         * <p>Specifies whether to query detailed template configuration information. Valid values:</p>
          * <ul>
-         * <li>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</li>
-         * <li>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</li>
+         * <li><p>true: Queries detailed template configuration information. In addition to basic template information, detailed configuration information is returned, such as the image ID and system disk size.</p>
+         * </li>
+         * <li><p>false: Queries only basic template information, such as the template ID, template name, and default version.</p>
+         * </li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -294,8 +296,8 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the launch template.</p>
-         * <p>You must set <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+         * <p>The launch template ID.</p>
+         * <p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-bp168lnahrdwl39p****</p>
@@ -307,8 +309,8 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the launch template.</p>
-         * <p>You must set <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+         * <p>The launch template name.</p>
+         * <p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
          * 
          * <strong>example:</strong>
          * <p>testLaunchTemplateName</p>
@@ -320,7 +322,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The versions of the launch template.</p>
+         * <p>One or more launch template version numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -332,7 +334,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum version number in the version range to query. This parameter is used together with <code>MinVersion</code> to specify a version range to query.</p>
+         * <p>The maximum version number used to filter query results. Use this parameter together with MinVersion to query version information within the range between the minimum and maximum version numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -344,7 +346,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The minimum version number in the version range to query. This parameter is used together with <code>MaxVersion</code> to specify a version range to query.</p>
+         * <p>The minimum version number used to filter query results. Use this parameter together with MaxVersion to query version information within the range between the minimum and maximum version numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,8 +376,8 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>The page number of the launch template list.</p>
+         * <p>Minimum value: 1. </p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -388,7 +390,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page when paging is used. </p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -402,7 +404,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
 
         /**
          * <p>The region ID of the launch template.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,10 +67,10 @@ public class ModifyDiskChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>123456****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

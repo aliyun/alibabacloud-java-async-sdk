@@ -67,7 +67,7 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23841229****</p>

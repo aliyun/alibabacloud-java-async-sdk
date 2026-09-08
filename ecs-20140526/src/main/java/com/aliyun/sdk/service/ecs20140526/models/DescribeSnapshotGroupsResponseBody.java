@@ -80,9 +80,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token used to start the next query.</p>
+         * <p>The pagination token for the next query.</p>
          * <blockquote>
-         * <p>If the return value is empty, no more data exists.</p>
+         * <p>If this parameter is empty, no more results are available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3F9A4CC4-362F-469A-B9EF-B3204EF8AA3A</p>
@@ -105,7 +105,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the snapshot-consistent groups.</p>
+         * SnapshotGroups.
          */
         public Builder snapshotGroups(SnapshotGroups snapshotGroups) {
             this.snapshotGroups = snapshotGroups;
@@ -171,10 +171,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the snapshot. The default values of Key and Value contain snapshot source information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ecs:createFrom</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,10 +179,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the snapshot. The default values of Key and Value contain snapshot source information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp11qm0o3dk4iuc****</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -384,14 +378,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the snapshot can be shared and be used to create or roll back a disk. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Available.
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -399,17 +386,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.</li>
-             * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * InstantAccess.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -417,13 +394,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the instant access feature. When the validity period ends, the instant access snapshot is automatically released.</p>
-             * <blockquote>
-             * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * InstantAccessRetentionDays.
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -431,10 +402,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100%</p>
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -442,10 +410,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-j6cbzmrlbf09w72q****</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -453,10 +418,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-j6c3ogynmvpi6wy7****</p>
+             * SourceDiskId.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -464,14 +426,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source disk. Valid values:</p>
-             * <ul>
-             * <li>system: system disk</li>
-             * <li>data: data disk</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * SourceDiskType.
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -479,7 +434,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the snapshot. The default values contain snapshot source information.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -600,10 +555,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the snapshot-consistent group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -611,10 +563,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the snapshot-consistent group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -839,10 +788,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-03-23T10:58:48Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -850,10 +796,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the snapshot-consistent group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -861,10 +804,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with <code>Snapshots.Snapshot.Tags.</code> to determine the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-j6ca469urv8ei629****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -872,10 +812,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the snapshot-consistent group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testName</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -883,12 +820,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * ProgressStatus.
              */
             public Builder progressStatus(String progressStatus) {
                 this.progressStatus = progressStatus;
@@ -896,10 +828,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -907,10 +836,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot-consistent group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ssg-j6ciyh3k52qp7ovm****</p>
+             * SnapshotGroupId.
              */
             public Builder snapshotGroupId(String snapshotGroupId) {
                 this.snapshotGroupId = snapshotGroupId;
@@ -918,7 +844,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the snapshots in the snapshot-consistent group.</p>
+             * Snapshots.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -926,15 +852,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the snapshot-consistent group. Valid values:</p>
-             * <ul>
-             * <li>progressing: The snapshot-consistent group was being created.</li>
-             * <li>accomplished: The snapshot-consistent group was created.</li>
-             * <li>failed: The snapshot-consistent group failed to be created.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>accomplished</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -942,7 +860,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the snapshot-consistent group.</p>
+             * Tags.
              */
             public Builder tags(SnapshotGroupTags tags) {
                 this.tags = tags;

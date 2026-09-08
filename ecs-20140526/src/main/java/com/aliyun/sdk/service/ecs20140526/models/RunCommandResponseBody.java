@@ -91,7 +91,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The command task ID.</p>
+         * <p>The invocation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-7d2a745b412b4601b2d47f6a768d****</p>

@@ -119,7 +119,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the deployment sets.</p>
+         * DeploymentSets.
          */
         public Builder deploymentSets(DeploymentSets deploymentSets) {
             this.deploymentSets = deploymentSets;
@@ -127,7 +127,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the deployment set list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the deployment set.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -174,7 +174,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
          * <p>The total number of queried deployment sets.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,10 +253,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of ECS instances that can be added to the deployment set within the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18</p>
+             * AvailableAmount.
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -264,10 +261,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ECS instances that reside in the zone in the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -275,10 +269,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-i</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -638,7 +629,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>
+             * Capacities.
              */
             public Builder capacities(Capacities capacities) {
                 this.capacities = capacities;
@@ -646,10 +637,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment set was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-12-07T06:01:46Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -657,10 +645,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDeploymentSetDescription</p>
+             * DeploymentSetDescription.
              */
             public Builder deploymentSetDescription(String deploymentSetDescription) {
                 this.deploymentSetDescription = deploymentSetDescription;
@@ -668,10 +653,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds-bp67acfmxazb4ph****</p>
+             * DeploymentSetId.
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -679,10 +661,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDeploymentSetName</p>
+             * DeploymentSetName.
              */
             public Builder deploymentSetName(String deploymentSetName) {
                 this.deploymentSetName = deploymentSetName;
@@ -690,10 +669,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment strategy. The return value of this parameter is the value of the <code>Strategy</code> request parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Availability</p>
+             * DeploymentStrategy.
              */
             public Builder deploymentStrategy(String deploymentStrategy) {
                 this.deploymentStrategy = deploymentStrategy;
@@ -701,10 +677,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment domain.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>default</p>
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -712,10 +685,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment granularity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>host</p>
+             * Granularity.
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -723,13 +693,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of deployment set groups in the deployment set.</p>
-             * <blockquote>
-             * <p> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * GroupCount.
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -737,10 +701,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances in the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * InstanceAmount.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -748,7 +709,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the Elastic Compute Service (ECS) instances in the deployment set.</p>
+             * InstanceIds.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -756,10 +717,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment strategy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LooseDispersion</p>
+             * Strategy.
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;

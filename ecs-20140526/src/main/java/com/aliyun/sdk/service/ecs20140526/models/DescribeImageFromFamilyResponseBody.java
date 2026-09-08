@@ -75,7 +75,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -209,13 +209,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The device name of the disk. Example: /dev/xvdb.</p>
-             * <blockquote>
-             * <p> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>/dev/xvdb</p>
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -223,10 +217,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qcow2</p>
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -234,10 +225,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS bucket that contains the imported image file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testEcsImport</p>
+             * ImportOSSBucket.
              */
             public Builder importOSSBucket(String importOSSBucket) {
                 this.importOSSBucket = importOSSBucket;
@@ -245,10 +233,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS object to which the imported image belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>imageImport</p>
+             * ImportOSSObject.
              */
             public Builder importOSSObject(String importOSSObject) {
                 this.importOSSObject = importOSSObject;
@@ -256,10 +241,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -267,10 +249,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshot ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bp17ot2q7x72ggtw****</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -278,10 +257,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>custom</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -402,10 +378,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the custom image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -413,10 +386,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the custom image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -810,7 +780,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The architecture of the image. Valid values:</p>
+             * <p>The system architecture type of the image. Valid values:</p>
              * <ul>
              * <li>i386</li>
              * <li>x86_64</li>
@@ -836,7 +806,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the volume.</p>
+             * <p>The description of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -847,7 +817,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings between the disk and the snapshot in the image.</p>
+             * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -855,7 +825,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image family.</p>
+             * <p>The image family.</p>
              * 
              * <strong>example:</strong>
              * <p>testImageFamily</p>
@@ -890,10 +860,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             /**
              * <p>The alias of the image owner. Valid values:</p>
              * <ul>
-             * <li>system: public images provided by Alibaba Cloud</li>
-             * <li>self: your custom images</li>
-             * <li>others: shared images from other Alibaba Cloud accounts</li>
-             * <li>marketplace: Alibaba Cloud Marketplace images</li>
+             * <li>system: public image.</li>
+             * <li>self: your custom image.</li>
+             * <li>others: shared image from other users.</li>
+             * <li>marketplace: Alibaba Cloud Marketplace image.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -927,7 +897,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</p>
+             * <p>Indicates whether the custom image has been shared with other users.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -938,7 +908,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether you have subscribed to the service terms of the image product corresponding to the image product code.</p>
+             * <p>Indicates whether you have subscribed to the Terms of Service for the image product that corresponds to the product code.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -960,7 +930,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image can be used on I/O optimized instances.</p>
+             * <p>Indicates whether the image can run on an I/O optimized instance.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -971,7 +941,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the operating system in Chinese.</p>
+             * <p>The China-locale display name of the operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba Cloud Linux 2.1903</p>
@@ -997,7 +967,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system.</p>
+             * <p>The operating system platform.</p>
              * 
              * <strong>example:</strong>
              * <p>Aliyun</p>
@@ -1019,7 +989,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image creation progress in percentage.</p>
+             * <p>The image creation progress, in percent.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1041,12 +1011,12 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the image. Valid values:</p>
+             * <p>The status of the image. Valid values:</p>
              * <ul>
-             * <li>UnAvailable</li>
-             * <li>Available</li>
-             * <li>Creating</li>
-             * <li>CreateFailed</li>
+             * <li>UnAvailable: unavailable</li>
+             * <li>Available: available</li>
+             * <li>Creating: being created</li>
+             * <li>CreateFailed: failed to be created</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1058,7 +1028,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1066,10 +1036,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image has been used to create ECS instances. Valid values:</p>
+             * <p>The type of resource that references the image. Valid values:</p>
              * <ul>
-             * <li>instance: The image was used to create one or more ECS instances.</li>
-             * <li>none: The image was not used to create ECS instances.</li>
+             * <li>instance: One or more ECS instances have been created from the image.</li>
+             * <li>none: No ECS instances have been created from the image.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -146,7 +146,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
          * <p>The description of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the request.</p>
+         * <p>远程连接问题诊断</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -155,7 +155,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
+         * <p>The list of diagnostic metrics. A maximum of 100 metrics are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricIds(java.util.List<String> metricIds) {
@@ -168,7 +168,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
          * <p>The name of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
+         * <p>远程连接问题诊断</p>
          */
         public Builder metricSetName(String metricSetName) {
             this.putQueryParameter("MetricSetName", metricSetName);
@@ -177,7 +177,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The type of the resource to diagnose.</p>
          * <p>Default value: instance.</p>
          * <p>This parameter is required.</p>
          * 

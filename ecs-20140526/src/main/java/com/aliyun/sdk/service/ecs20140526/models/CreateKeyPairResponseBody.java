@@ -106,7 +106,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
+         * <p>The fingerprint of the key pair. The fingerprint uses the MD5 message-digest algorithm based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC4716</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>89:f0:ba:62:ac:b8:aa:e1:61:5e:fd:81:69:86:6d:6b:f0:c0:5a:**</p>
@@ -117,7 +117,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the key pair.</p>
+         * <p>The ID of the SSH key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>ssh-bp67acfmxazb4p****</p>
@@ -139,7 +139,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private key of the key pair. The private key is encoded with PEM in the PKCS#8 format.</p>
+         * <p>The private key of the key pair. The private key is PEM-encoded in PKCS#8 format.</p>
          * 
          * <strong>example:</strong>
          * <p>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</p>

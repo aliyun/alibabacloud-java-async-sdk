@@ -149,7 +149,7 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the list of task IDs.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The task ID. You can call <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> to query the task ID list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the managed instances.</p>
+         * <p>The information about the managed instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -377,7 +377,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+             * <p>The number of times that Cloud Assistant tasks were run on the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -388,7 +388,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Cloud Assistant task was last executed.</p>
+             * <p>The time when the last Cloud Assistant task was run.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T09:00:40Z</p>
@@ -399,7 +399,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine code of the managed instance.</p>
+             * <p>The machine ID of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>e03231b37ab14e53b5795ad625fc****</p>
@@ -410,7 +410,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the managed instance.</p>
+             * <p>The operating system of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>linux</p>
@@ -421,7 +421,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version information about the operating system.</p>
+             * <p>The version of the operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>

@@ -154,10 +154,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>RAM用户的虚拟账号ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>155780923770</p>
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -166,10 +163,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>资源主账号的账号名称。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECSforCloud</p>
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -178,10 +172,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>资源主账号的ID，亦即UID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>155780923770</p>
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -190,7 +181,17 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * autoSnapshotPolicyId.
+         * <p>The ID of the automatic snapshot policy that you want to cancel.</p>
+         * <ul>
+         * <li>Default value: empty. If you use the default value, note the following items:<ul>
+         * <li>If only one automatic snapshot policy is applied to the cloud disk, the automatic snapshot policy is canceled.</li>
+         * <li>If more than one automatic snapshot policy is applied to the cloud disk, the <code>OperationDenied.TooManyAutoSnapshotPolicies</code> error code is returned and the request fails. Specify the <code>autoSnapshotPolicyId</code> parameter to specify the ID of the automatic snapshot policy that you want to cancel.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp14yziiuvu3s6jn****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("autoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -199,7 +200,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the disks for which you want to disable the automatic snapshot policy. To disable the automatic snapshot policy for multiple disks, you can set this parameter to a JSON array that consists of multiple disk IDs, such as [&quot;dxxxxxxxxx&quot;, &quot;dyyyyyyyyy&quot;, … &quot;dzzzzzzzzz&quot;]. Separate the disk IDs with commas (,).</p>
+         * <p>The IDs of the cloud disks. To cancel the automatic snapshot policy for multiple cloud disks, specify the cloud disk IDs in a JSON array in the format of &quot;d-xxxxxxxxx&quot;, &quot;d-yyyyyyyyy&quot;, … &quot;d-zzzzzzzzz&quot;. Separate multiple cloud disk IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +213,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the automatic snapshot policy and the disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the automatic snapshot policy and cloud disks. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

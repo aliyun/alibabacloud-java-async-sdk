@@ -267,7 +267,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The conditions.</p>
+         * <p>The list of conditions.</p>
          */
         public Builder conditions(java.util.List<String> conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -276,8 +276,8 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs of the instance type. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
-         * <p>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</p>
+         * <p>The number of vCPU kernel of the target instance type. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
+         * <p>This parameter takes effect only when DestinationResource is set to InstanceType.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -289,12 +289,12 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The resource type that you want to change. Valid values:</p>
+         * <p>The type of resource that you want to change. Valid values: </p>
          * <ul>
-         * <li><p>InstanceType</p>
+         * <li><p>InstanceType: instance type.</p>
          * </li>
-         * <li><p>SystemDisk</p>
-         * <p>If you set this parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
+         * <li><p>SystemDisk: system disk type.</p>
+         * <p>If you set this parameter to SystemDisk, you must also specify the InstanceType parameter to indicate the disk type required by the target instance type.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -309,11 +309,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The instance type to which you want to change the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
-         * <p>If you set the DestinationResource parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
+         * <p>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
+         * <p>If DestinationResource is set to SystemDisk, you must also specify the InstanceType parameter to indicate the disk type required by the target instance type.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs.g5.large</p>
+         * <p>ecs.g7.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -322,8 +322,8 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The memory size of the instance type. Unit: GiB. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
-         * <p>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</p>
+         * <p>The memory size of the target instance type. Unit: GiB. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
+         * <p>This parameter takes effect only when DestinationResource is set to InstanceType.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0</p>
@@ -335,22 +335,15 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+         * <p>Specifies whether cross-cluster upgrade or downgrade of instance types is supported. Valid values: </p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
          * </ul>
          * <p>Default value: false.</p>
-         * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
+         * <p>If the MigrateAcrossZone parameter is set to true and you upgrade or downgrade the Elastic Compute Service instance based on the returned information, take note of the following items: </p>
          * <ul>
-         * <li><p>Instance that resides in the classic network:</p>
-         * <ul>
-         * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</li>
-         * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
-         * </ul>
-         * </li>
-         * <li><p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</p>
-         * </li>
+         * <li>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server are changed. For Linux instances, basic disks (cloud) are identified as xvda or xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,17 +356,17 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The operation of changing resource configurations.</p>
+         * <p>The type of the Upgrade/Downgrade operation.</p>
          * <ul>
-         * <li><p>Valid values for subscription resources:</p>
+         * <li><p>Valid values for subscription resources: </p>
          * <ul>
          * <li>Upgrade: upgrades resources.</li>
          * <li>Downgrade: downgrades resources.</li>
-         * <li>RenewDowngrade: renews and downgrades resources.</li>
-         * <li>RenewModify: renews an expired instance and changes its configurations.</li>
+         * <li>RenewDowngrade: downgrades resources upon renewal.</li>
+         * <li>RenewModify: renewal with specification change for an expired instance.</li>
          * </ul>
          * </li>
-         * <li><p>Set the value to Upgrade for pay-as-you-go resources.</p>
+         * <li><p>Valid value for pay-as-you-go resources: Upgrade.</p>
          * </li>
          * </ul>
          * <p>Default value: Upgrade.</p>
@@ -406,7 +399,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance for which you want to change the instance type or system disk category. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance whose specification or system disk type you want to change. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -419,7 +412,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which you want to change the instance type or system disk category.</p>
+         * <p>The instance ID of the instance whose instance type or system disk type you want to change.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -450,8 +443,8 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination zone to which you want to migrate the instance.</p>
-         * <p>If you want to change the instance type across zones, you must specify this parameter.</p>
+         * <p>The ID of the target zone.</p>
+         * <p>Specify this parameter when you want to change the instance type across zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>

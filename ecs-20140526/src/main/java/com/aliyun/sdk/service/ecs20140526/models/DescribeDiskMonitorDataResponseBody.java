@@ -80,7 +80,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The monitoring data of the disk.</p>
+         * MonitorData.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -99,7 +99,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of monitoring data entries returned.</p>
+         * <p>The total number of returned entries of cloud disk usage information, which is the number of periods.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -272,10 +272,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The read bandwidth of the disk. Unit: byte/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * BPSRead.
              */
             public Builder BPSRead(Integer BPSRead) {
                 this.BPSRead = BPSRead;
@@ -283,10 +280,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total read and write bandwidth of the disk. Unit: byte/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>204</p>
+             * BPSTotal.
              */
             public Builder BPSTotal(Integer BPSTotal) {
                 this.BPSTotal = BPSTotal;
@@ -294,10 +288,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write bandwidth of the disk. Unit: byte/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>204</p>
+             * BPSWrite.
              */
             public Builder BPSWrite(Integer BPSWrite) {
                 this.BPSWrite = BPSWrite;
@@ -305,10 +296,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp1bq5g3dxxo1x4o****</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -316,10 +304,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of read I/O operations per second on the disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IOPSRead.
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -327,10 +312,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of read and write I/O operations per second on the disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IOPSTotal.
              */
             public Builder IOPSTotal(Integer IOPSTotal) {
                 this.IOPSTotal = IOPSTotal;
@@ -338,10 +320,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of write I/O operations per second on the disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IOPSWrite.
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -349,10 +328,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read latency of the disk. Unit: microseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * LatencyRead.
              */
             public Builder latencyRead(Integer latencyRead) {
                 this.latencyRead = latencyRead;
@@ -360,10 +336,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write latency of the disk. Unit: microseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * LatencyWrite.
              */
             public Builder latencyWrite(Integer latencyWrite) {
                 this.latencyWrite = latencyWrite;
@@ -371,10 +344,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the monitoring data. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2014-07-23T12:07:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

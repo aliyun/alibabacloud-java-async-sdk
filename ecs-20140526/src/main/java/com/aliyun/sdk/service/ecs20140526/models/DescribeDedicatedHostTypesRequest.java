@@ -167,7 +167,7 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * <p>The dedicated host type. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Dedicated host types</a>.</p>
+         * <p>The dedicated host type. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Host specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ddh.sn1ne</p>
@@ -197,7 +197,7 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -558,7 +558,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The number of ECS instances. You can specify this parameter when you want to query the prices of multiple instances that have specific specifications. Valid values: 1 to 1000.</p>
+         * <p>The number of Elastic Compute Service (ECS) instances that you want to purchase. You can use this parameter to query the price of batch purchases. Valid values: 1 to 1000.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -571,7 +571,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.</p>
+         * <p>The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. Only the unlimited mode within the service effective period is supported.</p>
          * <p>Default value: Unlimited.</p>
          * 
          * <strong>example:</strong>
@@ -584,7 +584,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity. Unit: GiB.</p>
+         * <p>The capacity. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -596,7 +596,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The type of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</p>
+         * <p>The dedicated host type. You can call <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> to query the most recent list of dedicated host types.</p>
          * 
          * <strong>example:</strong>
          * <p>ddh.c5</p>
@@ -609,7 +609,7 @@ public class DescribePriceRequest extends Request {
 
         /**
          * <p>This parameter takes effect only when ResourceType is set to instance.</p>
-         * <p>The image ID. Images contain the runtime environments to load when instances start. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not specify this parameter, the system queries the prices of Linux images.</p>
+         * <p>The image ID, which specifies the runtime environment to be loaded when the instance starts. You can call <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> to query available image resources. If you do not specify this parameter, the price of a Linux image is queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>centos_7_05_64_20G_alibase_20181212.vhd</p>
@@ -621,7 +621,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The total number of reserved instances for an instance type.</p>
+         * <p>The total number of instances to reserve within an instance type.</p>
          * <p>Valid values: 1 to 1000.</p>
          * 
          * <strong>example:</strong>
@@ -634,9 +634,9 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The total number of vCPUs supported by the elasticity assurance. When you call this API operation, the system calculates the number of instances that an elasticity assurance must support based on the specified value of InstanceType. The calculated value is rounded up to the nearest integer.</p>
+         * <p>The total number of vCPUs supported by the elasticity assurance. When you call the API, the system calculates the number of instances to be covered by the elasticity assurance based on the specified InstanceType (rounded up).</p>
          * <blockquote>
-         * <p>When you call this API operation to query the price of an elasticity assurance, you can only specify either InstanceCoreCpuCount or InstanceAmount.</p>
+         * <p>When you call the API to query the price of an elasticity assurance, you can specify only one of the InstanceCoreCpuCount and InstanceAmount parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -651,8 +651,8 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li>classic: classic network</li>
-         * <li>vpc: Virtual Private Cloud (VPC)</li>
+         * <li>vpc: Virtual Private Cloud (VPC).</li>
+         * <li>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Discontinuation notice</a>.</li>
          * </ul>
          * <p>Default value: vpc.</p>
          * 
@@ -666,7 +666,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The instance type. When <code>ResourceType</code> is set to <code>instance</code>, you must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
+         * <p>The instance type. You must specify this parameter when the <code>ResourceType</code> parameter is set to <code>instance</code>. For more details, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
@@ -678,7 +678,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The instance types. You can select only a single instance type when you configure an elasticity assurance in unlimited mode.</p>
+         * <p>The instance type. Only a single instance type can be specified for the unlimited elasticity assurance.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.xlarge</p>
@@ -690,12 +690,12 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The billing method for network usage. Valid values:</p>
+         * <p>The billing method for network bandwidth. Valid values:</p>
          * <ul>
-         * <li>PayByBandwidth: pay-by-bandwidth</li>
-         * <li>PayByTraffic: pay-by-traffic</li>
+         * <li>PayByBandwidth: pay-by-bandwidth.</li>
+         * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
-         * <p>Default value: PayByTraffic</p>
+         * <p>Default value: PayByTraffic.</p>
          * 
          * <strong>example:</strong>
          * <p>PayByTraffic</p>
@@ -707,7 +707,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values: 0 to 100.</p>
          * <p>Default value: 0.</p>
          * 
          * <strong>example:</strong>
@@ -720,13 +720,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
+         * <p>Specifies whether the queried instance is an I/O optimized instance. Valid values:</p>
          * <ul>
-         * <li>none: The instance is not I/O optimized.</li>
-         * <li>optimized: The instance is I/O optimized.</li>
+         * <li>none: non-I/O optimization.</li>
+         * <li>optimized: I/O optimization.</li>
          * </ul>
-         * <p>When the instance type specified by the InstanceType parameter belongs to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is none.</p>
-         * <p>When the instance type specified by the InstanceType parameter does not belong to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is optimized.</p>
+         * <p>If InstanceType is set to a <a href="https://help.aliyun.com/document_detail/55263.html">Series I</a> instance type, the default value is none.</p>
+         * <p>If InstanceType is set to a non-<a href="https://help.aliyun.com/document_detail/55263.html">Series I</a> instance type, the default value is optimized.</p>
          * 
          * <strong>example:</strong>
          * <p>optimized</p>
@@ -738,12 +738,12 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <p>The Internet Service Provider (ISP). Valid values: </p>
          * <ul>
-         * <li>cmcc: China Mobile</li>
-         * <li>telecom: China Telecom</li>
-         * <li>unicom: China Unicom</li>
-         * <li>multiCarrier: multi-line ISP</li>
+         * <li>cmcc: China Mobile.</li>
+         * <li>telecom: China Telecom.</li>
+         * <li>unicom: China Unicom.</li>
+         * <li>multiCarrier: multi-ISP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -758,9 +758,9 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The payment option of the reserved instance. Valid values:</p>
          * <ul>
-         * <li>No Upfront</li>
-         * <li>Partial Upfront</li>
-         * <li>All Upfront</li>
+         * <li>No Upfront: no upfront.</li>
+         * <li>Partial Upfront: partial upfront.</li>
+         * <li>All Upfront: all upfront.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -791,11 +791,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle of the ECS instance. Valid values:</p>
+         * <p>The billing duration of Elastic Compute Service (ECS). Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>Valid values when PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-         * <li>Valid values when PriceUnit is set to Year: 1, 2, 3, 4, and 5.</li>
-         * <li>Set the value to 1 when PriceUnit is set to Hour.</li>
+         * <li>If the PriceUnit parameter is set to Month: 1 to 9.</li>
+         * <li>If the PriceUnit parameter is set to Year: 1 to 5.</li>
+         * <li>If the PriceUnit parameter is set to Hour: 1.</li>
+         * <li>If the PriceUnit parameter is set to Week: 1 to 4.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>If the PriceUnit parameter is set to Month: 1 to 9.</li>
+         * <li>If the PriceUnit parameter is set to Year: 1 to 5.</li>
+         * <li>If the PriceUnit parameter is set to Hour: 1.</li>
          * </ul>
          * <p>Default value: 1.</p>
          * 
@@ -809,10 +817,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The operating system of the image that is used by the instance. Valid values:</p>
+         * <p>The operating system type of the image used by the instance. Valid values: </p>
          * <ul>
-         * <li>Windows: Windows Server operating system</li>
-         * <li>Linux: Linux and UNIX-like operating system</li>
+         * <li>Windows: Windows Server operating system.</li>
+         * <li>Linux: Linux and Unix-like operating systems.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -825,11 +833,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The pricing unit of the ECS resource. Valid values:</p>
+         * <p>Queries the prices of Elastic Compute Service (ECS) for different billing cycles. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
-         * <li>Hour (default)</li>
+         * <li>Month: the monthly price.</li>
+         * <li>Year: the yearly price.</li>
+         * <li>Hour (default): the hourly price.</li>
+         * <li>Week: the weekly price.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>Month: the monthly price.</li>
+         * <li>Year: the yearly price.</li>
+         * <li>Hour (default): the hourly price.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -842,9 +858,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The assurance schedules of the time-segmented elasticity assurance.</p>
+         * <p>The list of recurrence rules for the time-sharing elasticity assurance.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <blockquote>
-         * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+         * <p>The time-sharing elasticity assurance feature is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>The time-sharing elasticity assurance feature is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
          * </blockquote>
          */
         public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
@@ -854,7 +875,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -887,13 +908,13 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The type of the resource. Valid values:</p>
          * <ul>
-         * <li>instance: queries the most recent prices of ECS instances. If you set this parameter to <code>instance</code>, specify <code>InstanceType</code>.</li>
-         * <li>disk: queries the most recent prices of cloud disks. If you set this parameter to <code>disk</code>, specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code>.</li>
-         * <li>diskperformance: Queries the most recent prices of the provioned performance of the Enterprise SSD (ESSD) AutoPL disk. You must also specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.ProvisionedIops</code>.</li>
-         * <li>bandwidth: queries the most recent prices for network usage.</li>
-         * <li>ddh: queries the most recent prices of dedicated hosts.</li>
-         * <li>ElasticityAssurance: queries the most recent prices of elasticity assurances. If you set this parameter to <code>ElasticityAssurance</code>, specify <code>InstanceType</code>.</li>
-         * <li>CapacityReservation: queries the most recent prices of capacity reservations. If you set this parameter to <code>CapacityReservation</code>, specify <code>InstanceType</code>.</li>
+         * <li>instance: queries the most recent price list of ECS instances. If you set this parameter to <code>instance</code>, you must also specify the <code>InstanceType</code> parameter.</li>
+         * <li>disk: queries the most recent price list of disks. If you set this parameter to <code>disk</code>, you must also specify the <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code> parameters.</li>
+         * <li>diskperformance: queries the most recent price list of provisioned performance for ESSD AutoPL disks. You must also specify the <code>DataDisk.1.Category</code> and <code>DataDisk.1.ProvisionedIops</code> parameters.</li>
+         * <li>bandwidth: queries the most recent price list of bandwidth.</li>
+         * <li>ddh: queries the most recent price list of dedicated hosts.</li>
+         * <li>ElasticityAssurance: queries the price of elasticity assurance services. If you set this parameter to <code>ElasticityAssurance</code>, you must also specify the <code>InstanceType</code> parameter.</li>
+         * <li>CapacityReservation: queries the price of capacity reservation services. If you set this parameter to <code>CapacityReservation</code>, you must also specify the <code>InstanceType</code> parameter.</li>
          * </ul>
          * <p>Default value: instance.</p>
          * 
@@ -907,10 +928,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The scope of the reserved instance. Valid values:</p>
+         * <p>The scope of the reserved instance. Valid values: </p>
          * <ul>
-         * <li>Region: regional</li>
-         * <li>Zone: zonal</li>
+         * <li>Region: regional. </li>
+         * <li>Zone: zonal.</li>
          * </ul>
          * <p>Default value: Region.</p>
          * 
@@ -926,12 +947,12 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
          * <ul>
-         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After 1 hour, the system automatically compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
+         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system automatically compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <p>Alibaba Cloud sends a notification through an ECS system event 5 minutes before the instance is released. Spot instances are billed by second. Select an appropriate protection period based on the expected task execution duration.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * <p>This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -946,13 +967,13 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <ul>
-         * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-         * <li>SpotWithPriceLimit: The instance is created as a spot instance that has a user-defined maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instance is created as a spot instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.</li>
+         * <li>NoSpot: a regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: a spot instance with a maximum price limit.</li>
+         * <li>SpotAsPriceGo: a spot instance priced at the market price with the pay-as-you-go price as the upper limit.</li>
          * </ul>
          * <p>Default value: NoSpot.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <code>PriceUnit</code> is set to Hour and <code>Period</code> is set to 1. The default value of <code>PriceUnit</code> is <code>Hour</code> and the default value of <code>Period</code> is <code>1</code>. Therefore, you do not need to set <code>PriceUnit</code> or <code>Period</code> when you set SpotStrategy.</p>
+         * <p>This parameter takes effect only when <code>PriceUnit=Hour</code> and <code>Period=1</code>. Because the default value of <code>PriceUnit</code> is <code>Hour</code> and the default value of <code>Period</code> is <code>1</code>, you do not need to set the <code>PriceUnit</code> and <code>Period</code> parameters when you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -965,7 +986,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The time when the time-segmented assurance of the elasticity assurance takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * <p>The effective period of the time-sharing elasticity assurance. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-30T06:32:00Z</p>
@@ -979,7 +1000,7 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The zone ID.</p>
          * <blockquote>
-         * <p>Prices of spot instances vary based on zones. When you query the price of a spot instance, specify ZoneId.</p>
+         * <p>Spot instance prices may vary across zones. When you query spot instance prices, specify ZoneId to query the spot instance price in a specific zone.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1083,8 +1104,10 @@ public class DescribePriceRequest extends Request {
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>ephemeral_ssd: local SSD.</li>
-             * <li>cloud_essd: ESSD.</li>
-             * <li>cloud_auto: ESSD AutoPL disk.</li>
+             * <li>cloud_essd: enterprise SSD (ESSD).</li>
+             * <li>cloud_auto: ESSD AutoPL disk.
+             * &lt;props=&quot;china&quot;&gt;</li>
+             * <li>cloud_essd_entry: ESSD Entry disk.</li>
              * </ul>
              * <p>Valid values of N: 1 to 16.</p>
              * 
@@ -1097,12 +1120,12 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The performance level of data disk N when the disk is an ESSD. This parameter takes effect only when <code>DataDisk.N.Category</code> is set to cloud_essd. Valid values:</p>
+             * <p>The performance level of data disk N when the disk is an enterprise SSD (ESSD). This parameter is valid only when <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
              * <ul>
-             * <li>PL0</li>
-             * <li>PL1 (default)</li>
-             * <li>PL2</li>
-             * <li>PL3</li>
+             * <li>PL0.</li>
+             * <li>PL1 (default).</li>
+             * <li>PL2.</li>
+             * <li>PL3.</li>
              * </ul>
              * <p>Valid values of N: 1 to 16.</p>
              * 
@@ -1117,23 +1140,26 @@ public class DescribePriceRequest extends Request {
             /**
              * <p>The size of data disk N. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li><p>Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+             * <li><p>cloud: 5 to 2000.</p>
              * </li>
-             * <li><p>Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+             * <li><p>cloud_efficiency: 20 to 32768.</p>
              * </li>
-             * <li><p>Valid values if DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+             * <li><p>cloud_ssd: 20 to 32768.</p>
              * </li>
-             * <li><p>Valid values if DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
+             * <li><p>cloud_auto: 1 to 32768.
+             * &lt;props=&quot;china&quot;&gt;</p>
              * </li>
-             * <li><p>Valid values if DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
+             * <li><p>cloud_essd_entry: 10 to 32768.</p>
+             * </li>
+             * <li><p>cloud_essd: The valid values depend on the value of <code>DataDisk.N.PerformanceLevel</code>.	</p>
              * <ul>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+             * <li>PL0: 1 to 32768.</li>
+             * <li>PL1: 20 to 32768.</li>
+             * <li>PL2: 461 to 32768.</li>
+             * <li>PL3: 1261 to 32768.</li>
              * </ul>
              * </li>
-             * <li><p>Valid values if DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</p>
+             * <li><p>ephemeral_ssd: 5 to 800.</p>
              * </li>
              * </ul>
              * <p>Valid values of N: 1 to 16.</p>
@@ -1147,10 +1173,10 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
+             * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
              * <blockquote>
-             * <p> This parameter is available only if you set <code>DataDisk.N.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1221,8 +1247,8 @@ public class DescribePriceRequest extends Request {
             } 
 
             /**
-             * <p>This parameter takes effect only when ResourceType is set to instance.</p>
-             * <p>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the dedicated host list.</p>
+             * <p>This parameter takes effect only when the ResourceType parameter is set to instance.</p>
+             * <p>The ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the list of dedicated host IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>dh-bp67acfmxazb4p****</p>
@@ -1233,7 +1259,19 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * DeploymentSetStrategy.
+             * <p>The deployment set strategy. Valid values:</p>
+             * <ul>
+             * <li>Availability: high availability strategy.</li>
+             * <li>AvailabilityGroup: high availability group strategy.</li>
+             * <li>LowLatency: low network latency strategy.</li>
+             * <li>ProximityLooseDispersion: proximity loose dispersion strategy.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Only when the strategy is set to ProximityLooseDispersion, the API response includes the price details for &quot;Resource&quot;: &quot;deploymentSet&quot;. Other deployment set strategies are free of charge, so the API response does not include price information for &quot;Resource&quot;: &quot;deploymentSet&quot;.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ProximityLooseDispersion</p>
              */
             public Builder deploymentSetStrategy(String deploymentSetStrategy) {
                 this.deploymentSetStrategy = deploymentSetStrategy;
@@ -1313,23 +1351,22 @@ public class DescribePriceRequest extends Request {
             } 
 
             /**
-             * <p>The category of the system disk. Valid values:</p>
+             * <p>The category of the system disk. When you query the system disk price, you must also specify <code>ImageId</code>. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>ephemeral_ssd: local SSD</li>
-             * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-             * <li>cloud_auto: ESSD AutoPL disk</li>
+             * <li>cloud: basic disk.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>ephemeral_ssd: local SSD.</li>
+             * <li>cloud_essd: enterprise SSD (ESSD).</li>
+             * <li>cloud_auto: ESSD AutoPL disk.
+             * &lt;props=&quot;china&quot;&gt;</li>
+             * <li>cloud_essd_entry: ESSD Entry disk.</li>
              * </ul>
-             * <p>Default value:</p>
+             * <p>Default value description:</p>
              * <ul>
-             * <li>When InstanceType is set to a retired instance type and <code>IoOptimized</code> is set to <code>none</code>, the default value is <code>cloud</code>.</li>
-             * <li>In other cases, the default value is <code>cloud_efficiency</code>.</li>
+             * <li>If InstanceType is set to a retired instance type and the <code>IoOptimized</code> parameter is set to <code>none</code>, the default value is <code>cloud</code>.</li>
+             * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, for instance types that support only cloud_essd, the default value is changed from cloud_efficiency to cloud_essd PL0. For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
              * </ul>
-             * <blockquote>
-             * <p> If you want to query the price of a system disk, you must also specify <code>ImageId</code>.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -1340,8 +1377,11 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the system disk when the disk is an ESSD. This parameter is valid only when <code>SystemDiskCategory</code> is set to cloud_essd. Valid values:</p>
-             * <p>PL0, PL1 (default), PL2, PL3.</p>
+             * <p>The performance level of the system disk when the system disk type is enterprise SSD. This parameter is valid only when <code>SystemDiskCategory=cloud_essd</code>. Valid values:</p>
+             * <p>PL0.
+             * PL1 (default).
+             * PL2.
+             * PL3.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -1354,22 +1394,18 @@ public class DescribePriceRequest extends Request {
             /**
              * <p>The size of the system disk. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li><p>Basic disk (cloud): 20 to 500.</p>
-             * </li>
-             * <li><p>ESSD (cloud_essd): Valid values vary based on the SystemDisk.PerformanceLevel value.</p>
-             * <ul>
-             * <li>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</li>
-             * <li>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</li>
-             * <li>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</li>
-             * <li>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</li>
+             * <li>Basic disk: 20 to 500.</li>
+             * <li>Enterprise SSD:<ul>
+             * <li>PL0: 1 to 2048.</li>
+             * <li>PL1: 20 to 2048.</li>
+             * <li>PL2: 461 to 2048.</li>
+             * <li>PL3: 1261 to 2048.</li>
              * </ul>
              * </li>
-             * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
-             * </li>
-             * <li><p>Other disk categories: 20 to 2048.</p>
-             * </li>
+             * <li>ESSD AutoPL disk: 1 to 2048.</li>
+             * <li>Other disk categories: 20 to 2048.</li>
              * </ul>
-             * <p>Default value: 20 or the size of the image specified by ImageId, whichever is greater.</p>
+             * <p>Default value: max{20, image size of the specified ImageId parameter}.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1465,7 +1501,7 @@ public class DescribePriceRequest extends Request {
             } 
 
             /**
-             * <p>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+             * <p>The end time of the time-sharing assurance. The value must be on the hour.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1476,14 +1512,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The type of the assurance schedule. Valid values:</p>
+             * <p>The type of the recurrence rule. Valid values:</p>
              * <ul>
-             * <li>Daily</li>
-             * <li>Weekly</li>
-             * <li>Monthly</li>
+             * <li>Daily: repeats daily.</li>
+             * <li>Weekly: repeats weekly.</li>
+             * <li>Monthly: repeats monthly.</li>
              * </ul>
              * <blockquote>
-             * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1495,14 +1531,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
+             * <p>The value of the recurrence rule.</p>
              * <ul>
-             * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
-             * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
-             * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</li>
+             * <li>If <code>RecurrenceType</code> is set to <code>Daily</code>, you can specify only one value. Valid values: 1 to 31. The value indicates the interval in days between recurrences.</li>
+             * <li>If <code>RecurrenceType</code> is set to <code>Weekly</code>, you can specify multiple values separated by commas (,). The values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates Monday and Tuesday.</li>
+             * <li>If <code>RecurrenceType</code> is set to <code>Monthly</code>, the format is <code>A-B</code>. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates the 1st through 5th day of each month.</li>
              * </ul>
              * <blockquote>
-             * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1514,9 +1550,9 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * <p>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+             * <p>The effective period start time of the time-sharing assurance. The value must be on the hour.</p>
              * <blockquote>
-             * <p> You must specify both StartHour and EndHour. The EndHour value must be at least 4 hours later than the StartHour value.</p>
+             * <p>You must specify both StartHour and EndHour, and the difference between them must be at least 4 hours.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

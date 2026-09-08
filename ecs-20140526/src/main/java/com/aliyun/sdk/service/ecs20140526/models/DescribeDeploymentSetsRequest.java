@@ -266,7 +266,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, ... &quot;ds-zzzzzzzzz&quot;]</code>. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
+         * <p>The IDs of deployment sets. The value can be a JSON array that consists of multiple deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</code>. A maximum of 100 IDs are supported. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ds-bp67acfmxazb4ph****&quot;, &quot;ds-bp67acfmxazb4pi****&quot;, … &quot;ds-bp67acfmxazb4pj****&quot;]</p>
@@ -278,7 +278,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * <p>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including English letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDeploymentSetName</p>
@@ -291,7 +291,7 @@ public class DescribeDeploymentSetsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class DescribeDeploymentSetsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class DescribeDeploymentSetsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -350,8 +350,8 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>The page number of the deployment set list.</p>
+         * <p>Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -364,8 +364,8 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Valid values: 1 to 50.</p>
+         * <p>The number of entries per page for a paged query.</p>
+         * <p>Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -378,7 +378,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,8 +411,9 @@ public class DescribeDeploymentSetsRequest extends Request {
         /**
          * <p>The deployment strategy. Valid values:</p>
          * <ul>
-         * <li>Availability: high availability strategy</li>
-         * <li>AvailabilityGroup: high availability group strategy</li>
+         * <li>Availability: high availability.</li>
+         * <li>AvailabilityGroup: high availability for deployment set groups.</li>
+         * <li>LowLatency: low network latency.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,7 +426,16 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The deployment type. Valid values:</p>
+         * <ul>
+         * <li>host: physical server</li>
+         * <li>sw: vSwitch</li>
+         * <li>rack: rack</li>
+         * </ul>
+         * <p>Default value: host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

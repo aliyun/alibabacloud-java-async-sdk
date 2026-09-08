@@ -742,7 +742,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * AdditionalAttributes.
+         * <p>The list of advanced features to return for instance types.</p>
          */
         public Builder additionalAttributes(java.util.List<String> additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
@@ -753,8 +753,8 @@ public class DescribeInstanceTypesRequest extends Request {
         /**
          * <p>The CPU architecture. Valid values:</p>
          * <ul>
-         * <li>X86</li>
-         * <li>ARM</li>
+         * <li>X86.</li>
+         * <li>ARM.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -767,7 +767,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The CPU architectures of instance types. You can specify 1 or 2 CPU architectures.</p>
+         * <p>The specified CPU architectures to query. Array length: 1 to 2.</p>
          */
         public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
             this.putQueryParameter("CpuArchitectures", cpuArchitectures);
@@ -776,9 +776,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The GPU model.</p>
+         * <p>The GPU type.</p>
          * <blockquote>
-         * <p> Fuzzy match is supported. For example, if an instance type provides NVIDIA V100 GPUs and you set this parameter to NVIDIA, information about the instance type is queried.</p>
+         * <p>Fuzzy matching is supported. For example, if the GPU type of an instance type is NVIDIA V100, you can enter NVIDIA to query information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -791,7 +791,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The GPU models of instance types. You can specify 1 to 10 GPU models.</p>
+         * <p>The specified GPU types to query. Array length: 1 to 10.</p>
          */
         public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
             this.putQueryParameter("GpuSpecs", gpuSpecs);
@@ -800,7 +800,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The categories of instance types. You can specify 1 to 10 categories of instance types.</p>
+         * <p>The specified instance type categories to query. Array length: 1 to 10.</p>
          */
         public Builder instanceCategories(java.util.List<String> instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
@@ -809,24 +809,24 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The category of the instance type. Valid values:</p>
+         * <p>The categorization of the instance type. Valid values:</p>
          * <ul>
-         * <li>General-purpose: general-purpose instance type</li>
-         * <li>Compute-optimized: compute-optimized instance type</li>
-         * <li>Memory-optimized: memory-optimized instance type</li>
-         * <li>Big data: big data instance type</li>
-         * <li>Local SSDs: instance type with local SSDs</li>
-         * <li>High Clock Speed: instance type with high clock speeds</li>
-         * <li>Enhanced: enhanced instance type</li>
-         * <li>Shared: shared instance type</li>
-         * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</li>
-         * <li>Visual Compute-optimized: visual compute-optimized instance type</li>
-         * <li>Heterogeneous Service: heterogeneous service instance type</li>
-         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</li>
-         * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</li>
-         * <li>ECS Bare Metal: ECS Bare Metal Instance type</li>
-         * <li>Super Computing Cluster: Super Computing Cluster (SCC) instance type</li>
-         * <li>High Performance Compute: high-performance computing instance type</li>
+         * <li>General-purpose: general-purpose.</li>
+         * <li>Compute-optimized: compute-optimized.</li>
+         * <li>Memory-optimized: memory-optimized.</li>
+         * <li>Big data: big data.</li>
+         * <li>Local SSDs: instance families with local SSDs.</li>
+         * <li>High Clock Speed: high frequency.</li>
+         * <li>Enhanced: enhanced instance families.</li>
+         * <li>Shared: shared.</li>
+         * <li>Compute-optimized with GPU: GPU computing.</li>
+         * <li>Visual Compute-optimized: visual compute-optimized.</li>
+         * <li>Heterogeneous Service: heterogeneous service.</li>
+         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized.</li>
+         * <li>Compute-optimized with NPU: NPU compute-optimized.</li>
+         * <li>ECS Bare Metal: ECS Bare Metal server.</li>
+         * <li>Super Computing Cluster: Super Computing Cluster (SCC).</li>
+         * <li>High Performance Compute: high-performance computing (HPC).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -841,9 +841,9 @@ public class DescribeInstanceTypesRequest extends Request {
         /**
          * <p>The level of the instance family. Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry level (shared)</li>
-         * <li>EnterpriseLevel: enterprise level</li>
-         * <li>CreditEntryLevel: credit-based entry level</li>
+         * <li>EntryLevel: entry level (shared).</li>
+         * <li>EnterpriseLevel: enterprise level.</li>
+         * <li>CreditEntryLevel: credit-based entry level.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -856,7 +856,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The instance families. You can specify 1 to 10 instance families.</p>
+         * <p>The specified instance families to query. Array length: 1 to 10.</p>
          */
         public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
             this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
@@ -865,7 +865,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The instance family to which the instance type belongs. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</p>
+         * <p>The instance family to which the instance type belongs. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</p>
          * <p>For more information about instance families, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
          * 
          * <strong>example:</strong>
@@ -878,7 +878,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The instance types. You can specify 1 to 10 instance types. If this parameter is empty, information about all instance types is queried.</p>
+         * <p>The specified instance types. Array length: 1 to 10. If this parameter is not specified, information about all instance types is queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
@@ -890,7 +890,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The categories of local disks used by instance types. You can specify 1 or 2 categories of local disks.</p>
+         * <p>The specified local disk categories. Array length: 1 to 2.</p>
          */
         public Builder localStorageCategories(java.util.List<String> localStorageCategories) {
             this.putQueryParameter("LocalStorageCategories", localStorageCategories);
@@ -901,13 +901,8 @@ public class DescribeInstanceTypesRequest extends Request {
         /**
          * <p>The category of local disks. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</p>
          * <ul>
-         * <li>local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.</li>
-         * <li>local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>local_hdd_pro</li>
-         * <li>local_ssd_pro</li>
+         * <li>local_hdd_pro: SATA HDDs used by the d1ne and d1 instance families.</li>
+         * <li>local_ssd_pro: NVMe SSDs used by the i2, i2g, i1, ga1, and gn5 instance families.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -920,7 +915,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 1600.</p>
+         * <p>The maximum number of entries per page for paging. Maximum value: 1600.</p>
          * <p>Default value: 1600.</p>
          * 
          * <strong>example:</strong>
@@ -933,9 +928,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of vCPUs. The value must be a positive integer.</p>
+         * <p>The expected maximum number of vCPU cores when querying instance types. Valid values: positive integers.</p>
          * <blockquote>
-         * <p> If an instance type has more vCPUs than the specified value, information about the instance type is not queried.</p>
+         * <p>If the number of vCPU cores of a queried instance type is greater than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -948,9 +943,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The maximum clock speed.</p>
+         * <p>The expected maximum clock speed when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type uses processors that have a higher clock speed than the specified value, information about the instance type is not queried.</p>
+         * <p>If the clock speed of a queried instance type is greater than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -963,9 +958,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The maximum turbo frequency.</p>
+         * <p>The expected maximum turbo frequency when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type uses processors that deliver a higher turbo frequency than the specified value, information about the instance type is not queried.</p>
+         * <p>If the turbo frequency of a queried instance type is greater than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -978,9 +973,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of GPUs. The value must be a positive integer.</p>
+         * <p>The expected maximum number of GPUs when querying instance types. Valid values: positive integers.</p>
          * <blockquote>
-         * <p> If an instance type provides more GPUs than the specified value, information about the instance type is not queried.</p>
+         * <p>If the number of GPUs of a queried instance type is greater than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -993,9 +988,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The maximum memory size. Unit: GiB.</p>
+         * <p>The expected maximum memory size when querying instance types. Unit: GiB.</p>
          * <blockquote>
-         * <p> If the memory size of an instance type is larger than the specified value, information about the instance type is not queried.</p>
+         * <p>If the memory size of a queried instance type is greater than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1008,9 +1003,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum baseline CPU performance (overall baseline performance of all vCPUs) of a t5 or t6 burstable instance.</p>
+         * <p>The expected minimum baseline vCPU computing performance (sum of all vCPUs) of burstable instances t5 and t6 when querying instance types.</p>
          * <blockquote>
-         * <p> If a t5 or t6 instance type provides baseline CPU performance lower than the specified value, information about the instance type is not queried.</p>
+         * <p>If the baseline vCPU computing performance (sum of all vCPUs) of burstable instances t5 and t6 of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1023,9 +1018,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of vCPUs. The value must be a positive integer.</p>
+         * <p>The expected minimum number of vCPU cores when querying instance types. Valid values: positive integers.</p>
          * <blockquote>
-         * <p> If an instance type has fewer vCPUs than the specified value, information about the instance type is not queried.</p>
+         * <p>If the number of vCPU cores of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1038,9 +1033,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum clock speed.</p>
+         * <p>The expected minimum clock speed when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type uses processors that have a lower clock speed than the specified value, information about the instance type is not queried.</p>
+         * <p>If the clock speed of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1053,9 +1048,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum turbo frequency.</p>
+         * <p>The expected minimum turbo frequency when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type uses processors that deliver a lower turbo frequency than the specified value, information about the instance type is not queried.</p>
+         * <p>If the turbo frequency of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1068,9 +1063,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of cloud disks per instance.</p>
+         * <p>The expected minimum number of cloud disks that can be attached when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer cloud disks than the specified value, information about the instance type is not queried.</p>
+         * <p>If the maximum number of cloud disks that can be attached to a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1083,9 +1078,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of IPv6 addresses per ENI.</p>
+         * <p>The expected minimum number of IPv6 addresses per network interface controller (NIC) when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer IPv6 addresses per ENI than the specified value, information about the instance type is not queried.</p>
+         * <p>If the maximum number of IPv6 addresses per network interface controller (NIC) of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1098,9 +1093,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of IPv4 addresses per ENI.</p>
+         * <p>The expected minimum number of IPv4 addresses per network interface controller (NIC) when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer IPv4 addresses per ENI than the specified value, information about the instance type is not queried.</p>
+         * <p>If the maximum number of IPv4 addresses per network interface controller (NIC) of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1113,9 +1108,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+         * <p>The expected minimum number of Elastic Network Interfaces (ENIs) that can be attached when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer ENIs than the specified value, information about the instance type is not queried.</p>
+         * <p>If the maximum number of network interface controllers (NICs) that can be attached to a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1128,9 +1123,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of ERIs per instance.</p>
+         * <p>The expected minimum number of Elastic RDMA Interfaces (ERIs) when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer ERIs than the specified value, information about the instance type is not queried.</p>
+         * <p>If the number of Elastic RDMA Interfaces (ERIs) of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1143,9 +1138,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of GPUs. The value must be a positive integer.</p>
+         * <p>The expected minimum number of GPUs when querying instance types. Valid values: positive integers.</p>
          * <blockquote>
-         * <p> If an instance type provides fewer GPUs than the specified value, information about the instance type is not queried.</p>
+         * <p>If the number of GPUs of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1158,9 +1153,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum initial CPU credits of a t5 or t6 burstable instance.</p>
+         * <p>The expected minimum initial vCPU CPU credits value of burstable instances t5 and t6 when querying instance types.</p>
          * <blockquote>
-         * <p> If a t5 or t6 instance type provides less initial vCPU credits than the specified value, information about the instance type is not queried.</p>
+         * <p>If the initial vCPU CPU credits value of burstable instances t5 and t6 of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1173,9 +1168,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum inbound internal bandwidth. Unit: Kbit/s.</p>
+         * <p>The expected minimum inbound internal bandwidth when querying instance types. Unit: kbit/s.</p>
          * <blockquote>
-         * <p> If an instance type provides an inbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.</p>
+         * <p>If the inbound internal bandwidth of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1188,9 +1183,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum outbound internal bandwidth. Unit: Kbit/s.</p>
+         * <p>The expected minimum outbound internal bandwidth when querying instance types. Unit: kbit/s.</p>
          * <blockquote>
-         * <p> If an instance type provides an outbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.</p>
+         * <p>If the outbound internal bandwidth of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1203,9 +1198,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum inbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * <p>The expected minimum inbound packet forwarding rate over the internal network when querying instance types. Unit: pps.</p>
          * <blockquote>
-         * <p> If an instance type provides an inbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.</p>
+         * <p>If the inbound packet forwarding rate over the internal network of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1218,9 +1213,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum outbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * <p>The expected minimum outbound packet forwarding rate over the internal network when querying instance types. Unit: pps.</p>
          * <blockquote>
-         * <p> If an instance type provides an outbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.</p>
+         * <p>If the outbound packet forwarding rate over the internal network of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1233,9 +1228,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of local disks per instance.</p>
+         * <p>The expected minimum number of local disks attached to the instance when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer local disks than the specified value, information about the instance type is not queried.</p>
+         * <p>If the number of local disks attached to a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1248,7 +1243,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The capacity of each local disk attached per instance. Unit: GiB.</p>
+         * <p>The capacity of a single local disk attached to the instance. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1260,9 +1255,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum memory size. Unit: GiB.</p>
+         * <p>The expected minimum memory size when querying instance types. Unit: GiB.</p>
          * <blockquote>
-         * <p> If the memory size of an instance type is smaller than the specified value, information about the instance type is not queried.</p>
+         * <p>If the memory size of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1275,9 +1270,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum default number of queues per primary network interface controller (NIC).</p>
+         * <p>The expected minimum default queue number of the primary ENI when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer queues per primary NIC than the specified value, information about the instance type is not queried.</p>
+         * <p>If the default queue number of the primary ENI of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1290,9 +1285,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of queue pair (QP) queues per elastic RDMA interface (ERI).</p>
+         * <p>The expected minimum number of QueuePair (QP) queues per Elastic RDMA Interface (ERI) when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer QP queues per ERI than the specified value, information about the instance type is not queried.</p>
+         * <p>If the maximum number of QP queues per ERI of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1305,9 +1300,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The minimum default number of queues per secondary NIC.</p>
+         * <p>The expected minimum default queue number of secondary Elastic Network Interfaces (ENIs) when querying instance types.</p>
          * <blockquote>
-         * <p> If an instance type supports fewer queues per secondary NIC than the specified value, information about the instance type is not queried.</p>
+         * <p>If the default queue number of secondary network interface controllers (NICs) of a queried instance type is less than the specified value, the system does not return information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1320,7 +1315,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. You do not need to specify this parameter for the first request.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>e71d8a535bd9cc11</p>
@@ -1332,10 +1327,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
+         * <p>Specifies whether the cloud disks attached to the instance type support NVMe. Valid values:</p>
          * <ul>
-         * <li>required: Cloud disks can be attached by using the NVMe protocol.</li>
-         * <li>unsupported: Cloud disks cannot be attached by using the NVMe protocol.</li>
+         * <li>required: Supported. Cloud disks are attached in NVMe mode.</li>
+         * <li>unsupported: Not supported. Cloud disks are not attached in NVMe mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1366,9 +1361,9 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The CPU model.</p>
+         * <p>The processor model.</p>
          * <blockquote>
-         * <p> Fuzzy match is supported. For example, if an instance type uses Intel Xeon (Ice Lake) Platinum 8369B processors and you set this parameter to Intel, information about the instance type is queried.</p>
+         * <p>Fuzzy matching is supported. For example, if the processor model of an instance type is Intel Xeon(Ice Lake) Platinum 8369B, you can enter Intel to query information about that instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1381,7 +1376,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The CPU models of instance types. You can specify 1 to 10 CPU models.</p>
+         * <p>The specified processor models to query. Array length: 1 to 10.</p>
          */
         public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
             this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);

@@ -67,7 +67,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The monitoring data of the instance.</p>
+         * MonitorData.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -339,10 +339,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The read bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * BPSRead.
              */
             public Builder BPSRead(Integer BPSRead) {
                 this.BPSRead = BPSRead;
@@ -350,10 +347,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>13585</p>
+             * BPSWrite.
              */
             public Builder BPSWrite(Integer BPSWrite) {
                 this.BPSWrite = BPSWrite;
@@ -361,10 +355,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vCPU utilization of the instance. Unit: percent (%).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CPU.
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -372,10 +363,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overdrawn CPU credits of the burstable instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.4</p>
+             * CPUAdvanceCreditBalance.
              */
             public Builder CPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
                 this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
@@ -383,10 +371,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CPU credits of the burstable instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>120</p>
+             * CPUCreditBalance.
              */
             public Builder CPUCreditBalance(Float CPUCreditBalance) {
                 this.CPUCreditBalance = CPUCreditBalance;
@@ -394,10 +379,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU credits consumed by the burstable instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * CPUCreditUsage.
              */
             public Builder CPUCreditUsage(Float CPUCreditUsage) {
                 this.CPUCreditUsage = CPUCreditUsage;
@@ -405,10 +387,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unpaid overdrawn CPU credits.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.5</p>
+             * CPUNotpaidSurplusCreditUsage.
              */
             public Builder CPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
                 this.CPUNotpaidSurplusCreditUsage = CPUNotpaidSurplusCreditUsage;
@@ -416,10 +395,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of read I/O operations per second on the cloud disks (system disk and data disks).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * IOPSRead.
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -427,10 +403,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of write I/O operations per second on the cloud disks (system disk and data disks).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * IOPSWrite.
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -438,10 +411,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1a36962lrhj4****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -449,10 +419,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public bandwidth of the instance. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * InternetBandwidth.
              */
             public Builder internetBandwidth(Integer internetBandwidth) {
                 this.internetBandwidth = internetBandwidth;
@@ -460,10 +427,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet traffic received by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>122</p>
+             * InternetRX.
              */
             public Builder internetRX(Integer internetRX) {
                 this.internetRX = internetRX;
@@ -471,10 +435,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet traffic sent by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>343</p>
+             * InternetTX.
              */
             public Builder internetTX(Integer internetTX) {
                 this.internetTX = internetTX;
@@ -482,10 +443,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal bandwidth of the instance. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * IntranetBandwidth.
              */
             public Builder intranetBandwidth(Integer intranetBandwidth) {
                 this.intranetBandwidth = intranetBandwidth;
@@ -493,10 +451,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal data traffic received by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>122</p>
+             * IntranetRX.
              */
             public Builder intranetRX(Integer intranetRX) {
                 this.intranetRX = intranetRX;
@@ -504,10 +459,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal data traffic sent by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>343</p>
+             * IntranetTX.
              */
             public Builder intranetTX(Integer intranetTX) {
                 this.intranetTX = intranetTX;
@@ -515,10 +467,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the monitoring data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2014-10-30T05:00:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

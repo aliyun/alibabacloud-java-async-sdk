@@ -80,10 +80,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about spot instances in the zones of the specified region.</p>
-         * <blockquote>
-         * <p> The return values are sorted based on the historical percentages of average spot instance prices relative to pay-as-you-go instance prices for instance types.</p>
-         * </blockquote>
+         * AvailableSpotZones.
          */
         public Builder availableSpotZones(AvailableSpotZones availableSpotZones) {
             this.availableSpotZones = availableSpotZones;
@@ -197,11 +194,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The percentage of the average spot instance price relative to the pay-as-you-go instance price in the previous 30 days. Unit: %. Valid values: 1 to 100.</p>
-             * <p>You can calculate the average spot instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average spot instance price in the previous 30 days is 0.2.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * AverageSpotDiscount.
              */
             public Builder averageSpotDiscount(Integer averageSpotDiscount) {
                 this.averageSpotDiscount = averageSpotDiscount;
@@ -209,10 +202,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.c5.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -220,16 +210,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release rate range of spot instances in the previous 30 days, which corresponds to the <code>InterruptionRate</code> value. Valid values:</p>
-             * <ul>
-             * <li>0-3%</li>
-             * <li>3-5%</li>
-             * <li>5-10%</li>
-             * <li>10-100%</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0-3%</p>
+             * InterruptRateDesc.
              */
             public Builder interruptRateDesc(String interruptRateDesc) {
                 this.interruptRateDesc = interruptRateDesc;
@@ -237,10 +218,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average release rate of spot instances in the previous 30 days. Unit: %.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * InterruptionRate.
              */
             public Builder interruptionRate(Float interruptionRate) {
                 this.interruptionRate = interruptionRate;
@@ -361,7 +339,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details about spot instances in the previous 30 days, including the release rate of spot instances and percentages of average spot instance prices relative to pay-as-you-go instance prices.</p>
+             * AvailableSpotResources.
              */
             public Builder availableSpotResources(AvailableSpotResources availableSpotResources) {
                 this.availableSpotResources = availableSpotResources;
@@ -369,10 +347,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-i</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

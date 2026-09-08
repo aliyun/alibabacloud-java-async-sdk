@@ -253,11 +253,11 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The description of the exception.</p>
+         * <p>The detailed description of the anomalous issue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The local disk is unavailable, the mount point is inaccessible, or files cannot be loaded.</p>
+         * <p>本地盘不可用，挂载点拒绝访问，无法加载文件。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -266,10 +266,10 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The device names of disks on an instance that have the exception. You can specify to 100 device names in a single request.</p>
-         * <p>If you are using an ECS bare metal instance, enter the slot numbers of disks on the instance.</p>
+         * <p>The list of device names of the disks that have the same anomalous issue and are attached to the instance. You can specify up to 100 device names.</p>
+         * <p>If you are using an ECS Bare Metal server instance, specify the SLOT information list of the disk devices.</p>
          * <blockquote>
-         * <p>For ECS bare metal instances, this parameter is required when the value of the <code>Reason</code> parameter is <code>abnormal-local-disk</code> or <code>abnormal-cloud-disk</code> or when the value of the <code>IssueCategory</code> parameter is <code>hardware-disk-error</code>.</p>
+         * <p>For ECS bare metal instances, this parameter is required when the <code>Reason</code> parameter is set to <code>abnormal-local-disk</code> or <code>abnormal-cloud-disk</code>, or when the <code>IssueCategory</code> parameter is set to <code>hardware-disk-error</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -282,9 +282,9 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The IDs of disks on an instance that have the exception. You can specify up to 100 disk IDs in a single request. If you are using an ECS bare metal instance, enter the serial numbers of disks on the instance.</p>
+         * <p>The list of IDs of the disks that have the same anomalous issue. You can specify up to 100 disk IDs. If you are using an ECS Bare Metal server instance, specify the SN list of the disk devices.</p>
          * <blockquote>
-         * <p>This parameter is required when the value of the <code>Reason</code> parameter is <code>abnormal-local-disk</code> or <code>abnormal-cloud-disk</code> or when the value of the <code>IssueCategory</code> parameter is <code>hardware-disk-error</code>.</p>
+         * <p>This parameter is required when the <code>Reason</code> parameter is set to <code>abnormal-local-disk</code> or <code>abnormal-cloud-disk</code>, or when the <code>IssueCategory</code> parameter is set to <code>hardware-disk-error</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The end time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the instance failures ended. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-31T06:32:31Z</p>
@@ -309,7 +309,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances. You can specify up to 100 instance IDs in a single request.</p>
+         * <p>The list of ECS instance IDs. You can specify up to 100 instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,17 +322,17 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:</p>
+         * <p>The category of the anomalous issue. This parameter is applicable only to Elastic Compute Service Bare Metal Instance instances. Valid values:</p>
          * <ul>
-         * <li>hardware-cpu-error: CPU failure</li>
-         * <li>hardware-motherboard-error: motherboard failure</li>
-         * <li>hardware-mem-error: memory failure</li>
-         * <li>hardware-power-error: power failure</li>
-         * <li>hardware-disk-error: disk failure</li>
-         * <li>hardware-networkcard-error: network interface controller (NIC) failure</li>
-         * <li>hardware-raidcard-error: SAS/RAID card failure</li>
-         * <li>hardware-fan-error: fan failure</li>
-         * <li>others: other failures</li>
+         * <li>hardware-cpu-error: CPU failure.</li>
+         * <li>hardware-motherboard-error: Motherboard failure.</li>
+         * <li>hardware-mem-error: Memory failure.</li>
+         * <li>hardware-power-error: Power failure.</li>
+         * <li>hardware-disk-error: Disk failure.</li>
+         * <li>hardware-networkcard-error: Network interface controller (NIC) failure.</li>
+         * <li>hardware-raidcard-error: SAS/RAID card failure.</li>
+         * <li>hardware-fan-error: Fan failure.</li>
+         * <li>others: Other failures.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,14 +363,14 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The impact of the exception on the instance. Valid values:</p>
+         * <p>The impact of the anomalous issue on the ECS instance. Valid values:</p>
          * <ul>
-         * <li>instance-hang: The instance is unavailable or cannot be connected.</li>
-         * <li>instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</li>
-         * <li>abnormal-network: The instance has a network exception.</li>
-         * <li>abnormal-local-disk: A local disk attached to the instance has an exception.</li>
-         * <li>abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</li>
-         * <li>others: other exception types. If the impact is not of the preceding types, you can set <code>Reason</code> to others and specify the <code>Description</code> parameter.</li>
+         * <li>instance-hang: The ECS instance is unavailable or cannot be connected to.</li>
+         * <li>instance-stuck-in-status: The ECS instance is stuck in a specific state, such as Starting or Stopping, for an extended period of time.</li>
+         * <li>abnormal-network: A network exception occurred on the ECS instance.</li>
+         * <li>abnormal-local-disk: A local disk attached to the ECS instance is abnormal.</li>
+         * <li>abnormal-cloud-disk: A cloud disk or Shared Block Storage device attached to the ECS instance is abnormal.</li>
+         * <li>others: Other exception types. If none of the preceding values apply, set <code>Reason=others</code> and provide more information in <code>Description</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +383,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -414,7 +414,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * <p>The start time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the instance failures started. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T06:32:31Z</p>

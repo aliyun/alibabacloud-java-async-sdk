@@ -88,7 +88,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -236,7 +236,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
              * <p>The description of the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>CPU diagnostic</p>
+             * <p>CPU诊断</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -244,7 +244,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
+             * <p>Indicates whether a script needs to be executed in the guest OS.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -280,7 +280,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
              * <p>The name of the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>CPU diagnostic</p>
+             * <p>CPU诊断</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -299,11 +299,11 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
+             * <p>The supported operating system. Valid values:</p>
              * <ul>
-             * <li>Windows</li>
-             * <li>Linux</li>
-             * <li>All: Windows and Linux</li>
+             * <li>Windows: Windows operating systems are supported.</li>
+             * <li>Linux: Linux operating systems are supported.</li>
+             * <li>All: both Windows and Linux operating systems are supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>

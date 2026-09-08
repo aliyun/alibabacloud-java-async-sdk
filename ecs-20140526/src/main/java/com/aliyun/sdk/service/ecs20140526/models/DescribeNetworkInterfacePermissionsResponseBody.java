@@ -106,7 +106,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the ENI permissions.</p>
+         * NetworkInterfacePermissions.
          */
         public Builder networkInterfacePermissions(NetworkInterfacePermissions networkInterfacePermissions) {
             this.networkInterfacePermissions = networkInterfacePermissions;
@@ -114,7 +114,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -268,10 +268,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234567890</p>
+             * AccountId.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -279,10 +276,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of ENI N.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eni-bp14v2sdd3v8htln****</p>
+             * NetworkInterfaceId.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -290,10 +284,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENI permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eni-perm-bp1cs4lwn56lfb****</p>
+             * NetworkInterfacePermissionId.
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -301,10 +292,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ENI permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>InstanceAttach</p>
+             * Permission.
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -312,16 +300,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the ENI permission. Valid values:</p>
-             * <ul>
-             * <li>Pending: The permission is being granted.</li>
-             * <li>Granted: The permission is granted.</li>
-             * <li>Revoking: The permission is being revoked.</li>
-             * <li>Revoked: The permission is revoked.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Granted</p>
+             * PermissionState.
              */
             public Builder permissionState(String permissionState) {
                 this.permissionState = permissionState;
@@ -329,10 +308,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Elastic Compute Service</p>
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

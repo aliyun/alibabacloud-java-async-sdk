@@ -462,7 +462,7 @@ public class CreateDiskRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          */
         public Builder arn(java.util.List<Arn> arn) {
@@ -474,11 +474,11 @@ public class CreateDiskRequest extends Request {
         /**
          * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enables the performance burst feature.</li>
+         * <li>false: does not enable the performance burst feature.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -491,7 +491,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -504,7 +504,7 @@ public class CreateDiskRequest extends Request {
 
         /**
          * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * <p>This parameter is left empty by default.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -516,31 +516,19 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The category of the data disk. Valid values for different disk categories:</p>
+         * <p>The category of the data disk. Valid values:</p>
          * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: utra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_essd: ESSD</li>
-         * <li>cloud_auto: ESSD AutoPL disk</li>
-         * <li>cloud_essd_entry: ESSD Entry disk</li>
-         * <li>cloud_regional_disk_auto: Regional ESSD</li>
-         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
-         * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
+         * <li>cloud: basic disk.</li>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_auto: ESSD AutoPL disk.</li>
+         * <li>cloud_essd_entry: ESSD Entry disk.</li>
+         * <li>cloud_regional_disk_auto: regional Enterprise SSD (ESSD).</li>
+         * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard Edition.</li>
+         * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium Edition.</li>
          * </ul>
          * <p>Default value: cloud.</p>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: SSD</li>
-         * <li>cloud_auto: ESSD AutoPL disk</li>
-         * <li>cloud_regional_disk_auto: Regional ESSD</li>
-         * <li>cloud_essd: ESSD</li>
-         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</li>
-         * <li>cloud_essd: ESSD</li>
-         * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -552,8 +540,8 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a letter.</p>
-         * <p>This parameter is left empty by default.</p>
+         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the letter category (including letters in English and Chinese) and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a Unicode character under the letter category.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testDiskName</p>
@@ -579,8 +567,8 @@ public class CreateDiskRequest extends Request {
         /**
          * <p>Specifies whether to encrypt the disk. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: encrypts the disk.</li>
+         * <li>false: does not encrypt the disk.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -594,12 +582,12 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the subscription instance to which to attach the subscription disk.</p>
+         * <p>The ID of the subscription instance to which the created subscription disk is automatically attached.</p>
          * <ul>
-         * <li>If you specify an instance ID, the following parameters are ignored: ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId.</li>
-         * <li>You cannot specify both ZoneId and InstanceId in a request.</li>
+         * <li>After you specify the instance ID, the ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId parameters are ignored.</li>
+         * <li>You cannot specify both ZoneId and InstanceId.</li>
          * </ul>
-         * <p>This parameter is empty by default, which indicates that a pay-as-you-go disk is created in the region and zone specified by RegionId and ZoneId.</p>
+         * <p>Default value: empty. This indicates that a pay-as-you-go disk is created. The region of the disk is determined by RegionId and ZoneId.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp18pnlg1ds9rky4****</p>
@@ -611,7 +599,28 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used for the disk.</p>
+         * <p>The ID of the Key Management Service (KMS) key used by the disk.</p>
+         * <blockquote>
+         * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption. The KMSKeyId value is returned after the instance is created.</p>
+         * <ul>
+         * <li><ul>
+         * <li>If the disk is created from a non-shared encrypted snapshot, the encryption key used by the snapshot is used by default.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the disk is created in a region where account-level default encryption for block storage is enabled, the specified account-level key is used by default.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>In other cases, the service key is used by default.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -623,14 +632,14 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the multi-attach feature for the disk. Valid values:</p>
+         * <p>Specifies whether to enable the multi-attach attribute. Valid values:</p>
          * <ul>
-         * <li>Disabled</li>
-         * <li>Enabled Set the value to <code>Enabled</code> only for ESSDs.</li>
+         * <li>Disabled: disables the multi-attach attribute.</li>
+         * <li>Enabled: enables the multi-attach attribute. Only enterprise SSDs can be set to <code>Enabled</code>.</li>
          * </ul>
          * <p>Default value: Disabled.</p>
          * <blockquote>
-         * <p> Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When <code>MultiAttach</code> is set to Enabled, you cannot specify <code>InstanceId</code>. You can call the <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.</p>
+         * <p>Disks with the multi-attach attribute enabled support only the pay-as-you-go billing method. Therefore, when <code>MultiAttach=Enabled</code>, you cannot specify the <code>InstanceId</code> parameter. You can call <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> to attach the disk after it is created. Note that a disk with the multi-attach feature enabled can be attached only as a data disk.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -661,15 +670,15 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The performance level of the disk if the disk is an ESSD. Valid values:</p>
+         * <p>The performance level of the enterprise SSD. This parameter is available only when you create an ESSD. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * <p>Default value: PL1.</p>
-         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -681,15 +690,16 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>Specifies the read/write IOPS that is provisioned for the ESSD AutoPL disk. Valid value:</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values:</p>
          * <ul>
-         * <li>Capacity (GiB) &lt;= 3: not configurable</li>
-         * <li>Capacity (GiB) &gt;= 4: [0, min{(1,000</li>
+         * <li><p>Capacity (GiB) &lt;= 3: Provisioned performance is not supported.</p>
+         * </li>
+         * <li><p>Capacity (GiB) &gt;= 4: [0, min{(1,000 IOPS/GiB × Capacity - Baseline IOPS), 50,000}]</p>
+         * </li>
          * </ul>
-         * <p>IOPS/GiB × Capacity - Baseline IOPS), 50,000}]</p>
-         * <p>Baseline performance: max{min{1,800 + 50 × Capacity, 50,000}, 3,000}</p>
+         * <p>Baseline performance = max{min{1,800 + 50 × Capacity, 50,000}, 3,000}.</p>
          * <blockquote>
-         * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -702,7 +712,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which to create the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region in which to create the disk. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -715,7 +725,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to add the disk.</p>
+         * <p>The ID of the resource group to which the disk belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -745,37 +755,28 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The size of the data disk. Unit: GiB. This parameter is required. Valid values for different disk categories:</p>
+         * <p>Snapshot size of the disk. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
          * <ul>
-         * <li><p>Valid values when DiskCategory is set to cloud: 5 to 2000.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to cloud_efficiency: 20 to 32768.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to cloud_ssd: 20 to 32768.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to cloud_essd: vary based on the <code>PerformanceLevel</code> value.</p>
-         * <ul>
-         * <li>Valid values when PerformanceLevel is set to PL0: 1 to 65536.</li>
-         * <li>Valid values when PerformanceLevel is set to PL1: 20 to 65536.</li>
-         * <li>Valid values when PerformanceLevel is set to PL2: 461 to 65536.</li>
-         * <li>Valid values when PerformanceLevel is set to PL3: 1261 to 65536.</li>
+         * <li>cloud: 5 to 2,000.</li>
+         * <li>cloud_efficiency: 20 to 32,768.</li>
+         * <li>cloud_ssd: 20 to 32,768.</li>
+         * <li>cloud_essd: The valid values depend on the value of <code>PerformanceLevel</code>.<ul>
+         * <li>PL0: 1 to 65,536.</li>
+         * <li>PL1: 20 to 65,536.</li>
+         * <li>PL2: 461 to 65,536.</li>
+         * <li>PL3: 1,261 to 65,536.</li>
          * </ul>
          * </li>
-         * <li><p>Valid values when DiskCategory is set to cloud_auto: 1 to 65536.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to cloud_regional_disk_auto: 10 to 65536.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to elastic_ephemeral_disk_standard: 64 to 8192.</p>
-         * </li>
-         * <li><p>Valid values when DiskCategory is set to elastic_ephemeral_disk_premium: 64 to 8192.</p>
-         * </li>
+         * <li>cloud_auto: 1 to 65,536.</li>
+         * <li>cloud_essd_entry: 10 to 32,768.</li>
+         * <li>cloud_regional_disk_auto: 10 to 65,536.</li>
+         * <li>elastic_ephemeral_disk_standard: 64 to 8,192.</li>
+         * <li>elastic_ephemeral_disk_premium: 64 to 8,192.</li>
          * </ul>
-         * <p>If you specify <code>SnapshotId</code>, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+         * <p>If you specify <code>SnapshotId</code>, the <code>SnapshotId</code> and <code>Size</code> parameters have the following limits:</p>
          * <ul>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the size of the snapshot.</li>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
+         * <li>If the snapshot specified by <code>SnapshotId</code> is larger than the specified <code>Size</code> value, snapshot size of the created disk equals snapshot size of the specified snapshot.</li>
+         * <li>If the snapshot specified by <code>SnapshotId</code> is smaller than the specified <code>Size</code> value, snapshot size of the created disk equals the specified <code>Size</code> value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -788,12 +789,12 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</p>
-         * <p>The following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+         * <p>The ID of the snapshot to use to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks. </p>
+         * <p>The <code>SnapshotId</code> and <code>Size</code> parameters have the following limits:</p>
          * <ul>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the specified snapshot size.</li>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
-         * <li>You cannot create elastic ephemeral disks from snapshots.</li>
+         * <li>If the snapshot specified by <code>SnapshotId</code> is larger than the specified <code>Size</code> value, snapshot size of the created disk equals snapshot size of the specified snapshot.</li>
+         * <li>If the snapshot specified by <code>SnapshotId</code> is smaller than the specified <code>Size</code> value, snapshot size of the created disk equals the specified <code>Size</code> value.</li>
+         * <li>Elastic ephemeral disks cannot be created from snapshots.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -806,9 +807,9 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dedicated block storage cluster in which to create the disk. To create a disk in a specific dedicated block storage cluster, you must specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter.</p>
          * <blockquote>
-         * <p> You can specify the storage set-related parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) or the dedicated block storage cluster-related parameter (<code>StorageClusterId</code>), but not both. If you specify a storage set-related parameter and a dedicated block storage cluster-related parameter in a request, the request fails.</p>
+         * <p>The storage set parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) and the dedicated block storage cluster parameter (<code>StorageClusterId</code>) are mutually exclusive. If you specify both, the API call fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -823,7 +824,7 @@ public class CreateDiskRequest extends Request {
         /**
          * <p>The ID of the storage set.</p>
          * <blockquote>
-         * <p>You cannot specify storage set-related parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) and the dedicated block storage cluster-related parameter (<code>StorageClusterId</code>) at the same time. Otherwise, the operation cannot be called.</p>
+         * <p>The storage set parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) and the dedicated block storage cluster parameter (<code>StorageClusterId</code>) are mutually exclusive. If you specify both, the API call fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -836,7 +837,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a>operation.</p>
+         * <p>The number of partitions in the storage set. Valid values: greater than or equal to 2, up to the privilege quota limit returned by <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a>.</p>
          * <p>Default value: 2.</p>
          * 
          * <strong>example:</strong>
@@ -849,7 +850,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the disk.</p>
+         * <p>The list of tags for the disk.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -858,13 +859,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in which to create the pay-as-you-go disk.</p>
+         * <p>The ID of the zone in which to create a pay-as-you-go disk.</p>
          * <ul>
-         * <li>If you do not specify InstanceId, you must specify ZoneId.</li>
-         * <li>You cannot specify both ZoneId and InstanceId in the same request.</li>
+         * <li>If you do not specify InstanceId, ZoneId is required.</li>
+         * <li>You cannot specify both ZoneId and InstanceId.</li>
          * </ul>
          * <blockquote>
-         * <p> You do not need to specify this parameter if you set DiskCategory to <code>cloud_regional_disk_auto</code> to create a Regional ESSD.</p>
+         * <p>You do not need to set ZoneId for disks of the <code>cloud_regional_disk_auto</code> type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -950,7 +951,7 @@ public class CreateDiskRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -963,7 +964,7 @@ public class CreateDiskRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -976,7 +977,7 @@ public class CreateDiskRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1047,7 +1048,7 @@ public class CreateDiskRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1058,7 +1059,7 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

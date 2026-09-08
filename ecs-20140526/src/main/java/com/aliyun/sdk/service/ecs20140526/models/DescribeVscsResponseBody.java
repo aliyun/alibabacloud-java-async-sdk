@@ -80,7 +80,10 @@ public class DescribeVscsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -165,7 +168,10 @@ public class DescribeVscsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -173,7 +179,10 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -318,7 +327,10 @@ public class DescribeVscsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ali***-post-cn-j4g45iqze00f</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -326,7 +338,10 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf69***21l8zuoizdq</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -334,7 +349,13 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+             * <blockquote>
+             * <p>Filtering by the default resource group is not supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2zex4ehdyjvq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -342,7 +363,17 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the VSC. Valid values:</p>
+             * <ul>
+             * <li>In_use: in use.</li>
+             * <li>Attaching: being attached.</li>
+             * <li>Detaching: being detached.</li>
+             * <li>AttachFailed: failed to attach.</li>
+             * <li>DetachFailed: failed to detach.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>In_use</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +381,7 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag keys of snapshots in the snapshot-consistent group. The default values of Key and Value provide the snapshot source information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -369,7 +400,10 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * VscName.
+             * <p>The custom name of the VSC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-vsc</p>
              */
             public Builder vscName(String vscName) {
                 this.vscName = vscName;
@@ -377,7 +411,10 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * VscType.
+             * <p>The type of the VSC. Valid values: Primary or Secondary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder vscType(String vscType) {
                 this.vscType = vscType;

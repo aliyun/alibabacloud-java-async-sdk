@@ -106,7 +106,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the elasticity assurances.</p>
+         * ElasticityAssuranceSet.
          */
         public Builder elasticityAssuranceSet(ElasticityAssuranceSet elasticityAssuranceSet) {
             this.elasticityAssuranceSet = elasticityAssuranceSet;
@@ -114,7 +114,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The number of entries per page for the elasticity assurance service query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query of elasticity assurance services.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -147,7 +147,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,12 +229,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1144775968548340</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -242,12 +237,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -255,12 +245,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -459,12 +444,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * AvailableAmount.
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -472,9 +452,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
+             * ElasticityAssuranceUsages.
              */
             public Builder elasticityAssuranceUsages(ElasticityAssuranceUsages elasticityAssuranceUsages) {
                 this.elasticityAssuranceUsages = elasticityAssuranceUsages;
@@ -490,10 +468,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.c6.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -509,10 +484,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of instances for which capacity of an instance type is reserved.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * TotalAmount.
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -520,10 +492,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that have used the elasticity assurance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -531,10 +500,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * zoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -681,10 +647,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the time-segmented assurance ends.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * EndHour.
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -692,15 +655,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the recurrence rule. Valid values:</p>
-             * <ul>
-             * <li>Daily</li>
-             * <li>Weekly</li>
-             * <li>Monthly</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Daily</p>
+             * RecurrenceType.
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -708,15 +663,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recurrence value of the time-segmented assurance. Valid values:</p>
-             * <ul>
-             * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</li>
-             * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</li>
-             * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can set RecurrenceValue to two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * RecurrenceValue.
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -724,10 +671,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the time-segmented assurance takes effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * StartHour.
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;
@@ -848,10 +792,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -859,10 +800,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1204,7 +1142,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the allocated resources.</p>
+             * AllocatedResources.
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -1212,10 +1150,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the elasticity assurance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1223,12 +1158,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>e114477596854834</p>
+             * ElasticityAssuranceOwnerId.
              */
             public Builder elasticityAssuranceOwnerId(String elasticityAssuranceOwnerId) {
                 this.elasticityAssuranceOwnerId = elasticityAssuranceOwnerId;
@@ -1236,10 +1166,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the elasticity assurance expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-12-03T16:00Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1247,10 +1174,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PostPaid</p>
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1258,12 +1182,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * LatestStartTime.
              */
             public Builder latestStartTime(String latestStartTime) {
                 this.latestStartTime = latestStartTime;
@@ -1271,14 +1190,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the elasticity assurance. Valid values:</p>
-             * <ul>
-             * <li>ElasticityAssurance: the general-purpose elasticity assurance.</li>
-             * <li>TimeDivisionElasticityAssurance: the time-segmented assurance of the elasticity assurance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ElasticityAssurance</p>
+             * PackageType.
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -1286,10 +1198,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the elasticity assurance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eap-bp1ir35kqtn8ywci****</p>
+             * PrivatePoolOptionsId.
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -1297,14 +1206,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the private pool associated with the elasticity assurance. Valid values:</p>
-             * <ul>
-             * <li>Open: open private pool</li>
-             * <li>Target: specific private pool</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Target</p>
+             * PrivatePoolOptionsMatchCriteria.
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -1312,10 +1214,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the elasticity assurance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eapTestName</p>
+             * PrivatePoolOptionsName.
              */
             public Builder privatePoolOptionsName(String privatePoolOptionsName) {
                 this.privatePoolOptionsName = privatePoolOptionsName;
@@ -1323,7 +1222,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recurrence rules of the time-segmented assurances.</p>
+             * RecurrenceRules.
              */
             public Builder recurrenceRules(RecurrenceRules recurrenceRules) {
                 this.recurrenceRules = recurrenceRules;
@@ -1331,10 +1230,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the elasticity assurance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1342,10 +1238,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1353,10 +1246,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the elasticity assurance takes effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-12-03T05:25Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1364,14 +1254,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates when the elasticity assurance takes effect. Valid values:</p>
-             * <ul>
-             * <li>Now: The elasticity assurance takes effect immediately after it is created.</li>
-             * <li>Later: The elasticity assurance takes effect at a specified time.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Now</p>
+             * StartTimeType.
              */
             public Builder startTimeType(String startTimeType) {
                 this.startTimeType = startTimeType;
@@ -1379,16 +1262,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the elasticity assurance. Valid values:</p>
-             * <ul>
-             * <li>Preparing</li>
-             * <li>Prepared</li>
-             * <li>Active</li>
-             * <li>Released</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1396,7 +1270,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the elasticity assurance.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1404,10 +1278,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of times that the elasticity assurance is applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Unlimited</p>
+             * TotalAssuranceTimes.
              */
             public Builder totalAssuranceTimes(String totalAssuranceTimes) {
                 this.totalAssuranceTimes = totalAssuranceTimes;
@@ -1415,12 +1286,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * UsedAssuranceTimes.
              */
             public Builder usedAssuranceTimes(Integer usedAssuranceTimes) {
                 this.usedAssuranceTimes = usedAssuranceTimes;

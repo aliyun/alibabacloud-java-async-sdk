@@ -80,7 +80,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the charges for the order.</p>
+         * FeeOfInstances.
          */
         public Builder feeOfInstances(FeeOfInstances feeOfInstances) {
             this.feeOfInstances = feeOfInstances;
@@ -88,7 +88,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order. This is returned only when the payment method is changed to subscription.</p>
+         * <p>The order ID. This parameter is returned only when the billing method is changed to subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>20413515388****</p>
@@ -181,12 +181,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unit of currency for the bill.</p>
-             * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
-             * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CNY</p>
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -194,10 +189,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The charged amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Fee.
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -205,10 +197,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the dedicated hosts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dh-bp181e5064b5sotrr****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

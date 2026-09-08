@@ -106,7 +106,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the launch template versions.</p>
+         * LaunchTemplateVersionSets.
          */
         public Builder launchTemplateVersionSets(LaunchTemplateVersionSets launchTemplateVersionSets) {
             this.launchTemplateVersionSets = launchTemplateVersionSets;
@@ -114,7 +114,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3989ED0C-20A1-4351-A127-2067FF8390AX</p>
@@ -359,10 +359,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sp-wz91dz3ghear2a5s****</p>
+             * AutoSnapshotPolicyId.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -370,14 +367,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the performance burst feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * BurstingEnabled.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -385,10 +375,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_ssd</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -396,10 +383,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to release the data disk when the instance is released.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DeleteWithInstance.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -407,10 +391,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDiskDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -418,17 +399,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount point of the data disk. The mount points are named based on the number of data disks:</p>
-             * <ul>
-             * <li>1st to 25th data disks: /dev/xvd<code>[b-z]</code>.</li>
-             * <li>From the 26th data disk on: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> to change the category and size of data disk N created based on the image.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>/dev/xvda</p>
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -436,10 +407,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDiskName</p>
+             * DiskName.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -447,10 +415,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data disk is encrypted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -458,10 +423,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the KMS key used for the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+             * KMSKeyId.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -469,16 +431,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level of the ESSD to use as a data disk. This parameter is returned only when the value of <code>Category</code> is cloud_essd. Valid values:</p>
-             * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PL1</p>
+             * PerformanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -486,14 +439,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
-             * <blockquote>
-             * <p> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>50000</p>
+             * ProvisionedIops.
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -501,10 +447,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -512,10 +455,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot to use to create the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bp67acfmxazb4p****</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -623,14 +563,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * LoginAsNonRoot.
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -842,14 +775,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DeleteOnRelease.
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;
@@ -857,10 +783,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the secondary ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testNetworkInterfacesDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -868,10 +791,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.s2.xlarge</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -879,10 +799,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the secondary ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testNetworkInterfaceName</p>
+             * NetworkInterfaceName.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -890,14 +807,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The communication mode of the primary ENI. Valid values:</p>
-             * <ul>
-             * <li>Standard: uses the TCP communication mode.</li>
-             * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Standard</p>
+             * NetworkInterfaceTrafficMode.
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -905,10 +815,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary private IP address of the secondary ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>203.0.<em>.</em></p>
+             * PrimaryIpAddress.
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -916,13 +823,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.</p>
-             * <blockquote>
-             * <p> SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp67acfmxazb4p****</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -930,10 +831,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the security groups to which to assign the secondary ENI.</p>
-             * <blockquote>
-             * <p> SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.</p>
-             * </blockquote>
+             * SecurityGroupIds.
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -941,10 +839,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which to connect the ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp67acfmxazb4p****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1052,13 +947,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.</p>
-             * <blockquote>
-             * <p> SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp67acfmxazb4p****</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1179,10 +1068,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag to add to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1190,10 +1076,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag to add to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2029,10 +1912,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The automatic release time of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-14T14:18:00Z</p>
+             * AutoReleaseTime.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -2040,15 +1920,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether auto-renewal is enabled for the instance. This parameter is valid only if <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p>Default value: false.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoRenew.
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -2056,12 +1928,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal period of the instance. Valid values:</p>
-             * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-             * <p>Default value: 1.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AutoRenewPeriod.
              */
             public Builder autoRenewPeriod(Integer autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -2069,14 +1936,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance mode of the burstable instance. Valid values:</p>
-             * <ul>
-             * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-             * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Standard</p>
+             * CreditSpecification.
              */
             public Builder creditSpecification(String creditSpecification) {
                 this.creditSpecification = creditSpecification;
@@ -2084,7 +1944,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the data disks.</p>
+             * DataDisks.
              */
             public Builder dataDisks(DataDisks dataDisks) {
                 this.dataDisks = dataDisks;
@@ -2092,18 +1952,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether release protection is enabled for the instance. This parameter indicates whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p>Default value: false.</p>
-             * <blockquote>
-             * <p> This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DeletionProtection.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -2111,10 +1960,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds-bp1brhwhoqinyjd6****</p>
+             * DeploymentSetId.
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -2122,10 +1968,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the system disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testInstanceDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2133,10 +1976,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operating system configuration of the instance is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * EnableVmOsConfig.
              */
             public Builder enableVmOsConfig(Boolean enableVmOsConfig) {
                 this.enableVmOsConfig = enableVmOsConfig;
@@ -2144,10 +1984,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testHostName</p>
+             * HostName.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -2155,18 +1992,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
-             * <ul>
-             * <li>enabled</li>
-             * <li>disabled</li>
-             * </ul>
-             * <p>Default value: enabled.</p>
-             * <blockquote>
-             * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes, by using instance metadata</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>enabled</p>
+             * HttpEndpoint.
              */
             public Builder httpEndpoint(String httpEndpoint) {
                 this.httpEndpoint = httpEndpoint;
@@ -2174,12 +2000,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * HttpPutResponseHopLimit.
              */
             public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
                 this.httpPutResponseHopLimit = httpPutResponseHopLimit;
@@ -2187,18 +2008,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
-             * <ul>
-             * <li>optional: The security hardening mode (IMDSv2) is not forcefully used.</li>
-             * <li>required: The security hardening mode (IMDSv2) is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
-             * </ul>
-             * <p>Default value: optional.</p>
-             * <blockquote>
-             * <p> For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes, by using instance metadata</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>optional</p>
+             * HttpTokens.
              */
             public Builder httpTokens(String httpTokens) {
                 this.httpTokens = httpTokens;
@@ -2206,10 +2016,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>m-bp67acfmxazb4p****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -2217,7 +2024,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the image options.</p>
+             * ImageOptions.
              */
             public Builder imageOptions(ImageOptions imageOptions) {
                 this.imageOptions = imageOptions;
@@ -2225,16 +2032,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the image. Valid values:</p>
-             * <ul>
-             * <li>system: public image provided by Alibaba Cloud</li>
-             * <li>self: custom image that you created</li>
-             * <li>others: shared image from another Alibaba Cloud account</li>
-             * <li>marketplace: Alibaba Cloud Marketplace image</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * ImageOwnerAlias.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -2242,14 +2040,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
-             * <ul>
-             * <li>PrePaid: subscription</li>
-             * <li>PostPaid: pay-as-you-go</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Postpaid</p>
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -2257,10 +2048,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testInstanceName</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2268,10 +2056,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g5.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2279,10 +2064,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method for network usage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PayByTraffic</p>
+             * InternetChargeType.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -2290,10 +2072,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum inbound public bandwidth.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * InternetMaxBandwidthIn.
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -2301,10 +2080,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum outbound public bandwidth.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * InternetMaxBandwidthOut.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -2312,10 +2088,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance is I/O optimized.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>none</p>
+             * IoOptimized.
              */
             public Builder ioOptimized(String ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -2323,10 +2096,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of IPv6 addresses to assign to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Ipv6AddressCount.
              */
             public Builder ipv6AddressCount(Integer ipv6AddressCount) {
                 this.ipv6AddressCount = ipv6AddressCount;
@@ -2334,10 +2104,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key pair.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testKeyPairName</p>
+             * KeyPairName.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2345,7 +2112,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the secondary elastic network interfaces (ENIs).</p>
+             * NetworkInterfaces.
              */
             public Builder networkInterfaces(NetworkInterfaces networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -2353,14 +2120,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type. Valid values:</p>
-             * <ul>
-             * <li>classic: classic network</li>
-             * <li>vpc: VPC</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -2368,10 +2128,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the username and password preset in the image are used.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * PasswordInherit.
              */
             public Builder passwordInherit(Boolean passwordInherit) {
                 this.passwordInherit = passwordInherit;
@@ -2379,10 +2136,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription duration of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Period.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -2390,11 +2144,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the subscription period. Valid values:</p>
-             * <p>Month (default)</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Month</p>
+             * PeriodUnit.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -2402,10 +2152,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address to assign to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><code>10.1.**.**</code></p>
+             * PrivateIpAddress.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -2413,10 +2160,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance Resource Access Management (RAM) role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testRamRoleName</p>
+             * RamRoleName.
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -2424,10 +2168,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the launch template belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2435,10 +2176,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Security Hardening is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * SecurityEnhancementStrategy.
              */
             public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
                 this.securityEnhancementStrategy = securityEnhancementStrategy;
@@ -2446,13 +2184,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group to which to assign the instance.</p>
-             * <blockquote>
-             * <p> <code>SecurityGroupId</code> and <code>SecurityGroupIds</code> are mutually exclusive in the response.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp67acfmxazb4p****</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2460,10 +2192,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the security groups to which to assign the instance.</p>
-             * <blockquote>
-             * <p> <code>SecurityGroupId</code> and <code>SecurityGroupIds</code> are mutually exclusive in the response.</p>
-             * </blockquote>
+             * SecurityGroupIds.
              */
             public Builder securityGroupIds(LaunchTemplateDataSecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -2479,18 +2208,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protection period of the spot instance. Unit: hours. Valid values:</p>
-             * <ul>
-             * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-             * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-             * </ul>
-             * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
-             * <blockquote>
-             * <p> This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * SpotDuration.
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -2498,10 +2216,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum hourly price of the spot instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.98</p>
+             * SpotPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -2509,15 +2224,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
-             * <ul>
-             * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-             * <li>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</li>
-             * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NoSpot</p>
+             * SpotStrategy.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -2621,7 +2328,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags to add to the instance.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -2629,10 +2336,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user data of the instance, which is Base64-encoded.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SGVsbG9FQ1M=</p>
+             * UserData.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -2640,10 +2344,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which to connect the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp67acfmxazb4p****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2651,10 +2352,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v-bp67acfmxazb4p****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2662,10 +2360,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-g</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -2823,10 +2518,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the launch template version was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-01-17T08:22:43Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2834,10 +2526,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456789****</p>
+             * CreatedBy.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -2845,10 +2534,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the launch template version is the default version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DefaultVersion.
              */
             public Builder defaultVersion(Boolean defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -2856,7 +2542,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the launch template.</p>
+             * LaunchTemplateData.
              */
             public Builder launchTemplateData(LaunchTemplateData launchTemplateData) {
                 this.launchTemplateData = launchTemplateData;
@@ -2864,10 +2550,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lt-bp67acfmxazb4p****</p>
+             * LaunchTemplateId.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -2875,10 +2558,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testLaunchTemplateName</p>
+             * LaunchTemplateName.
              */
             public Builder launchTemplateName(String launchTemplateName) {
                 this.launchTemplateName = launchTemplateName;
@@ -2886,10 +2566,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the launch template version was modified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-01-17T08:40:00Z</p>
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2897,10 +2574,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the launch template version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testVersionDescription</p>
+             * VersionDescription.
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -2908,10 +2582,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the launch template version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * VersionNumber.
              */
             public Builder versionNumber(Long versionNumber) {
                 this.versionNumber = versionNumber;

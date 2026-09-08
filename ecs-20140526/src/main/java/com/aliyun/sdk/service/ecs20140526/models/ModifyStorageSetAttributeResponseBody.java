@@ -54,10 +54,7 @@ public class ModifyStorageSetAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>04F0F334-1335-436C-A1D7-6C044FE73369</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

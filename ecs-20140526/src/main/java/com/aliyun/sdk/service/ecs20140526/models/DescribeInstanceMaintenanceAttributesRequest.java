@@ -181,7 +181,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs. You can specify up to 100 instance IDs.</p>
+         * <p>The list of instance IDs. You can specify up to 100 instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
@@ -211,9 +211,9 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
+         * <p>The page number of the maintenance attribute list.</p>
+         * <p>Minimum value: 1</p>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>Default value: 10</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -238,7 +238,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -430,19 +430,17 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The category of the snapshot. Valid values:</p>
+         * <p>The snapshot type. Valid values:</p>
          * <ul>
-         * <li><p>Standard: standard snapshot.</p>
-         * </li>
-         * <li><p>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
-         * <ul>
-         * <li>If you have used local snapshots before December 14, 2020, you can use this parameter.</li>
-         * <li>If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</li>
+         * <li>Standard: Normal snapshot.</li>
+         * <li>Flash: local snapshot. This value is about to be deprecated. Local snapshots have been replaced by the snapshot instant access feature. The metric description is as follows:<ul>
+         * <li>If you used local snapshots before December 14, 2020, you can use this parameter as it is active.</li>
+         * <li>If you did not use local snapshots before December 14, 2020, you cannot use this parameter.</li>
          * </ul>
          * </li>
-         * <li><p>archive: archive snapshot.</p>
-         * </li>
+         * <li>archive: archive snapshot.</li>
          * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">Chinese notice on Alibaba Cloud snapshot service upgrade and new billing items on December 14</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -454,7 +452,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The disk ID.</p>
+         * <p>The ID of the disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp67acfmxazb4p****</p>
@@ -466,10 +464,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
-         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the resource status is queried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,7 +480,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the snapshot is encrypted. Default value: false.</p>
+         * <p>Specifies whether to filter encrypted snapshots. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -494,7 +492,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance whose cloud disk snapshots you want to query.</p>
+         * <p>The instance ID. Specify this parameter to query snapshot information of disks attached to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
@@ -506,7 +504,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used for the data disk.</p>
+         * <p>The Key Management Service (KMS) key ID for the data disk.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -518,7 +516,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100</p>
+         * <p>The maximum number of entries per page for paging query. Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -531,7 +529,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Obtained from the response of the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -562,7 +560,7 @@ public class DescribeSnapshotsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -576,7 +574,7 @@ public class DescribeSnapshotsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -589,7 +587,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the disk. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -602,9 +600,9 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.</p>
+         * <p>Filtering by default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -635,7 +633,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of snapshots. You can specify a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+         * <p>The snapshot IDs. The value is a JSON array that consists of up to 100 snapshot IDs. Separate the IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;s-bp67acfmxazb4p****&quot;, &quot;s-bp67acfmxazb5p****&quot;, … &quot;s-bp67acfmxazb6p****&quot;]</p>
@@ -647,10 +645,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The snapshot chain ID. You can specify a JSON array that contains up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+         * <p>The snapshot chain ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;sl-bp1grgphbcc9brb5****&quot;, &quot;sl-bp1c4izumvq0i5bs****&quot;, … &quot;sl-bp1akk7isz866dds****&quot;]</p>
+         * <p>sl-bp1grgphbcc9brb5****</p>
          */
         public Builder snapshotLinkId(String snapshotLinkId) {
             this.putQueryParameter("SnapshotLinkId", snapshotLinkId);
@@ -659,7 +657,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The name of the snapshot.</p>
+         * <p>The snapshot name.</p>
          * 
          * <strong>example:</strong>
          * <p>testSnapshotName</p>
@@ -671,11 +669,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The type of the snapshot. Valid values:</p>
+         * <p>The automatic creation type. Valid values: </p>
          * <ul>
-         * <li>auto: automatic snapshot</li>
-         * <li>user: manual snapshot</li>
-         * <li>all (default): all snapshot types</li>
+         * <li>auto: automatic snapshot.</li>
+         * <li>user: manual snapshot.</li>
+         * <li>all (default): all automatic creation types.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -688,17 +686,17 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The source disk type of the snapshot. Valid values:</p>
+         * <p>The type of the source disk. Valid values: </p>
          * <ul>
          * <li>system: system disk.</li>
          * <li>data: data disk.</li>
          * </ul>
          * <blockquote>
-         * <p> The value of this parameter is case-insensitive.</p>
+         * <p>The values are case-insensitive.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Data</p>
+         * <p>system</p>
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -707,12 +705,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The status of the snapshot. Valid values:</p>
+         * <p>The snapshot status. Valid values: </p>
          * <ul>
          * <li>progressing: The snapshot is being created.</li>
          * <li>accomplished: The snapshot is created.</li>
-         * <li>failed: The snapshot fails to be created.</li>
-         * <li>all (default): This value indicates all snapshot states.</li>
+         * <li>failed: The snapshot failed to be created.</li>
+         * <li>all (default): all snapshot statuses.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -725,7 +723,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The tags of the snapshot.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -734,12 +732,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the snapshot has been used to create custom images or disks. Valid values:</p>
+         * <p>Specifies whether the snapshot has been used to create images or disks. Valid values: </p>
          * <ul>
          * <li>image: The snapshot has been used to create custom images.</li>
          * <li>disk: The snapshot has been used to create disks.</li>
-         * <li>image_disk: The snapshot has been used to create both custom images and data disks.</li>
-         * <li>none: The snapshot has not been used to create custom images or disks.</li>
+         * <li>image_disk: The snapshot has been used to create both data disks and custom images.</li>
+         * <li>none: The snapshot has not been used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -811,7 +809,7 @@ public class DescribeSnapshotsRequest extends Request {
             } 
 
             /**
-             * <p>The key of filter 1 that is used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by configuring both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the time.</p>
+             * <p>The filter key used to query resources. Set the value to <code>CreationStartTime</code>. When you specify both <code>Filter.1.Key</code> and <code>Filter.1.Value</code>, you can query resources created after the specified point in time.</p>
              * 
              * <strong>example:</strong>
              * <p>CreationStartTime</p>
@@ -822,7 +820,7 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * <p>The value of filter 1 that is used to query resources. Set the value to a time. If you configure this parameter, you must also configure <code>Filter.1.Key</code>. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+             * <p>The filter value used to query resources. When you specify this parameter, you must also specify <code>Filter.1.Key</code>. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-12-13T17:00Z</p>
@@ -892,8 +890,8 @@ public class DescribeSnapshotsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20</p>
-             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key of the snapshot. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -904,7 +902,7 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the snapshot. Valid values of N: 1 to 20.</p>
+             * <p>The tag value of the snapshot. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

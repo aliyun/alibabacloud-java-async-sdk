@@ -183,10 +183,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the trunk ENI.</p>
-         * <blockquote>
-         * <p> This parameter is unavailable for use.</p>
-         * </blockquote>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +196,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The network interface controller (NIC) ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +227,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +258,10 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the trunk ENI.</p>
+         * <blockquote>
+         * <p>This parameter is not yet available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>eni-f8zapqwj1v1j4ia3****</p>

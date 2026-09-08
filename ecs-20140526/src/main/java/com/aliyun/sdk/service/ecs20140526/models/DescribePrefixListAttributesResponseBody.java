@@ -145,7 +145,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IP address family of the prefix list. Valid values:</p>
+         * <p>The address family of the prefix list. Valid values:</p>
          * <ul>
          * <li>IPv4</li>
          * <li>IPv6</li>
@@ -182,7 +182,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the entries in the prefix list.</p>
+         * Entries.
          */
         public Builder entries(Entries entries) {
             this.entries = entries;
@@ -190,7 +190,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries in the prefix list.</p>
+         * <p>The maximum number of entries that the prefix list supports.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,7 +201,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the prefix list.</p>
+         * <p>The prefix list ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -292,10 +292,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CIDR block in entry N.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.1.0/24</p>
+             * Cidr.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -303,10 +300,10 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description in entry N.</p>
+             * <p>The description of the prefix list.</p>
              * 
              * <strong>example:</strong>
-             * <p>Description Sample 01</p>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;

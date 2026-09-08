@@ -140,10 +140,7 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>RAM用户的虚拟账号ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>155780923770</p>
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -152,7 +149,7 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,10 +162,7 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>资源主账号的账号名称。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECSforCloud</p>
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -177,10 +171,7 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>资源主账号的ID，亦即UID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>155780923770</p>
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -189,7 +180,7 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the list of task IDs.</p>
+         * <p>The task ID. You can call <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> to query task IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

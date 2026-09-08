@@ -67,7 +67,7 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the prices and promotion rules.</p>
+         * <p>The price information, including the price and discount rules.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -144,10 +144,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the pricing rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Receive a 15% discount on a 1-year subscription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the pricing rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>587</p>
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -318,10 +312,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>655.2</p>
+             * DiscountPrice.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -329,10 +320,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4368</p>
+             * OriginalPrice.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -340,17 +328,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name. Valid values:</p>
-             * <ul>
-             * <li>InstanceType</li>
-             * <li>bandwidth</li>
-             * <li>image</li>
-             * <li>SystemDisk</li>
-             * <li>DataDisk</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * Resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -358,7 +336,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the pricing rules.</p>
+             * SubRules.
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;
@@ -366,10 +344,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3712.8</p>
+             * TradePrice.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -543,8 +518,8 @@ public class DescribePriceResponseBody extends TeaModel {
 
             /**
              * <p>The currency unit.</p>
-             * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
-             * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+             * <p>China site: CNY.</p>
+             * <p>International site: USD.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -555,10 +530,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the price.</p>
-             * <blockquote>
-             * <p> This parameter is returned only when ResourceType is set to instance.</p>
-             * </blockquote>
+             * DetailInfos.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -588,7 +560,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.</p>
+             * <p>The hourly price of the reserved instance with no upfront or partial upfront payment.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -599,7 +571,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price of the order. The transaction price is equal to the original price minus the discount.</p>
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>3712.8</p>
@@ -696,8 +668,8 @@ public class DescribePriceResponseBody extends TeaModel {
 
             /**
              * <p>The currency unit.</p>
-             * <p>China site (aliyun.com): CNY</p>
-             * <p>International site (alibabacloud.com): USD</p>
+             * <p>China site: CNY.</p>
+             * <p>International site: USD.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -854,10 +826,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the promotion rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Receive a 15% discount on a 1-year subscription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -865,10 +834,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the pricing rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>587</p>
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -1018,7 +984,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the promotion rules.</p>
+             * Rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

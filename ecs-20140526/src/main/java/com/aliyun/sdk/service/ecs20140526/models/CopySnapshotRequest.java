@@ -276,7 +276,7 @@ public class CopySnapshotRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is currently in invitational preview and unavailable for public use.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          */
         public Builder arn(java.util.List<Arn> arn) {
@@ -286,7 +286,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -298,7 +298,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination region to which to copy the source snapshot.</p>
+         * <p>The ID of the destination region to which to copy the snapshot.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class CopySnapshotRequest extends Request {
 
         /**
          * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>Default value: null.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,8 +325,8 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>This parameter is left empty by default.</p>
+         * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. The name can contain characters that are classified as letters in Unicode, including letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>Default value: null.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class CopySnapshotRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -353,10 +353,10 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to encrypt the new snapshot. Valid values:</p>
+         * <p>Specifies whether to encrypt the cloud disk. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: encrypts the cloud disk.</li>
+         * <li>false: does not encrypt the cloud disk.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -370,7 +370,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.</p>
+         * <p>The customer master key (CMK) in the destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -391,7 +391,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the source snapshot. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the source snapshot. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -434,8 +434,8 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the new snapshot. Unit: days. The new snapshot is automatically released when its retention period ends. Valid values: 1 to 65536.</p>
-         * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
+         * <p>The retention period of the new snapshot, in days. The snapshot undergoes automatic release when the retention period expires. Valid values: 1 to 65536.</p>
+         * <p>Default value: null, which indicates that the snapshot does not undergo automatic release.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -460,7 +460,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The tag key and value of the new snapshot.</p>
+         * <p>The tag information of the new snapshot.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -639,7 +639,7 @@ public class CopySnapshotRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * <p>The tag key of the new snapshot. Once specified, the tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -650,7 +650,7 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * <p>The tag value of the new snapshot. Once specified, the tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

@@ -106,7 +106,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the image templates.</p>
+         * ImagePipeline.
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;
@@ -114,7 +114,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the &quot;Usage notes&quot; section of this topic.</p>
+         * <p>The pagination token returned in this call. For more information about how to use it, refer to the operation description.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -270,13 +270,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</p>
-             * <ul>
-             * <li>disable</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>disable</p>
+             * ImageNameSuffix.
              */
             public Builder imageNameSuffix(String imageNameSuffix) {
                 this.imageNameSuffix = imageNameSuffix;
@@ -284,17 +278,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to retain Cloud Assistant. During the image building process, the system automatically installs Cloud Assistant in the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the new image created based on the image template. Valid values:</p>
-             * <ul>
-             * <li>true: retains Cloud Assistant.</li>
-             * <li>false: does not retain Cloud Assistant.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter does not affect Cloud Assistant that comes with your image.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * RetainCloudAssistant.
              */
             public Builder retainCloudAssistant(Boolean retainCloudAssistant) {
                 this.retainCloudAssistant = retainCloudAssistant;
@@ -348,15 +332,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
-             * <ul>
-             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
-             * <li>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>auto</p>
+             * NvmeSupport.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -423,10 +399,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -434,10 +407,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -597,10 +567,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -608,10 +575,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image family.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>family</p>
+             * ImageFamily.
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -619,7 +583,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature attributes of the image.</p>
+             * ImageFeatures.
              */
             public Builder imageFeatures(ImageFeatures imageFeatures) {
                 this.imageFeatures = imageFeatures;
@@ -627,10 +591,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix of the image name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>imageName</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -638,7 +599,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image.</p>
+             * ImageTags.
              */
             public Builder imageTags(ImageTags imageTags) {
                 this.imageTags = imageTags;
@@ -731,16 +692,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of disk N in the custom image after the image is imported.</p>
-             * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the source image file. Unit: GiB. Valid values:</p>
-             * <ul>
-             * <li>When N is set to 1, this parameter indicates the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
-             * <li>When N is set to an integer in the range of 2 to 17, this parameter indicates the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
-             * </ul>
-             * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>40</p>
+             * DiskImageSize.
              */
             public Builder diskImageSize(Integer diskImageSize) {
                 this.diskImageSize = diskImageSize;
@@ -748,15 +700,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the image. Valid values:</p>
-             * <ul>
-             * <li>RAW</li>
-             * <li>VHD</li>
-             * <li>QCOW2</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RAW</p>
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -764,10 +708,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) bucket where the image file is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecsimageos</p>
+             * OSSBucket.
              */
             public Builder OSSBucket(String OSSBucket) {
                 this.OSSBucket = OSSBucket;
@@ -775,10 +716,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name (key) of the object that the image file is stored as in the OSS bucket.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CentOS_5.4_32.raw</p>
+             * OSSObject.
              */
             public Builder OSSObject(String OSSObject) {
                 this.OSSObject = OSSObject;
@@ -907,14 +845,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
-             * <ul>
-             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>supported</p>
+             * NvmeSupport.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -1253,14 +1184,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operating system architecture. Valid values:</p>
-             * <ul>
-             * <li>x86_64</li>
-             * <li>arm64</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>x86_64</p>
+             * Architecture.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -1268,14 +1192,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The boot mode of the image. Valid values:</p>
-             * <ul>
-             * <li>BIOS: BIOS mode</li>
-             * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>BIOS</p>
+             * BootMode.
              */
             public Builder bootMode(String bootMode) {
                 this.bootMode = bootMode;
@@ -1283,10 +1200,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1294,11 +1208,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of disks from which the custom images are created.</p>
-             * <ul>
-             * <li>When the value of N is 1, a custom image is created from the system disk.</li>
-             * <li>When the value of N is an integer in the range of 2 to 17, a custom image is created from a data disk.</li>
-             * </ul>
+             * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -1306,7 +1216,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the custom image.</p>
+             * Features.
              */
             public Builder features(Features features) {
                 this.features = features;
@@ -1314,10 +1224,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix of the image name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>imageName</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1333,15 +1240,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the license to use to activate the operating system after the image is imported. Valid values:</p>
-             * <ul>
-             * <li>Auto: ECS detects the operating system of the image and allocates a license to the operating system In this mode, the system first checks whether a license allocated by an official Alibaba Cloud channel is specified in the <code>Platform</code>. If a license allocated by an official Alibaba Cloud channel is specified, the system allocates the license to the imported image. If no such license is specified, the Bring Your Own License (BYOL) mode is used.</li>
-             * <li>Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by <code>Platform</code>.</li>
-             * <li>BYOL: The license that comes with the source operating system is used. When you use the BYOL license, make sure that your license key is supported by Alibaba Cloud.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Auto</p>
+             * LicenseType.
              */
             public Builder licenseType(String licenseType) {
                 this.licenseType = licenseType;
@@ -1349,14 +1248,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type. Valid values:</p>
-             * <ul>
-             * <li>windows: Windows operating systems</li>
-             * <li>linux: Linux operating systems</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>linux</p>
+             * OSType.
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -1364,39 +1256,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the operating system. Valid values:</p>
-             * <ul>
-             * <li>Aliyun</li>
-             * <li>Anolis</li>
-             * <li>CentOS</li>
-             * <li>Ubuntu</li>
-             * <li>CoreOS</li>
-             * <li>SUSE</li>
-             * <li>Debian</li>
-             * <li>OpenSUSE</li>
-             * <li>FreeBSD</li>
-             * <li>RedHat</li>
-             * <li>Kylin</li>
-             * <li>UOS</li>
-             * <li>Fedora</li>
-             * <li>Fedora CoreOS</li>
-             * <li>CentOS Stream</li>
-             * <li>AlmaLinux</li>
-             * <li>Rocky Linux</li>
-             * <li>Gentoo</li>
-             * <li>Customized Linux</li>
-             * <li>Others Linux</li>
-             * <li>Windows Server 2022</li>
-             * <li>Windows Server 2019</li>
-             * <li>Windows Server 2016</li>
-             * <li>Windows Server 2012</li>
-             * <li>Windows Server 2008</li>
-             * <li>Windows Server 2003</li>
-             * <li>Other Windows</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Aliyun</p>
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1404,12 +1264,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * RetainImportedImage.
              */
             public Builder retainImportedImage(Boolean retainImportedImage) {
                 this.retainImportedImage = retainImportedImage;
@@ -1546,10 +1401,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1557,10 +1409,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -2037,7 +1886,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.</p>
+             * AddAccounts.
              */
             public Builder addAccounts(AddAccounts addAccounts) {
                 this.addAccounts = addAccounts;
@@ -2045,7 +1894,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced settings.</p>
+             * AdvancedOptions.
              */
             public Builder advancedOptions(AdvancedOptions advancedOptions) {
                 this.advancedOptions = advancedOptions;
@@ -2053,14 +1902,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source image.</p>
-             * <ul>
-             * <li>When <code>BaseImageType</code> is set to IMAGE, the value of this parameter is the ID of a custom image.</li>
-             * <li>When <code>BaseImageType</code> is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>m-bp67acfmxazb4p****</p>
+             * BaseImage.
              */
             public Builder baseImage(String baseImage) {
                 this.baseImage = baseImage;
@@ -2068,14 +1910,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source image. Valid values:</p>
-             * <ul>
-             * <li>IMAGE: custom image</li>
-             * <li>IMAGE_FAMILY: image family</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>IMAGE</p>
+             * BaseImageType.
              */
             public Builder baseImageType(String baseImageType) {
                 this.baseImageType = baseImageType;
@@ -2083,10 +1918,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the image template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FROM IMAGE:m-bp67acfmxazb4p****</p>
+             * BuildContent.
              */
             public Builder buildContent(String buildContent) {
                 this.buildContent = buildContent;
@@ -2094,10 +1926,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image template was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-24T06:00:00Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -2105,10 +1934,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to release the intermediate instance when the image fails to be created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DeleteInstanceOnFailure.
              */
             public Builder deleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
                 this.deleteInstanceOnFailure = deleteInstanceOnFailure;
@@ -2116,10 +1942,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is description.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2127,13 +1950,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The family of the image created based on the image template.</p>
-             * <blockquote>
-             * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFamily.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * ImageFamily.
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -2141,13 +1958,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name prefix of the image created based on the image template.</p>
-             * <blockquote>
-             * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageName.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>testImageName</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -2155,7 +1966,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the image created based on the image template.</p>
+             * ImageOptions.
              */
             public Builder imageOptions(ImageOptions imageOptions) {
                 this.imageOptions = imageOptions;
@@ -2163,10 +1974,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ip-2ze5tsl5bp6nf2b3****</p>
+             * ImagePipelineId.
              */
             public Builder imagePipelineId(String imagePipelineId) {
                 this.imagePipelineId = imagePipelineId;
@@ -2174,7 +1982,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes and settings of the imported image.</p>
+             * ImportImageOptions.
              */
             public Builder importImageOptions(ImportImageOptions importImageOptions) {
                 this.importImageOptions = importImageOptions;
@@ -2182,10 +1990,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g6.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2193,10 +1998,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * InternetMaxBandwidthOut.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -2204,10 +2006,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testImagePipeline</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2215,13 +2014,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image created based on the image template supports the Non-Volatile Memory Express (NVMe) protocol.</p>
-             * <blockquote>
-             * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFeatures.NvmeSupport.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>auto</p>
+             * NvmeSupport.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -2237,14 +2030,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The repair mode of the image template.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Standard: the standard mode</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * RepairMode.
              */
             public Builder repairMode(String repairMode) {
                 this.repairMode = repairMode;
@@ -2252,10 +2038,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2263,10 +2046,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system disk size of the intermediate instance. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>40</p>
+             * SystemDiskSize.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -2274,7 +2054,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image template.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -2282,10 +2062,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the image test template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * TestContent.
              */
             public Builder testContent(String testContent) {
                 this.testContent = testContent;
@@ -2293,7 +2070,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of regions to which to distribute the image that will be created based on the image template.</p>
+             * ToRegionIds.
              */
             public Builder toRegionIds(ToRegionIds toRegionIds) {
                 this.toRegionIds = toRegionIds;
@@ -2301,10 +2078,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch in the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp67acfmxazb4p****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

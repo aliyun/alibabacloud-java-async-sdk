@@ -67,7 +67,7 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Port list entries.</p>
+         * <p>The port range list entries.</p>
          */
         public Builder entries(java.util.List<Entries> entries) {
             this.entries = entries;

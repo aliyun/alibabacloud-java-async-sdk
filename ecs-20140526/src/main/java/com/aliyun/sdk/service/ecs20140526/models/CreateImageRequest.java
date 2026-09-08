@@ -377,11 +377,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, use Architecture to specify the system architecture of the system disk. Valid values:</p>
+         * <p>The system architecture. After a data disk snapshot is specified as the system disk of the image, use this parameter to specify the system architecture of the system disk. Valid values:</p>
          * <ul>
-         * <li>i386</li>
-         * <li>x86_64</li>
-         * <li>arm64</li>
+         * <li>i386.</li>
+         * <li>x86_64.</li>
+         * <li>arm64.</li>
          * </ul>
          * <p>Default value: x86_64.</p>
          * 
@@ -397,13 +397,14 @@ public class CreateImageRequest extends Request {
         /**
          * <p>The boot mode of the image. Valid values:</p>
          * <ul>
-         * <li>BIOS: BIOS mode</li>
-         * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
-         * <li>UEFI-Preferred (default): BIOS mode and UEFI mode</li>
+         * <li>BIOS: BIOS boot mode.</li>
+         * <li>UEFI: UEFI boot mode.</li>
+         * <li>UEFI-Preferred: dual boot mode.</li>
          * </ul>
-         * <blockquote>
-         * <p> Before you specify this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</p>
-         * </blockquote>
+         * <notice>
+         * 
+         * <p>To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot modes supported by the target image before specifying this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
+         * </notice>
          * 
          * <strong>example:</strong>
          * <p>BIOS</p>
@@ -415,7 +416,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -427,7 +428,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image description. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>ImageTestDescription</p>
@@ -439,9 +440,9 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The mode in which to check the custom image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
+         * <p>The image detection strategy. If this parameter is not specified, detection is not triggered. Only the Standard detection mode is supported. </p>
          * <blockquote>
-         * <p> This parameter is supported for most Linux and Windows operating system versions. For information about image check items and operating system limits for image check, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limits for image check</a>.</p>
+         * <p>Most Linux and Windows versions are supported. For more information about image detection items and operating system limitations, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limitations for image detection</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -454,7 +455,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>Details of the disks and snapshots from which the custom image is created. If you want to create a custom image based on a system disk snapshot and data disk snapshots, use this parameter to specify the snapshots.</p>
+         * <p>The disk and snapshot information used to create the custom image. If you want to create a custom image from system disk and data disk snapshots, use this parameter to specify the snapshots.</p>
          */
         public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -472,7 +473,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The attributes of the custom image.</p>
+         * <p>The image feature-related properties.</p>
          */
         public Builder features(Features features) {
             this.putQueryParameter("Features", features);
@@ -481,7 +482,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The image family name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with aliyun or acs:. It cannot contain http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou-daily-update</p>
@@ -493,7 +494,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The image name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>TestCentOS</p>
@@ -507,7 +508,7 @@ public class CreateImageRequest extends Request {
         /**
          * <p>The image version.</p>
          * <blockquote>
-         * <p> If you specify an ECS instance that runs an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image by using <code>InstanceId</code>, you must leave this parameter empty or set this parameter to the <code>ImageVersion</code> value of the image run by the specified ECS instance.</p>
+         * <p>If you specify an instance ID (<code>InstanceId</code>) and the image of the instance is an Alibaba Cloud Marketplace image or a custom image created from an Alibaba Cloud Marketplace image, this parameter must be the same as the <code>ImageVersion</code> of the current instance image or left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -520,7 +521,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance from which to create the custom image. To create a custom image from an ECS instance, you must specify this parameter.</p>
+         * <p>The instance ID. This parameter is required when you create a custom image from an instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1g6zv0ce8oghu7****</p>
@@ -550,7 +551,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The operating system distribution for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use Platform to specify the operating system distribution for the system disk. Valid values:</p>
+         * <p>The operating system distribution. After a data disk snapshot is specified as the system disk of the image, use this parameter to specify the operating system distribution of the system disk. Valid values:</p>
          * <ul>
          * <li>Aliyun</li>
          * <li>Anolis</li>
@@ -591,7 +592,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the custom image that you want to create. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -604,9 +605,9 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.</p>
+         * <p>The ID of the resource group to which the custom image belongs. If you do not set this parameter to a value, the created image belongs to the default resource group.</p>
          * <blockquote>
-         * <p> If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have permissions on the default resource group and leave <code>ResourceGroupId</code> empty, the <code>Forbidden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group on which the RAM user has permissions or grant the RAM user permissions on the default resource group, and then call the CreateImage operation again.</p>
+         * <p>If you invoke this operation as a Resource Access Management (RAM) user and <code>ResourceGroupId</code> is left empty, note that when the RAM user does not have permissions on the default resource group, the error message <code>Forbidden: User not authorized to operate on the specified resource</code> is returned. Set a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group by using the corresponding Alibaba Cloud account before invoking this operation again.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -637,7 +638,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * SecureBootOptions.
+         * <p>The Secure Boot-related parameters.</p>
          */
         public Builder secureBootOptions(SecureBootOptions secureBootOptions) {
             this.putQueryParameter("SecureBootOptions", secureBootOptions);
@@ -646,9 +647,9 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot from which to create the custom image.</p>
+         * <p>The snapshot ID used to create the custom image.</p>
          * <blockquote>
-         * <p> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <code>DiskDeviceMapping.N.SnapshotId</code> to specify the snapshot ID. If you add data disk snapshots, you can use only <code>DiskDeviceMapping.N.SnapshotId</code> to specify snapshots.</p>
+         * <p>If you want to create a custom image only from the system disk snapshot of an instance, you can use this parameter or the <code>DiskDeviceMapping.N.SnapshotId</code> parameter. If you want to add data disk snapshots, use only the <code>DiskDeviceMapping.N.SnapshotId</code> parameter to specify snapshots.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -755,14 +756,16 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * <p>The device name of disk N in the custom image. Valid values:</p>
+             * <p>The device name in the custom image. Valid values:</p>
              * <ul>
-             * <li>The device name of the system disk must be /dev/xvda.</li>
-             * <li>The device names of the data disks are unique and range from /dev/xvdb to /dev/xvdz in alphabetical order.</li>
+             * <li><p>The device name of the system disk must be /dev/xvda.</p>
+             * </li>
+             * <li><p>The device names of data disks are in alphabetical order from /dev/xvdb to /dev/xvdz and cannot be duplicated.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>/dev/vdb</p>
+             * <p>/dev/xvdb</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -770,10 +773,10 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</p>
+             * <p>The type of the disk in the new image. You can use this parameter to specify a data disk snapshot as the system disk of the image. If you do not specify this parameter, the disk type defaults to the type of the disk from which the snapshot was created. Valid values:</p>
              * <ul>
-             * <li>system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</li>
-             * <li>data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</li>
+             * <li>system: system disk. Only one system disk snapshot can be specified.</li>
+             * <li>data: data disk. Up to 16 data disk snapshots can be specified.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -785,16 +788,14 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.</p>
+             * <p>The size of the disk, in GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on DiskDeviceMapping.N.SnapshotId:</p>
              * <ul>
-             * <li><p>If you leave DiskDeviceMapping.N.SnapshotId empty, DiskDeviceMapping.N.Size has the following valid values and default values:</p>
-             * <ul>
-             * <li>For basic disks, the valid values range from 5 to 2000, and the default value is 5.</li>
-             * <li>For other disks, the valid values range from 20 to 32768, and the default value is 20.</li>
+             * <li>If SnapshotId is not specified, the valid values and default value of Size are:<ul>
+             * <li>Basic disk: 5 to 2000 GiB. Default value: 5.</li>
+             * <li>Other disk types: 20 to 32768 GiB. Default value: 20.</li>
              * </ul>
              * </li>
-             * <li><p>If you specify DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
-             * </li>
+             * <li>If SnapshotId is specified, the value of Size must be greater than or equal to the size of the snapshot. Default value: the size of the snapshot.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -806,7 +807,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
+             * <p>The snapshot ID.</p>
              * 
              * <strong>example:</strong>
              * <p>s-bp17441ohwkdca0****</p>
@@ -863,12 +864,12 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * <p>The image metadata access mode. Valid values:</p>
+             * <p>The metadata access mode of the image. Valid values:</p>
              * <ul>
-             * <li>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</li>
-             * <li>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</li>
+             * <li>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to &quot;hardened mode only&quot;.</li>
+             * <li>v2: When you create an ECS instance from this image, you can set the metadata access mode to &quot;hardened mode only&quot;.</li>
              * </ul>
-             * <p>When you use a snapshot to create instances, the default value is set to 1. If you use an instance to create an image, the value of the ImdsSupport parameter is used by default.</p>
+             * <p>Default value: When you create an image from a snapshot, the default value is v1. When you create an image from an instance, the default value is the ImdsSupport property value of the image used to create the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>
@@ -925,7 +926,14 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * SecureBootSupport.
+             * <p>Specifies whether the image supports Secure Boot. Valid values:</p>
+             * <ul>
+             * <li>supported: Secure Boot is supported.</li>
+             * <li>unsupported: Secure Boot is not supported.<blockquote>
+             * <p>Secure Boot supports only the UEFI or UEFI-Preferred boot mode.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
              */
             public Builder secureBootSupport(String secureBootSupport) {
                 this.secureBootSupport = secureBootSupport;
@@ -992,7 +1000,7 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -1003,7 +1011,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>ValueTest</p>

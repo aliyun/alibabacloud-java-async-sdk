@@ -365,10 +365,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
-         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the authorization is verified.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -396,9 +396,9 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the capacity of the security group. If you set this parameter to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
+         * <p>Specifies whether to query the capacity information of the security group. If you set this parameter to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -411,7 +411,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. If you specify this parameter, both <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+         * <p>The maximum number of entries per page for a paged query. Settings this parameter indicates that the <code>MaxResults</code> and <code>NextToken</code> combination is used for paging.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -427,8 +427,8 @@ public class DescribeSecurityGroupsRequest extends Request {
         /**
          * <p>The network type of the security group. Valid values:</p>
          * <ul>
-         * <li>vpc</li>
-         * <li>classic</li>
+         * <li>vpc: VPC.</li>
+         * <li>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +441,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>e71d8a535bd9cc11</p>
@@ -472,7 +472,7 @@ public class DescribeSecurityGroupsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -486,7 +486,7 @@ public class DescribeSecurityGroupsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -499,7 +499,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -512,9 +512,9 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
+         * <p>The ID of the resource group to which the security group belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000. You can invoke <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource groups.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is configured.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -557,7 +557,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The security group IDs. Set this parameter to a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).</p>
+         * <p>The IDs of security groups. You can specify up to 100 security group IDs. Separate multiple IDs with commas (,) in a JSON array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;,....]</p>
@@ -583,11 +583,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         /**
          * <p>The type of the security group. Valid values:</p>
          * <ul>
-         * <li>normal: basic security group</li>
-         * <li>enterprise: advanced security group</li>
+         * <li>normal: basic security group.</li>
+         * <li>enterprise: advanced security group.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, both basic and advanced security groups are queried.</p>
+         * <p>If you do not specify this parameter, security groups of all types are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -600,10 +600,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query managed security groups. Valid values:</p>
+         * <p>Specifies whether managed security group is managed. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Managed security group is managed.</li>
+         * <li>false: Managed security group is not managed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -616,7 +616,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the security groups.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -696,8 +696,8 @@ public class DescribeSecurityGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the security group. Valid values of N: 1 to 20.</p>
-             * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key of the security group. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -708,7 +708,7 @@ public class DescribeSecurityGroupsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the security group. Valid values of N: 1 to 20.</p>
+             * <p>The tag value of the security group. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

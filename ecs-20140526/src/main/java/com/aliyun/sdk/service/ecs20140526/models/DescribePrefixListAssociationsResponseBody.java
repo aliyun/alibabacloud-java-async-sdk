@@ -80,7 +80,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
+         * <p>The pagination token returned in this call. If the return value is empty, no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -91,7 +91,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the resources that are associated with the prefix list.</p>
+         * PrefixListAssociations.
          */
         public Builder prefixListAssociations(PrefixListAssociations prefixListAssociations) {
             this.prefixListAssociations = prefixListAssociations;
@@ -99,7 +99,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
@@ -168,10 +168,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp11ujym6xsff6l0****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -179,10 +176,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>securitygroup</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

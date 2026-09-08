@@ -106,7 +106,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs and status of the ECS instances.</p>
+         * InstanceStatuses.
          */
         public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -125,7 +125,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,10 +216,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1j4i2jdf3owlhe****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -227,17 +224,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
-             * <ul>
-             * <li>Pending: The instance is being created.</li>
-             * <li>Running: The instance is running.</li>
-             * <li>Starting: The instance is being started.</li>
-             * <li>Stopping: The instance is being stopped.</li>
-             * <li>Stopped: The instance is stopped.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

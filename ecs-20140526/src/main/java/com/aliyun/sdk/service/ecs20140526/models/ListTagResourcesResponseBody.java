@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the resource and its tags, including the resource ID, the resource type, and the keys and values of the tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -194,10 +194,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1j6qtvdm8w0z1o****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -205,31 +202,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. Valid values:</p>
-             * <ul>
-             * <li>instance: ECS instance</li>
-             * <li>disk: disk</li>
-             * <li>snapshot: snapshot</li>
-             * <li>image: image</li>
-             * <li>securitygroup: security group</li>
-             * <li>volume: storage volume</li>
-             * <li>eni: ENI</li>
-             * <li>ddh: dedicated host</li>
-             * <li>ddhcluster: dedicated host cluster</li>
-             * <li>keypair: SSH key pair</li>
-             * <li>launchtemplate: launch template</li>
-             * <li>reservedinstance: reserved instance</li>
-             * <li>snapshotpolicy: automatic snapshot policy</li>
-             * <li>elasticityassurance: elasticity assurance</li>
-             * <li>capacityreservation: capacity reservation</li>
-             * <li>command: Cloud Assistant command</li>
-             * <li>invocation: Cloud Assistant command execution result</li>
-             * <li>activation: activation code for a Cloud Assistant managed instance</li>
-             * <li>managedinstance: Cloud Assistant managed instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -237,10 +210,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -248,10 +218,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

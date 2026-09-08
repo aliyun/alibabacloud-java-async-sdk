@@ -67,7 +67,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
         } 
 
         /**
-         * <p>The auto-renewal attribute of the elasticity assurances.</p>
+         * ElasticityAssuranceRenewAttributes.
          */
         public Builder elasticityAssuranceRenewAttributes(ElasticityAssuranceRenewAttributes elasticityAssuranceRenewAttributes) {
             this.elasticityAssuranceRenewAttributes = elasticityAssuranceRenewAttributes;
@@ -170,10 +170,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
             } 
 
             /**
-             * <p>The auto-renewal period. Valid values: Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Period.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -181,14 +178,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
             }
 
             /**
-             * <p>The unit of the auto-renewal period. Valid values:</p>
-             * <ul>
-             * <li>Month (default)</li>
-             * <li>Year</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Month</p>
+             * PeriodUnit.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -196,10 +186,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
             }
 
             /**
-             * <p>The ID of the elasticity assurance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eap-bp67acfmxazb4****</p>
+             * PrivatePoolOptionsId.
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -207,15 +194,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
             }
 
             /**
-             * <p>Indicates whether auto-renewal is enabled for the elasticity assurance. Valid values:</p>
-             * <ul>
-             * <li>AutoRenewal: Auto-renewal is enabled for the elasticity assurance.</li>
-             * <li>Normal: Auto-renewal is disabled for the elasticity assurance.</li>
-             * <li>NotRenewal: The elasticity assurance is not renewed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * RenewalStatus.
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;

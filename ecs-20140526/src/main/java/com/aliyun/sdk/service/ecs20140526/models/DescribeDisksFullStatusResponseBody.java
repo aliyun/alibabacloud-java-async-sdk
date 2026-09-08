@@ -106,7 +106,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection of full status information of the EBS devices.</p>
+         * DiskFullStatusSet.
          */
         public Builder diskFullStatusSet(DiskFullStatusSet diskFullStatusSet) {
             this.diskFullStatusSet = diskFullStatusSet;
@@ -147,7 +147,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of EBS devices for which full status information is returned.</p>
+         * <p>The total number of full status entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,10 +216,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the event type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -227,16 +224,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event type. Valid values:</p>
-             * <ul>
-             * <li>Degraded: The performance of the EBS device is degraded.</li>
-             * <li>SeverelyDegraded: The performance of the EBS device is severely degraded.</li>
-             * <li>Stalled: The performance of the EBS device is severely affected.</li>
-             * <li>ErrorDetected: The local disk is damaged.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Stalled</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,10 +330,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the event ended.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-06T02:48:52Z</p>
+             * EventEndTime.
              */
             public Builder eventEndTime(String eventEndTime) {
                 this.eventEndTime = eventEndTime;
@@ -353,10 +338,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>e-bp67acfmxazb4p****</p>
+             * EventId.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -364,10 +346,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-08T02:43:10Z</p>
+             * EventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -375,7 +354,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event.</p>
+             * EventType.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -383,10 +362,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The impact level of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * ImpactLevel.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -507,10 +483,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the health status of the EBS device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>128</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -518,10 +491,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the health status of the EBS device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Impaired</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -588,10 +558,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the lifecycle status of the EBS device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>129</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -599,10 +566,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the lifecycle status of the EBS device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -721,14 +685,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the EBS device that is attached to an instance. Example: /dev/xvdb.</p>
-             * <p>This parameter has a value only when the value of <code>Status</code> is <code>In_use</code>.</p>
-             * <blockquote>
-             * <p>This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -736,7 +693,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The events about the EBS device.</p>
+             * DiskEventSet.
              */
             public Builder diskEventSet(DiskEventSet diskEventSet) {
                 this.diskEventSet = diskEventSet;
@@ -744,10 +701,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The EBS device ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp67acfmxazb4p****</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -755,7 +709,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health status of the EBS device.</p>
+             * HealthStatus.
              */
             public Builder healthStatus(HealthStatus healthStatus) {
                 this.healthStatus = healthStatus;
@@ -763,10 +717,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4p****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -774,7 +725,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle status of the EBS device.</p>
+             * Status.
              */
             public Builder status(Status status) {
                 this.status = status;

@@ -78,7 +78,7 @@ public class ModifySnapshotCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the archive task. You can call the DescribeTasks operation to query the status and progress of the archive task.</p>
+         * <p>The ID of the archiving task. You can call the DescribeTasks operation to query the status and progress of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-dxh34xds**d</p>

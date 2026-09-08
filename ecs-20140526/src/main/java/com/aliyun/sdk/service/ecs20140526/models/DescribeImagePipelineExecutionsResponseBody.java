@@ -106,7 +106,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of returned image components.</p>
+         * ImagePipelineExecution.
          */
         public Builder imagePipelineExecution(ImagePipelineExecution imagePipelineExecution) {
             this.imagePipelineExecution = imagePipelineExecution;
@@ -114,7 +114,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The maximum number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token returned in this call. For more information about how to use this token, see the operation description.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -136,8 +136,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 500</p>
-         * <p>Default value: 50.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -148,7 +147,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</p>
+         * <p>The total number of image components returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -217,10 +216,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag of the image creation task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -228,10 +224,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the image creation task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -469,10 +462,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the image creation tasks.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-24T06:00:00Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -496,10 +486,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>exec-5fb8facb8ed7427c****</p>
+             * ExecutionId.
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -507,10 +494,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>m-bp67acfmxazb4p****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -518,10 +502,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the image creation task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ip-2ze5tsl5bp6nf2b3****</p>
+             * ImagePipelineId.
              */
             public Builder imagePipelineId(String imagePipelineId) {
                 this.imagePipelineId = imagePipelineId;
@@ -529,10 +510,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the image creation task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</p>
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -540,10 +518,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-25T06:00:00Z</p>
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -551,24 +526,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image creation task. Valid values:</p>
-             * <ul>
-             * <li>PREPARING: Resources, such as intermediate instances, are being created.</li>
-             * <li>REPAIRING: The source image is being repaired.</li>
-             * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
-             * <li>TESTING: The user-defined test commands are being run.</li>
-             * <li>DISTRIBUTING: The created image is being copied and shared.</li>
-             * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
-             * <li>SUCCESS The image creation task is completed.</li>
-             * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
-             * <li>FAILED: The image creation task fails.</li>
-             * <li>TEST_FAILED: The image is created, but the test fails.</li>
-             * <li>CANCELLING: The image creation task is being canceled.</li>
-             * <li>CANCELLED: The image creation task is canceled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -576,10 +534,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image creation task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>BUILDING</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -587,7 +542,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

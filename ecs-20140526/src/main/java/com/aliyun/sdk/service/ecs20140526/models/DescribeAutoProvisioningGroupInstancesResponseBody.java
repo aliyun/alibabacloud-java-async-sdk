@@ -106,7 +106,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The information about the instances in the auto provisioning group.</p>
+         * Instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -147,7 +147,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * <p>The number of queried instances in the auto provisioning group.</p>
+         * <p>The total number of instances in the auto-provisioning group.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -346,10 +346,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The number of vCPU cores of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CPU.
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -357,10 +354,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The time when the instance was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-10T04:04Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -368,10 +362,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4p****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -379,10 +370,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The ECS instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g5.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -390,10 +378,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Indicates whether the instance is an I/O optimized instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IoOptimized.
              */
             public Builder ioOptimized(Boolean ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -401,10 +386,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Indicates whether the instance is a spot instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsSpot.
              */
             public Builder isSpot(Boolean isSpot) {
                 this.isSpot = isSpot;
@@ -412,10 +394,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The memory capacity of the instance. Unit: MiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1024</p>
+             * Memory.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -423,14 +402,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The network type of the instance. Valid values:</p>
-             * <ul>
-             * <li>vpc: Virtual Private Cloud (VPC)</li>
-             * <li>classic: classic network</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -438,14 +410,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The operating system type of the instance. Valid values:</p>
-             * <ul>
-             * <li>windows</li>
-             * <li>linux</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>linux</p>
+             * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -453,10 +418,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The region ID of the container group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -464,10 +426,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The status of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -475,10 +434,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The ID of the zone to which the instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-g</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

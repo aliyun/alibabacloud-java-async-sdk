@@ -67,7 +67,10 @@ public class CreatePlanMaintenanceWindowResponseBody extends TeaModel {
         } 
 
         /**
-         * PlanWindowId.
+         * <p>The ID of the created O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pw-bp1a9yavgq3dgttvowun</p>
          */
         public Builder planWindowId(String planWindowId) {
             this.planWindowId = planWindowId;
@@ -75,7 +78,10 @@ public class CreatePlanMaintenanceWindowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D5B1188-3F08-56D1-A6B2-91B267452633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The monitoring data of the secondary ENI.</p>
+         * MonitorData.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -99,7 +99,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -246,10 +246,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of received packets that were dropped by the secondary ENI over the internal network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DropPacketRx.
              */
             public Builder dropPacketRx(String dropPacketRx) {
                 this.dropPacketRx = dropPacketRx;
@@ -257,10 +254,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sent packets that were dropped by the secondary ENI over the internal network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DropPacketTx.
              */
             public Builder dropPacketTx(String dropPacketTx) {
                 this.dropPacketTx = dropPacketTx;
@@ -268,10 +262,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the secondary ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eni-bp19da36d6xdwey****</p>
+             * EniId.
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -279,10 +270,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average rate at which the secondary ENI received data over the internal network. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IntranetRx.
              */
             public Builder intranetRx(String intranetRx) {
                 this.intranetRx = intranetRx;
@@ -290,10 +278,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average rate at which the secondary ENI sent data over the internal network. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IntranetTx.
              */
             public Builder intranetTx(String intranetTx) {
                 this.intranetTx = intranetTx;
@@ -301,10 +286,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of packets received by the secondary ENI over the internal network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * PacketRx.
              */
             public Builder packetRx(String packetRx) {
                 this.packetRx = packetRx;
@@ -312,10 +294,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of packets sent by the secondary ENI over the internal network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * PacketTx.
              */
             public Builder packetTx(String packetTx) {
                 this.packetTx = packetTx;
@@ -323,10 +302,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-21T03:22:00Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

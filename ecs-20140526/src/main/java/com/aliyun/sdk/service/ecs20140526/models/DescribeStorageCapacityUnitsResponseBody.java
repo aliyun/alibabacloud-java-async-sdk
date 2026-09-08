@@ -106,7 +106,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the SCU list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -139,7 +139,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the SCUs.</p>
+         * StorageCapacityUnits.
          */
         public Builder storageCapacityUnits(StorageCapacityUnits storageCapacityUnits) {
             this.storageCapacityUnits = storageCapacityUnits;
@@ -216,10 +216,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +224,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -468,14 +462,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:</p>
-             * <ul>
-             * <li>allocated: The SCU is allocated to other accounts.</li>
-             * <li>BeAllocated: The SCU is allocated from another account.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>allocated</p>
+             * AllocationStatus.
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -483,10 +470,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the SCU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Capacity.
              */
             public Builder capacity(Integer capacity) {
                 this.capacity = capacity;
@@ -494,10 +478,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SCU was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-08-17T02:55Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -505,10 +486,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the SCU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testScuDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -516,10 +494,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SCU expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-09-17T16:00Z</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -527,10 +502,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SCU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testScuName</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -538,10 +510,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the SCU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -549,10 +518,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SCU took effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-08-17T02:55Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -560,16 +526,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SCU. Valid values:</p>
-             * <ul>
-             * <li>Creating: The SCUs are being created.</li>
-             * <li>Active: The SCUs are in effect.</li>
-             * <li>Expired: The SCUs have expired.</li>
-             * <li>Pending: The SCUs have not taken effect.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -577,10 +534,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SCU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>scu-bp67acfmxazb4p****</p>
+             * StorageCapacityUnitId.
              */
             public Builder storageCapacityUnitId(String storageCapacityUnitId) {
                 this.storageCapacityUnitId = storageCapacityUnitId;
@@ -588,7 +542,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key-value pairs of the SCU.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

@@ -67,7 +67,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the maximum public bandwidth.</p>
+         * Bandwidths.
          */
         public Builder bandwidths(Bandwidths bandwidths) {
             this.bandwidths = bandwidths;
@@ -170,14 +170,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method for network usage. Valid values:</p>
-             * <ul>
-             * <li>PayByBandwidth</li>
-             * <li>PayByTraffic</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PayByTraffic</p>
+             * InternetChargeType.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -185,10 +178,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum public bandwidth.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Max.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -196,10 +186,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum public bandwidth.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Min.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -207,10 +194,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the public bandwidth.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Mbps</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

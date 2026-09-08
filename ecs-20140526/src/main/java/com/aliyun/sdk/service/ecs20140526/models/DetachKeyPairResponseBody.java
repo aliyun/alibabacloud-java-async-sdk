@@ -106,7 +106,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+         * <p>The number of instances from which the key pair failed to be unbound.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,7 +128,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -139,7 +139,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result set of the unbind operation.</p>
+         * Results.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -147,7 +147,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances from which you want to unbind the SSH key pair.</p>
+         * <p>The total number of instances from which the key pair is unbound.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -242,10 +242,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation status code that is returned. 200 indicates that the operation is successful.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -253,10 +250,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1d6tsvznfghy7y****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -264,10 +258,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the operation. For example, if the value of <code>Code</code> is 200, the value of <code>Message</code> is <code>successful</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>successful</p>
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -275,10 +266,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation is successful.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Success.
              */
             public Builder success(String success) {
                 this.success = success;

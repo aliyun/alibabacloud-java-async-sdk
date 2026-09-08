@@ -238,14 +238,16 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to attach the disk as the system disk. Valid values:</p>
+         * <p>Specifies whether to attach the disk as a system disk. Valid values:</p>
          * <ul>
-         * <li>true: attaches the disk as the system disk.</li>
-         * <li>false: does not attach the disk as the system disk.</li>
+         * <li><p>true: The disk is attached as a system disk.</p>
+         * </li>
+         * <li><p>false: The disk is not attached as a system disk.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> You can set <code>Bootable</code> to true only if the instance does not have a system disk.</p>
+         * <p>If you set <code>Bootable=true</code>, the destination ECS instance must have no system disk attached.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -260,15 +262,18 @@ public class AttachDiskRequest extends Request {
         /**
          * <p>Specifies whether to release the disk when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases the disk when the instance is released.</li>
-         * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+         * <li>true: The disk is released together with the instance.</li>
+         * <li>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</li>
          * </ul>
          * <p>Default value: false.</p>
-         * <p>When you specify this parameter, take note of the following items:</p>
+         * <p>Take note of the following items when you set this parameter:</p>
          * <ul>
-         * <li>If <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <code>DeleteWithInstance</code> to <code>false</code>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</li>
-         * <li>If you want to attach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
-         * <li>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</li>
+         * <li><p>If you set <code>DeleteWithInstance</code> to <code>false</code> and the ECS instance is locked for security reasons, meaning that <code>OperationLocks</code> contains <code>&quot;LockReason&quot; : &quot;security&quot;</code>, this attribute is ignored when the ECS instance is released, and the disk is released together with the instance.</p>
+         * </li>
+         * <li><p>If the destination disk is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
+         * </li>
+         * <li><p>Disks with the multi-attach feature enabled do not support this parameter.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +288,7 @@ public class AttachDiskRequest extends Request {
         /**
          * <p>The device name of the disk.</p>
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>This parameter will be deprecated soon. To improve compatibility, use other parameters to identify the disk.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -296,9 +301,9 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk. The disk specified by <code>DiskId</code> and the instance specified by <code>InstanceId</code> must reside in the same zone.</p>
+         * <p>The ID of the disk to be attached. The disk (<code>DiskId</code>) and the instance (<code>InstanceId</code>) must be in the same zone.</p>
          * <blockquote>
-         * <p> For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
+         * <p>You can attach data disks and system disks. For related constraints, see the operation description section above.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -312,14 +317,14 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to force attach the disk to the instance. Valid values:</p>
+         * <p>Specifies whether to forcefully attach the disk. Valid values:</p>
          * <ul>
-         * <li>true: force attaches the disk to the instance.</li>
-         * <li>false: does not force attach the disk to the instance.</li>
+         * <li>true: Forcefully attaches the disk.</li>
+         * <li>false: Does not forcefully attach the disk.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</p>
+         * <p>Currently, only regional ESSDs (cloud_regional_disk_auto) support setting this parameter to true.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -332,7 +337,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to which you want to attach the disk.</p>
+         * <p>The ID of the ECS instance to which you want to attach the disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,10 +350,12 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.</p>
+         * <p>The name of the SSH key pair that is bound to the Linux ECS instance when you attach a system disk.</p>
          * <ul>
-         * <li>Windows instances do not support logons based on SSH key pairs. The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</li>
-         * <li>For Linux instances, the username and password-based logon method is disabled by default.</li>
+         * <li><p>Windows Server instances: SSH key pairs are not supported. Even if this parameter is specified, only the <code>Password</code> configuration takes effect.</p>
+         * </li>
+         * <li><p>Linux instances: The password logon method is disabled by default.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -379,12 +386,12 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * <p>The password that is set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
-         * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
+         * <p>The password that is set for the instance when you attach a system disk. The password is effective only for the administrator and root usernames and is not effective for other usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+         * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
          * </code></pre>
-         * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
+         * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
          * <blockquote>
-         * <p>If <code>Password</code> is configured, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+         * <p>If you specify the <code>Password</code> parameter, send the request over HTTPS to prevent password leaks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

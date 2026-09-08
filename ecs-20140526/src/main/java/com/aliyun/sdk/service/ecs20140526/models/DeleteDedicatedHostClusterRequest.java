@@ -154,7 +154,7 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host group.</p>
+         * <p>The ID of the dedicated host cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the dedicated host cluster resides. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

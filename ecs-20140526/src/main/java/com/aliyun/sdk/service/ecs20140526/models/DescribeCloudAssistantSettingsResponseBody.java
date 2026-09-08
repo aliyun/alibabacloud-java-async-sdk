@@ -119,7 +119,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configurations for upgrading Cloud Assistant Agent.</p>
+         * <p>The Cloud Assistant Agent upgrade configuration.</p>
          */
         public Builder agentUpgradeConfig(AgentUpgradeConfig agentUpgradeConfig) {
             this.agentUpgradeConfig = agentUpgradeConfig;
@@ -127,7 +127,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations for delivering items to Object Storage Service (OSS).</p>
+         * OssDeliveryConfigs.
          */
         public Builder ossDeliveryConfigs(OssDeliveryConfigs ossDeliveryConfigs) {
             this.ossDeliveryConfigs = ossDeliveryConfigs;
@@ -146,7 +146,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceUsageConfig.
+         * <p>The Cloud Assistant resource usage configuration.</p>
          */
         public Builder resourceUsageConfig(ResourceUsageConfig resourceUsageConfig) {
             this.resourceUsageConfig = resourceUsageConfig;
@@ -154,7 +154,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cloud Assistant Session Manager configuration.</p>
+         * <p>The Cloud Assistant session feature configuration.</p>
          */
         public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
             this.sessionManagerConfig = sessionManagerConfig;
@@ -162,7 +162,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations for delivering items to Simple Log Service.</p>
+         * SlsDeliveryConfigs.
          */
         public Builder slsDeliveryConfigs(SlsDeliveryConfigs slsDeliveryConfigs) {
             this.slsDeliveryConfigs = slsDeliveryConfigs;
@@ -321,7 +321,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time windows during which Cloud Assistant Agent can be upgraded.</p>
+             * AllowedUpgradeWindows.
              */
             public Builder allowedUpgradeWindows(AllowedUpgradeWindows allowedUpgradeWindows) {
                 this.allowedUpgradeWindows = allowedUpgradeWindows;
@@ -329,7 +329,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * BootstrapUpgrade.
+             * <p>Indicates whether Cloud Assistant Agent checks for and performs updates immediately upon startup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bootstrapUpgrade(Boolean bootstrapUpgrade) {
                 this.bootstrapUpgrade = bootstrapUpgrade;
@@ -337,7 +340,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * DisableUpgrade.
+             * <p>Indicates whether Cloud Assistant Agent is prohibited from checking for and performing updates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder disableUpgrade(Boolean disableUpgrade) {
                 this.disableUpgrade = disableUpgrade;
@@ -345,7 +351,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
+             * <p>Indicates whether the custom Agent upgrade configuration is enabled. If the value is false or empty, the default behavior is to attempt an upgrade every 30 minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -356,7 +362,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone of the time windows.</p>
+             * <p>The time zone of the allowed upgrade time windows.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -491,10 +497,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the OSS bucket.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example-bucket</p>
+             * BucketName.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -502,14 +505,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of items to be delivered. Valid values:</p>
-             * <ul>
-             * <li>SessionManager: session records.</li>
-             * <li>Invocation: task execution records.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SessionManager</p>
+             * DeliveryType.
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -517,10 +513,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to deliver the specified items to OSS.</p>
+             * <p>Indicates whether the custom Agent upgrade configuration is enabled. If the value is false or empty, the default behavior is to attempt an upgrade every 30 minutes.</p>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -528,14 +524,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS encryption algorithm. Valid values:</p>
-             * <ul>
-             * <li>AES256</li>
-             * <li>SM4</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AES256</p>
+             * EncryptionAlgorithm.
              */
             public Builder encryptionAlgorithm(String encryptionAlgorithm) {
                 this.encryptionAlgorithm = encryptionAlgorithm;
@@ -543,10 +532,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a807****7a70e</p>
+             * EncryptionKeyId.
              */
             public Builder encryptionKeyId(String encryptionKeyId) {
                 this.encryptionKeyId = encryptionKeyId;
@@ -554,15 +540,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS encryption method. Valid values:</p>
-             * <ul>
-             * <li>Inherit: the encryption method used by the specified bucket.</li>
-             * <li>OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</li>
-             * <li>KMS: server-side encryption with Key Management Service (SSE-KMS).</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Inherit</p>
+             * EncryptionType.
              */
             public Builder encryptionType(String encryptionType) {
                 this.encryptionType = encryptionType;
@@ -570,10 +548,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix of the OSS bucket directory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sessionmanager/audit</p>
+             * Prefix.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -746,7 +721,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * CpuLimit.
+             * <p>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpuLimit(Integer cpuLimit) {
                 this.cpuLimit = cpuLimit;
@@ -754,7 +732,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * KeepScriptFile.
+             * <p>Indicates whether the script file is retained in the Cloud Assistant directory after command execution is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder keepScriptFile(Boolean keepScriptFile) {
                 this.keepScriptFile = keepScriptFile;
@@ -762,7 +743,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * LogFileCountLimit.
+             * <p>The maximum number of Cloud Assistant log files to retain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder logFileCountLimit(Integer logFileCountLimit) {
                 this.logFileCountLimit = logFileCountLimit;
@@ -770,7 +754,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * LogSizeLimit.
+             * <p>The size limit of Cloud Assistant log files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100MB</p>
              */
             public Builder logSizeLimit(String logSizeLimit) {
                 this.logSizeLimit = logSizeLimit;
@@ -778,7 +765,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryLimit.
+             * <p>The maximum memory usage allowed for the Cloud Assistant Agent main process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35MB</p>
              */
             public Builder memoryLimit(String memoryLimit) {
                 this.memoryLimit = memoryLimit;
@@ -786,7 +776,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * OverloadLimit.
+             * <p>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit. When this limit is reached, Cloud Assistant Agent automatically stops running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder overloadLimit(Integer overloadLimit) {
                 this.overloadLimit = overloadLimit;
@@ -840,14 +833,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specify whether to enable Cloud Assistant Session Manager. Valid values:</p>
+             * <p>Specifies whether the Cloud Assistant session feature is enabled. Valid values:</p>
              * <ul>
-             * <li>true: Enables the feature.</li>
-             * <li>false: Disables the feature.</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * <p>Note:</p>
              * <ul>
-             * <li>The feature applies to all regions.</li>
+             * <li>Enabling or disabling the session feature takes effect across all regions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -944,14 +937,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of items to be delivered. Valid values:</p>
-             * <ul>
-             * <li>SessionManager: session records.</li>
-             * <li>Invocation: task execution records.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SessionManager</p>
+             * DeliveryType.
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -959,10 +945,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to deliver the specified items to Simple Log Service.</p>
+             * <p>Indicates whether the custom Agent upgrade configuration is enabled. If the value is false or empty, the default behavior is to attempt an upgrade every 30 minutes.</p>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -970,10 +956,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Logstore.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example-logstore</p>
+             * LogstoreName.
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -981,10 +964,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple Log Service project.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example-project</p>
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;

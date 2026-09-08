@@ -102,7 +102,7 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the SCUs.</p>
+         * StorageCapacityUnitIds.
          */
         public Builder storageCapacityUnitIds(StorageCapacityUnitIds storageCapacityUnitIds) {
             this.storageCapacityUnitIds = storageCapacityUnitIds;

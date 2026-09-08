@@ -119,7 +119,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the instance system events.</p>
+         * InstanceSystemEventSet.
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -127,9 +127,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The query token returned in this invocation.</p>
          * <blockquote>
-         * <p> If the NextToken parameter is not returned when you use the MaxResults and NextToken parameters to perform a paged query, no more data is returned.</p>
+         * <p>When you use MaxResults and NextToken parameters for paging queries and no NextToken is returned, no more data is available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,15 +141,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the instance event list.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
-         * </li>
-         * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
-         * </li>
+         * <li>When you use MaxResults and NextToken for paging queries, the returned PageNumber parameter value is meaningless.</li>
+         * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging queries instead.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,15 +158,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page as settings in the request.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
-         * </li>
-         * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
-         * </li>
+         * <li>When you use MaxResults and NextToken for paging queries, the returned PageSize parameter value is meaningless.</li>
+         * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging queries instead.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +175,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -190,9 +186,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances.</p>
+         * <p>The total number of instance events.</p>
          * <blockquote>
-         * <p> If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+         * <p>When you use MaxResults and NextToken parameters for paging queries, the returned TotalCount parameter value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,10 +258,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The state code of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -273,10 +266,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state name of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Executed</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,10 +333,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the system event type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>34</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -354,10 +341,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the system event type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>InstanceExpiration.Stop</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,10 +447,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-11-30T06:32:31Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -474,20 +455,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the disk. Valid values:</p>
-             * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-             * <li>local_ssd_pro: I/O-intensive local disk</li>
-             * <li>local_hdd_pro: throughput-intensive local disk</li>
-             * <li>ephemeral: retired local disk</li>
-             * <li>ephemeral_ssd: retired local SSD</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_efficiency</p>
+             * DeviceCategory.
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -495,10 +463,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * DeviceSize.
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -506,14 +471,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid values:</p>
-             * <ul>
-             * <li>system: system disk</li>
-             * <li>data: data disk</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>data</p>
+             * DeviceType.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -521,10 +479,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the disk was released. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-11-30T06:32:31Z</p>
+             * ReleaseTime.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -894,10 +849,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the event can be handled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * CanAccept.
              */
             public Builder canAccept(String canAccept) {
                 this.canAccept = canAccept;
@@ -905,10 +857,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the security violation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PR111</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -916,10 +865,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device name of the local disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>/dev/vda</p>
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -927,10 +873,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the local disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-diskid1</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -938,10 +881,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the host.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dh-bp1ewce1gk3iwv2****</p>
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -949,14 +889,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the host. Valid values:</p>
-             * <ul>
-             * <li>ddh: dedicated host</li>
-             * <li>managehost: physical machine in a smart hosting pool</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ddh</p>
+             * HostType.
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -964,7 +897,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inactive disks that were released and whose data must be cleared.</p>
+             * InactiveDisks.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -996,7 +929,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</p>
+             * MigrationOptions.
              */
             public Builder migrationOptions(MigrationOptions migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -1004,10 +937,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>IsolateOnly</p>
+             * OnlineRepairPolicy.
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
@@ -1015,10 +945,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The illegal domain name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1228.test.com</p>
+             * PunishDomain.
              */
             public Builder punishDomain(String punishDomain) {
                 this.punishDomain = punishDomain;
@@ -1026,10 +953,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the penalty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs_message_alert</p>
+             * PunishType.
              */
             public Builder punishType(String punishType) {
                 this.punishType = punishType;
@@ -1037,10 +961,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The illegal URL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://1228.test.com/1">http://1228.test.com/1</a></p>
+             * PunishUrl.
              */
             public Builder punishUrl(String punishUrl) {
                 this.punishUrl = punishUrl;
@@ -1048,10 +969,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rack number of the cloud box.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>A01</p>
+             * Rack.
              */
             public Builder rack(String rack) {
                 this.rack = rack;
@@ -1059,14 +977,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response result of the event. Valid values:</p>
-             * <ul>
-             * <li>true: The event was handled.</li>
-             * <li>false: The event failed to be handled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ResponseResult.
              */
             public Builder responseResult(String responseResult) {
                 this.responseResult = responseResult;
@@ -1263,7 +1174,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The lifecycle status of the system event.</p>
+             * EventCycleStatus.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -1271,10 +1182,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the system event ended. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-01T06:35:31Z</p>
+             * EventFinishTime.
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -1282,10 +1190,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>e-uf64yvznlao4jl2c****</p>
+             * EventId.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -1293,10 +1198,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the system event was published. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-11-30T06:32:31Z</p>
+             * EventPublishTime.
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -1304,7 +1206,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the system event.</p>
+             * EventType.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -1312,7 +1214,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended attribute of the system event.</p>
+             * ExtendedAttribute.
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -1320,10 +1222,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The impact level of the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * ImpactLevel.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -1331,10 +1230,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-uf678mass4zvr9n1****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1342,10 +1238,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled start time of the system event. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-06T00:00:00Z</p>
+             * NotBefore.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -1353,10 +1246,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the system event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>System maintenance is scheduled due to ***.</p>
+             * Reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1364,10 +1254,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason code category for the system event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPCMigrationEcs</p>
+             * ReasonCode.
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1375,15 +1262,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values:</p>
-             * <ul>
-             * <li>instance: ECS instance</li>
-             * <li>ddh: dedicated host</li>
-             * <li>managehost: physical machine in a smart hosting pool</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -168,7 +168,12 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * Choice.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder choice(String choice) {
             this.putQueryParameter("Choice", choice);
@@ -177,6 +182,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
+         * <p>The system event ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +213,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the system event. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

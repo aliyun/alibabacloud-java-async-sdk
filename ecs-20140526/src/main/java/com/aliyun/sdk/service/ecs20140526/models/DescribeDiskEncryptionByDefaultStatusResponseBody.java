@@ -67,10 +67,13 @@ public class DescribeDiskEncryptionByDefaultStatusResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>Indicates whether account-level default encryption of EBS resources is enabled in the region. Valid values:</p>
+         * <p>Indicates whether account-level default encryption is enabled for block storage.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Not enabled.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 

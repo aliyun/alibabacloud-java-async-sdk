@@ -169,8 +169,8 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         /**
          * <p>The scenario in which the image is used. Valid values:</p>
          * <ul>
-         * <li>CreateEcs (default): instance creation</li>
-         * <li>ChangeOS: replacement of the system disk or operating system</li>
+         * <li>CreateEcs (default): instance creation.</li>
+         * <li>ChangeOS: replacement of the system disk or operating system.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs of the instance type.</p>
+         * <p>The list of filter conditions used to query resources.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -192,7 +192,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-o6w3gy99qf89rkga****</p>
@@ -213,7 +213,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>Details about the instance types that are supported by the image.</p>
+         * <p>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +303,14 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             } 
 
             /**
-             * <p>Filter N used to filter instance types.</p>
+             * <p>The filter condition key. Currently, only filtering by image ID is supported. Valid values:</p>
+             * <ul>
+             * <li>imageId: filters by image ID.</li>
+             * <li>filter: filters by image ID.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is not effective and will be deprecated soon.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>imageId</p>
@@ -314,7 +321,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The filter condition value.</p>
+             * <blockquote>
+             * <p>This parameter is not effective and will be deprecated soon.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>m-o6w3gy99qf89rkga****</p>

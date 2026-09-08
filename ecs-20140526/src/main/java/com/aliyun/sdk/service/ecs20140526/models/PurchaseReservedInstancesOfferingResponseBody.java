@@ -102,7 +102,7 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the reserved instances.</p>
+         * ReservedInstanceIdSets.
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;

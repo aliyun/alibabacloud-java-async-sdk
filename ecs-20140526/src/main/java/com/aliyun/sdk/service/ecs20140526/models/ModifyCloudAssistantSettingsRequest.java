@@ -224,7 +224,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * <p>The configurations for upgrading Cloud Assistant Agent.</p>
+         * <p>The Cloud Assistant Agent upgrade configuration.</p>
          */
         public Builder agentUpgradeConfig(AgentUpgradeConfig agentUpgradeConfig) {
             String agentUpgradeConfigShrink = shrink(agentUpgradeConfig, "AgentUpgradeConfig", "json");
@@ -234,7 +234,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * <p>The configurations for delivering records to Object Storage Service (OSS).</p>
+         * <p>The OSS delivery configuration.</p>
          */
         public Builder ossDeliveryConfig(OssDeliveryConfig ossDeliveryConfig) {
             String ossDeliveryConfigShrink = shrink(ossDeliveryConfig, "OssDeliveryConfig", "json");
@@ -293,7 +293,13 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * ResourceUsageConfig.
+         * <p>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</p>
+         * <ul>
+         * <li><p>Windows: 2.1.4.1065</p>
+         * </li>
+         * <li><p>Linux: 2.2.4.1065</p>
+         * </li>
+         * </ul>
          */
         public Builder resourceUsageConfig(ResourceUsageConfig resourceUsageConfig) {
             String resourceUsageConfigShrink = shrink(resourceUsageConfig, "ResourceUsageConfig", "json");
@@ -303,7 +309,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * <p>Cloud Assistant Session Manager configuration.</p>
+         * <p>The Cloud Assistant session feature configuration.</p>
          */
         public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
             String sessionManagerConfigShrink = shrink(sessionManagerConfig, "SessionManagerConfig", "json");
@@ -313,12 +319,12 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * <p>The Cloud Assistant feature. Set SettingType to one of the following valid values:</p>
+         * <p>The service configuration type. Valid values:</p>
          * <ul>
-         * <li>SessionManagerDelivery: the Session Record Delivery configurations.</li>
-         * <li>InvocationDelivery: the Operation Content and Result Delivery configurations.</li>
-         * <li>AgentUpgradeConfig: the Cloud Assistant Agent Upgrade configurations.</li>
-         * <li>SessionManagerConfig: Cloud Assistant the SessionManager configuration.</li>
+         * <li>SessionManagerDelivery: session operation log delivery.</li>
+         * <li>InvocationDelivery: task execution log delivery.</li>
+         * <li>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</li>
+         * <li>SessionManagerConfig: Cloud Assistant SessionManager configuration.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -332,7 +338,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * <p>The configurations for delivering records to Simple Log Service.</p>
+         * <p>The Simple Log Service (SLS) delivery configuration.</p>
          */
         public Builder slsDeliveryConfig(SlsDeliveryConfig slsDeliveryConfig) {
             String slsDeliveryConfigShrink = shrink(slsDeliveryConfig, "SlsDeliveryConfig", "json");
@@ -440,10 +446,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             } 
 
             /**
-             * <p>The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.</p>
-             * <p>Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.</p>
-             * <p>Specify each upgrade window in the following format: &lt;Start time in the HH:mm format&gt;-&lt;End time in the HH:mm format&gt;.</p>
-             * <p>For example, [ &quot;02:00-03:00&quot;, &quot;05:00-06:00&quot; ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
+             * <p>The list of time windows during which upgrades are allowed. The time can be specified down to the minute. The default time zone is UTC.</p>
+             * <p>The interval between time windows cannot be less than 1 hour.</p>
+             * <p>Format: Start time (HH:mm)-End time (HH:mm).</p>
+             * <p>Example: [
+             * &quot;02:00-03:00&quot;,
+             * &quot;05:00-06:00&quot;
+             * ]
+             * This indicates that upgrades are allowed daily from 02:00 to 03:00 and from 05:00 to 06:00 in the UTC time zone.</p>
              */
             public Builder allowedUpgradeWindow(java.util.List<String> allowedUpgradeWindow) {
                 this.allowedUpgradeWindow = allowedUpgradeWindow;
@@ -451,7 +461,17 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * BootstrapUpgrade.
+             * <p>Specifies whether the Cloud Assistant Agent checks for updates and performs an upgrade immediately upon startup. Default value: true.</p>
+             * <p>This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</p>
+             * <ul>
+             * <li><p>Windows: 2.1.4.1065</p>
+             * </li>
+             * <li><p>Linux: 2.2.4.1065</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bootstrapUpgrade(Boolean bootstrapUpgrade) {
                 this.bootstrapUpgrade = bootstrapUpgrade;
@@ -459,7 +479,17 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * DisableUpgrade.
+             * <p>Specifies whether to prevent the Cloud Assistant Agent from checking for and performing updates. Default value: false.</p>
+             * <p>This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</p>
+             * <ul>
+             * <li><p>Windows: 2.1.4.1065</p>
+             * </li>
+             * <li><p>Linux: 2.2.4.1065</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disableUpgrade(Boolean disableUpgrade) {
                 this.disableUpgrade = disableUpgrade;
@@ -467,7 +497,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
+             * <p>Specifies whether to enable the custom Agent upgrade configuration. If this parameter is set to false, the system attempts to upgrade the Agent every 30 minutes by default.</p>
              * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
@@ -479,10 +509,11 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>The time zone of the time windows. Default value: UTC. You can specify a time zone in the following forms:</p>
+             * <p>The time zone for the allowed upgrade time windows. Default value: UTC.
+             * The time zone can be specified in the following formats:</p>
              * <ul>
-             * <li>The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.</li>
-             * <li>The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.</li>
+             * <li>Full time zone name, such as Asia/Shanghai or America/Los_Angeles.</li>
+             * <li>GMT offset from Greenwich Mean Time, such as GMT+8:00 or GMT-7:00. Leading zeros are not supported for the hour value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -616,7 +647,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to deliver records to OSS. Default value: false.</p>
+             * <p>Specifies whether to enable delivery to OSS. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -642,7 +673,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
+             * <p>The ID of the customer master key (CMK) when the encryption method is set to KMS.</p>
              * 
              * <strong>example:</strong>
              * <p>a807****7a70e</p>
@@ -655,9 +686,9 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             /**
              * <p>The OSS encryption method. Valid values:</p>
              * <ul>
-             * <li>Inherit: the encryption method used by the specified bucket.</li>
-             * <li>OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</li>
-             * <li>KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).</li>
+             * <li>Inherit: inherits the encryption method of the bucket.</li>
+             * <li>OssManaged: OSS-managed encryption.</li>
+             * <li>KMS: Key Management Service (KMS) encryption.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -669,12 +700,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>The prefix of the OSS bucket directory. The prefix must meet the following requirements:</p>
+             * <p>The directory prefix of the OSS bucket. The following limits apply:</p>
              * <ul>
-             * <li>The prefix can be up to 254 characters in length.</li>
+             * <li>The prefix cannot exceed 254 characters in length.</li>
              * <li>The prefix cannot start with a forward slash (/) or a backslash (\).</li>
              * </ul>
-             * <p>Note: If you do not need a directory prefix, specify a pair of double quotation marks (&quot;&quot;) for this parameter to clear the directory prefix that you specified.</p>
+             * <blockquote>
+             * <p>Note: Set this parameter to an empty string (&quot;&quot;) if no directory prefix is required. If a prefix was previously configured and is no longer needed, set this parameter to an empty string (&quot;&quot;) to clear it.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>sessionmanager/audit</p>
@@ -796,7 +829,18 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             } 
 
             /**
-             * CpuLimit.
+             * <p>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</p>
+             * <ul>
+             * <li><p>Unit: percentage.</p>
+             * </li>
+             * <li><p>Valid values: 10 to 95.</p>
+             * </li>
+             * <li><p>Default value: 20.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpuLimit(Integer cpuLimit) {
                 this.cpuLimit = cpuLimit;
@@ -804,7 +848,11 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * KeepScriptFile.
+             * <p>Specifies whether to retain the script file in the Cloud Assistant directory after command execution is complete.
+             * Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder keepScriptFile(Boolean keepScriptFile) {
                 this.keepScriptFile = keepScriptFile;
@@ -812,7 +860,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * LogFileCountLimit.
+             * <p>The maximum number of Cloud Assistant log files to retain.</p>
+             * <ul>
+             * <li>Default value: 30.</li>
+             * <li>Minimum value: 7.</li>
+             * <li>Maximum value: 365.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder logFileCountLimit(Integer logFileCountLimit) {
                 this.logFileCountLimit = logFileCountLimit;
@@ -820,7 +876,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * LogSizeLimit.
+             * <p>The maximum size of a single Cloud Assistant log file. You must specify the unit (B|KB|MB).</p>
+             * <ul>
+             * <li>Default value: 100MB.</li>
+             * <li>Minimum value: 10MB.</li>
+             * <li>Maximum value: 1024MB.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10MB</p>
              */
             public Builder logSizeLimit(String logSizeLimit) {
                 this.logSizeLimit = logSizeLimit;
@@ -828,7 +892,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * MemoryLimit.
+             * <p>The maximum memory usage allowed for the Cloud Assistant Agent main process. You must specify the unit (B|KB|MB).</p>
+             * <ul>
+             * <li>Default value: 50MB.</li>
+             * <li>Minimum value: 35MB.</li>
+             * <li>Maximum value: 1024MB.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>50MB</p>
              */
             public Builder memoryLimit(String memoryLimit) {
                 this.memoryLimit = memoryLimit;
@@ -836,7 +908,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * OverloadLimit.
+             * <p>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit before the Cloud Assistant Agent automatically stops running.</p>
+             * <ul>
+             * <li>Default value: 3.</li>
+             * <li>Minimum value: 3.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder overloadLimit(Integer overloadLimit) {
                 this.overloadLimit = overloadLimit;
@@ -890,14 +969,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             } 
 
             /**
-             * <p>Specify whether to enable Cloud Assistant Session Manager. Valid values:</p>
+             * <p>Specifies whether to enable the Cloud Assistant session feature. Valid values:</p>
              * <ul>
-             * <li>true: Enables the feature.</li>
-             * <li>false: Disables the feature.</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
-             * <p>Notes:</p>
+             * <p>Note:</p>
              * <ul>
-             * <li>The feature applies to all regions.</li>
+             * <li>Enabling or disabling the session feature takes effect across all regions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -981,7 +1060,8 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to deliver records to Simple Log Service. Default value: false.</p>
+             * <p>Specifies whether to enable delivery to SLS.
+             * Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -992,7 +1072,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>The name of the Logstore.</p>
+             * <p>The name of the SLS Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>example-logstore</p>
@@ -1003,7 +1083,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * <p>The name of the Simple Log Service project.</p>
+             * <p>The name of the SLS project.</p>
              * 
              * <strong>example:</strong>
              * <p>example-project</p>

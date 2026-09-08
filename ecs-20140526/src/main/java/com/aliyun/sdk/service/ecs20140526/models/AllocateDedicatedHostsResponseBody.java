@@ -80,7 +80,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of dedicated host IDs.</p>
+         * DedicatedHostIdSets.
          */
         public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
             this.dedicatedHostIdSets = dedicatedHostIdSets;
@@ -88,9 +88,9 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * <blockquote>
-         * <p> This parameter has a return value only when the dedicated host is a subscription one (request parameter <strong>ChargeType set to PrePaid</strong>).</p>
+         * <p>This parameter is returned only when you create subscription dedicated hosts (the request parameter <strong>ChargeType=PrePaid</strong>).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E2A664A6-2933-4C64-88AE-5033D003****</p>

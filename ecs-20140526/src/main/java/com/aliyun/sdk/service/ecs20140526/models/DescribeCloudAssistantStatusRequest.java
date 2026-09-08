@@ -223,7 +223,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The list of instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1iudwa5b1tqa****</p>
@@ -235,8 +235,8 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. If you specify <strong>InstanceId</strong>, this parameter does not take effect.</p>
-         * <p>Valid values: 1 to 50.</p>
+         * <p>The maximum number of entries per page for a paged query. If <strong>InstanceId</strong> is specified, this parameter is ignored.</p>
+         * <p>Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -297,7 +297,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

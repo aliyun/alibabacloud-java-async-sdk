@@ -106,7 +106,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array consisting of host group information.</p>
+         * DedicatedHostClusters.
          */
         public Builder dedicatedHostClusters(DedicatedHostClusters dedicatedHostClusters) {
             this.dedicatedHostClusters = dedicatedHostClusters;
@@ -114,7 +114,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the dedicated host cluster list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of dedicated host clusters.</p>
+         * <p>The total number of dedicated hosts.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,10 +216,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available capacity of the ECS instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * AvailableInstanceCapacity.
              */
             public Builder availableInstanceCapacity(Integer availableInstanceCapacity) {
                 this.availableInstanceCapacity = availableInstanceCapacity;
@@ -227,10 +224,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ECS instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.c6.26xlarge</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -364,10 +358,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available capacity of the local disk. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * AvailableDisk.
              */
             public Builder availableDisk(Integer availableDisk) {
                 this.availableDisk = availableDisk;
@@ -375,17 +366,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of data disks. Valid values:</p>
-             * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>ephemeral_ssd: local SSD</li>
-             * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud</p>
+             * DataDiskCategory.
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -393,10 +374,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total capacity of the local disk. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>40</p>
+             * TotalDisk.
              */
             public Builder totalDisk(Integer totalDisk) {
                 this.totalDisk = totalDisk;
@@ -569,7 +547,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available capacity of ECS instances in the host group.</p>
+             * AvailableInstanceTypes.
              */
             public Builder availableInstanceTypes(AvailableInstanceTypes availableInstanceTypes) {
                 this.availableInstanceTypes = availableInstanceTypes;
@@ -577,10 +555,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of available memory. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * AvailableMemory.
              */
             public Builder availableMemory(Integer availableMemory) {
                 this.availableMemory = availableMemory;
@@ -588,10 +563,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of available vCPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * AvailableVcpus.
              */
             public Builder availableVcpus(Integer availableVcpus) {
                 this.availableVcpus = availableVcpus;
@@ -599,7 +571,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local storage capacity.</p>
+             * LocalStorageCapacities.
              */
             public Builder localStorageCapacities(LocalStorageCapacities localStorageCapacities) {
                 this.localStorageCapacities = localStorageCapacities;
@@ -607,10 +579,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total memory size. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8</p>
+             * TotalMemory.
              */
             public Builder totalMemory(Integer totalMemory) {
                 this.totalMemory = totalMemory;
@@ -618,10 +587,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of vCPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * TotalVcpus.
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
@@ -742,10 +708,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -753,10 +716,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -968,7 +928,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The capacity of the host group.</p>
+             * DedicatedHostClusterCapacity.
              */
             public Builder dedicatedHostClusterCapacity(DedicatedHostClusterCapacity dedicatedHostClusterCapacity) {
                 this.dedicatedHostClusterCapacity = dedicatedHostClusterCapacity;
@@ -976,10 +936,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the host group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dc-bp12wlf6am0vz9v2****</p>
+             * DedicatedHostClusterId.
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -987,10 +944,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the host group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myDDHCluster</p>
+             * DedicatedHostClusterName.
              */
             public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
                 this.dedicatedHostClusterName = dedicatedHostClusterName;
@@ -998,7 +952,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of dedicated hosts in the host group.</p>
+             * DedicatedHostIds.
              */
             public Builder dedicatedHostIds(DedicatedHostIds dedicatedHostIds) {
                 this.dedicatedHostIds = dedicatedHostIds;
@@ -1006,10 +960,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the host group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This-is-my-DDHCluster</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1017,10 +968,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the host group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1028,10 +976,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID of the host group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1039,7 +984,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the host group.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1047,10 +992,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the host group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-f</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

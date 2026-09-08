@@ -80,7 +80,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -102,7 +102,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the sessions.</p>
+         * Sessions.
          */
         public Builder sessions(Sessions sessions) {
             this.sessions = sessions;
@@ -220,20 +220,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why the connection was closed. This parameter is returned only when the <code>Status</code> value is <code>Disconnected</code>, <code>Terminated</code>, or <code>Failed</code>. Valid values:</p>
-             * <ul>
-             * <li>InstanceNotExists: The specified instance did not exist or was released.</li>
-             * <li>InstanceNotRunning: The specified instance was not running.</li>
-             * <li>DeliveryTimeout: The connection timed out.</li>
-             * <li>AgentNeedUpgrade: Cloud Assistant Agent required an upgrade.</li>
-             * <li>AgentNotOnline: Cloud Assistant Agent was not connected to the Cloud Assistant server.</li>
-             * <li>MessageFormatInvalid: The message format was invalid.</li>
-             * <li>AgentSocketClosed: The connection was closed as expected.</li>
-             * <li>ClientClosed: Session Manager Client closed the connection.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AgentNeedUpgrade</p>
+             * ClosedReason.
              */
             public Builder closedReason(String closedReason) {
                 this.closedReason = closedReason;
@@ -241,10 +228,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the connection was closed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-19T09:16:46Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -252,10 +236,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cause of the connection failure. This parameter is returned only when the Status parameter is Failed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The Session Manager is closed normally.</p>
+             * FailedDetail.
              */
             public Builder failedDetail(String failedDetail) {
                 this.failedDetail = failedDetail;
@@ -263,10 +244,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1i7gg30r52z2em****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,10 +252,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the connection started to be established.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-19T09:16:40Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -285,16 +260,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the session. Valid values:</p>
-             * <ul>
-             * <li>Connecting: The connection is being established.</li>
-             * <li>Connected: The connection is established.</li>
-             * <li>Terminated: The session is terminated.</li>
-             * <li>Failed: The connection failed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Connecting</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -506,10 +472,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the client used to establish connections.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.1.1</p>
+             * ClientIP.
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;
@@ -517,7 +480,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of the connections.</p>
+             * Connections.
              */
             public Builder connections(Connections connections) {
                 this.connections = connections;
@@ -525,10 +488,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the session was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-19T09:15:46Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -536,15 +496,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The principal type. Valid values:</p>
-             * <ul>
-             * <li>Account: an Alibaba Cloud account</li>
-             * <li>RAMUser: a RAM user</li>
-             * <li>AssumedRoleUser: a RAM role</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RAMUser</p>
+             * IdentityType.
              */
             public Builder identityType(String identityType) {
                 this.identityType = identityType;
@@ -552,10 +504,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the instance, which is used for data forwarding. If no port number was specified for data forwarding when the session was created, this parameter is empty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>22</p>
+             * PortNumber.
              */
             public Builder portNumber(Integer portNumber) {
                 this.portNumber = portNumber;
@@ -563,15 +512,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the principal. Valid values based on the <code>IdentityType</code> value:</p>
-             * <ul>
-             * <li>If the requester uses an Alibaba Cloud account to call the operation, the ID of the Alibaba Cloud account is returned.</li>
-             * <li>If the requester uses a Resource Access Management (RAM) user to call the operation, the ID of the RAM user is returned.</li>
-             * <li>If the requester uses a RAM role to call the operation, the ID of the principal that actually calls the operation is returned.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>123456xxxx</p>
+             * PrincipalId.
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -579,10 +520,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-hz023od0x9****</p>
+             * SessionId.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -590,10 +528,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the service that was accessed in a virtual private cloud (VPC) from the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.246</p>
+             * TargetServer.
              */
             public Builder targetServer(String targetServer) {
                 this.targetServer = targetServer;
@@ -601,10 +536,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username used to establish connections.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>root</p>
+             * Username.
              */
             public Builder username(String username) {
                 this.username = username;

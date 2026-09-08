@@ -158,12 +158,14 @@ public class RedeployDedicatedHostRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</p>
+         * <p>Specifies whether to stop ECS instance before migrating it to the destination dedicated host. Valid values:</p>
          * <ul>
-         * <li>reboot: stops the instance before migration.</li>
-         * <li>LiveMigrationFirst: migrates the instance without stopping it. If you set MigrationType to LiveMigrationFirst, you must specify DedicatedHostId. In this case, you cannot change the instance type of the ECS instance when the instance is migrated. If the migration in LiveMigrationFirst mode fails, the system switches to the Reboot mode.</li>
+         * <li><p>Reboot: stops ECS instance before migration.</p>
+         * </li>
+         * <li><p>LiveMigrationFirst: migrates ECS instance without stopping it. You must specify the DedicatedHostId parameter. This value does not support changing ECS instance type during migration. If live migration fails, cold migration is performed by default.</p>
+         * </li>
          * </ul>
-         * <p>Default value: reboot.</p>
+         * <p>Default value: Reboot.</p>
          * 
          * <strong>example:</strong>
          * <p>Reboot</p>
@@ -193,7 +195,7 @@ public class RedeployDedicatedHostRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

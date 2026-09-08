@@ -106,7 +106,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The results of the instance RAM role detachment, which include the names of the instance RAM roles and the IDs of the ECS instances from which you attempted to detach the instance RAM roles.</p>
+         * DetachInstanceRamRoleResults.
          */
         public Builder detachInstanceRamRoleResults(DetachInstanceRamRoleResults detachInstanceRamRoleResults) {
             this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
@@ -114,7 +114,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of ECS instances from which instance RAM roles failed to be detached.</p>
+         * <p>The number of instances from which the RAM role failed to be detached.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -125,7 +125,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the instance RAM role.</p>
+         * <p>The name of the detached instance RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>RamRoleTest</p>
@@ -147,7 +147,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of ECS instances from which you attempted to detach instance RAM roles.</p>
+         * <p>The total number of instances from which the RAM role was detached.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,10 +216,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4p****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -227,7 +224,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance RAM role.</p>
+             * <p>The name of the detached instance RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>RamRoleTest</p>
@@ -390,10 +387,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -401,10 +395,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance from which you attempted to detach the instance RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4p****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -412,7 +403,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance RAM role and the ID of the ECS instance.</p>
+             * InstanceRamRoleSets.
              */
             public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
                 this.instanceRamRoleSets = instanceRamRoleSets;
@@ -420,10 +411,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance RAM role was detached. If success is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -431,10 +419,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance RAM role was detached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Success.
              */
             public Builder success(Boolean success) {
                 this.success = success;

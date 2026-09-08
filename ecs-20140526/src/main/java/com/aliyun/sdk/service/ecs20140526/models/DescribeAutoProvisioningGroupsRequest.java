@@ -229,7 +229,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the auto provisioning group. You can specify up to 20 IDs.</p>
+         * <p>The IDs of auto-provisioning groups. You can specify up to 20 auto-provisioning group IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>apg-sn54avj8htgvtyh8****</p>
@@ -253,7 +253,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * <p>The status of the auto provisioning group.</p>
+         * <p>The list of statuses of auto-provisioning groups.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -292,8 +292,8 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>The page number of the paging query to return.</p>
+         * <p>Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -306,8 +306,8 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The number of entries per page in the paging query. Settings:</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the auto provisioning group.</p>
+         * <p>The ID of the region where the auto-provisioning group resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+         * <p>The ID of the resource group to which the auto-provisioning group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -363,7 +363,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the auto provisioning group.</p>
+         * <p>The tags attached to the auto-provisioning group.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -431,8 +431,8 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N that is added to the auto provisioning group.</p>
-             * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key of the auto-provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -443,8 +443,8 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N that is added to the auto provisioning group.</p>
-             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * <p>The tag value of the auto-provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

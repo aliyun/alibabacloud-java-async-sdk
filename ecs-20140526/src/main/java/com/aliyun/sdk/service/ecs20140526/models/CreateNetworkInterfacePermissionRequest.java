@@ -184,7 +184,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+         * <p>The ID of the Alibaba Cloud partner (certified ISV) account or individual user account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,8 +228,8 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The permission on the ENI. Valid values:</p>
-         * <p>InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</p>
+         * <p>The network interface controller (NIC) permission action. Only InstanceAttach is supported.</p>
+         * <p>InstanceAttach: allows the authorized user to attach your NIC to their ECS instance. The ECS instance must be in the same zone as the NIC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region of the network interface controller (NIC) permission. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

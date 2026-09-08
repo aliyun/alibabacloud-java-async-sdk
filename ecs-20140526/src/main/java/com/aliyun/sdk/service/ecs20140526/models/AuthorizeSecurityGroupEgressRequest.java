@@ -407,7 +407,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+         * <p>A client token used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -419,7 +419,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.Description</code> to specify the description of security group rule N.</p>
+         * <p>Deprecated. Use <code>Permissions.N.Description</code> to specify the rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -431,7 +431,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
+         * <p>Deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -443,7 +443,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.DestGroupId</code> to specify the ID of the destination security group.</p>
+         * <p>Deprecated. Use <code>Permissions.N.DestGroupId</code> to specify the destination security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp67acfmxazb4p****</p>
@@ -455,7 +455,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.DestGroupOwnerAccount</code> to specify the Alibaba Cloud account that manages the destination security group.</p>
+         * <p>Deprecated. Use <code>Permissions.N.DestGroupOwnerAccount</code> to specify the Alibaba Cloud account that owns the destination security group.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
@@ -467,7 +467,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.DestGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that manages the destination security group.</p>
+         * <p>Deprecated. Use <code>Permissions.N.DestGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that owns the destination security group.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678910</p>
@@ -479,7 +479,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the ID of the destination prefix list.</p>
+         * <p>Deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the destination prefix list ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -491,7 +491,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.IpProtocol</code> to specify the protocol.</p>
+         * <p>Deprecated. Use <code>Permissions.N.IpProtocol</code> to specify the protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -503,7 +503,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
+         * <p>Deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>2001:db8:1233:1a00::***</p>
@@ -515,7 +515,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 CIDR block.</p>
+         * <p>Deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>2001:db8:1234:1a00::***</p>
@@ -527,7 +527,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.NicType</code> to specify the NIC type.</p>
+         * <p>Deprecated. Use <code>Permissions.N.NicType</code> to specify the NIC type.</p>
          * 
          * <strong>example:</strong>
          * <p>intranet</p>
@@ -557,7 +557,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
+         * <p>The security group rules. Array length: 1 to 100.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -566,7 +566,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.Policy</code> to specify whether to allow outbound access.</p>
+         * <p>Deprecated. Use <code>Permissions.N.Policy</code> to configure the access permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -578,7 +578,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.PortRange</code> to specify the range of destination ports.</p>
+         * <p>Deprecated. Use <code>Permissions.N.PortRange</code> to specify the port range.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -590,7 +590,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.Priority</code> to specify the rule priority.</p>
+         * <p>Deprecated. Use <code>Permissions.N.Priority</code> to specify the rule priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -602,7 +602,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the source security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the source security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -646,7 +646,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.SourceCidrIp</code> to specify the source IPv4 CIDR block.</p>
+         * <p>Deprecated. Use <code>Permissions.N.SourceCidrIp</code> to specify the source IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -658,7 +658,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use <code>Permissions.N.SourcePortRange</code> to specify the range of source ports.</p>
+         * <p>Deprecated. Use <code>Permissions.N.SourcePortRange</code> to specify the source port range.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -911,7 +911,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             } 
 
             /**
-             * <p>The description of the security group rule. The description can be up to 1 to 512 characters in length.</p>
+             * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -922,7 +922,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The destination IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>The destination IPv4 CIDR block for which you want to configure access permissions. CIDR format and IPv4 format IP address ranges are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -933,11 +933,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The ID of the destination security group that is specified in the security group rule.</p>
+             * <p>The ID of the destination security group for which you want to configure access permissions.</p>
              * <ul>
-             * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
-             * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
-             * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
+             * <li><p>Specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestPrefixListId</code>.</p>
+             * </li>
+             * <li><p>If <code>DestGroupId</code> is specified but <code>DestCidrIp</code> is not, the <code>NicType</code> parameter can only be set to intranet.</p>
+             * </li>
+             * <li><p>If both <code>DestGroupId</code> and <code>DestCidrIp</code> are specified, <code>DestCidrIp</code> takes precedence.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -949,10 +952,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The Alibaba Cloud account that manages the destination security group.</p>
+             * <p>The Alibaba Cloud account that owns the destination security group when you configure cross-account security group rules. </p>
              * <ul>
-             * <li>If both <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</li>
-             * <li>If <code>DestCidrIp</code> is configured, <code>DestGroupOwnerAccount</code> is ignored.</li>
+             * <li>If neither <code>DestGroupOwnerAccount</code> nor <code>DestGroupOwnerId</code> parameter is specified, the rule is configured for access permissions to another security group within your account.</li>
+             * <li>If the <code>DestCidrIp</code> parameter is specified, the <code>DestGroupOwnerAccount</code> parameter is ignored.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -964,10 +967,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that manages the destination security group.</p>
+             * <p>The ID of the Alibaba Cloud account that owns the destination security group when you configure cross-account security group rules. </p>
              * <ul>
-             * <li>If both <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</li>
-             * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is ignored.</li>
+             * <li>If neither <code>DestGroupOwnerId</code> nor <code>DestGroupOwnerAccount</code> parameter is specified, the rule is configured for access permissions to another security group within your account.</li>
+             * <li>If the <code>DestCidrIp</code> parameter is specified, the <code>DestGroupOwnerId</code> parameter is ignored.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -979,12 +982,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
+             * <p>The ID of the destination prefix list for which you want to configure access permissions. You can call <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</p>
              * <p>Notes:</p>
-             * <ul>
-             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</li>
-             * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
-             * </ul>
+             * <p>If you specify one of the <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code> parameters, this parameter is ignored.</p>
+             * <p>For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -995,27 +996,27 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>Network Layer /transport layer protocol. Two types of assignments are supported:</p>
+             * <p>The network-layer or transport-layer protocol. Two types of values are supported:</p>
              * <ol>
-             * <li>The case-insensitive protocol name. Valid value:</li>
+             * <li>Case-insensitive protocol names. Valid values:</li>
              * </ol>
              * <ul>
              * <li>ICMP</li>
              * <li>GRE</li>
              * <li>TCP</li>
              * <li>UDP</li>
-             * <li>ALL: supports all protocols.</li>
+             * <li>ALL: All protocols are supported.</li>
              * </ul>
              * <ol start="2">
-             * <li>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</li>
+             * <li>Protocol numbers that comply with IANA specifications, which are integers from 0 to 255. The following regions currently support this feature:</li>
              * </ol>
              * <ul>
-             * <li>Philippines (Manila)</li>
-             * <li>UK (London)</li>
-             * <li>Malaysia (Kuala Lumpur)</li>
-             * <li>China (Hohhot)</li>
-             * <li>China (Qingdao)</li>
-             * <li>US (Silicon Valley)</li>
+             * <li>Philippines</li>
+             * <li>UK</li>
+             * <li>Malaysia</li>
+             * <li>Hohhot</li>
+             * <li>Qingdao</li>
+             * <li>US West</li>
              * <li>Singapore</li>
              * </ul>
              * 
@@ -1028,9 +1029,9 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <p>The destination IPv6 CIDR block for which you want to configure access permissions. CIDR format and IPv6 format IP address ranges are supported.</p>
              * <blockquote>
-             * <p> This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+             * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1042,10 +1043,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv6 CIDR block of the security group rule. or IPv6 address.</p>
-             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>The source IPv6 CIDR block. CIDR blocks and IPv6 address ranges are supported. </p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * <blockquote>
-             * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1057,14 +1058,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
+             * <p>The network interface controller (NIC) type of the security group rule for classic network type security groups. Valid values: </p>
              * <ul>
-             * <li><p>internet: public NIC.</p>
-             * </li>
-             * <li><p>intranet: internal NIC.</p>
-             * <ul>
-             * <li>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be changed.</li>
-             * <li>If you specify only DestGroupId to create a rule that controls access to the specified security group, you must set this parameter to intranet.</li>
+             * <li>internet: public NIC.</li>
+             * <li>intranet: internal network NIC.<ul>
+             * <li>For VPC-type security group rules, the network interface controller (NIC) type does not need to be specified and the parameter can only be set to intranet.</li>
+             * <li>When configuring mutual access between security groups (only the DestGroupId parameter is specified), the value can only be intranet.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1079,10 +1078,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The action of the security group rule. Valid values:</p>
+             * <p>The access permission. Valid values: </p>
              * <ul>
-             * <li>accept: allows outbound access.</li>
-             * <li>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+             * <li>accept: Accepts access.</li>
+             * <li>drop: Denies access without returning a deny response. The request appears to timeout or the connection cannot be established.</li>
              * </ul>
              * <p>Default value: accept.</p>
              * 
@@ -1095,12 +1094,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the security group rule. Valid values:</p>
+             * <p>The range of destination ports that correspond to the protocol. Valid values:</p>
              * <ul>
-             * <li>TCP/UDP: Valid values: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</li>
-             * <li>ICMP:-1/-1.</li>
-             * <li>GRE:-1/-1.</li>
-             * <li>ALL:-1/-1.</li>
+             * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP: -1/-1.</li>
+             * <li>GRE: -1/-1.</li>
+             * <li>ALL: -1/-1.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1112,10 +1111,11 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available prefix lists.</p>
+             * <p>The port list ID.
+             * You can call <code>DescribePortRangeLists</code> to query available port list IDs.</p>
              * <ul>
-             * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
-             * <li>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For more information about limits on security groups and ports, see <a href="~~25412#SecurityGroupQuota1~~">Limits on security groups</a>.</li>
+             * <li>If <code>Permissions.N.PortRange</code> is specified, this parameter is ignored.</li>
+             * <li>Port lists are not supported for security groups with the classic network type. For more information about security group and port list limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1127,7 +1127,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The priority of security group rule N. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+             * <p>The priority of the security group rule. A smaller number indicates a higher priority. Valid values: 1 to 100.</p>
              * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
@@ -1139,8 +1139,8 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 address ranges are supported.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -1151,14 +1151,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source port range of the security group rule. Valid values:</p>
+             * <p>The range of source ports that correspond to the protocol. Valid values:</p>
              * <ul>
-             * <li>TCP/UDP protocol: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</li>
-             * <li>ICMP protocol:-1/-1.</li>
-             * <li>GRE protocol:-1/-1.</li>
-             * <li>ALL:-1/-1.</li>
+             * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP: -1/-1.</li>
+             * <li>GRE: -1/-1.</li>
+             * <li>ALL: -1/-1.</li>
              * </ul>
-             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>80/80</p>

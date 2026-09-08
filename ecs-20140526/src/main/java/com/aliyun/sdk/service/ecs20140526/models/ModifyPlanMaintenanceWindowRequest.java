@@ -182,7 +182,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable or disable the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -200,6 +203,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
+         * <p>The ID of the O&amp;M window to modify. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +216,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * PlanWindowName.
+         * <p>The name of the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WIndowName</p>
          */
         public Builder planWindowName(String planWindowName) {
             this.putQueryParameter("PlanWindowName", planWindowName);
@@ -221,6 +228,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +241,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * SupportMaintenanceAction.
+         * <p>The supported O&amp;M actions. Leave this parameter empty if no modification is needed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reboot</p>
          */
         public Builder supportMaintenanceAction(String supportMaintenanceAction) {
             this.putQueryParameter("SupportMaintenanceAction", supportMaintenanceAction);
@@ -242,7 +253,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * TargetResource.
+         * <p>The resource to which the O&amp;M window applies. Leave this parameter empty if no modification is needed.</p>
          */
         public Builder targetResource(TargetResource targetResource) {
             String targetResourceShrink = shrink(targetResource, "TargetResource", "json");
@@ -252,7 +263,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
         }
 
         /**
-         * TimePeriod.
+         * <p>The recurring cycle of the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
          */
         public Builder timePeriod(TimePeriod timePeriod) {
             String timePeriodShrink = shrink(timePeriod, "TimePeriod", "json");
@@ -321,7 +332,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag to which the O&amp;M window applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -329,7 +343,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag to which the O&amp;M window applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -409,7 +426,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             } 
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the O&amp;M window applies. This parameter is required only when Scope is set to ResourceGroup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmy4cc27vsvia</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -417,7 +437,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * Scope.
+             * <p>The type of resource to which the O&amp;M window applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -425,7 +448,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The tags to which the O&amp;M window applies. This parameter is required only when Scope is set to Tag.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -492,7 +515,15 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the O&amp;M window.</p>
+             * <ul>
+             * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
+             * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
+             * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Tuesday,03:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -500,7 +531,15 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the O&amp;M window.</p>
+             * <ul>
+             * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
+             * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
+             * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Monday,22:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -567,7 +606,10 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             } 
 
             /**
-             * PeriodUnit.
+             * <p>The type of the cycle. Valid values: Daily and Weekly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -575,7 +617,7 @@ public class ModifyPlanMaintenanceWindowRequest extends Request {
             }
 
             /**
-             * RangeList.
+             * <p>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</p>
              */
             public Builder rangeList(java.util.List<RangeList> rangeList) {
                 this.rangeList = rangeList;

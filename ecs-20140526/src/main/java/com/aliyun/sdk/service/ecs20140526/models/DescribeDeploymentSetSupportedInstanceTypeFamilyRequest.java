@@ -171,7 +171,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,9 +204,12 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         /**
          * <p>The deployment strategy. Valid values:</p>
          * <ul>
-         * <li>Availability: high availability strategy</li>
-         * <li>AvailabilityGroup: high availability group strategy</li>
-         * <li>LowLatency: low latency strategy</li>
+         * <li><p>Availability: high availability strategy.</p>
+         * </li>
+         * <li><p>AvailabilityGroup: high availability strategy for deployment set groups.</p>
+         * </li>
+         * <li><p>LowLatency: low network latency strategy.</p>
+         * </li>
          * </ul>
          * <p>Default value: Availability.</p>
          * 

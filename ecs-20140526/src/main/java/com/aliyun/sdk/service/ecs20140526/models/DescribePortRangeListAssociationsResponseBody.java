@@ -80,7 +80,7 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If the return value is empty, no more data is returned.</p>
+         * <p>The pagination token returned in this call. If the return value is empty, no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -91,7 +91,7 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources that are associated with the port list.</p>
+         * <p>The resources associated with the port range list.</p>
          */
         public Builder portRangeListAssociations(java.util.List<PortRangeListAssociations> portRangeListAssociations) {
             this.portRangeListAssociations = portRangeListAssociations;
@@ -168,7 +168,7 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2zefu72****</p>
@@ -179,7 +179,7 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid value: SecurityGroup.</p>
+             * <p>The resource type. Valid value: SecurityGroup.</p>
              * 
              * <strong>example:</strong>
              * <p>SecurityGroup</p>

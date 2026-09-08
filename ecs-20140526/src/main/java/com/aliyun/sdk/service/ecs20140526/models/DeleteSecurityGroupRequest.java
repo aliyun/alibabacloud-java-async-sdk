@@ -172,7 +172,7 @@ public class DeleteSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DeleteSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The security group ID. You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query the security group ID.</p>
+         * <p>The security group ID. You can call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to query security group IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

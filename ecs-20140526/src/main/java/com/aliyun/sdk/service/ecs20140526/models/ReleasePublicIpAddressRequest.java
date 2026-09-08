@@ -126,7 +126,7 @@ public class ReleasePublicIpAddressRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is unavailable.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
@@ -164,7 +164,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the instance is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

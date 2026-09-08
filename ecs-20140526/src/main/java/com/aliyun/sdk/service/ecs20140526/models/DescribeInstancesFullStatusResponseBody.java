@@ -106,10 +106,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried instances.</p>
-         * <blockquote>
-         * <p> If no instances exist, this parameter is empty.</p>
-         * </blockquote>
+         * InstanceFullStatusSet.
          */
         public Builder instanceFullStatusSet(InstanceFullStatusSet instanceFullStatusSet) {
             this.instanceFullStatusSet = instanceFullStatusSet;
@@ -139,7 +136,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -150,7 +147,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -219,10 +216,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the health state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>64</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -230,10 +224,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the health state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Warning</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,10 +291,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the system event state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -311,10 +299,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the system event state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Scheduled</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -381,10 +366,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the system event type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -392,10 +374,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the system event type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SystemMaintenance.Reboot</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -501,10 +480,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-07-27T13:53:25Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -512,20 +488,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the disk. Valid values:</p>
-             * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-             * <li>local_ssd_pro: I/O-intensive local disk</li>
-             * <li>local_hdd_pro: throughput-intensive local disk</li>
-             * <li>ephemeral: retired local disk</li>
-             * <li>ephemeral_ssd: retired local SSD</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_ssd</p>
+             * DeviceCategory.
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -533,10 +496,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * DeviceSize.
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -544,14 +504,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid values:</p>
-             * <ul>
-             * <li>system</li>
-             * <li>data</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * DeviceType.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -559,10 +512,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the disk was released. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-27T13:53:25Z</p>
+             * ReleaseTime.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -696,10 +646,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The device name of the local disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>/dev/vdb</p>
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -707,10 +654,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the local disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp67acfmxazb4p****</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -718,7 +662,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inactive disks that have been released and must be cleared.</p>
+             * InactiveDisks.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -863,7 +807,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The state of the system event.</p>
+             * EventCycleStatus.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -871,10 +815,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system event ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>e-bp1hygp5b04o56l0****</p>
+             * EventId.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -882,10 +823,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the system event was published. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-11-30T06:32:31Z</p>
+             * EventPublishTime.
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -893,7 +831,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the system event.</p>
+             * EventType.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -901,20 +839,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended attributes of system events generated for instances that have local disks attached.</p>
-             * <p>The return values vary based on the system event type.</p>
-             * <p>If the system event type is not one of the following types, this parameter is empty:</p>
-             * <ul>
-             * <li>SystemMaintenance.StopAndRepair</li>
-             * <li>SystemMaintenance.CleanInactiveDisks</li>
-             * <li>SecurityPunish.Locked</li>
-             * <li>SecurityPunish.WebsiteBanned</li>
-             * <li>SystemUpgrade.Migrate</li>
-             * <li>SystemMaintenance.RebootAndIsolateErrorDisk</li>
-             * <li>SystemMaintenance.RebootAndReInitErrorDisk</li>
-             * <li>SystemMaintenance.ReInitErrorDisk</li>
-             * <li>SystemMaintenance.IsolateErrorDisk</li>
-             * </ul>
+             * ExtendedAttribute.
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -922,13 +847,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The impact level of the system event.</p>
-             * <blockquote>
-             * <p> If the user is not in a whitelist, this parameter is empty.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * ImpactLevel.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -936,10 +855,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled time at which to execute the O&amp;M task related to the system event. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-07T00:00:00Z</p>
+             * NotBefore.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -947,13 +863,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the system event was scheduled.</p>
-             * <blockquote>
-             * <p> If the exception cause is not detected, this parameter is empty.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>A simulated event.</p>
+             * Reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1074,10 +984,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the instance lifecycle state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1085,10 +992,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance lifecycle state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1181,7 +1085,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The health state of the instance.</p>
+             * HealthStatus.
              */
             public Builder healthStatus(HealthStatus healthStatus) {
                 this.healthStatus = healthStatus;
@@ -1189,10 +1093,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4p****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1200,7 +1101,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system events that are in the Scheduled or Inquiring state.</p>
+             * ScheduledSystemEventSet.
              */
             public Builder scheduledSystemEventSet(ScheduledSystemEventSet scheduledSystemEventSet) {
                 this.scheduledSystemEventSet = scheduledSystemEventSet;
@@ -1208,7 +1109,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle state of the instance.</p>
+             * Status.
              */
             public Builder status(Status status) {
                 this.status = status;

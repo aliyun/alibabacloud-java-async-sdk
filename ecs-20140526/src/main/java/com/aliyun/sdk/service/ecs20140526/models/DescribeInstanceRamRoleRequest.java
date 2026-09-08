@@ -182,9 +182,9 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of ECS instances. You can specify up to 50 instance IDs in a single request.</p>
+         * <p>The instance IDs of the instances to query. You can specify up to 50 instances at a time.</p>
          * <blockquote>
-         * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
+         * <p>You must specify at least one of the InstanceIds and RamRoleName parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -206,8 +206,8 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>The page number of the page to return.</p>
+         * <p>Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -220,8 +220,8 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 50.</p>
+         * <p>The number of entries per page. Unit: entries.</p>
+         * <p>Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -234,9 +234,9 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance RAM role. If you specify this parameter, all ECS instances to which the instance RAM role is attached are returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation of RAM to query the names of available instance RAM roles.</p>
+         * <p>The name of the instance RAM role. You can use this parameter to query all ECS instances that are assigned the specified instance RAM role. You can call the RAM API <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles that you created.</p>
          * <blockquote>
-         * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
+         * <p>You must specify at least one of InstanceIds and RamRoleName.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The region ID of the instance RAM role. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

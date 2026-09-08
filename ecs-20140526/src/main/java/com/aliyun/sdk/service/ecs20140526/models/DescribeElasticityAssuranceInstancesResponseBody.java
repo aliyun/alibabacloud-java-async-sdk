@@ -106,7 +106,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the instances that match and use the elasticity assurance.</p>
+         * ElasticityAssuranceItem.
          */
         public Builder elasticityAssuranceItem(ElasticityAssuranceItem elasticityAssuranceItem) {
             this.elasticityAssuranceItem = elasticityAssuranceItem;
@@ -114,7 +114,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token used to start the next query.</p>
+         * <p>The pagination token for the next query of the elasticity assurance.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -147,7 +147,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -203,10 +203,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

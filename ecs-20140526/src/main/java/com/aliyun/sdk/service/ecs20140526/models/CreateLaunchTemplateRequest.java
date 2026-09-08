@@ -850,11 +850,14 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The automatic release time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The automatic release time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <ul>
-         * <li>If the value of <code>ss</code> is not <code>00</code>, the time is automatically rounded down to the nearest minute based on the value of <code>mm</code>.</li>
-         * <li>The specified time must be at least 30 minutes later than the current time.</li>
-         * <li>The specified time can be at most three years later than the current time.</li>
+         * <li><p>If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically rounded down to the start of the current minute (<code>mm</code>).</p>
+         * </li>
+         * <li><p>The earliest release time is 30 minutes after the current time.</p>
+         * </li>
+         * <li><p>The latest release time cannot be more than three years from the current time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -869,12 +872,12 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Auto-renewal is enabled.</li>
+         * <li>false: Auto-renewal is disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <code>InstanceChargeType</code> to <code>PrePaid</code>.</p>
+         * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -887,8 +890,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal period of the instance. Valid values:</p>
-         * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>The auto-renewal period. Valid values: </p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>If PeriodUnit is set to Week: 1, 2, and 3.</li>
+         * <li>If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -901,10 +909,10 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <p>The running mode of the burstable instance. Valid values:</p>
          * <ul>
-         * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-         * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Standard: standard mode. For more information, see the performance constrained mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Unlimited: unlimited mode. For more information, see the unlimited mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -917,7 +925,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The data disks.</p>
+         * <p>The list of data disk configurations.</p>
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -926,14 +934,16 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance. Valid values:</p>
+         * <p>The release protection property of the instance. Specifies whether the instance can be released from the console or by calling <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a>. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Release protection is enabled.</p>
+         * </li>
+         * <li><p>false: Release protection is disabled.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
+         * <p>This property applies only to pay-as-you-go instances and can only restrict manual release operations. System-initiated release operations are not affected.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -946,7 +956,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the deployment set to which to deploy the instance.</p>
+         * <p>The ID of the deployment set.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-bp1brhwhoqinyjd6****</p>
@@ -958,7 +968,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testECSDescription</p>
@@ -972,7 +982,7 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>Specifies whether to enable the operating system configuration of the instance.</p>
          * <blockquote>
-         * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+         * <p>This parameter will be deprecated. Use other parameters for better compatibility.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -985,11 +995,11 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The instance hostname.</p>
+         * <p>The hostname of the Elastic Compute Service server.</p>
          * <ul>
-         * <li>The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
-         * <li>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</li>
-         * <li>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+         * <li>The hostname cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods or hyphens.</li>
+         * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.) or consist entirely of digits. The hostname can contain letters, digits, and hyphens (-).</li>
+         * <li>Other instances (such as Linux): The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain letters, digits, and hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1004,12 +1014,12 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: The access channel is enabled.</li>
+         * <li>disabled: The access channel is disabled.</li>
          * </ul>
          * <p>Default value: enabled.</p>
          * <blockquote>
-         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</p>
+         * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Overview of ECS instance metadata</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1023,7 +1033,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1036,14 +1046,14 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+         * <p>Specifies whether to forcefully use the security-hardened mode (IMDSv2) to access instance metadata. Valid values:</p>
          * <ul>
-         * <li>optional: does not forcefully use the security hardening mode (IMDSv2).</li>
-         * <li>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * <li>optional: The security-hardened mode is not forcefully used.</li>
+         * <li>required: The security-hardened mode is forcefully used. After you set this value, instance metadata cannot be accessed in normal mode.</li>
          * </ul>
          * <p>Default value: optional.</p>
          * <blockquote>
-         * <p> For information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</p>
+         * <p>For more information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1056,7 +1066,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image to use to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.</p>
+         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> to query available image resources.</p>
          * 
          * <strong>example:</strong>
          * <p>win2008r2_64_ent_sp1_en-us_40G_alibase_20170915.vhd</p>
@@ -1068,7 +1078,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>Details about the image options.</p>
+         * <p>The image-related property information.</p>
          */
         public Builder imageOptions(ImageOptions imageOptions) {
             this.putQueryParameter("ImageOptions", imageOptions);
@@ -1079,10 +1089,10 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The source of the image. Valid values:</p>
          * <ul>
-         * <li>system: public image provided by Alibaba Cloud.</li>
-         * <li>self: custom image that you created.</li>
-         * <li>others: shared image from another Alibaba Cloud account.</li>
-         * <li>marketplace:<a href="https://marketplace.alibabacloud.com/">Alibaba Cloud Marketplace</a> image. If Alibaba Cloud Marketplace images are available, you can use the images without the need to subscribe to the images. Take note of the billing details of Alibaba Cloud Marketplace images.</li>
+         * <li>system: public images provided by Alibaba Cloud.</li>
+         * <li>self: custom images that you created.</li>
+         * <li>others: shared images from other Alibaba Cloud accounts.</li>
+         * <li>marketplace: images available from &lt;props=&quot;china&quot;&gt;<ph><a href="https://market.aliyun.com/">Alibaba Cloud Marketplace</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://marketplace.alibabacloud.com/">Alibaba Cloud Marketplace</a></ph>. You can use Alibaba Cloud Marketplace images directly without subscribing to them first. Check the billing details of the Alibaba Cloud Marketplace image on your own.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1097,7 +1107,7 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account has sufficient credits.Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
+         * <li>PrePaid: subscription. If you set this parameter to PrePaid, &lt;props=&quot;china&quot;&gt;<ph>confirm that your account supports balance payments and credit payments</ph>&lt;props=&quot;intl&quot;&gt;<ph>confirm that your account supports credit payments</ph>. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
          * <li>PostPaid: pay-as-you-go.</li>
          * </ul>
          * 
@@ -1111,8 +1121,8 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The instance name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <code>InstanceId</code> value.</p>
-         * <p>When you create multiple ECS instances at a time, you can batch configure sequential names for the instances. The instance names can contain square brackets ([]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
+         * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, and other characters in the Unicode letter category. The name can contain colons (:), underscores (_), periods (.), and hyphens (-). The default value is the <code>InstanceId</code> of the instance.</p>
+         * <p>When you create multiple ECS instances, you can specify sequential instance names. The names can contain brackets ([]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Specify sequential instance names or hostnames</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -1124,7 +1134,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -1138,11 +1148,11 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The billing method for network usage. Valid values:</p>
          * <ul>
-         * <li>PayByBandwidth: pay-by-bandwidth</li>
-         * <li>PayByTraffic: pay-by-traffic</li>
+         * <li>PayByBandwidth: pay-by-bandwidth.</li>
+         * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * <blockquote>
-         * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidths may be limited. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are both upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1157,8 +1167,8 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
          * <ul>
-         * <li>When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</li>
-         * <li>When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</li>
+         * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
+         * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1183,10 +1193,10 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create an I/O optimized instance. Valid values:</p>
+         * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
          * <ul>
-         * <li>none: creates a non-I/O optimized instance.</li>
-         * <li>optimized: creates an I/O optimized instance.</li>
+         * <li>none: The instance is not I/O optimized.</li>
+         * <li>optimized: The instance is I/O optimized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1199,7 +1209,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The number of IPv6 addresses to randomly generate for the primary elastic network interface (ENI). Valid values: 1 to 10.</p>
+         * <p>The number of randomly generated IPv6 addresses to assign to the primary ENI. Valid values: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1211,10 +1221,10 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair. This parameter is empty by default.</p>
+         * <p>The name of the SSH key pair.</p>
          * <ul>
-         * <li>For Windows instances, this parameter is ignored The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</li>
-         * <li>For Linux instances, the password-based logon method is disabled by default.</li>
+         * <li>For Windows instances, this parameter is ignored. Even if you specify this parameter, only the <code>Password</code> content is used.</li>
+         * <li>For Linux instances, password-based logon is disabled during initialization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1227,7 +1237,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the launch template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1240,7 +1250,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The information of the ENIs.</p>
+         * <p>The network interface controller (NIC) configurations.</p>
          */
         public Builder networkInterface(java.util.List<NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
@@ -1251,8 +1261,8 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li>classic: classic network</li>
-         * <li>vpc: VPC</li>
+         * <li>classic: classic network. This feature has been retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
+         * <li>vpc: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1285,7 +1295,7 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>Specifies whether to use the preset password of the image.</p>
          * <blockquote>
-         * <p>If you set the PasswordInherit parameter to true, make sure that you leave the Password parameter empty and the selected image has a preset password.</p>
+         * <p>When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a password preset.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1298,7 +1308,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Unit: months. This parameter is valid and required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+         * <p>The subscription duration of the resource. Unit: months. This parameter takes effect and is required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1310,8 +1320,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription period. Valid values:</p>
-         * <p>Month (default)</p>
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>Week.</li>
+         * <li>Month (default).</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;Month (default).</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -1323,8 +1338,8 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The private IP address to assign to the instance.</p>
-         * <p>To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
+         * <p>The private IP address of the instance.</p>
+         * <p>When you set a private IP address for a VPC-connected ECS instance, the address must be from the idle CIDR block of the vSwitch specified by <code>VSwitchId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p><code>10.1.**.**</code></p>
@@ -1336,7 +1351,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance Resource Access Management (RAM) role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</p>
+         * <p>The name of the instance RAM role. You can call the RAM API <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles that you have created.</p>
          * 
          * <strong>example:</strong>
          * <p>testRamRoleName</p>
@@ -1348,7 +1363,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which to create the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1361,7 +1376,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the instance, Elastic Block Storage (EBS) device, and elastic network interface (ENI).</p>
+         * <p>The ID of the resource group to which the instance, block storage devices, and Elastic Network Interfaces (ENIs) belong.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -1393,8 +1408,8 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>Specifies whether to enable security hardening for the operating system. Valid values:</p>
          * <ul>
-         * <li>Active: enables security hardening. This value is applicable only to public images.</li>
-         * <li>Deactive: does not enable security hardening. This value is applicable to all images.</li>
+         * <li>Active: Security hardening is enabled. This value is applicable only to public images.</li>
+         * <li>Deactive: Security hardening is disabled. This value is applicable to all image types.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1407,9 +1422,9 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other. A security group can contain up to 1,000 instances.</p>
+         * <p>The ID of the security group to which the new instance belongs. Instances in the same security group can communicate with each other. A security group can contain up to 1,000 instances.</p>
          * <blockquote>
-         * <p>You cannot specify both the <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> parameters.</p>
+         * <p>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1422,9 +1437,9 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+         * <p>The IDs of one or more security groups to which the instance belongs. The valid value range of N depends on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
          * <blockquote>
-         * <p>You cannot specify both the <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> parameters.</p>
+         * <p>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1437,7 +1452,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * SecurityOptions.
+         * <p>The security options.</p>
          */
         public Builder securityOptions(SecurityOptions securityOptions) {
             this.putQueryParameter("SecurityOptions", securityOptions);
@@ -1448,12 +1463,12 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
          * <ul>
-         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period, the system compares the bid price with the market price and checks resource inventory to determine whether to retain automatic release the instance.</li>
+         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks resource inventory to determine whether to retain automatic release the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Set the protection period based on the expected task execution duration.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * <p>This parameter takes effect when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1466,7 +1481,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the <code>SpotStrategy</code> parameter is set to <code>SpotWithPriceLimit</code>.</p>
+         * <p>The maximum hourly price of the instance. This parameter supports up to three decimal places and takes effect when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.97</p>
@@ -1478,11 +1493,11 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
+         * <p>The preemption policy for the pay-as-you-go instance. This parameter takes effect when <code>InstanceChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
          * <ul>
          * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-         * <li>SpotWithPriceLimit: The instance is created as a spot instance with a user-defined maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instance is created as a spot instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * <li>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1495,9 +1510,11 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the instance, disks, and primary ENI that are created from the launch template.</p>
-         * <p><strong>Scenario</strong></p>
-         * <p>If you created a launch template by calling the CreateLaunchTemplate operation and use the default version that is automatically generated for the launch template to create instances, the specified tags are automatically added to the created instances, disks, and primary ENIs. For more information about the default versions of launch templates, see [xxxx](url).</p>
+         * <p>The tags for instances, disks, and primary ENIs created from this template version.</p>
+         * <details>
+         * <summary>Scenarios</summary>
+         * After you call CreateLaunchTemplate to create a template, the auto-generated default version uses these tags to tag instances, disks, and primary ENIs when instances are created.
+         * </details>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1518,9 +1535,9 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the launch template.</p>
+         * <p>The tag key-value pairs of the launch template itself.</p>
          * <blockquote>
-         * <p> You can add tags to or query the tags of launch templates by calling API operations. You cannot add tags to or query the tags of launch templates in the ECS console.</p>
+         * <p>Currently, you can create and query tags for launch templates only by using API operations. The console does not support creating or viewing these tags.</p>
          * </blockquote>
          */
         public Builder templateTag(java.util.List<TemplateTag> templateTag) {
@@ -1530,7 +1547,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</p>
+         * <p>The instance user data. The data must be Base64-encoded. The maximum size of the raw data is 32 KB.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -1542,7 +1559,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to which to connect the instance. This parameter is required if you specify the VpcId parameter.</p>
+         * <p>The vSwitch ID. This parameter is required when you create a VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1s5fnvk4gn2tws0****</p>
@@ -1578,7 +1595,7 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone in which to create the instance.</p>
+         * <p>The zone ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
@@ -1779,7 +1796,7 @@ public class CreateLaunchTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
+             * <p>The ID of the automatic snapshot policy applied to the system disk.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-gc7c37d4ylw7mtnk****</p>
@@ -1790,10 +1807,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
+             * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1810,11 +1827,11 @@ public class CreateLaunchTemplateRequest extends Request {
              * <li>cloud: basic disk.</li>
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
-             * <li>cloud_essd: Enterprise SSD (ESSD). You can use <code>SystemDisk.PerformanceLevel</code> to set the performance level of the ESSD to use as the system disk.</li>
+             * <li>cloud_essd: enterprise SSD. You can use the <code>SystemDisk.PerformanceLevel</code> parameter to set the performance level of the disk.</li>
              * <li>cloud_auto: ESSD AutoPL disk.</li>
              * <li>cloud_essd_entry: ESSD Entry disk.</li>
              * </ul>
-             * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
+             * <p>For retired instance types that are not I/O optimized, the default value is cloud. Otherwise, the default value is cloud_efficiency.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -1827,8 +1844,8 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>Specifies whether to release the system disk when the instance is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The system disk is released together with the instance.</li>
+             * <li>false: The system disk is not released together with the instance.</li>
              * </ul>
              * <p>Default value: true.</p>
              * 
@@ -1852,7 +1869,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>testSystemDiskName</p>
@@ -1865,12 +1882,12 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>Specifies whether to encrypt the system disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The system disk is encrypted.</li>
+             * <li>false: The system disk is not encrypted.</li>
              * </ul>
              * <p>Default value: false.</p>
              * <blockquote>
-             * <p> If you create an instance in Hong Kong Zone D or Singapore Zone A, you cannot encrypt the system disk.</p>
+             * <p>Zone D in Hong Kong (China) and Zone A in Singapore do not support system disk encryption during instance creation.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1883,7 +1900,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
             /**
              * <blockquote>
-             * <p>This parameter is in invitational preview and is unavailable for general users.</p>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1895,7 +1912,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key to use for the system disk.</p>
+             * <p>The KMS key ID of the system disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -1906,14 +1923,14 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the ESSD to use as the system disk. Default value: PL0. Valid values:</p>
+             * <p>The performance level of the enterprise SSD used as the system disk. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0 (default): a single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
-             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -1924,10 +1941,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
-             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline Performance}.</p>
+             * <p>Baseline Performance = min{1,800 + 50 × Capacity, 50,000}</p>
              * <blockquote>
-             * <p>This parameter is available only if you set the SystemDisk.Category parameter to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+             * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the provisioned performance of an ESSD AutoPL disk</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1941,10 +1958,10 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>The size of the system disk. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li>Valid values if you set SystemDisk.Category to cloud: 20 to 500.</li>
-             * <li>Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.</li>
+             * <li>cloud: 20 to 500.</li>
+             * <li>Other disk categories: 20 to 2048.</li>
              * </ul>
-             * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</p>
+             * <p>The value of this parameter must be greater than or equal to max{20, ImageSize}.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -2157,7 +2174,7 @@ public class CreateLaunchTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy to apply to data disk N.</p>
+             * <p>The ID of the automatic snapshot policy applied to the data disk.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-m5e7fa9ute44ssa****</p>
@@ -2168,10 +2185,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
+             * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2185,14 +2202,25 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>The category of data disk N. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: utra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>cloud_essd: ESSD</li>
-             * <li>cloud_auto: ESSD AutoPL disk</li>
-             * <li>cloud_essd_entry: ESSD Entry disk</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: enterprise SSD.</li>
+             * <li>cloud: basic disk.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
+             * <li>cloud_regional_disk_auto: regional ESSD.</li>
+             * <li>cloud_essd_entry: ESSD Entry disk.<blockquote>
+             * <p>The <code>cloud_essd_entry</code> value is supported only when <code>InstanceType</code> is set to an instance type in the <code>ecs.u1</code> or <code>ecs.e</code> family.</p>
+             * </blockquote>
+             * </li>
+             * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</li>
+             * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium Edition.</li>
              * </ul>
-             * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
+             * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
+             * Default value details:</p>
+             * <ul>
+             * <li>If InstanceType is set to a retired instance type that is not I/O optimized, the default parameter value is <code>cloud</code>.</li>
+             * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, if the I/O optimized instance type does not support cloud_auto, the default value is cloud_efficiency. Otherwise, the default value is cloud_auto, and the performance burst feature is enabled by default (which incurs additional fees. For details, see <a href="~~368372#p_75k_2hp_7gp~~">Billing examples</a>). For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -2203,10 +2231,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to release data disk N when the associated instance is released. Valid values:</p>
+             * <p>Specifies whether the data disk is released when the instance is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The data disk is released together with the instance.</li>
+             * <li>false: The data disk is not released together with the instance.</li>
              * </ul>
              * <p>Default value: true.</p>
              * 
@@ -2219,7 +2247,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description of the data disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>testDataDiskDescription</p>
@@ -2230,17 +2258,19 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The mount point of data disk N. The mount points are named based on the number of data disks:</p>
+             * <p>The mount point of the data disk. The naming convention varies based on the number of data disks attached:</p>
              * <ul>
-             * <li>1st to 25th data disks: /dev/xvd<code>[b-z]</code>.</li>
-             * <li>From the 26th data disk on: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</li>
+             * <li><p>1 to 25 data disks: /dev/xvd<code>[b-z]</code></p>
+             * </li>
+             * <li><p>More than 25 data disks: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> to change the category and size of data disk N created based on the image.</p>
+             * <p>This parameter is intended only for full image (system image) scenarios. You can set this parameter to the mount point of a data disk in the full image and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the disk category and size of the data disk in the full image.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>/dev/xvdb</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -2248,7 +2278,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>testDataDiskName</p>
@@ -2259,7 +2289,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt data disk N.</p>
+             * <p>Specifies whether the data disk is encrypted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2270,7 +2300,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key used for the data disk.</p>
+             * <p>The KMS key ID for the data disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d****</p>
@@ -2281,14 +2311,14 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+             * <p>The performance level of the enterprise SSD used as a data disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
-             * <li>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</li>
+             * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1 (default): a single disk can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
-             * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -2299,10 +2329,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline Performance}.</p>
+             * <p>Baseline Performance = min{1,800 + 50 × Capacity, 50,000}</p>
              * <blockquote>
-             * <p> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+             * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the provisioned performance of an ESSD AutoPL disk</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2316,24 +2346,18 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li><p>Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</p>
-             * </li>
-             * <li><p>Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
-             * </li>
-             * <li><p>Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
-             * </li>
-             * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.</p>
-             * <ul>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</li>
+             * <li>cloud: 5 to 2000.</li>
+             * <li>cloud_efficiency: 20 to 32768.</li>
+             * <li>cloud_ssd: 20 to 32768.</li>
+             * <li>cloud_essd: The valid value range depends on the value of <code>DataDisk.N.PerformanceLevel</code>.<ul>
+             * <li>PL0: 1 to 32768.</li>
+             * <li>PL1: 20 to 32768.</li>
+             * <li>PL2: 461 to 32768.</li>
+             * <li>PL3: 1261 to 32768.</li>
              * </ul>
              * </li>
-             * <li><p>Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.</p>
-             * </li>
-             * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.</p>
-             * </li>
+             * <li>cloud_auto: 1 to 32,768.</li>
+             * <li>cloud_essd_entry: 10 to 32,768.</li>
              * </ul>
              * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>SnapshotId</code>.</p>
              * 
@@ -2346,9 +2370,9 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If you specify <code>DataDisk.N.SnapshotId</code>, <code>DataDisk.N.Size</code> is ignored. The data disk is created with the size of the specified snapshot.</p>
+             * <p>The snapshot ID used to create data disk N. Valid values of N: 1 to 16. After you specify <code>DataDisk.N.SnapshotId</code>, the <code>DataDisk.N.Size</code> parameter is ignored. The actual size of the created disk is the size of the specified snapshot.</p>
              * <blockquote>
-             * <p> Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+             * <p>Snapshots created on or before July 15, 2013 cannot be used. Requests that use such snapshots are rejected.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2406,10 +2430,10 @@ public class CreateLaunchTemplateRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+             * <p>Specifies whether instances that use this image support logon with the ecs-user account. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Supported.</li>
+             * <li>false: Not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2571,14 +2595,16 @@ public class CreateLaunchTemplateRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+             * <p>Specifies whether to retain the ENI when the instance is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The ENI is not retained.</p>
+             * </li>
+             * <li><p>false: The ENI is retained.</p>
+             * </li>
              * </ul>
              * <p>Default value: true.</p>
              * <blockquote>
-             * <p> This parameter takes effect only for secondary ENIs.</p>
+             * <p>This parameter takes effect only for secondary ENIs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2590,7 +2616,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * <p>The description of the secondary network interface controller (NIC). The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>testEniDescription</p>
@@ -2601,16 +2627,16 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
+             * <p>The type of the network interface controller (NIC). Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Primary</li>
-             * <li>Secondary</li>
+             * <li>Primary: primary NIC.</li>
+             * <li>Secondary: secondary NIC.</li>
              * </ul>
              * <p>Default value: Secondary.</p>
              * 
              * <strong>example:</strong>
-             * <p>ecs.g5.large</p>
+             * <p>Secondary</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2618,11 +2644,13 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of ENI N.</p>
-             * <p>Take note of the following items:</p>
+             * <p>The name of the network interface controller (NIC).</p>
+             * <p>Note the following items:</p>
              * <ul>
-             * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you do not need to specify this parameter.</li>
+             * <li><p>Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
+             * </li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to set this parameter.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2637,7 +2665,7 @@ public class CreateLaunchTemplateRequest extends Request {
              * <p>The communication mode of the primary ENI. Valid values:</p>
              * <ul>
              * <li>Standard: uses the TCP communication mode.</li>
-             * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+             * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2649,22 +2677,22 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The primary IP address to assign to ENI N.</p>
-             * <p>Take note of the following items:</p>
+             * <p>Adds a network interface controller (NIC) and sets the primary IP address.</p>
+             * <p>Note the following items:</p>
              * <ul>
-             * <li><p>Valid values of N: 1 and 2.</p>
+             * <li><p>Valid values of N: 1 to 2.</p>
              * <ul>
-             * <li>If the value of N is 1, you can configure a primary or secondary ENI. If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</li>
-             * <li>If the value of N is 2, you must configure a primary ENI and a secondary ENI. If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
+             * <li>If you set 1 NIC, you can set either a primary or secondary NIC. If <code>Amount</code> is greater than 1 and you set a primary NIC with this parameter specified, the specified primary IP address is used as the starting address to sequentially allocate consecutive primary IP addresses to multiple ECS instances in batch. In this case, you cannot attach a secondary NIC to the instance.</li>
+             * <li>If you set 2 NICs, you must set one primary NIC and one secondary NIC. If <code>Amount</code> is greater than 1 and this parameter is set for the primary NIC, you cannot set a secondary NIC (that is, you cannot set <code>NetworkInterface.2.InstanceType=Secondary</code>).</li>
              * </ul>
              * </li>
-             * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify both this parameter and <code>PrivateIpAddress</code> in the same request.</p>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter has the same effect as <code>PrivateIpAddress</code>, but you cannot specify both this parameter and <code>PrivateIpAddress</code>.</p>
              * </li>
-             * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter sets the primary IP address for the secondary NIC. By default, an IP address is randomly selected from the vSwitch CIDR block to which the NIC belongs.</p>
              * </li>
              * </ul>
              * <blockquote>
-             * <p> You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the <a href="https://help.aliyun.com/document_detail/58504.html">CreateNetworkInterface</a> and <a href="https://help.aliyun.com/document_detail/58515.html">AttachNetworkInterface</a> operations to attach more secondary ENIs.</p>
+             * <p>When you invoke the CreateLaunchTemplate operation, you can attach up to one secondary NIC. After the instance is created, you can call <a href="https://help.aliyun.com/document_detail/58504.html">CreateNetworkInterface</a> and <a href="https://help.aliyun.com/document_detail/58515.html">AttachNetworkInterface</a> to attach more secondary NICs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2676,12 +2704,15 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group to which to assign ENI N.</p>
-             * <p>Take note of the following items:</p>
+             * <p>The security group ID of the network interface controller (NIC).</p>
+             * <p>Note the following items:</p>
              * <ul>
-             * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+             * <li><p>Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
+             * </li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is required. This parameter has the same effect as <code>SecurityGroupId</code>, but you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code> at the same time.</p>
+             * </li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. Default value: the security group of the ECS instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2693,15 +2724,17 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The IDs of security groups to which to assign ENI N.</p>
+             * <p>The IDs of one or more security groups to which the network interface controller (NIC) belongs.</p>
              * <ul>
-             * <li>Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+             * <li>The first N has a valid value range of 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</li>
+             * <li>The second N indicates that you can specify one or more security group IDs. The valid value range of N depends on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
              * </ul>
-             * <p>Take note of the following items:</p>
+             * <p>Note the following items:</p>
              * <ul>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. In this case, this parameter is equivalent to <code>SecurityGroupIds.N</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</li>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. This parameter has the same effect as <code>SecurityGroupIds.N</code>, but you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code> at the same time.</p>
+             * </li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. Default value: the security group of the ECS instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2713,12 +2746,15 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch to which to connect ENI N.</p>
-             * <p>Take note of the following items:</p>
+             * <p>The vSwitch ID of the network interface controller (NIC).</p>
+             * <p>Note the following items:</p>
              * <ul>
-             * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code> in the same request.</li>
-             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the VSwitchId value.</li>
+             * <li><p>Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
+             * </li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is required. This parameter has the same effect as <code>VSwitchId</code>, but you cannot specify both this parameter and <code>VSwitchId</code>.</p>
+             * </li>
+             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. Default value: the vSwitch of the ECS instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2797,7 +2833,25 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * TrustedSystemMode.
+             * <p>The trusted system mode. Set the value to vTPM.</p>
+             * <p>The following instance families support trusted system mode:</p>
+             * <ul>
+             * <li>g7, c7, and r7.</li>
+             * <li>Enhanced instance families (g7t, c7t, and r7t).</li>
+             * </ul>
+             * <p>When you create ECS instances of the preceding instance types, you must set this parameter. Take note of the following items:</p>
+             * <ul>
+             * <li>If you use the Alibaba Cloud Trusted System, set this parameter to vTPM. The Alibaba Cloud Trusted System performs trusted verification when the instance starts.</li>
+             * <li>If you do not use the Alibaba Cloud Trusted System, you do not need to set this parameter. However, if the ECS instance that you create uses the Enclave-based confidential computing mode (<code>SecurityOptions.ConfidentialComputingMode=Enclave</code>), the trusted system is also enabled for the instance.</li>
+             * <li>When you use an OpenAPI operation to create a trusted ECS instance, you can invoke only <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.TrustedSystemMode</code> parameter.<blockquote>
+             * <p>If you specify the instance as a trusted instance during creation, you can replace the system disk only with an image that supports the trusted system.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * <p>For more information about the trusted system, see <a href="https://help.aliyun.com/document_detail/201394.html">Overview of trusted features for security-enhanced instances</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vTPM</p>
              */
             public Builder trustedSystemMode(String trustedSystemMode) {
                 this.trustedSystemMode = trustedSystemMode;
@@ -2864,7 +2918,7 @@ public class CreateLaunchTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the instance, disks, and primary ENI that are created from the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key for instances, disks, and primary ENIs created from this template version. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -2875,7 +2929,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the instance, disks, and primary ENI that are created from the launch template. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * <p>The tag value for instances, disks, and primary ENIs created from this template version. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -2945,7 +2999,7 @@ public class CreateLaunchTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -2956,7 +3010,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the launch template. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag value of the launch template. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

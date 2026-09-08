@@ -199,7 +199,7 @@ public class ReleaseDedicatedHostRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,10 +230,10 @@ public class ReleaseDedicatedHostRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the subscription dedicated host.</p>
+         * <p>Specifies whether to release an expired subscription dedicated host.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Releases the host.</li>
+         * <li>false: Does not release the host.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 

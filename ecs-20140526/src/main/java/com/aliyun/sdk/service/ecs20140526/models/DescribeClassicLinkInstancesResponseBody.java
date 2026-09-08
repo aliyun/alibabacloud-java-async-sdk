@@ -106,7 +106,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the ClassicLink connections between the instances reside in the classic network and VPCs.</p>
+         * Links.
          */
         public Builder links(Links links) {
             this.links = links;
@@ -114,7 +114,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number in the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of ClassicLink connections.</p>
+         * <p>The total number of connections.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,10 +216,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-test</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -227,10 +224,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-test</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

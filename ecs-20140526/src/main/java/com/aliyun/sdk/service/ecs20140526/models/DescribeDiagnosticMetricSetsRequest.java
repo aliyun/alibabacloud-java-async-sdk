@@ -131,11 +131,11 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If this parameter is left empty, the default value is 10.</li>
-         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * <li>If this parameter is not specified, the default value is 10.</li>
+         * <li>If the specified value is greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of diagnostic metric sets.</p>
+         * <p>The list of diagnostic metric set IDs.</p>
          */
         public Builder metricSetIds(java.util.List<String> metricSetIds) {
             this.putQueryParameter("MetricSetIds", metricSetIds);
@@ -157,7 +157,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -169,7 +169,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * <p>The resource type supported by the diagnostic metric set.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -196,8 +196,8 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         /**
          * <p>The type of the diagnostic metric set. Valid values:</p>
          * <ul>
-         * <li>User: custom diagnostic metric set</li>
-         * <li>Common: public diagnostic metric set</li>
+         * <li>User: user.</li>
+         * <li>Common: common.</li>
          * </ul>
          * <p>Default value: User.</p>
          * 

@@ -178,7 +178,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.</p>
+         * <p>The ID of the resource from which you want to unbind tags. For example, when ResourceType is set to instance, ResourceId refers to the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,20 +224,20 @@ public class RemoveTagsRequest extends Request {
         /**
          * <p>The type of the resource. Valid values:</p>
          * <ul>
-         * <li>instance</li>
-         * <li>disk</li>
-         * <li>snapshot</li>
-         * <li>image</li>
-         * <li>securitygroup</li>
-         * <li>volume</li>
-         * <li>eni</li>
-         * <li>ddh</li>
-         * <li>keypair</li>
-         * <li>launchtemplate</li>
-         * <li>reservedinstance</li>
-         * <li>snapshotpolicy</li>
+         * <li>instance: ECS instance.</li>
+         * <li>disk: cloud disk.</li>
+         * <li>snapshot: snapshot.</li>
+         * <li>image: image.</li>
+         * <li>securitygroup: security group.</li>
+         * <li>volume: storage volume.</li>
+         * <li>eni: Elastic Network Interface (ENI).</li>
+         * <li>ddh: dedicated host.</li>
+         * <li>keypair: SSH key pair.</li>
+         * <li>launchtemplate: launch template.</li>
+         * <li>reservedinstance: reserved instance.</li>
+         * <li>snapshotpolicy: automatic snapshot policy.</li>
          * </ul>
-         * <p>All values must be in lowercase.</p>
+         * <p>All valid values are in lowercase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class RemoveTagsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -329,7 +329,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs: or aliyun.</p>
+             * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

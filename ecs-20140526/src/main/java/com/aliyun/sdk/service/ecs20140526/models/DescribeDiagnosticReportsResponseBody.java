@@ -80,7 +80,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -91,7 +91,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic reports.</p>
+         * Reports.
          */
         public Builder reports(Reports reports) {
             this.reports = reports;
@@ -194,10 +194,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GuestOS.CPU.HighUtiliz*****</p>
+             * IssueId.
              */
             public Builder issueId(String issueId) {
                 this.issueId = issueId;
@@ -205,10 +202,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the diagnostic metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECSService.GuestOS</p>
+             * MetricCategory.
              */
             public Builder metricCategory(String metricCategory) {
                 this.metricCategory = metricCategory;
@@ -216,10 +210,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the diagnostic metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GuestOS.WinFirewall</p>
+             * MetricId.
              */
             public Builder metricId(String metricId) {
                 this.metricId = metricId;
@@ -227,15 +218,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the diagnostic metric. Valid values:</p>
-             * <ul>
-             * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-             * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
-             * <li>Critical: Critical exceptions were detected.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Info</p>
+             * Severity.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -473,10 +456,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the diagnostic report was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-07-11T12:00:00Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -484,10 +464,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range during which data was queried. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-07-11T14:00:00Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -495,10 +472,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the diagnostic was complete.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-07-11T14:00:00Z</p>
+             * FinishedTime.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -506,7 +480,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnosed issues.</p>
+             * Issues.
              */
             public Builder issues(Issues issues) {
                 this.issues = issues;
@@ -514,10 +488,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the diagnostic metric set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dms-bp17p0qwtr72zmu*****</p>
+             * MetricSetId.
              */
             public Builder metricSetId(String metricSetId) {
                 this.metricSetId = metricSetId;
@@ -525,10 +496,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the diagnostic report.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dr-uf6i0tv2refv8wz*****</p>
+             * ReportId.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -536,10 +504,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-uf6i0tv2refv8wz*****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -547,10 +512,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -558,17 +520,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the diagnostic report. Valid values:</p>
-             * <ul>
-             * <li>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</li>
-             * <li>Normal: No exceptions were detected.</li>
-             * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-             * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
-             * <li>Critical: Critical exceptions were detected.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * Severity.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -576,10 +528,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range during which data was queried. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-07-11T12:00:00Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -587,10 +536,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the diagnostic report.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Finished</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

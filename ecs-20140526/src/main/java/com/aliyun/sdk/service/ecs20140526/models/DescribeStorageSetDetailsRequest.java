@@ -203,10 +203,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -215,10 +212,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of disks or Shared Block Storage devices. The value can be a JSON array that consists of up to 100 disk or Shared Block Storage device IDs. Separate the IDs with commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;d-bp1d6tsvznfghy7y****&quot;, &quot;d-bp1ippxbaql9zet7****&quot;, … &quot;d-bp1ib7bcz07l****&quot;]</p>
+         * DiskIds.
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -245,12 +239,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -259,12 +248,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Maximum value: 100</p>
-         * <p>Default value: 10</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,11 +257,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,11 +284,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the storage set.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ss-bp67acfmxazb4p****</p>
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -317,10 +293,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of partitions in the storage set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
+         * StorageSetPartitionNumber.
          */
         public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);

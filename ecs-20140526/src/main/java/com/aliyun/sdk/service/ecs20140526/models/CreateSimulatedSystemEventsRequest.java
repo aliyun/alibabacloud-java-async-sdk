@@ -184,15 +184,16 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * <p>The type of the system event. Valid values:</p>
+         * <p>The type of the system event. Valid values: </p>
          * <ul>
-         * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-         * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+         * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </li>
+         * <li>SystemFailure.Reboot: The instance is restarted due to a system error. </li>
          * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
          * <li>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</li>
          * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
          * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
          * <li>SystemFailure.Stop: The instance is stopped due to a system error.</li>
+         * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -206,7 +207,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances. You can specify up to 100 instance IDs.</p>
+         * <p>The list of ECS instance IDs. You can specify up to 100 instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +222,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         /**
          * <p>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>For events that occur due to system errors or instance errors, the simulated events of such events enter the <code>Executing</code> state when the simulated events are created. The value of <code>NotBefore</code> is the time when the simulated events enter the <code>Executed</code> state.</p>
+         * <p>For abnormal events caused by system errors or instance errors, the event is already in the Executing state after it is created. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -253,7 +254,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

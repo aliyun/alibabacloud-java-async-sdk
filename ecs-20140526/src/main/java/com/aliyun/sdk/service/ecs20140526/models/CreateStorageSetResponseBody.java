@@ -67,10 +67,7 @@ public class CreateStorageSetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +75,7 @@ public class CreateStorageSetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the storage set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ss-bp67acfmxazb4p****</p>
+         * StorageSetId.
          */
         public Builder storageSetId(String storageSetId) {
             this.storageSetId = storageSetId;

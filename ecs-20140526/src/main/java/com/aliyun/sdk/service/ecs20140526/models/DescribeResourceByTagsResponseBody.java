@@ -106,7 +106,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the resources to which the tags are bound.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -147,7 +147,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of resources returned.</p>
+         * <p>The total number of returned resources.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -229,10 +229,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -240,10 +237,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp16t2cgmiiy7t1c****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -251,10 +245,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

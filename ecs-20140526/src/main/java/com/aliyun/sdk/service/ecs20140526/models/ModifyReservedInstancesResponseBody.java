@@ -67,7 +67,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the reserved instance.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ED9E4A5F-FF4D-4C96-BE80-6B4227060DD7</p>
@@ -78,7 +78,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the reserved instances.</p>
+         * ReservedInstanceIdSets.
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;

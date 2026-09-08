@@ -54,7 +54,10 @@ public class AcceptInquiredSystemEventResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DD56CA6-6D75-4D33-BE34-E4A44EBE1C3D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

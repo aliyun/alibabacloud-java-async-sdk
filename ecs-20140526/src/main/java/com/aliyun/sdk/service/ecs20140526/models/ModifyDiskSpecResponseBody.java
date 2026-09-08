@@ -82,7 +82,7 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         /**
          * <p>The order ID.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the category of a subscription disk or the performance level of a subscription ESSD is modified.</p>
+         * <p>An order ID is returned only when you change or modify a subscription disk.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,9 +105,9 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the disk category change task.</p>
+         * <p>The task ID for the disk specification change.</p>
          * <blockquote>
-         * <p> If you only modify the performance level of an ESSD, this parameter is not returned.</p>
+         * <p>This parameter is not returned if you only modify the performance level (PL) of an ESSD.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

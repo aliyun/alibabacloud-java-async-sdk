@@ -67,7 +67,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         } 
 
         /**
-         * <p>The instance families that support the deployment strategy.</p>
+         * <p>The instance families that support the specified deployment set strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</p>

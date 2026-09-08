@@ -145,7 +145,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Alibaba Cloud accounts.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -164,7 +164,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the custom image.</p>
+         * <p>The region ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -200,7 +200,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -208,7 +208,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The shared groups.</p>
+         * ShareGroups.
          */
         public Builder shareGroups(ShareGroups shareGroups) {
             this.shareGroups = shareGroups;
@@ -216,7 +216,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -285,10 +285,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234567890</p>
+             * AliyunId.
              */
             public Builder aliyunId(String aliyunId) {
                 this.aliyunId = aliyunId;
@@ -296,10 +293,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was shared. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2023-01-01T12:05:00Z</p>
+             * SharedTime.
              */
             public Builder sharedTime(String sharedTime) {
                 this.sharedTime = sharedTime;
@@ -407,10 +401,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The shared group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>all</p>
+             * Group.
              */
             public Builder group(String group) {
                 this.group = group;

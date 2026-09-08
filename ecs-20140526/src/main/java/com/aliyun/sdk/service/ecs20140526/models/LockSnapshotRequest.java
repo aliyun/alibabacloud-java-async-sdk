@@ -204,7 +204,7 @@ public class LockSnapshotRequest extends Request {
         } 
 
         /**
-         * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. ClientToken only supports ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/zh/ecs/developer-reference/how-to-ensure-idempotence?spm=a2c4g.11186623.0.0.2a29d467Bh2sO5">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>5EC38E7D-389F-1925-ABE2-D7925A8F****</p>
@@ -216,12 +216,12 @@ public class LockSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Cooling-off period. In compliance mode, you can set a cooling-off period or skip the cooling-off period to directly lock the snapshot.</p>
-         * <p>During the cooling-off period, users with corresponding RAM permissions can unlock snapshots, extend or shorten the cooling-off period, and extend or shorten the lock duration. Snapshots cannot be deleted during the cooling-off period.</p>
-         * <p>After the cooling-off period ends, only extending the lock duration is supported.</p>
-         * <p>Unit: hours.</p>
-         * <p>Valid values: 0 to 72. A value of 0 indicates skipping the cooling-off period and directly locking the snapshot.</p>
-         * <p>If the snapshot has entered the compliance mode lock period, set this parameter to 0 when extending the lock duration.</p>
+         * <p>The cool-off period. In compliance mode, you can set a cool-off period or skip the cool-off period to directly lock the snapshot. </p>
+         * <p>During the cool-off period, users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. The snapshot cannot be deleted during the cool-off period. </p>
+         * <p>After the cool-off period ends, you can only extend the lock duration. </p>
+         * <p>Unit: hours. </p>
+         * <p>Valid values: 0 to 72. A value of 0 indicates that the cool-off period is skipped and the snapshot is directly locked. </p>
+         * <p>If the snapshot has already entered the compliance mode lock period, set this parameter to 0 to extend the lock duration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,10 +234,10 @@ public class LockSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values: </p>
          * <ul>
-         * <li>true: The request is checked and is not executed. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the check fails, the corresponding error is returned. If the check passes, the error code DryRunOperation is returned.</li>
-         * <li>false (default): Sends a normal request, checks it, and executes the request directly if it passes the check.</li>
+         * <li>true: performs only a dry run. The system checks whether required parameters are specified, whether the request format is valid, and whether business restrictions are met. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. </li>
+         * <li>false (default): performs a dry run and sends the request. If the check succeeds, the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,8 +250,8 @@ public class LockSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Lock duration. After the lock duration ends, the snapshot lock will automatically expire.</p>
-         * <p>Unit: days.</p>
+         * <p>The lock duration. The snapshot lock automatically expires after the lock duration ends. </p>
+         * <p>Unit: days. </p>
          * <p>Valid values: 1 to 36500.</p>
          * <p>This parameter is required.</p>
          * 
@@ -265,9 +265,9 @@ public class LockSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The lock mode. Valid values:</p>
+         * <p>The lock mode. Valid values: </p>
          * <ul>
-         * <li>compliance: The snapshot is locked in compliance mode. A snapshot that is locked in compliance mode cannot be unlocked by any user. It can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the corresponding RAM permissions can extend the lock duration at any time. When locking a snapshot in compliance mode, you can optionally specify a cooling-off period.</li>
+         * <li>compliance: Locks the snapshot in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When locking a snapshot in compliance mode, you can optionally specify a cool-off period.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -299,7 +299,7 @@ public class LockSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The region ID You can call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ecs-2014-05-26-describeregions?spm=a2c4g.11186623.0.i2">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

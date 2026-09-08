@@ -159,7 +159,8 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The error code.</p>
+         * <p>The description of the reserved instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>ri-example</p>
@@ -189,7 +190,7 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the reserved instance.</p>
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +203,7 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The ID of the reserved instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,8 +216,7 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testReservedInstanceName</p>

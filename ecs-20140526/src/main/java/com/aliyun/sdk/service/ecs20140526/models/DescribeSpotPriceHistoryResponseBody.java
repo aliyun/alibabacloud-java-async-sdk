@@ -93,7 +93,9 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance type of the spot instance.</p>
+         * <p>The currency unit of the price.</p>
+         * <p>China site: CNY.</p>
+         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -104,7 +106,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network type of the spot instance.</p>
+         * <p>The start row of the next page. Set the <code>Offset</code> parameter to this value to query the next page of data.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -115,7 +117,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance type of the spot instance.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -126,7 +128,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID of the spot instance.</p>
+         * SpotPrices.
          */
         public Builder spotPrices(SpotPrices spotPrices) {
             this.spotPrices = spotPrices;
@@ -257,10 +259,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance type of the spot instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g5.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -268,10 +267,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the price history of the spot instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>optimized</p>
+             * IoOptimized.
              */
             public Builder ioOptimized(String ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -279,10 +275,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Queries the price history of a spot instance within the last 30 days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -290,10 +283,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price for a pay-as-you-go instance that has the same configuration as the specified spot instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.354</p>
+             * OriginPrice.
              */
             public Builder originPrice(Float originPrice) {
                 this.originPrice = originPrice;
@@ -301,10 +291,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price for a pay-as-you-go instance that has the same configurations as the spot instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.036</p>
+             * SpotPrice.
              */
             public Builder spotPrice(Float spotPrice) {
                 this.spotPrice = spotPrice;
@@ -312,12 +299,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency unit of the price.</p>
-             * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
-             * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-11-19T06:00:00Z</p>
+             * Timestamp.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -325,10 +307,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-c</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

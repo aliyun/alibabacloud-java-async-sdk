@@ -224,7 +224,7 @@ public class ModifyPortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The entries that you want to add or modify for the port list.</p>
+         * <p>The entries to add or modify in the port range list.</p>
          */
         public Builder addEntry(java.util.List<AddEntry> addEntry) {
             this.putQueryParameter("AddEntry", addEntry);
@@ -245,7 +245,7 @@ public class ModifyPortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description of the port range list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -275,7 +275,7 @@ public class ModifyPortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the port list.</p>
+         * <p>The ID of the port range list to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class ModifyPortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the port range list. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain letters, Chinese characters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>PortRangeListNameSample</p>
@@ -300,7 +300,7 @@ public class ModifyPortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the port range list. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class ModifyPortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The entries that you want to remove from the port list.</p>
+         * <p>The entries to delete from the port range list.</p>
          */
         public Builder removeEntry(java.util.List<RemoveEntry> removeEntry) {
             this.putQueryParameter("RemoveEntry", removeEntry);
@@ -399,7 +399,7 @@ public class ModifyPortRangeListRequest extends Request {
             } 
 
             /**
-             * <p>The description of the port range in entry N. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
+             * <p>The description of the port range. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -410,11 +410,14 @@ public class ModifyPortRangeListRequest extends Request {
             }
 
             /**
-             * <p>The port range in entry N. Valid values of N: 0 to 200. Take note of the following limits:</p>
+             * <p>The port range. Valid values of N: 0 to 200. Settings:</p>
              * <ul>
-             * <li>The total number of entries in the port list cannot exceed the <code>MaxEntries</code> value.</li>
-             * <li><code>PortRange</code> in different entries cannot be duplicated.</li>
-             * <li>The value of this parameter cannot be the same as the value of <code>RemoveEntry.N.PortRange</code>.</li>
+             * <li><p>The number of entries cannot exceed the maximum entry capacity (<code>MaxEntries</code>).</p>
+             * </li>
+             * <li><p>You cannot specify duplicate values for <code>PortRange</code>.</p>
+             * </li>
+             * <li><p>The value cannot be the same as the value of the <code>RemoveEntry.N.PortRange</code> parameter.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -472,10 +475,12 @@ public class ModifyPortRangeListRequest extends Request {
             } 
 
             /**
-             * <p>The port range in entry N. Valid values of N: 0 to 200. Take note of the following limits:</p>
+             * <p>The port range. Valid values of N: 0 to 200. Settings:</p>
              * <ul>
-             * <li><code>PortRange</code> in different entries cannot be duplicated.</li>
-             * <li>The value of this parameter cannot be the same as the value of <code>AddEntry.N.PortRange</code>.</li>
+             * <li><p>You cannot specify duplicate values for <code>PortRange</code>.</p>
+             * </li>
+             * <li><p>The value cannot be the same as the value of the <code>AddEntry.N.PortRange</code> parameter.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

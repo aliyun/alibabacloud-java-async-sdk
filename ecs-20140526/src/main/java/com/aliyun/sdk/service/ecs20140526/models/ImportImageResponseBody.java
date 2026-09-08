@@ -126,7 +126,7 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The image import task ID.</p>
+         * <p>The ID of the image import task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-bp67acfmxazb4p****</p>

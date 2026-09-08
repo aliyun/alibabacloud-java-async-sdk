@@ -80,7 +80,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the instance types.</p>
+         * InstanceTypes.
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -88,7 +88,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned in this call.</p>
+         * <p>The query token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>e71d8a535bd9cc11</p>
@@ -99,7 +99,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>00827261-20B7-4562-83F2-4DF39876A45A</p>
@@ -168,10 +168,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the attribute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VirtualIntelSpeedSelectTechnologySupport</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,10 +176,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -290,14 +284,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether PTP is supported. Possible values:</p>
-             * <ul>
-             * <li>supported</li>
-             * <li>unsupported</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>unsupported</p>
+             * PtpSupport.
              */
             public Builder ptpSupport(String ptpSupport) {
                 this.ptpSupport = ptpSupport;
@@ -470,10 +457,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Core.
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -481,10 +465,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU option step size.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CoreFactor.
              */
             public Builder coreFactor(Integer coreFactor) {
                 this.coreFactor = coreFactor;
@@ -492,10 +473,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HT can be enabled or disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * HyperThreadingAdjustable.
              */
             public Builder hyperThreadingAdjustable(Boolean hyperThreadingAdjustable) {
                 this.hyperThreadingAdjustable = hyperThreadingAdjustable;
@@ -511,7 +489,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU topology types of the instance type.</p>
+             * SupportedTopologyTypes.
              */
             public Builder supportedTopologyTypes(SupportedTopologyTypes supportedTopologyTypes) {
                 this.supportedTopologyTypes = supportedTopologyTypes;
@@ -519,13 +497,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of threads per CPU core.</p>
-             * <blockquote>
-             * <p> <code>If the value of CpuOptions.ThreadPerCore is 1, Hyper-Threading (HT) is disabled.</code></p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ThreadsPerCore.
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
@@ -626,12 +598,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * RssSupport.
              */
             public Builder rssSupport(Boolean rssSupport) {
                 this.rssSupport = rssSupport;
@@ -639,12 +606,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * SriovSupport.
              */
             public Builder sriovSupport(Boolean sriovSupport) {
                 this.sriovSupport = sriovSupport;
@@ -652,12 +614,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * VfQueueNumberPerEni.
              */
             public Builder vfQueueNumberPerEni(Integer vfQueueNumberPerEni) {
                 this.vfQueueNumberPerEni = vfQueueNumberPerEni;
@@ -711,10 +668,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The index of the network card.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * NetworkCardIndex.
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -890,10 +844,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the attribute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VirtualIntelSpeedSelectTechnologySupport</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1818,7 +1769,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of specification attributes.</p>
+             * Attributes.
              */
             public Builder attributes(Attributes attributes) {
                 this.attributes = attributes;
@@ -1826,10 +1777,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * BaselineCredit.
              */
             public Builder baselineCredit(Integer baselineCredit) {
                 this.baselineCredit = baselineCredit;
@@ -1837,7 +1785,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clock supported by the specification.</p>
+             * Clock.
              */
             public Builder clock(Clock clock) {
                 this.clock = clock;
@@ -1845,14 +1793,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU architecture. Valid values:</p>
-             * <ul>
-             * <li>X86</li>
-             * <li>ARM</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>X86</p>
+             * CpuArchitecture.
              */
             public Builder cpuArchitecture(String cpuArchitecture) {
                 this.cpuArchitecture = cpuArchitecture;
@@ -1860,10 +1801,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * CpuCoreCount.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -1871,7 +1809,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU options.</p>
+             * CpuOptions.
              */
             public Builder cpuOptions(CpuOptions cpuOptions) {
                 this.cpuOptions = cpuOptions;
@@ -1879,10 +1817,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU base frequency. Unit: GHz.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.7</p>
+             * CpuSpeedFrequency.
              */
             public Builder cpuSpeedFrequency(Float cpuSpeedFrequency) {
                 this.cpuSpeedFrequency = cpuSpeedFrequency;
@@ -1890,10 +1825,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU turbo frequency. Unit: GHz.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3.5</p>
+             * CpuTurboFrequency.
              */
             public Builder cpuTurboFrequency(Float cpuTurboFrequency) {
                 this.cpuTurboFrequency = cpuTurboFrequency;
@@ -1901,10 +1833,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of cloud disks per instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>17</p>
+             * DiskQuantity.
              */
             public Builder diskQuantity(Integer diskQuantity) {
                 this.diskQuantity = diskQuantity;
@@ -1912,9 +1841,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
+             * EnhancedNetwork.
              */
             public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
                 this.enhancedNetwork = enhancedNetwork;
@@ -1922,10 +1849,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of IPv6 addresses per ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * EniIpv6AddressQuantity.
              */
             public Builder eniIpv6AddressQuantity(Integer eniIpv6AddressQuantity) {
                 this.eniIpv6AddressQuantity = eniIpv6AddressQuantity;
@@ -1933,10 +1857,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of IPv4 addresses per ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * EniPrivateIpAddressQuantity.
              */
             public Builder eniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
                 this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
@@ -1944,10 +1865,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of ENIs per instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * EniQuantity.
              */
             public Builder eniQuantity(Integer eniQuantity) {
                 this.eniQuantity = eniQuantity;
@@ -1955,13 +1873,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of ENIs, including primary, secondary, and trunk ENIs.</p>
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * EniTotalQuantity.
              */
             public Builder eniTotalQuantity(Integer eniTotalQuantity) {
                 this.eniTotalQuantity = eniTotalQuantity;
@@ -1969,13 +1881,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether trunk ENIs are supported.</p>
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EniTrunkSupported.
              */
             public Builder eniTrunkSupported(Boolean eniTrunkSupported) {
                 this.eniTrunkSupported = eniTrunkSupported;
@@ -1983,13 +1889,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ERIs.</p>
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * EriQuantity.
              */
             public Builder eriQuantity(Integer eriQuantity) {
                 this.eriQuantity = eriQuantity;
@@ -1997,10 +1897,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of GPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * GPUAmount.
              */
             public Builder GPUAmount(Integer GPUAmount) {
                 this.GPUAmount = GPUAmount;
@@ -2008,10 +1905,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of GPU memory per GPU. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>32</p>
+             * GPUMemorySize.
              */
             public Builder GPUMemorySize(Float GPUMemorySize) {
                 this.GPUMemorySize = GPUMemorySize;
@@ -2019,10 +1913,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU model.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NVIDIA V100</p>
+             * GPUSpec.
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -2030,10 +1921,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>120</p>
+             * InitialCredit.
              */
             public Builder initialCredit(Integer initialCredit) {
                 this.initialCredit = initialCredit;
@@ -2041,10 +1929,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum inbound internal bandwidth. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1024000</p>
+             * InstanceBandwidthRx.
              */
             public Builder instanceBandwidthRx(Integer instanceBandwidthRx) {
                 this.instanceBandwidthRx = instanceBandwidthRx;
@@ -2052,10 +1937,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum outbound internal bandwidth. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1024000</p>
+             * InstanceBandwidthTx.
              */
             public Builder instanceBandwidthTx(Integer instanceBandwidthTx) {
                 this.instanceBandwidthTx = instanceBandwidthTx;
@@ -2063,28 +1945,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the instance type. Valid values:</p>
-             * <ul>
-             * <li>General-purpose</li>
-             * <li>Compute-optimized</li>
-             * <li>Memory-optimized</li>
-             * <li>Big data</li>
-             * <li>Local SSDs</li>
-             * <li>High Clock Speed</li>
-             * <li>Enhanced</li>
-             * <li>Shared</li>
-             * <li>Compute-optimized with GPU</li>
-             * <li>Visual Compute-optimized</li>
-             * <li>Heterogeneous Service</li>
-             * <li>Compute-optimized with FPGA</li>
-             * <li>Compute-optimized with NPU</li>
-             * <li>ECS Bare Metal</li>
-             * <li>Super Computing Cluster</li>
-             * <li>High Performance Compute</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Big data</p>
+             * InstanceCategory.
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -2092,15 +1953,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the instance family. Valid values:</p>
-             * <ul>
-             * <li>EntryLevel: entry level (shared).</li>
-             * <li>EnterpriseLevel: enterprise level.</li>
-             * <li>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>EnterpriseLevel</p>
+             * InstanceFamilyLevel.
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -2108,10 +1961,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500000</p>
+             * InstancePpsRx.
              */
             public Builder instancePpsRx(Long instancePpsRx) {
                 this.instancePpsRx = instancePpsRx;
@@ -2119,10 +1969,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound packet forwarding rate over the internal network. Unit: pps.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500000</p>
+             * InstancePpsTx.
              */
             public Builder instancePpsTx(Long instancePpsTx) {
                 this.instancePpsTx = instancePpsTx;
@@ -2130,10 +1977,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g6</p>
+             * InstanceTypeFamily.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -2141,10 +1985,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g6.large</p>
+             * InstanceTypeId.
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -2152,10 +1993,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether jumbo frames are supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * JumboFrameSupport.
              */
             public Builder jumboFrameSupport(Boolean jumboFrameSupport) {
                 this.jumboFrameSupport = jumboFrameSupport;
@@ -2163,10 +2001,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of local disks per instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * LocalStorageAmount.
              */
             public Builder localStorageAmount(Integer localStorageAmount) {
                 this.localStorageAmount = localStorageAmount;
@@ -2174,10 +2009,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of each local disk. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5000</p>
+             * LocalStorageCapacity.
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -2185,14 +2017,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of local disks. For more information, see <a href="https://help.aliyun.com/document_detail/63138.html">Local disks</a>. Valid values:</p>
-             * <ul>
-             * <li>local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</li>
-             * <li>local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>local_ssd_pro</p>
+             * LocalStorageCategory.
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -2200,10 +2025,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of queues per ENI, including primary and secondary ENIs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * MaximumQueueNumberPerEni.
              */
             public Builder maximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
                 this.maximumQueueNumberPerEni = maximumQueueNumberPerEni;
@@ -2211,10 +2033,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: GiB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16</p>
+             * MemorySize.
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -2222,10 +2041,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of network cards that the instance type supports.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * NetworkCardQuantity.
              */
             public Builder networkCardQuantity(Integer networkCardQuantity) {
                 this.networkCardQuantity = networkCardQuantity;
@@ -2233,7 +2049,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the network cards.</p>
+             * NetworkCards.
              */
             public Builder networkCards(NetworkCards networkCards) {
                 this.networkCards = networkCards;
@@ -2241,17 +2057,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to allow network traffic transmitted over virtual private clouds (VPCs) to be encrypted. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * NetworkEncryptionSupport.
              */
             public Builder networkEncryptionSupport(Boolean networkEncryptionSupport) {
                 this.networkEncryptionSupport = networkEncryptionSupport;
@@ -2267,14 +2073,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
-             * <ul>
-             * <li>required: Cloud disks can be attached by using the NVMe protocol.</li>
-             * <li>unsupported: Cloud disks cannot be attached by using the NVMe protocol.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>unsupported</p>
+             * NvmeSupport.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -2282,10 +2081,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU model.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Intel Xeon(Ice Lake) Platinum 8369B</p>
+             * PhysicalProcessorModel.
              */
             public Builder physicalProcessorModel(String physicalProcessorModel) {
                 this.physicalProcessorModel = physicalProcessorModel;
@@ -2293,10 +2089,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default number of queues per primary ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * PrimaryEniQueueNumber.
              */
             public Builder primaryEniQueueNumber(Integer primaryEniQueueNumber) {
                 this.primaryEniQueueNumber = primaryEniQueueNumber;
@@ -2304,14 +2097,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of QPs per instance, which varies based on the instance type.</p>
-             * <ul>
-             * <li>For enterprise-level CPU-based instance types, the value of <code>QueuePairNumber</code> is the maximum number of QPs per instance.</li>
-             * <li>For GPU-accelerated instance types, the maximum number of QPs per instance is calculated by using the following formula: Value of <code>QueuePairNumber</code> × Value of NetworkCardQuantity.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>22</p>
+             * QueuePairNumber.
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -2319,10 +2105,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default number of queues per secondary ENI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * SecondaryEniQueueNumber.
              */
             public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
                 this.secondaryEniQueueNumber = secondaryEniQueueNumber;
@@ -2338,7 +2121,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The boot modes supported by the instance type.</p>
+             * SupportedBootModes.
              */
             public Builder supportedBootModes(SupportedBootModes supportedBootModes) {
                 this.supportedBootModes = supportedBootModes;
@@ -2346,10 +2129,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of queues on ENIs that the instance type supports.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12</p>
+             * TotalEniQueueQuantity.
              */
             public Builder totalEniQueueQuantity(Integer totalEniQueueQuantity) {
                 this.totalEniQueueQuantity = totalEniQueueQuantity;

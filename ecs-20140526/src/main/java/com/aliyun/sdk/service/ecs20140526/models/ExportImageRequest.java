@@ -220,7 +220,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The format in which you want to export the custom image. Valid values:</p>
+         * <p>The format in which to export the image. Valid values:</p>
          * <ul>
          * <li>raw</li>
          * <li>vhd</li>
@@ -240,7 +240,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The custom image ID.</p>
+         * <p>The ID of the custom image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The OSS bucket in which you want to store the exported custom image.</p>
+         * <p>The OSS bucket in which to store the exported image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+         * <p>The prefix for the OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsExport</p>
@@ -287,7 +287,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role that you want to use to export the custom image.</p>
+         * <p>The name of the RAM role used to export the image.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunECSImageExportDefaultRole</p>

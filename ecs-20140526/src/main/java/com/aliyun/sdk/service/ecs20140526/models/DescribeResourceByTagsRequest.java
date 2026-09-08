@@ -191,7 +191,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number of the results. Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,20 +248,20 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>instance: Elastic Compute Service (ECS) instance</li>
-         * <li>disk: disk</li>
-         * <li>snapshot: snapshot</li>
-         * <li>image: image</li>
-         * <li>securitygroup: security group</li>
-         * <li>volume: storage volume</li>
-         * <li>eni: elastic network interface (ENI)</li>
-         * <li>ddh: dedicated host</li>
-         * <li>keypair: SSH key pair</li>
-         * <li>launchtemplate: launch template</li>
+         * <li>instance: ECS instance.</li>
+         * <li>disk: cloud disk.</li>
+         * <li>snapshot: snapshot.</li>
+         * <li>image: image.</li>
+         * <li>securitygroup: security group.</li>
+         * <li>volume: storage volume.</li>
+         * <li>eni: Elastic Network Interface (ENI).</li>
+         * <li>ddh: dedicated host.</li>
+         * <li>keypair: SSH key pair.</li>
+         * <li>launchtemplate: launch template.</li>
          * </ul>
-         * <p>All the preceding values must be lowercase.</p>
+         * <p>All valid values are in lowercase.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -273,7 +273,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -341,7 +341,7 @@ public class DescribeResourceByTagsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</p>
+             * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -352,7 +352,7 @@ public class DescribeResourceByTagsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</p>
+             * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

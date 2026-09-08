@@ -279,13 +279,13 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The category of the snapshot. Valid values:</p>
+         * <p>The snapshot type. Valid values:</p>
          * <ul>
-         * <li>Standard: standard snapshot</li>
-         * <li>Flash: local snapshot</li>
+         * <li>Standard: standard snapshot.</li>
+         * <li>Flash: local snapshot.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * <p>This parameter will be deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -310,8 +310,8 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http:// </code>or <code>https://</code>.</p>
-         * <p>By default, this parameter is left empty.</p>
+         * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -323,7 +323,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud disk.</p>
+         * <p>The disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,14 +336,14 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the instant access feature. Valid values:</p>
+         * <p>Specifies whether to enable the snapshot instant access feature. Valid values:</p>
          * <ul>
-         * <li>true: enables the instant access feature. This feature can be enabled only for ESSDs.</li>
-         * <li>false: does not enable the instant access feature. If InstantAccess is set to false, a standard snapshot is created.</li>
+         * <li>true: enables the feature. Only enterprise SSDs support this feature.</li>
+         * <li>false: disables the feature. A standard snapshot is created.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * <p>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -356,10 +356,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <code>InstantAccess</code> is set to true. Unit: days. Valid values: 1 to 65535.</p>
-         * <p>By default, the value of this parameter is the same as that of <code>RetentionDays</code>.</p>
+         * <p>Settings for the retention period of the snapshot instant access feature. After the retention period expires, the snapshot is subject to automatic release. This parameter takes effect only when <code>InstantAccess=true</code>. Unit: days. Valid values: 1 to 65535.</p>
+         * <p>The default value is the same as the value of the <code>RetentionDays</code> parameter.</p>
          * <blockquote>
-         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * <p>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -390,14 +390,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The snapshot type. Valid values:</p>
-         * <ul>
-         * <li>Standard: standard snapshot</li>
-         * <li>Flash: local snapshot</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter will be removed in the future. We recommend that you use the <code>InstantAccess</code> parameter to ensure future compatibility. This parameter and the <code>InstantAccess</code> parameter cannot be specified at the same time. For more information, see the &quot;Description&quot; section of this topic.</p>
-         * </blockquote>
+         * <p>The ID of the resource group to which the snapshot belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -427,8 +420,8 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the snapshot. Unit: days. Valid values: 1 to 65536. After the retention period ends, the snapshot is automatically released.</p>
-         * <p>This parameter is left empty by default, which indicates that the snapshot is not automatically released.</p>
+         * <p>Settings for the retention period of the snapshot. Unit: days. Valid values: 1 to 65536. The snapshot is subject to automatic release when the retention period expires.</p>
+         * <p>Default value: empty, which indicates that the snapshot is not subject to automatic release.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -440,9 +433,9 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The name of the snapshot. The name must be 2 to 128 characters in length and start with a letter. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Unicode characters under the letter category (including letters in English and Chinese), ASCII digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <blockquote>
-         * <p> The name cannot start with http:// or https://. The name cannot start with <code>auto</code> because the names of automatic snapshots start with auto.</p>
+         * <p>To prevent naming conflicts with automatic snapshots, the name cannot start with <code>auto</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -456,7 +449,7 @@ public class CreateSnapshotRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -469,7 +462,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the snapshot.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -537,7 +530,7 @@ public class CreateSnapshotRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key of the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -548,7 +541,7 @@ public class CreateSnapshotRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * <p>The tag value of the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

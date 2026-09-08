@@ -67,7 +67,7 @@ public class AllocatePublicIpAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The public IP address.</p>
+         * <p>The public IP address of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p><code>112.124.**.**</code></p>

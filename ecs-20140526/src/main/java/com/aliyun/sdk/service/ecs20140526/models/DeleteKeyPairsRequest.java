@@ -140,14 +140,14 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * <p>The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate the names with commas (,).</p>
+         * <p>The names of the SSH key pairs. The value is a JSON array of SSH key pair names. You can specify up to 100 SSH key pairs. Separate multiple names with commas (,).</p>
          * <blockquote>
-         * <p> Before you delete an SSH key pair, you can call the <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> operation to query existing key pairs.</p>
+         * <p>Before you delete SSH key pairs, you can call <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> to query existing key pairs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;skp-bp67acfmxazb41****&quot;, &quot;skp-bp67acfmxazb42****&quot;, … &quot;skp-bp67acfmxazb4p3***&quot;]</p>
+         * <p>[&quot;TestKeyPairName-1&quot;, &quot;TestKeyPairName-2&quot;, … &quot;TestKeyPairName-100&quot;]</p>
          */
         public Builder keyPairNames(String keyPairNames) {
             this.putQueryParameter("KeyPairNames", keyPairNames);
@@ -165,7 +165,7 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The region ID of the SSH key pairs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

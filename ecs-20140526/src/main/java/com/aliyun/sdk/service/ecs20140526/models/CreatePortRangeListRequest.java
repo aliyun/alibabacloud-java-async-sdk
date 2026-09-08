@@ -239,7 +239,7 @@ public class CreatePortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -263,7 +263,7 @@ public class CreatePortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The port list entries.</p>
+         * <p>The array of port list entries.</p>
          */
         public Builder entry(java.util.List<Entry> entry) {
             this.putQueryParameter("Entry", entry);
@@ -272,9 +272,9 @@ public class CreatePortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries in the port list. The value cannot be changed after you create the port list. Valid values: 1 to 2000.</p>
+         * <p>The maximum number of entries that the port list supports. This value cannot be changed after the port list is created. Valid values: 1 to 2000.</p>
          * <blockquote>
-         * <p> When you reference a port list in a resource, such as a security group, the maximum number of entries (instead of the actual number of entries) in the port list counts against the rule quota for the resource. Set a proper value for MaxEntries.</p>
+         * <p>Notice: When calculating rule quotas for resources associated with the port list (such as security groups), the maximum number of entries is used instead of the actual number of entries. Set this value appropriately.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -306,7 +306,7 @@ public class CreatePortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the port list. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class CreatePortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,7 +362,7 @@ public class CreatePortRangeListRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the port list. You can add 0 to 20 tags to the port list.</p>
+         * <p>The array of tags bound to the port list. Array length: 0 to 20.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -430,7 +430,7 @@ public class CreatePortRangeListRequest extends Request {
             } 
 
             /**
-             * <p>The description of port range N. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
+             * <p>The description of the port range. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>Description information of Entry</p>
@@ -441,10 +441,12 @@ public class CreatePortRangeListRequest extends Request {
             }
 
             /**
-             * <p>Port range N. Valid values of N: 0 to 200.</p>
+             * <p>The port range. Valid values of N: 0 to 200.</p>
              * <ul>
-             * <li>The total number of entries cannot exceed the <code>MaxEntries</code> value.</li>
-             * <li><code>PortRange</code> in multiple entries cannot be duplicated.</li>
+             * <li><p>The number of entries cannot exceed the maximum number of entries (MaxEntries).</p>
+             * </li>
+             * <li><p>The PortRange values in multiple entries cannot be duplicated.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,8 +517,8 @@ public class CreatePortRangeListRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the port list.</p>
-             * <p>The tag key cannot be empty or an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key of the port list.</p>
+             * <p>This parameter cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>key for PortRangeList</p>
@@ -527,8 +529,8 @@ public class CreatePortRangeListRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the port list.</p>
-             * <p>The tag value cannot be empty but can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * <p>The tag value of the port list.</p>
+             * <p>This parameter cannot be null but can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>value for PortRangeList</p>

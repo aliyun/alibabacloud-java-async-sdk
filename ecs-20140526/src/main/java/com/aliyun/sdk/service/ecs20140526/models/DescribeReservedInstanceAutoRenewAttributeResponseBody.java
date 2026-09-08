@@ -78,7 +78,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         }
 
         /**
-         * <p>Details about the auto-renewal settings of the reserved instances.</p>
+         * ReservedInstanceRenewAttributes.
          */
         public Builder reservedInstanceRenewAttributes(ReservedInstanceRenewAttributes reservedInstanceRenewAttributes) {
             this.reservedInstanceRenewAttributes = reservedInstanceRenewAttributes;
@@ -170,10 +170,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             } 
 
             /**
-             * <p>The auto-renewal duration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -181,11 +178,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The unit of the auto-renewal duration.</p>
-             * <p>Valid values: Year and Month.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Month</p>
+             * PeriodUnit.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -193,14 +186,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The auto-renewal status of the reserved instance. Valid values:</p>
-             * <ul>
-             * <li>AutoRenewal: automatically renews the reserved instance.</li>
-             * <li>Normal: manually renews the reserved instances.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AutoRenewal</p>
+             * RenewalStatus.
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;
@@ -208,10 +194,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * <p>The ID of the reserved instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecsri-ajdfaj****</p>
+             * ReservedInstanceId.
              */
             public Builder reservedInstanceId(String reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;

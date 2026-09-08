@@ -106,7 +106,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The maintenance attributes.</p>
+         * MaintenanceAttributes.
          */
         public Builder maintenanceAttributes(MaintenanceAttributes maintenanceAttributes) {
             this.maintenanceAttributes = maintenanceAttributes;
@@ -114,7 +114,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the maintenance attribute list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -283,10 +283,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The default maintenance action.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AutoRecover</p>
+             * DefaultValue.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -294,7 +291,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The supported maintenance actions.</p>
+             * SupportedValues.
              */
             public Builder supportedValues(SupportedValues supportedValues) {
                 this.supportedValues = supportedValues;
@@ -302,15 +299,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The current maintenance action. Valid values:</p>
-             * <ul>
-             * <li>Stop: stops the instance.</li>
-             * <li>AutoRecover: automatically recovers the instance.</li>
-             * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Stop</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -377,10 +366,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The end time of the maintenance window.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18:00:00</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -388,10 +374,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The start time of the maintenance window.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>02:00:00</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -538,7 +521,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The attributes of the maintenance action of the instance.</p>
+             * ActionOnMaintenance.
              */
             public Builder actionOnMaintenance(ActionOnMaintenance actionOnMaintenance) {
                 this.actionOnMaintenance = actionOnMaintenance;
@@ -546,10 +529,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp67acfmxazb4p****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -557,7 +537,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The maintenance windows.</p>
+             * MaintenanceWindows.
              */
             public Builder maintenanceWindows(MaintenanceWindows maintenanceWindows) {
                 this.maintenanceWindows = maintenanceWindows;
@@ -565,10 +545,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Indicates whether an event notification was sent before maintenance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * NotifyOnMaintenance.
              */
             public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
                 this.notifyOnMaintenance = notifyOnMaintenance;

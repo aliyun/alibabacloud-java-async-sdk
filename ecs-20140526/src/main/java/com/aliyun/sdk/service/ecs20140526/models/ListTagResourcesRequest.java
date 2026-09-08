@@ -210,7 +210,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -240,7 +240,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+         * <p>The ECS resource ID. Valid values of N: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1j6qtvdm8w0z1o****</p>
@@ -285,25 +285,25 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>instance: ECS instance</li>
-         * <li>disk: disk</li>
-         * <li>snapshot: snapshot</li>
-         * <li>image: image</li>
-         * <li>securitygroup: security group</li>
-         * <li>volume: storage volume</li>
-         * <li>eni: elastic network interface (ENI)</li>
-         * <li>ddh: dedicated host</li>
-         * <li>ddhcluster: dedicated host cluster</li>
-         * <li>keypair: SSH key pair</li>
-         * <li>launchtemplate: launch template</li>
-         * <li>reservedinstance: reserved instance</li>
-         * <li>snapshotpolicy: automatic snapshot policy</li>
-         * <li>elasticityassurance: elasticity assurance</li>
-         * <li>capacityreservation: capacity reservation</li>
-         * <li>command: Cloud Assistant command</li>
-         * <li>invocation: Cloud Assistant command execution result or file delivery result</li>
-         * <li>activation: activation code for a Cloud Assistant managed instance</li>
-         * <li>managedinstance: Cloud Assistant managed instance</li>
+         * <li>instance: ECS instance.</li>
+         * <li>disk: cloud disk.</li>
+         * <li>snapshot: snapshot.</li>
+         * <li>image: image.</li>
+         * <li>securitygroup: security group.</li>
+         * <li>volume: storage volume.</li>
+         * <li>eni: Elastic Network Interface (ENI).</li>
+         * <li>ddh: dedicated host.</li>
+         * <li>ddhcluster: dedicated host cluster.</li>
+         * <li>keypair: SSH key pair.</li>
+         * <li>launchtemplate: launch template.</li>
+         * <li>reservedinstance: reserved instance.</li>
+         * <li>snapshotpolicy: automatic snapshot policy.</li>
+         * <li>elasticityassurance: elasticity assurance.</li>
+         * <li>capacityreservation: capacity reservation.</li>
+         * <li>command: Cloud Assistant command.</li>
+         * <li>invocation: Cloud Assistant command execution or file sending result.</li>
+         * <li>activation: Cloud Assistant managed instance activation code.</li>
+         * <li>managedinstance: Cloud Assistant managed instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -326,7 +326,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The regular expressions used to filter tags.</p>
+         * <p>The tag filter rules.</p>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         public Builder tagFilter(java.util.List<TagFilter> tagFilter) {
             this.putQueryParameter("TagFilter", tagFilter);
@@ -394,20 +397,25 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N used for exact search of ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
-             * <p>Methods of using the <code>Tag.N</code> parameter pair (Tag.N.Key and Tag.N.Value):</p>
+             * <p>The tag key used to perform an exact search for ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+             * <p>Usage notes of the <code>Tag.N</code> parameter:</p>
              * <ul>
-             * <li><p>Method 1: Use this parameter pair for exact search of ECS resources that have specified tags added. Each tag is a key-value pair.</p>
+             * <li><p>Method 1: Used to perform an exact search for ECS resources that have the specified tags bound. Each tag is a key-value pair.</p>
              * <ul>
-             * <li>If you specify only <code>Tag.N.Key</code>, all ECS resources whose tags contain the specified tag key are returned.</li>
-             * <li>If you specify only <code>Tag.N.Value</code>, the <code>InvalidParameter.TagValue</code> error is returned.</li>
-             * <li>If you specify multiple tag key-value pairs, only the ECS resources that have all these tag key-value pairs added are returned.</li>
+             * <li><p>If you specify only <code>Tag.N.Key</code>, all resources associated with the tag key are returned.</p>
+             * </li>
+             * <li><p>If you specify only <code>Tag.N.Value</code>, the <code>InvalidParameter.TagValue</code> error is returned.</p>
+             * </li>
+             * <li><p>If you specify multiple tag key-value pairs at the same time, only ECS resources that match all the specified tag key-value pairs are returned.</p>
+             * </li>
              * </ul>
              * </li>
-             * <li><p>Method 2: Use this parameter pair to query resource information of a non-default resource group. Set <code>Key</code> to <code>acs:rm:rgId</code> and <code>Value</code> to the ID of a resource group.</p>
+             * <li><p>Method 2: Used to query resource information in non-default resource groups. Set <code>Key</code> to <code>acs:rm:rgId</code> and set the corresponding <code>Value</code> to the resource group ID.</p>
              * <ul>
-             * <li>If you set <code>Key</code> to <code>acs:rm:rgId</code>, you must set <code>Value</code> to the ID of a non-default resource group. If you set Value to the ID of the default resource group, an error message is returned.</li>
-             * <li>If you set <code>Key</code> to <code>acs:rm:rgId</code>, you cannot specify other Tag.N parameter pairs. If you specify multiple <code>Tag.N</code> parameter pairs to query resource groups and resources at the same time, an error message is returned.</li>
+             * <li><p>If <code>Key</code> is set to <code>acs:rm:rgId</code>, <code>Value</code> can only be set to a non-default resource group ID. If the specified resource group ID is the default resource group, an error message is returned.</p>
+             * </li>
+             * <li><p>If <code>Key</code> is set to <code>acs:rm:rgId</code>, you cannot specify other tag key-value pairs. If you use multiple <code>Tag.N</code> parameters to query resources by resource group and tags at the same time, an error message is returned.</p>
+             * </li>
              * </ul>
              * </li>
              * </ul>
@@ -421,9 +429,9 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N used for exact search of ECS resources. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+             * <p>The tag value used to perform an exact search for ECS resources. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
              * <blockquote>
-             * <p>When Key is set to <code>acs:rm:rgId</code>, you can set Value only to the ID of a non-default resource group.</p>
+             * <p>If <code>Key=acs:rm:rgId</code>, this parameter can only be set to a resource group ID, and the resource group ID cannot be the default resource group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -494,16 +502,20 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N used for fuzzy search of ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 5.</p>
-             * <p>The <code>TagFilter.N</code> parameter pair (TagFilter.N.TagKey and TagFilter.N.TagValues.N) is used for fuzzy search of ECS resources that have specified tags added. In the specified tags, a single tag key may correspond to one or more tag values. Fuzzy search may have a latency of 2 seconds. A fuzzy search can return a result set of entries about a maximum of 5,000 resources.</p>
+             * <p>The tag key used to perform a fuzzy search for ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 5.</p>
+             * <p><code>TagFilter.N</code> is used to perform a fuzzy search for ECS resources that have the specified tags bound. It consists of a key and one or more values. A fuzzy search may have a latency of up to 2 seconds and supports only scenarios where the number of resources after fuzzy filtering is less than or equal to 5,000.</p>
              * <ul>
-             * <li>When you use <code>TagFilter.N.TagKey</code> for fuzzy search of ECS resources, you must leave <code>TagFilter.N.TagValues.N</code> empty. For example, to query ECS resources whose tags contain the <code>environment</code> tag key, you can set <code>TagFilter.1.TagKey</code> to <code>env*</code> for prefix search, <code>*env*</code> for infix search, or <code>env</code> for exact search, but you must leave <code>TagFilter.1.TagValues</code> empty.</li>
-             * <li>When you use <code>TagFilter.N.TagValues.N</code> for fuzzy search of ECS resources, you must set <code>TagFilter.N.TagKey</code> to an exact value. For example, to query ECS resources that have a tag composed of the <code>env</code> tag key and the <code>product</code> tag value, you must set <code>TagFilter.1.TagKey</code> to <code>env</code> and can set <code>TagFilter.1.TagValues.1</code> to <code>proc*</code> for prefix search, to <code>*proc*</code> for infix search, or to <code>proc</code> for exact search. Only one of the preceding search methods can be used for each tag key (<code>TagFilter.N.TagKey</code>). If multiple search methods are configured for a tag key, the first search method prevails.</li>
-             * <li>If you specify multiple tag keys, only the ECS resources that have all the specified tag keys added are returned.</li>
-             * <li>If you specify a tag key that corresponds to multiple tag values, all the ECS resources that have one or more of these tag key-value pairs added are returned.</li>
+             * <li><p>When you perform a fuzzy search for ECS resources by tag key (<code>TagFilter.N.TagKey</code>), the tag value (<code>TagFilter.N.TagValues.N</code>) must be empty. For example, to perform a fuzzy search for ECS resources whose tag key is <code>environment</code>, you can set <code>TagFilter.1.TagKey</code> to <code>env*</code> (prefix match), <code>*env*</code> (infix match), or <code>env</code> (exact match), and <code>TagFilter.1.TagValues</code> must be empty.</p>
+             * </li>
+             * <li><p>When you perform a fuzzy search for ECS resources by tag value (<code>TagFilter.N.TagValues.N</code>), the tag key (<code>TagFilter.N.TagKey</code>) must be set to an exact value. For example, to perform a fuzzy search for ECS resources whose tag key is <code>env</code> and tag value is <code>product</code>, <code>TagFilter.1.TagKey</code> must be set to the exact value <code>env</code>, and <code>TagFilter.1.TagValues.1</code> can be set to <code>proc*</code> (prefix match), <code>*proc*</code> (infix match), or <code>proc</code> (exact match). Only one search method can be used for the same <code>TagKey</code>. If multiple search methods are specified, the first method takes precedence.</p>
+             * </li>
+             * <li><p>Tag keys have an AND relationship. Only ECS resources that match all specified tag keys are returned.</p>
+             * </li>
+             * <li><p>Tag values under the same tag key have an OR relationship. ECS resources that match any of the tag values specified for a tag key are returned.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p>The <code>TagFilter.N</code> parameter pair (TagFilter.N.TagKey and TagFilter.N.TagValues.N) cannot be used together with the <code>Tag.N</code> parameter pair (Tag.N.Key and Tag.N.Value). Otherwise, an error message is returned.</p>
+             * <p>The <code>TagFilter.N</code> and <code>Tag.N</code> parameters cannot be used at the same time. Otherwise, an error message is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -515,7 +527,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The values of tag N used for fuzzy search of ECS resources. The tag values must be 1 to 128 characters in length. Valid values of N: 1 to 5. For more information, see the description of <code>TagFilter.N.TagKey</code>.</p>
+             * <p>The tag value used to perform a fuzzy search for ECS resources. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 5. For the metric description, see the <code>TagFilter.N.TagKey</code> parameter description.</p>
              * 
              * <strong>example:</strong>
              * <p>TestTagFilter</p>

@@ -119,7 +119,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -131,7 +131,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the snapshots.</p>
+         * Snapshots.
          */
         public Builder snapshots(Snapshots snapshots) {
             this.snapshots = snapshots;
@@ -177,7 +177,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The total number of snapshots.</p>
          * <blockquote>
-         * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+         * <p>When you use <code>MaxResults</code> and <code>NextToken</code> parameters for paging query, the returned <code>TotalCount</code> parameter value is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,10 +247,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -258,10 +255,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -746,14 +740,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the snapshot can be shared and be used to create or roll back a cloud disk. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Available.
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -761,15 +748,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the snapshot. Valid values:</p>
-             * <ul>
-             * <li>Standard: standard snapshot.</li>
-             * <li>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature.</li>
-             * <li>archive: archive snapshot.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -777,10 +756,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-08-20T14:52:28Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -788,10 +764,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -799,14 +772,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the snapshot was encrypted. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Encrypted.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -822,17 +788,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The instant access feature is enabled. By default, the instant access feature is enabled for Enterprise SSDs (ESSDs) and ESSD Entry disks.</li>
-             * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is deprecated. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * InstantAccess.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -840,14 +796,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates the validity period of the instant access feature. When the validity period ends, the instant access feature is automatically disabled.</p>
-             * <p>By default, the value of this parameter is the same as the value of <code>RetentionDays</code>.</p>
-             * <blockquote>
-             * <p> This parameter is deprecated. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * InstantAccessRetentionDays.
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -855,10 +804,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the KMS key used for the data disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+             * KMSKeyId.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -866,10 +812,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the snapshot was last modified. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-08-25T14:18:09Z</p>
+             * LastModifiedTime.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -877,10 +820,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product code of the Alibaba Cloud Marketplace image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>jxsc000****</p>
+             * ProductCode.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -888,10 +828,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100%</p>
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -899,10 +836,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -910,10 +844,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of remaining time required to create the snapshot. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>38</p>
+             * RemainTime.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -921,10 +852,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the snapshot belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -932,10 +860,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the automatic snapshot. Unit: days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * RetentionDays.
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -943,10 +868,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bp67acfmxazb4p****</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -954,10 +876,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot chain that is associated with the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sl-bp1grgphbcc9brb5****</p>
+             * SnapshotLinkId.
              */
             public Builder snapshotLinkId(String snapshotLinkId) {
                 this.snapshotLinkId = snapshotLinkId;
@@ -965,10 +884,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testSnapshotName</p>
+             * SnapshotName.
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -976,10 +892,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>64472-116742336-61976****</p>
+             * SnapshotSN.
              */
             public Builder snapshotSN(String snapshotSN) {
                 this.snapshotSN = snapshotSN;
@@ -987,15 +900,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the snapshot. Valid values:</p>
-             * <ul>
-             * <li>auto or timer: automatic snapshot</li>
-             * <li>user: manual snapshot</li>
-             * <li>all: all snapshot types</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>all</p>
+             * SnapshotType.
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;
@@ -1003,10 +908,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp67acfmxazb4ph****</p>
+             * SourceDiskId.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -1014,10 +916,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the source disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>40</p>
+             * SourceDiskSize.
              */
             public Builder sourceDiskSize(String sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -1025,14 +924,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source disk. Valid values:</p>
-             * <ul>
-             * <li>system</li>
-             * <li>data</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * SourceDiskType.
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -1040,10 +932,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the source snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * SourceRegionId.
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
@@ -1051,10 +940,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bp67acfmxazb4p****</p>
+             * SourceSnapshotId.
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -1062,13 +948,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the source disk.</p>
-             * <blockquote>
-             * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>disk</p>
+             * SourceStorageType.
              */
             public Builder sourceStorageType(String sourceStorageType) {
                 this.sourceStorageType = sourceStorageType;
@@ -1076,15 +956,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the snapshot. Valid values:</p>
-             * <ul>
-             * <li>progressing: The snapshot is being created.</li>
-             * <li>accomplished: The snapshot is created.</li>
-             * <li>failed: The snapshot failed to be created.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>accomplished</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1092,7 +964,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the snapshot.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1100,16 +972,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the snapshot was used to create images or cloud disks. Valid values:</p>
-             * <ul>
-             * <li>image: The snapshot was used to create custom images.</li>
-             * <li>disk: The snapshot was used to create cloud disks.</li>
-             * <li>image_disk: The snapshot was used to create custom images and data disks.</li>
-             * <li>none: The snapshot was not used to create custom images or cloud disks.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>image</p>
+             * Usage.
              */
             public Builder usage(String usage) {
                 this.usage = usage;

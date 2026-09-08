@@ -106,7 +106,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the reserved instance list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the reserved instances.</p>
+         * ReservedInstances.
          */
         public Builder reservedInstances(ReservedInstances reservedInstances) {
             this.reservedInstances = reservedInstances;
@@ -203,10 +203,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why the instance is locked.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>security</p>
+             * LockReason.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -327,10 +324,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -338,10 +332,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -670,14 +661,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
-             * <ul>
-             * <li>allocated: The reserved instance is allocated to another account.</li>
-             * <li>beAllocated: The reserved instance is allocated by another account.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>allocated</p>
+             * AllocationStatus.
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -685,10 +669,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-12-10T12:07Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -696,10 +677,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -707,10 +685,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-10T12:07Z</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -718,10 +693,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * InstanceAmount.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -729,10 +701,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the pay-as-you-go instances that can be matched to the reserved instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g5.large</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -740,10 +709,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment option.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>All Upfront</p>
+             * OfferingType.
              */
             public Builder offeringType(String offeringType) {
                 this.offeringType = offeringType;
@@ -751,7 +717,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the lock status of the reserved instance.</p>
+             * OperationLocks.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -759,14 +725,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system of the image used by the instance. Valid values:</p>
-             * <ul>
-             * <li>Windows</li>
-             * <li>Linux</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Linux</p>
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -774,10 +733,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -785,10 +741,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ri-bpzhex2ulpzf53****</p>
+             * ReservedInstanceId.
              */
             public Builder reservedInstanceId(String reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;
@@ -796,10 +749,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>riZbpzhex2ulpzf53****</p>
+             * ReservedInstanceName.
              */
             public Builder reservedInstanceName(String reservedInstanceName) {
                 this.reservedInstanceName = reservedInstanceName;
@@ -807,10 +757,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>EcsDocTest</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -818,10 +765,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>region</p>
+             * Scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -829,10 +773,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-12-10T12:00Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -840,10 +781,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -851,7 +789,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the reserved instance.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -859,10 +797,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-z</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

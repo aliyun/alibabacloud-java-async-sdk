@@ -106,7 +106,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The query token returned by this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         }
 
         /**
-         * PlanMaintenanceWindowList.
+         * <p>The creation time.</p>
          */
         public Builder planMaintenanceWindowList(java.util.List<PlanMaintenanceWindowList> planMaintenanceWindowList) {
             this.planMaintenanceWindowList = planMaintenanceWindowList;
@@ -130,7 +136,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that match the query conditions. This parameter is optional and may not be returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +227,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -292,7 +310,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the O&amp;M window applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2qxeteo7fr6y</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -300,7 +321,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The resource type for which the O&amp;M window is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -308,7 +332,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags to which the O&amp;M window applies.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -375,7 +399,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the maintenance time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Monday,22:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -383,7 +410,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the maintenance time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Monday,22:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -450,7 +480,14 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             } 
 
             /**
-             * PeriodUnit.
+             * <p>The cycle type. Valid values:</p>
+             * <ul>
+             * <li>Daily: daily recurrence.</li>
+             * <li>Weekly: weekly recurrence.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -458,7 +495,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * RangeList.
+             * <p>The time ranges within the recurring cycle of the O&amp;M window (UTC time zone).</p>
              */
             public Builder rangeList(java.util.List<RangeList> rangeList) {
                 this.rangeList = rangeList;
@@ -616,7 +653,11 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the O&amp;M window was created.</p>
+             * <p>The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-11T02:20:41Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -624,7 +665,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the O&amp;M window is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -640,7 +684,11 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the O&amp;M window was last modified.</p>
+             * <p>The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-22 10:14:28 +0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -648,7 +696,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanWindowId.
+             * <p>The ID of the O&amp;M window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pw-bp1bqkbjb7h4j8zqzwvp</p>
              */
             public Builder planWindowId(String planWindowId) {
                 this.planWindowId = planWindowId;
@@ -656,7 +707,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanWindowName.
+             * <p>The name of the O&amp;M window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WindowName</p>
              */
             public Builder planWindowName(String planWindowName) {
                 this.planWindowName = planWindowName;
@@ -664,7 +718,10 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportMaintenanceAction.
+             * <p>The supported maintenance actions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reboot</p>
              */
             public Builder supportMaintenanceAction(String supportMaintenanceAction) {
                 this.supportMaintenanceAction = supportMaintenanceAction;
@@ -672,7 +729,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetResource.
+             * <p>The resources to which the O&amp;M window applies.</p>
              */
             public Builder targetResource(TargetResource targetResource) {
                 this.targetResource = targetResource;
@@ -680,7 +737,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
             }
 
             /**
-             * TimePeriod.
+             * <p>The recurring cycle of the window.</p>
              */
             public Builder timePeriod(TimePeriod timePeriod) {
                 this.timePeriod = timePeriod;

@@ -91,7 +91,7 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the elasticity assurances.</p>
+         * PrivatePoolOptionsIdSet.
          */
         public Builder privatePoolOptionsIdSet(PrivatePoolOptionsIdSet privatePoolOptionsIdSet) {
             this.privatePoolOptionsIdSet = privatePoolOptionsIdSet;

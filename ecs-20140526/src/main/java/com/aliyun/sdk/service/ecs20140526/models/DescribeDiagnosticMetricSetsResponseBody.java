@@ -88,7 +88,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -223,7 +223,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
              * <p>The description of the diagnostic metric set.</p>
              * 
              * <strong>example:</strong>
-             * <p>connection issue diagnostics</p>
+             * <p>远程连接问题诊断</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -231,7 +231,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the diagnostic metrics.</p>
+             * <p>The list of diagnostic metrics.</p>
              */
             public Builder metricIds(java.util.List<String> metricIds) {
                 this.metricIds = metricIds;
@@ -253,7 +253,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
              * <p>The name of the diagnostic metric set.</p>
              * 
              * <strong>example:</strong>
-             * <p>connection issue diagnostics</p>
+             * <p>远程连接问题诊断</p>
              */
             public Builder metricSetName(String metricSetName) {
                 this.metricSetName = metricSetName;
@@ -261,7 +261,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type supported by the diagnostic metric set.</p>
+             * <p>The supported resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -274,8 +274,8 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             /**
              * <p>The type of the diagnostic metric set. Valid values:</p>
              * <ul>
-             * <li>User: user-defined diagnostic metric set</li>
-             * <li>Common: common diagnostic metric set</li>
+             * <li>User: user.</li>
+             * <li>Common: common.</li>
              * </ul>
              * 
              * <strong>example:</strong>

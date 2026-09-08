@@ -182,7 +182,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The IPv4 prefixes to unassign.</p>
+         * <p>One or more IPv4 prefixes to remove.</p>
          */
         public Builder ipv4Prefix(java.util.List<String> ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -191,7 +191,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the Elastic Network Interface (ENI).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The secondary private IP addresses to unassign.</p>
+         * <p>One or more secondary private IP addresses to remove.</p>
          * 
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
@@ -234,7 +234,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

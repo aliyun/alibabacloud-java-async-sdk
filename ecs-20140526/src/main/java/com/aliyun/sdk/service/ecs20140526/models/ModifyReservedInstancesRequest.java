@@ -145,7 +145,7 @@ public class ModifyReservedInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The configurations of the new reserved instances. You can specify up to 100 new reserved instances.</p>
+         * <p>The configuration information of the reserved instances. Array length: 1 to 100.</p>
          */
         public Builder configuration(java.util.List<Configuration> configuration) {
             this.putQueryParameter("Configuration", configuration);
@@ -173,7 +173,7 @@ public class ModifyReservedInstancesRequest extends Request {
 
         /**
          * <p>The region ID of the reserved instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of reserved instances that you want to modify. You can specify up to 20 reserved instance IDs.</p>
+         * <p>The IDs of the reserved instances. Array length: 1 to 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class ModifyReservedInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match. The value of this parameter must be greater than or equal to 1.</p>
+             * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match simultaneously. Valid values: ≥ 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -326,9 +326,9 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The instance types that the new reserved instance can match.</p>
+             * <p>The instance type that the reserved instance can match.</p>
              * <blockquote>
-             * <p> The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</p>
+             * <p>Applicable instance types are continuously updated. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -340,8 +340,8 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The name of the new reserved instance.</p>
-             * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of the reserved instance.</p>
+             * <p>The name must be 2 to 128 characters in length. It must start with a letter or Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>testReservedInstanceName</p>
@@ -352,10 +352,10 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The scope level of the new reserved instance. Valid values:</p>
+             * <p>The scope of the reserved instance. Valid values: </p>
              * <ul>
-             * <li>Region</li>
-             * <li>Zone</li>
+             * <li>Region: regional.</li>
+             * <li>Zone: zonal.</li>
              * </ul>
              * <p>Default value: Region.</p>
              * 
@@ -368,9 +368,9 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The zone ID of the new reserved instance.</p>
-             * <p>This parameter is required when you set <code>Scope</code> to <code>Zone</code>.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>The zone ID of the reserved instance.</p>
+             * <p>This parameter is required when the <code>Scope</code> parameter is set to <code>Zone</code>.</p>
+             * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> to query the zone list.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>

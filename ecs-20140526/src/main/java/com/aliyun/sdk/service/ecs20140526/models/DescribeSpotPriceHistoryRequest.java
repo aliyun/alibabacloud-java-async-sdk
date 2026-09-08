@@ -267,8 +267,8 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
-         * <p>This parameter is empty by default. If this parameter is empty, the current time is used.</p>
+         * <p>The end of the time range to query the historical prices of spot instances. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>Default value: null, which indicates the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-08-22T08:45:08Z</p>
@@ -280,8 +280,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</p>
-         * <p>This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.</p>
+         * <p>The instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,13 +293,15 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
+         * <p>Specifies whether the spot instance is I/O optimized. Valid values:</p>
          * <ul>
-         * <li>optimized: The instance is I/O optimized.</li>
-         * <li>none: The instance is not I/O optimized.</li>
+         * <li><p>optimized: The spot instance is an I/O optimization instance.</p>
+         * </li>
+         * <li><p>none: The spot instance is not an I/O optimization instance.</p>
+         * </li>
          * </ul>
-         * <p>For instances of generation I instance families, the default value is none.</p>
-         * <p>For instances of other instance families, the default value is optimized.</p>
+         * <p>Default value for Generation I instance families: none.</p>
+         * <p>Default value for other instance families: optimized.</p>
          * 
          * <strong>example:</strong>
          * <p>optimized</p>
@@ -314,8 +315,8 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         /**
          * <p>The network type of the spot instance. Valid values:</p>
          * <ul>
-         * <li>classic: classic network</li>
-         * <li>vpc: Virtual Private Cloud (VPC)</li>
+         * <li>vpc: virtual private cloud (VPC).</li>
+         * <li>classic: classic network. This feature has been retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -331,8 +332,8 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         /**
          * <p>The type of the operating system platform. Valid values:</p>
          * <ul>
-         * <li>linux</li>
-         * <li>windows</li>
+         * <li>linux.</li>
+         * <li>windows.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,8 +346,8 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>The line from which the query starts.</p>
-         * <p>Default value: 0</p>
+         * <p>The row number to start the query from.</p>
+         * <p>Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -376,7 +377,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the spot instance.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -409,12 +410,12 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
          * <ul>
-         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released for 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
+         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Specify a protection period based on the expected task execution duration.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * <p>This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -427,8 +428,8 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value of this parameter and the value of EndTime can be up to 30 days apart. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
-         * <p>This parameter is left empty by default. If this parameter is empty, the time that is 3 hours earlier than the value of EndTime is used.</p>
+         * <p>The beginning of the time range to query the historical prices of spot instances. The maximum time range between the start time and end time is 30 days. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>Default value: null, which indicates 3 hours before the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-08-22T08:45:08Z</p>
@@ -440,7 +441,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * <p>The spot price (market price) of the spot instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>

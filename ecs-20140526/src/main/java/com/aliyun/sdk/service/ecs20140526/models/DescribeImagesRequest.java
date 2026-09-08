@@ -464,8 +464,8 @@ public class DescribeImagesRequest extends Request {
         /**
          * <p>The scenario in which the image is used. Valid values:</p>
          * <ul>
-         * <li>CreateEcs: instance creation</li>
-         * <li>ChangeOS: replacement of the system disk or OS</li>
+         * <li>CreateEcs (default): instance creation.</li>
+         * <li>ChangeOS: system disk replacement or operating system replacement.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -480,9 +480,9 @@ public class DescribeImagesRequest extends Request {
         /**
          * <p>The architecture of the image. Valid values:</p>
          * <ul>
-         * <li>i386</li>
-         * <li>x86_64</li>
-         * <li>arm64</li>
+         * <li>i386.</li>
+         * <li>x86_64.</li>
+         * <li>arm64.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,10 +495,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run without performing the actual request.</p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. The request does not send the actual query.</li>
+         * <li>false: A normal request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is directly queried.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -512,7 +512,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions used to query resources.</p>
+         * <p>The list of filter conditions used to query resources.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -521,10 +521,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The name of the image family. You can set this parameter to query images of the specified image family.</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>The name of the image family. You can set this parameter to filter images that belong to the specified image family.</p>
+         * <p>Default value: empty.</p>
          * <blockquote>
-         * <p> For information about image families that are associated with Alibaba Cloud official images, see <a href="https://help.aliyun.com/document_detail/108393.html">Overview of public images</a>.</p>
+         * <p>For information about image families associated with Alibaba Cloud public images, see <a href="https://help.aliyun.com/document_detail/108393.html">Overview of public images</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -537,12 +537,17 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image.</p>
-         * <p><strong>Naming rules for image IDs</strong></p>
+         * <p>The image ID.</p>
+         * <details>
+         * <summary>Naming rules for image IDs</summary>
+         * 
          * <ul>
-         * <li>IDs of public images are named after the operating system version numbers, architectures, languages, and release dates of the images. For example, the ID of a Windows Server 2008 R2 Enterprise 64-bit (English) public image is win2008r2_64_ent_sp1_en-us_40G_alibase_20190318.vhd.</li>
-         * <li>IDs of custom images, shared images, Alibaba Cloud Marketplace images, and community images start with m.</li>
+         * <li><p>Public images: Named by operating system version, architecture, language, and release date. For example, the image ID for Windows Server 2008 R2 Enterprise Edition, 64-bit English system is win2008r2_64_ent_sp1_en-us_40G_alibase_20190318.vhd.</p>
+         * </li>
+         * <li><p>Custom images, shared images, Alibaba Cloud Marketplace images, and community images: Start with m.</p>
+         * </li>
          * </ul>
+         * </details>
          * 
          * <strong>example:</strong>
          * <p>m-bp1g7004ksh0oeuc****</p>
@@ -554,7 +559,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The image name. Fuzzy match is supported.</p>
+         * <p>The name of the image. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>testImageName</p>
@@ -566,24 +571,20 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The image source. Valid values:</p>
+         * <p>The source of the image. Valid values:</p>
          * <ul>
-         * <li><p>system: images that are provided by Alibaba Cloud and are not released in Alibaba Cloud Marketplace, which are different from public images in the Elastic Compute Service (ECS) console.</p>
-         * </li>
-         * <li><p>self: your custom images</p>
-         * </li>
-         * <li><p>others: shared images (images shared by other Alibaba Cloud accounts) and community images (publicly available custom images that are published by other Alibaba Cloud accounts). Take note of the following items:</p>
-         * <ul>
-         * <li>To query community images, you must set IsPublic to true.</li>
-         * <li>To query shared images, you must set IsPublic to false or leave IsPublic empty.</li>
+         * <li>system: Images provided by Alibaba Cloud that are not published through Alibaba Cloud Marketplace. This is different from the concept of &quot;public images&quot; in the console.</li>
+         * <li>self: Custom images that you created.</li>
+         * <li>others: Includes shared images (images directly shared with you by other Alibaba Cloud users) and community images (images that any Alibaba Cloud user has fully shared publicly). Note the following:<ul>
+         * <li>To find community images, IsPublic must be set to true.</li>
+         * <li>To find shared images, IsPublic must be set to false or left empty.</li>
          * </ul>
          * </li>
-         * <li><p>marketplace: images released by Alibaba Cloud or independent software vendors (ISVs) in the Alibaba Cloud Marketplace, which must be purchased together with ECS instances. Take note of the billing details of the images.</p>
-         * </li>
+         * <li>marketplace: Images published by Alibaba Cloud or third-party independent software vendors (ISVs) in Alibaba Cloud Marketplace. These images must be purchased together with ECS. Check the billing details of Alibaba Cloud Marketplace images on your own.</li>
          * </ul>
-         * <p>This parameter is empty by default.</p>
+         * <p>Default value: empty.</p>
          * <blockquote>
-         * <p>By default, this parameter is empty, which indicates that the following images are queried: public images provided by Alibaba Cloud, custom images in your repository, shared images from other Alibaba Cloud accounts, and community images that are published by other Alibaba Cloud accounts.</p>
+         * <p>An empty value indicates that images with the system, self, and others values are returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -596,10 +597,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.</p>
+         * <p>The Alibaba Cloud account ID to which the image belongs. This parameter takes effect only when you query shared images or community images.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>20169351435666****</p>
          */
         public Builder imageOwnerId(Long imageOwnerId) {
             this.putQueryParameter("ImageOwnerId", imageOwnerId);
@@ -608,7 +609,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The instance type for which the image can be used.</p>
+         * <p>The instance type for which you want to query available images.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -622,8 +623,8 @@ public class DescribeImagesRequest extends Request {
         /**
          * <p>Specifies whether to query published community images. Valid values:</p>
          * <ul>
-         * <li>true: queries published community images. When you set this parameter to true, you must set ImageOwnerAlias to others.</li>
-         * <li>false: queries image types other than the community images type. The specific image types to be queried are determined by the ImageOwnerAlias value.</li>
+         * <li>true: Queries published community images. When you set this parameter to true, ImageOwnerAlias must be set to others.</li>
+         * <li>false: Queries image types other than community images. The specific types depend on the value of ImageOwnerAlias.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -649,7 +650,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the image can be used on I/O optimized instances.</p>
+         * <p>Specifies whether the image can run on I/O optimized instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -663,8 +664,8 @@ public class DescribeImagesRequest extends Request {
         /**
          * <p>The operating system type of the image. Valid values:</p>
          * <ul>
-         * <li>windows</li>
-         * <li>linux</li>
+         * <li>windows.</li>
+         * <li>linux.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -695,8 +696,8 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The page number to return.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>The page number of the resources.</p>
+         * <p>Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -709,12 +710,12 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The number of entries per page for a paging query. Settings this parameter to specify the number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -723,7 +724,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -736,9 +737,9 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the custom image belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+         * <p>The ID of the resource group to which the custom image belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -769,7 +770,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the subscription image has expired.</p>
+         * <p>Specifies whether the subscription image has exceeded its usage period.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -793,16 +794,20 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The status of the image. By default, if you do not specify this parameter, only images in the Available state are returned. Valid values:</p>
+         * <p>The status of the image. Valid values:</p>
          * <ul>
          * <li>Creating: The image is being created.</li>
-         * <li>Waiting: The image is waiting to be processed.</li>
+         * <li>Waiting: The image is waiting in a multi-task queue.</li>
          * <li>Available: The image is available.</li>
          * <li>UnAvailable: The image is unavailable.</li>
-         * <li>CreateFailed: The image fails to be created.</li>
-         * <li>Deprecated: The image is no longer used.</li>
+         * <li>CreateFailed: The image failed to be created.</li>
+         * <li>Deprecated: The image is deprecated.</li>
+         * <li>ALL: All image statuses.</li>
          * </ul>
-         * <p>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</p>
+         * <p>Default value: Available. When Usable is used, Status is required and has no default value.</p>
+         * <blockquote>
+         * <p>This parameter supports multiple values at the same time, separated by commas (,). When the value is set to ALL, images in all statuses are queried. ALL cannot be used together with other status values.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -814,7 +819,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The tags list.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -823,7 +828,13 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Usable.
+         * <p>Specifies whether the image is available.</p>
+         * <blockquote>
+         * <p>An available image indicates that the image can be immediately used to create instances. For more availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder usable(Boolean usable) {
             this.putQueryParameter("Usable", usable);
@@ -832,10 +843,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the image is running on an Elastic Compute Service (ECS) instance. Valid values:</p>
+         * <p>Specifies whether the image is running on ECS instances. Valid values:</p>
          * <ul>
-         * <li>instance: The image is already in use and running on an ECS instance.</li>
-         * <li>none: The image is idle.</li>
+         * <li>instance: The image is in use and running on ECS instances.</li>
+         * <li>none: The image is idle and not running on any ECS instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -907,12 +918,14 @@ public class DescribeImagesRequest extends Request {
             } 
 
             /**
-             * <p>The key of filter N used to query resources. Valid values:</p>
+             * <p>The filter key used to query resources. Valid values:</p>
              * <ul>
-             * <li>If you set this parameter to <code>CreationStartTime</code>, you can query the resources that were created after the point in time specified by <code>Filter.N.Value</code>.</li>
-             * <li>If you set this parameter to <code>CreationEndTime</code>, you can query the resources that were created before the point in time specified by <code>Filter.N.Value</code>.</li>
-             * <li>If you set this parameter to <code>NetworkType</code>, you can query resources of the specified network type.</li>
+             * <li>When this parameter is set to <code>CreationStartTime</code>, you can query resources created after the specified time point (<code>Filter.N.Value</code>).</li>
+             * <li>When this parameter is set to <code>CreationEndTime</code>, you can query resources created before the specified time point (<code>Filter.N.Value</code>).</li>
+             * <li>When this parameter is set to <code>NetworkType</code>, you can query resources of the specified network type.</li>
+             * <li>When this parameter is set to any of <code>CpuOnlineUpgrade</code>, <code>CpuOnlineDowngrade</code>, <code>MemoryOnlineUpgrade</code>, or <code>MemoryOnlineDowngrade</code>, you can query the CPU or memory hot-plugging support of the specified image.</li>
              * </ul>
+             * <p>Default value: null.</p>
              * 
              * <strong>example:</strong>
              * <p>CreationStartTime</p>
@@ -923,11 +936,16 @@ public class DescribeImagesRequest extends Request {
             }
 
             /**
-             * <p>The value of filter N used to query resources. Valid values:</p>
+             * <p>The filter value used to query resources.</p>
              * <ul>
-             * <li>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code> in the UTC+0 time zone.</li>
-             * <li>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, the valid values can be <code>vpc</code> or <code>classic</code>.</li>
+             * <li><p>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code>, in UTC+0 time zone.</p>
+             * </li>
+             * <li><p>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, valid network type values include <code>vpc</code> and <code>classic</code>.</p>
+             * </li>
+             * <li><p>When <code>Filter.N.Key</code> is set to <code>CpuOnlineUpgrade</code>, <code>CpuOnlineDowngrade</code>, <code>MemoryOnlineUpgrade</code>, or <code>MemoryOnlineDowngrade</code>, valid values are <code>supported</code> and <code>unsupported</code>.</p>
+             * </li>
              * </ul>
+             * <p>Default value: null.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-12-05T22:40Z</p>
@@ -997,8 +1015,8 @@ public class DescribeImagesRequest extends Request {
             } 
 
             /**
-             * <p>The tag N key of the image. Valid values of N: 1 to 20.</p>
-             * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key of the image. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>

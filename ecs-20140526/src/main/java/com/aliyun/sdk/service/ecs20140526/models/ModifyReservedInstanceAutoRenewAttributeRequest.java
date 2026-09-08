@@ -213,8 +213,15 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal cycle.</p>
-         * <p>Valid values: 1 and 3.</p>
+         * <p>The auto-renewal epoch.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;Valid values: 1 and 3.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values: 1, 3, and 5.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values: 1.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,8 +233,10 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The unit of the auto-renewal duration.</p>
-         * <p>Valid values: Year and Month.</p>
+         * <p>The unit of the auto-renewal period.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;Valid values: Year.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Valid values: Month and Year.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Default value: Month.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -239,7 +248,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the reserved instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the reserved instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,10 +261,10 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically renew the reserved instances. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal for the subscription reserved instances. Valid values:</p>
          * <ul>
-         * <li>AutoRenewal: automatically renews the reserved instances.</li>
-         * <li>Normal: manually renews the reserved instances.</li>
+         * <li>AutoRenewal: enables auto-renewal.</li>
+         * <li>Normal: enables manual renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +277,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the reserved instances.</p>
+         * <p>The reserved instance ID.</p>
          */
         public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

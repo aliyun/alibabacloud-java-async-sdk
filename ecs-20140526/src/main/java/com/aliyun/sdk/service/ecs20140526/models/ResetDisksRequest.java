@@ -145,7 +145,7 @@ public class ResetDisksRequest extends Request {
         } 
 
         /**
-         * <p>The disks that you want to roll back.</p>
+         * <p>The list of cloud disks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder disk(java.util.List<Disk> disk) {
@@ -155,10 +155,10 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</li>
+         * <li>true: performs a dry run without actually rolling back the cloud disks. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -190,7 +190,7 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class ResetDisksRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.</p>
+             * <p>The ID of the cloud disk to be rolled back. Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>d-j6cf7l0ewidb78lq****</p>
@@ -291,7 +291,7 @@ public class ResetDisksRequest extends Request {
             }
 
             /**
-             * <p>The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.</p>
+             * <p>The snapshot ID that corresponds to the specified cloud disk in the instance snapshot. Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>s-j6cdofbycydvg7ey****</p>

@@ -119,7 +119,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -130,7 +130,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the snapshot chain list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page that you specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -163,7 +163,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the snapshot chains.</p>
+         * SnapshotLinks.
          */
         public Builder snapshotLinks(SnapshotLinks snapshotLinks) {
             this.snapshotLinks = snapshotLinks;
@@ -173,7 +173,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         /**
          * <p>The total number of snapshot chains.</p>
          * <blockquote>
-         * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+         * <p>When you use the MaxResults and NextToken parameters for paged query, the returned TotalCount value is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -373,15 +373,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the snapshot chain. Valid values:</p>
-             * <ul>
-             * <li>standard: standard snapshot chain.</li>
-             * <li>archive: archive snapshot chain.</li>
-             * <li>flash: instant access snapshot chain.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -389,10 +381,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp1h6jmbefj2cyqs****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -400,10 +389,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testInstanceName</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -411,17 +397,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>true: The instant access feature is enabled. The feature can be enabled only for Enterprise SSDs (ESSDs).</li>
-             * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * InstantAccess.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -429,10 +405,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the source disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -440,10 +413,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot chain.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sl-2ze0y1jwzpb1geqx****</p>
+             * SnapshotLinkId.
              */
             public Builder snapshotLinkId(String snapshotLinkId) {
                 this.snapshotLinkId = snapshotLinkId;
@@ -451,10 +421,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source disk. This parameter is retained even if the source disk is deleted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-bp1d6tsvznfghy7y****</p>
+             * SourceDiskId.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -462,10 +429,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the source disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testSourceDiskName</p>
+             * SourceDiskName.
              */
             public Builder sourceDiskName(String sourceDiskName) {
                 this.sourceDiskName = sourceDiskName;
@@ -473,10 +437,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the source disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>40</p>
+             * SourceDiskSize.
              */
             public Builder sourceDiskSize(Integer sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -484,14 +445,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source disk. Valid values:</p>
-             * <ul>
-             * <li>system: system disk</li>
-             * <li>data: data disk</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>data</p>
+             * SourceDiskType.
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -499,10 +453,13 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of snapshots.</p>
+             * <p>The total number of snapshot chains.</p>
+             * <blockquote>
+             * <p>When you use the MaxResults and NextToken parameters for paged query, the returned TotalCount value is invalid.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>9</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -510,10 +467,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of all snapshots in the snapshot chain. Unit: byte.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2097152</p>
+             * TotalSize.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

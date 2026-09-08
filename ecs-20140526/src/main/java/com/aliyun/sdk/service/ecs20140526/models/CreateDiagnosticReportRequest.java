@@ -164,10 +164,10 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * <p>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
+         * <p>The end time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-07-11T14:00:00Z</p>
+         * <p>2022-07-11T14:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -176,7 +176,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of the diagnostic metric set. If this parameter is left empty, the dms-instancedefault set is used, which is the default diagnostic metric set provided for Elastic Compute Service (ECS) instances.</p>
+         * <p>The diagnostic metric set ID. If left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</p>
          * 
          * <strong>example:</strong>
          * <p>dms-uf6i0tv2refv8wz*****</p>
@@ -188,7 +188,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of resource N.</p>
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,10 +214,10 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * <p>The start time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
+         * <p>The start time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-07-11T12:00:00Z</p>
+         * <p>2022-07-11T12:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

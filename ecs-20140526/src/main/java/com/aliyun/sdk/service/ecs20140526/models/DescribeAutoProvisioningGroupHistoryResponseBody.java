@@ -106,7 +106,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array consisting of AutoProvisioningGroupHistory data.</p>
+         * AutoProvisioningGroupHistories.
          */
         public Builder autoProvisioningGroupHistories(AutoProvisioningGroupHistories autoProvisioningGroupHistories) {
             this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
@@ -114,7 +114,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
@@ -147,7 +147,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of queried scheduling tasks in the auto provisioning group.</p>
+         * <p>The total number of scheduling tasks queried.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -583,10 +583,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution details of instance creation performed by the single scheduling task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>New ECS instances &quot;i-bp67acfmxazb4p****, i-bp67acfmxazb5p****&quot; created.</p>
+             * Detail.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -602,16 +599,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status of instance creation performed by the single scheduling task. Valid values:</p>
-             * <ul>
-             * <li>Successful: Instances are created.</li>
-             * <li>Failed: Instances failed to be created.</li>
-             * <li>InProgress: Instances are being created.</li>
-             * <li>Warning: Some instances are created.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Successful</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -771,7 +759,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array consisting of ActivityDetail data.</p>
+             * ActivityDetails.
              */
             public Builder activityDetails(ActivityDetails activityDetails) {
                 this.activityDetails = activityDetails;
@@ -779,10 +767,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution time of the last instance creation performed by the single scheduling task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-04-01T15:10:20Z</p>
+             * LastEventTime.
              */
             public Builder lastEventTime(String lastEventTime) {
                 this.lastEventTime = lastEventTime;
@@ -790,10 +775,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of executing the single scheduling task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-04-01T15:10:20Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -801,15 +783,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status of the single scheduling task. Valid values:</p>
-             * <ul>
-             * <li>prepare: The scheduling task is being executed.</li>
-             * <li>success: The scheduling task is executed.</li>
-             * <li>failed: The scheduling task failed to be executed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>success</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -817,10 +791,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduling task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>apg-task-bp67acfmxazb4p****</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

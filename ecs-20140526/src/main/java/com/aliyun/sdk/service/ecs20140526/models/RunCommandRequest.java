@@ -491,7 +491,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -503,46 +503,40 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The content of the command. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
+         * <p>The command content. The command content can be plaintext or Base64-encoded. Note the following items:</p>
          * <ul>
-         * <li><p>If you want to retain the command, make sure that the size of the Base64-encoded command content does not exceed 18 KB. If you do not want to retain the command, make sure that the size of the Base64-encoded command content does not exceed 24 KB. You can set <code>KeepCommand</code> to specify whether to retain the command.</p>
+         * <li><p>The command content cannot exceed 24 KB after Base64 encoding. You can use <code>KeepCommand</code> to specify whether to retain the command.</p>
          * </li>
-         * <li><p>If the command content is Base64-encoded, set <code>ContentEncoding</code> to Base64.</p>
+         * <li><p>If the command content is Base64-encoded, you must set <code>ContentEncoding=Base64</code>.</p>
          * </li>
-         * <li><p>If you specify <code>EnableParameter</code> to true, the custom parameter feature is enable. You can configure custom parameters based on the following rules:</p>
+         * <li><p>When <code>EnableParameter=true</code> is specified, the custom parameter feature is enabled in the command content:</p>
          * <ul>
-         * <li>Specify custom parameters in the <code>{{}}</code> format. The spaces and line feeds before and after the parameter names within <code>{{}}</code> are ignored.</li>
-         * <li>You can specify up to 20 custom parameters.</li>
-         * <li>A custom parameter name can contain letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</li>
-         * <li>Each custom parameter name cannot exceed 64 bytes in length.</li>
+         * <li>Define custom parameters by enclosing them in <code>{{}}</code>. Spaces and line breaks before and after the parameter name within <code>{{}}</code> are ignored.</li>
+         * <li>The number of custom parameters cannot exceed 20.</li>
+         * <li>Custom parameter names can contain a-zA-Z0-9-_ combinations. The acs:: prefix for specifying non-built-in environment parameters is not supported. Other characters are not supported. Parameter names are case-insensitive.</li>
+         * <li>Each custom parameter name cannot exceed 64 bytes.</li>
          * </ul>
          * </li>
-         * <li><p>You can specify built-in environment parameters as custom parameters. When you run a command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</p>
+         * <li><p>You can specify built-in environment parameters as custom parameters. When running the command, you do not need to manually assign values to these parameters because Cloud Assistant automatically replaces them with the corresponding values. The following built-in environment parameters are supported:</p>
          * <ul>
-         * <li><p><code>{{ACS::RegionId}}</code>: the region ID.</p>
-         * </li>
-         * <li><p><code>{{ACS::AccountId}}</code>: the UID of the Alibaba Cloud account.</p>
-         * </li>
-         * <li><p><code>{{ACS::InstanceId}}</code>: the instance ID. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
-         * <ul>
+         * <li><code>{{ACS::RegionId}}</code>: The region ID.</li>
+         * <li><code>{{ACS::AccountId}}</code>: The Alibaba Cloud account ID.</li>
+         * <li><code>{{ACS::InstanceId}}</code>: The instance ID. When a command is sent to multiple instances and you want to use <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent version is no earlier than:<ul>
          * <li>Linux: 2.2.3.309</li>
          * <li>Windows: 2.1.3.309</li>
          * </ul>
          * </li>
-         * <li><p><code>{{ACS::InstanceName}}</code>: the instance name. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
-         * <ul>
+         * <li><code>{{ACS::InstanceName}}</code>: The instance name. When a command is sent to multiple instances and you want to use <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent version is no earlier than:<ul>
          * <li>Linux: 2.2.3.344</li>
          * <li>Windows: 2.1.3.344</li>
          * </ul>
          * </li>
-         * <li><p><code>{{ACS::InvokeId}}</code>: the task ID. If you want to specify <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
-         * <ul>
+         * <li><code>{{ACS::InvokeId}}</code>: The invocation ID. To use <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent version is no earlier than:<ul>
          * <li>Linux: 2.2.3.309</li>
          * <li>Windows: 2.1.3.309</li>
          * </ul>
          * </li>
-         * <li><p><code>{{ACS::CommandId}}</code>: the command ID. If you want to specify <code>{{ACS::CommandId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
-         * <ul>
+         * <li><code>{{ACS::CommandId}}</code>: The command ID. When running a command by calling this operation and you want to use <code>{{ACS::CommandId}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent version is no earlier than: <ul>
          * <li>Linux: 2.2.3.309</li>
          * <li>Windows: 2.1.3.309</li>
          * </ul>
@@ -562,16 +556,16 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The container ID. Only 64-bit hexadecimal strings are supported. <code>docker://</code>, <code>containerd://</code>, or <code>cri-o://</code> can be used as the prefix of the container ID to specify the container runtime.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The container ID. Only 64-bit hexadecimal strings are supported. The <code>docker://</code>, <code>containerd://</code>, or <code>cri-o://</code> prefix can be used to explicitly specify the container runtime.</p>
+         * <p>Precautions:</p>
          * <ul>
-         * <li>If you specify this parameter, Cloud Assistant runs the command in the specified container of the instances.</li>
-         * <li>If you specify this parameter, make sure that the Cloud Assistant Agent version installed on Linux instances is 2.2.3.344 or later.</li>
-         * <li>If you specify this parameter, <code>Username</code> and <code>WorkingDir</code> do not take effect. You can run the command in the default working directory of the container by using only the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Only shell scripts can run in Linux containers. You cannot add a command whose format is similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+         * <li>If this parameter is specified, Cloud Assistant runs the script in the specified container on the instance.</li>
+         * <li>If this parameter is specified, the command can only be run on Linux instances with Cloud Assistant Agent version 2.2.3.344 or later.</li>
+         * <li>If this parameter is specified, the <code>Username</code> and <code>WorkingDir</code> parameters do not take effect. The command is run only as the default container user in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.<blockquote>
+         * <p>Only Shell scripts are supported in Linux containers. Specifying an interpreter at the beginning of the script in the format of <code>#!/usr/bin/python</code> is not supported. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
@@ -584,15 +578,15 @@ public class RunCommandRequest extends Request {
 
         /**
          * <p>The container name.</p>
-         * <p>Take note of the following items:</p>
+         * <p>Precautions:</p>
          * <ul>
-         * <li>If you specify this parameter, Cloud Assistant runs the command in the specified container of the instances.</li>
-         * <li>If you specify this parameter, make sure that the Cloud Assistant Agent version installed on Linux instances is 2.2.3.344 or later.</li>
-         * <li>If you specify this parameter, <code>Username</code> and <code>WorkingDir</code> do not take effect. You can run the command in the default working directory of the container by using only the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Only shell scripts can run in Linux containers. You cannot add a command whose format is similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+         * <li>If this parameter is specified, Cloud Assistant runs the script in the specified container on the instance.</li>
+         * <li>If this parameter is specified, the command can only be run on Linux instances with Cloud Assistant Agent version 2.2.3.344 or later.</li>
+         * <li>If this parameter is specified, the <code>Username</code> and <code>WorkingDir</code> parameters do not take effect. The command is run only as the default container user in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.<blockquote>
+         * <p>Only Shell scripts are supported in Linux containers. Specifying an interpreter at the beginning of the script in the format of <code>#!/usr/bin/python</code> is not supported. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>test-container</p>
@@ -604,12 +598,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The encoding mode of command content (<code>CommandContent</code>). The valid values are case-insensitive. Valid values:</p>
+         * <p>The encoding method of the command content (<code>CommandContent</code>). Valid values (case-insensitive):</p>
          * <ul>
-         * <li>PlainText: The command content is not encoded.</li>
-         * <li>Base64: The command content is encoded in Base64.</li>
+         * <li>PlainText: no encoding. The content is transmitted in plaintext.</li>
+         * <li>Base64: Base64 encoding.</li>
          * </ul>
-         * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
+         * <p>Default value: PlainText. Invalid values are treated as PlainText.</p>
          * 
          * <strong>example:</strong>
          * <p>Base64</p>
@@ -621,7 +615,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+         * <p>The command description. All character sets are supported. The description cannot exceed 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -633,7 +627,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include custom parameters in the command.</p>
+         * <p>Specifies whether the command contains custom parameters.</p>
          * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
@@ -646,31 +640,33 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The schedule on which to run the command. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specified time, or run at designated times based on a cron expression.</p>
+         * <p>The schedule for running the command. Three scheduling methods are supported: execution at fixed intervals (based on Rate expressions), one-time execution at a specified time, and clock-based scheduled execution (based on Cron expressions).</p>
          * <ul>
-         * <li><p>To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: <code>rate(&lt;Execution interval value&gt; &lt;Execution interval unit&gt;)</code>. For example, specify <code>rate(5m)</code> to run the command every 5 minutes. When you specify an interval, take note of the following limits:</p>
+         * <li><p>Execution at fixed intervals: Based on Rate expressions, the command is run at the specified interval. The interval can be specified in seconds (s), minutes (m), hours (h), or days (d). This method is applicable to scenarios where tasks are run at fixed intervals. Format: <code>rate(&lt;interval value&gt;&lt;interval unit&gt;)</code>. For example, to run a command every 5 minutes, use <code>rate(5m)</code>. The following limits apply to fixed-interval execution:</p>
          * <ul>
-         * <li>The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.</li>
-         * <li>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before the system runs the command again.</li>
-         * <li>A task is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.</li>
+         * <li>The interval must be no greater than 7 days and no less than 60 seconds, and must be greater than the timeout period of the scheduled task.</li>
+         * <li>The interval is based on a fixed frequency and is not related to the actual execution time of the task. For example, if a command is set to run every 5 minutes and the task takes 2 minutes to complete, the next round starts 3 minutes after the task is completed.</li>
+         * <li>The task is not run immediately upon creation. For example, if a command is set to run every 5 minutes, the command is not run immediately when the task is created. Instead, execution starts 5 minutes after the task is created.</li>
          * </ul>
          * </li>
-         * <li><p>To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the <code>at(yyyy-MM-dd HH:mm:ss &lt;Time zone&gt;)</code> format, which indicates <code>at(Year-Month-Day Hour:Minute:Second &lt;Time zone&gt;)</code>. If you do not specify a time zone, the UTC time zone is used by default. You can specify the time zone in the following forms:</p>
+         * <li><p>One-time execution at a specified time: The command is run once at the specified time zone and time point. Format: <code>at(yyyy-MM-dd HH:mm:ss &lt;time zone&gt;)</code>. If no time zone is specified, UTC is used by default. The time zone supports the following three formats:</p>
          * <ul>
-         * <li>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</li>
-         * <li>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
-         * <li>The time zone abbreviation. Only UTC is supported.</li>
+         * <li>Full time zone name: such as <code>Asia/Shanghai</code> (China/Shanghai time) or <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
+         * <li>Time zone offset from Greenwich Mean Time: such as <code>GMT+8:00</code> (East 8th time zone) or <code>GMT-7:00</code> (West 7th time zone). When using the GMT format, leading zeros are not supported in the hour field.</li>
+         * <li>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.</li>
          * </ul>
-         * <p>For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
+         * <p>For example, to run a command once at 13:15:30 on June 6, 2022 in China/Shanghai time, use: <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To run a command once at 13:15:30 on June 6, 2022 in the West 7th time zone, use: <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
          * </li>
-         * <li><p>To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the <code>&lt;Cron expression&gt; &lt;Time zone&gt;</code> format. The cron expression is in the <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of the month&gt; &lt;month&gt; &lt;day of the week&gt; &lt;year (optional)&gt;</code> format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. You can specify the time zone in the following forms:</p>
+         * <li><p>Clock-based scheduled execution (based on Cron expressions): Based on Cron expressions, the command is run according to the scheduled task settings. Format: <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of month&gt; &lt;month&gt; &lt;day of week&gt; &lt;year (optional)&gt; &lt;time zone&gt;</code>, i.e., <code>&lt;Cron expression&gt; &lt;time zone&gt;</code>. The scheduled task execution time is calculated based on the Cron expression in the specified time zone. If no time zone is specified, the system time zone of the instance running the scheduled task is used by default. For more information about Cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. The time zone supports the following three formats:</p>
          * <ul>
-         * <li>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</li>
-         * <li>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
-         * <li>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
+         * <li>Full time zone name: such as <code>Asia/Shanghai</code> (China/Shanghai time) or <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
+         * <li>Time zone offset from Greenwich Mean Time: such as <code>GMT+8:00</code> (East 8th time zone) or <code>GMT-7:00</code> (West 7th time zone). When using the GMT format, leading zeros are not supported in the hour field.</li>
+         * <li>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.
+         * For example, to run a command once every day at 10:15 AM in China/Shanghai time in 2022, use <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To run a command every 30 minutes from 10:00 AM to 11:30 AM every day in the East 8th time zone in 2022, use <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To run a command every 5 minutes from 2:00 PM to 2:55 PM every day in October every two years starting from 2022 in UTC, use <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Note</strong> The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.</p>
+         * <blockquote>
+         * <p>The minimum interval must be greater than or equal to the timeout period of the scheduled task and no less than 10 seconds.</p>
+         * </blockquote>
          * </li>
          * </ul>
          */
@@ -681,9 +677,9 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances on which to create and run the command. Specify at least one instance ID. You can specify up to 100 instance IDs.</p>
-         * <p>If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.</p>
-         * <p>You can request a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</p>
+         * <p>The instance ID array of ECS instances. Array length: 1 to 100.</p>
+         * <p>If any of the specified instances does not meet the execution conditions, you must reselect the instances.</p>
+         * <p>You can also request a quota increase in Quota Center (quota name: Maximum number of instances supported for command execute).</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp185dy2o3o6neg****</p>
@@ -695,10 +691,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the command after the command is run. Valid values:</p>
+         * <p>Specifies whether to retain the command after execution. Valid values:</p>
          * <ul>
-         * <li>true: retains the command. Then, you can call the InvokeCommand operation to rerun the command. The retained command counts against the quota of Cloud Assistant commands.</li>
-         * <li>false: does not retain the command. The command is automatically deleted after it is run and does not count against the quota of Cloud Assistant commands.</li>
+         * <li>true: retains the command. The command can be run again by calling InvokeCommand. This counts toward the Cloud Assistant command retention quota.</li>
+         * <li>false: does not retain the command. The command is automatically deleted after execution and does not count toward the Cloud Assistant command retention quota.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -712,7 +708,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+         * <p>The bootstrap program for script execution. The value cannot exceed 1 KB in length.</p>
          * 
          * <strong>example:</strong>
          * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
@@ -724,7 +720,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+         * <p>The command name. All character sets are supported. The name cannot exceed 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -736,7 +732,13 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * OssOutputDelivery.
+         * <p>The OSS delivery configuration for command execution output.</p>
+         * <ul>
+         * <li>Format: oss://${BucketName}/${Prefix}, where ${BucketName} is the name of the destination OSS bucket and ${Prefix} is the directory prefix for delivery.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBucket/testPrefix</p>
          */
         public Builder ossOutputDelivery(String ossOutputDelivery) {
             this.putQueryParameter("OssOutputDelivery", ossOutputDelivery);
@@ -763,15 +765,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The key-value pairs of custom parameters to pass in when the command can include custom parameters. For example, the command content is <code>echo {{name}}</code>. You can use <code>Parameters</code> to pass in the <code>{&quot;name&quot;:&quot;Jack&quot;}</code> key-value pair. The <code>name</code> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <code>echo Jack</code> command is run.</p>
-         * <p>You can specify 0 to 10 custom parameters. Take note of the following items:</p>
+         * <p>The key-value pairs of custom parameters to pass in when running a command that contains custom parameters. For example, if the command content is <code>echo {{name}}</code>, you can pass in the key-value pair <code>{&quot;name&quot;:&quot;Jack&quot;}</code> through the Parameter parameter. The custom parameter automatically replaces the variable value <code>name</code>, and the actual command executed is <code>echo Jack</code>.</p>
+         * <p>The number of custom parameters ranges from 0 to 10. Note the following items:</p>
          * <ul>
-         * <li>The key of a custom parameter can be up to 64 characters in length and cannot be an empty string.</li>
-         * <li>The value of a custom parameter can be an empty string.</li>
-         * <li>If you want to retain a command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64 encoding does not exceed 24 KB in size. You can set <code>KeepCommand</code> to specify whether to retain the command.</li>
-         * <li>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</li>
+         * <li>Keys cannot be empty strings and can contain up to 64 characters.</li>
+         * <li>Values can be empty strings.</li>
+         * <li>After custom parameters and the original command content are Base64-encoded, the total size cannot exceed 24 KB. You can use <code>KeepCommand</code> to specify whether to retain the command.</li>
+         * <li>The set of custom parameter names must be a subset of the parameter set defined when the command was created. For parameters that are not passed in, you can use empty strings as substitutes.</li>
          * </ul>
-         * <p>This parameter is left empty by default, which indicates that the custom parameter feature is disabled.</p>
+         * <p>Default value: empty, which disables custom parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</p>
@@ -784,7 +786,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -797,23 +799,23 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>Specifies how to run the command. Valid values:</p>
+         * <p>The execution mode of the command. Valid values:</p>
          * <ul>
          * <li>Once: immediately runs the command.</li>
-         * <li>Period: runs the command based on a schedule. If you set this parameter to <code>Period</code>, you must specify <code>Frequency</code>.</li>
-         * <li>NextRebootOnly: runs the command the next time the instances start.</li>
-         * <li>EveryReboot: runs the command every time the instances start.</li>
-         * <li>DryRun: performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</li>
+         * <li>Period: runs the command on a schedule. When this parameter is set to <code>Period</code>, you must also specify the <code>Frequency</code> parameter.</li>
+         * <li>NextRebootOnly: automatically runs the command the next time the instance starts.</li>
+         * <li>EveryReboot: automatically runs the command every time the instance starts.</li>
+         * <li>DryRun: performs a dry run of the request without actually running the command. Checks include request parameters, instance execution environment, and Cloud Assistant Agent running status.</li>
          * </ul>
-         * <p>Default value:</p>
+         * <p>Default values:</p>
          * <ul>
-         * <li>If you do not specify <code>Frequency</code>, the default value is <code>Once</code>.</li>
-         * <li>If you specify <code>Frequency</code>, RepeatMode is set to <code>Period</code> regardless of whether a value is already specified for RepeatMode.</li>
+         * <li>When the <code>Frequency</code> parameter is not specified, the default value is <code>Once</code>.</li>
+         * <li>When the <code>Frequency</code> parameter is specified, the command is processed as <code>Period</code> regardless of whether this parameter is set.</li>
          * </ul>
-         * <p>Take note of the following items:</p>
+         * <p>Precautions:</p>
          * <ul>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</li>
-         * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <code>IncludeHistory</code> set to true to query the historical scheduled executions.</li>
+         * <li>You can call <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> to stop a pending or scheduled command.</li>
+         * <li>When this parameter is set to <code>Period</code> or <code>EveryReboot</code>, you can call <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> and specify <code>IncludeHistory=true</code> to view the execution history of the scheduled command.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -826,10 +828,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:</p>
+         * <p>The resource group ID for the command execution. When this parameter is specified:</p>
          * <ul>
-         * <li>The instances specified by InstanceId.N must belong to the specified resource group.</li>
-         * <li>After the command is run, you can set this parameter to call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation to query the execution results in the specified resource group.</li>
+         * <li><p>If the ECS instance corresponding to InstanceId belongs to a non-default resource group, the ECS instance must belong to this resource group.</p>
+         * </li>
+         * <li><p>You can filter the corresponding command execution results by specifying this parameter (by calling <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a>).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -860,7 +864,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The tags of the instance. You can leave this parameter empty or specify up to 20 tags. If you do not specify InstanceId, the command is run on instances that have the specified tags.</p>
+         * <p>The tags used to filter instances. Array length: 0 to 20. You can run commands in batches on instances with the same tags without specifying InstanceId.</p>
          */
         public Builder resourceTag(java.util.List<ResourceTag> resourceTag) {
             this.putQueryParameter("ResourceTag", resourceTag);
@@ -869,7 +873,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the command task. You can leave this parameter empty or specify up to 20 tags.</p>
+         * <p>The tag pairs. Array length: 0 to 20.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -878,10 +882,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:</p>
+         * <p>The mode for stopping the task (manual stop or timeout interruption). Valid values:</p>
          * <ul>
-         * <li>Process: stops the process of the command.</li>
-         * <li>ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.</li>
+         * <li>Process: stops the current script process.</li>
+         * <li>ProcessTree: stops the current process tree (the collection of the script process and all child processes it created).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -894,9 +898,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p> This parameter is no longer used and does not take effect.</p>
-         * </blockquote>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Passing in this parameter has no effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -908,8 +910,8 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the command execution. Unit: seconds.</p>
-         * <p>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When an execution times out, the command process is forcefully terminated.</p>
+         * <p>The timeout period for command execution. Unit: seconds.</p>
+         * <p>A timeout occurs when a command cannot be run because of process issues, missing modules, or missing Cloud Assistant Agent. When a timeout occurs, the command process is forcefully terminated.</p>
          * <p>Default value: 60.</p>
          * 
          * <strong>example:</strong>
@@ -922,11 +924,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The type of the command. Valid values:</p>
+         * <p>The command type. Valid values:</p>
          * <ul>
-         * <li>RunBatScript: batch command, applicable to Windows instances.</li>
-         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances.</li>
-         * <li>RunShellScript: shell command, applicable to Linux instances.</li>
+         * <li>RunBatScript: Bat commands for Windows instances.</li>
+         * <li>RunPowerShellScript: PowerShell commands for Windows instances.</li>
+         * <li>RunShellScript: Shell commands for Linux instances.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -940,12 +942,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The username to use to run the command on the ECS instances. The username cannot exceed 255 characters in length.</p>
+         * <p>The username for running the command on the ECS instance. The value cannot exceed 255 characters in length.</p>
          * <ul>
-         * <li>For Linux instances, the root username is used by default.</li>
-         * <li>For Windows instances, the System username is used by default.</li>
+         * <li>For Linux ECS instances, commands are run as the root user by default.</li>
+         * <li>For Windows ECS instances, commands are run as the System user by default.</li>
          * </ul>
-         * <p>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</p>
+         * <p>You can also specify another existing user on the instance to run the command. Running Cloud Assistant commands as a regular user is more secure. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Configure a regular user to run Cloud Assistant commands</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -957,10 +959,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.</p>
-         * <p>If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and <code>Username</code>. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Manage encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</p>
+         * <p>The name of the password for the user who executes the command on a Windows instance. The value cannot exceed 255 characters in length.</p>
+         * <p>When you want to execute a command as a non-default user (System) on a Windows instance, you must specify both <code>Username</code> and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management, and pass in only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Settings for a regular user to execute Cloud Assistant commands</a>.</p>
          * <blockquote>
-         * <p> If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.</p>
+         * <p>This parameter is not required when you execute commands as the root user on a Linux instance or the System user on a Windows instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -973,11 +975,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The working directory of the command on the instance. The value can be up to 200 characters in length.</p>
+         * <p>The working directory of the command on the ECS instance. The value cannot exceed 200 characters in length.</p>
          * <p>Default values:</p>
          * <ul>
-         * <li>For Linux instances, the default value is <code>/root</code>, which is the home directory of the administrator (the root user).</li>
-         * <li>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <code>C:\Windows\System32</code>.</li>
+         * <li>For Linux instances, the default directory is the home directory of the root user, which is <code>/root</code>.</li>
+         * <li>For Windows instances, the default directory is the directory where the Cloud Assistant Agent process is located, such as <code>C:\\Windows\\System32</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1049,13 +1051,17 @@ public class RunCommandRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the instance.</p>
-             * <p>Take note of the following items:</p>
+             * <p>The tag key used to filter instances.</p>
+             * <p>Precautions:</p>
              * <ul>
-             * <li>This parameter and InstanceId.N are mutually exclusive.</li>
-             * <li>The tag key cannot be an empty string.</li>
-             * <li>The number of instances that have the specified tags cannot exceed 100. Otherwise, we recommend that you use batch tags, such as batch: b1, to group the instances into batches of up to 100 instances.</li>
-             * <li>The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+             * <li><p>This parameter conflicts with the InstanceId parameter. They cannot be specified at the same time.</p>
+             * </li>
+             * <li><p>If this value is specified, it cannot be an empty string.</p>
+             * </li>
+             * <li><p>The number of instances under the tag cannot exceed the quantity limit of InstanceId.N. If the number of instances exceeds the limit, control the number of instances by adding batch tags, such as batch: b1.</p>
+             * </li>
+             * <li><p>The key can be up to 64 characters in length and cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1067,11 +1073,11 @@ public class RunCommandRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the instance.</p>
-             * <p>Take note of the following items:</p>
+             * <p>The tag value used to filter instances.</p>
+             * <p>Precautions:</p>
              * <ul>
-             * <li>The tag value can be an empty string.</li>
-             * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://.</li>
+             * <li>The value can be an empty string.</li>
+             * <li>The value can be up to 128 characters in length and cannot contain http:// or https://.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1142,9 +1148,9 @@ public class RunCommandRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the command task. The tag key cannot be an empty string.</p>
-             * <p>If a tag is specified to query resources, up to 1,000 resources that have this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags can be displayed in the response. To query more than 1,000 resources that have the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key of the command execute. If this value is specified, it cannot be an empty string.</p>
+             * <p>When you use a single tag to filter resources, the resource count under that tag cannot exceed 1,000. When you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>The key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1155,8 +1161,8 @@ public class RunCommandRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the command task. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the command execution. The value can be an empty string.</p>
+             * <p>The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

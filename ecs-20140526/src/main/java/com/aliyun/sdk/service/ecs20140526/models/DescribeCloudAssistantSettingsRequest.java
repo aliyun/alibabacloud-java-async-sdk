@@ -203,7 +203,7 @@ public class DescribeCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * <p>The Cloud Assistant configurations.</p>
+         * <p>The list of service configurations to query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder settingType(java.util.List<String> settingType) {

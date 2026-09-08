@@ -223,10 +223,12 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of launch templates.</p>
+         * <p>The IDs of one or more launch templates.</p>
          * <ul>
-         * <li>You can query up to 100 launch templates.</li>
-         * <li>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</li>
+         * <li><p>You can query up to 100 launch templates at a time.</p>
+         * </li>
+         * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,10 +241,12 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The names of launch templates.</p>
+         * <p>The names of one or more launch templates.</p>
          * <ul>
-         * <li>You can query up to 100 launch templates.</li>
-         * <li>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</li>
+         * <li><p>You can query up to 100 launch templates at a time.</p>
+         * </li>
+         * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +277,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Page starts from page 1.</p>
+         * <p>The page number of the launch template list. Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +290,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +303,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,9 +334,9 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+         * <p>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
          * <blockquote>
-         * <p> The default resource group is not supported.</p>
+         * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -345,9 +349,9 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the launch template.</p>
+         * <p>The list of tag key-value pairs of the launch template itself.</p>
          * <blockquote>
-         * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
+         * <p>Currently, you can create and query tags of launch templates only by calling API operations. You cannot create or view tags in the console.</p>
          * </blockquote>
          */
         public Builder templateTag(java.util.List<TemplateTag> templateTag) {
@@ -416,8 +420,8 @@ public class DescribeLaunchTemplatesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the launch template. Valid values of N: 1 to 20.</p>
-             * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key of the launch template. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -428,7 +432,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the launch template. Valid values of N: 1 to 20.</p>
+             * <p>The tag value of the launch template. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

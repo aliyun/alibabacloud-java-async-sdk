@@ -174,7 +174,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</p>
+         * <p>Specifies whether to unbind all tags from the resources. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -209,7 +209,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the resources. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+         * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,23 +255,23 @@ public class UntagResourcesRequest extends Request {
         /**
          * <p>The type of the resource. Valid values:</p>
          * <ul>
-         * <li>instance: ECS instance</li>
-         * <li>disk: disk</li>
-         * <li>snapshot: snapshot</li>
-         * <li>image: image</li>
-         * <li>securitygroup: security group</li>
-         * <li>volume: storage volume</li>
-         * <li>eni: elastic network interface (ENI)</li>
-         * <li>ddh: dedicated host</li>
-         * <li>ddhcluster: dedicated host cluster</li>
-         * <li>keypair: SSH key pair</li>
-         * <li>launchtemplate: launch template</li>
-         * <li>reservedinstance: reserved instance</li>
-         * <li>snapshotpolicy: automatic snapshot policy</li>
-         * <li>elasticityassurance: elasticity assurance</li>
-         * <li>capacityreservation: capacity reservation</li>
-         * <li>command: Cloud Assistant command</li>
-         * <li>invocation: Cloud Assistant command execution result</li>
+         * <li>instance: ECS instance.</li>
+         * <li>disk: cloud disk.</li>
+         * <li>snapshot: snapshot.</li>
+         * <li>image: image.</li>
+         * <li>securitygroup: security group.</li>
+         * <li>volume: storage volume.</li>
+         * <li>eni: Elastic Network Interface (ENI).</li>
+         * <li>ddh: dedicated host.</li>
+         * <li>ddhcluster: dedicated host cluster.</li>
+         * <li>keypair: SSH key pair.</li>
+         * <li>launchtemplate: launch template.</li>
+         * <li>reservedinstance: reserved instance.</li>
+         * <li>snapshotpolicy: automatic snapshot policy.</li>
+         * <li>elasticityassurance: elasticity assurance.</li>
+         * <li>capacityreservation: capacity reservation.</li>
+         * <li>command: Cloud Assistant command.</li>
+         * <li>invocation: Cloud Assistant command execution result.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -285,7 +285,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag keys. Valid values of N: 1 to 20.</p>
+         * <p>The list of tag keys of the resources. You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

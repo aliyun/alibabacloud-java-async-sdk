@@ -250,13 +250,13 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable performance burst for the disk if the disk supports performance burst. Valid values:</p>
+         * <p>Specifies whether to enable the performance burst feature for disks that support burst. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <blockquote>
-         * <p> An error is reported if you specify this parameter for a disk that does not support performance burst.</p>
+         * <p>An error is returned if you specify any value for a disk that does not support the burst feature.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -269,12 +269,14 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. Valid values:</p>
+         * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is deleted. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
-         * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+         * <p>Default value: null, which indicates that the current value remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -286,14 +288,16 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the disk together with the associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
-         * <p>An error is returned if you set <code>DeleteWithInstance</code> to <code>false</code> in one of the following cases:</p>
+         * <p>Specifies whether to release the disk when the associated instance is released. Default value: null, which indicates that the current value remains unchanged.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Disks that have the multi-attach feature enabled do not support this parameter.</p>
+         * <p>An error is returned if you set <code>DeleteWithInstance</code> to <code>false</code> in the following cases: </p>
          * <ul>
-         * <li>The disk is a local disk.</li>
-         * <li>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</li>
+         * <li>The category of the disk is local disk (ephemeral).  </li>
+         * <li>The category of the disk is basic disk (cloud) and the disk is not detachable (Portable=false).</li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Warning</strong> If you set DeleteWithInstance to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance attribute of the disk is ignored and the disk is released together with the instance. If &quot;LockReason&quot; : &quot;security&quot; is displayed in the response when you query information about an instance, the instance is locked for security reasons.</p>
+         * <blockquote>
+         * <p>Warning: If you set DeleteWithInstance to false and the ECS instance to which the disk is attached is security-locked with &quot;LockReason&quot; : &quot;security&quot; in OperationLocks, the DeleteWithInstance setting is ignored and the disk is released together with the instance.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -305,7 +309,7 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the disk. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestDescription</p>
@@ -319,7 +323,7 @@ public class ModifyDiskAttributeRequest extends Request {
         /**
          * <p>The ID of the disk whose attributes you want to modify.</p>
          * <blockquote>
-         * <p> You can specify <code>DiskId</code> or <code>DiskIds.N</code>, but not both.</p>
+         * <p>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -334,7 +338,7 @@ public class ModifyDiskAttributeRequest extends Request {
         /**
          * <p>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</p>
          * <blockquote>
-         * <p> You can specify <code>DiskId</code> or <code>DiskIds.N</code>, but not both.</p>
+         * <p>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -347,7 +351,7 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode, including Chinese characters. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>MyDiskName</p>
@@ -359,14 +363,14 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic snapshot policy feature. Valid values:</p>
+         * <p>Specifies whether to enable the automatic snapshot policy for the disk. Valid values:</p>
          * <ul>
-         * <li>true: enables the automatic snapshot policy feature for the cloud disk.</li>
-         * <li>false: disables the automatic snapshot policy feature for the cloud disk.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+         * <p>Default value: null, which indicates that the current value remains unchanged.</p>
          * <blockquote>
-         * <p> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. The automatic snapshot policy feature is enabled by default for disks after they are created. You only need to associate an automatic snapshot policy with the disk.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -397,7 +401,7 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -67,7 +67,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the delete operation.</p>
+         * OperationProgressSet.
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -75,7 +75,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6EDE885A-FDC1-4FAE-BC44-6EACAEA6CC6E</p>
@@ -144,10 +144,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SnapshotId</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -155,10 +152,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-j6c9lpuyxo2uxxnx****</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -305,11 +299,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code. This parameter is empty when the operation is successful.</p>
-             * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -317,11 +307,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is empty when the operation is successful.</p>
-             * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testErrorMsg</p>
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -329,10 +315,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * OperationStatus.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -340,7 +323,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the resources.</p>
+             * RelatedItemSet.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;

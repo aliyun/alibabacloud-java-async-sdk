@@ -210,7 +210,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The cloud disk ID.</p>
          * <ul>
          * <li>You can specify only one of AutoSnapshotPolicyId and DiskId.</li>
          * </ul>
@@ -225,11 +225,11 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * <p>The maximum number of entries per page for paging queries. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.</li>
-         * <li>If you set a value greater than 100, the default value is 100.</li>
+         * <li>When no value is set or the value is set to less than 10, the default value is 10.</li>
+         * <li>When the value is set to greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -272,7 +272,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ecs-2014-05-26-describeregions?spm=a2c4g.11186623.0.i11">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</p>
+         * <p>The region ID of the automatic snapshot policy. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

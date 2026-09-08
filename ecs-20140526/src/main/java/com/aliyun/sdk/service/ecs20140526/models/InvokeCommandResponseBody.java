@@ -67,7 +67,7 @@ public class InvokeCommandResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the command task.</p>
+         * <p>The command execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-7d2a745b412b4601b2d47f6a768d****</p>

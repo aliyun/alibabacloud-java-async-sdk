@@ -154,7 +154,7 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dedicated host. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the dedicated host resides.</p>
+         * <p>The region ID of the dedicated host.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

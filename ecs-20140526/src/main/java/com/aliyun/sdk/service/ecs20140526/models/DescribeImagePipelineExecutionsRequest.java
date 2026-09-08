@@ -224,7 +224,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>null</p>
+         * <p>The ID of the image build task.</p>
          * 
          * <strong>example:</strong>
          * <p>exec-5fb8facb8ed7427c****</p>
@@ -236,7 +236,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+         * <p>The ID of the image template.</p>
          * 
          * <strong>example:</strong>
          * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -248,24 +248,8 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
-         * <ul>
-         * <li>PREPARING: Resources, such as the intermediate instance, are being created.</li>
-         * <li>REPAIRING: The source image is being repaired.</li>
-         * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
-         * <li>TESTING: The user-defined test commands are being run.</li>
-         * <li>DISTRIBUTING: The created image is being copied and shared.</li>
-         * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
-         * <li>SUCCESS: The image creation task is completed.</li>
-         * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
-         * <li>FAILED: The image creation task fails.</li>
-         * <li>TEST_FAILED: The image is created, but the test fails.</li>
-         * <li>CANCELLING: The image creation task is being canceled.</li>
-         * <li>CANCELLED: The image creation task is canceled.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</p>
-         * </blockquote>
+         * <p>The maximum number of entries per page for paging. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -277,7 +261,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image creation task.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous call. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -307,7 +291,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,7 +322,24 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image template.</p>
+         * <p>The status of the image build task. You can specify multiple values at the same time. Separate multiple values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+         * <ul>
+         * <li>PREPARING: The task is being prepared. Resources such as the temporary intermediate instance are being created.</li>
+         * <li>REPAIRING: The task is being repaired. The source image is being repaired.</li>
+         * <li>BUILDING: The task is being built. Custom commands are being run and the image is being created.</li>
+         * <li>TESTING: The task is being tested. Custom test commands are being run.</li>
+         * <li>DISTRIBUTING: The task is being distributed. Image copying and sharing are being performed.</li>
+         * <li>RELEASING: Resources are being reclaimed. Temporary resources generated during the build process are being released.</li>
+         * <li>SUCCESS: The task succeeded.</li>
+         * <li>PARTITION_SUCCESS: The task partially succeeded. The image was built, but exceptions may have occurred during distribution or resource cleanup.</li>
+         * <li>FAILED: The task failed.</li>
+         * <li>TEST_FAILED: The test failed. The image was created, but the test failed.</li>
+         * <li>CANCELLING: The task is being canceled.</li>
+         * <li>CANCELLED: The task was canceled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is empty, image build tasks in all states are queried.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>BUILDING</p>
@@ -350,7 +351,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <p>The tags of the image creation task.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -418,7 +419,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+             * <p>The key of the tag. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -429,7 +430,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * <p>null</p>
+             * <p>The value of the tag. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

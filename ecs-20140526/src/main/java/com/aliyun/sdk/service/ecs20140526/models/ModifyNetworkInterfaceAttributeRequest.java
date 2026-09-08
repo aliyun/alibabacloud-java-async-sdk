@@ -322,7 +322,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The connection tracking configuration of the ENI.</p>
+         * <p>The network connectivity tracking configuration.</p>
+         * <p>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -331,10 +332,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
+         * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The ENI is not retained.</p>
+         * </li>
+         * <li><p>false: The ENI is retained.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,8 +350,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
-         * <p>This parameter is left empty by default.</p>
+         * <p>The description of the network interface controller (NIC). The description must be 2 to 255 characters in length and cannot start with http:// or https://.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -378,7 +381,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,8 +394,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>This parameter is left empty by default.</p>
+         * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters under the categorization of letter in Unicode, including English letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>eniTestName</p>
@@ -404,7 +407,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The communication parameters of the ENI.</p>
+         * <p>The communication parameter of the network interface controller (NIC).</p>
          */
         public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
             this.putQueryParameter("NetworkInterfaceTrafficConfig", networkInterfaceTrafficConfig);
@@ -431,10 +434,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
+         * <p>The number of queues for the ENI. Valid values: 1 to 2048.</p>
          * <ul>
-         * <li>You can change the number of queues supported by an ENI only when the ENI is in the <code>Available</code> state or the ENI is attached (<code>InUse</code>) to an instance that is in the <code>Stopped</code> state.</li>
-         * <li>The number of queues supported by the ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on an instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
+         * <li><p>You can modify the queue number of an ENI that is in the Available state, or an ENI that is in the InUse state but attached to an instance in the Stopped state.</p>
+         * </li>
+         * <li><p>The queue number cannot exceed the maximum number of queues per ENI allowed by the instance type. The total number of queues across all ENIs of an instance cannot exceed the total queue quota allowed by the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the MaximumQueueNumberPerEni and TotalEniQueueQuantity fields for the instance type.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +452,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -478,11 +483,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The receive (Rx) queue depth of the ENI.</p>
+         * <p>The inbound queue depth of the network interface controller (NIC).</p>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, submit a ticket to request access.</p>
+         * </blockquote>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-         * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+         * <li>This parameter applies only to instances of the seventh generation or later.</li>
+         * <li>This parameter currently applies only to Linux images.</li>
+         * <li>A larger inbound queue depth can improve inbound throughput and reduce packet loss, but consumes more memory.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,10 +504,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and removed from the original security groups.</p>
+         * <p>The list of security group IDs. The secondary network interface controller (NIC) joins the specified security groups and is removed from the existing security groups.</p>
          * <ul>
-         * <li>The valid values of N vary based on the maximum number of security groups to which an ENI can be added. For more information, see the <a href="~~25412#SecurityGroupQuota~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
-         * <li>The new security groups take effect after a short delay.</li>
+         * <li><p>Valid values of N depend on the maximum number of security groups to which a network interface controller (NIC) can belong. For more information, see <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</p>
+         * </li>
+         * <li><p>The modification takes effect shortly, but a slight delay may occur.</p>
+         * </li>
          * </ul>
          */
         public Builder securityGroupId(java.util.List<String> securityGroupId) {
@@ -508,14 +519,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>Source and destination IP address check We recommend that you enable the feature to improve network security. Valid value:</p>
+         * <p>Specifies whether to enable source/destination checking. We recommend that you enable this feature to improve network security. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: enabled.</p>
+         * </li>
+         * <li><p>false: disabled.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This feature is available only in some regions. Before you use this method, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</p>
+         * <p>Only specific regions support this feature. Before using this feature, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source/destination checking</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -528,11 +541,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The Tx queue depth of the ENI.</p>
+         * <p>The outbound queue depth of the network interface controller (NIC).</p>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, submit a ticket to request access.</p>
+         * </blockquote>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-         * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+         * <li>This parameter applies only to instances of the seventh generation or later.</li>
+         * <li>This parameter currently applies only to Linux images.</li>
+         * <li>A larger outbound queue depth can improve outbound throughput and reduce packet loss, but consumes more memory.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -617,10 +634,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+             * <p>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: integers from 3 to 15.</p>
              * <p>Default value: 3.</p>
              * <blockquote>
-             * <p> If the associated ECS instance is used together with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
+             * <p>If your ECS instance is used with NLB or CLB, the default timeout period for connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -632,7 +649,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
+             * <p>The timeout period for established TCP connections. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
              * <p>Default value: 910.</p>
              * 
              * <strong>example:</strong>
@@ -644,10 +661,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
+             * <p>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</p>
              * <p>Default value: 30.</p>
              * <blockquote>
-             * <p> If the associated ECS instance is used together with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</p>
+             * <p>If your ECS instance is used with NLB or CLB, the default value is 100 seconds.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -766,7 +783,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -903,17 +920,17 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The communication mode of the ENI. Valid values:</p>
+             * <p>The communication pattern of the network interface controller (NIC). Valid values:</p>
              * <ul>
-             * <li>Standard: uses the TCP communication mode.</li>
-             * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+             * <li>Standard: uses the TCP communication pattern.</li>
+             * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</li>
              * </ul>
-             * <p>When the ENI is in the InUse state, take note of the following items:</p>
+             * <p>When the network interface controller (NIC) is in the attached state, take note of the following items:</p>
              * <ul>
-             * <li>The total number of ERIs attached to the instance cannot exceed the ERI quota for the instance type. To query the ERI quota for an instance type, call the DescribeInstanceTypes operation and check the EriQuantity value in the response.</li>
+             * <li>The total number of RDMA network interface controllers (NICs) of an instance cannot exceed the RDMA network interface controller (NIC) quota allowed by the instance type. You can call DescribeInstanceTypes to query the EriQuantity field for the RDMA network interface controller (NIC) quota.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -925,13 +942,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of queues supported by the ENI. When the ENI is in the InUse state, take note of the following items:</p>
+             * <p>The number of queues for the network interface controller (NIC).
+             * When the network interface controller (NIC) is in the attached state, take note of the following items:</p>
              * <ul>
-             * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI for the instance type.</li>
-             * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, call the DescribeInstanceTypes operation and check the MaximumQueueNumberPerEnig and TotalEniQueueQuantity values in the response.</li>
+             * <li>The value cannot exceed the maximum number of queues per network interface controller (NIC) allowed by the instance type.</li>
+             * <li>The total number of queues across all network interface controllers (NICs) of an instance cannot exceed the total queue quota allowed by the instance type. You can call DescribeInstanceTypes to query the MaximumQueueNumberPerEni and TotalEniQueueQuantity fields.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -943,12 +961,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of queues supported by the ERI. When the ERI is in the InUse state, take note of the following items:</p>
+             * <p>The number of RDMA queues for the network interface controller (NIC).
+             * When the network interface controller (NIC) is in the attached state, take note of the following items:</p>
              * <ul>
-             * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ERI for the instance type. To query the maximum number of queues allowed per ERI for an instance type, call the DescribeInstanceTypes operation and check the QueuePairNumber value in the response.</li>
+             * <li>The value cannot exceed the maximum number of queues per RDMA network interface controller (NIC) allowed by the instance type. You can call DescribeInstanceTypes to query the QueuePairNumber field for the maximum number of queues per RDMA network interface controller (NIC).</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -960,15 +979,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The receive (Rx) queue depth of the ENI.</p>
+             * <p>The inbound queue depth of the network interface controller (NIC).</p>
+             * <blockquote>
+             * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, submit a ticket to request access.</p>
+             * </blockquote>
              * <p>Take note of the following items:</p>
              * <ul>
-             * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-             * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+             * <li>This parameter applies only to instances of the seventh generation or later.</li>
+             * <li>This parameter currently applies only to Linux images.</li>
+             * <li>A larger inbound queue depth can improve inbound throughput and reduce packet loss, but consumes more memory.</li>
              * </ul>
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>8192</p>
@@ -979,15 +999,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <p>The Tx queue depth of the ENI.</p>
+             * <p>The outbound queue depth of the network interface controller (NIC).</p>
+             * <blockquote>
+             * <p>This parameter is in invitational preview and is not publicly available. To use this parameter, submit a ticket to request access.</p>
+             * </blockquote>
              * <p>Take note of the following items:</p>
              * <ul>
-             * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-             * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+             * <li>This parameter applies only to instances of the seventh generation or later.</li>
+             * <li>This parameter currently applies only to Linux images.</li>
+             * <li>A larger outbound queue depth can improve outbound throughput and reduce packet loss, but consumes more memory.</li>
              * </ul>
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>8192</p>

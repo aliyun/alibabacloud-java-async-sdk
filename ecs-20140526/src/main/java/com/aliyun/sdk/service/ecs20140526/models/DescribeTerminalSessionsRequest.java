@@ -207,8 +207,8 @@ public class DescribeTerminalSessionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class DescribeTerminalSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>

@@ -266,14 +266,16 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li>true: enables automatic payment. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</li>
-         * <li>false: disables automatic payment. An order is generated but no payment is made.</li>
+         * <li><p>true: Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, abnormal orders are generated, and you can only cancel the orders.</p>
+         * </li>
+         * <li><p>false: An order is generated but payment is not made.</p>
+         * </li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
-         * <p> If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+         * <p>If your payment method has an insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ECS console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -286,7 +288,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -298,10 +300,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p>false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -315,10 +319,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to change the billing method of all data disks on the instance from pay-as-you-go to subscription. Valid values:</p>
+         * <p>Specifies whether to convert all pay-as-you-go data disks attached to the instance to subscription data disks.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Converts all pay-as-you-go data disks to subscription data disks.</li>
+         * <li>false: Does not convert pay-as-you-go data disks to subscription data disks.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -332,10 +336,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The new billing method of the instance. Valid values:</p>
+         * <p>The target billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription</li>
-         * <li>PostPaid: pay-as-you-go</li>
+         * <li><p>PrePaid: transforms the billing method from pay-as-you-go to subscription.</p>
+         * </li>
+         * <li><p>PostPaid: transforms the billing method from subscription to pay-as-you-go.</p>
+         * </li>
          * </ul>
          * <p>Default value: PrePaid.</p>
          * 
@@ -349,7 +355,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).</p>
+         * <p>The IDs of the instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate the IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,10 +368,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go. Valid values:</p>
+         * <p>Specifies whether to return the fee details of the order when the billing method is transformed from subscription to pay-as-you-go. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Returns the fee details.</li>
+         * <li>false: Does not return the fee details.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -397,8 +403,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:</p>
-         * <p>Valid values when <code>PeriodUnit</code> is set to Month: <code>1, 2, 3, 4, 5, 6, 7, 8, 9, and 12</code>.</p>
+         * <p>The subscription renewal period. If the ECS instance is hosted on a dedicated host, the value cannot exceed the subscription period of the dedicated host. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>If PeriodUnit is set to Week, valid values of Period: 1, 2, 3, and 4.</li>
+         * <li>If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -410,8 +421,14 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal duration specified by <code>Period</code>. Valid values:</p>
-         * <p>Month</p>
+         * <p>The unit of the renewal period, which is the unit of the Period parameter. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>Week</li>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;Month</p>
          * <p>Default value: Month.</p>
          * 
          * <strong>example:</strong>
@@ -424,7 +441,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
