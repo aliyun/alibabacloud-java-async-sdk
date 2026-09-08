@@ -73,7 +73,10 @@ public class DeleteDataAgentWorkspaceRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -82,7 +85,10 @@ public class DeleteDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

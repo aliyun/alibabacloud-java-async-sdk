@@ -115,7 +115,10 @@ public class StartDataAgentAccuracyTestTaskRequest extends Request {
         } 
 
         /**
-         * AccuracyTestInsId.
+         * <p>The accuracy test instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
          */
         public Builder accuracyTestInsId(String accuracyTestInsId) {
             this.putQueryParameter("AccuracyTestInsId", accuracyTestInsId);
@@ -124,7 +127,10 @@ public class StartDataAgentAccuracyTestTaskRequest extends Request {
         }
 
         /**
-         * CsvFile.
+         * <p>The accuracy test sample file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>包含问题、答案[、SQL]的文件</p>
          */
         public Builder csvFile(String csvFile) {
             this.putQueryParameter("CsvFile", csvFile);
@@ -133,7 +139,10 @@ public class StartDataAgentAccuracyTestTaskRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The DMS unit used to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -142,7 +151,10 @@ public class StartDataAgentAccuracyTestTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +163,10 @@ public class StartDataAgentAccuracyTestTaskRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8wfig6l33n4f4xxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

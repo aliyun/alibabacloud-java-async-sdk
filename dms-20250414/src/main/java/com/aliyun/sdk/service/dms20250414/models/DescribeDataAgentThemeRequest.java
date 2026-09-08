@@ -59,7 +59,10 @@ public class DescribeDataAgentThemeRequest extends Request {
         } 
 
         /**
-         * ThemeId.
+         * <p>The business ID of the theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f8b2c1d************9a3e5f7b1c2d</p>
          */
         public Builder themeId(String themeId) {
             this.putQueryParameter("ThemeId", themeId);

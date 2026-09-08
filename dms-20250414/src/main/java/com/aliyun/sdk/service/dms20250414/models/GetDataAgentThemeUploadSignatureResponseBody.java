@@ -106,7 +106,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -321,7 +334,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpireTime.
+             * <p>The policy expiration time in ISO 8601 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T14:53:41Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -329,7 +345,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectKey.
+             * <p>The target object key, which is exactly locked by the policy.</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -337,7 +353,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssCredential.
+             * <p>The parameter set that specifies the derived key.</p>
              */
             public Builder ossCredential(String ossCredential) {
                 this.ossCredential = ossCredential;
@@ -345,7 +361,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssDate.
+             * <p>The signature time in the format of yyyyMMdd\&quot;T\&quot;HHmmss\&quot;Z\&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260101T135341Z</p>
              */
             public Builder ossDate(String ossDate) {
                 this.ossDate = ossDate;
@@ -353,7 +372,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssSecurityToken.
+             * <p>The STS token used to upload files to OSS. The token is valid for 1 hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAIS4gJ1q6Ft5B2yfSjIr5vPHMj4p+lHx/utUUjg13ptZ+5u3oDzkzz2IHhMdXlrCOgYt/8xnG1V6f8flrJ/ToQAX0HfatZq5ZkS9AqnaoXM/te496IFg5D9y7dIs8GgjqHoeOzcYI73WJXEMiLp9EJaxb/9ak/RPTiMOoGIjphKd8keWhLCAxNNGNZRIHkJyqZYTwyzU8ygKRn3mGHdIVN1sw5n8wNF5L+439eX52i17jS46JdM/9ysesH5NpQxbMwkDYnk5oEsKPqdihw3wgNR6aJ7gJZD/Tr6pdyHCzFTmU7ea7uEqYw3clYiOPBnRvEd8eKPnPl5q/HVm2Hs0wxKNuxOSCXZS4yp3MLeH+ekJgOGwWFHz9qnOLmtQXqV22tMCRpzXIj6Zlmz+/reI6iNW+Ory74mxSFbrz3ZP4yv+o+Yv3QbMVumcySkKVbBbVvnv0R8GNsIC2lMUbp+rfShhfFuG2QagAECCyigwAlSAryrFmteD+EVuvxvi0NE7zDJLbUkhek6dcY+/u5V5jcmvL67cQ7bTNk+9lV8WDCvtoCD9ucqTaHweJEd8fS2DaFedAMDf8BfZa2C1CTLhVXdSgE2WORYbMqidelRm7dH3fTbZVvryWKDaveDRLt5J/Qfs**********</p>
              */
             public Builder ossSecurityToken(String ossSecurityToken) {
                 this.ossSecurityToken = ossSecurityToken;
@@ -361,7 +383,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssSignature.
+             * <p>The V4 signature value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9bebe0900716bdefaab899781c7bdfd614ec6ed711e0de5ddf6f5a**********</p>
              */
             public Builder ossSignature(String ossSignature) {
                 this.ossSignature = ossSignature;
@@ -369,7 +394,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssSignatureVersion.
+             * <p>The signature version. The value is fixed as OSS4-HMAC-SHA256.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS4-HMAC-SHA256</p>
              */
             public Builder ossSignatureVersion(String ossSignatureVersion) {
                 this.ossSignatureVersion = ossSignatureVersion;
@@ -377,7 +405,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The Base64-encoded value of the policy JSON.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJjb25kaXRpb25zIjpbeyJ4LW9zcy1jcmVkZW50aWFsIjoiU1RTLk5YeldyTEo2ZnA5RlNuUTN6OGthQjFFWH**********</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -385,7 +416,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * <p>The theme business identifier generated or reused for this request. Pass this identifier to the CreateDataAgentTheme operation after the upload is complete to register the metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0f8b2c1d****a3e5f7b1c2d</p>
              */
             public Builder themeId(String themeId) {
                 this.themeId = themeId;
@@ -393,7 +427,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * UploadDir.
+             * <p>The upload directory prefix.</p>
              */
             public Builder uploadDir(String uploadDir) {
                 this.uploadDir = uploadDir;
@@ -401,7 +435,10 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * UploadHost.
+             * <p>The PostObject destination address over the public network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://**********.oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder uploadHost(String uploadHost) {
                 this.uploadHost = uploadHost;

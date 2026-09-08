@@ -106,7 +106,7 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +220,16 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable memory generation. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -215,7 +237,16 @@ public class ConfigDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * RecallEnabled.
+             * <p>Indicates whether memory recall usage is enabled. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder recallEnabled(Boolean recallEnabled) {
                 this.recallEnabled = recallEnabled;

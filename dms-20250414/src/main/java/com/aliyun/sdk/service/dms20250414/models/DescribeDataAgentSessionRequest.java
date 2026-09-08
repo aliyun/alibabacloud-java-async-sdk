@@ -87,7 +87,10 @@ public class DescribeDataAgentSessionRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -96,7 +99,10 @@ public class DescribeDataAgentSessionRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The DataAgent session ID. You can obtain this ID by calling CreateDataAgentSession.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c61n7gm******rj</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -105,7 +111,10 @@ public class DescribeDataAgentSessionRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

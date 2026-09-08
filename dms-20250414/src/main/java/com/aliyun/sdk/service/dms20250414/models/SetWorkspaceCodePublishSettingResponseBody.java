@@ -106,7 +106,10 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the call fails. This parameter is empty if the call succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to publish，repo branch empty</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,16 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

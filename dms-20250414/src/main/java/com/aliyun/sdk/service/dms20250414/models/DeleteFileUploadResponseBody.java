@@ -106,7 +106,7 @@ public class DeleteFileUploadResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Return struct</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DeleteFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DeleteFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message returned when the invocation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class DeleteFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request succeeded.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +207,10 @@ public class DeleteFileUploadResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>File ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

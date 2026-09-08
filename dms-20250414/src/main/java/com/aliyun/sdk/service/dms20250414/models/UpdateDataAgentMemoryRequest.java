@@ -115,7 +115,10 @@ public class UpdateDataAgentMemoryRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The memory content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Diamond pricing analysis requires examining the skewness and outliers of the distribution of each feature.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -124,7 +127,10 @@ public class UpdateDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -133,7 +139,14 @@ public class UpdateDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * FromId.
+         * <p>The source ID.</p>
+         * <ul>
+         * <li>If MemFrom is set to session, FromId indicates the session ID.</li>
+         * <li>If MemFrom is set to user, FromId indicates the RAM user ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8zm3**********g3yxa1</p>
          */
         public Builder fromId(String fromId) {
             this.putQueryParameter("FromId", fromId);
@@ -142,7 +155,14 @@ public class UpdateDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * MemFrom.
+         * <p>The memory source. Valid values:</p>
+         * <ul>
+         * <li>session: generated from a session.</li>
+         * <li>user: edited by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder memFrom(String memFrom) {
             this.putQueryParameter("MemFrom", memFrom);
@@ -151,7 +171,10 @@ public class UpdateDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The memory UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed3f67***********ed</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

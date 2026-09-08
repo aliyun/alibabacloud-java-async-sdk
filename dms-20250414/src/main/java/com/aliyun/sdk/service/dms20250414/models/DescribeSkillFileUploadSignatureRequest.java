@@ -59,7 +59,10 @@ public class DescribeSkillFileUploadSignatureRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aci5e5yd***********0crv</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

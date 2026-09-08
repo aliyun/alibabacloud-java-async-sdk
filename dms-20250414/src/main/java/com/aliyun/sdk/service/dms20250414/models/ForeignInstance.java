@@ -145,7 +145,10 @@ public class ForeignInstance extends TeaModel {
         } 
 
         /**
-         * DataLinkName.
+         * <p>The name of the data link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbl_mysql_2337</p>
          */
         public Builder dataLinkName(String dataLinkName) {
             this.dataLinkName = dataLinkName;
@@ -153,7 +156,10 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>The endpoint that is used to connect to the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -161,7 +167,16 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * InstanceSource.
+         * <p>The source of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC_OWN:</strong> a self-managed database instance that is deployed on the Internet.</li>
+         * <li><strong>RDS</strong>: an ApsaraDB RDS instance.</li>
+         * <li><strong>ECS_OWN</strong>: a self-managed database that is hosted on an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>VPC_IDC</strong>: a self-managed database instance that is deployed in the data center over a virtual private cloud (VPC).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder instanceSource(String instanceSource) {
             this.instanceSource = instanceSource;
@@ -169,7 +184,10 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -177,7 +195,10 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The port number that is used to connect to the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7890</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -185,7 +206,7 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>The information of the properties.</p>
          */
         public Builder properties(java.util.Map<String, String> properties) {
             this.properties = properties;
@@ -193,7 +214,10 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -201,7 +225,13 @@ public class ForeignInstance extends TeaModel {
         }
 
         /**
-         * Sid.
+         * <p>The system identifier (SID) of the database.</p>
+         * <blockquote>
+         * <p> The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HXE</p>
          */
         public Builder sid(String sid) {
             this.sid = sid;

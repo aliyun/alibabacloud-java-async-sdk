@@ -132,7 +132,7 @@ public class AgenticTableIndex extends TeaModel {
         } 
 
         /**
-         * ColumnNames.
+         * <p>An array of column names included in the index.</p>
          */
         public Builder columnNames(java.util.List<String> columnNames) {
             this.columnNames = columnNames;
@@ -140,7 +140,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>An optional, user-defined description for the index.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -148,7 +148,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * IndexName.
+         * <p>The unique name of the index within the table.</p>
          */
         public Builder indexName(String indexName) {
             this.indexName = indexName;
@@ -156,7 +156,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * IndexType.
+         * <p>The type of the index, such as PRIMARY, UNIQUE, or NORMAL.</p>
          */
         public Builder indexType(String indexType) {
             this.indexType = indexType;
@@ -164,7 +164,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * Primary.
+         * <p>Specifies if the index is the primary key. A table can have only one primary key.</p>
          */
         public Builder primary(Boolean primary) {
             this.primary = primary;
@@ -172,7 +172,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * RealColumnNames.
+         * <p>An array of physical column names from the database. Use this parameter when the names in ColumnNames are aliases or logical names.</p>
          */
         public Builder realColumnNames(java.util.List<String> realColumnNames) {
             this.realColumnNames = realColumnNames;
@@ -180,7 +180,7 @@ public class AgenticTableIndex extends TeaModel {
         }
 
         /**
-         * Unique.
+         * <p>Specifies if the index enforces a unique constraint, requiring all its values to be unique across rows.</p>
          */
         public Builder unique(Boolean unique) {
             this.unique = unique;

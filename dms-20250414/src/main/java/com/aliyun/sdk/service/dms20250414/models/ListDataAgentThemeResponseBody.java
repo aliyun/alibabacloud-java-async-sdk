@@ -184,7 +184,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -192,7 +192,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -200,7 +203,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -208,7 +214,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -216,7 +225,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gS****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -224,7 +236,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -232,7 +247,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The current page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -240,7 +258,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +269,11 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +281,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -264,7 +292,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -421,7 +452,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The common scenarios. Valid values: report, infographic, and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -429,7 +463,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-15T08:30:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -437,7 +474,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weekly report</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -445,7 +485,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedAt.
+             * <p>The modification time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-20T10:15:30Z</p>
              */
             public Builder modifiedAt(String modifiedAt) {
                 this.modifiedAt = modifiedAt;
@@ -453,7 +496,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ReferTo.
+             * <p>The tracing reference that points to the UUID of the source theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6d1e3f9a-<strong><strong>-</strong></strong>-****-2b8c4e6f0a1d</p>
              */
             public Builder referTo(String referTo) {
                 this.referTo = referTo;
@@ -461,7 +507,15 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeFrom.
+             * <p>The source of the theme. Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>custom</li>
+             * <li>derived</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder themeFrom(String themeFrom) {
                 this.themeFrom = themeFrom;
@@ -469,7 +523,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * <p>The business identifier of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0f8b2c1d-<strong><strong>-</strong></strong>-****-9a3e5f7b1c2d</p>
              */
             public Builder themeId(String themeId) {
                 this.themeId = themeId;
@@ -477,7 +534,10 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeName.
+             * <p>The display name of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weekly report</p>
              */
             public Builder themeName(String themeName) {
                 this.themeName = themeName;
@@ -485,7 +545,14 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeType.
+             * <p>The theme stage. Valid values:</p>
+             * <ul>
+             * <li>design: contains only design.md.</li>
+             * <li>template: complete and renderable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>template</p>
              */
             public Builder themeType(String themeType) {
                 this.themeType = themeType;

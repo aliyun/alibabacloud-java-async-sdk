@@ -59,7 +59,10 @@ public class CheckDataAgentMemoryConfigRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);

@@ -106,7 +106,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE65CE1F-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -236,7 +245,7 @@ public class SendChatMessageResponseBody extends TeaModel {
              * <p>AgentId</p>
              * 
              * <strong>example:</strong>
-             * <p>3jqqdiuxunfe2f7feren21eeq</p>
+             * <p>3jqqdiuxun******</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -255,7 +264,10 @@ public class SendChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>922d7fd2-77fb-4549-9091-d51da225d47f</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -266,7 +278,7 @@ public class SendChatMessageResponseBody extends TeaModel {
              * <p>SessionId</p>
              * 
              * <strong>example:</strong>
-             * <p>6zbqbhoamv7gk20p8pgygt4hh</p>
+             * <p>6zbqbho********</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

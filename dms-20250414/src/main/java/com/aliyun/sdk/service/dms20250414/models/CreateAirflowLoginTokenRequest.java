@@ -83,7 +83,7 @@ public class CreateAirflowLoginTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Airflow instance. You can view the instance ID on the <a href="https://help.aliyun.com/document_detail/2881043.html">Airflow Instances</a> page.</p>
+         * <p>The ID of the Airflow instance. For more information, see <a href="">Airflow instances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

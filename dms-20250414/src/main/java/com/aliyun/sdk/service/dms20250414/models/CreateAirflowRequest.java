@@ -357,6 +357,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The name of the Airflow instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +370,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * AirflowVersion.
+         * <p>The Airflow version. Supported versions: 2.10 and 3.1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1</p>
          */
         public Builder airflowVersion(String airflowVersion) {
             this.putQueryParameter("AirflowVersion", airflowVersion);
@@ -378,6 +382,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The compute specifications for the Airflow instance. Valid values: <strong>SMALL</strong>, <strong>MEDIUM</strong>, <strong>LARGE</strong>, <strong>XLARGE</strong>, or <strong>X2LARGE</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -390,7 +395,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure request idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -399,7 +407,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * DagsDir.
+         * <p>The path to the DAG directory for Airflow to scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/dags</p>
          */
         public Builder dagsDir(String dagsDir) {
             this.putQueryParameter("DagsDir", dagsDir);
@@ -408,7 +419,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * DataMountInfoList.
+         * <p>A list of data mount configurations.</p>
          */
         public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
             String dataMountInfoListShrink = shrink(dataMountInfoList, "DataMountInfoList", "json");
@@ -418,7 +429,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the Airflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order scheduler</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -427,7 +441,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * EnableServerless.
+         * <p>Specifies whether to enable worker elasticity.</p>
          */
         public Builder enableServerless(Boolean enableServerless) {
             this.putQueryParameter("EnableServerless", enableServerless);
@@ -436,7 +450,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * GracefulShutdownTimeout.
+         * <p>The graceful shutdown timeout for workers, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
             this.putQueryParameter("GracefulShutdownTimeout", gracefulShutdownTimeout);
@@ -445,6 +462,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The name of the OSS bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,6 +475,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The OSS path for log storage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -469,7 +488,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * PluginsDir.
+         * <p>The path to the plugin directory for the Airflow instance to scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/plugins</p>
          */
         public Builder pluginsDir(String pluginsDir) {
             this.putQueryParameter("PluginsDir", pluginsDir);
@@ -478,7 +500,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * RequirementFile.
+         * <p>The path to the Python requirements file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/requirements.txt</p>
          */
         public Builder requirementFile(String requirementFile) {
             this.putQueryParameter("RequirementFile", requirementFile);
@@ -487,6 +512,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The security group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -499,7 +525,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * StartupFile.
+         * <p>The path to the startup script in the Airflow container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/startup.sh</p>
          */
         public Builder startupFile(String startupFile) {
             this.putQueryParameter("StartupFile", startupFile);
@@ -508,6 +537,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -520,7 +550,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -533,6 +563,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The number of elastic worker nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -545,6 +576,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DMS workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -557,7 +589,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The ID of the zone where the instance will be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

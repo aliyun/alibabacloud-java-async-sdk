@@ -106,7 +106,10 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
         } 
 
         /**
-         * ChunkMtime.
+         * <p>The time when the chunk was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-20 15:51:27</p>
          */
         public Builder chunkMtime(String chunkMtime) {
             this.chunkMtime = chunkMtime;
@@ -114,7 +117,10 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
         }
 
         /**
-         * ChunkTitle.
+         * <p>The title of the chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>titile1</p>
          */
         public Builder chunkTitle(String chunkTitle) {
             this.chunkTitle = chunkTitle;
@@ -122,7 +128,10 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The content of the chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -130,7 +139,10 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
         }
 
         /**
-         * DocName.
+         * <p>The name of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.md</p>
          */
         public Builder docName(String docName) {
             this.docName = docName;
@@ -138,7 +150,10 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique identifier for the chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e12aeb5-52cd-4834-bcd8-****</p>
          */
         public Builder id(String id) {
             this.id = id;

@@ -106,7 +106,7 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +308,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The common scenarios. Valid values: report, infographic, and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -303,7 +319,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-15T08:30:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -311,7 +330,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weekly report</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -319,7 +341,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedAt.
+             * <p>The modification time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-20T10:15:30Z</p>
              */
             public Builder modifiedAt(String modifiedAt) {
                 this.modifiedAt = modifiedAt;
@@ -327,7 +352,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ReferTo.
+             * <p>The theme tracing information. This field is currently not enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6d1e3f9a-<strong><strong>-</strong></strong>-****-2b8c4e6f0a1d</p>
              */
             public Builder referTo(String referTo) {
                 this.referTo = referTo;
@@ -335,7 +363,14 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeFrom.
+             * <p>The source of the theme. Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder themeFrom(String themeFrom) {
                 this.themeFrom = themeFrom;
@@ -343,7 +378,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * <p>The business ID of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0f8b2c1d***********9a3e5f7b1c2d</p>
              */
             public Builder themeId(String themeId) {
                 this.themeId = themeId;
@@ -351,7 +389,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeName.
+             * <p>The display name of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weekly report</p>
              */
             public Builder themeName(String themeName) {
                 this.themeName = themeName;
@@ -359,7 +400,14 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeType.
+             * <p>The theme stage. Valid values:</p>
+             * <ul>
+             * <li>design: design.md only.</li>
+             * <li>template: complete and renderable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>template</p>
              */
             public Builder themeType(String themeType) {
                 this.themeType = themeType;

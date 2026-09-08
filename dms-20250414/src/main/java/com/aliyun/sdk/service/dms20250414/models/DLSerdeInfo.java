@@ -132,7 +132,10 @@ public class DLSerdeInfo extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The description of the serialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;serialize&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -140,7 +143,10 @@ public class DLSerdeInfo extends TeaModel {
         }
 
         /**
-         * DeserializerClass.
+         * <p>The name of the class used for deserialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.serde2.OpenCSVSerde</p>
          */
         public Builder deserializerClass(String deserializerClass) {
             this.deserializerClass = deserializerClass;
@@ -148,7 +154,10 @@ public class DLSerdeInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the serialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -156,7 +165,12 @@ public class DLSerdeInfo extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The key-value pairs of parameters related to serialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;serialization.format&quot;: &quot;1&quot;
+         * }</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
@@ -164,7 +178,10 @@ public class DLSerdeInfo extends TeaModel {
         }
 
         /**
-         * SerdeType.
+         * <p>The type of serialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder serdeType(Integer serdeType) {
             this.serdeType = serdeType;
@@ -172,7 +189,10 @@ public class DLSerdeInfo extends TeaModel {
         }
 
         /**
-         * SerializationLib.
+         * <p>The class name of the serialization library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
          */
         public Builder serializationLib(String serializationLib) {
             this.serializationLib = serializationLib;
@@ -180,7 +200,10 @@ public class DLSerdeInfo extends TeaModel {
         }
 
         /**
-         * SerializerClass.
+         * <p>The name of the class used for serialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
          */
         public Builder serializerClass(String serializerClass) {
             this.serializerClass = serializerClass;

@@ -88,7 +88,10 @@ public class DeleteFileUploadRequest extends Request {
         } 
 
         /**
-         * CallFrom.
+         * <p>Used by frontend only</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrailCenter</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -97,7 +100,10 @@ public class DeleteFileUploadRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>Current DMS unit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -106,6 +112,7 @@ public class DeleteFileUploadRequest extends Request {
         }
 
         /**
+         * <p>File ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

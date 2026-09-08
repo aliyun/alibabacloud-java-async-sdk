@@ -249,7 +249,10 @@ public class DLTableInput extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731586286</p>
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -257,7 +260,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the user who created the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8****</p>
          */
         public Builder creatorId(Long creatorId) {
             this.creatorId = creatorId;
@@ -265,7 +271,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -273,7 +282,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * LastAccessTime.
+         * <p>The time when the table was last accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608707407</p>
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -281,7 +293,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The storage path of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -289,7 +304,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * ModifierId.
+         * <p>The user who last modified the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1410769</p>
          */
         public Builder modifierId(Long modifierId) {
             this.modifierId = modifierId;
@@ -297,7 +315,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100g_customer</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -305,7 +326,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The owner of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -313,7 +337,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * OwnerType.
+         * <p>The type of the owner. Valid values: USER, ROLE, and GROUP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -321,7 +348,7 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The key-value pair parameters.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -329,7 +356,7 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * PartitionKeys.
+         * <p>The list of attribute columns for the table.</p>
          */
         public Builder partitionKeys(java.util.List<DLColumn> partitionKeys) {
             this.partitionKeys = partitionKeys;
@@ -337,7 +364,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * Retention.
+         * <p>The retention period of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder retention(Integer retention) {
             this.retention = retention;
@@ -345,7 +375,7 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * StorageDescriptor.
+         * <p>The storage description. This includes the storage features and format details of the table.</p>
          */
         public Builder storageDescriptor(DLStorageDescriptor storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
@@ -353,7 +383,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>The type of the metadata table. Examples: MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, and MATERIALIZED_VIEW.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXTERNAL_TABLE</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -361,7 +394,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * ViewExpandedText.
+         * <p>If the table is a view, this parameter indicates the expanded text of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder viewExpandedText(String viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
@@ -369,7 +405,10 @@ public class DLTableInput extends TeaModel {
         }
 
         /**
-         * ViewOriginalText.
+         * <p>If the table is a view, this parameter indicates the original text of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder viewOriginalText(String viewOriginalText) {
             this.viewOriginalText = viewOriginalText;

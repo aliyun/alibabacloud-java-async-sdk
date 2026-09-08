@@ -31,16 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Dms";
         this.version = "2025-04-14";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "dms.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "dms.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -158,6 +149,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Configure the airflow\.cfg file for DMS Airflow.</p>
+     * 
      * @param request the request parameters of ConfigAirflow  ConfigAirflowRequest
      * @return ConfigAirflowResponse
      */
@@ -194,6 +188,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an Airflow instance in a workspace.</p>
+     * 
      * @param request the request parameters of CreateAirflow  CreateAirflowRequest
      * @return CreateAirflowResponse
      */
@@ -518,6 +515,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an accuracy test item.</p>
+     * 
      * @param request the request parameters of DeleteDataAgentAccuracyTest  DeleteDataAgentAccuracyTestRequest
      * @return DeleteDataAgentAccuracyTestResponse
      */
@@ -788,6 +788,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation permanently removes a specified code file or directory.</p>
+     * 
      * @param request the request parameters of DeleteWorkspaceCode  DeleteWorkspaceCodeRequest
      * @return DeleteWorkspaceCodeResponse
      */
@@ -1022,6 +1025,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>The response is returned as an SSE stream, where each event follows the <code>SSEEvent</code> schema and contains meta-information such as the message level.</li>
+     * <li>The <code>content</code> field in each SSE event may carry actual message text or a JSON object, depending on the value of <code>content_type</code>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetChatContent  GetChatContentRequest
      * @return GetChatContentResponse
      */
@@ -1086,6 +1096,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * 
      * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
      * @return GetDataAgentTaskModelUsageResponse
      */
@@ -1104,6 +1117,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * 
      * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
      */
@@ -1320,6 +1336,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</p>
+     * 
      * @param request the request parameters of GetSqlConsoleOperationLog  GetSqlConsoleOperationLogRequest
      * @return GetSqlConsoleOperationLogResponse
      */
@@ -1338,6 +1357,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtains the resource configuration limit information and the instance purchase status of the workspace.</p>
+     * 
      * @param request the request parameters of GetWorkspaceCode  GetWorkspaceCodeRequest
      * @return GetWorkspaceCodeResponse
      */
@@ -1356,6 +1378,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the deployment configuration of a workspace. The configuration includes details such as repository and branch information, and directories to exclude.</p>
+     * 
      * @param request the request parameters of GetWorkspaceCodePublishSetting  GetWorkspaceCodePublishSettingRequest
      * @return GetWorkspaceCodePublishSettingResponse
      */
@@ -1374,6 +1399,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the resource quotas and instance status for a workspace.</p>
+     * 
      * @param request the request parameters of GetWorkspaceQuota  GetWorkspaceQuotaRequest
      * @return GetWorkspaceQuotaResponse
      */
@@ -1428,6 +1456,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Imports an MCP into DataAgent.</p>
+     * 
      * @param request the request parameters of InstallDataAgentMcp  InstallDataAgentMcpRequest
      * @return InstallDataAgentMcpResponse
      */
@@ -1446,6 +1477,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the available Airflow versions.</p>
+     * 
      * @param request the request parameters of ListAirflowVersions  ListAirflowVersionsRequest
      * @return ListAirflowVersionsResponse
      */
@@ -1500,6 +1534,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * 
      * @param request the request parameters of ListDataAgentAccuracyTestInstances  ListDataAgentAccuracyTestInstancesRequest
      * @return ListDataAgentAccuracyTestInstancesResponse
      */
@@ -1518,6 +1555,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the execution results of a self-test task.</p>
+     * 
      * @param request the request parameters of ListDataAgentAccuracyTestResults  ListDataAgentAccuracyTestResultsRequest
      * @return ListDataAgentAccuracyTestResultsResponse
      */
@@ -1536,6 +1576,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</p>
+     * 
      * @param request the request parameters of ListDataAgentAccuracyTestTasks  ListDataAgentAccuracyTestTasksRequest
      * @return ListDataAgentAccuracyTestTasksResponse
      */
@@ -2004,6 +2047,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation lists the code files and directories at a specified path in a workspace.</p>
+     * 
      * @param request the request parameters of ListWorkspaceCode  ListWorkspaceCodeRequest
      * @return ListWorkspaceCodeResponse
      */
@@ -2040,6 +2086,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the configuration of an MCP server.</p>
+     * 
      * @param request the request parameters of ModifyDataAgentMcp  ModifyDataAgentMcpRequest
      * @return ModifyDataAgentMcpResponse
      */
@@ -2094,6 +2143,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Redeploys an Airflow instance.</p>
+     * 
      * @param request the request parameters of RedeployAirflow  RedeployAirflowRequest
      * @return RedeployAirflowResponse
      */
@@ -2148,6 +2200,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Publishes workspace code.</p>
+     * 
      * @param request the request parameters of SaveWorkspaceCode  SaveWorkspaceCodeRequest
      * @return SaveWorkspaceCodeResponse
      */
@@ -2166,6 +2221,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
+     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
      * @return SendChatMessageResponse
      */
@@ -2184,6 +2248,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sets the default code deployment configuration for a workspace. This configuration includes the Git repository branch and the directories to exclude from deployment.</p>
+     * 
      * @param request the request parameters of SetWorkspaceCodePublishSetting  SetWorkspaceCodePublishSettingRequest
      * @return SetWorkspaceCodePublishSettingResponse
      */
@@ -2202,6 +2269,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sets the quota for a specific workspace.</p>
+     * 
      * @param request the request parameters of SetWorkspaceQuota  SetWorkspaceQuotaRequest
      * @return SetWorkspaceQuotaResponse
      */
@@ -2220,6 +2290,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Initiates an accuracy self-test task.</p>
+     * 
      * @param request the request parameters of StartDataAgentAccuracyTestTask  StartDataAgentAccuracyTestTaskRequest
      * @return StartDataAgentAccuracyTestTaskResponse
      */
@@ -2256,6 +2329,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Stops an accuracy self-test task.</p>
+     * 
      * @param request the request parameters of StopDataAgentAccuracyTestTask  StopDataAgentAccuracyTestTaskRequest
      * @return StopDataAgentAccuracyTestTaskResponse
      */
@@ -2292,6 +2368,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the content of an accuracy test item.</p>
+     * 
      * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
      * @return UpdateDataAgentAccuracyTestResponse
      */
@@ -2544,6 +2623,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pass the <code>key</code> to view the execution log of the corresponding asynchronous task. Use this API for troubleshooting.</p>
+     * 
      * @param request the request parameters of WorkspaceActionLog  WorkspaceActionLogRequest
      * @return WorkspaceActionLogResponse
      */
@@ -2562,6 +2644,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Provide the key returned by an asynchronous action, such as a deployment, to retrieve the task\&quot;s status.</p>
+     * 
      * @param request the request parameters of WorkspaceActionStatus  WorkspaceActionStatusRequest
      * @return WorkspaceActionStatusResponse
      */
@@ -2580,6 +2665,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deploys the code in a workspace.</p>
+     * 
      * @param request the request parameters of WorkspaceCodePublish  WorkspaceCodePublishRequest
      * @return WorkspaceCodePublishResponse
      */

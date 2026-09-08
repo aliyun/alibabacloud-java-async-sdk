@@ -167,7 +167,10 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
-         * CatalogUuid.
+         * <p>The UUID of the associated folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-HZ-OfjcNc2z***</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.putQueryParameter("CatalogUuid", catalogUuid);
@@ -176,7 +179,10 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.putQueryParameter("DatabaseUuid", databaseUuid);
@@ -185,7 +191,10 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
-         * EnableVectorSearch.
+         * <p>Specifies whether to use semantic search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableVectorSearch(Boolean enableVectorSearch) {
             this.putQueryParameter("EnableVectorSearch", enableVectorSearch);
@@ -194,7 +203,10 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -203,7 +215,10 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gS****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -212,6 +227,7 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
+         * <p>The search keyword.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +240,10 @@ public class ListOneMetaOssieModelsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The semantic model tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_sales</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

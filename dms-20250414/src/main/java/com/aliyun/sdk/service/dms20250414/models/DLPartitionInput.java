@@ -106,7 +106,10 @@ public class DLPartitionInput extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the partition was created. This is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735109884</p>
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -114,7 +117,10 @@ public class DLPartitionInput extends TeaModel {
         }
 
         /**
-         * LastAccessTime.
+         * <p>The time when the partition was last accessed. This is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735109884</p>
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -122,7 +128,7 @@ public class DLPartitionInput extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The key-value pair parameters for the partition.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -130,7 +136,7 @@ public class DLPartitionInput extends TeaModel {
         }
 
         /**
-         * StorageDescriptor.
+         * <p>The data storage information of the data lakehouse table.</p>
          */
         public Builder storageDescriptor(DLStorageDescriptor storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
@@ -138,7 +144,7 @@ public class DLPartitionInput extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>The partition values.</p>
          */
         public Builder values(java.util.List<String> values) {
             this.values = values;

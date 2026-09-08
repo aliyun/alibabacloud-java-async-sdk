@@ -249,7 +249,10 @@ public class OssieModelView extends TeaModel {
         } 
 
         /**
-         * CatalogUuid.
+         * <p>The UUID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-SH-cd3ns***</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.catalogUuid = catalogUuid;
@@ -257,7 +260,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-SH-q8XzcK***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -265,7 +271,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The semantic description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order summary</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -273,7 +282,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * DocFormat.
+         * <p>The semantic document format type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder docFormat(String docFormat) {
             this.docFormat = docFormat;
@@ -281,7 +293,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * DomainTopic.
+         * <p>The domain topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order</p>
          */
         public Builder domainTopic(String domainTopic) {
             this.domainTopic = domainTopic;
@@ -289,7 +304,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Expr.
+         * <p>The expression content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         public Builder expr(String expr) {
             this.expr = expr;
@@ -297,7 +315,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663809374000</p>
          */
         public Builder gmtCreated(Long gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -305,7 +326,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1780539699000</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -313,7 +337,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * KnowledgeUuid.
+         * <p>The UUID of the semantic knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfb58bd***</p>
          */
         public Builder knowledgeUuid(String knowledgeUuid) {
             this.knowledgeUuid = knowledgeUuid;
@@ -321,7 +348,23 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * RawDoc.
+         * <p>The semantic document content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;version&quot;: &quot;0.2.0.dev0&quot;,
+         *   &quot;semantic_model&quot;: [
+         *     {
+         *       &quot;name&quot;: &quot;sales&quot;,
+         *       &quot;datasets&quot;: [
+         *         {
+         *           &quot;name&quot;: &quot;orders&quot;,
+         *           &quot;source&quot;: &quot;analytics.public.orders&quot;
+         *         }
+         *       ]
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder rawDoc(String rawDoc) {
             this.rawDoc = rawDoc;
@@ -329,7 +372,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * SemanticType.
+         * <p>The semantic type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ossie</p>
          */
         public Builder semanticType(String semanticType) {
             this.semanticType = semanticType;
@@ -337,7 +383,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_EDIT</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -345,7 +394,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The document summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>knowledge summary</p>
          */
         public Builder summary(String summary) {
             this.summary = summary;
@@ -353,7 +405,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The knowledge base tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1dq7qod8hxtt1***</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -361,7 +416,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The semantic title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order total</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -369,7 +427,10 @@ public class OssieModelView extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder version(String version) {
             this.version = version;

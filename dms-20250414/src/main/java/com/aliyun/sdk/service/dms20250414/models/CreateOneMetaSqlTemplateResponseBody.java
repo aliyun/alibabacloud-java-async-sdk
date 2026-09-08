@@ -106,7 +106,7 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(OneMetaSqlTemplateView data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServerUnrecognizedException</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

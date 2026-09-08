@@ -275,7 +275,10 @@ public class DLTablebaseInfo extends TeaModel {
         } 
 
         /**
-         * CatalogName.
+         * <p>The data catalog to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -283,7 +286,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608707407</p>
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -291,7 +297,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the user who created the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141****</p>
          */
         public Builder creatorId(Long creatorId) {
             this.creatorId = creatorId;
@@ -299,7 +308,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * DbId.
+         * <p>The ID of the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder dbId(Long dbId) {
             this.dbId = dbId;
@@ -307,7 +319,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -315,7 +330,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;table&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -323,7 +341,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * LastAccessTime.
+         * <p>The time when the table was last accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731586286</p>
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -331,7 +352,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The storage path of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -339,7 +363,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * ModifierId.
+         * <p>The time when the table was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731585286</p>
          */
         public Builder modifierId(Long modifierId) {
             this.modifierId = modifierId;
@@ -347,7 +374,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100g_customer</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -355,7 +385,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The owner of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -363,7 +396,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * OwnerType.
+         * <p>The type of the owner. Valid values: USER, ROLE, or GROUP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -371,7 +407,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The additional parameters of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;EXTERNAL&quot;: &quot;TRUE&quot;</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
@@ -379,7 +418,7 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * PartitionKeys.
+         * <p>The list of column attributes.</p>
          */
         public Builder partitionKeys(java.util.List<DLColumn> partitionKeys) {
             this.partitionKeys = partitionKeys;
@@ -387,7 +426,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * Retention.
+         * <p>The retention period of the table, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
          */
         public Builder retention(Integer retention) {
             this.retention = retention;
@@ -395,7 +437,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>The type of the table. Examples include MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, and MATERIALIZED_VIEW.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXTERNAL_TABLE</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -403,7 +448,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * ViewExpandedText.
+         * <p>The expanded text of the view if the table is a view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder viewExpandedText(String viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
@@ -411,7 +459,10 @@ public class DLTablebaseInfo extends TeaModel {
         }
 
         /**
-         * ViewOriginalText.
+         * <p>The original text of the view if the table is a view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder viewOriginalText(String viewOriginalText) {
             this.viewOriginalText = viewOriginalText;

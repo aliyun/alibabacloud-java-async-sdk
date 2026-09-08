@@ -119,7 +119,7 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned in the response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This record is being collected, please wait for a moment.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +279,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDir.
+             * <p>Indicates whether the object is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -272,7 +290,12 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Mtime.
+             * <p>The modification time of the file.</p>
+             * <p>The time is in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+             * <p>This parameter is returned only for files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T10:11:12Z</p>
              */
             public Builder mtime(String mtime) {
                 this.mtime = mtime;
@@ -280,7 +303,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the file or directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +314,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -296,7 +325,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Symlink.
+             * <p>The target of the symlink.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>../abc.py</p>
              */
             public Builder symlink(String symlink) {
                 this.symlink = symlink;
@@ -350,7 +382,7 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>An array of objects representing the files and directories.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;

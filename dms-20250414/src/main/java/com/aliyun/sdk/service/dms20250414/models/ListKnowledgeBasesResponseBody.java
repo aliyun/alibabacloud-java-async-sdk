@@ -146,7 +146,7 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>A list of knowledge base objects.</p>
          */
         public Builder data(java.util.List<OneMetaKnowledgeBase> data) {
             this.data = data;
@@ -154,7 +154,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -162,7 +165,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tag is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -170,7 +176,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -178,7 +187,16 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results.</p>
+         * <ul>
+         * <li><p>If this parameter is empty, all results have been returned.</p>
+         * </li>
+         * <li><p>If a value is returned, use it in the next request to retrieve the next page of results.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gS****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -186,7 +204,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +215,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +226,10 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of knowledge bases matching the query. This feature is not currently supported and the returned value is always <code>0</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

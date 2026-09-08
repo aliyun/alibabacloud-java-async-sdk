@@ -141,10 +141,11 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
         }
 
         /**
+         * <p>The input parameters for the Notebook file. Pass the parameters in a dictionary format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;dt&quot;: &quot;2022-10-14&quot;}</p>
+         * <p>{\&quot;dt\&quot;: \&quot;2022-10-14\&quot;}</p>
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -153,6 +154,7 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
         }
 
         /**
+         * <p>The path of the Notebook file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +167,10 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
         }
 
         /**
-         * Retry.
+         * <p>The number of retries if scheduling fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder retry(Long retry) {
             this.putBodyParameter("Retry", retry);
@@ -174,6 +179,7 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +192,10 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8630242382****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

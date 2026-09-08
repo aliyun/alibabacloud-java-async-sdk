@@ -104,6 +104,7 @@ public class DescribeDataAgentMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the query range.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class DescribeDataAgentMetricsRequest extends Request {
         }
 
         /**
-         * MetricNames.
+         * <p>The metric names. Separate multiple names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data_agent_session_per_user</p>
          */
         public Builder metricNames(String metricNames) {
             this.putQueryParameter("MetricNames", metricNames);
@@ -125,6 +129,11 @@ public class DescribeDataAgentMetricsRequest extends Request {
         }
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li><strong>basic</strong>: basic metrics.</li>
+         * <li><strong>high_level</strong>: advanced metrics.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +146,7 @@ public class DescribeDataAgentMetricsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query range.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -184,6 +184,7 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
+         * <p>The end time of the logs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +197,10 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -205,6 +209,7 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
+         * <p>The page number. Pages start from page 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +222,7 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +235,10 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
-         * Schema.
+         * <p>The database schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -238,7 +247,10 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * <p>The SQL statement type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -247,6 +259,7 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
+         * <p>The start time of the logs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +272,10 @@ public class GetSqlConsoleOperationLogRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -98,6 +98,7 @@ public class WorkspaceActionLogRequest extends Request {
         }
 
         /**
+         * <p>The key for the session playback history.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class WorkspaceActionLogRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

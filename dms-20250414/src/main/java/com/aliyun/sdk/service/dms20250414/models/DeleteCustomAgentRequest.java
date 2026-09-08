@@ -74,6 +74,7 @@ public class DeleteCustomAgentRequest extends Request {
         } 
 
         /**
+         * <p>Custom Agent ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteCustomAgentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56kv1pvl9uvt9**********bb</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

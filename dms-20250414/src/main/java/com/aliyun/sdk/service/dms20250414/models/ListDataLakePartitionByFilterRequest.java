@@ -185,6 +185,7 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
+         * <p>The name of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +198,7 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +211,17 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
+         * <p>Query conditional expression. Supported operators:</p>
+         * <ul>
+         * <li><p>Comparison operators: =, &lt;&gt;, !=, &lt;, &lt;=, &gt;, and &gt;=. For example: \<code>ds&gt;20240101\\</code>.</p>
+         * </li>
+         * <li><p>Logical operators: AND, OR, and NOT. For example: \<code>ds LIKE \\&quot;20240%\\&quot;\\</code>.</p>
+         * </li>
+         * <li><p>The BETWEEN operator, which specifies a range. For example: \<code>ds BETWEEN 20240101 AND 20241201\\</code>.</p>
+         * </li>
+         * <li><p>The IN operator, which specifies a set of values. For example: \<code>ds IN (20240101, 20240102)\\</code>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +234,10 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -230,7 +246,16 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results. Valid values:</p>
+         * <ul>
+         * <li><p>If this parameter is left empty, no more results are returned.</p>
+         * </li>
+         * <li><p>If a value is returned, the value is the token for the next query.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>f056501ada12****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -239,6 +264,7 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +277,13 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -260,7 +292,10 @@ public class ListDataLakePartitionByFilterRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

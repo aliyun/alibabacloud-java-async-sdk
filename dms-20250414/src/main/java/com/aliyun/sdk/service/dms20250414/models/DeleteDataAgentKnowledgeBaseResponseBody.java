@@ -106,7 +106,7 @@ public class DeleteDataAgentKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DeleteDataAgentKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DeleteDataAgentKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,7 @@ public class DeleteDataAgentKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -141,7 +147,16 @@ public class DeleteDataAgentKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +209,10 @@ public class DeleteDataAgentKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * KbUuid.
+             * <p>The ID of the deleted knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-HZ-rtl5lwx********q32d3ux</p>
              */
             public Builder kbUuid(String kbUuid) {
                 this.kbUuid = kbUuid;

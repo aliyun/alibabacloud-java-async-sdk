@@ -67,7 +67,15 @@ public class DLResourceUri extends TeaModel {
         } 
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>ARCHIVE</li>
+         * <li>JAR</li>
+         * <li>FILE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JAR</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -75,7 +83,10 @@ public class DLResourceUri extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The URL used to access the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://name****.example.com:8020/user/hive/udfs/my_***.jar</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

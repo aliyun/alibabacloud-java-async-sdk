@@ -80,7 +80,7 @@ public class DLSkewedInfo extends TeaModel {
         } 
 
         /**
-         * SkewedColNames.
+         * <p>A list of skewed column names.</p>
          */
         public Builder skewedColNames(java.util.List<String> skewedColNames) {
             this.skewedColNames = skewedColNames;
@@ -88,7 +88,10 @@ public class DLSkewedInfo extends TeaModel {
         }
 
         /**
-         * SkewedColValueLocationMaps.
+         * <p>A mapping of skewed column values to their locations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“col1”:&quot;val1&quot;}</p>
          */
         public Builder skewedColValueLocationMaps(java.util.Map<String, ?> skewedColValueLocationMaps) {
             this.skewedColValueLocationMaps = skewedColValueLocationMaps;
@@ -96,7 +99,7 @@ public class DLSkewedInfo extends TeaModel {
         }
 
         /**
-         * SkewedColValues.
+         * <p>A list of skewed column values. Each list provides a set of associated values.</p>
          */
         public Builder skewedColValues(java.util.List<java.util.List<String>> skewedColValues) {
             this.skewedColValues = skewedColValues;

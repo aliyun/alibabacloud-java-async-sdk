@@ -171,7 +171,10 @@ public class ListFileUploadRequest extends Request {
         } 
 
         /**
-         * CallFrom.
+         * <p>For front-end use only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>仅前端使用</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -180,7 +183,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -189,7 +195,22 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * DownloadLinkExpire.
+         * <p>The validity period of the download link, in seconds. This parameter applies only to files in user-owned Object Storage Service (OSS) buckets. The default is 3600.</p>
+         * <ul>
+         * <li><p>Minimum value: 3600 (1 hour)</p>
+         * </li>
+         * <li><p>Maximum value: 129600 (36 hours)</p>
+         * </li>
+         * </ul>
+         * <p>Notes:</p>
+         * <ul>
+         * <li><p>Download links for files in the built-in OSS are valid for 1 hour.</p>
+         * </li>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder downloadLinkExpire(Integer downloadLinkExpire) {
             this.putQueryParameter("DownloadLinkExpire", downloadLinkExpire);
@@ -198,7 +219,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * FileCategory.
+         * <p>The file category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TextReport</p>
          */
         public Builder fileCategory(String fileCategory) {
             this.putQueryParameter("FileCategory", fileCategory);
@@ -207,7 +231,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * FileFrom.
+         * <p>The file source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent</p>
          */
         public Builder fileFrom(String fileFrom) {
             this.putQueryParameter("FileFrom", fileFrom);
@@ -216,7 +243,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-8*******01m</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -225,7 +255,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h8r********4fch</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -234,7 +267,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * SortColumn.
+         * <p>The sort column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder sortColumn(String sortColumn) {
             this.putQueryParameter("SortColumn", sortColumn);
@@ -243,7 +279,10 @@ public class ListFileUploadRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>The sort direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);

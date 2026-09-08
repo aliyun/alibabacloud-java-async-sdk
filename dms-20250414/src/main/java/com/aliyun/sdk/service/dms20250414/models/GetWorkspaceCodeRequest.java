@@ -112,7 +112,10 @@ public class GetWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Iac.
+         * <p>If the file is a JSON file and Iac is set to true, the returned content is converted from JSON format to YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder iac(String iac) {
             this.putQueryParameter("Iac", iac);
@@ -121,6 +124,8 @@ public class GetWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The code file path: /Workspace/code/test.py
+         * Request path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +138,7 @@ public class GetWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

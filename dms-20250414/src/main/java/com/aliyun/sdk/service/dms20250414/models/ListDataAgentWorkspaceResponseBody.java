@@ -132,7 +132,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,7 +140,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +151,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -156,7 +162,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nu use</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -164,7 +173,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no use</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +184,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D2-*****-A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -402,7 +420,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the workspace, in milliseconds (UNIX timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765960516000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -410,7 +431,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The UID of the workspace creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -426,7 +450,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>space for test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -434,7 +461,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * IsSessionShareEnabled.
+             * <p>Indicates whether session sharing is enabled for the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
                 this.isSessionShareEnabled = isSessionShareEnabled;
@@ -442,7 +472,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The most recent modification time of the workspace, in milliseconds (UNIX timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765961516000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -450,7 +483,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name of the user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -466,7 +502,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMember.
+             * <p>The number of members in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalMember(Long totalMember) {
                 this.totalMember = totalMember;
@@ -482,7 +521,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The workspace type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>personal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -490,7 +532,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20923*****7291</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -498,7 +543,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspaceTest</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -506,7 +554,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceStatus.
+             * <p>The status of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder workspaceStatus(String workspaceStatus) {
                 this.workspaceStatus = workspaceStatus;
@@ -612,7 +663,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The configuration content.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -620,7 +671,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -628,7 +682,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of workspaces per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -636,7 +693,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of workspaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;
@@ -644,7 +704,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

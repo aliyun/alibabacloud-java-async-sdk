@@ -197,7 +197,7 @@ public class DLStorageDescriptor extends TeaModel {
         } 
 
         /**
-         * BucketCols.
+         * <p>A list of bucket column names that determine the hash distribution of the data.</p>
          */
         public Builder bucketCols(java.util.List<String> bucketCols) {
             this.bucketCols = bucketCols;
@@ -205,7 +205,7 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * Columns.
+         * <p>The description of the data columns in the table.</p>
          */
         public Builder columns(java.util.List<DLColumn> columns) {
             this.columns = columns;
@@ -213,7 +213,10 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * InputFormat.
+         * <p>The name of the input format class used to read data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.mapred.SequenceFileInputFormat</p>
          */
         public Builder inputFormat(String inputFormat) {
             this.inputFormat = inputFormat;
@@ -221,7 +224,10 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * IsCompressed.
+         * <p>Specifies whether the data is compressed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isCompressed(Boolean isCompressed) {
             this.isCompressed = isCompressed;
@@ -229,7 +235,10 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The specific location of the data storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -237,7 +246,10 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * NumBuckets.
+         * <p>The number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder numBuckets(Integer numBuckets) {
             this.numBuckets = numBuckets;
@@ -245,7 +257,7 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * OriginalColumns.
+         * <p>The description of the original columns.</p>
          */
         public Builder originalColumns(java.util.List<DLColumn> originalColumns) {
             this.originalColumns = originalColumns;
@@ -253,7 +265,10 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * OutputFormat.
+         * <p>The name of the output format class used to write data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.outputFormat = outputFormat;
@@ -261,7 +276,10 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>Other parameter mappings for data storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key/value</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
@@ -269,7 +287,7 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * SerdeInfo.
+         * <p>The serialization and deserialization information.</p>
          */
         public Builder serdeInfo(DLSerdeInfo serdeInfo) {
             this.serdeInfo = serdeInfo;
@@ -277,7 +295,7 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * SkewedInfo.
+         * <p>The data structure that stores information about skewed columns.</p>
          */
         public Builder skewedInfo(DLSkewedInfo skewedInfo) {
             this.skewedInfo = skewedInfo;
@@ -285,7 +303,7 @@ public class DLStorageDescriptor extends TeaModel {
         }
 
         /**
-         * SortCols.
+         * <p>The description of the sorted columns.</p>
          */
         public Builder sortCols(java.util.List<DLOrder> sortCols) {
             this.sortCols = sortCols;

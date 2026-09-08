@@ -241,7 +241,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         } 
 
         /**
-         * AccuracyTestInsId.
+         * <p>The accuracy test instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
          */
         public Builder accuracyTestInsId(String accuracyTestInsId) {
             this.putQueryParameter("AccuracyTestInsId", accuracyTestInsId);
@@ -250,7 +253,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * CustomerAgentId.
+         * <p>The new custom agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder customerAgentId(String customerAgentId) {
             this.putQueryParameter("CustomerAgentId", customerAgentId);
@@ -259,7 +265,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Dataset.
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</p>
          */
         public Builder dataset(String dataset) {
             this.putQueryParameter("Dataset", dataset);
@@ -277,7 +286,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Desc.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -286,7 +298,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -295,7 +310,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * EvaluationPrompt.
+         * <p>The accuracy evaluation criteria. An empty value indicates the default criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder evaluationPrompt(String evaluationPrompt) {
             this.putQueryParameter("EvaluationPrompt", evaluationPrompt);
@@ -304,7 +322,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The file ID in the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-8*******01m</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -313,7 +334,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * MaxConcurrent.
+         * <p>The maximum number of concurrent sessions during the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxConcurrent(Integer maxConcurrent) {
             this.putQueryParameter("MaxConcurrent", maxConcurrent);
@@ -322,7 +346,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The analysis mode to be tested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -331,7 +358,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the test item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -340,7 +370,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * NeedDelete.
+         * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no use</p>
          */
         public Builder needDelete(Boolean needDelete) {
             this.putQueryParameter("NeedDelete", needDelete);
@@ -349,7 +382,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -358,7 +394,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8wfig6l33n4f4xxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

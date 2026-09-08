@@ -74,7 +74,7 @@ public class DeleteDataAgentMcpRequest extends Request {
         } 
 
         /**
-         * McpServerIds.
+         * <p>The list of MCP Server IDs to delete.</p>
          */
         public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
             String mcpServerIdsShrink = shrink(mcpServerIds, "McpServerIds", "json");
@@ -84,6 +84,7 @@ public class DeleteDataAgentMcpRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Data Agent workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -117,7 +117,10 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -126,7 +129,10 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseTest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +141,10 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * FromKbUuid.
+         * <p>The ID of the source industry knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-HZ-ra99********ss0xp1bku</p>
          */
         public Builder fromKbUuid(String fromKbUuid) {
             this.putQueryParameter("FromKbUuid", fromKbUuid);
@@ -144,6 +153,7 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The name of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +166,7 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

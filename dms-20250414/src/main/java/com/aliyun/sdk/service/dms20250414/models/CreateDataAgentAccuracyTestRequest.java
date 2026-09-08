@@ -241,7 +241,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         } 
 
         /**
-         * CustomAgentId.
+         * <p>The ID of the custom agent to be tested for accuracy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder customAgentId(String customAgentId) {
             this.putQueryParameter("CustomAgentId", customAgentId);
@@ -250,7 +253,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Dataset.
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataset(String dataset) {
             this.putQueryParameter("Dataset", dataset);
@@ -259,7 +265,11 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Datasource.
+         * <p>The data source. We recommend that you configure this in the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><strong>70&quot;,&quot;51</strong></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><strong>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</strong></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
+         * ***&quot;,&quot;DbName&quot;:&quot;internal_data_employees&quot;,&quot;CatalogName&quot;:&quot;def&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;Engine&quot;:&quot;mysql&quot;}]</p>
          */
         public Builder datasource(String datasource) {
             this.putQueryParameter("Datasource", datasource);
@@ -268,7 +278,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Desc.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -277,7 +290,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The DMS unit used to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -286,7 +302,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * EvaluationPrompt.
+         * <p>The accuracy evaluation criteria. An empty value indicates the default criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder evaluationPrompt(String evaluationPrompt) {
             this.putQueryParameter("EvaluationPrompt", evaluationPrompt);
@@ -295,7 +314,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The file ID in the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -304,7 +326,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language used for the analysis task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENGLISH</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -313,7 +338,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * MaxConcurrent.
+         * <p>The maximum number of concurrent sessions during the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxConcurrent(Integer maxConcurrent) {
             this.putQueryParameter("MaxConcurrent", maxConcurrent);
@@ -322,7 +350,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The analysis mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -331,7 +362,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the test item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test01</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -340,7 +374,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * NeedDelete.
+         * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder needDelete(Boolean needDelete) {
             this.putQueryParameter("NeedDelete", needDelete);
@@ -349,7 +386,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -358,7 +398,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

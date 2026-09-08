@@ -106,7 +106,7 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +217,7 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
             } 
 
             /**
-             * FilePath.
+             * <p>The OSS key of the theme file (dart/{uid}/{theme_id}/theme.zip, verified to exist before being stored in the database).</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -212,7 +225,10 @@ public class CreateDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * <p>The business identifier of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0f8b2c1d************9a3e5f7b1c2d</p>
              */
             public Builder themeId(String themeId) {
                 this.themeId = themeId;

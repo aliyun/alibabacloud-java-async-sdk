@@ -101,7 +101,10 @@ public class DeleteDataAgentAccuracyTestRequest extends Request {
         } 
 
         /**
-         * AccuracyTestInsId.
+         * <p>The accuracy test instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
          */
         public Builder accuracyTestInsId(String accuracyTestInsId) {
             this.putQueryParameter("AccuracyTestInsId", accuracyTestInsId);
@@ -110,7 +113,10 @@ public class DeleteDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -119,7 +125,10 @@ public class DeleteDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +137,10 @@ public class DeleteDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8wfig6l33n4f4xxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -158,7 +158,10 @@ public class ListAirflowsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_FOUND</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -166,7 +169,10 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. This parameter is returned when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +180,10 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,10 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +202,10 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +213,10 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gS****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +224,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reuqest ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -217,7 +235,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Root.
+         * <p>The details of the data.</p>
          */
         public Builder root(Root root) {
             this.root = root;
@@ -225,7 +243,16 @@ public class ListAirflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -538,7 +565,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             } 
 
             /**
-             * AirflowId.
+             * <p>The ID of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af-7a6ygsh80d****</p>
              */
             public Builder airflowId(String airflowId) {
                 this.airflowId = airflowId;
@@ -546,7 +576,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * AirflowName.
+             * <p>The name of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-airflow</p>
              */
             public Builder airflowName(String airflowName) {
                 this.airflowName = airflowName;
@@ -554,7 +587,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * AppSpec.
+             * <p>The specifications of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMALL</p>
              */
             public Builder appSpec(String appSpec) {
                 this.appSpec = appSpec;
@@ -562,7 +598,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AIRFLOW</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -570,7 +609,7 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAirflowCfg.
+             * <p>The custom configuration.</p>
              */
             public Builder customAirflowCfg(java.util.List<String> customAirflowCfg) {
                 this.customAirflowCfg = customAirflowCfg;
@@ -578,7 +617,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * DagsDir.
+             * <p>The DAGs folder that Airflow scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/dags</p>
              */
             public Builder dagsDir(String dagsDir) {
                 this.dagsDir = dagsDir;
@@ -586,7 +628,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * DeployErrorMsg.
+             * <p>The error message returned when the deployment fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota exists</p>
              */
             public Builder deployErrorMsg(String deployErrorMsg) {
                 this.deployErrorMsg = deployErrorMsg;
@@ -594,7 +639,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -602,7 +650,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the Airflow instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-12T05:46:01.000+0000</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -610,7 +661,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucketName.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>osstest</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -618,7 +672,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * OssPath.
+             * <p>The path in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/airflow</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -626,7 +683,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginsDir.
+             * <p>The plugins folder that Airflow scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/plugins</p>
              */
             public Builder pluginsDir(String pluginsDir) {
                 this.pluginsDir = pluginsDir;
@@ -634,7 +694,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * RequirementFile.
+             * <p>The path to the file that contains the dependencies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/requirements.txt</p>
              */
             public Builder requirementFile(String requirementFile) {
                 this.requirementFile = requirementFile;
@@ -642,7 +705,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze1nak7h0alg1w****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -650,7 +716,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * StartupFile.
+             * <p>The path to the script that is loaded when Airflow starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/startup.sh</p>
              */
             public Builder startupFile(String startupFile) {
                 this.startupFile = startupFile;
@@ -658,7 +727,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEPLOYED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -666,7 +738,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6sxdc22x7sbdb****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -674,7 +749,7 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-8vbbfm33dy0y1pek****</p>
@@ -685,7 +760,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerServerlessReplicas.
+             * <p>The number of worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder workerServerlessReplicas(Integer workerServerlessReplicas) {
                 this.workerServerlessReplicas = workerServerlessReplicas;
@@ -693,7 +771,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the DMS workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8630242382****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -701,7 +782,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the zone in the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -768,7 +852,7 @@ public class ListAirflowsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -776,7 +860,10 @@ public class ListAirflowsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of matching Airflow instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

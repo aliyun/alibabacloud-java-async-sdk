@@ -98,6 +98,7 @@ public class GetOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The document type of the semantic model. Valid values: JSON and YAML.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CB***********3F1A</p>
@@ -141,7 +147,16 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -337,7 +352,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-e*******ckd</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -345,7 +363,16 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAgentStage.
+             * <p>The stage of the custom agent. Valid values:</p>
+             * <ul>
+             * <li><p><strong>debug</strong>: Debug stage</p>
+             * </li>
+             * <li><p><strong>prod</strong>: Production stage</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>debug</p>
              */
             public Builder customAgentStage(String customAgentStage) {
                 this.customAgentStage = customAgentStage;
@@ -353,7 +380,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSearch.
+             * <p>Indicates whether web search is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSearch(Boolean enableSearch) {
                 this.enableSearch = enableSearch;
@@ -385,7 +415,16 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li><p><strong>CHINESE</strong>: Chinese</p>
+             * </li>
+             * <li><p><strong>ENGLISH</strong>: English</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHINESE</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -393,7 +432,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * McpServerIds.
+             * <p>A list of MCP server IDs.</p>
              */
             public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
                 this.mcpServerIds = mcpServerIds;
@@ -401,7 +440,18 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ASK_DATA</strong>: Quick Inquiry Mode</p>
+             * </li>
+             * <li><p><strong>ANALYSIS</strong>: Analysis Mode</p>
+             * </li>
+             * <li><p><strong>INSIGHT</strong>: Insight Mode</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANALYSIS</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -425,7 +475,13 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UserOssBucket.
+             * <p>The name of the user\&quot;s OSS bucket.</p>
+             * <ul>
+             * <li>Analysis files and report artifacts can be uploaded to this OSS bucket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user-oss-bucket</p>
              */
             public Builder userOssBucket(String userOssBucket) {
                 this.userOssBucket = userOssBucket;
@@ -583,7 +639,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent Id</p>
+             * <p>The agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cu0cs*******mf</p>
@@ -594,7 +650,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AgentStatus.
+             * <p>The agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -602,7 +661,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the session was created, in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765262307992</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -610,7 +672,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The ID of the associated file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder file(String file) {
                 this.file = file;
@@ -618,7 +683,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Saved.
+             * <p>Indicates whether the current user has favorited the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder saved(Boolean saved) {
                 this.saved = saved;
@@ -626,7 +694,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionConfig.
+             * <p>The session configuration.</p>
              */
             public Builder sessionConfig(SessionConfig sessionConfig) {
                 this.sessionConfig = sessionConfig;
@@ -634,7 +702,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The agent session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>976*********p</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -642,7 +713,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>The session status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -650,7 +724,10 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The session title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>帮我分析一下这份数据，给出报告。</p>
              */
             public Builder title(String title) {
                 this.title = title;

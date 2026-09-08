@@ -87,7 +87,10 @@ public class RemoveUserToDataAgentWorkspaceRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -96,7 +99,10 @@ public class RemoveUserToDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>The UID of the member account to remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21482*****7584</p>
          */
         public Builder memberId(String memberId) {
             this.putQueryParameter("MemberId", memberId);
@@ -105,7 +111,10 @@ public class RemoveUserToDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

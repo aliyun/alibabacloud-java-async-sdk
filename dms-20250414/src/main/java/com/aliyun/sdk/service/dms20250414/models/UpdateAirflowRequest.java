@@ -266,6 +266,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the Airflow instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,7 +279,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * AirflowName.
+         * <p>The name of the Airflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testairflow</p>
          */
         public Builder airflowName(String airflowName) {
             this.putQueryParameter("AirflowName", airflowName);
@@ -287,7 +291,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * AppSpec.
+         * <p>The specifications of the Airflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMALL</p>
          */
         public Builder appSpec(String appSpec) {
             this.putQueryParameter("AppSpec", appSpec);
@@ -296,7 +303,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure request idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -305,7 +315,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * DagsDir.
+         * <p>The directory path where Airflow scans for DAGs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/dags</p>
          */
         public Builder dagsDir(String dagsDir) {
             this.putQueryParameter("DagsDir", dagsDir);
@@ -324,7 +337,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the Airflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test airflow</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -351,7 +367,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * PluginsDir.
+         * <p>The directory path where Airflow scans for plugins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/plugins</p>
          */
         public Builder pluginsDir(String pluginsDir) {
             this.putQueryParameter("PluginsDir", pluginsDir);
@@ -360,7 +379,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * RequirementFile.
+         * <p>The path to the requirements file for package dependencies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/requirements.txt</p>
          */
         public Builder requirementFile(String requirementFile) {
             this.putQueryParameter("RequirementFile", requirementFile);
@@ -369,7 +391,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * StartupFile.
+         * <p>The path to the startup script for the Airflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/startup.sh</p>
          */
         public Builder startupFile(String startupFile) {
             this.putQueryParameter("StartupFile", startupFile);
@@ -378,7 +403,10 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * WorkerServerlessReplicas.
+         * <p>The number of worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder workerServerlessReplicas(Integer workerServerlessReplicas) {
             this.putQueryParameter("WorkerServerlessReplicas", workerServerlessReplicas);
@@ -387,6 +415,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
+         * <p>The Data Management Service (DMS) workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

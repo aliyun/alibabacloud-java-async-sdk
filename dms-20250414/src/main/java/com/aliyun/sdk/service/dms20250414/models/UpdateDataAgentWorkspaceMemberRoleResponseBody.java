@@ -106,7 +106,7 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D2-*****-A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTime.
+             * <p>The time when the user joined the workspace. This is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765961516</p>
              */
             public Builder joinTime(Long joinTime) {
                 this.joinTime = joinTime;
@@ -264,7 +279,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>The UID of the member whose role was changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -272,7 +290,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The new role of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -280,7 +301,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTaskNumber.
+             * <p>The number of running tasks for the user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder runningTaskNumber(Long runningTaskNumber) {
                 this.runningTaskNumber = runningTaskNumber;
@@ -288,7 +312,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTaskNumber.
+             * <p>The total number of tasks for the user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalTaskNumber(Long totalTaskNumber) {
                 this.totalTaskNumber = totalTaskNumber;
@@ -296,7 +323,10 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The RAM username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yunqitest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -98,6 +98,7 @@ public class WorkspaceCodePublishRequest extends Request {
         }
 
         /**
+         * <p>The configuration for the code deployment, specified as a JSON string. The <code>repos</code> array identifies the Git repositories in the workspace and specifies the branch to deploy. The <code>exclude</code> array lists directories to skip during the deployment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class WorkspaceCodePublishRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID (numeric ID) for the code deployment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

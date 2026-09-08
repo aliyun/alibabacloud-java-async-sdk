@@ -106,7 +106,7 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -363,7 +376,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunParentUid.
+             * <p>The Alibaba Cloud account ID of the parent account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16738266********</p>
              */
             public Builder aliyunParentUid(String aliyunParentUid) {
                 this.aliyunParentUid = aliyunParentUid;
@@ -371,7 +387,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20372822********</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -379,7 +398,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorUserName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HaoY*****</p>
              */
             public Builder creatorUserName(String creatorUserName) {
                 this.creatorUserName = creatorUserName;
@@ -387,7 +409,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a demo skill description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -395,7 +420,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the skill is available. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -403,7 +431,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -411,7 +442,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -419,7 +453,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ParseError.
+             * <p>The skill parsing error message. This parameter is returned when the skill status is INVALID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKILL.md file not exist.</p>
              */
             public Builder parseError(String parseError) {
                 this.parseError = parseError;
@@ -427,7 +464,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -435,7 +475,14 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SkillFrom.
+             * <p>The source of the skill. Valid values:</p>
+             * <ul>
+             * <li>User: a skill uploaded by the user.</li>
+             * <li>Agent: a skill derived from Agent analysis.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder skillFrom(String skillFrom) {
                 this.skillFrom = skillFrom;
@@ -443,7 +490,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The skill ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ski-04pomiln*************j0</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -451,7 +501,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data-query-skill</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -459,7 +512,15 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SkillStatus.
+             * <p>The skill status. Valid values:</p>
+             * <ul>
+             * <li>INIT: not ready.</li>
+             * <li>ACTIVE: active.</li>
+             * <li>INVALID: invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder skillStatus(String skillStatus) {
                 this.skillStatus = skillStatus;
@@ -467,7 +528,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56kv1pvl9uvt9**********bb</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -573,7 +637,7 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The list of data content.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -581,7 +645,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -589,7 +656,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -597,7 +667,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;
@@ -605,7 +678,10 @@ public class ListDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

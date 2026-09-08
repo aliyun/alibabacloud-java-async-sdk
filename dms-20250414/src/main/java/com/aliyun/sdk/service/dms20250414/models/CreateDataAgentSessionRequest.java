@@ -115,7 +115,10 @@ public class CreateDataAgentSessionRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -124,7 +127,10 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
-         * File.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-8*******01m</p>
          */
         public Builder file(String file) {
             this.putQueryParameter("File", file);
@@ -133,7 +139,7 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
-         * SessionConfig.
+         * <p>The session configuration.</p>
          */
         public Builder sessionConfig(SessionConfig sessionConfig) {
             String sessionConfigShrink = shrink(sessionConfig, "SessionConfig", "json");
@@ -143,7 +149,10 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The session title. Supports Chinese and English. Maximum length: 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>帮我分析一下这份数据，给出报告。</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -152,7 +161,10 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -350,7 +362,10 @@ public class CreateDataAgentSessionRequest extends Request {
             } 
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-e*******ckd</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -358,7 +373,16 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * CustomAgentStage.
+             * <p>The custom agent stage. Valid values:</p>
+             * <ul>
+             * <li><p><strong>debug</strong>: Test stage.</p>
+             * </li>
+             * <li><p><strong>prod</strong>: Production stage.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>debug</p>
              */
             public Builder customAgentStage(String customAgentStage) {
                 this.customAgentStage = customAgentStage;
@@ -366,7 +390,10 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * EnableSearch.
+             * <p>Specifies whether to enable web search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSearch(Boolean enableSearch) {
                 this.enableSearch = enableSearch;
@@ -398,7 +425,16 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * Language.
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li><p><strong>CHINESE</strong>: Chinese</p>
+             * </li>
+             * <li><p><strong>ENGLISH</strong>: English</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHINESE</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -406,7 +442,7 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * McpServerIds.
+             * <p>A list of MCP server IDs.</p>
              */
             public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
                 this.mcpServerIds = mcpServerIds;
@@ -414,7 +450,18 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ASK_DATA</strong>: Quick inquiry mode.</p>
+             * </li>
+             * <li><p><strong>ANALYSIS</strong>: Analysis mode.</p>
+             * </li>
+             * <li><p><strong>INSIGHT</strong>: Insight mode.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANALYSIS</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -438,7 +485,13 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * UserOssBucket.
+             * <p>The OSS bucket name.</p>
+             * <ul>
+             * <li>This bucket stores intermediate files and report artifacts from the analysis.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user-oss-bucket</p>
              */
             public Builder userOssBucket(String userOssBucket) {
                 this.userOssBucket = userOssBucket;

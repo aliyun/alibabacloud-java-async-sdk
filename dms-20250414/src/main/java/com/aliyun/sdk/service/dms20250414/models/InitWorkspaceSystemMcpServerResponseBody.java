@@ -106,7 +106,10 @@ public class InitWorkspaceSystemMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether all system MCP services are initialized successfully. Returns true even when no system MCP services are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class InitWorkspaceSystemMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The return code. The value success is returned for successful requests. An error code is returned for failed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +128,10 @@ public class InitWorkspaceSystemMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when a system-level request failure occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to initialize workspace system MCP servers</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +139,10 @@ public class InitWorkspaceSystemMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550***544</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,11 @@ public class InitWorkspaceSystemMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was processed successfully. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;

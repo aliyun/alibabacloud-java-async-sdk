@@ -101,7 +101,10 @@ public class AddUserToDataAgentWorkspaceRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -110,7 +113,10 @@ public class AddUserToDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>The Alibaba Cloud UID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20282*****7591</p>
          */
         public Builder memberId(String memberId) {
             this.putQueryParameter("MemberId", memberId);
@@ -119,7 +125,10 @@ public class AddUserToDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -128,7 +137,10 @@ public class AddUserToDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

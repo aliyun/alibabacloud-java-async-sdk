@@ -184,7 +184,10 @@ public class DLFunction extends TeaModel {
         } 
 
         /**
-         * CatalogName.
+         * <p>The name of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -192,7 +195,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * ClassName.
+         * <p>The Java class that contains the function code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.example.hive.MyCustomUDF</p>
          */
         public Builder className(String className) {
             this.className = className;
@@ -200,7 +206,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the function was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731586286</p>
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -208,7 +217,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the user who created the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder creatorId(Long creatorId) {
             this.creatorId = creatorId;
@@ -216,7 +228,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -224,7 +239,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * FunctionName.
+         * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_funciton</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -232,7 +250,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * FunctionType.
+         * <p>The type of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         public Builder functionType(String functionType) {
             this.functionType = functionType;
@@ -240,7 +261,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * ModifierId.
+         * <p>The ID of the user who modified the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26****</p>
          */
         public Builder modifierId(Long modifierId) {
             this.modifierId = modifierId;
@@ -248,7 +272,10 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * OwnerName.
+         * <p>The owner of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder ownerName(String ownerName) {
             this.ownerName = ownerName;
@@ -256,7 +283,18 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * OwnerType.
+         * <p>The type of the owner. Valid values:</p>
+         * <ul>
+         * <li><p>ROLE</p>
+         * </li>
+         * <li><p>GROUP</p>
+         * </li>
+         * <li><p>USER</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -264,7 +302,7 @@ public class DLFunction extends TeaModel {
         }
 
         /**
-         * ResourceUris.
+         * <p>The resource URIs of the function. This parameter cannot be modified after the function is created.</p>
          */
         public Builder resourceUris(java.util.List<DLResourceUri> resourceUris) {
             this.resourceUris = resourceUris;

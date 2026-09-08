@@ -145,7 +145,10 @@ public class FileUploadCallbackRequest extends Request {
         } 
 
         /**
-         * CallFrom.
+         * <p>Used only by the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrailCenter</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -154,7 +157,10 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -163,7 +169,10 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * FileSize.
+         * <p>The file size, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8110</p>
          */
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -172,6 +181,7 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +203,11 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
+         * <p>The full path of the uploaded file.</p>
+         * <ul>
+         * <li>Format: The UploadDir field returned by the DescribeFileUploadSignature operation concatenated with the file name.</li>
+         * <li>Example: ${UploadDir}/${Filename}</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder uploadLocation(String uploadLocation) {

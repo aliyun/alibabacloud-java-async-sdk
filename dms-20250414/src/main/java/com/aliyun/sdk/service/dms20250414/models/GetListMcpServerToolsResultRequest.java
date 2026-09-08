@@ -87,7 +87,10 @@ public class GetListMcpServerToolsResultRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The DMS unit identifier. This value is typically the same as the DMSUnit used in the request that started the tool detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -96,7 +99,10 @@ public class GetListMcpServerToolsResultRequest extends Request {
         }
 
         /**
-         * McpServerUuid.
+         * <p>The MCP Server ID used when the detection was started. This value must match the detection record associated with the SessionId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44lg***z65</p>
          */
         public Builder mcpServerUuid(String mcpServerUuid) {
             this.putQueryParameter("McpServerUuid", mcpServerUuid);
@@ -105,7 +111,10 @@ public class GetListMcpServerToolsResultRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The temporary session ID returned by StartListMcpServerTools. This ID is used to locate the connectivity detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1vwe***6wr</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

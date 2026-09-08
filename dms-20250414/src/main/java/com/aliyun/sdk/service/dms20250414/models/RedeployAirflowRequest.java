@@ -98,6 +98,7 @@ public class RedeployAirflowRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the Airflow instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class RedeployAirflowRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DMS workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

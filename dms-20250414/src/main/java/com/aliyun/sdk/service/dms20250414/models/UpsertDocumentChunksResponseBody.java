@@ -106,7 +106,16 @@ public class UpsertDocumentChunksResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the update was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The update succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The update failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -114,7 +123,10 @@ public class UpsertDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +134,10 @@ public class UpsertDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource not found kb-***</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +145,10 @@ public class UpsertDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID. Use this ID to troubleshoot errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +156,16 @@ public class UpsertDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

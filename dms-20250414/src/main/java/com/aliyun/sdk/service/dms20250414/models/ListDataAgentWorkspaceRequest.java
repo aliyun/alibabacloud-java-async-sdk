@@ -197,7 +197,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -206,7 +209,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no use</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -215,7 +221,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no use</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -224,7 +233,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -233,7 +245,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The name of the field by which to sort.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -242,6 +257,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +270,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +283,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspaceTest</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);
@@ -275,6 +295,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The type of workspace to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

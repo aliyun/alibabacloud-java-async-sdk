@@ -119,7 +119,7 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +149,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0A813EB-4623-523A-8598-86390CB4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +171,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -329,7 +344,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * AffectRows.
+             * <p>The number of affected rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -337,7 +355,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Cost.
+             * <p>The execution duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cost(Long cost) {
                 this.cost = cost;
@@ -345,7 +366,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseSearchName.
+             * <p>The database search name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:mysql@xxx.com">mysql@xxx.com</a></p>
              */
             public Builder databaseSearchName(String databaseSearchName) {
                 this.databaseSearchName = databaseSearchName;
@@ -353,7 +377,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access Denied</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -361,7 +388,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The database schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -369,7 +399,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM user;</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -377,7 +410,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * <p>The SQL type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -385,7 +421,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -393,7 +432,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -401,7 +443,10 @@ public class GetSqlConsoleOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder username(String username) {
                 this.username = username;

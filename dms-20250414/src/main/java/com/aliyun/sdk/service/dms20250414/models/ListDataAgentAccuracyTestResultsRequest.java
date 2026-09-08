@@ -185,7 +185,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         } 
 
         /**
-         * AccuracyTestInsId.
+         * <p>The instance ID of the accuracy test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
          */
         public Builder accuracyTestInsId(String accuracyTestInsId) {
             this.putQueryParameter("AccuracyTestInsId", accuracyTestInsId);
@@ -194,7 +197,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * AccuracyTestResultId.
+         * <p>The result ID used to retrieve a single record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-emhnbwewfngrxxxxxxxxxx</p>
          */
         public Builder accuracyTestResultId(String accuracyTestResultId) {
             this.putQueryParameter("AccuracyTestResultId", accuracyTestResultId);
@@ -203,7 +209,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * AccuracyTestSubtaskId.
+         * <p>The subtask ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f1eb8728-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder accuracyTestSubtaskId(String accuracyTestSubtaskId) {
             this.putQueryParameter("AccuracyTestSubtaskId", accuracyTestSubtaskId);
@@ -212,7 +221,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * AccuracyTestTaskId.
+         * <p>The ID of the accuracy test task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder accuracyTestTaskId(String accuracyTestTaskId) {
             this.putQueryParameter("AccuracyTestTaskId", accuracyTestTaskId);
@@ -221,7 +233,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nu use</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -230,7 +245,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoKLEdIZrKhDT7I2gS****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -239,7 +257,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -248,7 +269,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +281,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,7 +293,10 @@ public class ListDataAgentAccuracyTestResultsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8wfig6l33n4f4xxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

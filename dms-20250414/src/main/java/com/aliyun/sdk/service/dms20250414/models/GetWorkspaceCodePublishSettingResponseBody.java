@@ -119,7 +119,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code that indicates the result of the request. A value of <code>200</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +149,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This record is being collected, please wait for a moment.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -159,7 +171,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +253,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * Branch.
+             * <p>The name of the branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -246,7 +264,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path to the notebook file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/luna-public/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -254,7 +275,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Repo.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analyticscomputing/dide</p>
              */
             public Builder repo(String repo) {
                 this.repo = repo;
@@ -334,7 +358,7 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * Exclude.
+             * <p>The files and directories to exclude from the deployment.</p>
              */
             public Builder exclude(java.util.List<String> exclude) {
                 this.exclude = exclude;
@@ -342,7 +366,10 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
             }
 
             /**
-             * LockRepoBranch.
+             * <p>Indicates whether the deployment branch is locked. If <code>true</code>, configurations submitted via the <code>workspaceCodePublish</code> API are ignored. If <code>false</code>, configurations submitted via the <code>workspaceCodePublish</code> API update the settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder lockRepoBranch(Boolean lockRepoBranch) {
                 this.lockRepoBranch = lockRepoBranch;
@@ -350,7 +377,7 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Repos.
+             * <p>The Git repositories in the workspace.</p>
              */
             public Builder repos(java.util.List<Repos> repos) {
                 this.repos = repos;

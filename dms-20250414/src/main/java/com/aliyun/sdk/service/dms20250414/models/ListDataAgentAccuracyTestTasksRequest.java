@@ -143,7 +143,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         } 
 
         /**
-         * AccuracyTestInsId.
+         * <p>The accuracy test instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
          */
         public Builder accuracyTestInsId(String accuracyTestInsId) {
             this.putQueryParameter("AccuracyTestInsId", accuracyTestInsId);
@@ -152,7 +155,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         }
 
         /**
-         * AccuracyTestTaskId.
+         * <p>Filters by the exact task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder accuracyTestTaskId(String accuracyTestTaskId) {
             this.putQueryParameter("AccuracyTestTaskId", accuracyTestTaskId);
@@ -161,7 +167,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -170,7 +179,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoK****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -179,7 +191,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +203,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +215,10 @@ public class ListDataAgentAccuracyTestTasksRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8wfig6l33n4f4xxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -129,7 +129,10 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735660800</p>
          */
         public Builder beginTime(String beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -138,7 +141,10 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -147,7 +153,10 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735747200</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +184,10 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

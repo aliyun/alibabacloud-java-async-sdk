@@ -153,6 +153,7 @@ public class ListDataLakeDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The name of the catalog. To find the catelog name, go to the <a href="https://dlf.console.aliyun.com/cn-hangzhou/metadata/catalog?spm=a2c4g.11186623.0.0.5a225658pT4Dkr">Data Lake console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,10 @@ public class ListDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -174,7 +178,16 @@ public class ListDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results. Valid values:</p>
+         * <ul>
+         * <li><p>If <strong>NextToken</strong> is empty, no more results are available.</p>
+         * </li>
+         * <li><p>If <strong>NextToken</strong> has a value, it is the token for the next query.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>f056501ada12****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -183,7 +196,10 @@ public class ListDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>A keyword to search for database names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -192,7 +208,13 @@ public class ListDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -201,7 +223,10 @@ public class ListDataLakeDatabaseRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

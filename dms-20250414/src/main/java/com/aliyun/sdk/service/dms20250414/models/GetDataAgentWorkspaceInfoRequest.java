@@ -73,7 +73,10 @@ public class GetDataAgentWorkspaceInfoRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -82,7 +85,10 @@ public class GetDataAgentWorkspaceInfoRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the collaborative workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

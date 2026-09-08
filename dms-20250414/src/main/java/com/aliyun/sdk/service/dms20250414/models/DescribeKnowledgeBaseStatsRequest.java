@@ -83,6 +83,7 @@ public class DescribeKnowledgeBaseStatsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

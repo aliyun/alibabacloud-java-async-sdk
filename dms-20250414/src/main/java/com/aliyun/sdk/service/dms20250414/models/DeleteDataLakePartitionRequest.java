@@ -170,6 +170,7 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
+         * <p>The name of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,10 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
-         * IfExists.
+         * <p>Specifies whether to ignore the error if the partition to delete does not exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ifExists(Boolean ifExists) {
             this.putQueryParameter("IfExists", ifExists);
@@ -203,6 +208,7 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
+         * <p>The list of partition values.</p>
          * <p>This parameter is required.</p>
          */
         public Builder partitionValues(java.util.List<String> partitionValues) {
@@ -213,6 +219,7 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +232,13 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -234,7 +247,10 @@ public class DeleteDataLakePartitionRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

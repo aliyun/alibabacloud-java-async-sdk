@@ -132,7 +132,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -183,7 +195,14 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -314,7 +333,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             } 
 
             /**
-             * FeedbackContent.
+             * <p>The feedback content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;feedback_type&quot;:&quot;PRODUCT_SUGGESTION&quot;,&quot;user_feedback&quot;: &quot;test&quot;,&quot;email&quot;:&quot;<a href="mailto:yourname@example.com">yourname@example.com</a>&quot;,&quot;is_authorized&quot;:&quot;Y&quot;}</p>
              */
             public Builder feedbackContent(String feedbackContent) {
                 this.feedbackContent = feedbackContent;
@@ -322,7 +344,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             }
 
             /**
-             * FeedbackType.
+             * <p>The feedback type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ISSUE_REPORT</p>
              */
             public Builder feedbackType(String feedbackType) {
                 this.feedbackType = feedbackType;
@@ -330,7 +355,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             }
 
             /**
-             * LikeValue.
+             * <p>The like value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder likeValue(Integer likeValue) {
                 this.likeValue = likeValue;
@@ -338,7 +366,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -346,7 +377,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The agent session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h8r********4fch</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -354,7 +388,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * <p>The feedback target ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h8r********4fch_sdesfews</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -362,7 +399,10 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The feedback target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SESSION</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

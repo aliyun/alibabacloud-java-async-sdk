@@ -119,7 +119,7 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>job</p>
+         * <p>An object that contains the key for the asynchronous code deployment.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request fails. This parameter is empty on success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to deploy，repo branch empty</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +227,10 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key for the asynchronous code deployment. Use this key to query its status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-xxxx-xxxxxx</p>
              */
             public Builder key(String key) {
                 this.key = key;

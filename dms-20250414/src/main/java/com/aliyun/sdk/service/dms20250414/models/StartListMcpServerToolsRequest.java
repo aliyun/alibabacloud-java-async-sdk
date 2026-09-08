@@ -87,7 +87,10 @@ public class StartListMcpServerToolsRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The identifier of the Data Management unit that runs the Data Agent resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -96,7 +99,10 @@ public class StartListMcpServerToolsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language used for the detection session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHINESE</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -105,7 +111,10 @@ public class StartListMcpServerToolsRequest extends Request {
         }
 
         /**
-         * McpServerUuid.
+         * <p>The ID of the MCP Server for which to detect connectivity and query the tool list. Only the service creator can trigger the detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44lg***z65</p>
          */
         public Builder mcpServerUuid(String mcpServerUuid) {
             this.putQueryParameter("McpServerUuid", mcpServerUuid);

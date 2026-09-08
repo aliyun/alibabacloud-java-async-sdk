@@ -106,7 +106,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Return struct</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,16 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is the request successful? Return values are as follows:</p>
+         * <ul>
+         * <li><p>True: The request is successful.</p>
+         * </li>
+         * <li><p>False: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,7 +235,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomAgentId.
+             * <p>Custom Agent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-4y3ca4khkcu**********ysf</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -228,7 +246,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Operation message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom agent successfully released</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -236,7 +257,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Is the operation successful?</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

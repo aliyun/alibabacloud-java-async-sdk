@@ -106,7 +106,7 @@ public class ListFileUploadResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of file objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ListFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,7 @@ public class ListFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -141,7 +147,16 @@ public class ListFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -363,7 +378,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunParentUid.
+             * <p>The ID of the Alibaba Cloud master account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16738266********</p>
              */
             public Builder aliyunParentUid(String aliyunParentUid) {
                 this.aliyunParentUid = aliyunParentUid;
@@ -371,7 +389,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20372822********</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -379,7 +400,7 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadLink.
+             * <p>The public download link.</p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -387,7 +408,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileCategory.
+             * <p>The file category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TextReport</p>
              */
             public Builder fileCategory(String fileCategory) {
                 this.fileCategory = fileCategory;
@@ -395,7 +419,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileFrom.
+             * <p>The file source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent</p>
              */
             public Builder fileFrom(String fileFrom) {
                 this.fileFrom = fileFrom;
@@ -403,7 +430,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -411,7 +441,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>samele_report.md</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -419,7 +452,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7453</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -427,7 +463,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -435,7 +474,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -443,7 +485,7 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDownloadLink.
+             * <p>The internal download link.</p>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -451,7 +493,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -459,7 +504,10 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h8r********4fch</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -467,7 +515,7 @@ public class ListFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * UploadLocation.
+             * <p>The upload path.</p>
              */
             public Builder uploadLocation(String uploadLocation) {
                 this.uploadLocation = uploadLocation;

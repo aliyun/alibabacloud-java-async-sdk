@@ -199,7 +199,10 @@ public class InstallDataAgentMcpRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The brief description of the artifact. This parameter can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query user information by user ID</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +211,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the MCP instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://***.com/mcp</p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -217,7 +223,24 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * FromJson.
+         * <p>The JSON used to create the MCP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;mcpServers&quot;: {
+         *     &quot;sse-server-name&quot;: {
+         *       &quot;description&quot;: &quot;describe sse mcp server&quot;,
+         *       &quot;type&quot;: &quot;sse&quot;,
+         *       &quot;netType&quot;: &quot;vpc&quot;,
+         *       &quot;vpcId&quot;: &quot;vpc-xxxx&quot;,
+         *       &quot;url&quot;: &quot;<a href="http://sse-in-vpc.com/sse">http://sse-in-vpc.com/sse</a>&quot;,
+         *       &quot;needUidInHeader&quot;: true,
+         *       &quot;headers&quot;: {
+         *         &quot;Authorization&quot;: &quot;Bearer <token>&quot;
+         *       }
+         *     }
+         *   }
+         * }</p>
          */
         public Builder fromJson(String fromJson) {
             this.putQueryParameter("FromJson", fromJson);
@@ -226,7 +249,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Headers.
+         * <p>The request header settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Authorization&quot;:&quot;Bearer ***&quot;}</p>
          */
         public Builder headers(String headers) {
             this.putQueryParameter("Headers", headers);
@@ -235,7 +261,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The MCP name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query_tool</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -244,7 +273,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * NeedUidInHeader.
+         * <p>Specifies whether to include the Alibaba Cloud UID in the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needUidInHeader(Boolean needUidInHeader) {
             this.putQueryParameter("NeedUidInHeader", needUidInHeader);
@@ -253,7 +285,14 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * NetType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><code>vpc</code>: virtual private cloud.</li>
+         * <li><code>public</code>: public network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -262,7 +301,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * TransportType.
+         * <p>The transport channel type. Valid values: streamablehttp and sse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sse</p>
          */
         public Builder transportType(String transportType) {
             this.putQueryParameter("TransportType", transportType);
@@ -283,7 +325,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * VswId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vb5j***6h</p>
          */
         public Builder vswId(String vswId) {
             this.putQueryParameter("VswId", vswId);
@@ -292,7 +337,10 @@ public class InstallDataAgentMcpRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

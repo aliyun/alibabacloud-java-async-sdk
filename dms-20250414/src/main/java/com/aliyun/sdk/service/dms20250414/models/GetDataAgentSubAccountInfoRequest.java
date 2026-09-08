@@ -73,7 +73,10 @@ public class GetDataAgentSubAccountInfoRequest extends Request {
         } 
 
         /**
-         * DmsUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -82,7 +85,10 @@ public class GetDataAgentSubAccountInfoRequest extends Request {
         }
 
         /**
-         * SubAccountId.
+         * <p>The UID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20282*****7591</p>
          */
         public Builder subAccountId(String subAccountId) {
             this.putQueryParameter("SubAccountId", subAccountId);

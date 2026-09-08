@@ -132,7 +132,10 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. <code>Success</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMsg.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request Invalid</p>
          */
         public Builder errMsg(String errMsg) {
             this.errMsg = errMsg;
@@ -148,7 +154,10 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,10 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5zrs5szpiezlb9m3qxi6zp32h</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -172,7 +187,16 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succedded. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succedded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +204,10 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IcICC2nbMpYp9KygS43n010100</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

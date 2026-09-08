@@ -129,7 +129,10 @@ public class ListDataCenterDatabaseRequest extends Request {
         } 
 
         /**
-         * CallFrom.
+         * <p>Used only by the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Frontend only</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -138,7 +141,10 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -147,7 +153,13 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * ImportType.
+         * <p>The import type.</p>
+         * <ul>
+         * <li>FILE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         public Builder importType(String importType) {
             this.putQueryParameter("ImportType", importType);
@@ -156,7 +168,10 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>Used only by the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Frontend only</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -165,7 +180,10 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword for fuzzy match of databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);

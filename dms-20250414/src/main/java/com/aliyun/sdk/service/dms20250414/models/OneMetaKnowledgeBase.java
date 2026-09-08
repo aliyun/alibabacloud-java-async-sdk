@@ -171,7 +171,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         } 
 
         /**
-         * Creator.
+         * <p>The creator of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20464374909***</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -179,7 +182,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order knowledgebase</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -187,7 +193,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Domain.
+         * <p>The domain of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vehicle</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -195,7 +204,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * ExtraInfo.
+         * <p>Additional information about the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;keywords&quot;:&quot;sales,vehicle brand&quot;}</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.extraInfo = extraInfo;
@@ -203,7 +215,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The time when the knowledge base was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-14 11:30:00</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -211,7 +226,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the knowledge base was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-14 11:30:39</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -219,7 +237,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * KbUuid.
+         * <p>The UUID of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-***</p>
          */
         public Builder kbUuid(String kbUuid) {
             this.kbUuid = kbUuid;
@@ -227,7 +248,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_kb</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -235,7 +259,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The state of the knowledge base. Valid values include 0 (No data) and 1 (Available).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -243,7 +270,10 @@ public class OneMetaKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The tag of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4phsj52f81ymlm***</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;

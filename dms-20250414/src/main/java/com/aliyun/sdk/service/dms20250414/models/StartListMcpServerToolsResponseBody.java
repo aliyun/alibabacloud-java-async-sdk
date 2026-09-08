@@ -106,7 +106,7 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result of the asynchronous detection startup. Only StartTimestamp may be returned if the resources are still being provisioned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The return code. The value success is returned if the request was successful. An error code is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if a system-level request failure occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent status=wait_resource_running</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +217,10 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionId.
+             * <p>The temporary session ID for this detection. After the startup succeeds, use this value to call GetListMcpServerToolsResult to poll for the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1vw***6wr</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -212,7 +228,10 @@ public class StartListMcpServerToolsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimestamp.
+             * <p>The UNIX timestamp at which the server started the detection, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785819600000</p>
              */
             public Builder startTimestamp(String startTimestamp) {
                 this.startTimestamp = startTimestamp;

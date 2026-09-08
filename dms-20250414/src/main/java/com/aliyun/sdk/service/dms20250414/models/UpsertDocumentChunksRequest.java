@@ -113,6 +113,7 @@ public class UpsertDocumentChunksRequest extends Request {
         }
 
         /**
+         * <p>A list of document chunks to upsert.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +135,7 @@ public class UpsertDocumentChunksRequest extends Request {
         }
 
         /**
+         * <p>The name of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +148,7 @@ public class UpsertDocumentChunksRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

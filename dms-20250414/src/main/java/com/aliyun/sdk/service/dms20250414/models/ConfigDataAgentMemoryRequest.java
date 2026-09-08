@@ -87,7 +87,10 @@ public class ConfigDataAgentMemoryRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -96,7 +99,16 @@ public class ConfigDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether to enable memory generation. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -105,7 +117,12 @@ public class ConfigDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * RecallEnabled.
+         * <p>Specifies whether to enable memory recall usage. Valid values:</p>
+         * <p>true: Enabled.</p>
+         * <p>false: Disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder recallEnabled(Boolean recallEnabled) {
             this.putQueryParameter("RecallEnabled", recallEnabled);

@@ -185,7 +185,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -194,7 +197,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -203,7 +209,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLoK****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -212,7 +221,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -221,7 +233,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmt_create</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -230,7 +245,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +257,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +269,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * SearchMemberId.
+         * <p>The prefix of the member ID to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20273</p>
          */
         public Builder searchMemberId(String searchMemberId) {
             this.putQueryParameter("SearchMemberId", searchMemberId);
@@ -257,7 +281,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * SearchRoleName.
+         * <p>The prefix of the member name to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yunqi</p>
          */
         public Builder searchRoleName(String searchRoleName) {
             this.putQueryParameter("SearchRoleName", searchRoleName);
@@ -266,7 +293,10 @@ public class ListDataAgentWorkspaceMemberRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

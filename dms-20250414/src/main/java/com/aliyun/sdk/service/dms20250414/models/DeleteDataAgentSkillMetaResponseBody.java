@@ -106,7 +106,7 @@ public class DeleteDataAgentSkillMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DeleteDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DeleteDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class DeleteDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +220,10 @@ public class DeleteDataAgentSkillMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * SkillId.
+             * <p>The skill ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ski-04pomiln*************j0</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -215,7 +231,14 @@ public class DeleteDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The operation was successful.                                 </li>
+             * <li><strong>false</strong>: The operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

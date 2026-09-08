@@ -169,7 +169,11 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The code content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>print(123)</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -178,7 +182,10 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly overwrite the file regardless of whether it has been modified by others.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);
@@ -187,7 +194,10 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Iac.
+         * <p>Specifies whether the file is an infrastructure as code template file. Set this parameter to true for YAML configuration files edited through the visual editor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder iac(Boolean iac) {
             this.putBodyParameter("Iac", iac);
@@ -196,7 +206,10 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Mtime.
+         * <p>The file modification time. The GetWorkspaceCode operation returns this mtime value. When calling SaveWorkspaceCode, include this mtime to compare against the server-side value. If the mtime does not match, the save fails, indicating that the server-side version has changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T10:11:12Z</p>
          */
         public Builder mtime(String mtime) {
             this.putBodyParameter("Mtime", mtime);
@@ -205,10 +218,11 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The file path to save.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;repos&quot;:[{&quot;repo&quot;:&quot;<a href="mailto:git@xxxx.git">git@xxxx.git</a>&quot;, &quot;branch&quot;:&quot;master&quot;}], &quot;exclude&quot;:[&quot;/.dms&quot;, &quot;/username&quot;]}</p>
+         * <p>/Workspace/code/test.py</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);
@@ -217,7 +231,10 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Repo.
+         * <p>The repository information. Pass this parameter when creating a git repo directory during the save action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:git@codeup.aliyun.com">git@codeup.aliyun.com</a>:test/abc.git</p>
          */
         public Builder repo(String repo) {
             this.putBodyParameter("Repo", repo);
@@ -226,6 +243,7 @@ public class SaveWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to publish (numeric ID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

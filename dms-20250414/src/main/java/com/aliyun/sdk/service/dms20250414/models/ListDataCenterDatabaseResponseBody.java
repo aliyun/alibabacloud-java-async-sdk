@@ -106,7 +106,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -389,7 +402,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             } 
 
             /**
-             * DatabaseDesc.
+             * <p>The database description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a sample database.</p>
              */
             public Builder databaseDesc(String databaseDesc) {
                 this.databaseDesc = databaseDesc;
@@ -397,7 +413,13 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * <ul>
+             * <li>When ImportType is FILE, this parameter indicates the file name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>diamonds.csv</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -405,7 +427,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6kv159u9vtpvl**********b8</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -413,7 +438,15 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <ul>
+             * <li>When ImportType is FILE:<ul>
+             * <li>File type: dbType indicates the file format, such as csv, xlsx, or xls.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>csv</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -421,7 +454,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DescUpdateTime.
+             * <p>The time when the database description was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder descUpdateTime(String descUpdateTime) {
                 this.descUpdateTime = descUpdateTime;
@@ -429,7 +465,13 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DmsDbId.
+             * <p>The ID of the Data Management database that hosts the instance.</p>
+             * <ul>
+             * <li>This parameter is not returned when ImportType is FILE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>73088962</p>
              */
             public Builder dmsDbId(Long dmsDbId) {
                 this.dmsDbId = dmsDbId;
@@ -437,7 +479,13 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DmsInstanceId.
+             * <p>The ID of the Data Management instance that hosts the instance.</p>
+             * <ul>
+             * <li>This parameter is not returned when ImportType is FILE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2740966</p>
              */
             public Builder dmsInstanceId(Long dmsInstanceId) {
                 this.dmsInstanceId = dmsInstanceId;
@@ -453,7 +501,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -461,7 +512,18 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ImportType.
+             * <p>The import type.</p>
+             * <ul>
+             * <li>FILE</li>
+             * <li>RDS</li>
+             * <li>ADB</li>
+             * <li>PolarDB</li>
+             * <li>Hologres</li>
+             * <li>DMS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE</p>
              */
             public Builder importType(String importType) {
                 this.importType = importType;
@@ -469,7 +531,13 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * <ul>
+             * <li>When ImportType is FILE, this parameter indicates the file ID in the data center.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>f-ean8u5881qk4*********xh5y</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -485,7 +553,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * IsInternal.
+             * <p>Indicates whether the dataset is built-in. Valid values:</p>
+             * <ul>
+             * <li>Y: The dataset is built-in.</li>
+             * <li>N: The dataset is not built-in.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder isInternal(String isInternal) {
                 this.isInternal = isInternal;
@@ -501,7 +576,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>999</p>
              */
             public Builder size(Long size) {
                 this.size = size;

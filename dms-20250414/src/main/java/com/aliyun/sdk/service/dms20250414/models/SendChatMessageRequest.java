@@ -256,7 +256,10 @@ public class SendChatMessageRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p><strong>[Optimized]</strong> This field is now automatically obtained by the backend. You do not need to specify this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_***</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -265,7 +268,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p><strong>[Optimized]</strong> This field is now automatically obtained by the backend. You do not need to specify this field when calling the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -274,7 +280,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <p>The data source information. This parameter can be left empty. This parameter supports only one data source. Use the DataSources parameter instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataSource(DataSource dataSource) {
             String dataSourceShrink = shrink(dataSource, "DataSource", "json");
@@ -284,7 +293,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * DataSources.
+         * <p>The detailed data source information. This parameter can be left empty.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             String dataSourcesShrink = shrink(dataSources, "DataSources", "json");
@@ -294,6 +303,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * <p>The message content to send to the Agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +316,20 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * MessageType.
+         * <p>The message type. Default value: <code>[primary]</code>.  </p>
+         * <ul>
+         * <li><p>For regular interactions with the Agent, set the message type to <code>[primary]</code>.</p>
+         * </li>
+         * <li><p>When the message is a response to the Agent\&quot;s Human-in-Loop question, set the type to <code>[additional]</code>.</p>
+         * </li>
+         * <li><p>When the message is intended to trigger report generation, set the type to <code>[report]</code>.</p>
+         * </li>
+         * <li><p>When the message is intended to cancel the current session, set the type to <code>[cancel]</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);
@@ -315,7 +338,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * ParentSessionId.
+         * <p>The parent session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20qrliuoo7p2vlsfg*****</p>
          */
         public Builder parentSessionId(String parentSessionId) {
             this.putQueryParameter("ParentSessionId", parentSessionId);
@@ -324,7 +350,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * Question.
+         * <p>This field is required when the message type is <code>additional</code>. Specify the specific question that the Agent asks the user through Human-in-Loop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Provide the criteria for calculating GMV</p>
          */
         public Builder question(String question) {
             this.putQueryParameter("Question", question);
@@ -333,7 +362,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * QuotedMessage.
+         * <p>The quoted content. This is typically used during interactions with the Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
          */
         public Builder quotedMessage(String quotedMessage) {
             this.putQueryParameter("QuotedMessage", quotedMessage);
@@ -342,7 +374,12 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * ReplyTo.
+         * <p><strong>Important</strong></p>
+         * <p>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after analysis is complete, you can leave reply_to empty or set it to &quot;0&quot;.  </p>
+         * <p>This field affects how the Agent decides to process the message. Incorrect values may lead to analysis results that do not meet expectations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder replyTo(String replyTo) {
             this.putQueryParameter("ReplyTo", replyTo);
@@ -351,7 +388,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * SessionConfig.
+         * <p>The special configuration for the current session. For the same session, only the configuration included in the first SendMessage call takes effect.</p>
          */
         public Builder sessionConfig(SessionConfig sessionConfig) {
             String sessionConfigShrink = shrink(sessionConfig, "SessionConfig", "json");
@@ -361,7 +398,15 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID. This is an optional field used for multi-turn sessions.</p>
+         * <ul>
+         * <li>You can start a session without specifying this field. The response includes the SessionID of the current session.</li>
+         * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a session.</li>
+         * <li>For multi-turn conversations (such as follow-up questions or confirming execution plans), specify the SessionID returned by the previous SendChatMessage call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sess_***</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -370,7 +415,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * TaskConfig.
+         * <p>The configuration items that affect only the current task.</p>
          */
         public Builder taskConfig(TaskConfig taskConfig) {
             String taskConfigShrink = shrink(taskConfig, "TaskConfig", "json");
@@ -380,7 +425,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * UserOssBucket.
+         * <p>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in built-in storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
          */
         public Builder userOssBucket(String userOssBucket) {
             this.putQueryParameter("UserOssBucket", userOssBucket);
@@ -389,7 +437,10 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1p71ne***baexrt3o</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -483,7 +534,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * AllowedColumns.
+             * <p>The list of columns that are allowed for querying in the current table. If this field is left empty, all columns can be queried. If specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure DataAgent analysis effectiveness, avoid specifying columns beyond the allowed scope in the DataAgent prompts, knowledge, or instructions modules. Otherwise, unauthorized SQL statements may be generated and blocked, which reduces DataAgent analysis speed and effectiveness.</p>
              */
             public Builder allowedColumns(java.util.List<String> allowedColumns) {
                 this.allowedColumns = allowedColumns;
@@ -491,7 +542,9 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DisallowedColumns.
+             * <p>The list of columns that are not allowed for querying in the current table. If this field is left empty, all columns <strong>can be queried</strong>. If specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked.  </p>
+             * <p>If both the disallowed list and the allowed list are configured, the disallowed list takes higher priority. For example, if Table 1 has columns A, B, C, and D, and columns A and B are configured as not queryable while columns B and C are configured as queryable, the final result is that only column C is queryable.</p>
+             * <p>To ensure DataAgent analysis effectiveness, avoid specifying columns beyond the allowed scope in the DataAgent prompts, knowledge, or instructions modules. Otherwise, unauthorized SQL statements may be generated and blocked, which reduces DataAgent analysis speed and effectiveness.</p>
              */
             public Builder disallowedColumns(java.util.List<String> disallowedColumns) {
                 this.disallowedColumns = disallowedColumns;
@@ -499,7 +552,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * RequiredRowFilter.
+             * <p>The required row filter condition for the current table. If this field is left empty, it is ignored. If specified, all SQL statements involving this table are validated to check whether they carry the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints are rejected. Ensure the validation condition format is correct.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region = \&quot;east\&quot;</p>
              */
             public Builder requiredRowFilter(String requiredRowFilter) {
                 this.requiredRowFilter = requiredRowFilter;
@@ -507,7 +563,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The table name to which the permission constraint rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -561,7 +620,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * Tables.
+             * <p>The table-level permission constraints for querying the current data source. Each item in the list represents the permission constraints for a table.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
@@ -758,7 +817,10 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * DataSourceId.
+             * <p>Deprecated. You do not need to specify this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -766,7 +828,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DataSourceType.
+             * <p>The data source type. Valid values: <code>[remote_data_center, database]</code>, indicating that the analysis is performed on a file or a database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remote_data_center</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -774,7 +839,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Database.
+             * <p>Deprecated. You do not need to specify this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -782,7 +850,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -790,7 +861,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DmsDatabaseId.
+             * <p>The ID of the database in Data Management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23******</p>
              */
             public Builder dmsDatabaseId(String dmsDatabaseId) {
                 this.dmsDatabaseId = dmsDatabaseId;
@@ -798,7 +872,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DmsInstanceId.
+             * <p>The ID of the instance in Data Management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12******</p>
              */
             public Builder dmsInstanceId(String dmsInstanceId) {
                 this.dmsInstanceId = dmsInstanceId;
@@ -806,7 +883,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Engine.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -814,7 +894,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -822,7 +905,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Location.
+             * <p>Deprecated. You do not need to specify this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>localhost</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -830,7 +916,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Permission.
+             * <p>The permission constraints for querying the current data source. The permission constraint feature is available through a canary release. This field does not take effect for users who are not included in the canary release.</p>
              */
             public Builder permission(Permission permission) {
                 this.permission = permission;
@@ -838,7 +924,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -846,7 +935,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Tables.
+             * <p>The list of table names to analyze.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
@@ -939,7 +1028,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * AllowedColumns.
+             * <p>The list of columns that are allowed for querying in the current table. If this field is left empty, all columns can be queried. If specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure DataAgent analysis effectiveness, avoid specifying columns beyond the allowed scope in the DataAgent prompts, knowledge, or instructions modules. Otherwise, unauthorized SQL statements may be generated and blocked, which reduces DataAgent analysis speed and effectiveness.</p>
              */
             public Builder allowedColumns(java.util.List<String> allowedColumns) {
                 this.allowedColumns = allowedColumns;
@@ -947,7 +1036,9 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DisallowedColumns.
+             * <p>The list of columns that are not allowed for querying in the current table. If this field is left empty, all columns <strong>can be queried</strong>. If specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked.  </p>
+             * <p>If both the disallowed list and the allowed list are configured, the disallowed list takes higher priority. For example, if Table 1 has columns A, B, C, and D, and columns A and B are configured as not queryable while columns B and C are configured as queryable, the final result is that only column C is queryable.</p>
+             * <p>To ensure DataAgent analysis effectiveness, avoid specifying columns beyond the allowed scope in the DataAgent prompts, knowledge, or instructions modules. Otherwise, unauthorized SQL statements may be generated and blocked, which reduces DataAgent analysis speed and effectiveness.</p>
              */
             public Builder disallowedColumns(java.util.List<String> disallowedColumns) {
                 this.disallowedColumns = disallowedColumns;
@@ -955,7 +1046,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * RequiredRowFilter.
+             * <p>The required row filter condition for the current table. If this field is left empty, it is ignored. If specified, all SQL statements involving this table are validated to check whether they carry the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints are rejected. Ensure the validation condition format is correct.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region = \&quot;east\&quot;</p>
              */
             public Builder requiredRowFilter(String requiredRowFilter) {
                 this.requiredRowFilter = requiredRowFilter;
@@ -963,7 +1057,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The table name to which the permission constraint rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1017,7 +1114,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * Tables.
+             * <p>The table-level permission constraints for querying the current data source. Each item in the list represents the permission constraints for a table.</p>
              */
             public Builder tables(java.util.List<PermissionTables> tables) {
                 this.tables = tables;
@@ -1214,7 +1311,10 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * DataSourceId.
+             * <p>Deprecated. You do not need to specify this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1222,7 +1322,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DataSourceType.
+             * <p>The data source type. Valid values: remote_data_center, database. These values indicate that the analysis is performed on a file or a database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remote_data_center</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -1230,7 +1333,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Database.
+             * <p>Deprecated. You do not need to specify this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -1238,7 +1344,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mydatabase</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -1246,7 +1355,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DmsDatabaseId.
+             * <p>The ID of the database in Data Management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123****</p>
              */
             public Builder dmsDatabaseId(String dmsDatabaseId) {
                 this.dmsDatabaseId = dmsDatabaseId;
@@ -1254,7 +1366,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * DmsInstanceId.
+             * <p>The ID of the instance in Data Management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>248*****</p>
              */
             public Builder dmsInstanceId(String dmsInstanceId) {
                 this.dmsInstanceId = dmsInstanceId;
@@ -1262,7 +1377,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Engine.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1270,7 +1388,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-4w*******</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -1278,7 +1399,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Location.
+             * <p>Deprecated. You do not need to specify this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>localhost</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1286,7 +1410,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Permission.
+             * <p>The permission constraints for querying the current data source. The permission constraint feature is available through a canary release. This field does not take effect for users who are not included in the canary release.</p>
              */
             public Builder permission(DataSourcesPermission permission) {
                 this.permission = permission;
@@ -1294,7 +1418,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1302,7 +1429,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * Tables.
+             * <p>The list of table names to analyze.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
@@ -1356,7 +1483,16 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p>未配置表的默认行为：allow=放行（默认），deny=拒绝</p>
+             * <p>The default action for table-level permissions. This parameter controls whether tables that are not configured in DataSources.[item].Permission can be queried. Valid values: allow, deny.</p>
+             * <ul>
+             * <li><p>allow (default): works in blacklist mode. By default, all tables can be queried, and the actual permissions are subject to the permissions configured on the Data Management side. Row-level and column-level permissions are enforced only when you configure <strong>row-level and column-level</strong> permissions in DataSources.[item].Permission.</p>
+             * </li>
+             * <li><p>deny (must be manually specified): works in whitelist mode. By default, no tables can be queried. A table can be queried only when you configure permissions for it in DataSources.[item].Permission. You can grant full access to a table by not configuring any row-level or column-level restrictions.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>allow</p>
              */
             public Builder defaultAction(String defaultAction) {
                 this.defaultAction = defaultAction;
@@ -1384,16 +1520,16 @@ public class SendChatMessageRequest extends Request {
         private String customAgentStage;
 
         @com.aliyun.core.annotation.NameInMap("EnableSearch")
-        private String enableSearch;
+        private Boolean enableSearch;
 
         @com.aliyun.core.annotation.NameInMap("KbUuidList")
-        private String kbUuidList;
+        private java.util.List<String> kbUuidList;
 
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
         @com.aliyun.core.annotation.NameInMap("McpServerIds")
-        private String mcpServerIds;
+        private java.util.List<String> mcpServerIds;
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -1465,14 +1601,14 @@ public class SendChatMessageRequest extends Request {
         /**
          * @return enableSearch
          */
-        public String getEnableSearch() {
+        public Boolean getEnableSearch() {
             return this.enableSearch;
         }
 
         /**
          * @return kbUuidList
          */
-        public String getKbUuidList() {
+        public java.util.List<String> getKbUuidList() {
             return this.kbUuidList;
         }
 
@@ -1486,7 +1622,7 @@ public class SendChatMessageRequest extends Request {
         /**
          * @return mcpServerIds
          */
-        public String getMcpServerIds() {
+        public java.util.List<String> getMcpServerIds() {
             return this.mcpServerIds;
         }
 
@@ -1556,10 +1692,10 @@ public class SendChatMessageRequest extends Request {
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
-            private String enableSearch; 
-            private String kbUuidList; 
+            private Boolean enableSearch; 
+            private java.util.List<String> kbUuidList; 
             private String language; 
-            private String mcpServerIds; 
+            private java.util.List<String> mcpServerIds; 
             private String mode; 
             private PermissionConfig permissionConfig; 
             private String planMode; 
@@ -1592,7 +1728,10 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID. A custom agent is an entity used to customize the analysis process. You can create one in the DataAgent console or by calling the CreateCustomAgent operation. The custom agent ID is a string that starts with <code>ca-</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-asfkjhqwe***aesrfqa</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -1600,7 +1739,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * CustomAgentStage.
+             * <p>The stage of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder customAgentStage(String customAgentStage) {
                 this.customAgentStage = customAgentStage;
@@ -1608,23 +1750,32 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * EnableSearch.
+             * <p>Specifies whether to enable web search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
-            public Builder enableSearch(String enableSearch) {
+            public Builder enableSearch(Boolean enableSearch) {
                 this.enableSearch = enableSearch;
                 return this;
             }
 
             /**
-             * KbUuidList.
+             * <p>The list of knowledge base IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dasd***cc211</p>
              */
-            public Builder kbUuidList(String kbUuidList) {
+            public Builder kbUuidList(java.util.List<String> kbUuidList) {
                 this.kbUuidList = kbUuidList;
                 return this;
             }
 
             /**
-             * Language.
+             * <p>Currently only Chinese and English are supported. The default value is Chinese. Only uppercase values are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENGLISH</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -1632,15 +1783,26 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * McpServerIds.
+             * <p>The MCP server IDs in the session configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2q1tu90**********6uttu2nw</p>
              */
-            public Builder mcpServerIds(String mcpServerIds) {
+            public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
                 this.mcpServerIds = mcpServerIds;
                 return this;
             }
 
             /**
-             * Mode.
+             * <p>The mode. Valid values:</p>
+             * <ul>
+             * <li><strong>ASK_DATA</strong>: data query mode.</li>
+             * <li><strong>ANALYSIS</strong>: analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: insight mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANALYSIS</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1648,7 +1810,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>session 级权限生效机制配置，仅含未配置表的默认行为</p>
+             * <p>The session level data permission settings. If this parameter is set multiple times across multiple turns within the same session, the last setting takes effect.</p>
              */
             public Builder permissionConfig(PermissionConfig permissionConfig) {
                 this.permissionConfig = permissionConfig;
@@ -1656,7 +1818,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * PlanMode.
+             * <p>Specifies whether to enable the plan. Valid values: disable, enable, force. Default value: enable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disable</p>
              */
             public Builder planMode(String planMode) {
                 this.planMode = planMode;
@@ -1664,7 +1829,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * ReportWaterMark.
+             * <p>The text of up to 64 characters that is used as a watermark in the generated PDF report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample-watermark</p>
              */
             public Builder reportWaterMark(String reportWaterMark) {
                 this.reportWaterMark = reportWaterMark;
@@ -1672,7 +1840,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * SkipAskHuman.
+             * <p>Specifies whether to disable user inquiries during the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder skipAskHuman(Boolean skipAskHuman) {
                 this.skipAskHuman = skipAskHuman;
@@ -1680,7 +1851,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * SkipPlan.
+             * <p>Specifies whether to skip the plan confirmation step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder skipPlan(Boolean skipPlan) {
                 this.skipPlan = skipPlan;
@@ -1688,7 +1862,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * SkipSqlConfirm.
+             * <p>Specifies whether to skip all SQL confirmations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder skipSqlConfirm(Boolean skipSqlConfirm) {
                 this.skipSqlConfirm = skipSqlConfirm;
@@ -1696,7 +1873,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * SkipWebReportConfirm.
+             * <p>Specifies whether to skip the web report generation confirmation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder skipWebReportConfirm(Boolean skipWebReportConfirm) {
                 this.skipWebReportConfirm = skipWebReportConfirm;
@@ -1704,7 +1884,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * UserSpecifiedSkillList.
+             * <p>The list of user-specified skills.</p>
              */
             public Builder userSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
                 this.userSpecifiedSkillList = userSpecifiedSkillList;
@@ -1784,7 +1964,10 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * ReportPrompt.
+             * <p>The prompt that the report must follow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>generate a report</p>
              */
             public Builder reportPrompt(String reportPrompt) {
                 this.reportPrompt = reportPrompt;
@@ -1792,7 +1975,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * ReportTheme.
+             * <p>The report theme. Valid values: default, journal, legacy, and neobrutalism.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder reportTheme(String reportTheme) {
                 this.reportTheme = reportTheme;
@@ -1800,7 +1986,10 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * ReportType.
+             * <p>The service type. Valid values: TextReport and WebReport, which indicate that the task generates a text report or a web report. Currently, only WebReport is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebReport</p>
              */
             public Builder reportType(String reportType) {
                 this.reportType = reportType;
@@ -1854,7 +2043,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * ReportConfig.
+             * <p>The configuration of the report rule. Only when MesageType is set to REPORT, a report task is executed based on this configuration.</p>
              */
             public Builder reportConfig(ReportConfig reportConfig) {
                 this.reportConfig = reportConfig;

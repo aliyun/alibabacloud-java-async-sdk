@@ -132,7 +132,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_FOUND</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,7 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -311,7 +329,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * CuQuota.
+             * <p>The CU quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder cuQuota(Long cuQuota) {
                 this.cuQuota = cuQuota;
@@ -319,7 +340,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * CuQuotaUsage.
+             * <p>The amount of CU quota used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cuQuotaUsage(Long cuQuotaUsage) {
                 this.cuQuotaUsage = cuQuotaUsage;
@@ -327,7 +351,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the billing instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp16pha0zu99yybi59qr</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -335,7 +362,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NotebookFreeQuotaAvailable.
+             * <p>The available free notebook quota (in CU-H).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notebookFreeQuotaAvailable(Long notebookFreeQuotaAvailable) {
                 this.notebookFreeQuotaAvailable = notebookFreeQuotaAvailable;
@@ -343,7 +373,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NotebookFreeQuotaTotal.
+             * <p>The total free notebook quota (in CU-H).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notebookFreeQuotaTotal(Long notebookFreeQuotaTotal) {
                 this.notebookFreeQuotaTotal = notebookFreeQuotaTotal;
@@ -351,7 +384,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +395,10 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20923*****7291</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

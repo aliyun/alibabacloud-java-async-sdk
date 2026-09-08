@@ -181,7 +181,10 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * CatalogUuid.
+         * <p>The UUID of the associated folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-HZ-OfjcNc2z***</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.putQueryParameter("CatalogUuid", catalogUuid);
@@ -190,7 +193,10 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.putQueryParameter("DatabaseUuid", databaseUuid);
@@ -199,7 +205,10 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The semantic description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order summary</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +217,14 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * DocFormat.
+         * <p>The document type of the semantic model. Valid values:</p>
+         * <ul>
+         * <li>JSON</li>
+         * <li>YAML</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder docFormat(String docFormat) {
             this.putQueryParameter("DocFormat", docFormat);
@@ -217,7 +233,23 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Document.
+         * <p>The document definition of the semantic model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;version&quot;: &quot;0.2.0.dev0&quot;,
+         *   &quot;semantic_model&quot;: [
+         *     {
+         *       &quot;name&quot;: &quot;sales&quot;,
+         *       &quot;datasets&quot;: [
+         *         {
+         *           &quot;name&quot;: &quot;orders&quot;,
+         *           &quot;source&quot;: &quot;analytics.public.orders&quot;
+         *         }
+         *       ]
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder document(String document) {
             this.putQueryParameter("Document", document);
@@ -226,6 +258,7 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the knowledge.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +271,10 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of the semantic model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sales</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,7 +283,10 @@ public class UpdateOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The semantic title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order total</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

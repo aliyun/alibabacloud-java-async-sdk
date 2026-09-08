@@ -67,7 +67,10 @@ public class DLOrder extends TeaModel {
         } 
 
         /**
-         * Col.
+         * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col1</p>
          */
         public Builder col(String col) {
             this.col = col;
@@ -75,7 +78,10 @@ public class DLOrder extends TeaModel {
         }
 
         /**
-         * Order.
+         * <p>The position of the column in the sort.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder order(Integer order) {
             this.order = order;

@@ -106,7 +106,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details of the document.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource not found kb-***</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID. Provide this ID for troubleshooting if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -347,7 +365,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +376,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * DocsCount.
+             * <p>The number of chunks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder docsCount(Long docsCount) {
                 this.docsCount = docsCount;
@@ -363,7 +387,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentLoaderName.
+             * <p>The name of the document loader.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADBPGLoader</p>
              */
             public Builder documentLoaderName(String documentLoaderName) {
                 this.documentLoaderName = documentLoaderName;
@@ -371,7 +398,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * FileExt.
+             * <p>The file extension of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md</p>
              */
             public Builder fileExt(String fileExt) {
                 this.fileExt = fileExt;
@@ -379,7 +409,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The size of the document in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20307</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -387,7 +420,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the document, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-22 22:59:35</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -395,7 +431,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time of the document, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-24 21:22:53</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -403,7 +442,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * KbUuid.
+             * <p>The ID of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-***</p>
              */
             public Builder kbUuid(String kbUuid) {
                 this.kbUuid = kbUuid;
@@ -411,7 +453,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * Keywords.
+             * <p>The keywords of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;test&quot;,&quot;abc&quot;]</p>
              */
             public Builder keywords(String keywords) {
                 this.keywords = keywords;
@@ -419,7 +464,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -427,7 +475,22 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The document state. Possible values are:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Parsing complete.</p>
+             * </li>
+             * <li><p><strong>-1</strong>: Not parsed.</p>
+             * </li>
+             * <li><p><strong>-2</strong>: Parsing in progress.</p>
+             * </li>
+             * <li><p><strong>-3</strong>: Parsing failed.</p>
+             * </li>
+             * <li><p><strong>-4</strong>: Parsing canceled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder state(Long state) {
                 this.state = state;
@@ -435,7 +498,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test document.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -443,7 +509,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * TextSplitterName.
+             * <p>The name of the text splitter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChineseRecursiveTextSplitter</p>
              */
             public Builder textSplitterName(String textSplitterName) {
                 this.textSplitterName = textSplitterName;

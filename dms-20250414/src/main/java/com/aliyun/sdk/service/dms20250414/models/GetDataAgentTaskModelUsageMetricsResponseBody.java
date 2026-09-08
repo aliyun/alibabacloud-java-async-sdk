@@ -106,7 +106,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of TPM time series metrics for model usage, returned in chronological order.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40411</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-***7695C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +230,10 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735660800</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -225,7 +241,10 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735660860</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -233,7 +252,10 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Tpm.
+             * <p>The TPM for this time series data point, which is the number of tokens consumed within the statistical interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder tpm(Long tpm) {
                 this.tpm = tpm;

@@ -184,6 +184,7 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the associated folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +197,10 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.putQueryParameter("DatabaseUuid", databaseUuid);
@@ -205,7 +209,10 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The semantic description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order summary</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -214,6 +221,7 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The semantic model document type. Valid values: JSON and YAML.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +234,7 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The semantic model document definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,6 +260,7 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The source of the semantic model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +273,10 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The semantic model tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_sales</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -272,7 +285,10 @@ public class ImportOneMetaOssieModelRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The semantic title. If the value is empty, the title is extracted from the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order total</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

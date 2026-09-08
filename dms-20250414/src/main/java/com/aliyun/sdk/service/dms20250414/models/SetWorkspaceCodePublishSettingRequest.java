@@ -98,6 +98,7 @@ public class SetWorkspaceCodePublishSettingRequest extends Request {
         }
 
         /**
+         * <p>The deployment configuration, provided as a JSON string. The repos array specifies the Git repositories in the workspace, primarily for setting the branch for publishing. The exclude parameter specifies which directories to skip.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class SetWorkspaceCodePublishSettingRequest extends Request {
         }
 
         /**
+         * <p>The numeric ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

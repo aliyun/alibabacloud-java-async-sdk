@@ -101,7 +101,10 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -110,7 +113,10 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * IsSessionShareEnabled.
+         * <p>Specifies whether session sharing is enabled within the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
             this.putQueryParameter("IsSessionShareEnabled", isSessionShareEnabled);
@@ -119,7 +125,10 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceDesc.
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Space for test</p>
          */
         public Builder workspaceDesc(String workspaceDesc) {
             this.putQueryParameter("WorkspaceDesc", workspaceDesc);
@@ -128,7 +137,10 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspaceTest</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);

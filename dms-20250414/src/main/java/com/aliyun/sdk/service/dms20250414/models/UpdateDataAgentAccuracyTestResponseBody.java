@@ -106,7 +106,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -337,7 +350,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             } 
 
             /**
-             * AccuracyTest.
+             * <p>The ID of the accuracy test item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
              */
             public Builder accuracyTest(String accuracyTest) {
                 this.accuracyTest = accuracyTest;
@@ -356,7 +372,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
-             * Dataset.
+             * <p>The data source. We recommend that you configure this parameter in a custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -380,7 +399,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationPrompt.
+             * <p>The accuracy evaluation criteria. An empty value indicates the default criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder evaluationPrompt(String evaluationPrompt) {
                 this.evaluationPrompt = evaluationPrompt;
@@ -388,7 +410,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -404,7 +429,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The analysis mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -428,7 +456,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8wfig6l33n4f4xxxxxxxxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

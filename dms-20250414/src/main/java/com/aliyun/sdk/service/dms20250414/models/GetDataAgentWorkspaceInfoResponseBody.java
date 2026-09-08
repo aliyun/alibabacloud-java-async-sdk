@@ -106,7 +106,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D2-*****-A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -321,7 +333,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the session. Unit: seconds. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765960516</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -329,7 +344,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The UID of the workspace creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -345,7 +363,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The most recent modification time of the workspace. Unit: seconds. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765961516</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -353,7 +374,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name of the user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -361,7 +385,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMember.
+             * <p>The number of members in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalMember(String totalMember) {
                 this.totalMember = totalMember;
@@ -377,7 +404,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceDesc.
+             * <p>The description of the collaborative workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>space for test</p>
              */
             public Builder workspaceDesc(String workspaceDesc) {
                 this.workspaceDesc = workspaceDesc;
@@ -385,7 +415,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the collaborative workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20923*****7291</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -393,7 +426,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspaceTest</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -401,7 +437,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceStatus.
+             * <p>The status of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder workspaceStatus(String workspaceStatus) {
                 this.workspaceStatus = workspaceStatus;

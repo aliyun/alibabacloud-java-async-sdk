@@ -106,7 +106,10 @@ public class GetDataAgentMcpResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The MCP Server details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;uuid&quot;:&quot;	44lg<em><strong>z65&quot;,&quot;name&quot;:&quot;mcp&quot;,&quot;workspaceUuid&quot;:&quot;	atvx</strong></em>xmz&quot;,&quot;region&quot;:&quot;cn-hangzhou&quot;,&quot;netType&quot;:&quot;public&quot;,&quot;transportType&quot;:&quot;sse&quot;,&quot;state&quot;:&quot;ready&quot;,&quot;enable&quot;:true}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class GetDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The return code. The value success is returned if the request was successful. An error code is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +128,10 @@ public class GetDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message that describes the reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource Not exist,Mcp Server you provide is not exist</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +139,10 @@ public class GetDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e***000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

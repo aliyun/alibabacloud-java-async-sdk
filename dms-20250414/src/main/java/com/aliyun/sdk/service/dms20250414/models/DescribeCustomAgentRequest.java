@@ -73,7 +73,10 @@ public class DescribeCustomAgentRequest extends Request {
         } 
 
         /**
-         * CustomAgentId.
+         * <p>The custom agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-4y3ca4khkcu**********ysf</p>
          */
         public Builder customAgentId(String customAgentId) {
             this.putQueryParameter("CustomAgentId", customAgentId);
@@ -82,7 +85,10 @@ public class DescribeCustomAgentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56kv1pvl9uvt9**********bb</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

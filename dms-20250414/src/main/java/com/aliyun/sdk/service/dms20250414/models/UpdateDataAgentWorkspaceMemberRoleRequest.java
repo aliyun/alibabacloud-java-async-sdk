@@ -101,7 +101,10 @@ public class UpdateDataAgentWorkspaceMemberRoleRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -110,7 +113,10 @@ public class UpdateDataAgentWorkspaceMemberRoleRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>The UID of the member whose role you want to change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20282*****7591</p>
          */
         public Builder memberId(String memberId) {
             this.putQueryParameter("MemberId", memberId);
@@ -119,7 +125,10 @@ public class UpdateDataAgentWorkspaceMemberRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The role to assign to the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -128,7 +137,10 @@ public class UpdateDataAgentWorkspaceMemberRoleRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

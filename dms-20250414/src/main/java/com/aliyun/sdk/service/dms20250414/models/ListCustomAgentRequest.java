@@ -129,7 +129,10 @@ public class ListCustomAgentRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +141,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +153,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * QueryAllReleased.
+         * <p>Specifies whether to query all custom agents in the published state. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryAllReleased(Boolean queryAllReleased) {
             this.putQueryParameter("QueryAllReleased", queryAllReleased);
@@ -156,7 +165,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The search keyword. Supports fuzzy search by custom agent name and description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAgent</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -165,7 +177,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -174,7 +189,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56kv1pvl9uvt9**********bb</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

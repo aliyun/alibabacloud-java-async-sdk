@@ -80,7 +80,10 @@ public class DLColumn extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The comment of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>from deserializer</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -88,7 +91,10 @@ public class DLColumn extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -96,7 +102,10 @@ public class DLColumn extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The data type of the column. Valid values: array, bigint, binary, boolean, char, date, decimal, double, float, int, interval, map, set, smallint, string, struct, timestamp, tinyint, union, and varchar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         public Builder type(String type) {
             this.type = type;

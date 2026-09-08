@@ -106,7 +106,7 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>True: The request was successful.                                 </li>
+         * <li>False: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -194,7 +207,10 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * AccuracyTestTaskId.
+             * <p>The ID of the accuracy test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>692abb8f-xxx-77fec862db34</p>
              */
             public Builder accuracyTestTaskId(String accuracyTestTaskId) {
                 this.accuracyTestTaskId = accuracyTestTaskId;

@@ -239,7 +239,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * ChunkOverlap.
+         * <p>The number of overlapping characters between adjacent chunks. This value cannot exceed <code>ChunkSize</code>. The default is 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder chunkOverlap(Long chunkOverlap) {
             this.putBodyParameter("ChunkOverlap", chunkOverlap);
@@ -248,7 +251,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * ChunkSize.
+         * <p>The size of each document chunk. The default is 250, and the maximum is 2,048.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250</p>
          */
         public Builder chunkSize(Long chunkSize) {
             this.putBodyParameter("ChunkSize", chunkSize);
@@ -257,7 +263,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -266,7 +275,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * DocumentLoaderName.
+         * <p>The name of the document loader. The default is <code>ADBPGLoader</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADBPGLoader</p>
          */
         public Builder documentLoaderName(String documentLoaderName) {
             this.putBodyParameter("DocumentLoaderName", documentLoaderName);
@@ -275,6 +287,7 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
+         * <p>The name of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,6 +300,7 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,6 +313,7 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
+         * <p>The OSS location of the input file. Construct this path by appending the file name to the <code>UploadDir</code> value returned by the <code>DescribeKnowledgeBaseUploadSignature</code> operation.</p>
          * <p>This parameter is required.</p>
          */
         public Builder location(String location) {
@@ -308,7 +323,15 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * Separators.
+         * <p>An array of strings used to split text.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p>This critical parameter affects data chunking results and is related to the splitter specified by <code>TextSplitterName</code>.</p>
+         * </li>
+         * <li><p>In most cases, you can omit this parameter. The service automatically assigns default separators based on <code>TextSplitterName</code>.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
          */
         public Builder separators(java.util.List<String> separators) {
             String separatorsShrink = shrink(separators, "Separators", "json");
@@ -318,7 +341,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * SplitterModel.
+         * <p>The splitter model to use. The default is <code>qwen3-8b</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-8b</p>
          */
         public Builder splitterModel(String splitterModel) {
             this.putBodyParameter("SplitterModel", splitterModel);
@@ -327,7 +353,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * TextSplitterName.
+         * <p>The name of the text splitter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChineseRecursiveTextSplitter</p>
          */
         public Builder textSplitterName(String textSplitterName) {
             this.putBodyParameter("TextSplitterName", textSplitterName);
@@ -336,7 +365,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * VlEnhance.
+         * <p>Specifies whether to enable visual-linguistic (VL) enhanced content recognition for complex documents. The default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vlEnhance(Boolean vlEnhance) {
             this.putBodyParameter("VlEnhance", vlEnhance);
@@ -345,7 +377,10 @@ public class UploadDocumentRequest extends Request {
         }
 
         /**
-         * ZhTitleEnhance.
+         * <p>Specifies whether to enable title enhancement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder zhTitleEnhance(Boolean zhTitleEnhance) {
             this.putBodyParameter("ZhTitleEnhance", zhTitleEnhance);

@@ -111,7 +111,10 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword used to search for data catalog names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -120,7 +123,10 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. Call the GetUserActiveTenant or ListUserTenants operation to get the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -129,7 +135,10 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

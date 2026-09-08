@@ -106,7 +106,10 @@ public class DeleteDataAgentMcpResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the deletion status is updated. A value of true indicates that at least one matching record has been logically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class DeleteDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The return code. The value success is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +128,10 @@ public class DeleteDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when a system-level request failure occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready MCP Servers not found</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +139,10 @@ public class DeleteDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e84***44</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DeleteDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

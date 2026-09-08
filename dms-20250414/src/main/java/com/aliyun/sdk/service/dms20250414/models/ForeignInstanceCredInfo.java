@@ -67,7 +67,7 @@ public class ForeignInstanceCredInfo extends TeaModel {
         } 
 
         /**
-         * CredInfo.
+         * <p>The information about the credential.</p>
          */
         public Builder credInfo(java.util.Map<String, String> credInfo) {
             this.credInfo = credInfo;
@@ -75,7 +75,10 @@ public class ForeignInstanceCredInfo extends TeaModel {
         }
 
         /**
-         * CredType.
+         * <p>The type of the credential. Set the value to DEFAULT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder credType(String credType) {
             this.credType = credType;

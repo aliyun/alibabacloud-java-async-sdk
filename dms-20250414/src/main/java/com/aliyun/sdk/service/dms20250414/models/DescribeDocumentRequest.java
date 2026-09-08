@@ -98,6 +98,7 @@ public class DescribeDocumentRequest extends Request {
         }
 
         /**
+         * <p>The name of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DescribeDocumentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

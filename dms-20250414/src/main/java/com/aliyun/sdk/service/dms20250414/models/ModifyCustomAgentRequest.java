@@ -308,6 +308,7 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
+         * <p>The custom agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +321,10 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -329,7 +333,89 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * DataJson.
+         * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
+         * <ul>
+         * <li>Common parameter description<ul>
+         * <li>tableFlag: true indicates a specified data scope.</li>
+         * <li>scope: personal is a fixed value.</li>
+         * <li>personal: pass parameters for file or database types.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p><strong>File type</strong>. Pass parameters in the following format:</p>
+         * <ul>
+         * <li>DataSourceType: remote_data_center is a fixed value.</li>
+         * <li>FileId: the file ID.</li>
+         * <li>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name.</li>
+         * <li>Tables: the table name returned by the ListDataCenterTable operation.</li>
+         * <li>TableIds: the TableId returned by the ListDataCenterTable operation.</li>
+         * <li>RegionId: the current region.</li>
+         * </ul>
+         * <pre><code>{
+         *   &quot;tableFlag&quot;: true,
+         *   &quot;scope&quot;: &quot;personal&quot;,
+         *   &quot;personal&quot;: {
+         *     &quot;DataSourceType&quot;: &quot;remote_data_center&quot;,
+         *     &quot;FileId&quot;: &quot;f-f0jksn001ibmkoo********6v2zn6&quot;,
+         *     &quot;Database&quot;: &quot;diamonds.csv&quot;,
+         *     &quot;Tables&quot;: [
+         *       &quot;diamonds&quot;
+         *     ],
+         *     &quot;TableIds&quot;: [
+         *       &quot;35hfn94pxl********50pi&quot;
+         *     ],
+         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+         *   }
+         * }
+         * </code></pre>
+         * <p><strong>Database type</strong>. Pass parameters as follows:</p>
+         * <ul>
+         * <li>DataSourceType: database is a fixed value.</li>
+         * <li>DmsInstanceId: the DMS instance ID returned by the data center operation.</li>
+         * <li>DmsDatabaseId: the DMS database ID returned by the data center operation.</li>
+         * <li>FileId: the instance name (deprecated).</li>
+         * <li>DbName: the database name returned by the data center operation.</li>
+         * <li>Database: the database name returned by the data center operation.</li>
+         * <li>Tables: the table name returned by the data center operation.</li>
+         * <li>TableIds: the TableId returned by the data center operation.</li>
+         * <li>Engine: the engine type (mysql or postgresql).</li>
+         * <li>RegionId: the current region.</li>
+         * </ul>
+         * <pre><code>{
+         *   &quot;tableFlag&quot;: true,
+         *   &quot;scope&quot;: &quot;personal&quot;,
+         *   &quot;personal&quot;: {
+         *     &quot;DataSourceType&quot;: &quot;database&quot;,
+         *     &quot;DmsInstanceId&quot;: &quot;284***8&quot;,
+         *     &quot;DmsDatabaseId&quot;: &quot;769***45&quot;,
+         *     &quot;FileId&quot;: &quot;pgm-bp15095e*******6t&quot;,
+         *     &quot;DbName&quot;: &quot;pg_catalog&quot;,
+         *     &quot;Database&quot;: &quot;pg_catalog&quot;,
+         *     &quot;Tables&quot;: [
+         *       &quot;pg_aggregate&quot;
+         *     ],
+         *     &quot;TableIds&quot;: [
+         *       &quot;5263****31&quot;
+         *     ],
+         *     &quot;Engine&quot;: &quot;postgresql&quot;,
+         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+         *   }
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;tableFlag&quot; : true,
+         *   &quot;scope&quot; : &quot;personal&quot;,
+         *   &quot;personal&quot; : {
+         *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
+         *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
+         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
+         *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
+         *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
+         *   }
+         * }</p>
          */
         public Builder dataJson(String dataJson) {
             this.putQueryParameter("DataJson", dataJson);
@@ -338,7 +424,10 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgentTestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -347,7 +436,7 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * ExecutionConfig.
+         * <p>The execution configuration.</p>
          */
         public Builder executionConfig(ExecutionConfig executionConfig) {
             String executionConfigShrink = shrink(executionConfig, "ExecutionConfig", "json");
@@ -357,7 +446,18 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * Instruction.
+         * <p>The instruction.</p>
+         * <ul>
+         * <li>Input limit: up to 10,000 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Analysis framework:</p>
+         * <ol>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations.</li>
+         * <li>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses.</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points</li>
+         * </ol>
          */
         public Builder instruction(String instruction) {
             this.putQueryParameter("Instruction", instruction);
@@ -366,7 +466,19 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * Knowledge.
+         * <p>The knowledge.</p>
+         * <ul>
+         * <li>Input limit: up to 10,000 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Core metric definitions:</p>
+         * <ol>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</li>
+         * <li>Order volume is the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</li>
+         * </ol>
          */
         public Builder knowledge(String knowledge) {
             this.putQueryParameter("Knowledge", knowledge);
@@ -375,7 +487,7 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * KnowledgeConfigList.
+         * <p>The external knowledge base list.</p>
          */
         public Builder knowledgeConfigList(java.util.List<KnowledgeConfigList> knowledgeConfigList) {
             String knowledgeConfigListShrink = shrink(knowledgeConfigList, "KnowledgeConfigList", "json");
@@ -395,7 +507,10 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgentTestName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -404,7 +519,7 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * RelatedSessionId.
+         * <p>The ID of the referenced historical session.</p>
          */
         public Builder relatedSessionId(String relatedSessionId) {
             this.putQueryParameter("RelatedSessionId", relatedSessionId);
@@ -413,7 +528,7 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * ScheduleTaskConfig.
+         * <p>The scheduled task configuration.</p>
          */
         public Builder scheduleTaskConfig(ScheduleTaskConfig scheduleTaskConfig) {
             String scheduleTaskConfigShrink = shrink(scheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -423,7 +538,13 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * TextReportConfig.
+         * <p>The text report format.</p>
+         * <ul>
+         * <li>Input limit: up to 10,000 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
          */
         public Builder textReportConfig(String textReportConfig) {
             this.putQueryParameter("TextReportConfig", textReportConfig);
@@ -442,7 +563,13 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * WebReportConfig.
+         * <p>The web report format.</p>
+         * <ul>
+         * <li>Input limit: up to 50,000 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
          */
         public Builder webReportConfig(String webReportConfig) {
             this.putQueryParameter("WebReportConfig", webReportConfig);
@@ -460,7 +587,10 @@ public class ModifyCustomAgentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56kv1pvl9uvt9**********bb</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -713,7 +843,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * SkipAskHuman.
+             * <p>Specifies whether to disable user inquiries during the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipAskHuman(Boolean skipAskHuman) {
                 this.skipAskHuman = skipAskHuman;
@@ -721,7 +854,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * SkipPlan.
+             * <p>Specifies whether to skip the plan confirmation step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipPlan(Boolean skipPlan) {
                 this.skipPlan = skipPlan;
@@ -729,7 +865,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * SkipSqlConfirm.
+             * <p>Specifies whether to skip all SQL confirmations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipSqlConfirm(Boolean skipSqlConfirm) {
                 this.skipSqlConfirm = skipSqlConfirm;
@@ -737,7 +876,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * SkipWebReportConfirm.
+             * <p>Specifies whether to skip the web report rendering confirmation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipWebReportConfirm(Boolean skipWebReportConfirm) {
                 this.skipWebReportConfirm = skipWebReportConfirm;
@@ -817,7 +959,13 @@ public class ModifyCustomAgentRequest extends Request {
             } 
 
             /**
-             * AccessType.
+             * <p>The access type.</p>
+             * <ul>
+             * <li>mcp: access through MCP.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -833,7 +981,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * McpServerId.
+             * <p>The ID of the MCP Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nhdpt9adf6ac**********ca</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -1030,7 +1181,10 @@ public class ModifyCustomAgentRequest extends Request {
             } 
 
             /**
-             * CronExpression.
+             * <p>The cron expression for timed scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0,1 ? * 1-7</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -1038,7 +1192,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * Query.
+             * <p>The query for the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyze this data and provide a brief report</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1046,7 +1203,10 @@ public class ModifyCustomAgentRequest extends Request {
             }
 
             /**
-             * RelatedSessionId.
+             * <p>The ID of the referenced historical session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4m24*****mg7j2v</p>
              */
             public Builder relatedSessionId(String relatedSessionId) {
                 this.relatedSessionId = relatedSessionId;

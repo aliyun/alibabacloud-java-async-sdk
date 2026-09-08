@@ -197,7 +197,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         } 
 
         /**
-         * Checksum.
+         * <p>A checksum to verify the table\&quot;s data integrity.</p>
          */
         public Builder checksum(String checksum) {
             this.checksum = checksum;
@@ -205,7 +205,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time the table was created, in UTC format (<code>YYYY-MM-DDThh:mm:ssZ</code>).</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -213,7 +213,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * DataBytes.
+         * <p>The total size of the table\&quot;s data, in bytes.</p>
          */
         public Builder dataBytes(Long dataBytes) {
             this.dataBytes = dataBytes;
@@ -221,7 +221,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * Encoding.
+         * <p>The character encoding of the table.</p>
          */
         public Builder encoding(String encoding) {
             this.encoding = encoding;
@@ -229,7 +229,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The table\&quot;s storage engine, such as <code>InnoDB</code>.</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -237,7 +237,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * FullChecksum.
+         * <p>A checksum of the table\&quot;s data and indexes.</p>
          */
         public Builder fullChecksum(String fullChecksum) {
             this.fullChecksum = fullChecksum;
@@ -245,7 +245,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * IndexBytes.
+         * <p>The total size of the table\&quot;s indexes, in bytes.</p>
          */
         public Builder indexBytes(Long indexBytes) {
             this.indexBytes = indexBytes;
@@ -253,7 +253,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * LastDdlTime.
+         * <p>The timestamp of the last DDL (Data Definition Language) operation, in UTC format (<code>YYYY-MM-DDThh:mm:ssZ</code>).</p>
          */
         public Builder lastDdlTime(String lastDdlTime) {
             this.lastDdlTime = lastDdlTime;
@@ -261,7 +261,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * NumRows.
+         * <p>The number of rows in the table.</p>
          */
         public Builder numRows(Long numRows) {
             this.numRows = numRows;
@@ -269,7 +269,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * RefInfo.
+         * <p>The table\&quot;s reference information.</p>
          */
         public Builder refInfo(String refInfo) {
             this.refInfo = refInfo;
@@ -277,7 +277,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * StorageCapacity.
+         * <p>The table\&quot;s total storage capacity, in bytes.</p>
          */
         public Builder storageCapacity(Long storageCapacity) {
             this.storageCapacity = storageCapacity;
@@ -285,7 +285,7 @@ public class AgenticTableEngineMeta extends TeaModel {
         }
 
         /**
-         * TableSchemaName.
+         * <p>The name of the table schema.</p>
          */
         public Builder tableSchemaName(String tableSchemaName) {
             this.tableSchemaName = tableSchemaName;

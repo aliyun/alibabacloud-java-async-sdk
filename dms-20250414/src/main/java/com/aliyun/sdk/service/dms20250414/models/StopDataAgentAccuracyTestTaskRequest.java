@@ -87,7 +87,10 @@ public class StopDataAgentAccuracyTestTaskRequest extends Request {
         } 
 
         /**
-         * AccuracyTestTaskId.
+         * <p>The ID of the accuracy test task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder accuracyTestTaskId(String accuracyTestTaskId) {
             this.putQueryParameter("AccuracyTestTaskId", accuracyTestTaskId);
@@ -96,7 +99,10 @@ public class StopDataAgentAccuracyTestTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class StopDataAgentAccuracyTestTaskRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8wfig6l33n4f4xxxxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

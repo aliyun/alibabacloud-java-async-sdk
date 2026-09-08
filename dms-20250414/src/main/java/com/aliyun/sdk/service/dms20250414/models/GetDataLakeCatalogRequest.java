@@ -112,6 +112,7 @@ public class GetDataLakeCatalogRequest extends Request {
         }
 
         /**
+         * <p>The name of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class GetDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The tenant ID. You can call the GetUserActiveTenant or ListUserTenants operation to obtain this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -133,7 +137,10 @@ public class GetDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

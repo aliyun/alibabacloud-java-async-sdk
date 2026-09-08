@@ -145,7 +145,10 @@ public class DLPartition extends TeaModel {
         } 
 
         /**
-         * CatalogName.
+         * <p>The name of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -153,7 +156,10 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the partition was created. The time is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735109884</p>
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -161,7 +167,10 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -169,7 +178,10 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * LastAccessTime.
+         * <p>The time when the partition was last accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608707407</p>
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -177,7 +189,7 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The key-value pairs for the partition.</p>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
@@ -185,7 +197,7 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * Sd.
+         * <p>The data storage description.</p>
          */
         public Builder sd(DLStorageDescriptor sd) {
             this.sd = sd;
@@ -193,7 +205,10 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -201,7 +216,7 @@ public class DLPartition extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>The partition values.</p>
          */
         public Builder values(java.util.List<String> values) {
             this.values = values;

@@ -129,7 +129,10 @@ public class AddDataAgentMemoryRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The memory content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Diamond pricing analysis requires examining the skewness and outliers of the distribution of each feature.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -138,7 +141,10 @@ public class AddDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -147,7 +153,14 @@ public class AddDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * FromId.
+         * <p>The source ID.</p>
+         * <ul>
+         * <li>If MemFrom is set to session, FromId indicates the session ID.</li>
+         * <li>If MemFrom is set to user, FromId indicates the RAM user ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2037**********23</p>
          */
         public Builder fromId(String fromId) {
             this.putQueryParameter("FromId", fromId);
@@ -156,7 +169,15 @@ public class AddDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The memory label. Valid values:</p>
+         * <ul>
+         * <li>fact_specifications: fact definitions.</li>
+         * <li>task_constraints: node constraints.</li>
+         * <li>execution_config: execution configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fact_specifications</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -165,7 +186,14 @@ public class AddDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * MemFrom.
+         * <p>The memory source. Valid values:</p>
+         * <ul>
+         * <li>session: generated from a session.</li>
+         * <li>user: edited by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder memFrom(String memFrom) {
             this.putQueryParameter("MemFrom", memFrom);
@@ -174,7 +202,13 @@ public class AddDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * SessionUuid.
+         * <p>The session ID.</p>
+         * <ul>
+         * <li>Note: This parameter is deprecated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fc5ice**********ac6e</p>
          */
         public Builder sessionUuid(String sessionUuid) {
             this.putQueryParameter("SessionUuid", sessionUuid);

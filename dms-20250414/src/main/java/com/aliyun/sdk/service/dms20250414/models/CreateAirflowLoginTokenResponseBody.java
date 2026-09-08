@@ -132,7 +132,7 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the site monitoring task.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,12 +151,14 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed. Variable description:</p>
+         * <p>The error code.</p>
          * <ul>
-         * <li>If the request was successful, this parameter is not returned.</li>
-         * <li>This parameter is returned only if the request failed.</li>
+         * <li><p>If the request is successful, this parameter is not returned.</p>
+         * </li>
+         * <li><p>If the request fails, this parameter is returned.</p>
+         * </li>
          * </ul>
-         * <p>For more information, see the &quot;Error codes&quot; section in this topic.</p>
+         * <p>For more information, see the error codes in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -167,7 +169,7 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The error code description.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -178,7 +180,7 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -189,7 +191,7 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4284D079-30F4-5B23-ADC4-28F291622C9A</p>
@@ -202,8 +204,10 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>True</li>
-         * <li>False</li>
+         * <li><p>True: The request was successful.</p>
+         * </li>
+         * <li><p>False: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,10 +277,10 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint that is used to access the Airflow instance.</p>
+             * <p>The endpoint of the Airflow instance.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszbxxxxxxx">https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszbxxxxxxx</a></p>
+             * <p><a href="https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszb">https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszb</a>****</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -287,7 +291,7 @@ public class CreateAirflowLoginTokenResponseBody extends TeaModel {
              * <p>The generated token.</p>
              * 
              * <strong>example:</strong>
-             * <p>f432d77de03b6b95fc24f91414e29c</p>
+             * <p>f432d77de03b6b95fc24f9****</p>
              */
             public Builder token(String token) {
                 this.token = token;

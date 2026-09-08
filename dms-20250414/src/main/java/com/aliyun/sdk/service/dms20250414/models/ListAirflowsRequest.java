@@ -140,7 +140,10 @@ public class ListAirflowsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -149,7 +152,10 @@ public class ListAirflowsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f056501ada12****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -158,7 +164,10 @@ public class ListAirflowsRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number. The value starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -167,7 +176,10 @@ public class ListAirflowsRequest extends Request {
         }
 
         /**
-         * Skip.
+         * <p>The number of records to skip. This is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder skip(Integer skip) {
             this.putQueryParameter("Skip", skip);
@@ -176,6 +188,7 @@ public class ListAirflowsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DMS workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

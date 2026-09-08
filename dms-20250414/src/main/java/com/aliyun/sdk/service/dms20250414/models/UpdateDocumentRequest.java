@@ -113,6 +113,7 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
+         * <p>The document name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
+         * <p>The new document description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

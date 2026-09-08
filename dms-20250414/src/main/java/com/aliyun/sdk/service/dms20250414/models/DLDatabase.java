@@ -119,7 +119,10 @@ public class DLDatabase extends TeaModel {
         } 
 
         /**
-         * CatalogName.
+         * <p>The name of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -127,7 +130,10 @@ public class DLDatabase extends TeaModel {
         }
 
         /**
-         * DbId.
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder dbId(Long dbId) {
             this.dbId = dbId;
@@ -135,7 +141,10 @@ public class DLDatabase extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default database for catalog hive</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +152,10 @@ public class DLDatabase extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The storage path of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -151,7 +163,10 @@ public class DLDatabase extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -159,7 +174,10 @@ public class DLDatabase extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The parameters of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key/value</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;

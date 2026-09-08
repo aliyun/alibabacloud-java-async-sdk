@@ -73,7 +73,10 @@ public class DeleteDataAgentMemoryRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -82,7 +85,10 @@ public class DeleteDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The memory UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed3f67***********ed</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

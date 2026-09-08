@@ -126,6 +126,7 @@ public class DeleteWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The full path of the code file or directory. The path must be prefixed with <code>/Workspace/code/</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,10 @@ public class DeleteWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Repo.
+         * <p>The repository information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database/adb</p>
          */
         public Builder repo(String repo) {
             this.putQueryParameter("Repo", repo);
@@ -147,7 +151,10 @@ public class DeleteWorkspaceCodeRequest extends Request {
         }
 
         /**
-         * Symlink.
+         * <p>Specifies whether the item to delete is a symbolic link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder symlink(Boolean symlink) {
             this.putQueryParameter("Symlink", symlink);
@@ -156,6 +163,7 @@ public class DeleteWorkspaceCodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

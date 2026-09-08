@@ -106,7 +106,7 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-***-695C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateDate.
+             * <p>The time when the user was created in RAM. This is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765960516</p>
              */
             public Builder createDate(Long createDate) {
                 this.createDate = createDate;
@@ -251,7 +266,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MainAccountId.
+             * <p>The ID of the Alibaba Cloud account to which the user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167*****166</p>
              */
             public Builder mainAccountId(String mainAccountId) {
                 this.mainAccountId = mainAccountId;
@@ -259,7 +277,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * <p>The time when the user information was last updated. This is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765962516</p>
              */
             public Builder updateDate(Long updateDate) {
                 this.updateDate = updateDate;
@@ -267,7 +288,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The UID of the queried RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -275,7 +299,10 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the queried RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yunqitest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

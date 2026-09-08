@@ -83,6 +83,7 @@ public class DeleteOneMetaOssieModelRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

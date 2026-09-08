@@ -171,7 +171,7 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -179,7 +179,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -187,7 +190,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -195,7 +201,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -203,7 +212,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NesLo****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -211,7 +223,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -219,7 +234,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -238,7 +256,14 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +271,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -416,7 +444,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * AccuracyTestInsId.
+             * <p>The accuracy test instance ID to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
              */
             public Builder accuracyTestInsId(String accuracyTestInsId) {
                 this.accuracyTestInsId = accuracyTestInsId;
@@ -424,7 +455,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AccuracyTestTaskId.
+             * <p>The accuracy test task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
              */
             public Builder accuracyTestTaskId(String accuracyTestTaskId) {
                 this.accuracyTestTaskId = accuracyTestTaskId;
@@ -432,7 +466,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTaskNumber.
+             * <p>The number of completed test subtasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder finishedTaskNumber(Integer finishedTaskNumber) {
                 this.finishedTaskNumber = finishedTaskNumber;
@@ -440,7 +477,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the document was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-30T08:03:30.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -448,7 +488,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the document was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-30T08:03:30.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -456,7 +499,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrent.
+             * <p>The maximum number of concurrent sessions during the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConcurrent(Integer maxConcurrent) {
                 this.maxConcurrent = maxConcurrent;
@@ -464,7 +510,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NeedDelete.
+             * <p>Specifies whether sessions are displayed after analysis. This feature is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needDelete(Boolean needDelete) {
                 this.needDelete = needDelete;
@@ -472,7 +521,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 PENDING,1 RUNNING,2 COMPLETED,3 STOPPED,4 FAILED</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -480,7 +532,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTaskNumber.
+             * <p>The total number of subtasks in the accuracy test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalTaskNumber(Integer totalTaskNumber) {
                 this.totalTaskNumber = totalTaskNumber;
@@ -488,7 +543,10 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8wfig6l33n4f4xxxxxxxxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

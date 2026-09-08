@@ -106,7 +106,7 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>实际删除的行数</p>
+         * <p>The number of deleted chunks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,10 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -125,7 +128,10 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource not found kb-***</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -133,7 +139,10 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID for the call. If an error occurs, provide this request ID to support.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +150,16 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

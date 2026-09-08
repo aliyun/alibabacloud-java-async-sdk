@@ -110,7 +110,10 @@ public class GetNotebookTaskStatusRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The Notebook session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8141456676986429894916354</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -119,7 +122,10 @@ public class GetNotebookTaskStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The scheduling task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2b4cb5a-7420-49a8-aa7c-528becd6e1bf</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -128,7 +134,10 @@ public class GetNotebookTaskStatusRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8630242382****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

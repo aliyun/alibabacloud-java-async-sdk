@@ -106,7 +106,7 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The object that contains the knowledge base statistics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Permission denied.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Knowledge base limit exceeded. Current: xxx</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. Use this ID to troubleshoot errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. A value of <code>true</code> indicates success, and a value of <code>false</code> indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * DocumentCount.
+             * <p>The number of documents in the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder documentCount(Integer documentCount) {
                 this.documentCount = documentCount;
@@ -251,7 +266,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
             }
 
             /**
-             * KbHits.
+             * <p>The number of hits for the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder kbHits(Long kbHits) {
                 this.kbHits = kbHits;
@@ -259,7 +277,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
             }
 
             /**
-             * KbUuid.
+             * <p>The ID of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-***</p>
              */
             public Builder kbUuid(String kbUuid) {
                 this.kbUuid = kbUuid;
@@ -267,7 +288,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalChunkCount.
+             * <p>The total number of knowledge chunks in the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalChunkCount(Integer totalChunkCount) {
                 this.totalChunkCount = totalChunkCount;
@@ -275,7 +299,10 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileSize.
+             * <p>The total size of all files in the knowledge base, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4194588751</p>
              */
             public Builder totalFileSize(Long totalFileSize) {
                 this.totalFileSize = totalFileSize;

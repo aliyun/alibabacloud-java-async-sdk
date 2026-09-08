@@ -67,7 +67,10 @@ public class PartitionError extends TeaModel {
         } 
 
         /**
-         * ErrorDetail.
+         * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auth failed</p>
          */
         public Builder errorDetail(String errorDetail) {
             this.errorDetail = errorDetail;
@@ -75,7 +78,7 @@ public class PartitionError extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>The partition values.</p>
          */
         public Builder values(java.util.List<String> values) {
             this.values = values;

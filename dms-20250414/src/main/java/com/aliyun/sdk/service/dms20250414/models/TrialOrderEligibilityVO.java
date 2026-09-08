@@ -67,7 +67,7 @@ public class TrialOrderEligibilityVO extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>Contains details about the eligibility status, such as the reason for ineligibility.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +75,7 @@ public class TrialOrderEligibilityVO extends TeaModel {
         }
 
         /**
-         * Valid.
+         * <p>Indicates whether the user is eligible for the trial.</p>
          */
         public Builder valid(Boolean valid) {
             this.valid = valid;

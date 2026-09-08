@@ -106,7 +106,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The summary data of model usage for DataAgent analysis tasks.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40411</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-***695C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -314,7 +330,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             }
 
             /**
-             * peakTpm.
+             * <p>The peak TPM (tokens per minute) within the query time range, which is the maximum number of tokens consumed per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42000</p>
              */
             public Builder peakTpm(Long peakTpm) {
                 this.peakTpm = peakTpm;
@@ -322,7 +341,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             }
 
             /**
-             * totalCallCount.
+             * <p>The total number of model calls within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder totalCallCount(Long totalCallCount) {
                 this.totalCallCount = totalCallCount;
@@ -330,7 +352,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             }
 
             /**
-             * totalTokenConsumed.
+             * <p>The total number of tokens consumed within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3560000</p>
              */
             public Builder totalTokenConsumed(Long totalTokenConsumed) {
                 this.totalTokenConsumed = totalTokenConsumed;
@@ -338,7 +363,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             }
 
             /**
-             * usedModels.
+             * <p>The number of models used within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder usedModels(Long usedModels) {
                 this.usedModels = usedModels;

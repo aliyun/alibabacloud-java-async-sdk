@@ -132,7 +132,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_FOUND</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A human-readable message about the request\&quot;s outcome.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This record is being collected, please wait for a moment.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -311,7 +329,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * CuQuota.
+             * <p>The compute unit (CU) quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder cuQuota(Long cuQuota) {
                 this.cuQuota = cuQuota;
@@ -319,7 +340,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * CuQuotaUsage.
+             * <p>The amount of compute unit (CU) quota used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cuQuotaUsage(Long cuQuotaUsage) {
                 this.cuQuotaUsage = cuQuotaUsage;
@@ -327,7 +351,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the billing instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zehld3y1tphzctyyq7o</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -335,7 +362,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>263013787210103</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -343,7 +373,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Catched</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -351,7 +384,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +395,10 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20923*****7291</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

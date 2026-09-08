@@ -60,6 +60,7 @@ public class InitWorkspaceSystemMcpServerRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Data Agent workspace for which to initialize system MCP services. The caller must have at least MEMBER permissions on the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

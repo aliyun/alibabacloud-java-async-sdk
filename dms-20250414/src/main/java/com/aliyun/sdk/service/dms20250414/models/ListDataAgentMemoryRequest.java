@@ -171,7 +171,10 @@ public class ListDataAgentMemoryRequest extends Request {
         } 
 
         /**
-         * ContentPattern.
+         * <p>The content pattern used for fuzzy match search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user preference</p>
          */
         public Builder contentPattern(String contentPattern) {
             this.putQueryParameter("ContentPattern", contentPattern);
@@ -180,7 +183,10 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -189,7 +195,14 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * FromId.
+         * <p>The source ID.</p>
+         * <ul>
+         * <li>If MemFrom is set to session, FromId indicates the session ID.</li>
+         * <li>If MemFrom is set to user, FromId indicates the RAM user ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8zm3**********g3yxa1</p>
          */
         public Builder fromId(String fromId) {
             this.putQueryParameter("FromId", fromId);
@@ -198,7 +211,14 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * MemFrom.
+         * <p>The memory source. Valid values:</p>
+         * <ul>
+         * <li>session: Generated from a session.</li>
+         * <li>user: Edited by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>session</p>
          */
         public Builder memFrom(String memFrom) {
             this.putQueryParameter("MemFrom", memFrom);
@@ -207,7 +227,14 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order for the specified sort field. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li>asc: Ascending order.</li>
+         * <li>desc: Descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -216,7 +243,14 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sort field. Default value: hitTimes. Valid values:</p>
+         * <ul>
+         * <li>hitTimes: The number of hits.</li>
+         * <li>created: The creation time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hitTimes</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -225,7 +259,10 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -234,7 +271,10 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +283,10 @@ public class ListDataAgentMemoryRequest extends Request {
         }
 
         /**
-         * QueryAll.
+         * <p>Specifies whether to query memories in all statuses. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryAll(Boolean queryAll) {
             this.putQueryParameter("QueryAll", queryAll);

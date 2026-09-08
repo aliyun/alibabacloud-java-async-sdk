@@ -158,7 +158,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -166,7 +166,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -182,7 +188,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -190,7 +199,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The current page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -209,7 +221,14 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +236,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -225,7 +247,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -343,7 +368,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-e*******ckd</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -351,7 +379,14 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAgentStage.
+             * <p>The usage stage of the custom agent. Valid values:</p>
+             * <ul>
+             * <li><strong>debug</strong>: Debug stage.</li>
+             * <li><strong>prod</strong>: Production environment stage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder customAgentStage(String customAgentStage) {
                 this.customAgentStage = customAgentStage;
@@ -359,7 +394,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSearch.
+             * <p>Specifies whether to enable web search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSearch(Boolean enableSearch) {
                 this.enableSearch = enableSearch;
@@ -367,7 +405,14 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li><strong>CHINESE</strong>: Chinese.</li>
+             * <li><strong>ENGLISH</strong>: English.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHINESE</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -375,7 +420,15 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The mode. Valid values:</p>
+             * <ul>
+             * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
+             * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: Insight mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANALYSIS</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -383,7 +436,13 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UserOssBucket.
+             * <p>The name of the user OSS bucket.</p>
+             * <ul>
+             * <li>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user-oss-bucket</p>
              */
             public Builder userOssBucket(String userOssBucket) {
                 this.userOssBucket = userOssBucket;
@@ -567,7 +626,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The current agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cu0cs*******mf</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -575,7 +637,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AgentStatus.
+             * <p>The current agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -583,7 +648,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The session creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731645908000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -591,7 +659,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * FavoriteInWorkspace.
+             * <p>Indicates whether the session is favorited by the current logged-in user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favoriteInWorkspace(Boolean favoriteInWorkspace) {
                 this.favoriteInWorkspace = favoriteInWorkspace;
@@ -599,7 +670,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder file(String file) {
                 this.file = file;
@@ -607,7 +681,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Saved.
+             * <p>Indicates whether the session is favorited by the current logged-in user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder saved(Boolean saved) {
                 this.saved = saved;
@@ -615,7 +692,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionConfig.
+             * <p>The session configuration item.</p>
              */
             public Builder sessionConfig(SessionConfig sessionConfig) {
                 this.sessionConfig = sessionConfig;
@@ -623,7 +700,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The Data Agent session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h8r********4fch</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -631,7 +711,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>The session status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -639,7 +722,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyze this file and generate a report</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -647,7 +733,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the session owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2096******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

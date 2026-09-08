@@ -168,7 +168,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The filter conditions for the knowledge bases, specified as a JSON string. The only supported key is <code>state</code>. Valid values are <code>0</code> and <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;state&quot;:1}</p>
          */
         public Builder filters(String filters) {
             this.putBodyParameter("Filters", filters);
@@ -177,7 +180,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page. Use this parameter with the <code>NextToken</code> parameter to implement pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -186,7 +192,10 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * NamePattern.
+         * <p>A keyword to search for in the names of knowledge bases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         public Builder namePattern(String namePattern) {
             this.putBodyParameter("NamePattern", namePattern);
@@ -195,7 +204,16 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results. Valid values:</p>
+         * <ul>
+         * <li><p>Omit this parameter for the first request.</p>
+         * </li>
+         * <li><p>If the previous response returned a <strong>NextToken</strong> value, use it to retrieve the next page of results.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zCXSmY0CJbybp6FZV7vo0Wjw64X-*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -204,7 +222,16 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * SortFieldName.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li><p><code>id</code>: Sorts by knowledge base ID. This is the default.</p>
+         * </li>
+         * <li><p><code>name</code>: Sorts by knowledge base name.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder sortFieldName(String sortFieldName) {
             this.putBodyParameter("SortFieldName", sortFieldName);
@@ -213,7 +240,16 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ASC</strong>: Ascending order. This is the default.</p>
+         * </li>
+         * <li><p><strong>DESC</strong>: Descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -222,6 +258,7 @@ public class ListKnowledgeBasesRequest extends Request {
         }
 
         /**
+         * <p>The tag of the knowledge base. In DataAgent, this is the space ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response object.</p>
          */
         public Builder data(OneMetaKnowledgeBaseDocument data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class UpdateDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class UpdateDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource not found kb-***</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class UpdateDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. Use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class UpdateDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

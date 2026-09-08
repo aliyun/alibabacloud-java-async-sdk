@@ -106,7 +106,7 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D2-*****-A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTime.
+             * <p>The time when the user joined the workspace. This is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765961516</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -264,7 +279,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>The Alibaba Cloud UID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -272,7 +290,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the user\&quot;s role in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>member</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -280,7 +301,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTaskNumber.
+             * <p>The number of tasks that are running for the user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder runningTaskNumber(Long runningTaskNumber) {
                 this.runningTaskNumber = runningTaskNumber;
@@ -288,7 +312,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTaskNumber.
+             * <p>The total number of tasks initiated by the user in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalTaskNumber(Long totalTaskNumber) {
                 this.totalTaskNumber = totalTaskNumber;
@@ -296,7 +323,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The RAM username of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yunqitest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -428,7 +458,7 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The data content.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -436,7 +466,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -444,7 +477,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no use</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -452,7 +488,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -460,7 +499,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -468,7 +510,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no use</p>
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;
@@ -476,7 +521,10 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no use</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

@@ -132,7 +132,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The scheduling result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,16 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +296,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * NotebookSchedulePreviewUrl.
+             * <p>The URL to preview the scheduling result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dms.aliyun.com/web-ide">https://dms.aliyun.com/web-ide</a>?***</p>
              */
             public Builder notebookSchedulePreviewUrl(String notebookSchedulePreviewUrl) {
                 this.notebookSchedulePreviewUrl = notebookSchedulePreviewUrl;
@@ -280,7 +307,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the scheduling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5/6</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -288,7 +318,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The output of the scheduling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -296,7 +329,10 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the scheduling result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

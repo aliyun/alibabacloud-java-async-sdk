@@ -115,7 +115,10 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         } 
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -124,7 +127,10 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * IsSessionShareEnabled.
+         * <p>Specifies whether to enable session sharing for the workspace. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
             this.putQueryParameter("IsSessionShareEnabled", isSessionShareEnabled);
@@ -133,7 +139,10 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * WorkspaceDesc.
+         * <p>The new description for the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>space for test new</p>
          */
         public Builder workspaceDesc(String workspaceDesc) {
             this.putQueryParameter("WorkspaceDesc", workspaceDesc);
@@ -142,7 +151,10 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -151,7 +163,10 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The new name for the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yunqitest_v2</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);

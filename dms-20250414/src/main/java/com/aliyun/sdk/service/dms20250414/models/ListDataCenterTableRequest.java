@@ -171,7 +171,10 @@ public class ListDataCenterTableRequest extends Request {
         } 
 
         /**
-         * CallFrom.
+         * <p>For frontend use only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>仅前端使用</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -180,7 +183,13 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>The name of the database.</p>
+         * <ul>
+         * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter represents the file name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>diamonds.csv</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -189,7 +198,10 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
@@ -198,7 +210,13 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * ImportType.
+         * <p>The import type.</p>
+         * <ul>
+         * <li>FILE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         public Builder importType(String importType) {
             this.putQueryParameter("ImportType", importType);
@@ -207,7 +225,13 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * <ul>
+         * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter represents the file ID of the data center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>f-ean8u5881qk4*********xh5y</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -216,7 +240,10 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +252,10 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return per page. Default: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +264,10 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword for a fuzzy search of database tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -243,7 +276,10 @@ public class ListDataCenterTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>diamonds</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

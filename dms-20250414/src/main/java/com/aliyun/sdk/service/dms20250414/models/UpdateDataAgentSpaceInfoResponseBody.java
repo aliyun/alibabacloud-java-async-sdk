@@ -106,7 +106,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-***-695C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -308,7 +320,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the workspace was created, specified as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765960516</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -316,7 +331,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID (UID) of the workspace creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -324,7 +342,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>space for test new</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +353,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsSessionShareEnabled.
+             * <p>Indicates whether session sharing is enabled in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
                 this.isSessionShareEnabled = isSessionShareEnabled;
@@ -340,7 +364,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the workspace was last modified, specified as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765962516</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -348,7 +375,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The user role in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -356,7 +386,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMember.
+             * <p>The total number of members in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalMember(String totalMember) {
                 this.totalMember = totalMember;
@@ -364,7 +397,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20923*****7291</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -372,7 +408,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The updated name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yunqitest_v2</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -380,7 +419,10 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceStatus.
+             * <p>The updated status of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>space for test new</p>
              */
             public Builder workspaceStatus(String workspaceStatus) {
                 this.workspaceStatus = workspaceStatus;

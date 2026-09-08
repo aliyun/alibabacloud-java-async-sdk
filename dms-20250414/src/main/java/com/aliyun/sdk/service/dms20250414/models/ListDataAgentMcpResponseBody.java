@@ -132,7 +132,7 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The paging query results of MCP Servers.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,7 +140,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The return code. The value is success if the request was successful, or an error code if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +151,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when a system-level request failure occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to list MCP servers</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -156,7 +162,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records returned in this response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -164,7 +173,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page. This value is empty when no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>page-2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +184,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e***544</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,11 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +304,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The list of MCP Servers on the current page. Each item contains information such as the service identifier, name, workspace, network, connection method, status, and enabled state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;uuid&quot;:&quot;44lg<em><strong>z65&quot;,&quot;name&quot;:&quot;analytics&quot;,&quot;workspaceUuid&quot;:&quot;	atvx</strong></em>xmz&quot;,&quot;netType&quot;:&quot;public&quot;,&quot;transportType&quot;:&quot;sse&quot;,&quot;state&quot;:&quot;ready&quot;,&quot;enable&quot;:true}]</p>
              */
             public Builder content(Object content) {
                 this.content = content;
@@ -293,7 +315,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number, starting from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Float pageNumber) {
                 this.pageNumber = pageNumber;
@@ -301,7 +326,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Float pageSize) {
                 this.pageSize = pageSize;
@@ -309,7 +337,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of records that match the filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalElements(Float totalElements) {
                 this.totalElements = totalElements;
@@ -317,7 +348,10 @@ public class ListDataAgentMcpResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages that match the filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Float totalPages) {
                 this.totalPages = totalPages;

@@ -210,7 +210,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The document description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -218,7 +221,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * DocsCount.
+         * <p>The number of chunks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder docsCount(Integer docsCount) {
             this.docsCount = docsCount;
@@ -226,7 +232,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * DocumentLoaderName.
+         * <p>The name of the document loader.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADBPGLoader</p>
          */
         public Builder documentLoaderName(String documentLoaderName) {
             this.documentLoaderName = documentLoaderName;
@@ -234,7 +243,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * FileExt.
+         * <p>The file extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md</p>
          */
         public Builder fileExt(String fileExt) {
             this.fileExt = fileExt;
@@ -242,7 +254,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * FileSize.
+         * <p>The file size, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20307</p>
          */
         public Builder fileSize(Long fileSize) {
             this.fileSize = fileSize;
@@ -250,7 +265,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>When the document was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-22 22:59:35</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -258,7 +276,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>When the document was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-24 21:22:53</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -266,7 +287,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * KbUuid.
+         * <p>The knowledge base ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-***</p>
          */
         public Builder kbUuid(String kbUuid) {
             this.kbUuid = kbUuid;
@@ -274,7 +298,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * Keywords.
+         * <p>Keywords extracted from the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;test&quot;,&quot;abc&quot;]</p>
          */
         public Builder keywords(String keywords) {
             this.keywords = keywords;
@@ -282,7 +309,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The document name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.md</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -290,7 +320,22 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The document status. Valid values are:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Complete.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: Unprocessed.</p>
+         * </li>
+         * <li><p><strong>-2</strong>: Parsing.</p>
+         * </li>
+         * <li><p><strong>-3</strong>: Failed.</p>
+         * </li>
+         * <li><p><strong>-4</strong>: Canceled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -298,7 +343,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The summary of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test document.</p>
          */
         public Builder summary(String summary) {
             this.summary = summary;
@@ -306,7 +354,10 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
         }
 
         /**
-         * TextSplitterName.
+         * <p>The name of the text splitter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChineseRecursiveTextSplitter</p>
          */
         public Builder textSplitterName(String textSplitterName) {
             this.textSplitterName = textSplitterName;

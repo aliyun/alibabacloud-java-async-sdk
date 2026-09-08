@@ -106,7 +106,7 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned in the response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The code that indicates the result of the request. If the request fails, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,7 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -141,7 +147,16 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -311,7 +326,13 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             } 
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * <ul>
+             * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter returns the file name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>diamonds.csv</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -319,7 +340,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * DescUpdateTime.
+             * <p>The time when the data table description was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder descUpdateTime(String descUpdateTime) {
                 this.descUpdateTime = descUpdateTime;
@@ -327,7 +351,13 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * DmsDbId.
+             * <p>The ID of the DMS database.</p>
+             * <ul>
+             * <li>This parameter is not returned if <code>ImportType</code> is <code>FILE</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>69950353</p>
              */
             public Builder dmsDbId(Long dmsDbId) {
                 this.dmsDbId = dmsDbId;
@@ -335,7 +365,13 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * DmsInstanceId.
+             * <p>The ID of the DMS instance that hosts the database.</p>
+             * <ul>
+             * <li>This parameter is not returned if <code>ImportType</code> is <code>FILE</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2310246</p>
              */
             public Builder dmsInstanceId(Long dmsInstanceId) {
                 this.dmsInstanceId = dmsInstanceId;
@@ -343,7 +379,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the data table was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -351,7 +390,13 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * ImportType.
+             * <p>The import type. Valid value:</p>
+             * <ul>
+             * <li><strong>FILE</strong>: The data is imported from a file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE</p>
              */
             public Builder importType(String importType) {
                 this.importType = importType;
@@ -359,7 +404,13 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * <ul>
+             * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter returns the file ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>f-ean8u5881qk4*********xh5y</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -367,7 +418,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * TableDesc.
+             * <p>The description of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一份钻石数据。</p>
              */
             public Builder tableDesc(String tableDesc) {
                 this.tableDesc = tableDesc;
@@ -375,7 +429,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * <p>The ID of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xa8wib4ga3a2*********fjbx</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -383,7 +440,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diamonds</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -489,7 +549,7 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>A list of the data tables.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -497,7 +557,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -505,7 +568,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -513,7 +579,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;
@@ -521,7 +590,10 @@ public class ListDataCenterTableResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

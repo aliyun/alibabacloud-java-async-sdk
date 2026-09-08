@@ -93,7 +93,10 @@ public class DataMountInfo extends TeaModel {
         } 
 
         /**
-         * MountFolderName.
+         * <p>The name of the mount directory. The actual mount path is prefixed with /Workspace/data/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder mountFolderName(String mountFolderName) {
             this.mountFolderName = mountFolderName;
@@ -101,7 +104,10 @@ public class DataMountInfo extends TeaModel {
         }
 
         /**
-         * OssBucket.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.ossBucket = ossBucket;
@@ -109,7 +115,10 @@ public class DataMountInfo extends TeaModel {
         }
 
         /**
-         * Prefix.
+         * <p>The prefix. If this parameter is not specified, the root directory is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/prod</p>
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;
@@ -117,7 +126,11 @@ public class DataMountInfo extends TeaModel {
         }
 
         /**
-         * ReadOnly.
+         * <p>Whether to mount the data volume as read-only.</p>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;

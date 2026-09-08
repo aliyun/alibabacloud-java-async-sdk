@@ -75,6 +75,7 @@ public class GetDataAgentMcpRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier of the MCP Server to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetDataAgentMcpRequest extends Request {
         }
 
         /**
+         * <p>The Data Agent workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

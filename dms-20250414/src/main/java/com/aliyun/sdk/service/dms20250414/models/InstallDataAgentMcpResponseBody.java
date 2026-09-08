@@ -106,7 +106,10 @@ public class InstallDataAgentMcpResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The MCP ID created in DataAgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;uuid&quot;:&quot;6126jk***h2&quot;}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class InstallDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS-DA-40114</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +128,10 @@ public class InstallDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +150,14 @@ public class InstallDataAgentMcpResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

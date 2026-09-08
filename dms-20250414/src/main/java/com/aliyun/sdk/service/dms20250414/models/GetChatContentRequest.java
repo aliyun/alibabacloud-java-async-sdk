@@ -101,7 +101,10 @@ public class GetChatContentRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The agent ID. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -110,7 +113,10 @@ public class GetChatContentRequest extends Request {
         }
 
         /**
-         * Checkpoint.
+         * <p>The backend will return output starting from this checkpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder checkpoint(String checkpoint) {
             this.putQueryParameter("Checkpoint", checkpoint);
@@ -119,7 +125,10 @@ public class GetChatContentRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current DMS unit. Chinese mainland users of Alibaba Cloud should use cn-hangzhou by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -128,7 +137,10 @@ public class GetChatContentRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sess_12345</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

@@ -210,7 +210,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         } 
 
         /**
-         * CatalogUuid.
+         * <p>The UUID of the associated folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-HZ-OfjcNc2z***</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.catalogUuid = catalogUuid;
@@ -218,7 +221,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -226,7 +232,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sales count</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -234,7 +243,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Expr.
+         * <p>The content of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT store_name, daily_sales FROM store_daily_sales ORDER BY daily_sales DESC LIMIT 5</p>
          */
         public Builder expr(String expr) {
             this.expr = expr;
@@ -242,7 +254,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1787302285000</p>
          */
         public Builder gmtCreated(Long gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -250,7 +265,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1787302285000</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -258,7 +276,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * KnowledgeUuid.
+         * <p>The UUID of the knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86c5c290052147c***</p>
          */
         public Builder knowledgeUuid(String knowledgeUuid) {
             this.knowledgeUuid = knowledgeUuid;
@@ -266,7 +287,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The source of the SQL template knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_AGENT</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -274,7 +298,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * SqlParams.
+         * <p>The parameters of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dt&quot;: &quot;2026-08-01&quot;}</p>
          */
         public Builder sqlParams(String sqlParams) {
             this.sqlParams = sqlParams;
@@ -282,7 +309,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The summary of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sales summary</p>
          */
         public Builder summary(String summary) {
             this.summary = summary;
@@ -290,7 +320,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The tag of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_sales</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -298,7 +331,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The title of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecommerce_sales</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -306,7 +342,10 @@ public class OneMetaSqlTemplateView extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder version(String version) {
             this.version = version;

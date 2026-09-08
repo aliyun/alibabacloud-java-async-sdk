@@ -106,7 +106,7 @@ public class AgenticTableColumn extends TeaModel {
         } 
 
         /**
-         * ColumnName.
+         * <p>The name of the column.</p>
          */
         public Builder columnName(String columnName) {
             this.columnName = columnName;
@@ -114,7 +114,7 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * ColumnType.
+         * <p>The data type of the column.</p>
          */
         public Builder columnType(String columnType) {
             this.columnType = columnType;
@@ -122,7 +122,7 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the column.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -130,7 +130,7 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * EngineMeta.
+         * <p>Engine-specific metadata for the column.</p>
          */
         public Builder engineMeta(AgenticTableColumnEngineMeta engineMeta) {
             this.engineMeta = engineMeta;
@@ -138,7 +138,7 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * Position.
+         * <p>The 1-based ordinal position of the column within the table.</p>
          */
         public Builder position(Integer position) {
             this.position = position;

@@ -106,7 +106,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -392,7 +405,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkipAskHuman.
+             * <p>Specifies whether to disable user inquiries during the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipAskHuman(Boolean skipAskHuman) {
                 this.skipAskHuman = skipAskHuman;
@@ -400,7 +416,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkipPlan.
+             * <p>Specifies whether to skip the plan confirmation step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipPlan(Boolean skipPlan) {
                 this.skipPlan = skipPlan;
@@ -408,7 +427,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkipSqlConfirm.
+             * <p>Specifies whether to skip all SQL confirmations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipSqlConfirm(Boolean skipSqlConfirm) {
                 this.skipSqlConfirm = skipSqlConfirm;
@@ -416,7 +438,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SkipWebReportConfirm.
+             * <p>Specifies whether to skip the web report rendering confirmation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipWebReportConfirm(Boolean skipWebReportConfirm) {
                 this.skipWebReportConfirm = skipWebReportConfirm;
@@ -496,7 +521,13 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessType.
+             * <p>The access type. Valid values:</p>
+             * <ul>
+             * <li>mcp: accessed through MCP.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -512,7 +543,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * McpServerId.
+             * <p>The ID of the MCP Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nhdpt9adf6ac**********ca</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -709,7 +743,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * CronExpression.
+             * <p>The cron expression for timed scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 ? * 1-7</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -717,7 +754,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * <p>The query for the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyze this data and provide a brief report</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -725,7 +765,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedSessionId.
+             * <p>The ID of the referenced historical session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4m24*****mg7j2v</p>
              */
             public Builder relatedSessionId(String relatedSessionId) {
                 this.relatedSessionId = relatedSessionId;
@@ -1182,7 +1225,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunParentUid.
+             * <p>The Alibaba Cloud account ID of the parent account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16738266********</p>
              */
             public Builder aliyunParentUid(String aliyunParentUid) {
                 this.aliyunParentUid = aliyunParentUid;
@@ -1190,7 +1236,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20372822********</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -1206,7 +1255,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorUserName.
+             * <p>The creator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HaoY*****</p>
              */
             public Builder creatorUserName(String creatorUserName) {
                 this.creatorUserName = creatorUserName;
@@ -1214,7 +1266,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-4y3ca4khkcu**********ysf</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -1222,7 +1277,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * DMSUnit.
+             * <p>The current DMS unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder DMSUnit(String DMSUnit) {
                 this.DMSUnit = DMSUnit;
@@ -1230,7 +1288,21 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * DataJson.
+             * <p>The specified data range in JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;tableFlag&quot; : true,
+             *   &quot;scope&quot; : &quot;personal&quot;,
+             *   &quot;personal&quot; : {
+             *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
+             *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
+             *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+             *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
+             *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
+             *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
+             *   }
+             * }</p>
              */
             public Builder dataJson(String dataJson) {
                 this.dataJson = dataJson;
@@ -1238,7 +1310,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AgentTestDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1246,7 +1321,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * DmsUnit.
+             * <p>The current DMS unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder dmsUnit(String dmsUnit) {
                 this.dmsUnit = dmsUnit;
@@ -1254,7 +1332,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionConfig.
+             * <p>The execution configuration.</p>
              */
             public Builder executionConfig(ExecutionConfig executionConfig) {
                 this.executionConfig = executionConfig;
@@ -1262,7 +1340,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -1270,7 +1351,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1278,7 +1362,15 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Instruction.
+             * <p>The instruction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analysis framework:</p>
+             * <ol>
+             * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations.</li>
+             * <li>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses.</li>
+             * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points</li>
+             * </ol>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1286,7 +1378,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * IsScheduleTask.
+             * <p>Indicates whether a periodic task is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isScheduleTask(Boolean isScheduleTask) {
                 this.isScheduleTask = isScheduleTask;
@@ -1294,7 +1389,16 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Knowledge.
+             * <p>The knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core metric definitions:</p>
+             * <ol>
+             * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</li>
+             * <li>Order volume is the number of valid orders placed per day.</li>
+             * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+             * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</li>
+             * </ol>
              */
             public Builder knowledge(String knowledge) {
                 this.knowledge = knowledge;
@@ -1302,7 +1406,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeConfigList.
+             * <p>The external knowledge base list.</p>
              */
             public Builder knowledgeConfigList(java.util.List<KnowledgeConfigList> knowledgeConfigList) {
                 this.knowledgeConfigList = knowledgeConfigList;
@@ -1318,7 +1422,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20372822********</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -1326,7 +1433,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierUserName.
+             * <p>The modifier name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HaoY*****</p>
              */
             public Builder modifierUserName(String modifierUserName) {
                 this.modifierUserName = modifierUserName;
@@ -1334,7 +1444,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AgentTestName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1342,7 +1455,13 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * NextRuntime.
+             * <p>The next run time of the periodic task.</p>
+             * <ul>
+             * <li>In timestamp format.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1767715200</p>
              */
             public Builder nextRuntime(Long nextRuntime) {
                 this.nextRuntime = nextRuntime;
@@ -1350,7 +1469,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineTime.
+             * <p>The offline time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder offlineTime(String offlineTime) {
                 this.offlineTime = offlineTime;
@@ -1358,7 +1480,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1366,7 +1491,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedSessionId.
+             * <p>The ID of the referenced historical session.</p>
              */
             public Builder relatedSessionId(String relatedSessionId) {
                 this.relatedSessionId = relatedSessionId;
@@ -1374,7 +1499,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The publish time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32.000+00:00</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -1382,7 +1510,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTaskConfig.
+             * <p>The periodic task configuration.</p>
              */
             public Builder scheduleTaskConfig(ScheduleTaskConfig scheduleTaskConfig) {
                 this.scheduleTaskConfig = scheduleTaskConfig;
@@ -1390,7 +1518,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The custom agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1398,7 +1529,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * TextReportConfig.
+             * <p>The text report format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
              */
             public Builder textReportConfig(String textReportConfig) {
                 this.textReportConfig = textReportConfig;
@@ -1414,7 +1548,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * WebReportConfig.
+             * <p>The web report format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</p>
              */
             public Builder webReportConfig(String webReportConfig) {
                 this.webReportConfig = webReportConfig;
@@ -1430,7 +1567,10 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56kv1pvl9uvt9**********bb</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

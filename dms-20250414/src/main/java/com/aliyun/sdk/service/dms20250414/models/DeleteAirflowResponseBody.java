@@ -132,7 +132,10 @@ public class DeleteAirflowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denied error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_FOUND</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class DeleteAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +154,10 @@ public class DeleteAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class DeleteAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class DeleteAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class DeleteAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * Root.
+         * <p>The details of the deleted instance.</p>
          */
         public Builder root(Root root) {
             this.root = root;
@@ -180,7 +195,16 @@ public class DeleteAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. The following values are returned:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +270,16 @@ public class DeleteAirflowResponseBody extends TeaModel {
             } 
 
             /**
-             * Success.
+             * <p>Indicates whether the request was successful. The following values are returned:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The request was successful.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The request failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -254,7 +287,13 @@ public class DeleteAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the asset instance.</p>
+             * <blockquote>
+             * <p>This result is not returned if no process exists under the asset.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>af-test****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -308,7 +347,7 @@ public class DeleteAirflowResponseBody extends TeaModel {
             } 
 
             /**
-             * Responses.
+             * <p>The details of the return value.</p>
              */
             public Builder responses(java.util.List<Responses> responses) {
                 this.responses = responses;

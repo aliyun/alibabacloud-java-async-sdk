@@ -106,7 +106,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The MCP Server connectivity detection result. The business status is distinguished by the State field.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The return code. The value success is returned if the request succeeds. An error code is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when a system-level request failure occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no mcp connect test record for session</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550***544</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -217,7 +229,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the MCP tool functionality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>query user information by user ID</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +240,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * InputSchema.
+             * <p>The JSON Schema string of the tool input parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;userId&quot;:{&quot;type&quot;:&quot;string&quot;}}}</p>
              */
             public Builder inputSchema(String inputSchema) {
                 this.inputSchema = inputSchema;
@@ -233,7 +251,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The MCP tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>query_user</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -313,7 +334,10 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessible.
+             * <p>Indicates whether the MCP Server is accessible. The value is true only when State is success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder accessible(Boolean accessible) {
                 this.accessible = accessible;
@@ -321,7 +345,16 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The detection status. Valid values:</p>
+             * <ul>
+             * <li>pending: The detection is in progress.</li>
+             * <li>success: The detection succeeded.</li>
+             * <li>failed: The detection failed or timed out.</li>
+             * </ul>
+             * <p>The top-level Success field can be true in all three business states.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -329,7 +362,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * Tools.
+             * <p>The list of detected MCP tools. A non-empty list is returned only when State is success.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

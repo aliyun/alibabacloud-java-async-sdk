@@ -143,7 +143,10 @@ public class ListDataAgentSkillMetaRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +155,10 @@ public class ListDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +167,10 @@ public class ListDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-query-skill</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -170,7 +179,14 @@ public class ListDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * SkillFrom.
+         * <p>The source of the skill. Valid values:</p>
+         * <ul>
+         * <li>User: a skill uploaded by the user.</li>
+         * <li>Agent: a skill derived from Agent analysis.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder skillFrom(String skillFrom) {
             this.putQueryParameter("SkillFrom", skillFrom);
@@ -179,7 +195,10 @@ public class ListDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * SkillId.
+         * <p>The skill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ski-04pomiln*************j0</p>
          */
         public Builder skillId(String skillId) {
             this.putQueryParameter("SkillId", skillId);
@@ -188,7 +207,10 @@ public class ListDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * SkillName.
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-query-skill</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("SkillName", skillName);
@@ -197,7 +219,10 @@ public class ListDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b5u96hud*************gq3</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

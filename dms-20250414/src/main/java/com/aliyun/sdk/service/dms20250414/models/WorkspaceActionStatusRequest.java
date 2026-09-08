@@ -98,6 +98,7 @@ public class WorkspaceActionStatusRequest extends Request {
         }
 
         /**
+         * <p>The unique key that identifies the asynchronous task. You can obtain this key from the response of an operation, such as a deployment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class WorkspaceActionStatusRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

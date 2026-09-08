@@ -113,6 +113,7 @@ public class DeleteDocumentChunksRequest extends Request {
         }
 
         /**
+         * <p>A list of chunk IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder chunkIds(java.util.List<String> chunkIds) {
@@ -123,6 +124,7 @@ public class DeleteDocumentChunksRequest extends Request {
         }
 
         /**
+         * <p>The name of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +137,7 @@ public class DeleteDocumentChunksRequest extends Request {
         }
 
         /**
+         * <p>The ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

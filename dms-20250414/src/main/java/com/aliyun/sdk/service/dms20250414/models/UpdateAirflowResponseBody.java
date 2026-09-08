@@ -132,7 +132,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_FOUND</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +154,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * Root.
+         * <p>Details of the updated Airflow instance.</p>
          */
         public Builder root(Root root) {
             this.root = root;
@@ -180,7 +195,16 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -571,7 +595,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             } 
 
             /**
-             * AirflowName.
+             * <p>The name of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test airflow</p>
              */
             public Builder airflowName(String airflowName) {
                 this.airflowName = airflowName;
@@ -579,7 +606,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * AirflowVersion.
+             * <p>The version of Airflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.1</p>
              */
             public Builder airflowVersion(String airflowVersion) {
                 this.airflowVersion = airflowVersion;
@@ -587,7 +617,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SMALL。</p>
+             * <p>The instance specification.</p>
              * 
              * <strong>example:</strong>
              * <p>SMALL</p>
@@ -598,7 +628,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AIRFLOW</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -606,7 +639,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAirflowCfg.
+             * <p>A list of custom configuration items.</p>
              */
             public Builder customAirflowCfg(java.util.List<String> customAirflowCfg) {
                 this.customAirflowCfg = customAirflowCfg;
@@ -614,7 +647,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * DagsDir.
+             * <p>The directory where DAGs are scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/dags</p>
              */
             public Builder dagsDir(String dagsDir) {
                 this.dagsDir = dagsDir;
@@ -622,7 +658,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * DataMountInfoList.
+             * <p>A data mount item.</p>
              */
             public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
                 this.dataMountInfoList = dataMountInfoList;
@@ -630,7 +666,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * DeployErrorMsg.
+             * <p>The error message returned upon deployment failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota exists</p>
              */
             public Builder deployErrorMsg(String deployErrorMsg) {
                 this.deployErrorMsg = deployErrorMsg;
@@ -638,7 +677,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the Airflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order schedule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -646,7 +688,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * EnableServerless.
+             * <p>Indicates whether serverless mode is enabled.</p>
              */
             public Builder enableServerless(Boolean enableServerless) {
                 this.enableServerless = enableServerless;
@@ -654,7 +696,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * Environments.
+             * <p>The environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k=v</p>
              */
             public Builder environments(String environments) {
                 this.environments = environments;
@@ -662,7 +707,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-07T15:10:32+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -670,7 +718,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * GracefulShutdownTimeout.
+             * <p>The graceful shutdown timeout, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
                 this.gracefulShutdownTimeout = gracefulShutdownTimeout;
@@ -678,7 +729,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucketName.
+             * <p>The name of the Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>osstest</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -686,7 +740,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * OssPath.
+             * <p>The path in OSS where logs are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/airflow</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -694,7 +751,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * PluginsDir.
+             * <p>The directory where Airflow plugins are scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/plugins</p>
              */
             public Builder pluginsDir(String pluginsDir) {
                 this.pluginsDir = pluginsDir;
@@ -702,7 +762,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * RequirementFile.
+             * <p>The path to the Python requirements file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/requirements.txt</p>
              */
             public Builder requirementFile(String requirementFile) {
                 this.requirementFile = requirementFile;
@@ -710,7 +773,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * Requirements.
+             * <p>The Python package requirements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jieba==0.42</p>
              */
             public Builder requirements(String requirements) {
                 this.requirements = requirements;
@@ -718,7 +784,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze1nak7h0alg1w5****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -726,7 +795,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * StartupFile.
+             * <p>The startup script for the Airflow container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/startup.sh</p>
              */
             public Builder startupFile(String startupFile) {
                 this.startupFile = startupFile;
@@ -734,7 +806,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEPLOYED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -742,7 +817,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The Airflow instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af-xxx</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -750,7 +828,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-hp3hyga33aur8tj36****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -758,7 +839,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp16ko44pgciwv0****</p>
@@ -769,7 +850,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerServerlessReplicas.
+             * <p>The number of worker node replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder workerServerlessReplicas(Integer workerServerlessReplicas) {
                 this.workerServerlessReplicas = workerServerlessReplicas;
@@ -777,7 +861,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86302423828****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -785,7 +872,10 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

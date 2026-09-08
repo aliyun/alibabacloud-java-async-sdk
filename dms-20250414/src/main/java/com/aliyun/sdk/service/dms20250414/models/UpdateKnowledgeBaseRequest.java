@@ -111,7 +111,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new knowledge base description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updated kb desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -120,6 +123,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The knowledge base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new knowledge base name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updated kb name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

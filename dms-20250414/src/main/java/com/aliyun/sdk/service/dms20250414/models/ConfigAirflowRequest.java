@@ -113,6 +113,7 @@ public class ConfigAirflowRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the Airflow instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class ConfigAirflowRequest extends Request {
         }
 
         /**
+         * <p>The list of custom Airflow configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder customAirflowCfg(java.util.List<String> customAirflowCfg) {
@@ -135,6 +137,7 @@ public class ConfigAirflowRequest extends Request {
         }
 
         /**
+         * <p>The DMS workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

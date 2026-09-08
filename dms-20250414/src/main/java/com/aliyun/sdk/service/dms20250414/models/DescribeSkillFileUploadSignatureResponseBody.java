@@ -106,7 +106,7 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +298,7 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * OssCredential.
+             * <p>The parameter set that specifies the derived key.</p>
              */
             public Builder ossCredential(String ossCredential) {
                 this.ossCredential = ossCredential;
@@ -293,7 +306,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssDate.
+             * <p>The time of the request. The format follows the ISO 8601 date and time standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260101T135341Z</p>
              */
             public Builder ossDate(String ossDate) {
                 this.ossDate = ossDate;
@@ -301,7 +317,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssSecurityToken.
+             * <p>The STS token used for uploading to OSS. The token is valid for 1 hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAIS4gJ1q6Ft5B2yfSjIr5vPHMj4p+lHx/utUUjg13ptZ+5u3oDzkzz2IHhMdXlrCOgYt/8xnG1V6f8flrJ/ToQAX0HfatZq5ZkS9AqnaoXM/te496IFg5D9y7dIs8GgjqHoeOzcYI73WJXEMiLp9EJaxb/9ak/RPTiMOoGIjphKd8keWhLCAxNNGNZRIHkJyqZYTwyzU8ygKRn3mGHdIVN1sw5n8wNF5L+439eX52i17jS46JdM/9ysesH5NpQxbMwkDYnk5oEsKPqdihw3wgNR6aJ7gJZD/Tr6pdyHCzFTmU7ea7uEqYw3clYiOPBnRvEd8eKPnPl5q/HVm4Hs0wxKNuxOSCXZS4yp3MLeH+ekJgOGwWFHz9qnOLmtQXqV22tMCRpzXIj6Zlmz+/reI6iNW+Ory74mxSFbrz3ZP4yv+o+Yv3QbMVumcySkKVbBbVvnv0R8GNsIC2lMUbp+rfShhfFuG2QagAECCyigwAlSAryrFmteD+EVuvxvi0NE7zDJLbUkhek6dcY+/u5V5jcmvL67CQ7bTNk+9lV8WDCvtoCD9ucqTaHweJEd8fS2DaFedAMDf8BfZa2C1CTLhVXdSgE2WORYbMqidelRm7dH3fTbZVvryWKDaveDRLt5J/Qfs**********</p>
              */
             public Builder ossSecurityToken(String ossSecurityToken) {
                 this.ossSecurityToken = ossSecurityToken;
@@ -309,7 +328,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssSignature.
+             * <p>The description information used for signature authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9bebe0900716bdefaab899781c7bdfd614ec6ed711e0de5ddf6f5a**********</p>
              */
             public Builder ossSignature(String ossSignature) {
                 this.ossSignature = ossSignature;
@@ -317,7 +339,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * OssSignatureVersion.
+             * <p>The version and algorithm of the signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS4-HMAC-SHA256</p>
              */
             public Builder ossSignatureVersion(String ossSignatureVersion) {
                 this.ossSignatureVersion = ossSignatureVersion;
@@ -325,7 +350,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The permission restrictions and constraints for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJjb25kaXRpb25zIjpbeyJ4LW9zcy1jcmVkZW50aWFsIjoiU1RTLk5YeldyTEo2ZnA5RlNuUTN6OGthQjFFWH**********</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -333,7 +361,7 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * UploadDir.
+             * <p>The path for file upload.</p>
              */
             public Builder uploadDir(String uploadDir) {
                 this.uploadDir = uploadDir;
@@ -341,7 +369,10 @@ public class DescribeSkillFileUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * UploadHost.
+             * <p>The destination address for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://**********.oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder uploadHost(String uploadHost) {
                 this.uploadHost = uploadHost;

@@ -87,7 +87,10 @@ public class DescribeFileUploadSignatureRequest extends Request {
         } 
 
         /**
-         * CallFrom.
+         * <p>The parameter used only by the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>仅前端使用</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -96,7 +99,10 @@ public class DescribeFileUploadSignatureRequest extends Request {
         }
 
         /**
-         * DmsUnit.
+         * <p>The current DMS unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);

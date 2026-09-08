@@ -119,7 +119,7 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message that is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This record is being collected, please wait for a moment.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -252,7 +273,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The error message if the task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>action failed</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -260,7 +284,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the task ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-13T14:30:20.582182728+08:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -268,7 +295,10 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the task started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-13T14:30:20.582182728+08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -276,10 +306,11 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The status of the asynchronous task. Valid values: SUCCESS, ERROR, TIMEOUT, and CANCEL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;phase&quot;: &quot;Created&quot;, &quot;latestExecError&quot;: {&quot;message&quot;: &quot;&quot;, &quot;code&quot;: &quot;&quot;, &quot;requestId&quot;: &quot;&quot;, &quot;extraInfo&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}}</p>
+             * <p>{\&quot;phase\&quot;: \&quot;Created\&quot;, \&quot;latestExecError\&quot;: {\&quot;message\&quot;: \&quot;\&quot;, \&quot;code\&quot;: \&quot;\&quot;, \&quot;requestId\&quot;: \&quot;\&quot;, \&quot;extraInfo\&quot;: \&quot;\&quot;, \&quot;title\&quot;: \&quot;\&quot;}}</p>
              */
             public Builder status(String status) {
                 this.status = status;

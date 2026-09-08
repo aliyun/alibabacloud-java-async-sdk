@@ -132,7 +132,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -175,7 +184,14 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +199,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The operation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768270172</p>
          */
         public Builder timestamp(String timestamp) {
             this.timestamp = timestamp;
@@ -327,7 +346,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The memory content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Diamond pricing analysis requires examining the skewness and outliers of the distribution of each feature.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -335,7 +357,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * FromId.
+             * <p>The memory source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w3xa1********x6y8zm</p>
              */
             public Builder fromId(String fromId) {
                 this.fromId = fromId;
@@ -343,7 +368,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-29T07:11:23Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -351,7 +379,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-29T07:11:23Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -359,7 +390,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * HintLevel.
+             * <p>The memory hit level (hotness).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hintLevel(Long hintLevel) {
                 this.hintLevel = hintLevel;
@@ -367,7 +401,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * MemFrom.
+             * <p>The memory source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session</p>
              */
             public Builder memFrom(String memFrom) {
                 this.memFrom = memFrom;
@@ -375,7 +412,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The memory status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memorized</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -383,7 +423,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The memory UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8zm3w********g3yxa1</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -476,7 +519,7 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The response struct.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -484,7 +527,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -492,7 +538,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -500,7 +549,10 @@ public class ListDataAgentMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Long total) {
                 this.total = total;

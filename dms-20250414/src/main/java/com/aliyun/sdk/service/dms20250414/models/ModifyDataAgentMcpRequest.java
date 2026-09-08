@@ -173,7 +173,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The brief description of the artifact. This parameter can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project name pass the check</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -182,7 +185,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether the MCP server is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -191,7 +197,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the MCP instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://***.com/mcp</p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -200,7 +209,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Headers.
+         * <p>The request header settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Authorization&quot;:&quot;Bearer ***&quot;}</p>
          */
         public Builder headers(String headers) {
             this.putQueryParameter("Headers", headers);
@@ -209,6 +221,7 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
+         * <p>The ID of the MCP server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +234,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The MCP name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Efficiency Diagnostics V3</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -230,7 +246,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
-         * NeedUidInHeader.
+         * <p>Specifies whether to include the Alibaba Cloud UID in the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needUidInHeader(Boolean needUidInHeader) {
             this.putQueryParameter("NeedUidInHeader", needUidInHeader);
@@ -239,7 +258,10 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
-         * TransportType.
+         * <p>The transport channel type. Valid values: streamablehttp, sse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sse</p>
          */
         public Builder transportType(String transportType) {
             this.putQueryParameter("TransportType", transportType);
@@ -248,6 +270,7 @@ public class ModifyDataAgentMcpRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

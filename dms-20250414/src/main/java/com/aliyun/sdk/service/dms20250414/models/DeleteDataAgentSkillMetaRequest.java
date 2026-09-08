@@ -74,6 +74,7 @@ public class DeleteDataAgentSkillMetaRequest extends Request {
         } 
 
         /**
+         * <p>The skill ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56kv1pvl9uvt9**********bb</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

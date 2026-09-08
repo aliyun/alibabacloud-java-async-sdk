@@ -145,7 +145,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>A list of documents.</p>
          */
         public Builder data(java.util.List<OneMetaKnowledgeBaseDocument> data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code, returned only when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -161,7 +164,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message, returned only when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource not found kb-***</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -169,7 +175,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -177,7 +186,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zCXSmY0CJbybp6FZV7vo0Wjw64X-*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -185,7 +197,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,16 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +225,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of documents that meet the specified criteria. This parameter is not currently supported and always returns 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

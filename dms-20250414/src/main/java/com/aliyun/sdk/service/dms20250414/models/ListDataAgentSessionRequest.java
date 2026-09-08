@@ -213,7 +213,10 @@ public class ListDataAgentSessionRequest extends Request {
         } 
 
         /**
-         * CreateEndTime.
+         * <p>The end time for session creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770912000000</p>
          */
         public Builder createEndTime(Long createEndTime) {
             this.putQueryParameter("CreateEndTime", createEndTime);
@@ -222,7 +225,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * CreateStartTime.
+         * <p>The start time for session creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770825600000</p>
          */
         public Builder createStartTime(Long createStartTime) {
             this.putQueryParameter("CreateStartTime", createStartTime);
@@ -240,7 +246,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * CustomAgentId.
+         * <p>The custom agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-4y3ca4khkcu**********ysf</p>
          */
         public Builder customAgentId(String customAgentId) {
             this.putQueryParameter("CustomAgentId", customAgentId);
@@ -249,7 +258,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * DMSUnit.
+         * <p>The current Data Management unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder DMSUnit(String DMSUnit) {
             this.putQueryParameter("DMSUnit", DMSUnit);
@@ -258,7 +270,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * IsSaved.
+         * <p>Specifies whether to retrieve only favorited sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSaved(Boolean isSaved) {
             this.putQueryParameter("IsSaved", isSaved);
@@ -267,7 +282,11 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The mode. Valid values:</p>
+         * <ul>
+         * <li>Analysis</li>
+         * <li>Coding</li>
+         * </ul>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -276,7 +295,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -285,7 +307,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -294,7 +319,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * <p>The session type. This parameter is required when a workspace is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFavorite</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -303,7 +331,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The Data Agent title. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyze this data for me</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -312,7 +343,10 @@ public class ListDataAgentSessionRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20923*****7291</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

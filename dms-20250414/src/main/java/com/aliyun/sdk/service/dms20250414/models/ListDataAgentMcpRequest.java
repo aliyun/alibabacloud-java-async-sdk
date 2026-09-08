@@ -158,7 +158,10 @@ public class ListDataAgentMcpRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>A compatible pagination parameter. The actual number of records per page is controlled by PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -167,7 +170,10 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A compatible pagination token. The actual page sequence is controlled by PageNumber.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>page-2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -176,7 +182,10 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,7 +194,10 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Valid values: 1 to 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +206,7 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
-         * ReadyOnly.
+         * <p>Specifies whether to return only MCP Servers that are enabled and in the ready state. Default value: false.</p>
          */
         public Builder readyOnly(Boolean readyOnly) {
             this.putQueryParameter("ReadyOnly", readyOnly);
@@ -203,7 +215,10 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword for name search. The server performs a fuzzy match against MCP Server names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -212,7 +227,14 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The MCP Server type. Valid values:</p>
+         * <ul>
+         * <li>system: system MCP.</li>
+         * <li>customer: custom MCP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -221,6 +243,7 @@ public class ListDataAgentMcpRequest extends Request {
         }
 
         /**
+         * <p>The Data Agent workspace ID. The caller must have at least MEMBER permissions on this workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

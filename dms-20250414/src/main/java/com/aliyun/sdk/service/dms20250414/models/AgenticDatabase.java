@@ -236,7 +236,7 @@ public class AgenticDatabase extends TeaModel {
         } 
 
         /**
-         * CatalogName.
+         * <p>The name of the catalog.</p>
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -244,7 +244,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * CatalogType.
+         * <p>The type of the catalog.</p>
          */
         public Builder catalogType(String catalogType) {
             this.catalogType = catalogType;
@@ -252,7 +252,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * CatalogUuid.
+         * <p>The unique identifier of the catalog.</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.catalogUuid = catalogUuid;
@@ -260,7 +260,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * DatabaseBizAttrs.
+         * <p>The database\&quot;s business attributes.</p>
          */
         public Builder databaseBizAttrs(java.util.Map<String, ?> databaseBizAttrs) {
             this.databaseBizAttrs = databaseBizAttrs;
@@ -268,7 +268,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The unique identifier of the database.</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -284,7 +284,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The database description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -292,7 +292,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * EngineMeta.
+         * <p>The metadata for the database engine.</p>
          */
         public Builder engineMeta(AgenticDatabaseEngineMeta engineMeta) {
             this.engineMeta = engineMeta;
@@ -300,7 +300,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the database.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -308,7 +308,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>The database\&quot;s extended properties.</p>
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
@@ -316,7 +316,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * QualifiedName.
+         * <p>The fully qualified name of the database.</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -324,7 +324,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the database.</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -332,7 +332,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * SearchName.
+         * <p>The name used to search the database.</p>
          */
         public Builder searchName(String searchName) {
             this.searchName = searchName;
@@ -340,7 +340,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The database state.</p>
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -348,7 +348,7 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * StorageLocation.
+         * <p>The database storage location.</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.storageLocation = storageLocation;

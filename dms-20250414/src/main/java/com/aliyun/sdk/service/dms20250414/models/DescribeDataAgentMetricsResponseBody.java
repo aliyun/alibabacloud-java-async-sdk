@@ -106,7 +106,7 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +246,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Timeout</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -241,7 +257,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_agent_session_per_user</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -249,7 +268,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the request is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -257,7 +279,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -350,7 +375,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the query range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782836200000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -358,7 +386,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * <p>The metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -366,7 +397,7 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>The list of metrics.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -374,7 +405,10 @@ public class DescribeDataAgentMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the query range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782835200000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

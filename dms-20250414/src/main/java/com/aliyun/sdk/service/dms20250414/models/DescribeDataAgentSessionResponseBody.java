@@ -106,7 +106,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -141,7 +147,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The return value. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +298,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The brief description of the artifact. This value may be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a simple report</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +309,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the backend completed the artifact task. This is a UNIX timestamp accurate to the second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778743587</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -301,7 +320,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bab******33e1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -309,7 +331,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The artifact name. This is typically a string concatenated by the system and is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report_****_2026****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +342,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiveTime.
+             * <p>The time when the backend received the artifact request. This is a UNIX timestamp accurate to the second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778743587</p>
              */
             public Builder receiveTime(String receiveTime) {
                 this.receiveTime = receiveTime;
@@ -325,7 +353,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the backend actually started running the artifact task. This is a UNIX timestamp accurate to the second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778743587</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -333,7 +364,20 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The artifact status. Valid values:</p>
+             * <ul>
+             * <li><p>PENDING: The backend has received the task but has not started it.</p>
+             * </li>
+             * <li><p>RUNNING: The backend has started the task but has not completed it.</p>
+             * </li>
+             * <li><p>SUCCESS: The task succeeded. You can query the file information by calling the ListFileUpload operation.</p>
+             * </li>
+             * <li><p>FAILED: The task failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PENDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,7 +385,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The artifact type. Valid values: TextReport, WebReport.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebReport</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -408,7 +455,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the chat replay history.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -416,7 +466,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The OSS download URL of the chat replay history.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -483,7 +536,16 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The data source category. Valid values:</p>
+             * <ul>
+             * <li><p><strong>CHAT</strong>: specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</p>
+             * </li>
+             * <li><p><strong>CUSTOM_AGENT</strong>: from the preset analysis data scope in a custom agent.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHAT</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -491,7 +553,11 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The data source details.</p>
+             * <p>When Category is CHAT or CUSTOM_AGENT, the structure of Detail is aligned with the structure of a single element in the DataSources parameter of the SendChatMessage operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -571,7 +637,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the recalled knowledge chunk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sky is blue</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -579,7 +648,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm (l2/ip/cosine) specified when the index was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.65</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -587,7 +659,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the recalled knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -784,7 +859,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-e*******ckd</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -792,7 +870,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAgentStage.
+             * <p>The stage of the custom agent. Valid values:</p>
+             * <ul>
+             * <li><strong>debug</strong>: test stage.</li>
+             * <li><strong>prod</strong>: production stage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>debug</p>
              */
             public Builder customAgentStage(String customAgentStage) {
                 this.customAgentStage = customAgentStage;
@@ -800,7 +885,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSearch.
+             * <p>Specifies whether to enable web search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enableSearch(Boolean enableSearch) {
                 this.enableSearch = enableSearch;
@@ -808,7 +896,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptKey.
+             * <p>The encryption key for storing artifacts in OSS (both built-in and user-specified). This is typically specified in CreateDataAgentSession.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ay***1Te</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -816,7 +907,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * <p>The encryption type for storing artifacts in OSS (both built-in and user-specified).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -824,7 +918,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * KbUuidList.
+             * <p>The list of knowledge base IDs for the current session.</p>
              */
             public Builder kbUuidList(java.util.List<String> kbUuidList) {
                 this.kbUuidList = kbUuidList;
@@ -832,7 +926,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li><strong>CHINESE</strong>: Chinese.</li>
+             * <li><strong>ENGLISH</strong>: English.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHINESE</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -840,7 +941,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * McpServerIds.
+             * <p>The list of MCP server IDs in the session configuration.</p>
              */
             public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
                 this.mcpServerIds = mcpServerIds;
@@ -848,7 +949,15 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The mode. Valid values:</p>
+             * <ul>
+             * <li><strong>ASK_DATA</strong>: ask data mode.</li>
+             * <li><strong>ANALYSIS</strong>: analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: insight mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANALYSIS</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -856,7 +965,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ReportPageWidth.
+             * <p>The report page width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300mm</p>
              */
             public Builder reportPageWidth(Long reportPageWidth) {
                 this.reportPageWidth = reportPageWidth;
@@ -864,7 +976,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ReportWaterMark.
+             * <p>The report watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder reportWaterMark(String reportWaterMark) {
                 this.reportWaterMark = reportWaterMark;
@@ -872,7 +987,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UserOssBucket.
+             * <p>The name of the user OSS bucket.</p>
+             * <ul>
+             * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user-oss-bucket</p>
              */
             public Builder userOssBucket(String userOssBucket) {
                 this.userOssBucket = userOssBucket;
@@ -1108,7 +1229,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The current agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cu0cs*******mf</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -1116,7 +1240,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AgentStatus.
+             * <p>The current agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -1124,7 +1251,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Artifacts.
+             * <p>The list of artifacts produced by the session. Currently, only reports are included.</p>
              */
             public Builder artifacts(java.util.List<Artifacts> artifacts) {
                 this.artifacts = artifacts;
@@ -1132,7 +1259,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ChatHistoryLocations.
+             * <p>The chat replay history.</p>
              */
             public Builder chatHistoryLocations(java.util.List<ChatHistoryLocations> chatHistoryLocations) {
                 this.chatHistoryLocations = chatHistoryLocations;
@@ -1140,7 +1267,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the session was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731645908000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1148,7 +1278,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * DataSources.
+             * <p>The list of data sources used in the current session.</p>
              */
             public Builder dataSources(java.util.List<DataSources> dataSources) {
                 this.dataSources = dataSources;
@@ -1156,7 +1286,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * FavoriteInWorkspace.
+             * <p>Indicates whether the session is saved as a favorite in the workspace by the current logged-in user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favoriteInWorkspace(String favoriteInWorkspace) {
                 this.favoriteInWorkspace = favoriteInWorkspace;
@@ -1164,7 +1297,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder file(String file) {
                 this.file = file;
@@ -1172,7 +1308,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * RecallResults.
+             * <p>The recall results from the knowledge base and memory for the current session.</p>
              */
             public Builder recallResults(java.util.List<RecallResults> recallResults) {
                 this.recallResults = recallResults;
@@ -1180,7 +1316,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Saved.
+             * <p>Indicates whether the session is saved as a favorite by the current logged-in user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder saved(Boolean saved) {
                 this.saved = saved;
@@ -1188,7 +1327,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionConfig.
+             * <p>The session configuration item.</p>
              */
             public Builder sessionConfig(SessionConfig sessionConfig) {
                 this.sessionConfig = sessionConfig;
@@ -1196,7 +1335,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The agent session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>976*********p</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -1204,7 +1346,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>The session status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -1212,7 +1357,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>分析一下这份文件，给出报告。</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1220,7 +1368,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the session owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2096******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

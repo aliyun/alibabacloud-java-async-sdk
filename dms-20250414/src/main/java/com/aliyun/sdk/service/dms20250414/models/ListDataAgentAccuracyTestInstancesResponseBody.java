@@ -184,7 +184,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -192,7 +192,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -200,7 +203,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -208,7 +214,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned per page. You can use this parameter together with NextToken to implement paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -216,7 +225,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zCXS*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -224,7 +236,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -232,7 +247,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -251,7 +269,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -259,7 +280,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The operation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768270172</p>
          */
         public Builder timestamp(String timestamp) {
             this.timestamp = timestamp;
@@ -267,7 +291,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -476,7 +503,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccuracyTestInsId.
+             * <p>The accuracy test instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
              */
             public Builder accuracyTestInsId(String accuracyTestInsId) {
                 this.accuracyTestInsId = accuracyTestInsId;
@@ -484,7 +514,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AgentId.
+             * <p>The custom agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-4x8uzp5wjqu4xxxxxxxxxx</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -492,7 +525,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The UID of the workspace creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20282*****7591</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -508,7 +544,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The ID of the test set file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-8*******01m</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -516,7 +555,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-30T07:31:09.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -524,7 +566,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-30T07:31:09.000+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -532,7 +577,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language used for the analysis task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHINESE</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -540,7 +588,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrent.
+             * <p>The maximum number of concurrent sessions during the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConcurrent(String maxConcurrent) {
                 this.maxConcurrent = maxConcurrent;
@@ -548,7 +599,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The analysis mode to be tested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -556,7 +610,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The custom agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent测试名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -564,7 +621,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NeedDelete.
+             * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needDelete(String needDelete) {
                 this.needDelete = needDelete;
@@ -572,7 +632,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8wfig6l33n4f4xxxxxxxxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -181,7 +181,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * CatalogUuid.
+         * <p>The UUID of the associated catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-HZ-OfjcNc2z***</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.putQueryParameter("CatalogUuid", catalogUuid);
@@ -190,7 +193,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.putQueryParameter("DatabaseUuid", databaseUuid);
@@ -199,7 +205,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * EnableVectorSearch.
+         * <p>Specifies whether to use semantic search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableVectorSearch(Boolean enableVectorSearch) {
             this.putQueryParameter("EnableVectorSearch", enableVectorSearch);
@@ -208,7 +217,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -217,7 +229,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f056501ada12****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -226,6 +241,7 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The search keyword.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +254,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The SQL template tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_sales</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,7 +266,10 @@ public class ListOneMetaSqlTemplatesRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * <p>The UUIDs of knowledge instances. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86c5c290052147c***,56c5c2900dasqw***</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

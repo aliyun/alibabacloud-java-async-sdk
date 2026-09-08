@@ -101,7 +101,13 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The skill description.</p>
+         * <ul>
+         * <li>By default, this parameter is optional. The backend parses the ZIP package specified by UploadLocation to obtain the skill description.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a demo skill description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -110,7 +116,13 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * SkillName.
+         * <p>The skill name.</p>
+         * <ul>
+         * <li>By default, this parameter is optional. The backend parses the ZIP package specified by UploadLocation to obtain the skill name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>data-query-skill</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("SkillName", skillName);
@@ -119,7 +131,11 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * UploadLocation.
+         * <p>The full path for uploading the skill ZIP file.</p>
+         * <ul>
+         * <li>Format: The UploadDir field returned by the DescribeSkillFileUploadSignature operation concatenated with the file name.</li>
+         * <li>Example: ${UploadDir}/${Filename}</li>
+         * </ul>
          */
         public Builder uploadLocation(String uploadLocation) {
             this.putQueryParameter("UploadLocation", uploadLocation);
@@ -128,7 +144,10 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmbbtfv8***********zuqko6</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

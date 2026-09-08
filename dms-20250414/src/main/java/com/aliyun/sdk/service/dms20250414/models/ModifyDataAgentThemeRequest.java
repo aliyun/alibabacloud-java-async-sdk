@@ -87,7 +87,10 @@ public class ModifyDataAgentThemeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the theme. Maximum length: 255 characters. A value of null indicates that the field is not modified. An empty string clears the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weekly report</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -96,7 +99,10 @@ public class ModifyDataAgentThemeRequest extends Request {
         }
 
         /**
-         * ThemeId.
+         * <p>The business identifier of the theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f8b2c1d-<strong><strong>-</strong></strong>-****-9a3e5f7b1c2d</p>
          */
         public Builder themeId(String themeId) {
             this.putQueryParameter("ThemeId", themeId);
@@ -105,7 +111,10 @@ public class ModifyDataAgentThemeRequest extends Request {
         }
 
         /**
-         * ThemeName.
+         * <p>The display name of the theme. Maximum length: 64 characters. A value of null indicates that the field is not modified. An empty string clears the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weekly report</p>
          */
         public Builder themeName(String themeName) {
             this.putQueryParameter("ThemeName", themeName);

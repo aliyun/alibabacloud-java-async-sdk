@@ -181,7 +181,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * CatalogUuid.
+         * <p>The UUID of the associated folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-HZ-OfjcNc2z***</p>
          */
         public Builder catalogUuid(String catalogUuid) {
             this.putQueryParameter("CatalogUuid", catalogUuid);
@@ -190,7 +193,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the associated database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.putQueryParameter("DatabaseUuid", databaseUuid);
@@ -199,7 +205,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sales version 2</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +217,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * Expr.
+         * <p>The content of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select count(1) from sales where dt = \&quot;2026-08-01\&quot;</p>
          */
         public Builder expr(String expr) {
             this.putQueryParameter("Expr", expr);
@@ -217,6 +229,7 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +242,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * SqlParams.
+         * <p>The custom template parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dt&quot;: &quot;2026-08-01&quot;}</p>
          */
         public Builder sqlParams(String sqlParams) {
             this.putQueryParameter("SqlParams", sqlParams);
@@ -238,7 +254,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_sales</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,7 +266,10 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sales_v2</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

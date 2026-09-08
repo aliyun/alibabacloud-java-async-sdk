@@ -132,7 +132,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,7 +140,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +151,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -156,7 +162,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no use</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -164,7 +173,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no use</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -183,7 +195,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -379,7 +398,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccuracyTestTaskId.
+             * <p>The ID of the accuracy test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
              */
             public Builder accuracyTestTaskId(String accuracyTestTaskId) {
                 this.accuracyTestTaskId = accuracyTestTaskId;
@@ -387,7 +409,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentResult.
+             * <p>The actual answer from the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>在公司历史职位记录中，共有97,750名员工曾拥有Senior Engineer头衔。</p>
              */
             public Builder agentResult(String agentResult) {
                 this.agentResult = agentResult;
@@ -403,7 +428,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerResult.
+             * <p>The expected answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97750</p>
              */
             public Builder answerResult(String answerResult) {
                 this.answerResult = answerResult;
@@ -411,7 +439,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerSql.
+             * <p>The expected SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT COUNT(*) FROM titles WHERE title = \&quot;Senior Engineer\&quot;;</p>
              */
             public Builder answerSql(String answerSql) {
                 this.answerSql = answerSql;
@@ -419,7 +450,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * IsTrue.
+             * <p>The AI evaluation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTrue(Boolean isTrue) {
                 this.isTrue = isTrue;
@@ -427,7 +461,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Question.
+             * <p>The test question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>拥有Senior Engineer头衔的员工有多少人？</p>
              */
             public Builder question(String question) {
                 this.question = question;
@@ -435,7 +472,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The error reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL 中不应该使用COUNT(DISTINCT)</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -443,7 +483,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Recommendation.
+             * <p>The improvement suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>在问题中描述清楚是否需去重</p>
              */
             public Builder recommendation(String recommendation) {
                 this.recommendation = recommendation;
@@ -451,7 +494,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultId.
+             * <p>The result ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>at-emhnbwewfngrxxxxxxxxxx</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -467,7 +513,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * SubtaskId.
+             * <p>The subtask ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f1eb8728-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
              */
             public Builder subtaskId(String subtaskId) {
                 this.subtaskId = subtaskId;
@@ -638,7 +687,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccuracyRate.
+             * <p>The accuracy rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder accuracyRate(Double accuracyRate) {
                 this.accuracyRate = accuracyRate;
@@ -646,7 +698,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * AccuracyTestTaskId.
+             * <p>The ID of the accuracy test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
              */
             public Builder accuracyTestTaskId(String accuracyTestTaskId) {
                 this.accuracyTestTaskId = accuracyTestTaskId;
@@ -654,7 +709,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The data content.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -662,7 +717,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * CorrectCount.
+             * <p>The number of test cases that passed evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder correctCount(Long correctCount) {
                 this.correctCount = correctCount;
@@ -678,7 +736,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -686,7 +747,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -702,7 +766,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalElements(Integer totalElements) {
                 this.totalElements = totalElements;
@@ -710,7 +777,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;
