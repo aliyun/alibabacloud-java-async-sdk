@@ -247,7 +247,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
              * <p>The normalized input configuration JSON string saved at submission time.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</p>
+             * <p>{&quot;VideoUrl&quot;:&quot;<a href="https://example.com/input.mp4%22%7D">https://example.com/input.mp4&quot;}</a></p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -288,7 +288,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task output JSON string. When the task succeeds, AiResult.DetextVideoURL contains the URL of the video with text erased.</p>
+             * <p>The task result JSON string. When Status is Finished, deserialize this field and read AiResult.DetextVideoURL to obtain the URL of the video after text erasure. The video URL is not guaranteed to be included when the task has not completed successfully. If Output.OssUri is specified at submission time, the result is stored in the specified OSS location. Otherwise, a signed URL is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;AiResult&quot;:{&quot;DetextVideoURL&quot;:&quot;<a href="https://example.com/detext/detext.mp4%22%7D%7D">https://example.com/detext/detext.mp4&quot;}}</a></p>

@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitVideoDetextJobResponseBody} extends {@link TeaModel}
+ * {@link SubmitAgentJobResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitVideoDetextJobResponseBody</p>
+ * <p>SubmitAgentJobResponseBody</p>
  */
-public class SubmitVideoDetextJobResponseBody extends TeaModel {
+public class SubmitAgentJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SubmitVideoDetextJobResponseBody(Builder builder) {
+    private SubmitAgentJobResponseBody(Builder builder) {
         this.jobId = builder.jobId;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class SubmitVideoDetextJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SubmitVideoDetextJobResponseBody create() {
+    public static SubmitAgentJobResponseBody create() {
         return builder().build();
     }
 
@@ -61,16 +61,16 @@ public class SubmitVideoDetextJobResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SubmitVideoDetextJobResponseBody model) {
+        private Builder(SubmitAgentJobResponseBody model) {
             this.jobId = model.jobId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The video text erasure job ID. Use this ID to call GetVideoDetextJob to query the job.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vdt_0123456789abcdef0123456789abcdef</p>
+         * <p>35ed5e9588184f2e8d862ee07437971a</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -78,18 +78,18 @@ public class SubmitVideoDetextJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>req-detext-20260820-001</p>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SubmitVideoDetextJobResponseBody build() {
-            return new SubmitVideoDetextJobResponseBody(this);
+        public SubmitAgentJobResponseBody build() {
+            return new SubmitAgentJobResponseBody(this);
         } 
 
     } 

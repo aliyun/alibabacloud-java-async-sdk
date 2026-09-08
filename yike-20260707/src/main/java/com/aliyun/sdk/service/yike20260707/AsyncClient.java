@@ -84,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateYikeLoginTokenResponse> generateYikeLoginToken(GenerateYikeLoginTokenRequest request);
 
     /**
+     * @param request the request parameters of GetAgentJob  GetAgentJobRequest
+     * @return GetAgentJobResponse
+     */
+    CompletableFuture<GetAgentJobResponse> getAgentJob(GetAgentJobRequest request);
+
+    /**
      * @param request the request parameters of GetAssetCategory  GetAssetCategoryRequest
      * @return GetAssetCategoryResponse
      */
@@ -206,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
 
     /**
+     * @param request the request parameters of SubmitAgentJob  SubmitAgentJobRequest
+     * @return SubmitAgentJobResponse
+     */
+    CompletableFuture<SubmitAgentJobResponse> submitAgentJob(SubmitAgentJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitImageGenerationJob  SubmitImageGenerationJobRequest
      * @return SubmitImageGenerationJobResponse
      */
@@ -232,7 +244,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a media asset ID. You can configure the erasure time range and text regions.</p>
+     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</p>
      * 
      * @param request the request parameters of SubmitVideoDetextJob  SubmitVideoDetextJobRequest
      * @return SubmitVideoDetextJobResponse
