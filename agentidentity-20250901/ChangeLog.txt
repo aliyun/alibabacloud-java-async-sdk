@@ -1,3 +1,6 @@
+2026-09-08 Version: 1.0.5
+- Generated java-async 2025-09-01 for AgentIdentity.
+
 2026-07-07 Version: 1.0.4
 - Generated java-async 2025-09-01 for AgentIdentity.
 

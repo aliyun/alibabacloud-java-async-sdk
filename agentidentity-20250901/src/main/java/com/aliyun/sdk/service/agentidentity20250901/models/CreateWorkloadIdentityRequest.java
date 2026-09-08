@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateWorkloadIdentityRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllowedConsentCallbackURLs")
+    private java.util.List<String> allowedConsentCallbackURLs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AllowedResourceOAuth2ReturnURLs")
     private java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
@@ -55,6 +59,7 @@ public class CreateWorkloadIdentityRequest extends Request {
 
     private CreateWorkloadIdentityRequest(Builder builder) {
         super(builder);
+        this.allowedConsentCallbackURLs = builder.allowedConsentCallbackURLs;
         this.allowedResourceOAuth2ReturnURLs = builder.allowedResourceOAuth2ReturnURLs;
         this.createRAMRole = builder.createRAMRole;
         this.description = builder.description;
@@ -77,6 +82,13 @@ public class CreateWorkloadIdentityRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowedConsentCallbackURLs
+     */
+    public java.util.List<String> getAllowedConsentCallbackURLs() {
+        return this.allowedConsentCallbackURLs;
     }
 
     /**
@@ -143,6 +155,7 @@ public class CreateWorkloadIdentityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWorkloadIdentityRequest, Builder> {
+        private java.util.List<String> allowedConsentCallbackURLs; 
         private java.util.List<String> allowedResourceOAuth2ReturnURLs; 
         private Boolean createRAMRole; 
         private String description; 
@@ -159,6 +172,7 @@ public class CreateWorkloadIdentityRequest extends Request {
 
         private Builder(CreateWorkloadIdentityRequest request) {
             super(request);
+            this.allowedConsentCallbackURLs = request.allowedConsentCallbackURLs;
             this.allowedResourceOAuth2ReturnURLs = request.allowedResourceOAuth2ReturnURLs;
             this.createRAMRole = request.createRAMRole;
             this.description = request.description;
@@ -169,6 +183,16 @@ public class CreateWorkloadIdentityRequest extends Request {
             this.sourcePlatform = request.sourcePlatform;
             this.workloadIdentityName = request.workloadIdentityName;
         } 
+
+        /**
+         * AllowedConsentCallbackURLs.
+         */
+        public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
+            String allowedConsentCallbackURLsShrink = shrink(allowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+            this.putBodyParameter("AllowedConsentCallbackURLs", allowedConsentCallbackURLsShrink);
+            this.allowedConsentCallbackURLs = allowedConsentCallbackURLs;
+            return this;
+        }
 
         /**
          * AllowedResourceOAuth2ReturnURLs.

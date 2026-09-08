@@ -138,10 +138,7 @@ public class UpdateOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>AliyunOAuth2</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AliyunOAuth2</p>
+         * CredentialProviderVendor.
          */
         public Builder credentialProviderVendor(String credentialProviderVendor) {
             this.putBodyParameter("CredentialProviderVendor", credentialProviderVendor);

@@ -101,6 +101,12 @@ public class GetUserPoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("OIDCDiscoveryURL")
+        private String OIDCDiscoveryURL;
+
+        @com.aliyun.core.annotation.NameInMap("SigninBaseURL")
+        private String signinBaseURL;
+
         @com.aliyun.core.annotation.NameInMap("SourcePlatform")
         private String sourcePlatform;
 
@@ -116,6 +122,8 @@ public class GetUserPoolResponseBody extends TeaModel {
         private UserPool(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.OIDCDiscoveryURL = builder.OIDCDiscoveryURL;
+            this.signinBaseURL = builder.signinBaseURL;
             this.sourcePlatform = builder.sourcePlatform;
             this.updateTime = builder.updateTime;
             this.userPoolId = builder.userPoolId;
@@ -142,6 +150,20 @@ public class GetUserPoolResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return OIDCDiscoveryURL
+         */
+        public String getOIDCDiscoveryURL() {
+            return this.OIDCDiscoveryURL;
+        }
+
+        /**
+         * @return signinBaseURL
+         */
+        public String getSigninBaseURL() {
+            return this.signinBaseURL;
         }
 
         /**
@@ -175,6 +197,8 @@ public class GetUserPoolResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String description; 
+            private String OIDCDiscoveryURL; 
+            private String signinBaseURL; 
             private String sourcePlatform; 
             private String updateTime; 
             private String userPoolId; 
@@ -186,6 +210,8 @@ public class GetUserPoolResponseBody extends TeaModel {
             private Builder(UserPool model) {
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.OIDCDiscoveryURL = model.OIDCDiscoveryURL;
+                this.signinBaseURL = model.signinBaseURL;
                 this.sourcePlatform = model.sourcePlatform;
                 this.updateTime = model.updateTime;
                 this.userPoolId = model.userPoolId;
@@ -205,6 +231,22 @@ public class GetUserPoolResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * OIDCDiscoveryURL.
+             */
+            public Builder OIDCDiscoveryURL(String OIDCDiscoveryURL) {
+                this.OIDCDiscoveryURL = OIDCDiscoveryURL;
+                return this;
+            }
+
+            /**
+             * SigninBaseURL.
+             */
+            public Builder signinBaseURL(String signinBaseURL) {
+                this.signinBaseURL = signinBaseURL;
                 return this;
             }
 

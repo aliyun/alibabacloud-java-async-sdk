@@ -110,6 +110,9 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
+        private String iDaaSInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("OAuth2CredentialProviderName")
         private String oAuth2CredentialProviderName;
 
@@ -118,6 +121,18 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OAuthType")
         private String oAuthType;
+
+        @com.aliyun.core.annotation.NameInMap("OutboundApplicationId")
+        private String outboundApplicationId;
+
+        @com.aliyun.core.annotation.NameInMap("OutboundAudience")
+        private String outboundAudience;
+
+        @com.aliyun.core.annotation.NameInMap("OutboundClientId")
+        private String outboundClientId;
+
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
 
         @com.aliyun.core.annotation.NameInMap("TokenVaultName")
         private String tokenVaultName;
@@ -131,9 +146,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
             this.credentialProviderArn = builder.credentialProviderArn;
             this.credentialProviderVendor = builder.credentialProviderVendor;
             this.description = builder.description;
+            this.iDaaSInstanceId = builder.iDaaSInstanceId;
             this.oAuth2CredentialProviderName = builder.oAuth2CredentialProviderName;
             this.oAuth2ProviderConfig = builder.oAuth2ProviderConfig;
             this.oAuthType = builder.oAuthType;
+            this.outboundApplicationId = builder.outboundApplicationId;
+            this.outboundAudience = builder.outboundAudience;
+            this.outboundClientId = builder.outboundClientId;
+            this.sourcePlatform = builder.sourcePlatform;
             this.tokenVaultName = builder.tokenVaultName;
             this.updateTime = builder.updateTime;
         }
@@ -182,6 +202,13 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return iDaaSInstanceId
+         */
+        public String getIDaaSInstanceId() {
+            return this.iDaaSInstanceId;
+        }
+
+        /**
          * @return oAuth2CredentialProviderName
          */
         public String getOAuth2CredentialProviderName() {
@@ -200,6 +227,34 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
          */
         public String getOAuthType() {
             return this.oAuthType;
+        }
+
+        /**
+         * @return outboundApplicationId
+         */
+        public String getOutboundApplicationId() {
+            return this.outboundApplicationId;
+        }
+
+        /**
+         * @return outboundAudience
+         */
+        public String getOutboundAudience() {
+            return this.outboundAudience;
+        }
+
+        /**
+         * @return outboundClientId
+         */
+        public String getOutboundClientId() {
+            return this.outboundClientId;
+        }
+
+        /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         /**
@@ -222,9 +277,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
             private String credentialProviderArn; 
             private String credentialProviderVendor; 
             private String description; 
+            private String iDaaSInstanceId; 
             private String oAuth2CredentialProviderName; 
             private OAuth2ProviderConfig oAuth2ProviderConfig; 
             private String oAuthType; 
+            private String outboundApplicationId; 
+            private String outboundAudience; 
+            private String outboundClientId; 
+            private String sourcePlatform; 
             private String tokenVaultName; 
             private String updateTime; 
 
@@ -237,9 +297,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
                 this.credentialProviderArn = model.credentialProviderArn;
                 this.credentialProviderVendor = model.credentialProviderVendor;
                 this.description = model.description;
+                this.iDaaSInstanceId = model.iDaaSInstanceId;
                 this.oAuth2CredentialProviderName = model.oAuth2CredentialProviderName;
                 this.oAuth2ProviderConfig = model.oAuth2ProviderConfig;
                 this.oAuthType = model.oAuthType;
+                this.outboundApplicationId = model.outboundApplicationId;
+                this.outboundAudience = model.outboundAudience;
+                this.outboundClientId = model.outboundClientId;
+                this.sourcePlatform = model.sourcePlatform;
                 this.tokenVaultName = model.tokenVaultName;
                 this.updateTime = model.updateTime;
             } 
@@ -285,6 +350,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
+             * IDaaSInstanceId.
+             */
+            public Builder iDaaSInstanceId(String iDaaSInstanceId) {
+                this.iDaaSInstanceId = iDaaSInstanceId;
+                return this;
+            }
+
+            /**
              * OAuth2CredentialProviderName.
              */
             public Builder oAuth2CredentialProviderName(String oAuth2CredentialProviderName) {
@@ -305,6 +378,38 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
              */
             public Builder oAuthType(String oAuthType) {
                 this.oAuthType = oAuthType;
+                return this;
+            }
+
+            /**
+             * OutboundApplicationId.
+             */
+            public Builder outboundApplicationId(String outboundApplicationId) {
+                this.outboundApplicationId = outboundApplicationId;
+                return this;
+            }
+
+            /**
+             * OutboundAudience.
+             */
+            public Builder outboundAudience(String outboundAudience) {
+                this.outboundAudience = outboundAudience;
+                return this;
+            }
+
+            /**
+             * OutboundClientId.
+             */
+            public Builder outboundClientId(String outboundClientId) {
+                this.outboundClientId = outboundClientId;
+                return this;
+            }
+
+            /**
+             * SourcePlatform.
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
                 return this;
             }
 

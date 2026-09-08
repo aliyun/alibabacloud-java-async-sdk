@@ -158,6 +158,9 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
      * <p>ListWorkloadIdentitiesResponseBody</p>
      */
     public static class WorkloadIdentities extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowedConsentCallbackURLs")
+        private java.util.List<String> allowedConsentCallbackURLs;
+
         @com.aliyun.core.annotation.NameInMap("AllowedResourceOAuth2ReturnURLs")
         private java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
@@ -192,6 +195,7 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         private String workloadIdentityName;
 
         private WorkloadIdentities(Builder builder) {
+            this.allowedConsentCallbackURLs = builder.allowedConsentCallbackURLs;
             this.allowedResourceOAuth2ReturnURLs = builder.allowedResourceOAuth2ReturnURLs;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -211,6 +215,13 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
 
         public static WorkloadIdentities create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowedConsentCallbackURLs
+         */
+        public java.util.List<String> getAllowedConsentCallbackURLs() {
+            return this.allowedConsentCallbackURLs;
         }
 
         /**
@@ -291,6 +302,7 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> allowedConsentCallbackURLs; 
             private java.util.List<String> allowedResourceOAuth2ReturnURLs; 
             private String createTime; 
             private String description; 
@@ -307,6 +319,7 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             } 
 
             private Builder(WorkloadIdentities model) {
+                this.allowedConsentCallbackURLs = model.allowedConsentCallbackURLs;
                 this.allowedResourceOAuth2ReturnURLs = model.allowedResourceOAuth2ReturnURLs;
                 this.createTime = model.createTime;
                 this.description = model.description;
@@ -319,6 +332,14 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
                 this.workloadIdentityArn = model.workloadIdentityArn;
                 this.workloadIdentityName = model.workloadIdentityName;
             } 
+
+            /**
+             * AllowedConsentCallbackURLs.
+             */
+            public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
+                this.allowedConsentCallbackURLs = allowedConsentCallbackURLs;
+                return this;
+            }
 
             /**
              * AllowedResourceOAuth2ReturnURLs.

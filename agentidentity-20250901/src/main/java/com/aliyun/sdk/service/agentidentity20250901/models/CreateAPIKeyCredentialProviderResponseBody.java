@@ -107,6 +107,9 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
+
         @com.aliyun.core.annotation.NameInMap("TokenVaultName")
         private String tokenVaultName;
 
@@ -115,6 +118,7 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.credentialProviderArn = builder.credentialProviderArn;
             this.description = builder.description;
+            this.sourcePlatform = builder.sourcePlatform;
             this.tokenVaultName = builder.tokenVaultName;
         }
 
@@ -155,6 +159,13 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
+        }
+
+        /**
          * @return tokenVaultName
          */
         public String getTokenVaultName() {
@@ -166,6 +177,7 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
             private String createTime; 
             private String credentialProviderArn; 
             private String description; 
+            private String sourcePlatform; 
             private String tokenVaultName; 
 
             private Builder() {
@@ -176,6 +188,7 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.credentialProviderArn = model.credentialProviderArn;
                 this.description = model.description;
+                this.sourcePlatform = model.sourcePlatform;
                 this.tokenVaultName = model.tokenVaultName;
             } 
 
@@ -208,6 +221,14 @@ public class CreateAPIKeyCredentialProviderResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * SourcePlatform.
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
                 return this;
             }
 

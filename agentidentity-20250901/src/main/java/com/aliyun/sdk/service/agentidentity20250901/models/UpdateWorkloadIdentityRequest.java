@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateWorkloadIdentityRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllowedConsentCallbackURLs")
+    private java.util.List<String> allowedConsentCallbackURLs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AllowedResourceOAuth2ReturnURLs")
     private java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
@@ -43,6 +47,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
 
     private UpdateWorkloadIdentityRequest(Builder builder) {
         super(builder);
+        this.allowedConsentCallbackURLs = builder.allowedConsentCallbackURLs;
         this.allowedResourceOAuth2ReturnURLs = builder.allowedResourceOAuth2ReturnURLs;
         this.description = builder.description;
         this.identityProviderName = builder.identityProviderName;
@@ -62,6 +67,13 @@ public class UpdateWorkloadIdentityRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowedConsentCallbackURLs
+     */
+    public java.util.List<String> getAllowedConsentCallbackURLs() {
+        return this.allowedConsentCallbackURLs;
     }
 
     /**
@@ -107,6 +119,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateWorkloadIdentityRequest, Builder> {
+        private java.util.List<String> allowedConsentCallbackURLs; 
         private java.util.List<String> allowedResourceOAuth2ReturnURLs; 
         private String description; 
         private String identityProviderName; 
@@ -120,6 +133,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
 
         private Builder(UpdateWorkloadIdentityRequest request) {
             super(request);
+            this.allowedConsentCallbackURLs = request.allowedConsentCallbackURLs;
             this.allowedResourceOAuth2ReturnURLs = request.allowedResourceOAuth2ReturnURLs;
             this.description = request.description;
             this.identityProviderName = request.identityProviderName;
@@ -127,6 +141,16 @@ public class UpdateWorkloadIdentityRequest extends Request {
             this.sessionBindingEnabled = request.sessionBindingEnabled;
             this.workloadIdentityName = request.workloadIdentityName;
         } 
+
+        /**
+         * AllowedConsentCallbackURLs.
+         */
+        public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
+            String allowedConsentCallbackURLsShrink = shrink(allowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+            this.putBodyParameter("AllowedConsentCallbackURLs", allowedConsentCallbackURLsShrink);
+            this.allowedConsentCallbackURLs = allowedConsentCallbackURLs;
+            return this;
+        }
 
         /**
          * AllowedResourceOAuth2ReturnURLs.

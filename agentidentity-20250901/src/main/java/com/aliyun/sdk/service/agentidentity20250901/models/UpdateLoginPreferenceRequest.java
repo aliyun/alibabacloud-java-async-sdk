@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateLoginPreferenceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowedPostLogoutRedirectUris")
+    private java.util.List<String> allowedPostLogoutRedirectUris;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoginPreference")
     private LoginPreference loginPreference;
 
@@ -27,6 +31,7 @@ public class UpdateLoginPreferenceRequest extends Request {
 
     private UpdateLoginPreferenceRequest(Builder builder) {
         super(builder);
+        this.allowedPostLogoutRedirectUris = builder.allowedPostLogoutRedirectUris;
         this.loginPreference = builder.loginPreference;
         this.userPoolName = builder.userPoolName;
     }
@@ -45,6 +50,13 @@ public class UpdateLoginPreferenceRequest extends Request {
     }
 
     /**
+     * @return allowedPostLogoutRedirectUris
+     */
+    public java.util.List<String> getAllowedPostLogoutRedirectUris() {
+        return this.allowedPostLogoutRedirectUris;
+    }
+
+    /**
      * @return loginPreference
      */
     public LoginPreference getLoginPreference() {
@@ -59,6 +71,7 @@ public class UpdateLoginPreferenceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLoginPreferenceRequest, Builder> {
+        private java.util.List<String> allowedPostLogoutRedirectUris; 
         private LoginPreference loginPreference; 
         private String userPoolName; 
 
@@ -68,9 +81,20 @@ public class UpdateLoginPreferenceRequest extends Request {
 
         private Builder(UpdateLoginPreferenceRequest request) {
             super(request);
+            this.allowedPostLogoutRedirectUris = request.allowedPostLogoutRedirectUris;
             this.loginPreference = request.loginPreference;
             this.userPoolName = request.userPoolName;
         } 
+
+        /**
+         * AllowedPostLogoutRedirectUris.
+         */
+        public Builder allowedPostLogoutRedirectUris(java.util.List<String> allowedPostLogoutRedirectUris) {
+            String allowedPostLogoutRedirectUrisShrink = shrink(allowedPostLogoutRedirectUris, "AllowedPostLogoutRedirectUris", "json");
+            this.putQueryParameter("AllowedPostLogoutRedirectUris", allowedPostLogoutRedirectUrisShrink);
+            this.allowedPostLogoutRedirectUris = allowedPostLogoutRedirectUris;
+            return this;
+        }
 
         /**
          * LoginPreference.
