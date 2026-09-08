@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReadMessageNewTotalResponse> readMessageNewTotal(ReadMessageNewTotalRequest request);
 
     /**
+     * @param request the request parameters of ReadMetaConfig  ReadMetaConfigRequest
+     * @return ReadMetaConfigResponse
+     */
+    CompletableFuture<ReadMetaConfigResponse> readMetaConfig(ReadMetaConfigRequest request);
+
+    /**
      * @param request the request parameters of ReadNumGroupByClass  ReadNumGroupByClassRequest
      * @return ReadNumGroupByClassResponse
      */

@@ -185,7 +185,10 @@ public class ReadNumGroupTotalRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language. Default value: Simplified Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +197,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -203,7 +209,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -212,7 +221,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -221,7 +233,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -230,7 +245,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -239,7 +257,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -248,7 +269,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -257,7 +281,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The message title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Can \&quot;Financial expenses_interest income\&quot; be considered as income?</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
@@ -266,7 +293,10 @@ public class ReadNumGroupTotalRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>System parameter. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

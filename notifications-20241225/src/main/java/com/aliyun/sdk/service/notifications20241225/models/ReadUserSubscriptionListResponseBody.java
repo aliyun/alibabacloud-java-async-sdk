@@ -107,6 +107,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         } 
 
         /**
+         * <p>The response code of the operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +119,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -126,7 +127,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +138,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +149,14 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -247,7 +261,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>email</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -255,7 +272,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * CheckedState.
+             * <p>Indicates whether the subscription is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder checkedState(String checkedState) {
                 this.checkedState = checkedState;
@@ -263,7 +283,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultChecked.
+             * <p>Indicates whether the option is selected by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder defaultChecked(String defaultChecked) {
                 this.defaultChecked = defaultChecked;
@@ -271,7 +294,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * FatigueDayLimit.
+             * <p>The fatigue limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder fatigueDayLimit(Integer fatigueDayLimit) {
                 this.fatigueDayLimit = fatigueDayLimit;
@@ -279,7 +305,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>Indicates whether the option can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder optional(String optional) {
                 this.optional = optional;
@@ -346,7 +375,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * KeywordBlacklist.
+             * <p>The blacklist.</p>
              */
             public Builder keywordBlacklist(java.util.List<String> keywordBlacklist) {
                 this.keywordBlacklist = keywordBlacklist;
@@ -354,7 +383,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordWhitelist.
+             * <p>The whitelist.</p>
              */
             public Builder keywordWhitelist(java.util.List<String> keywordWhitelist) {
                 this.keywordWhitelist = keywordWhitelist;
@@ -512,7 +541,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -520,7 +552,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactEmail.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t*@qq.*</p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -528,7 +563,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -536,7 +574,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMobile.
+             * <p>The masked mobile phone number of the Account Center contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130*90</p>
              */
             public Builder contactMobile(String contactMobile) {
                 this.contactMobile = contactMobile;
@@ -544,7 +585,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the Account Center contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -552,7 +596,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * EmailConfirmed.
+             * <p>Indicates whether the email address is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailConfirmed(Boolean emailConfirmed) {
                 this.emailConfirmed = emailConfirmed;
@@ -560,7 +607,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageSource.
+             * <p>The message source.</p>
              */
             public Builder messageSource(MessageSource messageSource) {
                 this.messageSource = messageSource;
@@ -568,7 +615,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * MobileConfirmed.
+             * <p>Indicates whether the mobile phone number of the Account Center contact is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mobileConfirmed(Boolean mobileConfirmed) {
                 this.mobileConfirmed = mobileConfirmed;
@@ -576,7 +626,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The position of the Account Center contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CEO</p>
              */
             public Builder position(String position) {
                 this.position = position;
@@ -643,7 +696,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * KeywordBlacklist.
+             * <p>The blacklist.</p>
              */
             public Builder keywordBlacklist(java.util.List<String> keywordBlacklist) {
                 this.keywordBlacklist = keywordBlacklist;
@@ -651,7 +704,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordWhitelist.
+             * <p>The whitelist.</p>
              */
             public Builder keywordWhitelist(java.util.List<String> keywordWhitelist) {
                 this.keywordWhitelist = keywordWhitelist;
@@ -770,7 +823,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactId.
+             * <p>The contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -778,7 +834,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the Account Center contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -786,7 +845,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageSource.
+             * <p>The message source.</p>
              */
             public Builder messageSource(WebhookContactsMessageSource messageSource) {
                 this.messageSource = messageSource;
@@ -794,7 +853,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -802,7 +864,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ServerUrl.
+             * <p>The webhook URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx">https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx</a></p>
              */
             public Builder serverUrl(String serverUrl) {
                 this.serverUrl = serverUrl;
@@ -810,7 +875,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * WebhookType.
+             * <p>The webhook type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk</p>
              */
             public Builder webhookType(String webhookType) {
                 this.webhookType = webhookType;
@@ -877,7 +945,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * CommonContacts.
+             * <p>The Account Center contact list.</p>
              */
             public Builder commonContacts(java.util.List<CommonContacts> commonContacts) {
                 this.commonContacts = commonContacts;
@@ -885,7 +953,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * WebhookContacts.
+             * <p>The webhook contact list.</p>
              */
             public Builder webhookContacts(java.util.List<WebhookContacts> webhookContacts) {
                 this.webhookContacts = webhookContacts;
@@ -1043,7 +1111,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -1051,7 +1122,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryCode.
+             * <p>The message category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_edu_content</p>
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -1059,7 +1133,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryDesc.
+             * <p>The description of the message category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Content related to product usage scenarios and technical sharing</p>
              */
             public Builder categoryDesc(String categoryDesc) {
                 this.categoryDesc = categoryDesc;
@@ -1067,7 +1144,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryGroupCode.
+             * <p>The category group code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_msg</p>
              */
             public Builder categoryGroupCode(String categoryGroupCode) {
                 this.categoryGroupCode = categoryGroupCode;
@@ -1075,7 +1155,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryGroupName.
+             * <p>The category group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product Messages</p>
              */
             public Builder categoryGroupName(String categoryGroupName) {
                 this.categoryGroupName = categoryGroupName;
@@ -1083,7 +1166,10 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The message category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product Educational Content</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -1091,7 +1177,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelConfigs.
+             * <p>The channel list.</p>
              */
             public Builder channelConfigs(java.util.List<ChannelConfigs> channelConfigs) {
                 this.channelConfigs = channelConfigs;
@@ -1099,7 +1185,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * Contact.
+             * <p>The contact.</p>
              */
             public Builder contact(Contact contact) {
                 this.contact = contact;
@@ -1107,7 +1193,7 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiveTimeList.
+             * <p>The receiving time list.</p>
              */
             public Builder receiveTimeList(java.util.List<Integer> receiveTimeList) {
                 this.receiveTimeList = receiveTimeList;

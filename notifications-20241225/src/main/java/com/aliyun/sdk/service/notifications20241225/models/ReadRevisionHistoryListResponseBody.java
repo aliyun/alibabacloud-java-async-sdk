@@ -119,7 +119,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned by the system. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2xx</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -143,7 +149,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned when the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -233,7 +255,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page of data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAT0x7j2M1Og+SpZ8n4WEjfo=</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -443,7 +468,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1305851476425884</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -451,7 +479,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryCode.
+             * <p>The event type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_edu_content</p>
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -459,7 +490,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelGroupCode.
+             * <p>The channel group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>base</p>
              */
             public Builder channelGroupCode(String channelGroupCode) {
                 this.channelGroupCode = channelGroupCode;
@@ -467,7 +501,23 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * NewValue.
+             * <p>The modified value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;channelType&quot;: &quot;sms&quot;,
+             *         &quot;checkedState&quot;: &quot;YES&quot;
+             *     },
+             *     {
+             *         &quot;channelType&quot;: &quot;pmsg&quot;,
+             *         &quot;checkedState&quot;: &quot;NO&quot;
+             *     },
+             *     {
+             *         &quot;channelType&quot;: &quot;email&quot;,
+             *         &quot;checkedState&quot;: &quot;NO&quot;
+             *     }
+             * ]</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -475,7 +525,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationItemCode.
+             * <p>The revision item code. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>receive_channel</p>
              */
             public Builder operationItemCode(String operationItemCode) {
                 this.operationItemCode = operationItemCode;
@@ -483,7 +536,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationItemName.
+             * <p>The revision item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reception channel</p>
              */
             public Builder operationItemName(String operationItemName) {
                 this.operationItemName = operationItemName;
@@ -491,7 +547,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTimestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743583672981</p>
              */
             public Builder operationTimestamp(Long operationTimestamp) {
                 this.operationTimestamp = operationTimestamp;
@@ -499,7 +558,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorIp.
+             * <p>The IP address of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder operatorIp(String operatorIp) {
                 this.operatorIp = operatorIp;
@@ -507,7 +569,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1662077279821892</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -515,7 +580,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorUid.
+             * <p>The UID of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1062132414049864</p>
              */
             public Builder operatorUid(Long operatorUid) {
                 this.operatorUid = operatorUid;
@@ -523,7 +591,23 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalValue.
+             * <p>The original value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;channelType&quot;: &quot;sms&quot;,
+             *         &quot;checkedState&quot;: &quot;NO&quot;
+             *     },
+             *     {
+             *         &quot;channelType&quot;: &quot;pmsg&quot;,
+             *         &quot;checkedState&quot;: &quot;NO&quot;
+             *     },
+             *     {
+             *         &quot;channelType&quot;: &quot;email&quot;,
+             *         &quot;checkedState&quot;: &quot;NO&quot;
+             *     }
+             * ]</p>
              */
             public Builder originalValue(String originalValue) {
                 this.originalValue = originalValue;
@@ -531,7 +615,7 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSpec.
+             * <p>The pagination information.</p>
              */
             public Builder pageSpec(PageSpec pageSpec) {
                 this.pageSpec = pageSpec;
@@ -539,7 +623,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -632,7 +719,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -640,7 +730,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page of data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAT0x7j2M1Og+SpZ8n4WEjfo=</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -648,7 +741,7 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>A single row of returned data.</p>
              */
             public Builder rows(java.util.List<Rows> rows) {
                 this.rows = rows;
@@ -656,7 +749,10 @@ public class ReadRevisionHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of messages in the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

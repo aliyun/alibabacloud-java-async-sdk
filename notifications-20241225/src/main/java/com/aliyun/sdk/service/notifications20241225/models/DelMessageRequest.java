@@ -185,7 +185,10 @@ public class DelMessageRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language. Default value: zh-CN (Simplified Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +197,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -203,7 +209,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -212,7 +221,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -221,7 +233,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -230,7 +245,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -239,7 +257,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * MsgId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3727683838</p>
          */
         public Builder msgId(String msgId) {
             this.putBodyParameter("MsgId", msgId);
@@ -248,7 +269,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -257,7 +281,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -266,7 +293,10 @@ public class DelMessageRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

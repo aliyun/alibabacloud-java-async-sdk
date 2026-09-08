@@ -106,7 +106,10 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +220,10 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassId.
+             * <p>The message category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classId(Long classId) {
                 this.classId = classId;
@@ -212,7 +231,10 @@ public class ReadNumGroupByClassResponseBody extends TeaModel {
             }
 
             /**
-             * MsgCount.
+             * <p>The number of unread messages in the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder msgCount(Long msgCount) {
                 this.msgCount = msgCount;

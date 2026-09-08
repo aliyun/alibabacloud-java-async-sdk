@@ -171,7 +171,10 @@ public class ReadNumGroupByClassRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language. Default value: Simplified Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +183,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -189,7 +195,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -198,7 +207,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -207,7 +219,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -216,7 +231,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -225,7 +243,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -234,7 +255,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -243,7 +267,10 @@ public class ReadNumGroupByClassRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

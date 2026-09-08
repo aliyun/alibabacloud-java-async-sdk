@@ -93,7 +93,10 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The business message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

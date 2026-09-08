@@ -199,7 +199,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -208,7 +211,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * AllowMarketing.
+         * <p>Specifies whether to allow notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowMarketing(Boolean allowMarketing) {
             this.putBodyParameter("AllowMarketing", allowMarketing);
@@ -217,7 +223,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -226,7 +235,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>The business line of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -235,7 +247,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>The request protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -244,7 +259,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>The source of the operation terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -265,7 +283,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>The cookies of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -274,7 +295,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>The URL of the source page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -283,7 +307,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The tenant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -292,7 +319,10 @@ public class UpdateMarketingPreferenceRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>The user type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

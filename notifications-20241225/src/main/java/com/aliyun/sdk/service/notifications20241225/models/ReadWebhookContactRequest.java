@@ -185,7 +185,10 @@ public class ReadWebhookContactRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +197,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the caller application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -203,7 +209,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>The business line of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -212,7 +221,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>The request protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -221,7 +233,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>The source of the operation terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -242,7 +257,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>The user cookies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -251,7 +269,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>The URL of the source page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -260,7 +281,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The tenant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -269,7 +293,10 @@ public class ReadWebhookContactRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>The user type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

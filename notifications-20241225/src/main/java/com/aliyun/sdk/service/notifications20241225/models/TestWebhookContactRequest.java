@@ -255,7 +255,10 @@ public class TestWebhookContactRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -264,7 +267,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the caller application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -273,7 +279,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>The business line of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -282,7 +291,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * BotSecurityToken.
+         * <p>The security token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder botSecurityToken(String botSecurityToken) {
             this.putBodyParameter("BotSecurityToken", botSecurityToken);
@@ -291,7 +303,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>The type of the request protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -300,7 +315,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>The source of the operation terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -321,7 +339,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The name of the webhook contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);
@@ -330,7 +351,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>The user cookies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -339,7 +363,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * ServerUrl.
+         * <p>The webhook server URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder serverUrl(String serverUrl) {
             this.putBodyParameter("ServerUrl", serverUrl);
@@ -348,7 +375,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>The URL of the source page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -357,7 +387,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lark</p>
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -366,7 +399,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The tenant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -375,7 +411,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>The user type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);
@@ -384,7 +423,10 @@ public class TestWebhookContactRequest extends Request {
         }
 
         /**
-         * WebhookType.
+         * <p>The webhook type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder webhookType(String webhookType) {
             this.putBodyParameter("WebhookType", webhookType);

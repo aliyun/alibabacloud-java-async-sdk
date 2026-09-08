@@ -106,7 +106,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call failed. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadCommonContactResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ReadCommonContactResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +298,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -290,7 +309,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * ContactEmail.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t*@qq.*</p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -298,7 +320,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The contact ID in Account Center. A value of 0 indicates the account contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -306,7 +331,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMobile.
+             * <p>The mobile phone number of the contact in Account Center (masked).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130**123</p>
              */
             public Builder contactMobile(String contactMobile) {
                 this.contactMobile = contactMobile;
@@ -314,7 +342,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The contact name in Account Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -322,7 +353,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * EmailConfirmed.
+             * <p>Indicates whether the email address of the contact is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailConfirmed(Boolean emailConfirmed) {
                 this.emailConfirmed = emailConfirmed;
@@ -330,7 +364,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * MobileConfirmed.
+             * <p>Indicates whether the mobile phone number of the contact in Account Center is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mobileConfirmed(Boolean mobileConfirmed) {
                 this.mobileConfirmed = mobileConfirmed;
@@ -338,7 +375,10 @@ public class ReadCommonContactResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The position of the contact in Account Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CEO</p>
              */
             public Builder position(String position) {
                 this.position = position;

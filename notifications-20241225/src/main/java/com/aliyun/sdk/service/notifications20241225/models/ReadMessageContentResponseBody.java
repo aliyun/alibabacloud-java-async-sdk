@@ -106,7 +106,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails. For more information, refer to error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadMessageContentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ReadMessageContentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -321,7 +337,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryName.
+             * <p>The message category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>活动消息</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -329,7 +348,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * ClassId.
+             * <p>The message class ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classId(Long classId) {
                 this.classId = classId;
@@ -337,7 +359,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;消息内容示例“</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -345,7 +370,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>The deletion flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -353,7 +381,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the message was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729758903000</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -361,7 +392,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtUpdate.
+             * <p>The time when the message was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729758903000</p>
              */
             public Builder gmtUpdate(Long gmtUpdate) {
                 this.gmtUpdate = gmtUpdate;
@@ -369,7 +403,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * MassId.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder massId(Long massId) {
                 this.massId = massId;
@@ -377,7 +414,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Memo.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>385ad715-4139-41f9-ba59-246a00bb46e0.jpg</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -385,7 +425,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * MsgId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AC14C11F1FF801EE00054518C220EF2C</p>
              */
             public Builder msgId(Long msgId) {
                 this.msgId = msgId;
@@ -393,7 +436,14 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The read status. Valid values:</p>
+             * <ul>
+             * <li>0: unread</li>
+             * <li>1: read.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>not_installed</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -401,7 +451,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The message title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Endless</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -585,7 +638,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryName.
+             * <p>The message category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>活动消息</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -593,7 +649,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * ClassId.
+             * <p>The message class ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classId(Long classId) {
                 this.classId = classId;
@@ -601,7 +660,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;消息内容示例“</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -609,7 +671,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>The deletion flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -617,7 +682,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the message was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729758903000</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -625,7 +693,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtUpdate.
+             * <p>The time when the message was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729758903000</p>
              */
             public Builder gmtUpdate(Long gmtUpdate) {
                 this.gmtUpdate = gmtUpdate;
@@ -633,7 +704,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * MassId.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder massId(Long massId) {
                 this.massId = massId;
@@ -641,7 +715,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Memo.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -649,7 +726,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * MsgId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3727683838</p>
              */
             public Builder msgId(Long msgId) {
                 this.msgId = msgId;
@@ -657,7 +737,14 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The read status. Valid values:</p>
+             * <ul>
+             * <li>0: unread</li>
+             * <li>1: read.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -665,7 +752,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The message title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;标题示例“</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -849,7 +939,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryName.
+             * <p>The message category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>活动消息</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -857,7 +950,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * ClassId.
+             * <p>The message class ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classId(Long classId) {
                 this.classId = classId;
@@ -865,7 +961,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”消息内容示例“</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -873,7 +972,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>The deletion flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -881,7 +983,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the message was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663809374000</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -889,7 +994,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtUpdate.
+             * <p>The time when the message was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663809374000</p>
              */
             public Builder gmtUpdate(Long gmtUpdate) {
                 this.gmtUpdate = gmtUpdate;
@@ -897,7 +1005,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * MassId.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder massId(Long massId) {
                 this.massId = massId;
@@ -905,7 +1016,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Memo.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -913,7 +1027,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * MsgId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3727683838</p>
              */
             public Builder msgId(Long msgId) {
                 this.msgId = msgId;
@@ -921,7 +1038,14 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The read status. Valid values:</p>
+             * <ul>
+             * <li>0: unread</li>
+             * <li>1: read.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -929,7 +1053,10 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The message title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;标题示例“</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1009,7 +1136,7 @@ public class ReadMessageContentResponseBody extends TeaModel {
             } 
 
             /**
-             * Item.
+             * <p>The data item.</p>
              */
             public Builder item(java.util.List<Item> item) {
                 this.item = item;
@@ -1017,7 +1144,7 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * LastItem.
+             * <p>/</p>
              */
             public Builder lastItem(java.util.List<LastItem> lastItem) {
                 this.lastItem = lastItem;
@@ -1025,7 +1152,7 @@ public class ReadMessageContentResponseBody extends TeaModel {
             }
 
             /**
-             * NextItem.
+             * <p>/</p>
              */
             public Builder nextItem(java.util.List<NextItem> nextItem) {
                 this.nextItem = nextItem;
@@ -1079,7 +1206,7 @@ public class ReadMessageContentResponseBody extends TeaModel {
             } 
 
             /**
-             * Datas.
+             * <p>The list of degradation rules.</p>
              */
             public Builder datas(Datas datas) {
                 this.datas = datas;

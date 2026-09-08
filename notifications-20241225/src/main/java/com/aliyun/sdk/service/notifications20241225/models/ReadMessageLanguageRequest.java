@@ -185,7 +185,10 @@ public class ReadMessageLanguageRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>Ignored. This parameter does not need to be specified. The page language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +197,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Ignored. This parameter does not need to be specified. The application name of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -203,7 +209,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>Ignored. This parameter does not need to be specified. The business line of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -212,7 +221,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>Ignored. This parameter does not need to be specified. The request protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -221,7 +233,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>Ignored. This parameter does not need to be specified. The operation terminal source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -230,7 +245,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>Ignored. This parameter does not need to be specified. The user cookies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -239,7 +257,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * ReturnDefaultLang.
+         * <p>Specifies whether to return the default language. If the value is YES, the default language is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         public Builder returnDefaultLang(String returnDefaultLang) {
             this.putBodyParameter("ReturnDefaultLang", returnDefaultLang);
@@ -248,7 +269,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>Ignored. This parameter does not need to be specified. The source page URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -257,7 +281,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>Ignored. This parameter does not need to be specified. The tenant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -266,7 +293,10 @@ public class ReadMessageLanguageRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>Ignored. This parameter does not need to be specified. The user type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

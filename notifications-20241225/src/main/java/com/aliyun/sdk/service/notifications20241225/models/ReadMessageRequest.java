@@ -185,7 +185,10 @@ public class ReadMessageRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language. Default value: zh-CN (Simplified Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +197,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -203,7 +209,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -212,7 +221,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -221,7 +233,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -230,7 +245,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -239,7 +257,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * MsgId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9FEF04A004A383534AA6400092A904F</p>
          */
         public Builder msgId(String msgId) {
             this.putBodyParameter("MsgId", msgId);
@@ -248,7 +269,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>The URL of the source page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -257,7 +281,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -266,7 +293,10 @@ public class ReadMessageRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>System parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

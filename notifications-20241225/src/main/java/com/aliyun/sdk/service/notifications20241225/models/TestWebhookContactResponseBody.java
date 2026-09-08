@@ -119,7 +119,10 @@ public class TestWebhookContactResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class TestWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class TestWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -143,7 +152,10 @@ public class TestWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The business message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class TestWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,14 @@ public class TestWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

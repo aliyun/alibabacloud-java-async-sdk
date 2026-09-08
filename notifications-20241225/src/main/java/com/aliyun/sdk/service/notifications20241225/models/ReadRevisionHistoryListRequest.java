@@ -213,7 +213,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language. Automatically passed through by the browser. You can manually override this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -222,7 +225,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Ignored. No need to pass this parameter. The application name of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -231,7 +237,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>Ignored. No need to pass this parameter. The business line of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -240,7 +249,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>Ignored. No need to pass this parameter. The request protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -249,7 +261,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * CategoryCode.
+         * <p>The category code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod_edu_content</p>
          */
         public Builder categoryCode(String categoryCode) {
             this.putBodyParameter("CategoryCode", categoryCode);
@@ -258,7 +273,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * ChannelGroupCode.
+         * <p>The channel group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base</p>
          */
         public Builder channelGroupCode(String channelGroupCode) {
             this.putBodyParameter("ChannelGroupCode", channelGroupCode);
@@ -267,7 +285,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>Ignored. No need to pass this parameter. The source of the operation terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -276,7 +297,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>Ignored. No need to pass this parameter. The user cookies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -285,7 +309,7 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             String pageInfoShrink = shrink(pageInfo, "PageInfo", "json");
@@ -295,7 +319,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>Ignored. No need to pass this parameter. The source page URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -304,7 +331,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>Ignored. No need to pass this parameter. The tenant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -313,7 +343,10 @@ public class ReadRevisionHistoryListRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>Ignored. No need to pass this parameter. The user type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);
@@ -394,7 +427,10 @@ public class ReadRevisionHistoryListRequest extends Request {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -402,7 +438,10 @@ public class ReadRevisionHistoryListRequest extends Request {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page of data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e2b5170336162251e0b5e8707e68181f</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -410,7 +449,10 @@ public class ReadRevisionHistoryListRequest extends Request {
             }
 
             /**
-             * ReturnTotalCount.
+             * <p>Specifies whether to return the total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder returnTotalCount(Boolean returnTotalCount) {
                 this.returnTotalCount = returnTotalCount;

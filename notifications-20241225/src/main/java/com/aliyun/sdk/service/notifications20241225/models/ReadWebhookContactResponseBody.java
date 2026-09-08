@@ -106,7 +106,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The business message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ReadWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +273,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
             } 
 
             /**
-             * BotSecurityToken.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder botSecurityToken(String botSecurityToken) {
                 this.botSecurityToken = botSecurityToken;
@@ -276,7 +295,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the webhook contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -284,7 +306,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The security token (deprecated).</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -292,7 +317,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * ServerUrl.
+             * <p>The bot server URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxxxxx">https://oapi.dingtalk.com/robot/send?access_token=xxxxxx</a></p>
              */
             public Builder serverUrl(String serverUrl) {
                 this.serverUrl = serverUrl;
@@ -300,7 +328,10 @@ public class ReadWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * WebhookType.
+             * <p>The webhook type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk</p>
              */
             public Builder webhookType(String webhookType) {
                 this.webhookType = webhookType;

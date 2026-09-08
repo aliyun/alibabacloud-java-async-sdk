@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadAllMessageResponseBody} extends {@link TeaModel}
+ * {@link ReadMetaConfigResponseBody} extends {@link TeaModel}
  *
- * <p>ReadAllMessageResponseBody</p>
+ * <p>ReadMetaConfigResponseBody</p>
  */
-public class ReadAllMessageResponseBody extends TeaModel {
+public class ReadMetaConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Boolean data;
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,7 +32,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ReadAllMessageResponseBody(Builder builder) {
+    private ReadMetaConfigResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReadAllMessageResponseBody create() {
+    public static ReadMetaConfigResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Boolean data; 
+        private Object data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,7 +97,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ReadAllMessageResponseBody model) {
+        private Builder(ReadMetaConfigResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,7 +106,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned when the call fails. For more information, see error codes.</p>
+         * <p>The error code returned if the call fails. For more information, see error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -120,18 +120,28 @@ public class ReadAllMessageResponseBody extends TeaModel {
          * <p>The execution result.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>{
+         *     &quot;isSubNextUser&quot;: &quot;YES&quot;,
+         *     &quot;IS_INNER_USER&quot;: &quot;NO&quot;,
+         *     &quot;isXsWhite&quot;: &quot;NO&quot;,
+         *     &quot;isXs&quot;: &quot;NO&quot;,
+         *     &quot;SITEID&quot;: &quot;cn&quot;,
+         *     &quot;webhookSignatures&quot;: [
+         *         &quot;Alibaba&quot;,
+         *         &quot;阿里云&quot;
+         *     ]
+         * }</p>
          */
-        public Builder data(Boolean data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,11 +160,7 @@ public class ReadAllMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -164,8 +170,8 @@ public class ReadAllMessageResponseBody extends TeaModel {
             return this;
         }
 
-        public ReadAllMessageResponseBody build() {
-            return new ReadAllMessageResponseBody(this);
+        public ReadMetaConfigResponseBody build() {
+            return new ReadMetaConfigResponseBody(this);
         } 
 
     } 

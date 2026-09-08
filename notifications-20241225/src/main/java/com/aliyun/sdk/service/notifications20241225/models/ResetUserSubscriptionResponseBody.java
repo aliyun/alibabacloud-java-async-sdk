@@ -93,7 +93,10 @@ public class ResetUserSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ResetUserSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class ResetUserSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73FD6AE8-898F-5D09-9763-69B8A875488A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class ResetUserSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -325,7 +325,7 @@ public class ReadMessageListRequest extends Request {
         } 
 
         /**
-         * <p>语言，默认为简体中文</p>
+         * <p>The language. Default value: Simplified Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -337,7 +337,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -349,7 +349,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -361,7 +361,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -373,7 +373,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>消息类目ID</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -385,7 +385,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -397,7 +397,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>消息内容，用于模糊搜索</p>
+         * <p>The message content. This parameter is used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;消息内容示例“</p>
@@ -409,7 +409,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -421,7 +421,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * GroupCode.
+         * <p>The group code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupCode(String groupCode) {
             this.putBodyParameter("GroupCode", groupCode);
@@ -430,7 +433,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * History.
+         * <p>Specifies whether the messages are historical messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder history(String history) {
             this.putBodyParameter("History", history);
@@ -439,10 +445,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>栏位 nav代表控制台topbar</p>
+         * <p>The location.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>nav</p>
          */
         public Builder loc(String loc) {
             this.putBodyParameter("Loc", loc);
@@ -451,7 +457,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -463,7 +469,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -475,7 +481,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>分页查询页码</p>
+         * <p>The page number for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -487,7 +493,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>分页查询大小</p>
+         * <p>The page size for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -499,7 +505,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -511,7 +517,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>消息状态，已读为1，未读为0</p>
+         * <p>The message status. A value of 1 indicates read. A value of 0 indicates unread. A value of -1 indicates all. Default value: -1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -523,7 +529,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -535,7 +541,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>消息标题，用于模糊搜索</p>
+         * <p>The message title. This parameter is used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;标题示例“</p>
@@ -547,7 +553,7 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * <p>系统参数，无需填写</p>
+         * <p>A system parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>

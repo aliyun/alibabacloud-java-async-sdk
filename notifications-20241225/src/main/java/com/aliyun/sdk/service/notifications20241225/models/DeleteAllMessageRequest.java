@@ -199,7 +199,10 @@ public class DeleteAllMessageRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language. Default value: Simplified Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -208,7 +211,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -217,7 +223,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -226,7 +235,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -235,7 +247,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * ClassId.
+         * <p>The message category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder classId(Long classId) {
             this.putBodyParameter("ClassId", classId);
@@ -244,7 +259,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -253,7 +271,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -262,7 +283,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * GroupCode.
+         * <p>The group code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupCode(String groupCode) {
             this.putBodyParameter("GroupCode", groupCode);
@@ -271,7 +295,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -280,7 +307,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -289,7 +319,10 @@ public class DeleteAllMessageRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>A system parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

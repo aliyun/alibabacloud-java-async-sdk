@@ -106,7 +106,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * <p>The error code returned when the call fails. For more information, see error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -117,7 +117,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data</p>
+         * <p>The execution result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>message</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>唯一请求id</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
@@ -147,11 +147,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
-         * <li><strong>false</strong>: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -376,7 +372,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryCode.
+             * <p>The category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -384,10 +383,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CategoryName</p>
+             * <p>The message category name.</p>
              * 
              * <strong>example:</strong>
-             * <p>/</p>
+             * <p>活动消息</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -395,7 +394,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Class</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -406,7 +405,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ClassId</p>
+             * <p>The message class ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -417,10 +416,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内容</p>
+             * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>/</p>
+             * <p>&quot;消息内容示例“</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -428,7 +427,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>删除</p>
+             * <p>The deletion flag.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -439,7 +438,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The time when the message was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1723772244000</p>
@@ -450,7 +449,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtUpdate.
+             * <p>The time when the message was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723772244000</p>
              */
             public Builder gmtUpdate(Long gmtUpdate) {
                 this.gmtUpdate = gmtUpdate;
@@ -458,7 +460,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>massId</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -469,7 +471,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>描述</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -480,7 +482,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>消息id</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3727683838</p>
@@ -491,7 +493,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态</p>
+             * <p>The read status. A value of 0 indicates unread. A value of 1 indicates read.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -502,10 +504,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标题</p>
+             * <p>The message title.</p>
              * 
              * <strong>example:</strong>
-             * <p>/</p>
+             * <p>&quot;标题示例“</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -513,7 +515,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Titleh.
+             * <p>The highlighted title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder titleh(String titleh) {
                 this.titleh = titleh;
@@ -632,7 +637,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned.</p>
+             * <p>The number of messages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -643,7 +648,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned.</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -654,7 +659,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If excess return values exist, this parameter is returned.</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -676,7 +681,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -687,7 +692,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows updated or returned on PolarDB-X 2.0 compute nodes.</p>
+             * <p>The returned data.</p>
              */
             public Builder rows(java.util.List<Rows> rows) {
                 this.rows = rows;

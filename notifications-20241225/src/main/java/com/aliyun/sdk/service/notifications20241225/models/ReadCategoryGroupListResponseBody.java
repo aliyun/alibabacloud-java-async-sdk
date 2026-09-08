@@ -106,7 +106,10 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned by the system. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupCode.
+             * <p>The category group code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_msg</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -212,7 +227,10 @@ public class ReadCategoryGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>产品消息</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

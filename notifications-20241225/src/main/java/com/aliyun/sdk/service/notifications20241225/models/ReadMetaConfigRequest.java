@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadCategoryGroupListRequest} extends {@link RequestModel}
+ * {@link ReadMetaConfigRequest} extends {@link RequestModel}
  *
- * <p>ReadCategoryGroupListRequest</p>
+ * <p>ReadMetaConfigRequest</p>
  */
-public class ReadCategoryGroupListRequest extends Request {
+public class ReadMetaConfigRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
@@ -32,10 +32,6 @@ public class ReadCategoryGroupListRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CallerProtocol")
     private String callerProtocol;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ChannelGroupCode")
-    private String channelGroupCode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientSource")
@@ -57,13 +53,12 @@ public class ReadCategoryGroupListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UidType")
     private String uidType;
 
-    private ReadCategoryGroupListRequest(Builder builder) {
+    private ReadMetaConfigRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appName = builder.appName;
         this.bizName = builder.bizName;
         this.callerProtocol = builder.callerProtocol;
-        this.channelGroupCode = builder.channelGroupCode;
         this.clientSource = builder.clientSource;
         this.cookies = builder.cookies;
         this.srcUrl = builder.srcUrl;
@@ -75,7 +70,7 @@ public class ReadCategoryGroupListRequest extends Request {
         return new Builder();
     }
 
-    public static ReadCategoryGroupListRequest create() {
+    public static ReadMetaConfigRequest create() {
         return builder().build();
     }
 
@@ -113,13 +108,6 @@ public class ReadCategoryGroupListRequest extends Request {
     }
 
     /**
-     * @return channelGroupCode
-     */
-    public String getChannelGroupCode() {
-        return this.channelGroupCode;
-    }
-
-    /**
      * @return clientSource
      */
     public String getClientSource() {
@@ -154,12 +142,11 @@ public class ReadCategoryGroupListRequest extends Request {
         return this.uidType;
     }
 
-    public static final class Builder extends Request.Builder<ReadCategoryGroupListRequest, Builder> {
+    public static final class Builder extends Request.Builder<ReadMetaConfigRequest, Builder> {
         private String acceptLanguage; 
         private String appName; 
         private String bizName; 
         private String callerProtocol; 
-        private String channelGroupCode; 
         private String clientSource; 
         private String cookies; 
         private String srcUrl; 
@@ -170,13 +157,12 @@ public class ReadCategoryGroupListRequest extends Request {
             super();
         } 
 
-        private Builder(ReadCategoryGroupListRequest request) {
+        private Builder(ReadMetaConfigRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appName = request.appName;
             this.bizName = request.bizName;
             this.callerProtocol = request.callerProtocol;
-            this.channelGroupCode = request.channelGroupCode;
             this.clientSource = request.clientSource;
             this.cookies = request.cookies;
             this.srcUrl = request.srcUrl;
@@ -185,7 +171,11 @@ public class ReadCategoryGroupListRequest extends Request {
         } 
 
         /**
-         * <p>The language. Automatically passed through by the browser and can be manually overridden.</p>
+         * <p>The language type of the returned information. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -197,10 +187,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. Application name of the requester.</p>
+         * <p>The application project name of the requester.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>xxxApp</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -209,10 +199,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. Business line of the requester.</p>
+         * <p>The business line of the requester.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>SystemAlerts</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -221,10 +211,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. Request protocol type.</p>
+         * <p>The request protocol type.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>https</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -233,22 +223,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>The channel group.</p>
+         * <p>The source of the operation terminal.</p>
          * 
          * <strong>example:</strong>
-         * <p>base</p>
-         */
-        public Builder channelGroupCode(String channelGroupCode) {
-            this.putBodyParameter("ChannelGroupCode", channelGroupCode);
-            this.channelGroupCode = channelGroupCode;
-            return this;
-        }
-
-        /**
-         * <p>Ignore. No need to pass for now. Operation terminal source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/</p>
+         * <p>h5</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -257,7 +235,7 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. User cookies.</p>
+         * <p>The user cookies.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -269,10 +247,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. Source page URL.</p>
+         * <p>The URL of the source page.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p><a href="https://example.com/notify,0">https://example.com/notify,0</a></p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -281,10 +259,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. Tenant information.</p>
+         * <p>The tenant information.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>T002</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -293,10 +271,10 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         /**
-         * <p>Ignore. No need to pass for now. User type.</p>
+         * <p>The user type.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>aliyunPk</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);
@@ -305,8 +283,8 @@ public class ReadCategoryGroupListRequest extends Request {
         }
 
         @Override
-        public ReadCategoryGroupListRequest build() {
-            return new ReadCategoryGroupListRequest(this);
+        public ReadMetaConfigRequest build() {
+            return new ReadMetaConfigRequest(this);
         } 
 
     } 

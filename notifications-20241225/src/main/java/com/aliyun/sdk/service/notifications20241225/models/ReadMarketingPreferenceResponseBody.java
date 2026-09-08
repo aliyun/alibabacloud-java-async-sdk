@@ -106,7 +106,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned by the system. For more information about error codes, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowMarketing.
+             * <p>Indicates whether notifications are allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowMarketing(Boolean allowMarketing) {
                 this.allowMarketing = allowMarketing;
@@ -264,7 +279,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactEmail.
+             * <p>The email address of the contact in Account Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t*@qq.*</p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -272,7 +290,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The contact ID in Account Center. A value of 0 indicates the account contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -280,7 +301,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMobile.
+             * <p>The mobile phone number of the contact in Account Center (masked).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130*123</p>
              */
             public Builder contactMobile(String contactMobile) {
                 this.contactMobile = contactMobile;
@@ -288,7 +312,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the contact in Account Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -296,7 +323,10 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The position of the contact in Account Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CEO</p>
              */
             public Builder position(String position) {
                 this.position = position;

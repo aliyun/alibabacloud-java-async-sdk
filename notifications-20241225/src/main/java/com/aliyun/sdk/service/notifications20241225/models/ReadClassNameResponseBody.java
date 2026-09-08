@@ -106,7 +106,10 @@ public class ReadClassNameResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned by the system. For more information about error codes, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadClassNameResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadClassNameResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned when the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadClassNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73FD6AE8-898F-5D09-9763-69B8A875488A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ReadClassNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +220,10 @@ public class ReadClassNameResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The message category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -212,7 +231,10 @@ public class ReadClassNameResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The message category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>安全消息</p>
              */
             public Builder name(String name) {
                 this.name = name;

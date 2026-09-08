@@ -213,7 +213,10 @@ public class ResetUserSubscriptionRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -222,7 +225,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -231,7 +237,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>The business line of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -240,7 +249,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>The request protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -249,7 +261,7 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * CategoryCodes.
+         * <p>The list of category codes.</p>
          */
         public Builder categoryCodes(java.util.List<String> categoryCodes) {
             String categoryCodesShrink = shrink(categoryCodes, "CategoryCodes", "json");
@@ -259,7 +271,15 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * ChannelGroupCode.
+         * <p>The channel group. Valid values:</p>
+         * <ul>
+         * <li>tts: Voice reception management.</li>
+         * <li>webhook: Bot reception management.</li>
+         * <li>base: Basic reception management.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>base</p>
          */
         public Builder channelGroupCode(String channelGroupCode) {
             this.putBodyParameter("ChannelGroupCode", channelGroupCode);
@@ -268,7 +288,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>The source of the operation terminal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -277,7 +300,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>The user cookies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -286,7 +312,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * Remarks.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder remarks(String remarks) {
             this.putBodyParameter("Remarks", remarks);
@@ -295,7 +324,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>The URL of the source page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -304,7 +336,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The tenant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -313,7 +348,10 @@ public class ResetUserSubscriptionRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>The user type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

@@ -106,7 +106,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The execution result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values: true and false. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupCode.
+             * <p>The group code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -251,7 +266,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The message category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -259,7 +277,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             }
 
             /**
-             * ReadCount.
+             * <p>The number of read messages under the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readCount(Long readCount) {
                 this.readCount = readCount;
@@ -267,7 +288,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of messages under the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -275,7 +299,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             }
 
             /**
-             * UnReadCount.
+             * <p>The number of unread messages under the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unReadCount(Long unReadCount) {
                 this.unReadCount = unReadCount;

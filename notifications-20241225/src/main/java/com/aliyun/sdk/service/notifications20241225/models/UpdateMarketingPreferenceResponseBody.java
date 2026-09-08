@@ -93,7 +93,10 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned when the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
