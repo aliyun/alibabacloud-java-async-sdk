@@ -67,7 +67,10 @@ public class SeccompProfile extends TeaModel {
         } 
 
         /**
-         * LocalhostProfile.
+         * <p>The path of the Seccomp profile on the node. This parameter takes effect only when Type is set to Localhost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-profiles/profile-allow.json</p>
          */
         public Builder localhostProfile(String localhostProfile) {
             this.localhostProfile = localhostProfile;
@@ -75,7 +78,10 @@ public class SeccompProfile extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The Seccomp configuration type. Valid values: Localhost, RuntimeDefault, Unconfined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unconfined</p>
          */
         public Builder type(String type) {
             this.type = type;

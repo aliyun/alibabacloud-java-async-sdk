@@ -59,7 +59,10 @@ public class DeleteRayHistoryServerRequest extends Request {
         } 
 
         /**
-         * RayHistoryServerId.
+         * <p>The ID of the Ray History Server to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rhsxxx</p>
          */
         public Builder rayHistoryServerId(String rayHistoryServerId) {
             this.putPathParameter("RayHistoryServerId", rayHistoryServerId);

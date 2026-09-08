@@ -210,7 +210,7 @@ public class RLProgressSlowDetail extends TeaModel {
         } 
 
         /**
-         * <p>该请求已耗时（秒）</p>
+         * <p>The elapsed time of the request, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>42.5</p>
@@ -232,7 +232,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>IPC 通道标识（日志 ipc 字段）</p>
+         * <p>The IPC channel identifier, which corresponds to the ipc field in the log.</p>
          * 
          * <strong>example:</strong>
          * <p>ipc://worker-0</p>
@@ -243,7 +243,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>是否处于 pause（日志 is_pause 原始取值）</p>
+         * <p>Indicates whether the request is paused. This is the raw value of the is_pause field in the log.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -254,7 +254,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>日志文案（截断至 700 字符）</p>
+         * <p>The log message, truncated to 700 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>CUDA out of memory. Tried to allocate 2.00 GiB</p>
@@ -265,7 +265,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>输出队列长度（日志 out_queue 原始取值）</p>
+         * <p>The output queue length. This is the raw value of the out_queue field in the log.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -276,7 +276,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>所在 Pod 名</p>
+         * <p>The name of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc193cpaitk8eny-master-0</p>
@@ -287,7 +287,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>训练 rank</p>
+         * <p>The training rank.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -298,7 +298,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>推理请求 ID（日志 rid 字段）</p>
+         * <p>The inference request ID, which corresponds to the rid field in the log.</p>
          * 
          * <strong>example:</strong>
          * <p>req-8f3a2c1d</p>
@@ -309,7 +309,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>状态是否存在（日志 state_present 原始取值）</p>
+         * <p>Indicates whether the state is present. This is the raw value of the state_present field in the log.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -320,7 +320,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>日志时间（unix 秒）</p>
+         * <p>The log time, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487</p>
@@ -331,7 +331,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>tokenizer 进程号（日志 pid 字段）</p>
+         * <p>The tokenizer process ID, which corresponds to the pid field in the log.</p>
          * 
          * <strong>example:</strong>
          * <p>12360</p>
@@ -342,7 +342,7 @@ public class RLProgressSlowDetail extends TeaModel {
         }
 
         /**
-         * <p>worker 进程号</p>
+         * <p>The worker process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>

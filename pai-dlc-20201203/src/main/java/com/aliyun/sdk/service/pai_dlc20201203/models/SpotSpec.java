@@ -80,7 +80,10 @@ public class SpotSpec extends TeaModel {
         } 
 
         /**
-         * SpotDiscountLimit.
+         * <p>The maximum discount. Specify only one of SpotDiscountLimit and SpotPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         public Builder spotDiscountLimit(Float spotDiscountLimit) {
             this.spotDiscountLimit = spotDiscountLimit;
@@ -88,7 +91,10 @@ public class SpotSpec extends TeaModel {
         }
 
         /**
-         * SpotPriceLimit.
+         * <p>The maximum price. Unit: CNY/minute. Specify only one of SpotDiscountLimit and SpotPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4744</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -96,7 +102,13 @@ public class SpotSpec extends TeaModel {
         }
 
         /**
-         * SpotStrategy.
+         * <p>The spot policy. Valid values:</p>
+         * <ul>
+         * <li>SpotWithPriceLimit</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;

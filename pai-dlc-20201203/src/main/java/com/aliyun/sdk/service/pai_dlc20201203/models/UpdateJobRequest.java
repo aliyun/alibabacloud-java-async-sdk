@@ -129,7 +129,7 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. For more information about how to obtain the ID of a job, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The job ID. To obtain the job ID, call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc*************</p>
@@ -141,14 +141,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job visibility. Valid values:</p>
+         * <p>The visibility of the job. The visibility can only be expanded, not reduced. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: The job is visible to all members in the workspace.</li>
-         * <li>PRIVATE: The job is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: visible to all users in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>PRIVATE</p>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -166,7 +165,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * JobSpecs.
+         * <p>The job specification definition.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.putBodyParameter("JobSpecs", jobSpecs);
@@ -175,7 +174,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job priority. Valid values: 1 to 9.</p>
+         * <p>The priority of the job. Valid values: 1 to 9.</p>
          * <ul>
          * <li>1: the lowest priority.</li>
          * <li>9: the highest priority.</li>
@@ -191,7 +190,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * UserCommand.
+         * <p>The user command.</p>
          */
         public Builder userCommand(String userCommand) {
             this.putBodyParameter("UserCommand", userCommand);

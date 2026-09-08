@@ -93,7 +93,7 @@ public class RLFlowSankeyExit extends TeaModel {
         } 
 
         /**
-         * <p>该条流出边的轨迹数</p>
+         * <p>The number of trajectories on the outflow edge.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -104,7 +104,7 @@ public class RLFlowSankeyExit extends TeaModel {
         }
 
         /**
-         * <p>流出起始列的 Key</p>
+         * <p>The key of the outflow source column.</p>
          * 
          * <strong>example:</strong>
          * <p>DataLoader</p>
@@ -115,7 +115,7 @@ public class RLFlowSankeyExit extends TeaModel {
         }
 
         /**
-         * <p>流出起始列的下标（0 起）</p>
+         * <p>The index of the outflow source column (0-based).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -126,7 +126,7 @@ public class RLFlowSankeyExit extends TeaModel {
         }
 
         /**
-         * <p>流出去向中文名，按流出所在列取值：在途·未下发 / 在途·生成中 / 在途·待采样 / 在途·待训练</p>
+         * <p>The Chinese name of the outflow destination. Valid values vary by the column where the outflow is located: 在途·未下发 / 在途·生成中 / 在途·待采样 / 在途·待训练.</p>
          * 
          * <strong>example:</strong>
          * <p>生成轨迹</p>

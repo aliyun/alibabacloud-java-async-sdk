@@ -101,7 +101,7 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * <p>The time when the share link expires. Default value: 604800. Minimum value: 0. Unit: seconds.</p>
+         * <p>The expiration time of the sharing link in seconds. Default value: 604800. Minimum value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -113,7 +113,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the job to be shared.</p>
+         * <p>The ID of the task to share.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc*******</p>
@@ -125,7 +125,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * <p>The type of the job that you want to share. Valid values: job and tensorboard.</p>
+         * <p>The type of the task to share. Valid values: job and tensorboard.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>

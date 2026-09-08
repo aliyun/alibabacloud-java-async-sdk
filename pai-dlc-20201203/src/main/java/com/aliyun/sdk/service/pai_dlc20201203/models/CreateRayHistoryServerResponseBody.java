@@ -67,7 +67,10 @@ public class CreateRayHistoryServerResponseBody extends TeaModel {
         } 
 
         /**
-         * RayHistoryServerId.
+         * <p>The ID of the created Ray History Server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rhsxxxx</p>
          */
         public Builder rayHistoryServerId(String rayHistoryServerId) {
             this.rayHistoryServerId = rayHistoryServerId;
@@ -75,7 +78,10 @@ public class CreateRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID of this call, used for diagnostics and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

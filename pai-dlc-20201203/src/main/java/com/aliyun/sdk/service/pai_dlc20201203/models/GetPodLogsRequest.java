@@ -28,6 +28,10 @@ public class GetPodLogsRequest extends Request {
     private String podId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Containers")
+    private String containers;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DownloadToFile")
     private Boolean downloadToFile;
 
@@ -51,6 +55,7 @@ public class GetPodLogsRequest extends Request {
         super(builder);
         this.jobId = builder.jobId;
         this.podId = builder.podId;
+        this.containers = builder.containers;
         this.downloadToFile = builder.downloadToFile;
         this.endTime = builder.endTime;
         this.maxLines = builder.maxLines;
@@ -83,6 +88,13 @@ public class GetPodLogsRequest extends Request {
      */
     public String getPodId() {
         return this.podId;
+    }
+
+    /**
+     * @return containers
+     */
+    public String getContainers() {
+        return this.containers;
     }
 
     /**
@@ -123,6 +135,7 @@ public class GetPodLogsRequest extends Request {
     public static final class Builder extends Request.Builder<GetPodLogsRequest, Builder> {
         private String jobId; 
         private String podId; 
+        private String containers; 
         private Boolean downloadToFile; 
         private String endTime; 
         private Integer maxLines; 
@@ -137,6 +150,7 @@ public class GetPodLogsRequest extends Request {
             super(request);
             this.jobId = request.jobId;
             this.podId = request.podId;
+            this.containers = request.containers;
             this.downloadToFile = request.downloadToFile;
             this.endTime = request.endTime;
             this.maxLines = request.maxLines;
@@ -145,7 +159,7 @@ public class GetPodLogsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. For more information about how to obtain a job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The job ID. For information about how to obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +172,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * <p>The node ID. For more information about how to obtain a node ID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+         * <p>The node ID. For information about how to obtain the node ID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,10 +185,22 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to download the log file. Default value: false. Valid values:</p>
+         * <p>Filters logs by specified containers. Separate multiple container names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pytorch,aimaster-worker</p>
+         */
+        public Builder containers(String containers) {
+            this.putQueryParameter("Containers", containers);
+            this.containers = containers;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to download the log file. Valid values:</p>
          * <ul>
-         * <li>false</li>
-         * <li>true</li>
+         * <li>false (default): The log file is not downloaded.</li>
+         * <li>true: The log file is downloaded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +225,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of log entries. Default value: 2000.</p>
+         * <p>The maximum number of log lines to return. Default value: 2000.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -211,7 +237,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * <p>The node UID. For more information about how to obtain a node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+         * <p>The node UID. For information about how to obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>fe846462-af2c-4521-bd6f-96787a57****</p>

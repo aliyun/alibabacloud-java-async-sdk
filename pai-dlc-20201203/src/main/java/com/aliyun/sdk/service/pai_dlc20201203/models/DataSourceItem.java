@@ -197,7 +197,10 @@ public class DataSourceItem extends TeaModel {
         } 
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-20210114104214-xxxxxxx</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -205,7 +208,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * <p>The data source type. Only File Storage NAS (NAS) file systems are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -213,7 +219,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data source of dlc examples</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -221,7 +230,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas-data</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -229,7 +241,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the Alibaba Cloud OSS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing-internal.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -237,7 +252,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * FileSystemId.
+         * <p>The ID of the NAS file system. For more information, see <a href="https://help.aliyun.com/document_detail/185212.html">Alibaba Cloud documentation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -245,7 +263,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the data source was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:35:00Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -253,7 +274,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The time when the data source was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:00Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -261,7 +285,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The local path of the container that is attached to the runtime of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/data/</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -269,7 +296,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>The configuration options of the Alibaba Cloud OSS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -277,7 +307,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>The path of the Alibaba Cloud Object Storage Service (OSS) file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket/path/to/dir</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -285,7 +318,10 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the Alibaba Cloud account that creates the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

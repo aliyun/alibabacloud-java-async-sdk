@@ -106,7 +106,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * JobTemplates.
+         * <p>The list of job templates.</p>
          */
         public Builder jobTemplates(java.util.List<JobTemplates> jobTemplates) {
             this.jobTemplates = jobTemplates;
@@ -114,7 +114,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of results on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求的 ID，用于诊断和答疑。</p>
+         * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D*****</p>
@@ -141,7 +147,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of job templates that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -324,7 +333,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultVersion.
+             * <p>The default version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defaultVersion(Integer defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -332,7 +344,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -340,6 +355,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time of the template, in UTC and ISO 8601 format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -351,6 +367,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time of the template, in UTC and ISO 8601 format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -362,7 +379,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>Custom metadata, represented as a collection of key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -370,7 +390,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedBy.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20**************26</p>
              */
             public Builder modifiedBy(String modifiedBy) {
                 this.modifiedBy = modifiedBy;
@@ -378,7 +401,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpl1r5g9ait7****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -386,7 +412,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-template-1772516653885</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -394,7 +423,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>142388383837****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -402,7 +434,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20**************26</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -410,7 +445,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

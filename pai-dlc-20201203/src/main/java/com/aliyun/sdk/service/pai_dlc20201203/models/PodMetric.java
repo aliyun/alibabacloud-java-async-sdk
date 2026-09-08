@@ -67,7 +67,7 @@ public class PodMetric extends TeaModel {
         } 
 
         /**
-         * Metrics.
+         * <p>The metrics list.</p>
          */
         public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;
@@ -75,7 +75,10 @@ public class PodMetric extends TeaModel {
         }
 
         /**
-         * PodId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210329110128-******-worker-0</p>
          */
         public Builder podId(String podId) {
             this.podId = podId;

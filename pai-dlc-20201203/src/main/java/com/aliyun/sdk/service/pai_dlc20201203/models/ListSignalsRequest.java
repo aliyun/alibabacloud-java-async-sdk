@@ -143,7 +143,10 @@ public class ListSignalsRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -152,7 +155,10 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -161,7 +167,10 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +179,10 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +191,10 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -188,7 +203,10 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The signal status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -197,7 +215,10 @@ public class ListSignalsRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The temporary token used for authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyXXXX-XXXX.XXXXX</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

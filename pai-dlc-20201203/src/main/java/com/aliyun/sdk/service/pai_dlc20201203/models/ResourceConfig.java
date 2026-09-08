@@ -106,7 +106,10 @@ public class ResourceConfig extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -114,7 +117,10 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -122,7 +128,10 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * GPUType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tesla-V100-16G</p>
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -130,7 +139,10 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Gi</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -138,7 +150,10 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * SharedMemory.
+         * <p>The shared memory capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5Gi</p>
          */
         public Builder sharedMemory(String sharedMemory) {
             this.sharedMemory = sharedMemory;

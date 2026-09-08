@@ -93,7 +93,7 @@ public class RLTrajectory extends TeaModel {
         } 
 
         /**
-         * <p>最新事件毫秒时间戳</p>
+         * <p>The latest event millisecond UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1787293215480</p>
@@ -104,7 +104,7 @@ public class RLTrajectory extends TeaModel {
         }
 
         /**
-         * <p>轨迹序号</p>
+         * <p>The trajectory ordinal number.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -115,7 +115,12 @@ public class RLTrajectory extends TeaModel {
         }
 
         /**
-         * <p>终态：trained（已完成训练）/ 空串（在途）。当前框架不做过采样，故不会出现 discarded / cancelled</p>
+         * <p>The desired state. Valid values:</p>
+         * <ul>
+         * <li>trained: Training is complete.</li>
+         * <li>Empty string: In progress.</li>
+         * </ul>
+         * <p>The current frame does not perform oversampling, so discarded and cancelled do not occur.</p>
          * 
          * <strong>example:</strong>
          * <p>trained</p>
@@ -126,7 +131,7 @@ public class RLTrajectory extends TeaModel {
         }
 
         /**
-         * <p>trace 行数</p>
+         * <p>The number of trace rows.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

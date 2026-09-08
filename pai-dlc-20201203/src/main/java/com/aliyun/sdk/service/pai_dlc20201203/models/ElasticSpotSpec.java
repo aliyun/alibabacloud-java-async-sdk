@@ -93,7 +93,7 @@ public class ElasticSpotSpec extends TeaModel {
         } 
 
         /**
-         * InstanceType.
+         * <p>The spot instance type.</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -101,7 +101,7 @@ public class ElasticSpotSpec extends TeaModel {
         }
 
         /**
-         * SpotDiscountLimit.
+         * <p>The maximum discount percentage for the spot instance. The system does not select an instance if its discount exceeds this limit. For example, if you set this parameter to <code>90</code>, the system considers only instances with a discount of 90% or less.</p>
          */
         public Builder spotDiscountLimit(Double spotDiscountLimit) {
             this.spotDiscountLimit = spotDiscountLimit;
@@ -109,7 +109,7 @@ public class ElasticSpotSpec extends TeaModel {
         }
 
         /**
-         * SpotPriceLimit.
+         * <p>The maximum hourly price you are willing to pay for a spot instance. If omitted, the on-demand price is the default.</p>
          */
         public Builder spotPriceLimit(Double spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -117,7 +117,13 @@ public class ElasticSpotSpec extends TeaModel {
         }
 
         /**
-         * SpotStrategy.
+         * <p>The strategy for allocating spot instances. Valid values:</p>
+         * <ul>
+         * <li><p><code>LowestPrice</code>: Launches instances from the spot capacity pool offering the lowest price. This is the default strategy.</p>
+         * </li>
+         * <li><p><code>CapacityOptimized</code>: Launches instances from the spot capacity pool offering optimal capacity.</p>
+         * </li>
+         * </ul>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;

@@ -368,7 +368,7 @@ public class JobSpec extends TeaModel {
         } 
 
         /**
-         * AssignNodeSpec.
+         * <p>The node scheduling configuration.</p>
          */
         public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
             this.assignNodeSpec = assignNodeSpec;
@@ -376,7 +376,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * AutoScalingSpec.
+         * <p>The auto scaling configuration.</p>
          */
         public Builder autoScalingSpec(AutoScalingSpec autoScalingSpec) {
             this.autoScalingSpec = autoScalingSpec;
@@ -384,7 +384,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * ConsiderInSuccessPolicy.
+         * <p>Specifies whether to consider this role when determining job success. This parameter takes effect only when the success policy is set to Partial.</p>
          */
         public Builder considerInSuccessPolicy(Boolean considerInSuccessPolicy) {
             this.considerInSuccessPolicy = considerInSuccessPolicy;
@@ -400,7 +400,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * EcsSpec.
+         * <p>The hardware specification of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed specification list.&gt;Notice: Prices vary depending on the specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -416,7 +419,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * ExtraPodSpec.
+         * <p>The extra pod configuration.</p>
          */
         public Builder extraPodSpec(ExtraPodSpec extraPodSpec) {
             this.extraPodSpec = extraPodSpec;
@@ -432,7 +435,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to retrieve images provided by the PAI platform. You can also specify a third-party public image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -440,7 +446,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * ImageConfig.
+         * <p>The private image configuration.</p>
          */
         public Builder imageConfig(ImageConfig imageConfig) {
             this.imageConfig = imageConfig;
@@ -448,7 +454,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * IsCheif.
+         * <p><strong>[Deprecated]</strong> This field is deprecated due to a spelling error.</p>
          */
         public Builder isCheif(Boolean isCheif) {
             this.isCheif = isCheif;
@@ -456,7 +462,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * IsChief.
+         * <p>Specifies whether the role is the Chief role. Only one Chief role is allowed.</p>
          */
         public Builder isChief(Boolean isChief) {
             this.isChief = isChief;
@@ -464,7 +470,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * LocalMountSpecs.
+         * <p>The list of local mount configurations.</p>
          */
         public Builder localMountSpecs(java.util.List<LocalMountSpec> localMountSpecs) {
             this.localMountSpecs = localMountSpecs;
@@ -480,7 +486,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * PodCount.
+         * <p>The number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder podCount(Long podCount) {
             this.podCount = podCount;
@@ -496,7 +505,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * ResourceConfig.
+         * <p>The resource configuration.</p>
          */
         public Builder resourceConfig(ResourceConfig resourceConfig) {
             this.resourceConfig = resourceConfig;
@@ -504,7 +513,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * RestartPolicy.
+         * <p>The restart policy. Valid values: Always, Never, OnFailure, and ExitCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExitCode</p>
          */
         public Builder restartPolicy(String restartPolicy) {
             this.restartPolicy = restartPolicy;
@@ -512,7 +524,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * ServiceSpec.
+         * <p>The service configuration.</p>
          */
         public Builder serviceSpec(ServiceSpec serviceSpec) {
             this.serviceSpec = serviceSpec;
@@ -520,7 +532,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * SpotSpec.
+         * <p>The spot instance configuration.</p>
          */
         public Builder spotSpec(SpotSpec spotSpec) {
             this.spotSpec = spotSpec;
@@ -528,7 +540,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * StartupDependencies.
+         * <p>The dependencies required before this role starts.</p>
          */
         public Builder startupDependencies(java.util.List<StartupDependency> startupDependencies) {
             this.startupDependencies = startupDependencies;
@@ -544,7 +556,25 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type, which is closely related to the job type. Different job types support different worker types.</p>
+         * <ul>
+         * <li><p><strong>TFJob</strong>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</p>
+         * </li>
+         * <li><p><strong>PyTorchJob</strong>: Supports Worker and Master.</p>
+         * </li>
+         * <li><p><strong>XGBoostJob</strong>: Supports Worker and Master.</p>
+         * </li>
+         * <li><p><strong>OneFlowJob</strong>: Supports Worker and Master.</p>
+         * </li>
+         * <li><p><strong>ElasticBatch</strong>: Supports Worker and Master.</p>
+         * </li>
+         * <li><p><strong>RayJob</strong>: Supports Head, Worker, and Worker[-xxx].</p>
+         * </li>
+         * </ul>
+         * <p>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If not specified, the system automatically designates the first Worker node as Master.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Worker</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -552,7 +582,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * UseSpotInstance.
+         * <p>Specifies whether to use spot instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useSpotInstance(Boolean useSpotInstance) {
             this.useSpotInstance = useSpotInstance;
@@ -560,7 +593,10 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * UserCommand.
+         * <p>The role-level startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python train.py</p>
          */
         public Builder userCommand(String userCommand) {
             this.userCommand = userCommand;

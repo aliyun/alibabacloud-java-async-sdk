@@ -80,7 +80,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         } 
 
         /**
-         * RayHistoryServers.
+         * <p>The list of RayHistoryServer entries.</p>
          */
         public Builder rayHistoryServers(java.util.List<RayHistoryServers> rayHistoryServers) {
             this.rayHistoryServers = rayHistoryServers;
@@ -88,7 +88,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -383,7 +389,14 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessibility.
+             * <p>The visibility of the job. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: visible to all users in the workspace.</li>
+             * <li>PRIVATE (default): visible only to you and administrators in the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -391,7 +404,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AEB-RECHARGE-TASK-14478-1778466397-main-4-</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -399,7 +415,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * EcsSpec.
+             * <p>The hardware specifications of the public resource group. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for a detailed list of specifications.&gt;Notice: Prices vary depending on the specifications..</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6.xlarge</p>
              */
             public Builder ecsSpec(String ecsSpec) {
                 this.ecsSpec = ecsSpec;
@@ -407,7 +426,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the job was created, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-30T02:43:52Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -415,7 +437,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtFinishTime.
+             * <p>The time when the job ended, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-27T09:17:11Z</p>
              */
             public Builder gmtFinishTime(String gmtFinishTime) {
                 this.gmtFinishTime = gmtFinishTime;
@@ -423,7 +448,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifyTime.
+             * <p>The time when the job was last modified, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-19T04:05:46Z</p>
              */
             public Builder gmtModifyTime(String gmtModifyTime) {
                 this.gmtModifyTime = gmtModifyTime;
@@ -431,7 +459,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRuntimeMinutes.
+             * <p>The maximum runtime in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxRuntimeMinutes(Integer maxRuntimeMinutes) {
                 this.maxRuntimeMinutes = maxRuntimeMinutes;
@@ -439,7 +470,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * RayHistoryServerId.
+             * <p>The ID of the created RayHistoryServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rhsxxx</p>
              */
             public Builder rayHistoryServerId(String rayHistoryServerId) {
                 this.rayHistoryServerId = rayHistoryServerId;
@@ -458,7 +492,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The status detail code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -466,7 +503,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The status details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PyTorchJob dlc1tx4b9lw3ntb9 is running.</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -474,7 +514,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource group ID. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quotazoqd53w0q75</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -482,7 +525,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the resource on which the job runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER_REPO</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -490,7 +536,17 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The RayHistoryServer status. Valid values:</p>
+             * <ul>
+             * <li>Creating: being created.</li>
+             * <li>Running: running.</li>
+             * <li>Stopped: stopped.</li>
+             * <li>Succeeded: succeeded.</li>
+             * <li>Failed: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -498,7 +554,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * StoragePath.
+             * <p>The storage path of Ray logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</p>
              */
             public Builder storagePath(String storagePath) {
                 this.storagePath = storagePath;
@@ -506,7 +565,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1335237941080704</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -514,7 +576,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -522,7 +587,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myusername</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -530,7 +598,10 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153466</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

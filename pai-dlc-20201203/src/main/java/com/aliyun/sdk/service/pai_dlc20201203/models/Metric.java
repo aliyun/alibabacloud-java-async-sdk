@@ -67,7 +67,10 @@ public class Metric extends TeaModel {
         } 
 
         /**
-         * Time.
+         * <p>The timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616987726587</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -75,7 +78,10 @@ public class Metric extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23.45</p>
          */
         public Builder value(Float value) {
             this.value = value;

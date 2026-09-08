@@ -80,7 +80,7 @@ public class CredentialConfig extends TeaModel {
         } 
 
         /**
-         * AliyunEnvRoleKey.
+         * <p>The role identity key injected into environment variables.</p>
          */
         public Builder aliyunEnvRoleKey(String aliyunEnvRoleKey) {
             this.aliyunEnvRoleKey = aliyunEnvRoleKey;
@@ -88,7 +88,7 @@ public class CredentialConfig extends TeaModel {
         }
 
         /**
-         * CredentialConfigItems.
+         * <p>The list of credential configuration items.</p>
          */
         public Builder credentialConfigItems(java.util.List<CredentialConfigItem> credentialConfigItems) {
             this.credentialConfigItems = credentialConfigItems;
@@ -96,7 +96,7 @@ public class CredentialConfig extends TeaModel {
         }
 
         /**
-         * EnableCredentialInject.
+         * <p>Specifies whether to enable credential injection.</p>
          */
         public Builder enableCredentialInject(Boolean enableCredentialInject) {
             this.enableCredentialInject = enableCredentialInject;

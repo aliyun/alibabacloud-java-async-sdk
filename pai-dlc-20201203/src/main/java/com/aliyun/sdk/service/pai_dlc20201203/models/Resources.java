@@ -80,7 +80,10 @@ public class Resources extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -88,7 +91,10 @@ public class Resources extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The number of GPU cards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -96,7 +102,10 @@ public class Resources extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024 (unit: GB)</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;

@@ -132,7 +132,10 @@ public class GetMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * DataPoints.
+         * <p>The monitoring metric data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;Content\&quot;: \&quot;\&quot;, \&quot;OperationName\&quot;: \&quot;purchase\&quot;, \&quot;Success\&quot;: 1, \&quot;Id\&quot;: \&quot;217\&quot;, \&quot;LogDatetime\&quot;: 1687679582923}]</p>
          */
         public Builder dataPoints(String dataPoints) {
             this.dataPoints = dataPoints;
@@ -148,7 +154,10 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Detailed result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -167,7 +176,10 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * <p>The statistical period for monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If you do not specify a statistical period, the system uses the reporting period registered for the metric. Each cloud service metric (MetricName) may have a different statistical period. For more information, see cloud service monitoring metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -175,7 +187,10 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +198,10 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded. Valid values: true (success) and false (failure).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

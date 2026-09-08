@@ -67,10 +67,10 @@ public class RLFlowSankey extends TeaModel {
         } 
 
         /**
-         * <p>主链 5 列</p>
+         * <p>The five columns of the main chain.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Key&quot;:&quot;traj&quot;,&quot;Label&quot;:&quot;生成轨迹&quot;,&quot;Count&quot;:96}]</p>
+         * <p>[{&quot;Key&quot;:&quot;traj&quot;,&quot;Label&quot;:&quot;Generated trajectory&quot;,&quot;Count&quot;:96}]</p>
          */
         public Builder columns(java.util.List<RLFlowSankeyColumn> columns) {
             this.columns = columns;
@@ -78,10 +78,10 @@ public class RLFlowSankey extends TeaModel {
         }
 
         /**
-         * <p>各列的流出边</p>
+         * <p>The outflow edges of each column.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;From&quot;:&quot;run&quot;,&quot;FromIdx&quot;:1,&quot;Label&quot;:&quot;未启动&quot;,&quot;Count&quot;:0}]</p>
+         * <p>[{&quot;From&quot;:&quot;run&quot;,&quot;FromIdx&quot;:1,&quot;Label&quot;:&quot;Not started&quot;,&quot;Count&quot;:0}]</p>
          */
         public Builder exits(java.util.List<RLFlowSankeyExit> exits) {
             this.exits = exits;

@@ -236,7 +236,7 @@ public class ListEcsSpecsRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Gpu</p>
+         * <p>GPU</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

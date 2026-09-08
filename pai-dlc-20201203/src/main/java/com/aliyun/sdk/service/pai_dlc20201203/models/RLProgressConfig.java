@@ -106,7 +106,7 @@ public class RLProgressConfig extends TeaModel {
         } 
 
         /**
-         * <p>每个 step 的 mini-batch 数</p>
+         * <p>The number of mini-batches per step.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -117,7 +117,7 @@ public class RLProgressConfig extends TeaModel {
         }
 
         /**
-         * <p>PPO mini-batch 大小</p>
+         * <p>The PPO mini-batch size.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -128,7 +128,7 @@ public class RLProgressConfig extends TeaModel {
         }
 
         /**
-         * <p>每个 prompt 的 rollout 条数</p>
+         * <p>The number of rollouts per prompt.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -139,7 +139,7 @@ public class RLProgressConfig extends TeaModel {
         }
 
         /**
-         * <p>总训练步数</p>
+         * <p>The total number of training steps.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -150,7 +150,7 @@ public class RLProgressConfig extends TeaModel {
         }
 
         /**
-         * <p>训练 batch 大小</p>
+         * <p>The training batch size.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>

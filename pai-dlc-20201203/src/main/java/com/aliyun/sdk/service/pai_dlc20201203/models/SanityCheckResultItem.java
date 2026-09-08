@@ -119,7 +119,10 @@ public class SanityCheckResultItem extends TeaModel {
         } 
 
         /**
-         * CheckNumber.
+         * <p>The sequence number of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkNumber(Integer checkNumber) {
             this.checkNumber = checkNumber;
@@ -127,7 +130,10 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * FinishedAt.
+         * <p>The end time of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-30T16:47:30.378817+08:00</p>
          */
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
@@ -135,7 +141,7 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the check result.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * Phase.
+         * <p>The phase of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckInit</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -151,7 +160,10 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * StartedAt.
+         * <p>The start time of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-30T16:47:30.343005+08:00</p>
          */
         public Builder startedAt(String startedAt) {
             this.startedAt = startedAt;
@@ -159,7 +171,10 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;

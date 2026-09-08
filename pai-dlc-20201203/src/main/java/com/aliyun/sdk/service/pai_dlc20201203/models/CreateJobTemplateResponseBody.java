@@ -197,7 +197,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * DefaultVersion.
+         * <p>The default version number of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultVersion(Integer defaultVersion) {
             this.defaultVersion = defaultVersion;
@@ -205,7 +208,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -213,6 +219,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The creation time of the job template.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +231,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The last modification time of the job template.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +243,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>User-defined key-value metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
@@ -243,7 +254,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求的 ID，用于诊断和答疑。</p>
+         * <p>The ID of the request, used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>8762921A-911C-515F-A3A4-*********</p>
@@ -254,7 +265,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>此次调用创建的模板 ID。</p>
+         * <p>The unique ID of the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>tplmceolmf2****</p>
@@ -265,7 +276,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-template-example-1778047****</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -273,7 +287,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant that contains the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10**************14</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -281,7 +298,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user who created the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20**************02</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -289,7 +309,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number of the created job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -297,7 +320,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that contains the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15****05</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

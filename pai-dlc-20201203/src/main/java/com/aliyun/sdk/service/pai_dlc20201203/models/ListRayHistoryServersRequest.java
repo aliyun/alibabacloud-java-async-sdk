@@ -283,7 +283,10 @@ public class ListRayHistoryServersRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -292,7 +295,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query range. The job creation time is used for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -301,7 +307,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * IdPrefix.
+         * <p>The ID prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>按ID前缀过滤</p>
          */
         public Builder idPrefix(String idPrefix) {
             this.putQueryParameter("IdPrefix", idPrefix);
@@ -310,7 +319,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * ModifiedAfter.
+         * <p>Filters results by the time after which they were modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T16:00:00Z</p>
          */
         public Builder modifiedAfter(String modifiedAfter) {
             this.putQueryParameter("ModifiedAfter", modifiedAfter);
@@ -319,7 +331,14 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -328,7 +347,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return in a paged query. Paging starts from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -337,7 +359,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of RayHistoryServer entries to return on each page in a paged query. Paging is used to return results in batches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,7 +371,14 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid</li>
+         * <li>PostPaid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -355,7 +387,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource group ID. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaxxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -364,7 +399,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * ShowOwn.
+         * <p>Specifies whether to return only the RayHistoryServer entries created by the current user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showOwn(Boolean showOwn) {
             this.putQueryParameter("ShowOwn", showOwn);
@@ -373,7 +411,18 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the returned results. Valid values:</p>
+         * <ul>
+         * <li>DisplayName</li>
+         * <li>GmtCreateTime</li>
+         * <li>UserId</li>
+         * <li>ResourceId</li>
+         * <li>Status</li>
+         * <li>GmtModifyTime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -382,7 +431,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -391,7 +443,17 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The RayHistoryServer status. Valid values:</p>
+         * <ul>
+         * <li>Creating: being created.</li>
+         * <li>Queuing: waiting in queue.</li>
+         * <li>Running: running.</li>
+         * <li>Stopped: stopped.</li>
+         * <li>Failed: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -400,7 +462,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * StoragePath.
+         * <p>The storage path of Ray logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</p>
          */
         public Builder storagePath(String storagePath) {
             this.putQueryParameter("StoragePath", storagePath);
@@ -409,7 +474,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * UserIdForFilter.
+         * <p>Filters results by user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userIdForFilter(String userIdForFilter) {
             this.putQueryParameter("UserIdForFilter", userIdForFilter);
@@ -418,7 +486,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>Filters results by username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myusername</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -427,7 +498,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -85,7 +85,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateJob  CreateJobRequest
      * @return CreateJobResponse
@@ -123,6 +126,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateRayHistoryServer  CreateRayHistoryServerRequest
      * @return CreateRayHistoryServerResponse
      */
@@ -141,6 +150,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation sends a specific signal to one or more Pods of a specified job.</li>
+     * <li>After the signal is sent, the API immediately returns a <code>SignalId</code>. The actual signal delivery is processed by a background worker.</li>
+     * <li>Query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateSignal  CreateSignalRequest
      * @return CreateSignalResponse
      */
@@ -213,6 +230,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</p>
+     * 
      * @param request the request parameters of DeleteRayHistoryServer  DeleteRayHistoryServerRequest
      * @return DeleteRayHistoryServerResponse
      */
@@ -250,7 +270,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</p>
      * 
      * @param request the request parameters of GetDashboard  GetDashboardRequest
      * @return GetDashboardResponse
@@ -360,6 +380,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</li>
+     * <li>It supports custom time ranges. By default, it returns data from the last hour.</li>
+     * <li>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
+     * <li>To paginate through large datasets, use the <code>NextToken</code> parameter.</li>
+     * <li>The <code>MetricName</code> parameter is required and specifies the monitoring metric to query.</li>
+     * <li>For advanced features or specific metric types, see the related documentation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetMetrics  GetMetricsRequest
      * @return GetMetricsResponse
      */
@@ -415,7 +446,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * @param request the request parameters of GetRayDashboard  GetRayDashboardRequest
      * @return GetRayDashboardResponse
@@ -435,6 +466,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * @param request the request parameters of GetRayHistoryServer  GetRayHistoryServerRequest
      * @return GetRayHistoryServerResponse
      */
@@ -453,6 +487,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API allows you to retrieve the signal details for the specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing status.</p>
+     * 
      * @param request the request parameters of GetSignal  GetSignalRequest
      * @return GetSignalResponse
      */
@@ -615,6 +653,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ListRayHistoryServers  ListRayHistoryServersRequest
      * @return ListRayHistoryServersResponse
      */
@@ -633,6 +677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</p>
+     * 
      * @param request the request parameters of ListSignals  ListSignalsRequest
      * @return ListSignalsResponse
      */
@@ -687,6 +735,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * @param request the request parameters of StartRayHistoryServer  StartRayHistoryServerRequest
      * @return StartRayHistoryServerResponse
      */
@@ -741,6 +792,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * @param request the request parameters of StopRayHistoryServer  StopRayHistoryServerRequest
      * @return StopRayHistoryServerResponse
      */
@@ -777,6 +831,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
+     * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */

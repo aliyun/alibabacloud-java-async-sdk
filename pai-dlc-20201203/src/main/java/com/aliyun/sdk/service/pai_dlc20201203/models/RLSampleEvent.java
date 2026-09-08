@@ -119,7 +119,7 @@ public class RLSampleEvent extends TeaModel {
         } 
 
         /**
-         * <p>明细；megatron 行为 rank=..,global_step=..,ppo_epoch=..</p>
+         * <p>The details. For Megatron rows, the value is rank=..,global_step=..,ppo_epoch=..</p>
          * 
          * <strong>example:</strong>
          * <p>uid_generated</p>
@@ -130,7 +130,7 @@ public class RLSampleEvent extends TeaModel {
         }
 
         /**
-         * <p>事件来源组件；megatron 行为 &quot;{phase} {status}&quot;</p>
+         * <p>The event source component. For Megatron rows, the value is &quot;{phase} {status}&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>DataLoader</p>
@@ -141,7 +141,7 @@ public class RLSampleEvent extends TeaModel {
         }
 
         /**
-         * <p>事件所属训练步（原样字符串）；megatron 行为空，其 step 已折进 Detail</p>
+         * <p>The training step to which the event belongs (raw string). For Megatron rows, this is empty because the step is included in Detail.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -152,7 +152,7 @@ public class RLSampleEvent extends TeaModel {
         }
 
         /**
-         * <p>阶段；megatron 行归一为 TRAIN</p>
+         * <p>The stage. For Megatron rows, this is normalized to TRAIN.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA_PREPROCESS</p>
@@ -163,7 +163,7 @@ public class RLSampleEvent extends TeaModel {
         }
 
         /**
-         * <p>毫秒时间戳</p>
+         * <p>The millisecond timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1787293208012</p>
@@ -174,7 +174,7 @@ public class RLSampleEvent extends TeaModel {
         }
 
         /**
-         * <p>事件目标组件；megatron 行为 func 名</p>
+         * <p>The event target component. For Megatron rows, the value is the function name.</p>
          * 
          * <strong>example:</strong>
          * <p>PPOTrainerV1</p>

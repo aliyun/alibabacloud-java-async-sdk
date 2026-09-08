@@ -116,7 +116,7 @@ public class UpdateTensorboardRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the TensorBoard instance. For more information about how to query the ID of the TensorBoard instance, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
+         * <p>Tensorboard ID. For more information about how to get a Tensorboard ID, see <a href="">ListTensorboards</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,10 +129,12 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The visibility of the jobs. Valid values:</p>
+         * <p>Visibility of the task. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: The jobs are public in the workspace.</li>
-         * <li>PRIVATE: The jobs are visible only to you and the administrator of the workspace.</li>
+         * <li><p>PUBLIC: Visible to all users in this workspace.</p>
+         * </li>
+         * <li><p>PRIVATE: Visible only to you and administrators in this workspace.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +147,7 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The maximum running time. Unit: minutes.</p>
+         * <p>Maximum runtime. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -166,7 +168,7 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>Workspace ID. For more information about how to get a workspace ID, see <a href="">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>380</p>

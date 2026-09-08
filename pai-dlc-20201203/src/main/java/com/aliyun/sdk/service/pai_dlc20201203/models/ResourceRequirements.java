@@ -67,7 +67,7 @@ public class ResourceRequirements extends TeaModel {
         } 
 
         /**
-         * Limits.
+         * <p>Resource limits</p>
          */
         public Builder limits(java.util.Map<String, String> limits) {
             this.limits = limits;
@@ -75,7 +75,7 @@ public class ResourceRequirements extends TeaModel {
         }
 
         /**
-         * Requests.
+         * <p>Resource requests</p>
          */
         public Builder requests(java.util.Map<String, String> requests) {
             this.requests = requests;

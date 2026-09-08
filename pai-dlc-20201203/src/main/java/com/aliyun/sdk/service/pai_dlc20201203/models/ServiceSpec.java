@@ -80,7 +80,10 @@ public class ServiceSpec extends TeaModel {
         } 
 
         /**
-         * DefaultPort.
+         * <p>The default port for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder defaultPort(Integer defaultPort) {
             this.defaultPort = defaultPort;
@@ -88,7 +91,7 @@ public class ServiceSpec extends TeaModel {
         }
 
         /**
-         * ExtraPorts.
+         * <p>The list of extra ports for the service.</p>
          */
         public Builder extraPorts(java.util.List<Integer> extraPorts) {
             this.extraPorts = extraPorts;
@@ -96,7 +99,10 @@ public class ServiceSpec extends TeaModel {
         }
 
         /**
-         * ServiceMode.
+         * <p>The service pattern. Valid values are PerRole and PerPod. The default value is PerPod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PerRole</p>
          */
         public Builder serviceMode(String serviceMode) {
             this.serviceMode = serviceMode;

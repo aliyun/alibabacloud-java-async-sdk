@@ -67,7 +67,10 @@ public class EnvVar extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The name of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE_DEBUG</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,10 @@ public class EnvVar extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder value(String value) {
             this.value = value;

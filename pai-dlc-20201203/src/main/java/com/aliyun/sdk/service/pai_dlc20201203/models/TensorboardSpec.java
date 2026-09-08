@@ -93,7 +93,10 @@ public class TensorboardSpec extends TeaModel {
         } 
 
         /**
-         * EcsType.
+         * <p>The specifications of the ECS instance configured for the pay-as-you-go Tensorboard task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         public Builder ecsType(String ecsType) {
             this.ecsType = ecsType;
@@ -101,7 +104,10 @@ public class TensorboardSpec extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group configured for the pay-as-you-go Tensorboard task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxx</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -109,7 +115,10 @@ public class TensorboardSpec extends TeaModel {
         }
 
         /**
-         * SwitchId.
+         * <p>The ID of the vSwitch configured for the pay-as-you-go Tensorboard task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxx</p>
          */
         public Builder switchId(String switchId) {
             this.switchId = switchId;
@@ -117,7 +126,10 @@ public class TensorboardSpec extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) configured for the pay-as-you-go Tensorboard task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

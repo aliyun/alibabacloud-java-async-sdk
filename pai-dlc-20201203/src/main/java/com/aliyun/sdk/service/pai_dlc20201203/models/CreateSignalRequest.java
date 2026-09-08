@@ -87,7 +87,10 @@ public class CreateSignalRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc********</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -96,7 +99,10 @@ public class CreateSignalRequest extends Request {
         }
 
         /**
-         * Signal.
+         * <p>The signal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIGUSR1</p>
          */
         public Builder signal(String signal) {
             this.putBodyParameter("Signal", signal);
@@ -105,7 +111,7 @@ public class CreateSignalRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>The signal delivery scope.</p>
          */
         public Builder target(SignalTarget target) {
             this.putBodyParameter("Target", target);

@@ -93,7 +93,14 @@ public class DataJuicerConfig extends TeaModel {
         } 
 
         /**
-         * CommandType.
+         * <p>The command type. Valid values:</p>
+         * <ul>
+         * <li>shell: shell command.</li>
+         * <li>config: DataJuicer YAML configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>config</p>
          */
         public Builder commandType(String commandType) {
             this.commandType = commandType;
@@ -101,7 +108,10 @@ public class DataJuicerConfig extends TeaModel {
         }
 
         /**
-         * EnableResourceEstimation.
+         * <p>Specifies whether to enable resource estimation. When resource estimation is enabled, the execution mode must be distributed, and the command type must be config (DataJuicer YAML configuration).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableResourceEstimation(Boolean enableResourceEstimation) {
             this.enableResourceEstimation = enableResourceEstimation;
@@ -109,7 +119,14 @@ public class DataJuicerConfig extends TeaModel {
         }
 
         /**
-         * ExecutionMode.
+         * <p>The execution mode. Valid values:</p>
+         * <ul>
+         * <li>standalone: single-node.</li>
+         * <li>distributed: distributed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standalone</p>
          */
         public Builder executionMode(String executionMode) {
             this.executionMode = executionMode;
@@ -117,7 +134,7 @@ public class DataJuicerConfig extends TeaModel {
         }
 
         /**
-         * ResourceLimit.
+         * <p>The resource estimation limit. This parameter takes effect only when resource estimation is enabled.</p>
          */
         public Builder resourceLimit(ResourceLimit resourceLimit) {
             this.resourceLimit = resourceLimit;

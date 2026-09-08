@@ -80,7 +80,7 @@ public class RLFlowSlowestItem extends TeaModel {
         } 
 
         /**
-         * <p>样本 uid</p>
+         * <p>The UID of the sample.</p>
          * 
          * <strong>example:</strong>
          * <p>321fa56f-e1e5-4eb3-8047-db7a230c9a75</p>
@@ -91,7 +91,7 @@ public class RLFlowSlowestItem extends TeaModel {
         }
 
         /**
-         * <p>轨迹序号</p>
+         * <p>The ordinal number of the event trace.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -102,7 +102,7 @@ public class RLFlowSlowestItem extends TeaModel {
         }
 
         /**
-         * <p>该阶段耗时（秒）</p>
+         * <p>The execution duration of the stage, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>9.2</p>

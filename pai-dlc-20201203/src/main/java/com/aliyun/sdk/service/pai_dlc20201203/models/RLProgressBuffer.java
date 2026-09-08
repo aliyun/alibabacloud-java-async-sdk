@@ -171,7 +171,7 @@ public class RLProgressBuffer extends TeaModel {
         } 
 
         /**
-         * <p>未完成 buffer 的已消费样本数合计</p>
+         * <p>The total number of consumed samples in incomplete buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -182,7 +182,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>按 tag 拆分的 buffer 明细</p>
+         * <p>The buffer details split by tag.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Tag&quot;:1,&quot;Ready&quot;:500,&quot;Consumed&quot;:0,&quot;Finished&quot;:500,&quot;Total&quot;:512}]</p>
@@ -193,7 +193,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>预计填满剩余秒数</p>
+         * <p>The estimated number of remaining seconds to fill the buffer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -204,7 +204,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>填充速率（条/分钟），用 rollout 完成速率代理估算</p>
+         * <p>The fill rate in entries per minute, estimated by using the rollout completion rate as a proxy.</p>
          * 
          * <strong>example:</strong>
          * <p>120.5</p>
@@ -215,7 +215,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>未完成 buffer 的已完成样本数合计</p>
+         * <p>The total number of finished samples in incomplete buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -226,7 +226,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>就绪度百分比，Ready 占 Target 的比例</p>
+         * <p>The readiness percentage, which is the ratio of Ready to Target.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -237,7 +237,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>未完成 buffer 的已就绪样本数合计</p>
+         * <p>The total number of ready samples in incomplete buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -248,7 +248,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>未完成 buffer 的目标样本数合计</p>
+         * <p>The total number of target samples in incomplete buffers.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -259,7 +259,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>配置的训练 batch 大小</p>
+         * <p>The configured training batch size.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -270,7 +270,7 @@ public class RLProgressBuffer extends TeaModel {
         }
 
         /**
-         * <p>Consumed 大于 0，即 batch 已被取走、trainer 正在更新</p>
+         * <p>Indicates whether Consumed is greater than 0, which means the batch has been fetched and the trainer is updating.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

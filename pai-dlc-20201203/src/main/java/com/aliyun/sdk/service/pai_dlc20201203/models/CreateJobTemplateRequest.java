@@ -132,10 +132,10 @@ public class CreateJobTemplateRequest extends Request {
         } 
 
         /**
-         * <p>字段约束规则。Key 为 JSONPath 表达式，Value 为约束类型：locked（锁定不可覆盖）、overridable（可覆盖）、required（必填）。</p>
+         * <p>The field constraint rules. The key is a JSONPath expression, and the value is a constraint type: <code>locked</code> (cannot be overridden), <code>overridable</code> (can be overridden), or <code>required</code> (must be specified).</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;JobSpecs[0].Image&quot;:&quot;locked&quot;,&quot;UserCommand&quot;:&quot;locked&quot;,&quot;JobType&quot;:&quot;locked&quot;}</p>
+         * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
          */
         public Builder constraints(java.util.Map<String, ?> constraints) {
             this.putBodyParameter("Constraints", constraints);
@@ -144,11 +144,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>任务模板的配置内容，包含作业配置参数，以 JSON 格式传入。</p>
+         * <p>The configuration of the job template, which must be a JSON string containing the job configuration parameters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;WorkspaceId&quot;:&quot;15****05&quot;,&quot;JobType&quot;:&quot;PyTorchJob&quot;,&quot;UserCommand&quot;:&quot;echo hello&quot;,&quot;JobSpecs&quot;:[{&quot;Type&quot;:&quot;Worker&quot;,&quot;PodCount&quot;:1,&quot;Image&quot;:&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782&quot;,&quot;EcsSpec&quot;:&quot;ecs.gn7i-c8g1.2xlarge&quot;}],&quot;ResourceType&quot;:&quot;ECS&quot;,&quot;_ResourcePaymentType&quot;:&quot;PostPaid&quot;,&quot;CredentialConfig&quot;:{&quot;EnableCredentialInject&quot;:false},&quot;Accessibility&quot;:&quot;PRIVATE&quot;,&quot;Settings&quot;:{&quot;JobReservedMinutes&quot;:0,&quot;Tags&quot;:{}}}</p>
+         * <p>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -157,7 +157,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -166,7 +169,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>用户自定义的键值对元数据，用于存储模板的附加信息。</p>
+         * <p>User-defined key-value metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -178,6 +181,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the job template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>工作空间 ID。如何获取工作空间 ID，请参见 ListWorkspaces。</p>
+         * <p>The ID of the workspace that contains the job template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

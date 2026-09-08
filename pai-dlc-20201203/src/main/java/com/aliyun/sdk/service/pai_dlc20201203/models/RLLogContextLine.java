@@ -67,7 +67,7 @@ public class RLLogContextLine extends TeaModel {
         } 
 
         /**
-         * <p>日志文本（&lt;=2000，已剥 ANSI）</p>
+         * <p>The log text (&lt;= 2000 characters, with ANSI escape codes stripped).</p>
          * 
          * <strong>example:</strong>
          * <p>CUDA out of memory. Tried to allocate 2.00 GiB</p>
@@ -78,7 +78,7 @@ public class RLLogContextLine extends TeaModel {
         }
 
         /**
-         * <p>日志行毫秒时间戳</p>
+         * <p>The millisecond timestamp of the log line.</p>
          * 
          * <strong>example:</strong>
          * <p>1787293208012</p>

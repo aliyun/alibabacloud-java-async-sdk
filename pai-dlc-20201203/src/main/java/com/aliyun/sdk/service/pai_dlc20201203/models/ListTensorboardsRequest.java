@@ -327,10 +327,10 @@ public class ListTensorboardsRequest extends Request {
         } 
 
         /**
-         * <p>The instance visibility.</p>
+         * <p>The visibility of the Tensorboard instance. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: TensorBoard instances are visible to all members in the workspace.</li>
-         * <li>PRIVATE: TensorBoard instances are visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: visible to all members in the workspace.</li>
+         * <li>PRIVATE: visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The TensorBoard instance name.</p>
+         * <p>The display name of the Tensorboard instance.</p>
          * 
          * <strong>example:</strong>
          * <p>TestTensorboard</p>
@@ -355,7 +355,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Use the UTC time when the TensorBoard instance is created to filter data. If you leave this parameter empty, the default value is the current time.</p>
+         * <p>The end time of the query range. Tensorboard instances are filtered by their creation time in UTC. If this parameter is left empty, the default value is the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T14:45:00Z</p>
@@ -367,7 +367,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The job ID used to filter TensorBoard instances. For more information about how to obtain the ID of a job, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The DLC job ID used to filter Tensorboard instances. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-xxx</p>
@@ -379,10 +379,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>desc</li>
-         * <li>asc</li>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -395,7 +395,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Minimum value: 1.</p>
+         * <p>The page number for paging. The value starts from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -407,7 +407,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The number of TensorBoard instances per page.</p>
+         * <p>The number of Tensorboard instances to return on each page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -419,10 +419,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The billing method of TensorBoard instances.</p>
+         * <p>The billing method of the Tensorboard instance. Valid values:</p>
          * <ul>
-         * <li>Free: the TensorBoard instance that uses free resources.</li>
-         * <li>Postpaid: the TensorBoard instance that uses pay-as-you-go resources.</li>
+         * <li>Free: a Tensorboard instance that uses free resources.</li>
+         * <li>Postpaid: a Tensorboard instance that uses pay-as-you-go resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -437,13 +437,11 @@ public class ListTensorboardsRequest extends Request {
         /**
          * <p>The resource quota ID.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>Only whitelisted users can use resource quotas to create TensorBoard instances. If you want to use this feature, contact us.</p>
-         * </li>
-         * <li><p>This parameter takes effect only when TensorBoard instances use resource quotas.</p>
-         * </li>
+         * <li>Currently, only whitelisted users can use resource quota resources to create Tensorboard instances. To use this feature, contact us.</li>
+         * <li>This parameter takes effect only when the Tensorboard instance uses resource quota resources.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>quota12***</p>
@@ -455,7 +453,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return only the TensorBoard instances created by the current logon account.</p>
+         * <p>Specifies whether to return only Tensorboard instances created by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -467,10 +465,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The returned field used to sort TensorBoard instances.</p>
+         * <p>The field by which the results are sorted. Valid values:</p>
          * <ul>
-         * <li>DisplayName: the name of the TensorBoard instance.</li>
-         * <li>GmtCreateTime: the time when the TensorBoard instance is created.</li>
+         * <li>DisplayName: the job name.</li>
+         * <li>GmtCreateTime: the job creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -483,7 +481,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The data source ID. For more information about how to obtain the ID of a job, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The data source ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-xxxxxx</p>
@@ -495,7 +493,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The data source associated with the TensorBoard instance. This parameter is no longer used. Only Deep Learning Containers (DLC) training jobs are supported.</p>
+         * <p>The data source type. Currently, only DLC training jobs are supported, which means the value is job.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>
@@ -507,7 +505,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Use the UTC time when the TensorBoard instance is created to filter data. If you leave this parameter empty, the default value is seven days before the current time.</p>
+         * <p>The start time of the query range. Tensorboard instances are filtered by their creation time in UTC. If this parameter is left empty, the default value is 7 days before the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-08T16:00:00Z</p>
@@ -519,13 +517,13 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The TensorBoard instance status. Valid values:</p>
+         * <p>The Tensorboard status. Valid values:</p>
          * <ul>
-         * <li>Creating</li>
-         * <li>Running</li>
-         * <li>Stopped</li>
-         * <li>Succeeded</li>
-         * <li>Failed</li>
+         * <li>Creating: being created.</li>
+         * <li>Running: running.</li>
+         * <li>Stopped: stopped.</li>
+         * <li>Succeeded: succeeded.</li>
+         * <li>Failed: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -538,7 +536,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The TensorBoard instance ID used to filter TensorBoard instances.</p>
+         * <p>The Tensorboard ID used to filter the Tensorboard list.</p>
          * 
          * <strong>example:</strong>
          * <p>tensorboard-xxx</p>
@@ -574,10 +572,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the information about the TensorBoard instance.</p>
+         * <p>Specifies whether to display details.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Display details.</li>
+         * <li>false: Do not display details.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -590,7 +588,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. Obtain a list of TensorBoard instances based on the workspace ID.</p>
+         * <p>The workspace ID. Tensorboard instances are filtered by workspace ID. &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID..</p>
          * 
          * <strong>example:</strong>
          * <p>380</p>

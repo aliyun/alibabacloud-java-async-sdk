@@ -87,7 +87,10 @@ public class GetSignalRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc**********</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -96,7 +99,10 @@ public class GetSignalRequest extends Request {
         }
 
         /**
-         * SignalId.
+         * <p>The signal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oper**********</p>
          */
         public Builder signalId(String signalId) {
             this.putPathParameter("SignalId", signalId);
@@ -105,7 +111,10 @@ public class GetSignalRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The temporary token used for authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyXXXX-XXXX.XXXXX</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

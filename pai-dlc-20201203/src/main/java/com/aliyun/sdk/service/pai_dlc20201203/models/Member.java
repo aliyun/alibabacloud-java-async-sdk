@@ -67,7 +67,10 @@ public class Member extends TeaModel {
         } 
 
         /**
-         * MemberId.
+         * <p>The member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ken_12345</p>
          */
         public Builder memberId(String memberId) {
             this.memberId = memberId;
@@ -75,7 +78,10 @@ public class Member extends TeaModel {
         }
 
         /**
-         * MemberType.
+         * <p>The member role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WorkspaceAdmin</p>
          */
         public Builder memberType(String memberType) {
             this.memberType = memberType;

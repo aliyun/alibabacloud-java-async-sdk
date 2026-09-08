@@ -67,7 +67,7 @@ public class RLProgressSync extends TeaModel {
         } 
 
         /**
-         * <p>参数同步耗时（秒），仅 State 为 end 时有值</p>
+         * <p>The parameter synchronization duration in seconds. This property has a value only when State is end.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>

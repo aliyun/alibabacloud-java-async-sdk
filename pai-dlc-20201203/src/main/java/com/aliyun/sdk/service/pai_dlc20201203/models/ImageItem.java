@@ -132,7 +132,14 @@ public class ImageItem extends TeaModel {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The type of the image accelerator. Valid values:</p>
+         * <ul>
+         * <li>cpu</li>
+         * <li>gpu</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gpu</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -140,7 +147,10 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * AuthorId.
+         * <p>The creator of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ken</p>
          */
         public Builder authorId(String authorId) {
             this.authorId = authorId;
@@ -148,7 +158,14 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * Framework.
+         * <p>The computing framework that is encapsulated by the image. Valid values:</p>
+         * <ul>
+         * <li>TFJob</li>
+         * <li>PyTorchJob</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PyTorchJob</p>
          */
         public Builder framework(String framework) {
             this.framework = framework;
@@ -156,7 +173,14 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * ImageProviderType.
+         * <p>The image type. Valid values:</p>
+         * <ul>
+         * <li>Community</li>
+         * <li>PAI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Community</p>
          */
         public Builder imageProviderType(String imageProviderType) {
             this.imageProviderType = imageProviderType;
@@ -164,7 +188,10 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * ImageTag.
+         * <p>The tag of the docker image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
          */
         public Builder imageTag(String imageTag) {
             this.imageTag = imageTag;
@@ -172,7 +199,10 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * ImageUrl.
+         * <p>The image URL address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-beijing.aliyuncs.com/pai-dlc/tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -180,7 +210,10 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * ImageUrlVpc.
+         * <p>The VPC endpoint of the image URL. This address provides faster access speed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-beijing.aliyuncs.com/pai-dlc/tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
          */
         public Builder imageUrlVpc(String imageUrlVpc) {
             this.imageUrlVpc = imageUrlVpc;

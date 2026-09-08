@@ -184,7 +184,10 @@ public class CodeSourceItem extends TeaModel {
         } 
 
         /**
-         * CodeBranch.
+         * <p>The branch of the code repository. If you configure this parameter when you call the CreateJob API operation, the branch is overwritten.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder codeBranch(String codeBranch) {
             this.codeBranch = codeBranch;
@@ -192,7 +195,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeCommit.
+         * <p>The commit ID. If you configure this parameter when you call the CreateJob API operation, the commit is overwritten.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44da109b59f8596152987eaa8f3b2487bb72ea63</p>
          */
         public Builder codeCommit(String codeCommit) {
             this.codeCommit = codeCommit;
@@ -200,7 +206,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeRepo.
+         * <p>The URL of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
          */
         public Builder codeRepo(String codeRepo) {
             this.codeRepo = codeRepo;
@@ -208,7 +217,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeRepoAccessToken.
+         * <p>The access token used to access the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder codeRepoAccessToken(String codeRepoAccessToken) {
             this.codeRepoAccessToken = codeRepoAccessToken;
@@ -216,7 +228,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeRepoUserName.
+         * <p>The username used to access the private code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder codeRepoUserName(String codeRepoUserName) {
             this.codeRepoUserName = codeRepoUserName;
@@ -224,7 +239,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeSourceId.
+         * <p>The ID of the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-20210111103721-********</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -232,7 +250,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code source of dlc examples</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -240,7 +261,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The name of the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCodeSourceName1</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -248,7 +272,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the code source was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -256,7 +283,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The time when the code source was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -264,7 +294,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The UID of the Alibaba Cloud user who creates the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115729017166****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

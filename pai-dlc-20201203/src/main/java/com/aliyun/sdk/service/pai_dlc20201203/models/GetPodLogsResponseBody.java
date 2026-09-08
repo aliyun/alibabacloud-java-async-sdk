@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPodLogsResponseBody</p>
  */
 public class GetPodLogsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ContainerInfo")
+    private ContainerInfo containerInfo;
+
+    @com.aliyun.core.annotation.NameInMap("Containers")
+    private String containers;
+
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
@@ -33,6 +39,8 @@ public class GetPodLogsResponseBody extends TeaModel {
     private String requestId;
 
     private GetPodLogsResponseBody(Builder builder) {
+        this.containerInfo = builder.containerInfo;
+        this.containers = builder.containers;
         this.jobId = builder.jobId;
         this.logs = builder.logs;
         this.podId = builder.podId;
@@ -50,6 +58,20 @@ public class GetPodLogsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return containerInfo
+     */
+    public ContainerInfo getContainerInfo() {
+        return this.containerInfo;
+    }
+
+    /**
+     * @return containers
+     */
+    public String getContainers() {
+        return this.containers;
     }
 
     /**
@@ -88,6 +110,8 @@ public class GetPodLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private ContainerInfo containerInfo; 
+        private String containers; 
         private String jobId; 
         private java.util.List<String> logs; 
         private String podId; 
@@ -98,12 +122,33 @@ public class GetPodLogsResponseBody extends TeaModel {
         } 
 
         private Builder(GetPodLogsResponseBody model) {
+            this.containerInfo = model.containerInfo;
+            this.containers = model.containers;
             this.jobId = model.jobId;
             this.logs = model.logs;
             this.podId = model.podId;
             this.podUid = model.podUid;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * <p>The container information that may be associated with the node.</p>
+         */
+        public Builder containerInfo(ContainerInfo containerInfo) {
+            this.containerInfo = containerInfo;
+            return this;
+        }
+
+        /**
+         * <p>The containers used to filter logs. Separate multiple container names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pytorch,aimaster-worker</p>
+         */
+        public Builder containers(String containers) {
+            this.containers = containers;
+            return this;
+        }
 
         /**
          * <p>The job ID.</p>
@@ -117,7 +162,7 @@ public class GetPodLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The logs.</p>
+         * <p>The log list.</p>
          */
         public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
@@ -147,7 +192,7 @@ public class GetPodLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID which is used for diagnostics and Q&amp;A.</p>
+         * <p>The request ID for this call, used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

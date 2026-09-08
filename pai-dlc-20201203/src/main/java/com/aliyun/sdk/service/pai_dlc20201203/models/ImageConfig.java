@@ -93,7 +93,7 @@ public class ImageConfig extends TeaModel {
         } 
 
         /**
-         * Auth.
+         * <p>Image repository authentication information</p>
          */
         public Builder auth(String auth) {
             this.auth = auth;
@@ -101,7 +101,10 @@ public class ImageConfig extends TeaModel {
         }
 
         /**
-         * DockerRegistry.
+         * <p>Image repository address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker****registry.com</p>
          */
         public Builder dockerRegistry(String dockerRegistry) {
             this.dockerRegistry = dockerRegistry;
@@ -109,7 +112,10 @@ public class ImageConfig extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>Image repository password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -117,7 +123,10 @@ public class ImageConfig extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>Image repository username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder username(String username) {
             this.username = username;

@@ -568,10 +568,10 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * <p>The job visibility. Valid values:</p>
+         * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: The job is visible to all members in the workspace.</li>
-         * <li>PRIVATE: The job is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: Visible to all members in the workspace.</li>
+         * <li>PRIVATE (default): Visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -584,7 +584,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user associated with the job.</p>
+         * <p>The user ID associated with the job.</p>
          * 
          * <strong>example:</strong>
          * <p>16****</p>
@@ -617,7 +617,9 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job name. Fuzzy query is supported. The name is case-insensitive. Wildcards are not supported. For example, if you enter test, test-job1, job-test, job-test2, or job-test can be matched, and job-t1 cannot be matched. The default value null indicates any job name.</p>
+         * <p>The job name. Supports fuzzy search. Case-insensitive. Wildcards are not supported.
+         * For example, entering test matches test-job1, job-test, job-test2, or job-Test, but does not match job-t1.
+         * Default value: empty, which indicates all job names.</p>
          * 
          * <strong>example:</strong>
          * <p>tf-mnist-test</p>
@@ -629,7 +631,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * DisplayNameSearchMode.
+         * <p>The search mode for DisplayName. Default value: wildcard matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wildcard</p>
          */
         public Builder displayNameSearchMode(String displayNameSearchMode) {
             this.putQueryParameter("DisplayNameSearchMode", displayNameSearchMode);
@@ -638,7 +643,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * EnableAssignNode.
+         * <p>Filters jobs based on whether assigned-node execution is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAssignNode(String enableAssignNode) {
             this.putQueryParameter("EnableAssignNode", enableAssignNode);
@@ -647,10 +655,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Use the job creation time to filter data. The default value is the current time.</p>
+         * <p>The end time of the query range. Jobs are filtered by creation time. Default value: the current time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-11-09T14:45:00Z</p>
+         * <p>2025-04-16T07:26:41Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -659,7 +667,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query a list of jobs across workspaces. This parameter must be used together with <code>ShowOwn=true</code>. You can use this parameter to query a list of jobs recently submitted by the current user.</p>
+         * <p>Specifies whether to retrieve jobs across all workspaces. Use this parameter together with <code>ShowOwn=true</code> to query the jobs recently submitted by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -671,7 +679,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * ImageSearch.
+         * <p>Performs a full-text search in the image (images) field. Supports Chinese and English word segmentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pytorch</p>
          */
         public Builder imageSearch(String imageSearch) {
             this.putQueryParameter("ImageSearch", imageSearch);
@@ -680,7 +691,8 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job ID. Fuzzy query is supported. The name is case-insensitive. Wildcards are not supported. The default value null indicates any job ID.</p>
+         * <p>The job ID. Fuzzy search is not supported. Case-insensitive. Wildcards are not supported.
+         * Default value: empty, which indicates all job IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc********</p>
@@ -692,7 +704,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * <p>The list of job IDs, separated by commas (,). If both JobIds and JobId are specified, JobId takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc123abc</p>
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);
@@ -701,7 +716,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job type. The default value null indicates any type. Valid values:</p>
+         * <p>The job type. Default value: empty, which indicates all types. Valid values:</p>
          * <ul>
          * <li>TFJob</li>
          * <li>PyTorchJob</li>
@@ -720,7 +735,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * NumericRangeField.
+         * <p>The field name for numeric range filtering. Use this parameter together with NumericRangeMin/NumericRangeMax.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RequestGPU</p>
          */
         public Builder numericRangeField(String numericRangeField) {
             this.putQueryParameter("NumericRangeField", numericRangeField);
@@ -729,7 +747,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * NumericRangeMax.
+         * <p>The maximum value (inclusive) for numeric range filtering. Use this parameter together with NumericRangeField.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder numericRangeMax(Long numericRangeMax) {
             this.putQueryParameter("NumericRangeMax", numericRangeMax);
@@ -738,7 +759,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * NumericRangeMin.
+         * <p>The minimum value (inclusive) for numeric range filtering. Use this parameter together with NumericRangeField.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder numericRangeMin(Long numericRangeMin) {
             this.putQueryParameter("NumericRangeMin", numericRangeMin);
@@ -747,10 +771,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>desc (default)</li>
-         * <li>asc</li>
+         * <li>desc: Descending order. This is the default value.</li>
+         * <li>asc: Ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -763,12 +787,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The Idle resource information. Valid values:</p>
+         * <p>The idle resource information. Valid values:</p>
          * <ul>
          * <li>ForbiddenQuotaOverSold</li>
          * <li>ForceQuotaOverSold</li>
-         * <li>AcceptQuotaOverSold-true (true indicates that the job uses idle resources.)</li>
-         * <li>AcceptQuotaOverSold-false (false indicates that the job uses guaranteed resources.)</li>
+         * <li>AcceptQuotaOverSold-true (true indicates the job actually used idle resources)</li>
+         * <li>AcceptQuotaOverSold-false (false indicates the job actually used guaranteed resources)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -781,7 +805,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return for the current query. Minimum value: 1. Default value: 1.</p>
+         * <p>The page number to return. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -793,7 +817,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of jobs per page.</p>
+         * <p>The number of jobs to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -805,11 +829,11 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>PrePaid: Resource quota</li>
-         * <li>Spot: Preemptible resources</li>
-         * <li>PostPaid: Public resources</li>
+         * <li>PrePaid: Resource quota.</li>
+         * <li>Spot: Spot resource.</li>
+         * <li>PostPaid: Public resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -822,7 +846,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The specific pipeline ID used to filter jobs.</p>
+         * <p>Filters jobs created by the specified pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-*******</p>
@@ -834,7 +858,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * ReasonSearch.
+         * <p>Performs a full-text search in the job failure reason (reason) field. Supports Chinese and English word segmentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOM</p>
          */
         public Builder reasonSearch(String reasonSearch) {
             this.putQueryParameter("ReasonSearch", reasonSearch);
@@ -843,7 +870,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quota</a>.</p>
+         * <p>The resource group ID. For information about how to obtain the dedicated resource group ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>r*****</p>
@@ -864,7 +891,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The resource quota name used to filter jobs. Fuzzy search is supported. Wildcards are not supported. The default value null indicates that jobs are not filtered by resource quota name.</p>
+         * <p>The resource quota name, used to filter the job list. Supports fuzzy search. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quota***</p>
@@ -876,7 +903,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only the jobs submitted by the current user.</p>
+         * <p>Specifies whether to return only jobs submitted by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -888,7 +915,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting field. Valid values:</p>
+         * <p>The field by which to sort results. Valid values:</p>
          * <ul>
          * <li>DisplayName</li>
          * <li>JobType</li>
@@ -907,10 +934,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Use the job creation time to filter data. The default value is the current time minus seven days. In other words, if you do not configure the StartTime and EndTime parameters, the system queries the job list in the last seven days.</p>
+         * <p>The start time of the query range. Jobs are filtered by creation time. Default value: the current time minus 7 days. If neither StartTime nor EndTime is specified, jobs created in the last 7 days are returned by default.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-11-08T16:00:00Z</p>
+         * <p>2025-04-16T07:25:34Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -923,7 +950,7 @@ public class ListJobsRequest extends Request {
          * <ul>
          * <li>Creating</li>
          * <li>Queuing</li>
-         * <li>Bidding (only available for spot jobs that use Lingjun resources)</li>
+         * <li>Bidding (currently only for Lingjun Spot jobs)</li>
          * <li>EnvPreparing</li>
          * <li>SanityChecking</li>
          * <li>Running</li>
@@ -946,7 +973,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags used for filtering.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -956,7 +983,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID, used to filter jobs created from the specified template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmlabc123</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -965,7 +995,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * TimeRangeField.
+         * <p>The time field used for StartTime/EndTime filtering. Default value: creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtFinishTime</p>
          */
         public Builder timeRangeField(String timeRangeField) {
             this.putQueryParameter("TimeRangeField", timeRangeField);
@@ -974,7 +1007,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * UserCommandSearch.
+         * <p>Performs a full-text search in the user command (user_command) field. Supports Chinese and English word segmentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python train.py</p>
          */
         public Builder userCommandSearch(String userCommandSearch) {
             this.putQueryParameter("UserCommandSearch", userCommandSearch);
@@ -983,7 +1019,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The user ID used to filter jobs.</p>
+         * <p>The user ID of the job submitter, used to filter the job list.</p>
          * 
          * <strong>example:</strong>
          * <p>20**************</p>
@@ -995,7 +1031,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The username used to filter jobs. Fuzzy search is supported. Wildcards are not supported. The default value null indicates that jobs are not filtered by username.</p>
+         * <p>The username of the job submitter, used to filter the job list. Supports fuzzy search. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</p>
          * 
          * <strong>example:</strong>
          * <p>test***</p>
@@ -1007,7 +1043,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1****</p>

@@ -847,7 +847,10 @@ public class JobItem extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -855,7 +858,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>1316721349</strong></strong></p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -863,7 +869,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * CodeSource.
+         * <p>The code source configuration used by this job.</p>
          */
         public Builder codeSource(CodeSource codeSource) {
             this.codeSource = codeSource;
@@ -871,7 +877,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The access credential configuration associated with the job.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.credentialConfig = credentialConfig;
@@ -879,7 +885,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>The list of all datasource configs used by this job.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -887,7 +893,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-mnist-test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -895,7 +904,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The job running duration, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>243</p>
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -903,7 +915,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ElasticSpec.
+         * <p>The elastic job parameters.</p>
          */
         public Builder elasticSpec(JobElasticSpec elasticSpec) {
             this.elasticSpec = elasticSpec;
@@ -911,7 +923,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * EnablePreemptibleJob.
+         * <p>Indicates whether PreemptibleJob is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePreemptibleJob(Boolean enablePreemptibleJob) {
             this.enablePreemptibleJob = enablePreemptibleJob;
@@ -919,7 +934,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * EnabledDebugger.
+         * <p>Indicates whether debugger analysis is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabledDebugger(Boolean enabledDebugger) {
             this.enabledDebugger = enabledDebugger;
@@ -927,7 +945,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>The environment variables injected into the job at runtime.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.envs = envs;
@@ -935,7 +953,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The job creation time in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-16T07:25:34Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -943,7 +964,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtFailedTime.
+         * <p>The time when the job failed (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder gmtFailedTime(String gmtFailedTime) {
             this.gmtFailedTime = gmtFailedTime;
@@ -951,7 +975,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtFinishTime.
+         * <p>The time when the job finished (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-16T07:28:20Z</p>
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -959,7 +986,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the job was modified (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-16T07:28:22Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -967,7 +997,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtRunningTime.
+         * <p>The time when the job started running in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-16T07:26:41Z</p>
          */
         public Builder gmtRunningTime(String gmtRunningTime) {
             this.gmtRunningTime = gmtRunningTime;
@@ -975,7 +1008,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtStoppedTime.
+         * <p>The time when the job was stopped (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder gmtStoppedTime(String gmtStoppedTime) {
             this.gmtStoppedTime = gmtStoppedTime;
@@ -983,7 +1019,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtSubmittedTime.
+         * <p>The job submission time in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-16T07:26:14Z</p>
          */
         public Builder gmtSubmittedTime(String gmtSubmittedTime) {
             this.gmtSubmittedTime = gmtSubmittedTime;
@@ -991,7 +1030,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * GmtSuccessedTime.
+         * <p>The time when the job completed successfully in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-16T07:28:20Z</p>
          */
         public Builder gmtSuccessedTime(String gmtSuccessedTime) {
             this.gmtSuccessedTime = gmtSuccessedTime;
@@ -999,7 +1041,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * IsDeleted.
+         * <p>Indicates whether the job is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDeleted(Boolean isDeleted) {
             this.isDeleted = isDeleted;
@@ -1007,7 +1052,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-********</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -1015,7 +1063,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * JobMaxRunningTimeMinutes.
+         * <p>The maximum job running duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder jobMaxRunningTimeMinutes(Long jobMaxRunningTimeMinutes) {
             this.jobMaxRunningTimeMinutes = jobMaxRunningTimeMinutes;
@@ -1031,7 +1082,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * JobSpecs.
+         * <p>The node configurations for the job at runtime.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.jobSpecs = jobSpecs;
@@ -1039,7 +1090,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>The job type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TFJob</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -1047,7 +1101,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * NodeCount.
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nodeCount(String nodeCount) {
             this.nodeCount = nodeCount;
@@ -1055,7 +1112,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * NodeNames.
+         * <p>The node names.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
@@ -1063,7 +1120,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Pods.
+         * <p>Pods。</p>
          */
         public Builder pods(java.util.List<PodItem> pods) {
             this.pods = pods;
@@ -1071,7 +1128,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The job priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -1079,7 +1139,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The reason code for the job entering its current status. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JobStoppedByUser</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -1087,7 +1150,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The detailed description of the reason for the job entering its current status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Job is stopped by user.</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -1095,7 +1161,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * RequestCPU.
+         * <p>The requested CPU resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder requestCPU(Long requestCPU) {
             this.requestCPU = requestCPU;
@@ -1103,7 +1172,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * RequestGPU.
+         * <p>The requested GPU resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder requestGPU(String requestGPU) {
             this.requestGPU = requestGPU;
@@ -1111,7 +1183,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * RequestMemory.
+         * <p>The requested memory resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1Gi</p>
          */
         public Builder requestMemory(String requestMemory) {
             this.requestMemory = requestMemory;
@@ -1119,7 +1194,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group in which the job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-quota</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -1127,7 +1205,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ResourceLevel.
+         * <p>The resource level of the job at runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L0</p>
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;
@@ -1135,7 +1216,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * <p>The name of the resource on which the job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_resource_group</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -1143,7 +1227,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ResourceQuotaName.
+         * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceQuotaName(String resourceQuotaName) {
             this.resourceQuotaName = resourceQuotaName;
@@ -1151,7 +1238,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values: ECS, Lingjun, and ACS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -1159,7 +1249,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * RestartTimes.
+         * <p>The number of times the job has been restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder restartTimes(String restartTimes) {
             this.restartTimes = restartTimes;
@@ -1183,7 +1276,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Settings.
+         * <p>The additional parameters of the job.</p>
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
@@ -1191,7 +1284,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The job status. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -1199,7 +1295,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * StatusHistory.
+         * <p>The job status transition information.</p>
          */
         public Builder statusHistory(java.util.List<StatusTransitionItem> statusHistory) {
             this.statusHistory = statusHistory;
@@ -1207,7 +1303,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * SubStatus.
+         * <p>The job sub-status, such as preemption retry status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restarting</p>
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
@@ -1215,7 +1314,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * SystemEnvs.
+         * <p>The system environment variable configuration.</p>
          */
         public Builder systemEnvs(java.util.Map<String, String> systemEnvs) {
             this.systemEnvs = systemEnvs;
@@ -1239,7 +1338,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>93955616</strong></strong></p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -1247,7 +1349,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ThirdpartyLibDir.
+         * <p>The directory where the third-party library file requirements.txt is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code/</p>
          */
         public Builder thirdpartyLibDir(String thirdpartyLibDir) {
             this.thirdpartyLibDir = thirdpartyLibDir;
@@ -1255,7 +1360,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * ThirdpartyLibs.
+         * <p>The list of third-party Python libraries installed before the job runs.</p>
          */
         public Builder thirdpartyLibs(java.util.List<String> thirdpartyLibs) {
             this.thirdpartyLibs = thirdpartyLibs;
@@ -1263,7 +1368,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * UseOversoldResource.
+         * <p>Indicates whether the job uses idle resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useOversoldResource(Boolean useOversoldResource) {
             this.useOversoldResource = useOversoldResource;
@@ -1271,7 +1379,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * UserCommand.
+         * <p>The startup command that runs on each node of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python /root/code/mnist.py</p>
          */
         public Builder userCommand(String userCommand) {
             this.userCommand = userCommand;
@@ -1279,7 +1390,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The UID of the user who owns the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -1287,7 +1401,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * UserScript.
+         * <p>The user script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls</p>
          */
         public Builder userScript(String userScript) {
             this.userScript = userScript;
@@ -1295,7 +1412,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The user VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-1</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -1303,7 +1423,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username of the job submitter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai-dlc-role</p>
          */
         public Builder username(String username) {
             this.username = username;
@@ -1311,7 +1434,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * WorkingDir.
+         * <p>The working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
          */
         public Builder workingDir(String workingDir) {
             this.workingDir = workingDir;
@@ -1319,7 +1445,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the job belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -1327,7 +1456,10 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the workspace to which the job belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-workspace</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -1427,7 +1559,10 @@ public class JobItem extends TeaModel {
             } 
 
             /**
-             * Branch.
+             * <p>The code repository branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -1435,7 +1570,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * CodeSourceId.
+             * <p>The code source configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code-20210111103721-********</p>
              */
             public Builder codeSourceId(String codeSourceId) {
                 this.codeSourceId = codeSourceId;
@@ -1443,7 +1581,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * Commit.
+             * <p>The commit ID of the code repository used by this job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44da109b59f8596152987eaa8f3b2487bb******</p>
              */
             public Builder commit(String commit) {
                 this.commit = commit;
@@ -1451,7 +1592,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The local mount path of the code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1518,7 +1662,10 @@ public class JobItem extends TeaModel {
             } 
 
             /**
-             * DataSourceId.
+             * <p>The datasource config ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data-20210114104214-********</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1526,7 +1673,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The local mount path of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1632,7 +1782,10 @@ public class JobItem extends TeaModel {
             } 
 
             /**
-             * DefaultRoute.
+             * <p>The default route. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1640,7 +1793,7 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * ExtendedCidrs.
+             * <p>The extended CIDR blocks to connect.</p>
              */
             public Builder extendedCidrs(java.util.List<String> extendedCidrs) {
                 this.extendedCidrs = extendedCidrs;
@@ -1648,7 +1801,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zeef***</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1656,7 +1812,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze6***</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -1664,7 +1823,10 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zed***</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

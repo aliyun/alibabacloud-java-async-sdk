@@ -249,7 +249,10 @@ public class SmartCache extends TeaModel {
         } 
 
         /**
-         * CacheWorkerNum.
+         * <p>The number of cache workers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder cacheWorkerNum(Long cacheWorkerNum) {
             this.cacheWorkerNum = cacheWorkerNum;
@@ -257,7 +260,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * CacheWorkerSize.
+         * <p>The cache size per cache worker. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder cacheWorkerSize(Long cacheWorkerSize) {
             this.cacheWorkerSize = cacheWorkerSize;
@@ -265,7 +271,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The SmartCache description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -273,7 +282,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The SmartCache name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -281,7 +293,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The running duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -289,7 +304,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>OSS Endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing-internal.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -297,7 +315,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * FileSystemId.
+         * <p>The Alibaba Cloud NAS file system ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -305,7 +326,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -313,7 +337,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T23:36:01Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -321,7 +348,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The local mount directory of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/data/</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -329,7 +359,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>The optional hyperparameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;num_threads&quot;: 32}</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -337,7 +370,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>The OSS data source path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://buc/path/to/dir</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -345,7 +381,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * SmartCacheId.
+         * <p>SmartCacheId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smartcache-20210114104214-vf9lowjt3pso</p>
          */
         public Builder smartCacheId(String smartCacheId) {
             this.smartCacheId = smartCacheId;
@@ -353,7 +392,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The running status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -361,7 +403,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The mounted data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -369,7 +414,10 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189xxx</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

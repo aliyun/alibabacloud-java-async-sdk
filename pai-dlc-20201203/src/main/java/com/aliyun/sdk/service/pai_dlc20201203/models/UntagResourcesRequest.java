@@ -103,7 +103,17 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to unbind all tags from the instance. Valid values:</p>
+         * <ul>
+         * <li><p>true: Unbinds all tags from the instance.</p>
+         * </li>
+         * <li><p>false: Does not unbind all tags from the instance.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(String all) {
             this.putQueryParameter("All", all);
@@ -112,6 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource ID. You can specify up to 50 resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -122,6 +133,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +146,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The list of tag keys. You can specify up to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

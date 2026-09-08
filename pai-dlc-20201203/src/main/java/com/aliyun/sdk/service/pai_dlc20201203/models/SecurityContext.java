@@ -106,7 +106,7 @@ public class SecurityContext extends TeaModel {
         } 
 
         /**
-         * Capabilities.
+         * <p>The Linux capabilities configuration of the container.</p>
          */
         public Builder capabilities(SecurityContextCapabilities capabilities) {
             this.capabilities = capabilities;
@@ -114,7 +114,7 @@ public class SecurityContext extends TeaModel {
         }
 
         /**
-         * Privileged.
+         * <p>Specifies whether to enable privileged mode. This option is available only for specific Lingjun AI Computing Service subscription user scenarios.</p>
          */
         public Builder privileged(Boolean privileged) {
             this.privileged = privileged;
@@ -122,7 +122,10 @@ public class SecurityContext extends TeaModel {
         }
 
         /**
-         * RunAsGroup.
+         * <p>The GID of the user that runs the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder runAsGroup(Long runAsGroup) {
             this.runAsGroup = runAsGroup;
@@ -130,7 +133,10 @@ public class SecurityContext extends TeaModel {
         }
 
         /**
-         * RunAsUser.
+         * <p>The UID of the user that runs the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder runAsUser(Long runAsUser) {
             this.runAsUser = runAsUser;
@@ -138,7 +144,7 @@ public class SecurityContext extends TeaModel {
         }
 
         /**
-         * SeccompProfile.
+         * <p>The Seccomp profile configuration.</p>
          */
         public Builder seccompProfile(SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;

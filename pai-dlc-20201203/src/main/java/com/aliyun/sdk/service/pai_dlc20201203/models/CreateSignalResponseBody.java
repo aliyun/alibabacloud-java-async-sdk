@@ -106,7 +106,10 @@ public class CreateSignalResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc********</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -114,7 +117,10 @@ public class CreateSignalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F6385-7481-57A7-BEC9-***********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +128,10 @@ public class CreateSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Signal.
+         * <p>The signal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIGUSR1</p>
          */
         public Builder signal(String signal) {
             this.signal = signal;
@@ -130,7 +139,10 @@ public class CreateSignalResponseBody extends TeaModel {
         }
 
         /**
-         * SignalId.
+         * <p>The signal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oper************</p>
          */
         public Builder signalId(String signalId) {
             this.signalId = signalId;
@@ -138,7 +150,10 @@ public class CreateSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The signal status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;

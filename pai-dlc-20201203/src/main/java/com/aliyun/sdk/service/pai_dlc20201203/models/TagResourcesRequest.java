@@ -104,6 +104,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource IDs. A maximum of 50 items can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -125,6 +127,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Job</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +143,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags to be created and attached. A maximum of 20 items can be specified.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -205,7 +211,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the resource. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -213,7 +222,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -80,7 +80,10 @@ public class ResourceLimit extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The number of GPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -88,7 +91,10 @@ public class ResourceLimit extends TeaModel {
         }
 
         /**
-         * GPU.
+         * <p>The number of GPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -96,7 +102,10 @@ public class ResourceLimit extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory capacity limit, in Gi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Gi</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;

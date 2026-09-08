@@ -54,7 +54,7 @@ public class RLFlowWaste extends TeaModel {
         } 
 
         /**
-         * <p>已训练轨迹的累计耗时（秒）</p>
+         * <p>The cumulative duration of trained trajectories, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>183</p>

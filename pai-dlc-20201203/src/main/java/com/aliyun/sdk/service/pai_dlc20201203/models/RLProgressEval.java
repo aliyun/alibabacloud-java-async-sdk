@@ -119,7 +119,7 @@ public class RLProgressEval extends TeaModel {
         } 
 
         /**
-         * <p>Total 大于 0 且 Finished 不小于 Total</p>
+         * <p>Indicates whether Total is greater than 0 and Finished is not less than Total.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -130,7 +130,7 @@ public class RLProgressEval extends TeaModel {
         }
 
         /**
-         * <p>已完成样本数</p>
+         * <p>The number of finished samples.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -141,7 +141,7 @@ public class RLProgressEval extends TeaModel {
         }
 
         /**
-         * <p>进度百分比，Progress 占 Total 的比例</p>
+         * <p>The progress percentage, which is the ratio of Progress to Total.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -152,7 +152,7 @@ public class RLProgressEval extends TeaModel {
         }
 
         /**
-         * <p>进度计数，取 Ready 与 Finished 的较大值</p>
+         * <p>The progress count, which is the greater value of Ready and Finished.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -163,7 +163,7 @@ public class RLProgressEval extends TeaModel {
         }
 
         /**
-         * <p>已就绪样本数</p>
+         * <p>The number of ready samples.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -174,7 +174,7 @@ public class RLProgressEval extends TeaModel {
         }
 
         /**
-         * <p>目标样本数</p>
+         * <p>The target number of samples.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

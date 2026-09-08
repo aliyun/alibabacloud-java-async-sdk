@@ -106,7 +106,10 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * DefaultVersion.
+         * <p>The default version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder defaultVersion(Integer defaultVersion) {
             this.defaultVersion = defaultVersion;
@@ -114,6 +117,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The time the template was last modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +129,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求的 ID，用于诊断和答疑。</p>
+         * <p>The request ID, used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
@@ -136,7 +140,10 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -144,7 +151,10 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * VersionCreated.
+         * <p>Indicates whether a new version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder versionCreated(Boolean versionCreated) {
             this.versionCreated = versionCreated;

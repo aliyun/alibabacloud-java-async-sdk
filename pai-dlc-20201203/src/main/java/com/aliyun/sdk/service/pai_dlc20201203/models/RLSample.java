@@ -145,7 +145,7 @@ public class RLSample extends TeaModel {
         } 
 
         /**
-         * <p>最新事件的 detail</p>
+         * <p>The detail of the latest event.</p>
          * 
          * <strong>example:</strong>
          * <p>actor_parameters_updated</p>
@@ -156,7 +156,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>最新事件所处 stage</p>
+         * <p>The stage of the latest event.</p>
          * 
          * <strong>example:</strong>
          * <p>TRAIN_UPDATE</p>
@@ -167,7 +167,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>最新 sample_status</p>
+         * <p>The latest sample_status.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -178,7 +178,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>最新事件毫秒时间戳</p>
+         * <p>The millisecond timestamp of the latest event.</p>
          * 
          * <strong>example:</strong>
          * <p>1787293215480</p>
@@ -189,7 +189,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>样本 uid</p>
+         * <p>The sample UID.</p>
          * 
          * <strong>example:</strong>
          * <p>321fa56f-e1e5-4eb3-8047-db7a230c9a75</p>
@@ -200,7 +200,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>轨迹序号（数字串）</p>
+         * <p>The trajectory ordinal number (numeric string).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -211,7 +211,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>终态：trained（已完成训练）/ 空串（在途）。当前框架不做过采样，故不会出现 discarded / cancelled</p>
+         * <p>The desired state. Valid values: trained (training completed) and empty string (in progress). The current frame does not perform oversampling, so discarded and cancelled do not occur.</p>
          * 
          * <strong>example:</strong>
          * <p>trained</p>
@@ -222,7 +222,7 @@ public class RLSample extends TeaModel {
         }
 
         /**
-         * <p>该轨迹 trace 行数（含 B/C 类摊入）</p>
+         * <p>The number of trace rows for the trajectory, including B/C type allocations.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

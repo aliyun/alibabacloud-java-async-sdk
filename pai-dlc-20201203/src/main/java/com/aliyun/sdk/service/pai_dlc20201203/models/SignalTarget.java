@@ -80,7 +80,7 @@ public class SignalTarget extends TeaModel {
         } 
 
         /**
-         * PodNames.
+         * <p>The pod name. Required when Scope is set to pods.</p>
          */
         public Builder podNames(java.util.List<String> podNames) {
             this.podNames = podNames;
@@ -88,7 +88,7 @@ public class SignalTarget extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The role information. Required when Scope is set to roles.</p>
          */
         public Builder roles(java.util.List<String> roles) {
             this.roles = roles;
@@ -96,7 +96,10 @@ public class SignalTarget extends TeaModel {
         }
 
         /**
-         * Scope.
+         * <p>The send scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pods</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;

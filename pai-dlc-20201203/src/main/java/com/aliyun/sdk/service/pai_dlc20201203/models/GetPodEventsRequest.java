@@ -148,7 +148,7 @@ public class GetPodEventsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dlc-20210126170216-mtl37ge7gkvdz-chief-0</p>
+         * <p>dlc-20210126170216-mtl37ge7g****-chief-0</p>
          */
         public Builder podId(String podId) {
             this.putPathParameter("PodId", podId);

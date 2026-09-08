@@ -59,7 +59,10 @@ public class StartRayHistoryServerRequest extends Request {
         } 
 
         /**
-         * RayHistoryServerId.
+         * <p>The ID of the Ray History Server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rhsxxx</p>
          */
         public Builder rayHistoryServerId(String rayHistoryServerId) {
             this.putPathParameter("RayHistoryServerId", rayHistoryServerId);

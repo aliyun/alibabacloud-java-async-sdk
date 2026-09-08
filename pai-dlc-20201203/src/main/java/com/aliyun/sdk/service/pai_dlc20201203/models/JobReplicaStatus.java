@@ -145,7 +145,7 @@ public class JobReplicaStatus extends TeaModel {
         } 
 
         /**
-         * Active.
+         * <p>The number of active pods for this replica type.</p>
          */
         public Builder active(Integer active) {
             this.active = active;
@@ -153,7 +153,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * CurrentSpotInstanceType.
+         * <p>The type of spot instance in use, if any.</p>
          */
         public Builder currentSpotInstanceType(String currentSpotInstanceType) {
             this.currentSpotInstanceType = currentSpotInstanceType;
@@ -161,7 +161,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * Dequeued.
+         * <p>The number of dequeued pods.</p>
          */
         public Builder dequeued(Integer dequeued) {
             this.dequeued = dequeued;
@@ -169,7 +169,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * EstimatedAutoScalingSpec.
+         * <p>The estimated auto scaling specification.</p>
          */
         public Builder estimatedAutoScalingSpec(AutoScalingSpec estimatedAutoScalingSpec) {
             this.estimatedAutoScalingSpec = estimatedAutoScalingSpec;
@@ -177,7 +177,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * EstimatedPodCount.
+         * <p>The estimated number of pods for this replica type, used for auto scaling.</p>
          */
         public Builder estimatedPodCount(Long estimatedPodCount) {
             this.estimatedPodCount = estimatedPodCount;
@@ -185,7 +185,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * EstimatedResourceConfig.
+         * <p>The estimated resource configuration.</p>
          */
         public Builder estimatedResourceConfig(ResourceConfig estimatedResourceConfig) {
             this.estimatedResourceConfig = estimatedResourceConfig;
@@ -193,7 +193,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * Queuing.
+         * <p>The number of queued pods.</p>
          */
         public Builder queuing(Integer queuing) {
             this.queuing = queuing;
@@ -201,7 +201,7 @@ public class JobReplicaStatus extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the job replica.</p>
          */
         public Builder type(String type) {
             this.type = type;

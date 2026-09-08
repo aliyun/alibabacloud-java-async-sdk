@@ -223,7 +223,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>当前默认使用的版本号</p>
+         * <p>The default version of the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -234,7 +234,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>A description of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job template description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,6 +245,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The time the job template was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +257,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The time the job template was last modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +269,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>A collection of user-defined key-value pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
@@ -272,7 +280,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedBy.
+         * <p>The ID of the user who last modified the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20**************26</p>
          */
         public Builder modifiedBy(String modifiedBy) {
             this.modifiedBy = modifiedBy;
@@ -280,7 +291,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求的 ID，用于诊断和答疑。</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -291,7 +302,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tplmceolmf2****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -299,7 +313,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-template-example-1778047****</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -307,7 +324,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant that owns the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>142388383837****</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -315,7 +335,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of versions returned. This value is 1 if a specific version is queried, or the total count if all versions are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -323,7 +346,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user who created the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20**************26</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -331,7 +357,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>模板版本详情列表。查询单个版本时返回1个元素，查询所有版本时返回全部</p>
+         * <p>An array of template versions. This array contains only one version if a specific version is requested, or all versions if <code>all</code> is specified.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -339,7 +365,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that contains the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4***9</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -444,10 +473,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>字段约束规则。Key 为 JSONPath 表达式，Value 为约束类型</p>
+             * <p>The field constraint rules. The key is a JSONPath expression and the value is a constraint type.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;JobSpecs[0].Image&quot;:&quot;locked&quot;,&quot;UserCommand&quot;:&quot;locked&quot;,&quot;JobType&quot;:&quot;locked&quot;}</p>
+             * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
              */
             public Builder constraints(java.util.Map<String, ?> constraints) {
                 this.constraints = constraints;
@@ -455,10 +484,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该版本的模板配置内容，JSON 格式</p>
+             * <p>The configuration of the version, in JSON format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;WorkspaceId&quot;:&quot;15****05&quot;,&quot;JobType&quot;:&quot;PyTorchJob&quot;,&quot;UserCommand&quot;:&quot;echo hello&quot;,&quot;JobSpecs&quot;:[{&quot;Type&quot;:&quot;Worker&quot;,&quot;PodCount&quot;:1,&quot;Image&quot;:&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782&quot;,&quot;EcsSpec&quot;:&quot;ecs.gn7i-c8g1.2xlarge&quot;}],&quot;ResourceType&quot;:&quot;ECS&quot;,&quot;_ResourcePaymentType&quot;:&quot;PostPaid&quot;,&quot;CredentialConfig&quot;:{&quot;EnableCredentialInject&quot;:false},&quot;Accessibility&quot;:&quot;PRIVATE&quot;,&quot;Settings&quot;:{&quot;JobReservedMinutes&quot;:0,&quot;Tags&quot;:{}}}</p>
+             * <p>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</p>
              */
             public Builder content(Object content) {
                 this.content = content;
@@ -466,7 +495,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * <p>The ID of the user who created the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20**************26</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -474,6 +506,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time the version was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -485,7 +518,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

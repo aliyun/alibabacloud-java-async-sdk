@@ -93,7 +93,7 @@ public class RLFlowFunnelStage extends TeaModel {
         } 
 
         /**
-         * <p>到达该层级的轨迹数</p>
+         * <p>The number of trajectories that reach this level.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -104,7 +104,7 @@ public class RLFlowFunnelStage extends TeaModel {
         }
 
         /**
-         * <p>层级标识：traj / dispatch / run / rollout / reward / sampled / trained</p>
+         * <p>The level identifier. Valid values: traj, dispatch, run, rollout, reward, sampled, and trained.</p>
          * 
          * <strong>example:</strong>
          * <p>traj</p>
@@ -115,7 +115,7 @@ public class RLFlowFunnelStage extends TeaModel {
         }
 
         /**
-         * <p>层级中文名：生成轨迹 / 下发到 Worker / Agent 启动 / Rollout 完成 / reward 打分 / 采样入批 / 完成训练</p>
+         * <p>The Chinese name of the level. Valid values: 生成轨迹, 下发到 Worker, Agent 启动, Rollout 完成, reward 打分, 采样入批, and 完成训练.</p>
          * 
          * <strong>example:</strong>
          * <p>生成轨迹</p>
@@ -126,7 +126,7 @@ public class RLFlowFunnelStage extends TeaModel {
         }
 
         /**
-         * <p>相对首层 traj 的占比（百分比）</p>
+         * <p>The percentage relative to the first traj level.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

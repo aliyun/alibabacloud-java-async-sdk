@@ -379,7 +379,7 @@ public class JobSettings extends TeaModel {
         } 
 
         /**
-         * AdvancedSettings.
+         * <p>The extra advanced parameter settings.</p>
          */
         public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
@@ -387,7 +387,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * AllocateAllRDMADevices.
+         * <p>Specifies whether to mount all RDMA network interfaces.</p>
          */
         public Builder allocateAllRDMADevices(Boolean allocateAllRDMADevices) {
             this.allocateAllRDMADevices = allocateAllRDMADevices;
@@ -403,7 +403,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * BusinessUserId.
+         * <p>The user ID associated with the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16****</p>
          */
         public Builder businessUserId(String businessUserId) {
             this.businessUserId = businessUserId;
@@ -411,7 +414,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Caller.
+         * <p>The caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SilkFlow</p>
          */
         public Builder caller(String caller) {
             this.caller = caller;
@@ -419,7 +425,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * DataJuicerConfig.
+         * <p>The DataJuicer task configuration.</p>
          */
         public Builder dataJuicerConfig(DataJuicerConfig dataJuicerConfig) {
             this.dataJuicerConfig = dataJuicerConfig;
@@ -427,7 +433,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * DisableEcsStockCheck.
+         * <p>Specifies whether to skip inventory check. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableEcsStockCheck(Boolean disableEcsStockCheck) {
             this.disableEcsStockCheck = disableEcsStockCheck;
@@ -435,7 +448,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Driver.
+         * <p>The NVIDIA driver configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535.54.03</p>
          */
         public Builder driver(String driver) {
             this.driver = driver;
@@ -451,7 +467,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableCPUAffinity.
+         * <p>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableCPUAffinity(Boolean enableCPUAffinity) {
             this.enableCPUAffinity = enableCPUAffinity;
@@ -467,7 +486,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableErrorMonitoringInAIMaster.
+         * <p>Specifies whether to enable fault tolerance monitoring for the job. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
             this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
@@ -475,7 +501,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableOssAppend.
+         * <p>Specifies whether to allow OSS append write. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOssAppend(Boolean enableOssAppend) {
             this.enableOssAppend = enableOssAppend;
@@ -483,7 +516,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableRDMA.
+         * <p>Specifies whether to allow the job to use RDMA. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRDMA(Boolean enableRDMA) {
             this.enableRDMA = enableRDMA;
@@ -491,7 +531,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableSanityCheck.
+         * <p>Specifies whether to enable computing power health check for the job. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSanityCheck(Boolean enableSanityCheck) {
             this.enableSanityCheck = enableSanityCheck;
@@ -499,7 +546,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * EnableTideResource.
+         * <p>Specifies whether to allow the job to use tidal resources. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTideResource(Boolean enableTideResource) {
             this.enableTideResource = enableTideResource;
@@ -507,7 +561,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * ErrorMonitoringArgs.
+         * <p>The configuration parameters for fault tolerance monitoring after it is enabled, such as whether to enable log hang-based detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--enable-log-hang-detection true</p>
          */
         public Builder errorMonitoringArgs(String errorMonitoringArgs) {
             this.errorMonitoringArgs = errorMonitoringArgs;
@@ -515,7 +572,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * JobReservedMinutes.
+         * <p>The retention duration after job completion, in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder jobReservedMinutes(Integer jobReservedMinutes) {
             this.jobReservedMinutes = jobReservedMinutes;
@@ -523,7 +583,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * JobReservedPolicy.
+         * <p>The retention policy after job completion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Always</p>
          */
         public Builder jobReservedPolicy(String jobReservedPolicy) {
             this.jobReservedPolicy = jobReservedPolicy;
@@ -531,7 +594,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * ModelConfig.
+         * <p>The output model configuration. This parameter is currently effective only in joint training scenarios.</p>
          */
         public Builder modelConfig(ModelConfig modelConfig) {
             this.modelConfig = modelConfig;
@@ -539,7 +602,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * OversoldType.
+         * <p>The oversold resource usage mode for the job (reject/accept/only accept).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AcceptQuotaOverSold</p>
          */
         public Builder oversoldType(String oversoldType) {
             this.oversoldType = oversoldType;
@@ -547,7 +613,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * PipelineId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid-12****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
@@ -555,7 +624,10 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * SanityCheckArgs.
+         * <p>The configuration parameters for computing power health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</p>
          */
         public Builder sanityCheckArgs(String sanityCheckArgs) {
             this.sanityCheckArgs = sanityCheckArgs;
@@ -571,7 +643,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;

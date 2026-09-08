@@ -80,7 +80,7 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The jobs.</p>
+         * <p>The job list.</p>
          */
         public Builder jobs(java.util.List<JobItem> jobs) {
             this.jobs = jobs;
@@ -88,7 +88,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID used to troubleshoot issues.</p>
+         * <p>The request ID, used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -99,10 +99,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of jobs that meet the filter conditions.</p>
+         * <p>The total number of jobs that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -197,7 +197,10 @@ public class GetSignalResponseBody extends TeaModel {
         } 
 
         /**
-         * GmtCreated.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-18T10:02:04+08:00</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -205,7 +208,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-18T10:02:04+08:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -213,7 +219,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oper***********</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -221,7 +230,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status description, which contains a summary for each pod (number of successful deliveries, names of failed or pending pods, etc.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>signal delivered to 1 pods</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -229,7 +241,7 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * PodNames.
+         * <p>The list of pod names.</p>
          */
         public Builder podNames(java.util.List<String> podNames) {
             this.podNames = podNames;
@@ -237,7 +249,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The status reason code, such as <code>Completed</code>, <code>SignalFailed</code>, or <code>StoppedByJobEnded</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -245,7 +260,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,7 +271,7 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The list of role objects.</p>
          */
         public Builder roles(java.util.List<String> roles) {
             this.roles = roles;
@@ -261,7 +279,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Scope.
+         * <p>The delivery scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pods</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -269,7 +290,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Signal.
+         * <p>The signal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIGUSR1</p>
          */
         public Builder signal(String signal) {
             this.signal = signal;
@@ -277,7 +301,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * SignalId.
+         * <p>The signal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc***********</p>
          */
         public Builder signalId(String signalId) {
             this.signalId = signalId;
@@ -285,7 +312,10 @@ public class GetSignalResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The signal status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;

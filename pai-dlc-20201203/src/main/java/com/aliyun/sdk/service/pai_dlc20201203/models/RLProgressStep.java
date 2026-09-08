@@ -119,7 +119,7 @@ public class RLProgressStep extends TeaModel {
         } 
 
         /**
-         * <p>当前 step</p>
+         * <p>The current step.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -130,7 +130,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>预计剩余秒数，等于 (Total-Current) 乘 PaceSec</p>
+         * <p>The estimated remaining seconds, calculated as (Total - Current) × PaceSec.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>单步耗时（相邻两个 Step 标记差分，秒）</p>
+         * <p>The per-step duration, calculated as the differential between contiguous step marks, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -152,7 +152,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>进度百分比，Current 占 Total 的比例</p>
+         * <p>The progress percentage, which is the ratio of Current to Total.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -163,7 +163,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>最新 Step 标记时间（unix 秒）</p>
+         * <p>The latest step mark time, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487</p>
@@ -174,7 +174,7 @@ public class RLProgressStep extends TeaModel {
         }
 
         /**
-         * <p>总步数（取自配置 dump）</p>
+         * <p>The total number of steps, obtained from the configuration dump.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

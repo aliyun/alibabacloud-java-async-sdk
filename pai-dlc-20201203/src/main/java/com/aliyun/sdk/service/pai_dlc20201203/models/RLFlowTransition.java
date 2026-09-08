@@ -158,7 +158,7 @@ public class RLFlowTransition extends TeaModel {
         } 
 
         /**
-         * <p>平均耗时（秒）</p>
+         * <p>The average duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1.9</p>
@@ -169,7 +169,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>参与统计的轨迹数</p>
+         * <p>The number of trajectories included in the statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -180,7 +180,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>阶段标识：dispatch_wait / start_wait / env_prepare / generation / agent_finish / reward / buffer_wait / logprob / ref_logprob / advantage / update / e2e</p>
+         * <p>The phase identifier. Valid values: dispatch_wait, start_wait, env_prepare, generation, agent_finish, reward, buffer_wait, logprob, ref_logprob, advantage, update, and e2e.</p>
          * 
          * <strong>example:</strong>
          * <p>traj</p>
@@ -191,7 +191,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>阶段中文名</p>
+         * <p>The Chinese name of the phase.</p>
          * 
          * <strong>example:</strong>
          * <p>生成轨迹</p>
@@ -202,7 +202,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>最大耗时（秒）</p>
+         * <p>The maximum duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>9.2</p>
@@ -213,7 +213,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>耗时 P50（秒）</p>
+         * <p>The P50 duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -224,7 +224,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>耗时 P90（秒）</p>
+         * <p>The P90 duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5.9</p>
@@ -235,7 +235,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>耗时 P99（秒）</p>
+         * <p>The P99 duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>8.6</p>
@@ -246,7 +246,7 @@ public class RLFlowTransition extends TeaModel {
         }
 
         /**
-         * <p>最慢 5 条轨迹</p>
+         * <p>The slowest 5 trajectories.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;PromptUid&quot;:&quot;321fa56f-e1e5-4eb3-8047-db7a230c9a75&quot;,&quot;SampleIndex&quot;:&quot;2&quot;,&quot;Sec&quot;:9.2}]</p>

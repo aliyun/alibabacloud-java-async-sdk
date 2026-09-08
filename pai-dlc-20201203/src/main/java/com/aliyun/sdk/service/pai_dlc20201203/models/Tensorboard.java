@@ -431,7 +431,10 @@ public class Tensorboard extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -447,7 +450,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasource-test</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -463,7 +469,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -471,7 +480,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The duration in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -479,7 +491,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:35:00Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -487,7 +502,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * GmtFinishTime.
+         * <p>The end time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -495,7 +513,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:00Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -503,7 +524,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210114104214-vf9lowjt3pso</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -535,7 +559,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the TensorBoard job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.priority = priority;
@@ -543,7 +570,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * QuotaId.
+         * <p>The ID of the resource group used by TensorBoard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12***</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -551,7 +581,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * QuotaName.
+         * <p>The name of the resource quota used by TensorBoard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-quota</p>
          */
         public Builder quotaName(String quotaName) {
             this.quotaName = quotaName;
@@ -559,7 +592,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The status detail code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -567,7 +603,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The status details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -575,7 +614,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -583,7 +625,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -591,7 +636,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * SummaryPath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/data</p>
          */
         public Builder summaryPath(String summaryPath) {
             this.summaryPath = summaryPath;
@@ -607,7 +655,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * TensorboardDataSources.
+         * <p>The datasets mounted to the TensorBoard job.</p>
          */
         public Builder tensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
             this.tensorboardDataSources = tensorboardDataSources;
@@ -615,7 +663,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * TensorboardId.
+         * <p>Tensorboard ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard-xxx</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;
@@ -623,7 +674,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * TensorboardSpec.
+         * <p>The pay-as-you-go configuration of the TensorBoard job.</p>
          */
         public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
             this.tensorboardSpec = tensorboardSpec;
@@ -631,7 +682,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * TensorboardUrl.
+         * <p>Tensorboard URL。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxxx">http://xxxxxx</a></p>
          */
         public Builder tensorboardUrl(String tensorboardUrl) {
             this.tensorboardUrl = tensorboardUrl;
@@ -647,7 +701,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lycxxxxx</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -655,7 +712,10 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The username of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard.pai</p>
          */
         public Builder username(String username) {
             this.username = username;

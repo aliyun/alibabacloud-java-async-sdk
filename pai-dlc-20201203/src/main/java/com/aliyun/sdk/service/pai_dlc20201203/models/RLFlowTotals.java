@@ -119,7 +119,7 @@ public class RLFlowTotals extends TeaModel {
         } 
 
         /**
-         * <p>在途轨迹数（无终态）</p>
+         * <p>The number of in-flight trajectories (no desired state).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -130,7 +130,7 @@ public class RLFlowTotals extends TeaModel {
         }
 
         /**
-         * <p>已完成 reward 打分的轨迹数（命中 reward_score_computed）</p>
+         * <p>The number of trajectories that have completed reward scoring (hit reward_score_computed).</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -141,7 +141,7 @@ public class RLFlowTotals extends TeaModel {
         }
 
         /**
-         * <p>已被 trainer 采样入批的轨迹数（命中 sampled_from_replay_buffer）</p>
+         * <p>The number of trajectories sampled into a batch by the trainer (hit sampled_from_replay_buffer).</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -152,7 +152,7 @@ public class RLFlowTotals extends TeaModel {
         }
 
         /**
-         * <p>完成训练的轨迹数（命中 actor_parameters_updated）</p>
+         * <p>The number of trajectories that have completed training (hit actor_parameters_updated).</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -163,7 +163,7 @@ public class RLFlowTotals extends TeaModel {
         }
 
         /**
-         * <p>窗口内轨迹总数</p>
+         * <p>The total number of trajectories in the window.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -174,7 +174,7 @@ public class RLFlowTotals extends TeaModel {
         }
 
         /**
-         * <p>窗口内出现的样本 uid 数</p>
+         * <p>The number of sample UIDs that appear in the window.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>

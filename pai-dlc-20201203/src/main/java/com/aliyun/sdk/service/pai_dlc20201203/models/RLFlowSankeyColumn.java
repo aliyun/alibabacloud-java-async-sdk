@@ -80,7 +80,7 @@ public class RLFlowSankeyColumn extends TeaModel {
         } 
 
         /**
-         * <p>该列轨迹数（已单调化：到达后一环节视为必然经过前面环节）</p>
+         * <p>The number of trajectories in the column. The value is monotonized: reaching a later stage implies having passed through all preceding stages.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -91,7 +91,7 @@ public class RLFlowSankeyColumn extends TeaModel {
         }
 
         /**
-         * <p>列标识：gen / run / rollout / sampled / trained</p>
+         * <p>The column identifier. Valid values: gen, run, rollout, sampled, and trained.</p>
          * 
          * <strong>example:</strong>
          * <p>traj</p>
@@ -102,7 +102,7 @@ public class RLFlowSankeyColumn extends TeaModel {
         }
 
         /**
-         * <p>列中文名：轨迹生成 / Agent 启动 / Rollout 完成 / 采样入批 / 完成训练</p>
+         * <p>The Chinese name of the column. Valid values: 轨迹生成, Agent 启动, Rollout 完成, 采样入批, and 完成训练.</p>
          * 
          * <strong>example:</strong>
          * <p>生成轨迹</p>

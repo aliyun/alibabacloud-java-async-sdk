@@ -223,7 +223,14 @@ public class EcsSpec extends TeaModel {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type. Valid values:</p>
+         * <ul>
+         * <li>CPU</li>
+         * <li>GPU</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -231,7 +238,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -239,7 +249,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * DefaultGPUDriver.
+         * <p>The default GPU driver version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>470.199.02</p>
          */
         public Builder defaultGPUDriver(String defaultGPUDriver) {
             this.defaultGPUDriver = defaultGPUDriver;
@@ -247,7 +260,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Gpu.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Integer gpu) {
             this.gpu = gpu;
@@ -255,7 +271,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * GpuMemory.
+         * <p>The GPU memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder gpuMemory(Integer gpuMemory) {
             this.gpuMemory = gpuMemory;
@@ -263,7 +282,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * GpuType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA v100</p>
          */
         public Builder gpuType(String gpuType) {
             this.gpuType = gpuType;
@@ -271,7 +293,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.gn6e-c12g1.3xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -279,7 +304,14 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * IsAvailable.
+         * <p>Indicates whether the instance type is available. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAvailable(Boolean isAvailable) {
             this.isAvailable = isAvailable;
@@ -287,7 +319,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size. Unit: MiB or GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -295,7 +330,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * NonProtectSpotDiscount.
+         * <p>The discount on the current price of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder nonProtectSpotDiscount(Float nonProtectSpotDiscount) {
             this.nonProtectSpotDiscount = nonProtectSpotDiscount;
@@ -303,7 +341,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * PaymentTypes.
+         * <p>The billing methods.</p>
          */
         public Builder paymentTypes(java.util.List<String> paymentTypes) {
             this.paymentTypes = paymentTypes;
@@ -311,7 +349,14 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>ECS</li>
+         * <li>Lingjun</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -319,7 +364,10 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * SpotStockStatus.
+         * <p>The inventory status of preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WithStock</p>
          */
         public Builder spotStockStatus(String spotStockStatus) {
             this.spotStockStatus = spotStockStatus;
@@ -327,7 +375,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * SupportedGPUDrivers.
+         * <p>The GPU driver versions.</p>
          */
         public Builder supportedGPUDrivers(java.util.List<String> supportedGPUDrivers) {
             this.supportedGPUDrivers = supportedGPUDrivers;

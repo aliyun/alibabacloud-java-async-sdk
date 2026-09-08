@@ -67,7 +67,7 @@ public class RLFlowMilestoneCount extends TeaModel {
         } 
 
         /**
-         * <p>停留在该里程碑的在途轨迹数</p>
+         * <p>The number of in-transit trajectories that remain at this milestone.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -78,7 +78,7 @@ public class RLFlowMilestoneCount extends TeaModel {
         }
 
         /**
-         * <p>里程碑，取值同 Stuck[].Milestone</p>
+         * <p>The milestone. Valid values are the same as those of Stuck[].Milestone.</p>
          * 
          * <strong>example:</strong>
          * <p>生成中</p>

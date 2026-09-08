@@ -145,7 +145,7 @@ public class ContainerSpec extends TeaModel {
         } 
 
         /**
-         * Args.
+         * <p>The command parameters.</p>
          */
         public Builder args(java.util.List<String> args) {
             this.args = args;
@@ -153,7 +153,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * Command.
+         * <p>The user command.</p>
          */
         public Builder command(java.util.List<String> command) {
             this.command = command;
@@ -161,7 +161,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * Env.
+         * <p>The environment variables.</p>
          */
         public Builder env(java.util.List<EnvVar> env) {
             this.env = env;
@@ -169,7 +169,10 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>The container image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/pai-dlc/curl:v1.0.0</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -177,7 +180,10 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-init</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +191,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The container resources.</p>
          */
         public Builder resources(ResourceRequirements resources) {
             this.resources = resources;
@@ -201,7 +207,10 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * WorkingDir.
+         * <p>The working directory in the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root</p>
          */
         public Builder workingDir(String workingDir) {
             this.workingDir = workingDir;

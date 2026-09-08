@@ -93,7 +93,7 @@ public class AutoscalingMetricSpec extends TeaModel {
         } 
 
         /**
-         * MetricName.
+         * <p>The name of the metric for autoscaling. This can be a predefined or a custom metric.</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -101,7 +101,7 @@ public class AutoscalingMetricSpec extends TeaModel {
         }
 
         /**
-         * StabilizationWindowSeconds.
+         * <p>The cooldown period, in seconds, after a scaling activity. This prevents the service from initiating another scaling action before the effects of the previous one are observable, stabilizing resource fluctuations.</p>
          */
         public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
             this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -109,7 +109,7 @@ public class AutoscalingMetricSpec extends TeaModel {
         }
 
         /**
-         * TargetValue.
+         * <p>The target value for the specified metric. The autoscaling service tries to maintain the metric at or near this value.</p>
          */
         public Builder targetValue(Integer targetValue) {
             this.targetValue = targetValue;
@@ -117,7 +117,7 @@ public class AutoscalingMetricSpec extends TeaModel {
         }
 
         /**
-         * Tolerance.
+         * <p>The acceptable deviation from the <code>TargetValue</code>, specified as a percentage string. A scaling action is triggered only if the metric value moves outside the range defined by the <code>TargetValue</code> and this tolerance. This prevents scaling actions based on minor fluctuations.</p>
          */
         public Builder tolerance(String tolerance) {
             this.tolerance = tolerance;

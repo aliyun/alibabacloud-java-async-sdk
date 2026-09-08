@@ -119,7 +119,10 @@ public class ListSignalsResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-...</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -127,7 +130,10 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +141,10 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +152,10 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * Signals.
+         * <p>The list of signal records for the job. Each element has the same structure as the response of GetSignal.</p>
          */
         public Builder signals(java.util.List<Signals> signals) {
             this.signals = signals;
@@ -159,7 +171,10 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -329,7 +344,10 @@ public class ListSignalsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-30T14:07:38+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -337,7 +355,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-30T14:07:38+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -345,7 +366,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message returned with the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>signal delivered to 1 pods</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -353,7 +377,7 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * PodNames.
+             * <p>The list of pod names.</p>
              */
             public Builder podNames(java.util.List<String> podNames) {
                 this.podNames = podNames;
@@ -361,7 +385,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -369,7 +396,7 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The list of role types.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -377,7 +404,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The delivery scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pods</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -385,7 +415,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * <p>The signal code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIGUSR1</p>
              */
             public Builder signal(String signal) {
                 this.signal = signal;
@@ -393,7 +426,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * SignalId.
+             * <p>The signal ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oper*********</p>
              */
             public Builder signalId(String signalId) {
                 this.signalId = signalId;
@@ -401,7 +437,10 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The signal status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder status(String status) {
                 this.status = status;

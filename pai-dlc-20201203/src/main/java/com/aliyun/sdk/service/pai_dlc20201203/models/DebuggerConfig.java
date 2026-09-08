@@ -119,7 +119,10 @@ public class DebuggerConfig extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The configuration item details in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;description\&quot;:\&quot;This is a new pytorchjob template\&quot;}</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -127,7 +130,10 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * DebuggerConfigId.
+         * <p>The system-generated unique ID of the debug config.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-vf9lowjt3pso</p>
          */
         public Builder debuggerConfigId(String debuggerConfigId) {
             this.debuggerConfigId = debuggerConfigId;
@@ -135,7 +141,10 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a basic Pytorch configuration template</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +152,10 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The name of the template configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pytorch Experiment Config</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -151,7 +163,10 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:35:00Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -159,7 +174,10 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:00Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;

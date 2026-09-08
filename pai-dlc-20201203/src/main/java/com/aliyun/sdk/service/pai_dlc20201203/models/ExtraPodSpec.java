@@ -134,7 +134,7 @@ public class ExtraPodSpec extends TeaModel {
         } 
 
         /**
-         * InitContainers.
+         * <p>A list of init containers that run to completion before the main container starts.</p>
          */
         public Builder initContainers(java.util.List<ContainerSpec> initContainers) {
             this.initContainers = initContainers;
@@ -142,7 +142,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * Lifecycle.
+         * <p>Defines lifecycle hooks for the main container.</p>
          */
         public Builder lifecycle(Lifecycle lifecycle) {
             this.lifecycle = lifecycle;
@@ -150,7 +150,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * MainContainerSecurityContext.
+         * <p>Defines the security context for the main container.</p>
          */
         public Builder mainContainerSecurityContext(SecurityContext mainContainerSecurityContext) {
             this.mainContainerSecurityContext = mainContainerSecurityContext;
@@ -158,7 +158,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * PodAnnotations.
+         * <p>Key-value pairs to apply to the pod as annotations. Use annotations to attach arbitrary, non-identifying metadata.</p>
          */
         public Builder podAnnotations(java.util.Map<String, String> podAnnotations) {
             this.podAnnotations = podAnnotations;
@@ -166,7 +166,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * PodLabels.
+         * <p>Key-value pairs to apply to the pod as labels. Use labels to organize and select pods.</p>
          */
         public Builder podLabels(java.util.Map<String, String> podLabels) {
             this.podLabels = podLabels;
@@ -174,7 +174,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * SharedVolumeMountPaths.
+         * <p>A list of local directory paths to mount and share among all containers in the pod.</p>
          */
         public Builder sharedVolumeMountPaths(java.util.List<String> sharedVolumeMountPaths) {
             this.sharedVolumeMountPaths = sharedVolumeMountPaths;
@@ -182,7 +182,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * SideCarContainers.
+         * <p>A list of sidecar containers.</p>
          */
         public Builder sideCarContainers(java.util.List<ContainerSpec> sideCarContainers) {
             this.sideCarContainers = sideCarContainers;

@@ -275,7 +275,7 @@ public class RLFlowStep extends TeaModel {
         } 
 
         /**
-         * <p>该 step 轨迹的入缓冲到成批耗时 P50（秒）</p>
+         * <p>The P50 latency in seconds from when trajectories of the step enter the buffer to when batching occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -286,7 +286,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>空档（秒）= train started − rollout finished，成批/搬运等待</p>
+         * <p>The gap duration in seconds, calculated as train started − rollout finished. This represents batching or transfer wait time.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -297,7 +297,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>训练空闲（秒）= 本步训练开始 − 上一步训练结束；无标记时退回 本步前向开始 − 上一步优化器结束；大于 0 表示 trainer 在等数据</p>
+         * <p>The training idle time in seconds, calculated as the current step training start − the previous step training end. If no marker is present, the value falls back to the current step forward computation start − the previous step optimizer end. A value greater than 0 indicates that the trainer is waiting for data.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -308,7 +308,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>该 step 消费的样本（uid）数</p>
+         * <p>The number of samples (UIDs) consumed by the step.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -319,7 +319,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>归属该 step 本次执行的轨迹数</p>
+         * <p>The number of trajectories executed in the step.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -330,7 +330,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>该 step 轨迹入缓冲的最晚时刻，毫秒</p>
+         * <p>The latest time when trajectories of the step enter the buffer, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -341,7 +341,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>该 step 轨迹入缓冲的最早时刻，毫秒</p>
+         * <p>The earliest time when trajectories of the step enter the buffer, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -352,7 +352,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>该 step 轨迹的开始执行到入缓冲耗时 P50（秒）</p>
+         * <p>The P50 latency in seconds from when trajectories of the step start execution to when they enter the buffer.</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -363,7 +363,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>Rollout 耗时（秒）= rollout finished − rollout started；无标记时为空</p>
+         * <p>The rollout duration in seconds, calculated as rollout finished − rollout started. This value is null if no marker is present.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -374,7 +374,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>global step 序号</p>
+         * <p>The global step ordinal number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -385,7 +385,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>前向计算开始时刻，毫秒</p>
+         * <p>The forward computation start time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -396,7 +396,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>优化器结束时刻，毫秒</p>
+         * <p>The optimizer end time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -407,7 +407,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>任务日志 &quot;Step N rollout finished&quot; 时刻，毫秒</p>
+         * <p>The node operation log &quot;Step N rollout finished&quot; time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -418,7 +418,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>任务日志 &quot;Step N rollout started&quot; 时刻，毫秒（取 agent_collect_time）</p>
+         * <p>The node operation log &quot;Step N rollout started&quot; time, in milliseconds (taken from agent_collect_time).</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -429,7 +429,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>任务日志 &quot;Step N train finished&quot; 时刻，毫秒</p>
+         * <p>The node operation log &quot;Step N train finished&quot; time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -440,7 +440,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>任务日志 &quot;Step N train started&quot; 时刻，毫秒</p>
+         * <p>The node operation log &quot;Step N train started&quot; time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -451,7 +451,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>TRAIN_UPDATE（参数更新）时刻，毫秒</p>
+         * <p>The TRAIN_UPDATE (parameter update) time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787474487713</p>
@@ -462,7 +462,7 @@ public class RLFlowStep extends TeaModel {
         }
 
         /**
-         * <p>训练耗时（秒）：优先 train finished − train started；无标记时退回 成批 → 训练完成，作业重启导致 global_step 重复时为空</p>
+         * <p>The training duration in seconds. This value is preferentially calculated as train finished − train started. If no marker is present, the value falls back to the duration from batching to training completion. This value is null if global_step is duplicated because of a job restart.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -185,7 +185,10 @@ public class GetMetricsRequest extends Request {
         } 
 
         /**
-         * Dimensions.
+         * <p>(Required) Request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;jobId\&quot;:\&quot;dlcdpfpc96mh63mg\&quot;,\&quot;pod\&quot;:\&quot;dlcdpfpc96mh63mg-worker-748\&quot;,\&quot;regionId\&quot;:\&quot;cn-wulanchabu\&quot;,\&quot;userId\&quot;:\&quot;1458867964644701\&quot;}]</p>
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -194,7 +197,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Default value: current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -203,7 +209,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlckjd5hm84tmjec</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -212,7 +221,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * Length.
+         * <p>The number of records per query for paged queries. Default value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder length(String length) {
             this.putQueryParameter("Length", length);
@@ -221,7 +233,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * <p>Metric name. Not filled. Not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOB_MEMORY_FREE</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -230,7 +245,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace for cloud service monitoring data. For more information about namespaces, see cloud service monitoring metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_pai_dlc</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -239,7 +257,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination cursor token. If you do not set this parameter, the first page of data is returned. When a NextToken value is returned, more data is available. Use the returned NextToken as a parameter in your next request to retrieve the next page. Repeat until NextToken returns null, which means all data has been retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c6b65b6f9d625d4716568ca19b2064be0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -248,7 +269,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The statistical period for monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -257,7 +281,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the monitoring data query interval (UTC). Default value: one hour ago.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -266,7 +293,10 @@ public class GetMetricsRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>A temporary token used for authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyXXXX-XXXX.XXXXX</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
