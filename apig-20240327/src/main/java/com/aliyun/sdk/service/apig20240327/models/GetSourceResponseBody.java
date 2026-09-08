@@ -93,7 +93,7 @@ public class GetSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -123,7 +123,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>DE10E3C0-A676-5169-812D-6610AACBFAFF</p>
@@ -179,7 +179,7 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+             * <p>The Container Service cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c2d290b2d8b5d4935864cace5f0173f31</p>
@@ -262,7 +262,7 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the Nacos instance.</p>
+             * <p>The access address of the Nacos instance.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -471,7 +471,10 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * associationReason.
+             * <p>The reason for the association status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Association completed</p>
              */
             public Builder associationReason(String associationReason) {
                 this.associationReason = associationReason;
@@ -479,7 +482,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * associationStatus.
+             * <p>The association status of the source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASSOCIATED</p>
              */
             public Builder associationStatus(String associationStatus) {
                 this.associationStatus = associationStatus;
@@ -509,7 +515,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Kubernetes source information.</p>
+             * <p>The Kubernetes source information.</p>
              */
             public Builder k8SSourceInfo(K8SSourceInfo k8SSourceInfo) {
                 this.k8SSourceInfo = k8SSourceInfo;
@@ -517,7 +523,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source information when the source type is MSE_NACOS.</p>
+             * <p>The MSE Nacos source information.</p>
              */
             public Builder nacosSourceInfo(NacosSourceInfo nacosSourceInfo) {
                 this.nacosSourceInfo = nacosSourceInfo;

@@ -192,7 +192,10 @@ public class CreatePluginClassRequest extends Request {
         } 
 
         /**
-         * alias.
+         * <p>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.WithValue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My Wasm Plugin</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -201,7 +204,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The description of the plugin.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom authentication plugin for validating tokens in request headers</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -210,7 +217,10 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * executePriority.
+         * <p>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. Set this parameter to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder executePriority(Integer executePriority) {
             this.putBodyParameter("executePriority", executePriority);
@@ -219,7 +229,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The execution stage of the plugin.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHN</p>
          */
         public Builder executeStage(String executeStage) {
             this.putBodyParameter("executeStage", executeStage);
@@ -228,7 +242,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The name of the plugin class.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-wasm-plugin</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -237,7 +255,10 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * supportedMinGatewayVersion.
+         * <p>The minimum gateway version supported by the plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder supportedMinGatewayVersion(String supportedMinGatewayVersion) {
             this.putBodyParameter("supportedMinGatewayVersion", supportedMinGatewayVersion);
@@ -246,7 +267,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The version number of the plugin.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -255,7 +280,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The description of the current version.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial version with basic token validation</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("versionDescription", versionDescription);
@@ -264,7 +293,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The development language of the WASM plugin. Valid values: TinyGo.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rust</p>
          */
         public Builder wasmLanguage(String wasmLanguage) {
             this.putBodyParameter("wasmLanguage", wasmLanguage);
@@ -273,7 +306,11 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
+         * <p>The download URL of the WASM plugin binary file.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/plugins/my-plugin.wasm">https://example.com/plugins/my-plugin.wasm</a></p>
          */
         public Builder wasmUrl(String wasmUrl) {
             this.putBodyParameter("wasmUrl", wasmUrl);

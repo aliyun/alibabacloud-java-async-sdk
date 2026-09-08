@@ -80,7 +80,7 @@ public class DeletePolicyAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class DeletePolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class DeletePolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CE857A85-251D-5018-8103-A38957D71***</p>

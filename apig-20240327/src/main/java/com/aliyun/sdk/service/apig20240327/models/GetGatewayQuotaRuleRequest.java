@@ -131,7 +131,10 @@ public class GetGatewayQuotaRuleRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -140,7 +143,10 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qr-d8j7fpmm1hks65xxxxx</p>
          */
         public Builder ruleId(String ruleId) {
             this.putPathParameter("ruleId", ruleId);
@@ -149,7 +155,10 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * consumerPageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder consumerPageNumber(String consumerPageNumber) {
             this.putQueryParameter("consumerPageNumber", consumerPageNumber);
@@ -158,7 +167,10 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * consumerPageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder consumerPageSize(String consumerPageSize) {
             this.putQueryParameter("consumerPageSize", consumerPageSize);
@@ -167,7 +179,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * withConsumers.
+         * <p>Specifies whether to return the API consumer list.</p>
          */
         public Builder withConsumers(Boolean withConsumers) {
             this.putQueryParameter("withConsumers", withConsumers);
@@ -176,7 +188,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * withSubjects.
+         * <p>Specifies whether to return the general subject list. This parameter applies to both API consumer and API consumer group rules.</p>
          */
         public Builder withSubjects(Boolean withSubjects) {
             this.putQueryParameter("withSubjects", withSubjects);

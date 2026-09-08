@@ -80,7 +80,7 @@ public class DeleteConsumerAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class DeleteConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -102,7 +102,7 @@ public class DeleteConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>

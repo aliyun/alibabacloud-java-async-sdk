@@ -54,7 +54,7 @@ public class HiMarketModelConfig extends TeaModel {
         } 
 
         /**
-         * modelAPIConfig.
+         * <p>The Model API configuration wrapper.</p>
          */
         public Builder modelAPIConfig(ModelAPIConfig modelAPIConfig) {
             this.modelAPIConfig = modelAPIConfig;
@@ -133,7 +133,7 @@ public class HiMarketModelConfig extends TeaModel {
             } 
 
             /**
-             * aiProtocols.
+             * <p>The list of AI protocols.</p>
              */
             public Builder aiProtocols(java.util.List<String> aiProtocols) {
                 this.aiProtocols = aiProtocols;
@@ -141,7 +141,10 @@ public class HiMarketModelConfig extends TeaModel {
             }
 
             /**
-             * modelCategory.
+             * <p>The model categorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder modelCategory(String modelCategory) {
                 this.modelCategory = modelCategory;
@@ -149,7 +152,7 @@ public class HiMarketModelConfig extends TeaModel {
             }
 
             /**
-             * routes.
+             * <p>The list of routing configurations.</p>
              */
             public Builder routes(java.util.List<HiMarketHttpRoute> routes) {
                 this.routes = routes;

@@ -80,7 +80,10 @@ public class AuthorizationResourceInfo extends TeaModel {
         } 
 
         /**
-         * environmentId.
+         * <p>Environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -88,7 +91,10 @@ public class AuthorizationResourceInfo extends TeaModel {
         }
 
         /**
-         * parentResourceId.
+         * <p>Parent resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-cujbijem1hkr4voden8g</p>
          */
         public Builder parentResourceId(String parentResourceId) {
             this.parentResourceId = parentResourceId;
@@ -96,7 +102,10 @@ public class AuthorizationResourceInfo extends TeaModel {
         }
 
         /**
-         * resourceId.
+         * <p>Resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-d0mnu16m1hkgujnkgrcg</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;

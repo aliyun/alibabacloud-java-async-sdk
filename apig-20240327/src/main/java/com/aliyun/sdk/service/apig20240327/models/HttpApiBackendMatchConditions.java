@@ -67,7 +67,7 @@ public class HttpApiBackendMatchConditions extends TeaModel {
         } 
 
         /**
-         * conditions.
+         * <p>The configurations of the matching conditions.</p>
          */
         public Builder conditions(java.util.List<HttpApiBackendMatchCondition> conditions) {
             this.conditions = conditions;
@@ -75,7 +75,10 @@ public class HttpApiBackendMatchConditions extends TeaModel {
         }
 
         /**
-         * default.
+         * <p>Specifies whether the matching condition is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder _default(Boolean _default) {
             this._default = _default;

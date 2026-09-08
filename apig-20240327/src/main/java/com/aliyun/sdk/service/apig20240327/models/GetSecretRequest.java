@@ -59,7 +59,7 @@ public class GetSecretRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the key.</p>
+         * <p>The key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>

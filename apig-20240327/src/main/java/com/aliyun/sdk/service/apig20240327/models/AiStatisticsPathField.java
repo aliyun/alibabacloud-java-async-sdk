@@ -171,7 +171,10 @@ public class AiStatisticsPathField extends TeaModel {
         } 
 
         /**
-         * category.
+         * <p>The secondary business category of the field. Optional. Valid values: conversation (conversation content), config (configuration parameters), tools (tool calling), usage (usage statistics), metadata (metadata), choices (candidate results), identity (identity identifier), cache (cache information), media (multimedia content), logprobs (log probabilities), and custom (custom field). Set custom fields to custom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conversation</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -179,7 +182,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The field description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The question content entered by the user</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -187,7 +193,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * fieldKey.
+         * <p>The log key (field name).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>question</p>
          */
         public Builder fieldKey(String fieldKey) {
             this.fieldKey = fieldKey;
@@ -195,7 +204,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * io.
+         * <p>The request or response attribution. The backend normalizes this to request or response based on source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request</p>
          */
         public Builder io(String io) {
             this.io = io;
@@ -203,7 +215,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * jsonPath.
+         * <p>The corresponding jsonPath (gjson syntax).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>messages.#.content</p>
          */
         public Builder jsonPath(String jsonPath) {
             this.jsonPath = jsonPath;
@@ -211,7 +226,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The annotation for the field key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Question content</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -219,7 +237,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * recordEnabled.
+         * <p>Indicates whether collection is enabled to create a log record for the corresponding field in AI request logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder recordEnabled(Boolean recordEnabled) {
             this.recordEnabled = recordEnabled;
@@ -227,7 +248,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * rule.
+         * <p>The aggregation rule for streaming response fields. Valid values: append, first, and replace. append: appends the matched values from each streaming chunk in sequence. first: retains the first matched value. replace: uses the last matched value. When source is response_streaming_body and rule is not specified, first is used by default. This field is not required for non-streaming scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>append</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -235,7 +259,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * sensitive.
+         * <p>Specifies whether the field is sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sensitive(Boolean sensitive) {
             this.sensitive = sensitive;
@@ -243,7 +270,10 @@ public class AiStatisticsPathField extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source of the field value. Valid values: fixed_value (fixed value), request_body (request body), request_header (request header), response_header (response header), response_body (non-streaming response body), and response_streaming_body (streaming response body).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_body</p>
          */
         public Builder source(String source) {
             this.source = source;

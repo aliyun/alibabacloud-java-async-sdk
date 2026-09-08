@@ -288,7 +288,10 @@ public class SslCertMetaInfo extends TeaModel {
         } 
 
         /**
-         * algorithm.
+         * <p>The algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA2048</p>
          */
         public Builder algorithm(String algorithm) {
             this.algorithm = algorithm;
@@ -296,7 +299,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * certId.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder certId(Long certId) {
             this.certId = certId;
@@ -304,7 +310,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * certIdentifier.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-123</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -312,7 +321,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * certName.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -320,7 +332,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * commonName.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -328,7 +343,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.example.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -336,7 +354,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * domainMatchCert.
+         * <p>The certificate matching the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder domainMatchCert(Boolean domainMatchCert) {
             this.domainMatchCert = domainMatchCert;
@@ -344,7 +365,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * fingerprint.
+         * <p>The certificate fingerprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1:B2:C3:D4:E5:F6:78:90:AB:CD:EF:12:34:56:78:90</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -352,7 +376,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1234567890</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -360,7 +387,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * isChainCompleted.
+         * <p>isChainCompleted</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isChainCompleted(Boolean isChainCompleted) {
             this.isChainCompleted = isChainCompleted;
@@ -368,7 +398,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * issuer.
+         * <p>The certificate issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DigiCert Inc</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -376,7 +409,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * keySize.
+         * <p>The key size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder keySize(String keySize) {
             this.keySize = keySize;
@@ -384,7 +420,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * md5.
+         * <p>The md5 value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4E5F67890ABCDEF1234567890</p>
          */
         public Builder md5(String md5) {
             this.md5 = md5;
@@ -392,7 +431,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * notAfterTimestamp.
+         * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890000</p>
          */
         public Builder notAfterTimestamp(Long notAfterTimestamp) {
             this.notAfterTimestamp = notAfterTimestamp;
@@ -400,7 +442,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * notBeforeTimestamp.
+         * <p>The time when the certificate starts to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890000</p>
          */
         public Builder notBeforeTimestamp(Long notBeforeTimestamp) {
             this.notBeforeTimestamp = notBeforeTimestamp;
@@ -408,7 +453,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * sans.
+         * <p>sans</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.example.com,api.example.com,<a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder sans(String sans) {
             this.sans = sans;
@@ -416,7 +464,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * serialNo.
+         * <p>The serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03:A1:B2:C3:D4:E5:F6:78:90:AB:CD:EF:12:34:56:78:90</p>
          */
         public Builder serialNo(String serialNo) {
             this.serialNo = serialNo;
@@ -424,7 +475,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * sha2.
+         * <p>The sha2 value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4E5F67890ABCDEF1234567890ABCDEF1234567890ABCDEF1234567890</p>
          */
         public Builder sha2(String sha2) {
             this.sha2 = sha2;
@@ -432,7 +486,10 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * signAlgorithm.
+         * <p>The signature algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256WithRSAEncryption</p>
          */
         public Builder signAlgorithm(String signAlgorithm) {
             this.signAlgorithm = signAlgorithm;

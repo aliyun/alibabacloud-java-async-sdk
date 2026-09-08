@@ -93,7 +93,7 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response payload.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -179,7 +179,7 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Filters the list of operations based on a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+             * <p>The consumer authorization rule ID. When this ID is used to filter the API list, the response includes only the authorized APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>car-d06p196m1hkg9ukum5pg</p>

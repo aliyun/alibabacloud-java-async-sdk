@@ -93,7 +93,7 @@ public class AiToolSelectionConfig extends TeaModel {
         } 
 
         /**
-         * enableConditions.
+         * <p>The enable conditions configuration. Controls when the overall feature is triggered.</p>
          */
         public Builder enableConditions(EnableConditions enableConditions) {
             this.enableConditions = enableConditions;
@@ -101,7 +101,7 @@ public class AiToolSelectionConfig extends TeaModel {
         }
 
         /**
-         * pluginStatus.
+         * <p>The plug-in running status.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;
@@ -109,7 +109,7 @@ public class AiToolSelectionConfig extends TeaModel {
         }
 
         /**
-         * queryRewriting.
+         * <p>The query rewrite configuration. Rewrites user queries before tool reranking to improve matching precision.</p>
          */
         public Builder queryRewriting(QueryRewriting queryRewriting) {
             this.queryRewriting = queryRewriting;
@@ -117,7 +117,7 @@ public class AiToolSelectionConfig extends TeaModel {
         }
 
         /**
-         * toolReranking.
+         * <p>The tool reranking configuration. Uses a model to rank and filter candidate tools.</p>
          */
         public Builder toolReranking(ToolReranking toolReranking) {
             this.toolReranking = toolReranking;
@@ -170,7 +170,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * toolCountThreshold.
+             * <p>The tool count threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder toolCountThreshold(Integer toolCountThreshold) {
                 this.toolCountThreshold = toolCountThreshold;
@@ -237,7 +240,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The context selection method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allMessages</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -245,7 +251,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The number of retained messages or characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -325,7 +334,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * modelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gte-rerank-v2</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -333,7 +345,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The model service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -341,7 +356,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * timeoutMillisecond.
+             * <p>The request timeout period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeoutMillisecond(Integer timeoutMillisecond) {
                 this.timeoutMillisecond = timeoutMillisecond;
@@ -408,7 +426,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * customPrompt.
+             * <p>The custom prompt content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请将以下用户问题改写为...</p>
              */
             public Builder customPrompt(String customPrompt) {
                 this.customPrompt = customPrompt;
@@ -416,7 +437,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The prompt type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>builtIn</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -470,7 +494,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * messageCountThreshold.
+             * <p>The number of conversation turns after which rewriting is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder messageCountThreshold(Integer messageCountThreshold) {
                 this.messageCountThreshold = messageCountThreshold;
@@ -602,7 +629,7 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * contextSelection.
+             * <p>The context selection configuration.</p>
              */
             public Builder contextSelection(ContextSelection contextSelection) {
                 this.contextSelection = contextSelection;
@@ -610,7 +637,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Specifies whether query rewrite is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -618,7 +648,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * fallbackStrategy.
+             * <p>The fallback strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skip</p>
              */
             public Builder fallbackStrategy(String fallbackStrategy) {
                 this.fallbackStrategy = fallbackStrategy;
@@ -626,7 +659,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * maxOutputTokens.
+             * <p>The maximum number of output tokens for rewriting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxOutputTokens(Integer maxOutputTokens) {
                 this.maxOutputTokens = maxOutputTokens;
@@ -634,7 +670,7 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * modelService.
+             * <p>The rewriting model service configuration.</p>
              */
             public Builder modelService(ModelService modelService) {
                 this.modelService = modelService;
@@ -642,7 +678,7 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * promptConfig.
+             * <p>The prompt configuration.</p>
              */
             public Builder promptConfig(PromptConfig promptConfig) {
                 this.promptConfig = promptConfig;
@@ -650,7 +686,7 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * triggerConditions.
+             * <p>The trigger condition configuration.</p>
              */
             public Builder triggerConditions(TriggerConditions triggerConditions) {
                 this.triggerConditions = triggerConditions;
@@ -730,7 +766,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * modelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gte-rerank-v2</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -738,7 +777,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The model service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -746,7 +788,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * timeoutMillisecond.
+             * <p>The request timeout period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeoutMillisecond(Integer timeoutMillisecond) {
                 this.timeoutMillisecond = timeoutMillisecond;
@@ -865,7 +910,10 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * fallbackStrategy.
+             * <p>The fallback strategy upon failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skip</p>
              */
             public Builder fallbackStrategy(String fallbackStrategy) {
                 this.fallbackStrategy = fallbackStrategy;
@@ -873,7 +921,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * filteringMethod.
+             * <p>The filtering method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topN</p>
              */
             public Builder filteringMethod(String filteringMethod) {
                 this.filteringMethod = filteringMethod;
@@ -881,7 +932,7 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * modelService.
+             * <p>The reranking model service configuration.</p>
              */
             public Builder modelService(ToolRerankingModelService modelService) {
                 this.modelService = modelService;
@@ -889,7 +940,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * scoreThreshold.
+             * <p>The score threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder scoreThreshold(Float scoreThreshold) {
                 this.scoreThreshold = scoreThreshold;
@@ -897,7 +951,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * topKPercent.
+             * <p>The retention percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder topKPercent(Integer topKPercent) {
                 this.topKPercent = topKPercent;
@@ -905,7 +962,10 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * topNCount.
+             * <p>The retention count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder topNCount(Integer topNCount) {
                 this.topNCount = topNCount;

@@ -60,6 +60,7 @@ public class GetAiModelCardRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the model card to query. This ID is returned by the model creation operation and is in a format that starts with mc-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

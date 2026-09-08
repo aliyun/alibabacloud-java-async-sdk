@@ -171,7 +171,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The API key of the search engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -179,7 +182,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * contentMode.
+         * <p>Quark-specific: the content mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
          */
         public Builder contentMode(String contentMode) {
             this.contentMode = contentMode;
@@ -187,7 +193,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * count.
+         * <p>The number of results returned per search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -195,7 +204,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>The endpoint of the search engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cloud-iqs.aliyuncs.com">https://cloud-iqs.aliyuncs.com</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -203,7 +215,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * industry.
+         * <p>Quark-specific: the industry filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>互联网</p>
          */
         public Builder industry(String industry) {
             this.industry = industry;
@@ -211,7 +226,7 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * optionArgs.
+         * <p>The search engine-specific parameters in key-value pair format.</p>
          */
         public Builder optionArgs(java.util.Map<String, String> optionArgs) {
             this.optionArgs = optionArgs;
@@ -219,7 +234,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * start.
+         * <p>The offset of search results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder start(Integer start) {
             this.start = start;
@@ -227,7 +245,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * timeRange.
+         * <p>Quark-specific: the time range filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7d</p>
          */
         public Builder timeRange(String timeRange) {
             this.timeRange = timeRange;
@@ -235,7 +256,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * timeoutMillisecond.
+         * <p>The API call timeout period, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder timeoutMillisecond(Integer timeoutMillisecond) {
             this.timeoutMillisecond = timeoutMillisecond;
@@ -243,7 +267,10 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The search engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunQuark</p>
          */
         public Builder type(String type) {
             this.type = type;

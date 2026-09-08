@@ -67,7 +67,7 @@ public class ApiRouteConflictInfo extends TeaModel {
         } 
 
         /**
-         * conflicts.
+         * <p>The conflicts.</p>
          */
         public Builder conflicts(java.util.List<Conflicts> conflicts) {
             this.conflicts = conflicts;
@@ -75,7 +75,7 @@ public class ApiRouteConflictInfo extends TeaModel {
         }
 
         /**
-         * domainInfo.
+         * <p>The conflicting routes.</p>
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -141,7 +141,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The operation name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GetItem</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +152,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * operationId.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op-cq35jadlhtgrv07***</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -216,7 +222,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * match.
+             * <p>The matching rule.</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;
@@ -224,7 +230,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * operationInfo.
+             * <p>The corresponding operation information if the conflicting target is an API.</p>
              */
             public Builder operationInfo(OperationInfo operationInfo) {
                 this.operationInfo = operationInfo;
@@ -291,7 +297,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The operation name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GetItemV2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -299,7 +308,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * operationId.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op-cqf17dllhtgng1m**</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -366,7 +378,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * match.
+             * <p>The matching rule information of the object being detected.</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;
@@ -374,7 +386,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * operationInfo.
+             * <p>If the object is an API, the conflicting operation information needs to be returned.</p>
              */
             public Builder operationInfo(DetectedMatchOperationInfo operationInfo) {
                 this.operationInfo = operationInfo;
@@ -454,7 +466,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * conflictingMatch.
+             * <p>The matching rule information of the conflicting target.</p>
              */
             public Builder conflictingMatch(ConflictingMatch conflictingMatch) {
                 this.conflictingMatch = conflictingMatch;
@@ -462,7 +474,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * detectedMatch.
+             * <p>The matching rule information of the object being detected.</p>
              */
             public Builder detectedMatch(DetectedMatch detectedMatch) {
                 this.detectedMatch = detectedMatch;
@@ -470,7 +482,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The conflict level. Valid values: Critical, Warning, and Informational.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -537,7 +552,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cquqsollhtgidd***</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -545,7 +563,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter-dev</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -612,7 +633,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The route name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter-route</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -620,7 +644,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * routeId.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hr-cr82undlhtgrlej***</p>
              */
             public Builder routeId(String routeId) {
                 this.routeId = routeId;
@@ -739,7 +766,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * details.
+             * <p>The details about the conflicts.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -747,7 +774,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * environmentInfo.
+             * <p>For APIs, conflicts exist in the specific environment. If the conflict object is a route, ignore.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -755,7 +782,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The conflicting resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-crdclqllhtggm***</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -763,7 +793,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * resourceName.
+             * <p>The conflicting resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item-stock</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -771,7 +804,15 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The type of the conflicting resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RestApi</li>
+             * <li>HttpApiRoute</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HttpApiRoute</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -779,7 +820,7 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * routeInfo.
+             * <p>The route information.</p>
              */
             public Builder routeInfo(RouteInfo routeInfo) {
                 this.routeInfo = routeInfo;
@@ -846,7 +887,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cqookcllhtgvof7e***</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -854,7 +898,10 @@ public class ApiRouteConflictInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>httpbin</p>
              */
             public Builder name(String name) {
                 this.name = name;

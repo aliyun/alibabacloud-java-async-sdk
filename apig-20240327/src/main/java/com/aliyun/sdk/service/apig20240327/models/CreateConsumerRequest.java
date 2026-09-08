@@ -152,7 +152,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The configuration for the API key authentication method.</p>
+         * <p>The API key authentication identity configuration.</p>
          */
         public Builder apikeyIdentityConfig(ApiKeyIdentityConfig apikeyIdentityConfig) {
             this.putBodyParameter("apikeyIdentityConfig", apikeyIdentityConfig);
@@ -161,7 +161,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The description of the consumer.</p>
+         * <p>The consumer description.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer for test</p>
@@ -173,7 +173,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>Indicates if enabled.</p>
+         * <p>Specifies whether to enable the consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -185,7 +185,11 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The type of the gateway.</p>
+         * <p>The gateway type. Valid values:</p>
+         * <ul>
+         * <li>API: a consumer of a cloud-native API gateway.</li>
+         * <li>AI: a consumer of an AI gateway.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -197,7 +201,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the JWT identity.</p>
+         * <p>The JWT identity configuration.</p>
          */
         public Builder jwtIdentityConfig(JwtIdentityConfig jwtIdentityConfig) {
             this.putBodyParameter("jwtIdentityConfig", jwtIdentityConfig);
@@ -206,7 +210,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The name of the consumer.</p>
+         * <p>The consumer name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

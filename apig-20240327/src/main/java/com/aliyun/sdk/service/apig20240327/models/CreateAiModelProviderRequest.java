@@ -118,6 +118,7 @@ public class CreateAiModelProviderRequest extends Request {
         } 
 
         /**
+         * <p>The display name of the model provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
+         * <p>The model provider identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
-         * serviceIds.
+         * <p>The list of service IDs to bind to the provider.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.putBodyParameter("serviceIds", serviceIds);
@@ -163,7 +166,10 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

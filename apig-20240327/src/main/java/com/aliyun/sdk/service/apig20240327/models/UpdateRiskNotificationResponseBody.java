@@ -97,6 +97,9 @@ public class UpdateRiskNotificationResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A00D7A-AA00-5BC0-9835-C7B15A3FE73A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

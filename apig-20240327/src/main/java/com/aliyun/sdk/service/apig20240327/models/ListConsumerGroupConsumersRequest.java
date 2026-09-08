@@ -101,7 +101,10 @@ public class ListConsumerGroupConsumersRequest extends Request {
         } 
 
         /**
-         * consumerGroupId.
+         * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -110,7 +113,10 @@ public class ListConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>Fuzzy match by consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -119,7 +125,10 @@ public class ListConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

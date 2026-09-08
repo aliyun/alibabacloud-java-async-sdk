@@ -87,7 +87,7 @@ public class ListSecretReferencesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the key.</p>
+         * <p>The secret ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -99,7 +99,7 @@ public class ListSecretReferencesRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value starts from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -106,7 +106,10 @@ public class GatewayInfo extends TeaModel {
         } 
 
         /**
-         * engineVersion.
+         * <p>The gateway DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -114,7 +117,16 @@ public class GatewayInfo extends TeaModel {
         }
 
         /**
-         * gatewayEdition.
+         * <p>The gateway instance edition. Valid values:</p>
+         * <ul>
+         * <li>Professional: standard instance.</li>
+         * <li>Serverless: Serverless.</li>
+         * <li>MultiTenantServerless: multi-tenant Serverless.</li>
+         * <li>Unknown: unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MultiTenantServerless</p>
          */
         public Builder gatewayEdition(String gatewayEdition) {
             this.gatewayEdition = gatewayEdition;
@@ -122,7 +134,10 @@ public class GatewayInfo extends TeaModel {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7og15lhtgi6qasrj60</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -130,7 +145,10 @@ public class GatewayInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The gateway name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest-gw</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +156,7 @@ public class GatewayInfo extends TeaModel {
         }
 
         /**
-         * vpcInfo.
+         * <p>The VPC information.</p>
          */
         public Builder vpcInfo(VpcInfo vpcInfo) {
             this.vpcInfo = vpcInfo;
@@ -204,7 +222,10 @@ public class GatewayInfo extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The VPC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-vpc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +233,10 @@ public class GatewayInfo extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf664nyle5kh***</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

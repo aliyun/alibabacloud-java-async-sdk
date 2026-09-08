@@ -54,7 +54,7 @@ public class HiMarketHmacConfig extends TeaModel {
         } 
 
         /**
-         * credentials.
+         * <p>The list of credentials.</p>
          */
         public Builder credentials(java.util.List<Credentials> credentials) {
             this.credentials = credentials;
@@ -133,7 +133,10 @@ public class HiMarketHmacConfig extends TeaModel {
             } 
 
             /**
-             * ak.
+             * <p>Access Key ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-access-key-123</p>
              */
             public Builder ak(String ak) {
                 this.ak = ak;
@@ -141,7 +144,10 @@ public class HiMarketHmacConfig extends TeaModel {
             }
 
             /**
-             * mode.
+             * <p>The generation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -149,7 +155,10 @@ public class HiMarketHmacConfig extends TeaModel {
             }
 
             /**
-             * sk.
+             * <p>Access Key Secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-secret-key-456</p>
              */
             public Builder sk(String sk) {
                 this.sk = sk;

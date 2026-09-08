@@ -67,7 +67,10 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
         } 
 
         /**
-         * deployedCnt.
+         * <p>The number of deployed API operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder deployedCnt(Long deployedCnt) {
             this.deployedCnt = deployedCnt;

@@ -59,7 +59,10 @@ public class DeleteSourceRequest extends Request {
         } 
 
         /**
-         * sourceId.
+         * <p>The source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src-crdddallhtgtriah***</p>
          */
         public Builder sourceId(String sourceId) {
             this.putPathParameter("sourceId", sourceId);

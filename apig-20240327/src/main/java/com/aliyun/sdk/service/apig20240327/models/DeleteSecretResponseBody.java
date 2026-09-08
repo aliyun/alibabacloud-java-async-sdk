@@ -80,7 +80,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>DD4F1D33-7267-5596-8F5D-C593xxxxxxxx</p>

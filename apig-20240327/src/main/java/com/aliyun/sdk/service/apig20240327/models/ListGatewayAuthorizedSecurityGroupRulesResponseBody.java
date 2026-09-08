@@ -292,6 +292,9 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
 
             /**
              * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>商品中心预发网关授权安全组</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -336,6 +339,9 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
 
             /**
              * <p>The security group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>商品中心集群安全组</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

@@ -73,7 +73,10 @@ public class DeleteGatewayQuotaRuleRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -82,7 +85,10 @@ public class DeleteGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qr-d8j7fpmm1hks65kxxxxx</p>
          */
         public Builder ruleId(String ruleId) {
             this.putPathParameter("ruleId", ruleId);

@@ -158,7 +158,10 @@ public class AiNetworkSearchConfig extends TeaModel {
         } 
 
         /**
-         * defaultEnable.
+         * <p>Specifies whether the plug-in feature is enabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder defaultEnable(Boolean defaultEnable) {
             this.defaultEnable = defaultEnable;
@@ -166,7 +169,10 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * defaultLang.
+         * <p>The default search language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder defaultLang(String defaultLang) {
             this.defaultLang = defaultLang;
@@ -174,7 +180,10 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * needReference.
+         * <p>Specifies whether to add reference sources in the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needReference(Boolean needReference) {
             this.needReference = needReference;
@@ -182,7 +191,7 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * pluginStatus.
+         * <p>The plug-in running status.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;
@@ -190,7 +199,10 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * referenceFormat.
+         * <p>The format template for reference content. The template must contain at least one %s placeholder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参考来源:\n%s</p>
          */
         public Builder referenceFormat(String referenceFormat) {
             this.referenceFormat = referenceFormat;
@@ -198,7 +210,10 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * referenceLocation.
+         * <p>The reference location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>head</p>
          */
         public Builder referenceLocation(String referenceLocation) {
             this.referenceLocation = referenceLocation;
@@ -206,7 +221,7 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * searchEngineConfig.
+         * <p>The search engine configuration.</p>
          */
         public Builder searchEngineConfig(AiNetworkConfigSearchEngine searchEngineConfig) {
             this.searchEngineConfig = searchEngineConfig;
@@ -214,7 +229,7 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * searchFrom.
+         * <p>The list of search engines (multi-engine configuration).</p>
          */
         public Builder searchFrom(java.util.List<AiNetworkConfigSearchEngine> searchFrom) {
             this.searchFrom = searchFrom;
@@ -222,7 +237,7 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * searchRewrite.
+         * <p>The search term rewriting configuration.</p>
          */
         public Builder searchRewrite(SearchRewrite searchRewrite) {
             this.searchRewrite = searchRewrite;
@@ -327,7 +342,10 @@ public class AiNetworkSearchConfig extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to enable search query rewriting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -335,7 +353,10 @@ public class AiNetworkSearchConfig extends TeaModel {
             }
 
             /**
-             * maxCount.
+             * <p>The maximum number of search queries after rewriting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;
@@ -343,7 +364,10 @@ public class AiNetworkSearchConfig extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The name of the model used for rewriting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -351,7 +375,10 @@ public class AiNetworkSearchConfig extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The ID of the rewriting service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -359,7 +386,10 @@ public class AiNetworkSearchConfig extends TeaModel {
             }
 
             /**
-             * timeoutMillisecond.
+             * <p>The timeout period for the rewriting request, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeoutMillisecond(Integer timeoutMillisecond) {
                 this.timeoutMillisecond = timeoutMillisecond;

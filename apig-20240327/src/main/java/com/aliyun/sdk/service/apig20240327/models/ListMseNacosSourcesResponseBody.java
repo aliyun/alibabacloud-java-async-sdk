@@ -204,6 +204,9 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
 
             /**
              * <p>The Nacos instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>商品中心Nacos注册中心</p>
              */
             public Builder name(String name) {
                 this.name = name;

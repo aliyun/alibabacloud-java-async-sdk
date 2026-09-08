@@ -59,7 +59,7 @@ public class GetGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The environment information.</p>
+         * <p>The ID of the cloud-native API gateway. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>

@@ -171,7 +171,7 @@ public class ListGatewaysRequest extends Request {
         } 
 
         /**
-         * <p>Retrieve the list of created cloud-native gateways</p>
+         * <p>The gateway ID for exact match query.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -183,7 +183,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. A full match is performed. The search is case-insensitive.</p>
+         * <p>The gateway type.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -195,7 +195,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The instance name. If you specify a name, an exact search is performed.</p>
+         * <p>The keyword for full match search. Case-insensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -207,7 +207,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The gateway name for exact match query.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-gateway</p>
@@ -219,7 +219,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. If you specify an ID, an exact search is performed.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -231,7 +231,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -243,7 +243,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>rg-aekz3wes3hnre5a</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzq6bzz5uyg2q</p>
@@ -255,7 +255,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to use for the search.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -265,7 +265,10 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeqrgx6jrlb063y06yjo</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);
@@ -333,7 +336,7 @@ public class ListGatewaysRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>owner</p>
@@ -344,7 +347,7 @@ public class ListGatewaysRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangsan</p>

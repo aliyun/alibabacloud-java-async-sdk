@@ -93,7 +93,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -123,7 +123,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -192,7 +192,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the MCP server.</p>
+             * <p>The MCP Server name.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-fail</p>
@@ -270,7 +270,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the MCP server.</p>
+             * <p>The MCP Server name.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-success</p>
@@ -281,7 +281,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol.</p>
+             * <p>The protocols.</p>
              */
             public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
@@ -348,7 +348,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of MCP servers that failed to synchronize.</p>
+             * <p>The list of MCP Servers that failed to sync.</p>
              */
             public Builder failedMcpServers(java.util.List<FailedMcpServers> failedMcpServers) {
                 this.failedMcpServers = failedMcpServers;
@@ -356,7 +356,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of MCP servers successfully synchronized.</p>
+             * <p>The list of MCP Servers that were synced successfully.</p>
              */
             public Builder succeedMcpServers(java.util.List<SucceedMcpServers> succeedMcpServers) {
                 this.succeedMcpServers = succeedMcpServers;

@@ -76,6 +76,9 @@ public class GetRiskNotificationRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -85,6 +88,9 @@ public class GetRiskNotificationRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GW_VERSION_EXPIRED</p>
          */
         public Builder riskCode(String riskCode) {
             this.putQueryParameter("riskCode", riskCode);

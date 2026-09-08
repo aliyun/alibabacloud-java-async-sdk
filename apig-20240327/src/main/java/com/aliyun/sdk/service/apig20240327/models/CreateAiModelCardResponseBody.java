@@ -93,7 +93,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The model card information returned after successful creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;modelCardId&quot;:&quot;mc-8c13d2b4f8a1&quot;,&quot;gatewayId&quot;:&quot;gw-8c13d2b4f8a1&quot;,&quot;modelProvider&quot;:&quot;qwen&quot;,&quot;modelName&quot;:&quot;qwen-plus&quot;,&quot;source&quot;:&quot;user&quot;,&quot;credit&quot;:{&quot;type&quot;:&quot;fixed&quot;,&quot;inputCost&quot;:1.5,&quot;outputCost&quot;:3,&quot;cacheCost&quot;:0.5},&quot;features&quot;:{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true},&quot;meta&quot;:{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]},&quot;availablePaths&quot;:[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}],&quot;updateTime&quot;:&quot;2026-07-14 18:30:00&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * path.
+             * <p>The model invocation path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1/chat/completions</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -191,7 +206,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The protocol type corresponding to the path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAICompatible</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -284,7 +302,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * cacheCost.
+             * <p>The cache hit token cost, in Credits per million tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder cacheCost(Float cacheCost) {
                 this.cacheCost = cacheCost;
@@ -292,7 +313,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * inputCost.
+             * <p>The input token cost, in Credits per million tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder inputCost(Float inputCost) {
                 this.inputCost = inputCost;
@@ -300,7 +324,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * outputCost.
+             * <p>The output token cost, in Credits per million tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder outputCost(Float outputCost) {
                 this.outputCost = outputCost;
@@ -308,7 +335,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The billing type. Currently, fixed is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -414,7 +444,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * maxInputTokens.
+             * <p>The maximum number of input tokens supported by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxInputTokens(Long maxInputTokens) {
                 this.maxInputTokens = maxInputTokens;
@@ -422,7 +455,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * maxOutputTokens.
+             * <p>The maximum number of output tokens supported by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder maxOutputTokens(Long maxOutputTokens) {
                 this.maxOutputTokens = maxOutputTokens;
@@ -430,7 +466,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * maxTokens.
+             * <p>The maximum total number of context tokens supported by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxTokens(Long maxTokens) {
                 this.maxTokens = maxTokens;
@@ -438,7 +477,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * supportedInputModalities.
+             * <p>The list of input modalities supported by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;text&quot;,&quot;image&quot;]</p>
              */
             public Builder supportedInputModalities(java.util.List<String> supportedInputModalities) {
                 this.supportedInputModalities = supportedInputModalities;
@@ -446,7 +488,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * supportedOutputModalities.
+             * <p>The list of output modalities supported by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;text&quot;]</p>
              */
             public Builder supportedOutputModalities(java.util.List<String> supportedOutputModalities) {
                 this.supportedOutputModalities = supportedOutputModalities;
@@ -617,7 +662,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * availablePaths.
+             * <p>The list of invocation paths supported by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}]</p>
              */
             public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
                 this.availablePaths = availablePaths;
@@ -625,7 +673,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * credit.
+             * <p>The credit billing information of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;fixed&quot;,&quot;inputCost&quot;:1.5,&quot;outputCost&quot;:3,&quot;cacheCost&quot;:0.5}</p>
              */
             public Builder credit(Credit credit) {
                 this.credit = credit;
@@ -633,7 +684,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * features.
+             * <p>The model capability switches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true}</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -641,7 +695,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The AI gateway instance ID to which the model card belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-8c13d2b4f8a1</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -649,7 +706,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * <p>The token limits and input/output modality information of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]}</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -657,7 +717,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * modelCardId.
+             * <p>The model card ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mc-8c13d2b4f8a1</p>
              */
             public Builder modelCardId(String modelCardId) {
                 this.modelCardId = modelCardId;
@@ -665,7 +728,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -673,7 +739,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * modelProvider.
+             * <p>The model provider identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen</p>
              */
             public Builder modelProvider(String modelProvider) {
                 this.modelProvider = modelProvider;
@@ -681,7 +750,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source of the model card. Currently, user is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -689,7 +761,10 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-14 18:30:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -93,7 +93,7 @@ public class CreateServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -112,7 +112,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

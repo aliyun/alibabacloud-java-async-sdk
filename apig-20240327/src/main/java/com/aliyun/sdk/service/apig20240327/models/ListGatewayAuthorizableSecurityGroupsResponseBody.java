@@ -219,6 +219,9 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
 
             /**
              * <p>The security group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>商品中心集群安全组。</p>
              */
             public Builder name(String name) {
                 this.name = name;

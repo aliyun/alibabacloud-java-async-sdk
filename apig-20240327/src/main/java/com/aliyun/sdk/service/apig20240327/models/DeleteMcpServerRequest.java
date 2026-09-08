@@ -59,7 +59,7 @@ public class DeleteMcpServerRequest extends Request {
         } 
 
         /**
-         * <p>Deletes an MCP server.</p>
+         * <p>MCP Server ID</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-adfefz24afg</p>

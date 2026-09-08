@@ -80,7 +80,7 @@ public class HiMarketApiKeyConfig extends TeaModel {
         } 
 
         /**
-         * credentials.
+         * <p>The list of credentials.</p>
          */
         public Builder credentials(java.util.List<Credentials> credentials) {
             this.credentials = credentials;
@@ -88,7 +88,10 @@ public class HiMarketApiKeyConfig extends TeaModel {
         }
 
         /**
-         * key.
+         * <p>The name of the location from which the API key is extracted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apikey</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -96,7 +99,10 @@ public class HiMarketApiKeyConfig extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source type of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -162,7 +168,10 @@ public class HiMarketApiKeyConfig extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The API key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-api-key-123</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -170,7 +179,10 @@ public class HiMarketApiKeyConfig extends TeaModel {
             }
 
             /**
-             * mode.
+             * <p>The generation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;

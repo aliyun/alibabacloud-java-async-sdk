@@ -106,7 +106,10 @@ public class HttpApiVersionConfig extends TeaModel {
         } 
 
         /**
-         * enable.
+         * <p>Indicates whether versioning control is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -114,7 +117,10 @@ public class HttpApiVersionConfig extends TeaModel {
         }
 
         /**
-         * headerName.
+         * <p>The key in the specified header parameter when the header-based versioning scheme is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-version</p>
          */
         public Builder headerName(String headerName) {
             this.headerName = headerName;
@@ -122,7 +128,10 @@ public class HttpApiVersionConfig extends TeaModel {
         }
 
         /**
-         * queryName.
+         * <p>The key in the specified query parameter when the query parameter-based versioning scheme is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myVersion</p>
          */
         public Builder queryName(String queryName) {
             this.queryName = queryName;
@@ -130,7 +139,10 @@ public class HttpApiVersionConfig extends TeaModel {
         }
 
         /**
-         * scheme.
+         * <p>The versioning scheme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Query</p>
          */
         public Builder scheme(String scheme) {
             this.scheme = scheme;
@@ -138,7 +150,10 @@ public class HttpApiVersionConfig extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder version(String version) {
             this.version = version;

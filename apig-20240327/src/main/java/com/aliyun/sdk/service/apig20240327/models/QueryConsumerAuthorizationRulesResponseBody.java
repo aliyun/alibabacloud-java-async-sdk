@@ -93,7 +93,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response payload.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
@@ -200,7 +200,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route.</p>
+             * <p>The routing rule.</p>
              */
             public Builder route(HttpRoute route) {
                 this.route = route;
@@ -475,7 +475,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API details.</p>
+             * <p>The API information details.</p>
              */
             public Builder apiInfo(HttpApiApiInfo apiInfo) {
                 this.apiInfo = apiInfo;
@@ -483,7 +483,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The consumer authorization rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>car-csgeka5lhtggrjcprok0</p>
@@ -494,7 +494,10 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID. This field is returned for consumer group authorization rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>csg-8c13d2b4f8a1</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -502,7 +505,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupInfo.
+             * <p>The consumer group information. This field is returned for consumer group authorization rules.</p>
              */
             public Builder consumerGroupInfo(ConsumerGroupInfo consumerGroupInfo) {
                 this.consumerGroupInfo = consumerGroupInfo;
@@ -521,7 +524,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer information.</p>
+             * <p>The consumer information details.</p>
              */
             public Builder consumerInfo(ConsumerInfo consumerInfo) {
                 this.consumerInfo = consumerInfo;
@@ -540,7 +543,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment status of the API in the current environment.</p>
+             * <p>The publish status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -551,7 +554,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment information.</p>
+             * <p>The environment context.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -559,7 +562,11 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+             * <p>The expiration mode. Valid values:</p>
+             * <ul>
+             * <li>LongTerm</li>
+             * <li>ShortTerm</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ShortTerm</p>
@@ -570,7 +577,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule status.</p>
+             * <p>The expiration status.</p>
              * 
              * <strong>example:</strong>
              * <p>InEffect</p>
@@ -581,7 +588,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the rule expires.</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>172086834548</p>
@@ -592,7 +599,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance information.</p>
+             * <p>The gateway information.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -600,7 +607,10 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * principalType.
+             * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ConsumerGroup</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -608,7 +618,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource IDs.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2351944</p>
@@ -619,7 +629,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource information.</p>
+             * <p>The resource information details.</p>
              */
             public Builder resourceInfo(ResourceInfo resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -734,7 +744,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rules.</p>
+             * <p>The list of consumer rules.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -742,7 +752,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -753,7 +763,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -764,7 +774,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>

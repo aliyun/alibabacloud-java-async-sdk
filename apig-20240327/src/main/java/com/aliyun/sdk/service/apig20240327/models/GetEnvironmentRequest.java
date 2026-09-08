@@ -88,7 +88,7 @@ public class GetEnvironmentRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return online resource information.</p>
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class GetEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>The request ID, which is used to trace the API call link.</p>
+         * <p>Specifies whether to return online resource information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -113,7 +113,7 @@ public class GetEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Schema of Response</p>
+         * <p>Specifies whether to include VPC information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

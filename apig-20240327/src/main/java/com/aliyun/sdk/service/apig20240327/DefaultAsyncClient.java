@@ -31,33 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "APIG";
         this.version = "2024-03-27";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-west-1", "apig.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "apig.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "apig.eu-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -67,6 +41,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</p>
+     * <blockquote>
+     * <p> Recommended call sequence:</p>
+     * <ul>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
+     * <li><ul>
+     * <li>Set dryRun to true.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
+     * </ul>
+     * </li>
+     * <li>Step 2: Submit the request after confirmation.</li>
+     * <li><ul>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of AddGatewayQuotaRule  AddGatewayQuotaRuleRequest
      * @return AddGatewayQuotaRuleResponse
      */
@@ -229,6 +229,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</p>
+     * 
      * @param request the request parameters of CreateAiModelCard  CreateAiModelCardRequest
      * @return CreateAiModelCardResponse
      */
@@ -319,6 +323,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
+     * Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+     * Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</p>
+     * 
      * @param request the request parameters of CreateConsumerAuthorizationRules  CreateConsumerAuthorizationRulesRequest
      * @return CreateConsumerAuthorizationRulesResponse
      */
@@ -355,9 +367,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Create Domain.</p>
-     * 
      * @param request the request parameters of CreateDomain  CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -467,6 +476,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * @param request the request parameters of CreateHttpApiVersion  CreateHttpApiVersionRequest
      * @return CreateHttpApiVersionResponse
      */
@@ -648,7 +660,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of CreateService  CreateServiceRequest
      * @return CreateServiceResponse
@@ -849,6 +861,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
+     * 
      * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
      */
@@ -1047,6 +1062,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The operation supports creating multiple services.</p>
+     * 
      * @param request the request parameters of DeleteSecret  DeleteSecretRequest
      * @return DeleteSecretResponse
      */
@@ -1137,6 +1155,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</p>
+     * 
      * @param request the request parameters of DeployMcpServer  DeployMcpServerRequest
      * @return DeployMcpServerResponse
      */
@@ -1426,6 +1447,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a specific API consumer quota rule on an AI gateway.</p>
+     * 
      * @param request the request parameters of GetGatewayQuotaRule  GetGatewayQuotaRuleRequest
      * @return GetGatewayQuotaRuleResponse
      */
@@ -1444,6 +1468,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
+     * 
      * @param request the request parameters of GetGatewayQuotaRuleSubjectUsage  GetGatewayQuotaRuleSubjectUsageRequest
      * @return GetGatewayQuotaRuleSubjectUsageResponse
      */
@@ -1517,7 +1544,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of GetMcpServer  GetMcpServerRequest
      * @return GetMcpServerResponse
@@ -1700,7 +1727,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of GetSecret  GetSecretRequest
      * @return GetSecretResponse
@@ -1720,6 +1747,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The operation supports creating multiple services.</p>
+     * 
      * @param request the request parameters of GetSecretValue  GetSecretValueRequest
      * @return GetSecretValueResponse
      */
@@ -2058,6 +2088,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports creating multiple services.</p>
+     * 
      * @param request the request parameters of ListExternalServices  ListExternalServicesRequest
      * @return ListExternalServicesResponse
      */
@@ -2166,6 +2199,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of FinOps quota rules bound to a gateway.</p>
+     * 
      * @param request the request parameters of ListGatewayQuotaRules  ListGatewayQuotaRulesRequest
      * @return ListGatewayQuotaRulesResponse
      */
@@ -2311,7 +2347,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListMcpServers  ListMcpServersRequest
      * @return ListMcpServersResponse
@@ -2386,7 +2422,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListPluginClasses  ListPluginClassesRequest
      * @return ListPluginClassesResponse
@@ -2515,7 +2551,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListSecretReferences  ListSecretReferencesRequest
      * @return ListSecretReferencesResponse
@@ -2535,6 +2571,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The operation supports creating multiple services.</p>
+     * 
      * @param request the request parameters of ListSecrets  ListSecretsRequest
      * @return ListSecretsResponse
      */
@@ -2715,6 +2754,38 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</p>
+     * <blockquote>
+     * <p> Recommended call logic:</p>
+     * <ul>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
+     * <li><ul>
+     * <li>Set dryRun to true.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>The response contains a conflict preview with a conflictHash value.</li>
+     * </ul>
+     * </li>
+     * <li><ol start="2">
+     * <li>Confirm and submit the request.</li>
+     * </ol>
+     * </li>
+     * <li><ul>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of ResetGatewayQuotaRule  ResetGatewayQuotaRuleRequest
      * @return ResetGatewayQuotaRuleResponse
      */
@@ -2967,6 +3038,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</p>
+     * 
      * @param request the request parameters of UpdateConsumerAuthorizationRule  UpdateConsumerAuthorizationRuleRequest
      * @return UpdateConsumerAuthorizationRuleResponse
      */
@@ -3004,7 +3078,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can update the listening Ingress only for sources whose types are <strong>ACK</strong>.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type allow you to update the listener Ingress configuration.</p>
      * 
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
      * @return UpdateDomainResponse
@@ -3134,6 +3208,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</p>
+     * <blockquote>
+     * <p> Recommended call sequence:</p>
+     * <ul>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
+     * <li><ul>
+     * <li>Set dryRun to true.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
+     * </ul>
+     * </li>
+     * <li>Step 2: Confirm and submit the request.</li>
+     * <li><ul>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpdateGatewayQuotaRule  UpdateGatewayQuotaRuleRequest
      * @return UpdateGatewayQuotaRuleResponse
      */
@@ -3152,6 +3252,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</p>
+     * 
      * @param request the request parameters of UpdateGatewayQuotaRuleStatus  UpdateGatewayQuotaRuleStatusRequest
      * @return UpdateGatewayQuotaRuleStatusResponse
      */
@@ -3225,7 +3328,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configuration.</p>
      * 
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
@@ -3336,7 +3439,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * <p>Only sources of the <strong>container service</strong> type allow you to update the configuration for listening to Ingress.</p>
      * 
      * @param request the request parameters of UpdateSecret  UpdateSecretRequest
      * @return UpdateSecretResponse

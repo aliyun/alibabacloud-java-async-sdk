@@ -115,7 +115,10 @@ public class ListConsumerQuotaRulesRequest extends Request {
         } 
 
         /**
-         * consumerId.
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-d8kkaium1hks607xxxxx</p>
          */
         public Builder consumerId(String consumerId) {
             this.putPathParameter("consumerId", consumerId);
@@ -124,7 +127,10 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -133,7 +139,10 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The rule name keyword, used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -142,7 +151,10 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

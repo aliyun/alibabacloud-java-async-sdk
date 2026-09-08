@@ -119,7 +119,7 @@ public class GetDashboardResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,10 +138,10 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The backend error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>Ok</p>
+         * <p>CloudProductInactive.LogDeliveryNotEnabled</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -152,7 +152,7 @@ public class GetDashboardResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>SLS log delivery configuration is not enabled.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -266,7 +266,7 @@ public class GetDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The unique identifier of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-co370icmjeu****</p>
@@ -299,7 +299,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dashboard URL.</p>
+             * <p>The URL of the dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>

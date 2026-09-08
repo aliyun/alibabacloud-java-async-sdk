@@ -93,7 +93,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Paged query environment list response.</p>
+         * <p>The paged query response for the environment list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, used for tracing the call chain.</p>
+         * <p>The request ID, which is used to trace the call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>CE857A85-251D-5018-8103-A38957D71E20</p>
@@ -218,7 +218,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of environment information.</p>
+             * <p>The list of environment contexts.</p>
              */
             public Builder items(java.util.List<EnvironmentInfo> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of items per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -248,7 +248,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of items.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>

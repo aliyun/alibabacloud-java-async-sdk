@@ -60,7 +60,7 @@ public class DeletePolicyAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>Policy Attachment ID</p>
+         * <p>The policy attachment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

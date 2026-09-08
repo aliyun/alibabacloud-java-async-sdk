@@ -59,7 +59,7 @@ public class GetServiceRequest extends Request {
         } 
 
         /**
-         * <p>The service ID.</p>
+         * <p>The unique ID of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-cr6pk4tlhtgm58e***</p>

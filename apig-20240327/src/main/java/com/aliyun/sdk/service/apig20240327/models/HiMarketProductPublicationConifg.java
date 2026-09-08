@@ -54,7 +54,10 @@ public class HiMarketProductPublicationConifg extends TeaModel {
         } 
 
         /**
-         * publicationId.
+         * <p>The publication ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pub-xxx</p>
          */
         public Builder publicationId(String publicationId) {
             this.publicationId = publicationId;

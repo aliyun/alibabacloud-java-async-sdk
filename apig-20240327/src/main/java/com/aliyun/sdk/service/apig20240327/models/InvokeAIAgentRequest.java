@@ -117,6 +117,9 @@ public class InvokeAIAgentRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slsLogDiagnose</p>
          */
         public Builder agentName(String agentName) {
             this.putBodyParameter("agentName", agentName);

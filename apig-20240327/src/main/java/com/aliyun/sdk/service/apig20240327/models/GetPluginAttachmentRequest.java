@@ -59,7 +59,7 @@ public class GetPluginAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>The attachment ID.</p>
+         * <p>The plugin mount ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-cvl541em1hkk7n8vq810</p>

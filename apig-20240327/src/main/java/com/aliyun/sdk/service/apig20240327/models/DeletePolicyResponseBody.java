@@ -80,7 +80,7 @@ public class DeletePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class DeletePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class DeletePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E7406754***</p>

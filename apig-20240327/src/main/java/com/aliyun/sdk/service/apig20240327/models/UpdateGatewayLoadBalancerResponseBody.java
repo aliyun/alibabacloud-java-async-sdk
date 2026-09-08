@@ -118,6 +118,9 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEB8F71F-F889-599E-9D03-250978412350</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

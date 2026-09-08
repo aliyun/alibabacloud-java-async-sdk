@@ -101,7 +101,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud-native API Gateway instance.</p>
+         * <p>The ID of the cloud-native API gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdlh***</p>
@@ -113,10 +113,10 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of security group rule N.</p>
+         * <p>The description of the security group rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProductCenterSG</p>
+         * <p>Product center access security group</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -134,7 +134,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The security group ID. This parameter is required. The specified security group must be different from the security group associated with the gateway. Otherwise, an error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-wz929kxhcdp****</p>

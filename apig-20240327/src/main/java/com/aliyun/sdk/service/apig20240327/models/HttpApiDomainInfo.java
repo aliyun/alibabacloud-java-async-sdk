@@ -80,7 +80,10 @@ public class HttpApiDomainInfo extends TeaModel {
         } 
 
         /**
-         * domainId.
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xxx</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -88,7 +91,10 @@ public class HttpApiDomainInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -96,7 +102,15 @@ public class HttpApiDomainInfo extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The protocol.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HTTPS</li>
+         * <li>HTTP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;

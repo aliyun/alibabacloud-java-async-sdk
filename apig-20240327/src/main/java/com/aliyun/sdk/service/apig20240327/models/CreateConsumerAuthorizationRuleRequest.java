@@ -150,7 +150,11 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * <p>The expiration mode. Valid values:</p>
+         * <ul>
+         * <li>LongTerm: long-term</li>
+         * <li>ShortTerm: short-term</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>LongTerm</p>
@@ -174,7 +178,7 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the parent resource.</p>
+         * <p>The parent resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -186,7 +190,7 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The resource type,</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>

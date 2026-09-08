@@ -174,7 +174,7 @@ public class HttpApiOperation extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The authentication configurations.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -182,7 +182,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * deployConfigs.
+         * <p>The deployment configurations.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -190,7 +190,10 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The operation description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a operation description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -198,7 +201,10 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * enableAuth.
+         * <p>Specifies whether to enable authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.enableAuth = enableAuth;
@@ -206,6 +212,19 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
+         * <p>The HTTP method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TRACE</li>
+         * <li>HEAD</li>
+         * <li>DELETE</li>
+         * <li>POST</li>
+         * <li>GET</li>
+         * <li>CONNECT</li>
+         * <li>OPTIONS</li>
+         * <li>PUT</li>
+         * <li>PATCH</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +236,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * mock.
+         * <p>The mocking configuration of the operation. This field takes effect only when the API publishing scenario is Mock.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -225,6 +244,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
+         * <p>The operation name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +256,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
+         * <p>The operation path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +268,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * request.
+         * <p>The request parameters of the operation.</p>
          */
         public Builder request(HttpApiRequestContract request) {
             this.request = request;
@@ -255,7 +276,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * response.
+         * <p>The response parameters of the operation.</p>
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;

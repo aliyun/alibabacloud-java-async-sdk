@@ -117,10 +117,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -392,10 +389,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>HTTP API ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>api-xxx</p>
+             * httpApiId.
              */
             public Builder httpApiId(String httpApiId) {
                 this.httpApiId = httpApiId;
@@ -1364,10 +1358,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>api-xxx</p>
+             * apiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -1479,10 +1470,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Object Key。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>imports/batch.zip</p>
+             * objectKey.
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -1805,10 +1793,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>api-xxx</p>
+             * apiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;

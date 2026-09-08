@@ -93,7 +93,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code or error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200, 404, 500</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, World!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +260,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * conflictPeriodType.
+             * <p>The period type of the existing conflicting rule on the consumer principal. Valid values: day, week, and month, which indicate that the period of the conflicting rule is daily, weekly, or monthly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>week</p>
              */
             public Builder conflictPeriodType(String conflictPeriodType) {
                 this.conflictPeriodType = conflictPeriodType;
@@ -256,7 +271,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * conflictType.
+             * <p>The type of the existing conflicting rule on the consumer principal. Valid values: calendar (the conflicting rule uses a calendar period) and epoch (the conflicting rule uses a custom period).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>calendar</p>
              */
             public Builder conflictType(String conflictType) {
                 this.conflictType = conflictType;
@@ -264,7 +282,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * consumerId.
+             * <p>The consumer ID. You can use subjectId instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-d82n1g6m1hkm375xxxxx</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -272,7 +293,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * consumerName.
+             * <p>The consumer name. You can use subjectName instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
@@ -280,7 +304,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectId.
+             * <p>The ID of the conflicting principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-xxx</p>
              */
             public Builder subjectId(String subjectId) {
                 this.subjectId = subjectId;
@@ -288,7 +315,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectName.
+             * <p>The name of the conflicting principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder subjectName(String subjectName) {
                 this.subjectName = subjectName;
@@ -296,7 +326,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectType.
+             * <p>The type of the conflicting principal. Valid values: consumer and consumer_group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer</p>
              */
             public Builder subjectType(String subjectType) {
                 this.subjectType = subjectType;
@@ -376,7 +409,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * conflictHash.
+             * <p>The hash of the conflict snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541f50xxxxxx</p>
              */
             public Builder conflictHash(String conflictHash) {
                 this.conflictHash = conflictHash;
@@ -384,7 +420,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The list of conflicting principals (consumers or consumer groups).</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -392,7 +428,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * totalConflictCount.
+             * <p>The total number of conflicts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalConflictCount(Integer totalConflictCount) {
                 this.totalConflictCount = totalConflictCount;
@@ -485,7 +524,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * accepted.
+             * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder accepted(Boolean accepted) {
                 this.accepted = accepted;
@@ -493,7 +535,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * conflictPreview.
+             * <p>The conflict preview.</p>
              */
             public Builder conflictPreview(ConflictPreview conflictPreview) {
                 this.conflictPreview = conflictPreview;
@@ -501,7 +543,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * dryRun.
+             * <p>Indicates whether the request is a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -509,7 +554,10 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qr-xxxxxx</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

@@ -213,7 +213,7 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The logging configurations.</p>
+         * <p>The billing method. This parameter is required for the Serverless edition and must be set to POSTPAY.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -225,7 +225,20 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * gatewayEdition.
+         * <p>The gateway instance edition. Valid values:</p>
+         * <ul>
+         * <li><p>Professional: standard instance.</p>
+         * </li>
+         * <li><p>Serverless: Serverless instance.</p>
+         * </li>
+         * <li><p>MultiTenantServerless: multi-tenant Serverless instance.</p>
+         * </li>
+         * <li><p>Unknown: unknown.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Professional</p>
          */
         public Builder gatewayEdition(String gatewayEdition) {
             this.putBodyParameter("gatewayEdition", gatewayEdition);
@@ -234,7 +247,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * gatewayMode.
+         * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter is allowed only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder gatewayMode(String gatewayMode) {
             this.putBodyParameter("gatewayMode", gatewayMode);
@@ -243,7 +259,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant gateways.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -255,7 +271,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * logConfig.
+         * <p>The gateway log configuration.</p>
          */
         public Builder logConfig(LogConfig logConfig) {
             this.putBodyParameter("logConfig", logConfig);
@@ -264,7 +280,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The gateway name. This parameter is required for all gateway editions.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ceshi</p>
@@ -276,7 +292,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The gateway edition.</p>
+         * <p>The network access configuration. This parameter is required. If not provided, the service returns InvalidParameter.IsEmpty (400).</p>
          */
         public Builder networkAccessConfig(NetworkAccessConfig networkAccessConfig) {
             this.putBodyParameter("networkAccessConfig", networkAccessConfig);
@@ -285,7 +301,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ahr5uil8raz0rq3b</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -294,10 +313,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The tag key.</p>
+         * <p>The node specifications. This parameter is required for the Serverless edition.</p>
          * 
          * <strong>example:</strong>
-         * <p>apigw.dev.x2</p>
+         * <p>apigw.dev.x1</p>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("spec", spec);
@@ -306,7 +325,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);
@@ -315,7 +334,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The tag value.</p>
+         * <p>The VPC ID. This parameter is required for all gateway editions.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
@@ -327,7 +346,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The zone configuration. This parameter is required for all gateway editions.</p>
          */
         public Builder zoneConfig(ZoneConfig zoneConfig) {
             this.putBodyParameter("zoneConfig", zoneConfig);
@@ -382,7 +401,10 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to enable log collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -436,7 +458,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * sls.
+             * <p>The Simple Log Service (SLS) configuration that controls gateway log collection.</p>
              */
             public Builder sls(Sls sls) {
                 this.sls = sls;
@@ -490,9 +512,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The network access type.</p>
              * 
              * <strong>example:</strong>
              * <p>Internet</p>
@@ -562,7 +582,10 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -570,7 +593,10 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -637,7 +663,10 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * vSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -645,7 +674,10 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -725,7 +757,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The response payload.</p>
+             * <p>The zone selection option.</p>
              * 
              * <strong>example:</strong>
              * <p>Manual</p>
@@ -736,7 +768,10 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * vSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -744,7 +779,7 @@ public class CreateGatewayRequest extends Request {
             }
 
             /**
-             * zones.
+             * <p>The list of supported zones. At least two zones are required.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

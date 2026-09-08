@@ -114,7 +114,10 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-api</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -122,7 +125,10 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The API type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Http</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -130,7 +136,10 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * versionEnabled.
+         * <p>Specifies whether to enable versioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder versionEnabled(Boolean versionEnabled) {
             this.versionEnabled = versionEnabled;
@@ -138,7 +147,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * versionedHttpApis.
+         * <p>The information about the versioned API.</p>
          */
         public Builder versionedHttpApis(java.util.List<HttpApiApiInfo> versionedHttpApis) {
             this.versionedHttpApis = versionedHttpApis;

@@ -93,7 +93,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The list of regions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6BD6C79-32B1-5D7E-A89A-93C5A6B7xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * localName.
+             * <p>The display name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Beijing)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -191,7 +203,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

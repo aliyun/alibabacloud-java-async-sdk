@@ -197,7 +197,10 @@ public class ServiceInfo extends TeaModel {
         } 
 
         /**
-         * expressType.
+         * <p>The service routing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder expressType(String expressType) {
             this.expressType = expressType;
@@ -205,7 +208,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * groupName.
+         * <p>The service group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -213,7 +219,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-openai-service</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -221,7 +230,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>The service namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -229,7 +241,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * paiWorkspaceId.
+         * <p>The PAI workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-xxx****</p>
          */
         public Builder paiWorkspaceId(String paiWorkspaceId) {
             this.paiWorkspaceId = paiWorkspaceId;
@@ -237,7 +252,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * paiWorkspaceName.
+         * <p>The PAI workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-workspace</p>
          */
         public Builder paiWorkspaceName(String paiWorkspaceName) {
             this.paiWorkspaceName = paiWorkspaceName;
@@ -245,7 +263,7 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * ports.
+         * <p>The list of service ports.</p>
          */
         public Builder ports(java.util.List<Ports> ports) {
             this.ports = ports;
@@ -253,7 +271,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The service version qualifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -261,7 +282,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * serviceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-xxx****</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -269,7 +293,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * sourceType.
+         * <p>The service source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -277,7 +304,10 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The service status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -285,7 +315,7 @@ public class ServiceInfo extends TeaModel {
         }
 
         /**
-         * versions.
+         * <p>The list of service versions.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -364,7 +394,10 @@ public class ServiceInfo extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The port name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -372,7 +405,10 @@ public class ServiceInfo extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -380,7 +416,10 @@ public class ServiceInfo extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The port protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -447,7 +486,10 @@ public class ServiceInfo extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -455,7 +497,10 @@ public class ServiceInfo extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -522,7 +567,7 @@ public class ServiceInfo extends TeaModel {
             } 
 
             /**
-             * labels.
+             * <p>The list of version labels.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -530,7 +575,10 @@ public class ServiceInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder name(String name) {
                 this.name = name;

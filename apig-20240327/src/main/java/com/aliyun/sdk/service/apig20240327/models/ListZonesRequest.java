@@ -59,7 +59,15 @@ public class ListZonesRequest extends Request {
         } 
 
         /**
-         * gatewayEdition.
+         * <p>The target gateway edition for querying zones. Valid values:</p>
+         * <ul>
+         * <li>Professional: standard gateway. This is the default value.</li>
+         * <li>ServerlessV2: API multi-tenant Serverless V2.</li>
+         * </ul>
+         * <p>If this parameter is not specified, Professional is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServerlessV2</p>
          */
         public Builder gatewayEdition(String gatewayEdition) {
             this.putQueryParameter("gatewayEdition", gatewayEdition);

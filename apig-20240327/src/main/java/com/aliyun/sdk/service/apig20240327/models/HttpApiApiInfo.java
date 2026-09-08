@@ -275,7 +275,7 @@ public class HttpApiApiInfo extends TeaModel {
         } 
 
         /**
-         * agentProtocols.
+         * <p>The list of agent protocols.</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.agentProtocols = agentProtocols;
@@ -283,7 +283,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * aiProtocols.
+         * <p>The list of AI protocols.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.aiProtocols = aiProtocols;
@@ -291,7 +291,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * authConfig.
+         * <p>The authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -299,7 +299,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * basePath.
+         * <p>The API base path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1</p>
          */
         public Builder basePath(String basePath) {
             this.basePath = basePath;
@@ -307,7 +310,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * deployCntMap.
+         * <p>The API operation deployment status.</p>
          */
         public Builder deployCntMap(java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap) {
             this.deployCntMap = deployCntMap;
@@ -315,7 +318,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * deployConfigs.
+         * <p>The list of API deployment configurations.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -323,7 +326,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The API description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test API</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -339,7 +345,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * environments.
+         * <p>The publish environment context of the API.</p>
          */
         public Builder environments(java.util.List<Environments> environments) {
             this.environments = environments;
@@ -347,7 +353,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * gatewayId.
+         * <p>The ID of the gateway instance to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdl****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -355,7 +364,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * httpApiId.
+         * <p>HTTP API ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.httpApiId = httpApiId;
@@ -363,7 +375,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * ingressInfo.
+         * <p>The HTTP Ingress API information.</p>
          */
         public Builder ingressInfo(IngressInfo ingressInfo) {
             this.ingressInfo = ingressInfo;
@@ -371,7 +383,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * modelCategory.
+         * <p>The model category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         public Builder modelCategory(String modelCategory) {
             this.modelCategory = modelCategory;
@@ -379,7 +394,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -387,7 +405,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * protocols.
+         * <p>The list of API protocols.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.protocols = protocols;
@@ -395,7 +413,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -403,7 +424,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The API type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rest</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -411,7 +435,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * versionInfo.
+         * <p>The API version control information.</p>
          */
         public Builder versionInfo(HttpApiVersionInfo versionInfo) {
             this.versionInfo = versionInfo;
@@ -498,7 +522,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -506,7 +533,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The gateway instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -651,7 +681,10 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * gatewayServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gs-xxx</p>
              */
             public Builder gatewayServiceId(String gatewayServiceId) {
                 this.gatewayServiceId = gatewayServiceId;
@@ -659,7 +692,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The match condition.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -667,7 +700,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -675,7 +711,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -683,7 +722,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -691,7 +733,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -699,7 +744,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -707,7 +755,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -800,7 +851,10 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-xxx</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -808,7 +862,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -816,7 +873,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -824,7 +884,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The access protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -995,7 +1058,10 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The environment alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -1003,7 +1069,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * backendScene.
+             * <p>The deployment scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SingleService</p>
              */
             public Builder backendScene(String backendScene) {
                 this.backendScene = backendScene;
@@ -1011,7 +1080,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * backendType.
+             * <p>The backend type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service</p>
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -1019,7 +1091,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * customDomains.
+             * <p>The domain name information published by the user.</p>
              */
             public Builder customDomains(java.util.List<HttpApiDomainInfo> customDomains) {
                 this.customDomains = customDomains;
@@ -1027,7 +1099,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * deployStatus.
+             * <p>The deployment status of the API in the current environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployed</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -1035,7 +1110,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -1043,7 +1121,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * gatewayInfo.
+             * <p>The gateway instance information for the current environment.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -1051,7 +1129,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1059,7 +1140,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * serviceConfigs.
+             * <p>The existing service configurations.</p>
              */
             public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
                 this.serviceConfigs = serviceConfigs;
@@ -1067,7 +1148,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * subDomains.
+             * <p>The list of default domain names for the environment.</p>
              */
             public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;
@@ -1121,7 +1202,10 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -1175,7 +1259,10 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * clusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca435c77cba1547cca9311957bcxxxxxx</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1294,7 +1381,7 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * environmentInfo.
+             * <p>The environment context.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -1302,7 +1389,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * ingressClass.
+             * <p>The monitored Ingress Class.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse</p>
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -1310,7 +1400,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * k8sClusterInfo.
+             * <p>The Kubernetes cluster information.</p>
              */
             public Builder k8sClusterInfo(K8sClusterInfo k8sClusterInfo) {
                 this.k8sClusterInfo = k8sClusterInfo;
@@ -1318,7 +1408,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * overrideIngressIp.
+             * <p>Specifies whether to update the address in Ingress Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder overrideIngressIp(Boolean overrideIngressIp) {
                 this.overrideIngressIp = overrideIngressIp;
@@ -1326,7 +1419,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>src-xxx</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -1334,7 +1430,10 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * watchNamespace.
+             * <p>The monitored namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;

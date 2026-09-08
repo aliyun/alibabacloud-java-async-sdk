@@ -143,7 +143,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud-native API Gateway instance.</p>
+         * <p>The ID of the cloud-native API gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>
@@ -155,7 +155,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The service name.</p>
+         * <p>The service name for exact match query.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -167,7 +167,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,21 +203,13 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The service source. Valid values:</p>
+         * <p>The source type of the service. Valid values:</p>
          * <ul>
-         * <li>MSE_NACOS: a service in an MSE Nacos instance</li>
-         * <li>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</li>
-         * <li>FC3: a service in Function Compute</li>
-         * <li>VIP: a fixed address</li>
-         * <li>DNS: a domain name</li>
-         * </ul>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>K8S</li>
-         * <li>FC3</li>
-         * <li>DNS</li>
-         * <li>VIP</li>
-         * <li>MSE_NACOS</li>
+         * <li>MSE_NACOS: The service is from MSE Nacos.</li>
+         * <li>K8S: The service is from a Kubernetes cluster in Container Service.</li>
+         * <li>FC3: The service is from Function Compute.</li>
+         * <li>VIP: The service is from a fixed address.</li>
+         * <li>DNS: The service is from a domain name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +222,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>List of service source types</p>
+         * <p>The list of service source types.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;K8S&quot;, &quot;FC3&quot;]</p>

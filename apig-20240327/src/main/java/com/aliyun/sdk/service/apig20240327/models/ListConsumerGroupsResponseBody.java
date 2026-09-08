@@ -93,7 +93,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code. Ok is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -238,7 +244,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerCount.
+             * <p>The number of consumers in the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder consumerCount(Long consumerCount) {
                 this.consumerCount = consumerCount;
@@ -246,7 +255,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>csg-8c13d2b4f8a1</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -254,7 +266,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>The creation time of the consumer group, in Unix millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715769600000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -262,7 +277,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The consumer group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Used for online API caller grouping.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +288,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayType.
+             * <p>The gateway type. Valid values: API or AI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -278,7 +299,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-consumer-group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +395,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of consumer groups.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -379,7 +403,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -387,7 +414,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -395,7 +425,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of consumer groups that match the conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

@@ -67,7 +67,10 @@ public class ResourceStatistic extends TeaModel {
         } 
 
         /**
-         * resourceCount.
+         * <p>The number of online resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder resourceCount(Integer resourceCount) {
             this.resourceCount = resourceCount;
@@ -75,7 +78,15 @@ public class ResourceStatistic extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HttpApi</li>
+         * <li>GatewayRoute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApi</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

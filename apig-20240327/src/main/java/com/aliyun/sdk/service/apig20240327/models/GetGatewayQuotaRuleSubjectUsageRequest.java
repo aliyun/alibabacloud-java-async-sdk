@@ -30,6 +30,10 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
     private String subjectId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    private Long endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("filterFailedRequests")
     private Boolean filterFailedRequests;
 
@@ -41,14 +45,20 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    private Long startTime;
+
     private GetGatewayQuotaRuleSubjectUsageRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
         this.ruleId = builder.ruleId;
         this.subjectId = builder.subjectId;
+        this.endTime = builder.endTime;
         this.filterFailedRequests = builder.filterFailedRequests;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -86,6 +96,13 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return filterFailedRequests
      */
     public Boolean getFilterFailedRequests() {
@@ -106,13 +123,22 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<GetGatewayQuotaRuleSubjectUsageRequest, Builder> {
         private String gatewayId; 
         private String ruleId; 
         private String subjectId; 
+        private Long endTime; 
         private Boolean filterFailedRequests; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Long startTime; 
 
         private Builder() {
             super();
@@ -123,13 +149,18 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.ruleId = request.ruleId;
             this.subjectId = request.subjectId;
+            this.endTime = request.endTime;
             this.filterFailedRequests = request.filterFailedRequests;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -138,7 +169,10 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qr-d8j7fpmm1hks65kxxxxx</p>
          */
         public Builder ruleId(String ruleId) {
             this.putPathParameter("ruleId", ruleId);
@@ -147,7 +181,10 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * subjectId.
+         * <p>The ID of the subject (consumer or consumer group).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-d8kkaium1xxxxxxxxxxx</p>
          */
         public Builder subjectId(String subjectId) {
             this.putPathParameter("subjectId", subjectId);
@@ -156,7 +193,22 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * filterFailedRequests.
+         * <p>The end time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates startTime based on the rule cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1788425220</p>
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("endTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to filter out zero values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder filterFailedRequests(Boolean filterFailedRequests) {
             this.putQueryParameter("filterFailedRequests", filterFailedRequests);
@@ -165,7 +217,10 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number of the detailed consumption (request) records of the subject within the cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -174,11 +229,26 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of detailed consumption (request) records per page for the subject within the cycle. Maximum value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The start time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates endTime based on the rule cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1788338820</p>
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("startTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

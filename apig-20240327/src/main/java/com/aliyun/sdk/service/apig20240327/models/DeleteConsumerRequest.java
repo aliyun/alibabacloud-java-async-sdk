@@ -59,7 +59,7 @@ public class DeleteConsumerRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The API consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-cv8em6um1hku2shkv19g</p>

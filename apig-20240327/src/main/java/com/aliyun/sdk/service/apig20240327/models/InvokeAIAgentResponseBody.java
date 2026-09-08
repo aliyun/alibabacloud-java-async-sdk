@@ -118,6 +118,9 @@ public class InvokeAIAgentResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

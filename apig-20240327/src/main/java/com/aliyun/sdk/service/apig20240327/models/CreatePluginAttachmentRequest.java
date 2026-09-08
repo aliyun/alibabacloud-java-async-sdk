@@ -143,7 +143,7 @@ public class CreatePluginAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>The attachment IDs.</p>
+         * <p>The list of mount point IDs.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
             this.putBodyParameter("attachResourceIds", attachResourceIds);
@@ -152,7 +152,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource to which the plug-in is attached. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+         * <p>The resource type to which the plug-in is mounted. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
          * 
          * <strong>example:</strong>
          * <p>HttpApi</p>
@@ -188,7 +188,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq7l5s5lhtg***</p>
@@ -200,7 +200,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded configurations of the plug-in.</p>
+         * <p>The Base64-encoded content of the original plug-in configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>

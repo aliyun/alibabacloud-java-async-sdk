@@ -124,7 +124,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeb235b-xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -133,7 +136,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource IDs. Up to 50 items are supported. You must specify at least one of ResourceId or Tag. If both are empty, the API returns InvalidParameter.BothEmpty(400).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;gw-xxx&quot;,&quot;gw-yyy&quot;]</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
@@ -143,7 +149,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Although the documentation indicates a default value of Gateway, you must explicitly pass this parameter when calling the API. Otherwise, the API returns InvalidParameter.UnsupportedTagResourceType(400). Valid values: Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -152,7 +161,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The label list. Up to 20 items are supported. You must specify at least one of ResourceId or Tag. If both are empty, the API returns InvalidParameter.BothEmpty(400).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -221,7 +233,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -229,7 +244,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

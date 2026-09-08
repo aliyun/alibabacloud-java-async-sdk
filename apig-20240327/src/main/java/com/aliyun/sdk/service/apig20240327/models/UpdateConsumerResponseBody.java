@@ -80,7 +80,7 @@ public class UpdateConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class UpdateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -102,7 +102,7 @@ public class UpdateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>B917B12C-030A-597A-AF2B-6C4353FC9F10</p>

@@ -73,7 +73,7 @@ public class DeleteConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+         * <p>The ID of the API consumer authorization rule used to filter the API list. The API list in the response contains only authorized APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>

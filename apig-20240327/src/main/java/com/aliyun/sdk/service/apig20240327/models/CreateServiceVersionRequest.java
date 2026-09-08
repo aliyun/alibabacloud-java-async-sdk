@@ -103,7 +103,7 @@ public class CreateServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The service tags.</p>
+         * <p>The service labels.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
@@ -186,7 +186,7 @@ public class CreateServiceVersionRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The label key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class CreateServiceVersionRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The label value.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-j</p>

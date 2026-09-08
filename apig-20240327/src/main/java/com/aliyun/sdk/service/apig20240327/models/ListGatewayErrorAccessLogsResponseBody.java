@@ -76,6 +76,9 @@ public class ListGatewayErrorAccessLogsResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C9BF49BD-3037-5006-B379-656ECBA6F56C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

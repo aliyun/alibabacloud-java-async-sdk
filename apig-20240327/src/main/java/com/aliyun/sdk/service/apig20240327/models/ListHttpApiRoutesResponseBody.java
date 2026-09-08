@@ -93,7 +93,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response payload.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -218,7 +218,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The routes.</p>
+             * <p>The route list.</p>
              */
             public Builder items(java.util.List<HttpRoute> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -248,7 +248,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

@@ -93,7 +93,7 @@ public class ExportHttpApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ExportHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The API definition.</p>
+         * <p>The API definition information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ExportHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

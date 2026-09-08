@@ -405,7 +405,7 @@ public class Service extends TeaModel {
         } 
 
         /**
-         * addresses.
+         * <p>The address information, including IP addresses or domain name lists.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.addresses = addresses;
@@ -413,7 +413,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * agentServiceConfig.
+         * <p>The agent service configuration.</p>
          */
         public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
             this.agentServiceConfig = agentServiceConfig;
@@ -421,7 +421,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * aiServiceConfig.
+         * <p>The AI service configuration.</p>
          */
         public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
             this.aiServiceConfig = aiServiceConfig;
@@ -429,7 +429,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * <p>The time when the service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725617840096</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -437,7 +440,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * dnsServers.
+         * <p>The list of DNS servers.</p>
          */
         public Builder dnsServers(java.util.List<String> dnsServers) {
             this.dnsServers = dnsServers;
@@ -445,7 +448,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * expressType.
+         * <p>The execution mode of CloudFlow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StartExecution</p>
          */
         public Builder expressType(String expressType) {
             this.expressType = expressType;
@@ -453,7 +459,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * gatewayId.
+         * <p>The instance ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -461,7 +470,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * groupName.
+         * <p>The name of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>publich</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -469,7 +481,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * healthCheck.
+         * <p>The health check configuration.</p>
          */
         public Builder healthCheck(ServiceHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
@@ -477,7 +489,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * healthStatus.
+         * <p>The health check status. Valid values: Healthy and Unhealthy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Healthy</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.healthStatus = healthStatus;
@@ -485,7 +500,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * healthyPanicThreshold.
+         * <p>The healthy panic threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder healthyPanicThreshold(Float healthyPanicThreshold) {
             this.healthyPanicThreshold = healthyPanicThreshold;
@@ -493,7 +511,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * labelDetails.
+         * <p>The label information of the service.</p>
          */
         public Builder labelDetails(java.util.List<LabelDetail> labelDetails) {
             this.labelDetails = labelDetails;
@@ -501,7 +519,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * modelProviderId.
+         * <p>The resource ID of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp-xxxx</p>
          */
         public Builder modelProviderId(String modelProviderId) {
             this.modelProviderId = modelProviderId;
@@ -509,7 +530,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-service</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -517,7 +541,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -525,7 +552,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * outlierDetection.
+         * <p>The configuration for removing abnormal instances.</p>
          */
         public Builder outlierDetection(OutlierDetection outlierDetection) {
             this.outlierDetection = outlierDetection;
@@ -533,7 +560,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * outlierEndpoints.
+         * <p>The circuit-broken endpoints.</p>
          */
         public Builder outlierEndpoints(java.util.List<String> outlierEndpoints) {
             this.outlierEndpoints = outlierEndpoints;
@@ -541,7 +568,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * ports.
+         * <p>The list of port information.</p>
          */
         public Builder ports(java.util.List<Ports> ports) {
             this.ports = ports;
@@ -549,7 +576,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The service protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -557,7 +587,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The qualifier of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -565,7 +598,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -573,7 +609,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * runtimeDetailErrorCode.
+         * <p>The masked error code of the runtime details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RuntimeEndpointTimeout</p>
          */
         public Builder runtimeDetailErrorCode(String runtimeDetailErrorCode) {
             this.runtimeDetailErrorCode = runtimeDetailErrorCode;
@@ -581,7 +620,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * runtimeDetailStatus.
+         * <p>The runtime detail status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder runtimeDetailStatus(String runtimeDetailStatus) {
             this.runtimeDetailStatus = runtimeDetailStatus;
@@ -589,7 +631,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * serviceId.
+         * <p>The unique ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr6pk4tlhtgm***</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -597,7 +642,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * sourceType.
+         * <p>The source type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_NACOS</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -605,7 +653,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * unhealthyEndpoints.
+         * <p>The unhealthy endpoints.</p>
          */
         public Builder unhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
             this.unhealthyEndpoints = unhealthyEndpoints;
@@ -613,7 +661,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * updateTimestamp.
+         * <p>The time when the service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725868548440</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -621,7 +672,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * versions.
+         * <p>The list of service versions.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -726,7 +777,10 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * baseEjectionTime.
+             * <p>The base ejection duration in seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder baseEjectionTime(Integer baseEjectionTime) {
                 this.baseEjectionTime = baseEjectionTime;
@@ -734,7 +788,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Specifies whether to enable outlier detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -742,7 +799,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * failurePercentageMinimumHosts.
+             * <p>The minimum number of hosts. The value must be greater than or equal to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failurePercentageMinimumHosts(Integer failurePercentageMinimumHosts) {
                 this.failurePercentageMinimumHosts = failurePercentageMinimumHosts;
@@ -750,7 +810,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * failurePercentageThreshold.
+             * <p>The failure rate threshold in percentage. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder failurePercentageThreshold(Integer failurePercentageThreshold) {
                 this.failurePercentageThreshold = failurePercentageThreshold;
@@ -758,7 +821,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * interval.
+             * <p>The detection interval in seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -838,7 +904,10 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -846,7 +915,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -854,7 +926,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol. Valid values: TCP and UDP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -921,7 +996,10 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -929,7 +1007,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -996,7 +1077,7 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * labels.
+             * <p>The list of version labels.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -1004,7 +1085,10 @@ public class Service extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder name(String name) {
                 this.name = name;

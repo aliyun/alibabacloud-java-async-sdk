@@ -93,7 +93,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code. Ok is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +192,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>csg-8c13d2b4f8a1</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -194,7 +203,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayType.
+             * <p>The gateway type. Valid values: API or AI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;

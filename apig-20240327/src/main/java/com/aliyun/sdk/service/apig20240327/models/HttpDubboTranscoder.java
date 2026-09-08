@@ -93,7 +93,10 @@ public class HttpDubboTranscoder extends TeaModel {
         } 
 
         /**
-         * dubboServiceGroup.
+         * <p>The Dubbo service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder dubboServiceGroup(String dubboServiceGroup) {
             this.dubboServiceGroup = dubboServiceGroup;
@@ -101,7 +104,10 @@ public class HttpDubboTranscoder extends TeaModel {
         }
 
         /**
-         * dubboServiceName.
+         * <p>The Dubbo service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.example.DemoService</p>
          */
         public Builder dubboServiceName(String dubboServiceName) {
             this.dubboServiceName = dubboServiceName;
@@ -109,7 +115,10 @@ public class HttpDubboTranscoder extends TeaModel {
         }
 
         /**
-         * dubboServiceVersion.
+         * <p>The Dubbo service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder dubboServiceVersion(String dubboServiceVersion) {
             this.dubboServiceVersion = dubboServiceVersion;
@@ -117,7 +126,7 @@ public class HttpDubboTranscoder extends TeaModel {
         }
 
         /**
-         * methodMapList.
+         * <p>The method mapping list.</p>
          */
         public Builder methodMapList(java.util.List<MethodMapList> methodMapList) {
             this.methodMapList = methodMapList;
@@ -196,7 +205,10 @@ public class HttpDubboTranscoder extends TeaModel {
             } 
 
             /**
-             * extractKey.
+             * <p>The key used to extract the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder extractKey(String extractKey) {
                 this.extractKey = extractKey;
@@ -204,7 +216,16 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * extractKeySpec.
+             * <p>The input parameter location. Valid values:</p>
+             * <ul>
+             * <li>ALL_QUERY_PARAMETER: Request parameter.</li>
+             * <li>ALL_HEADER: Request header.</li>
+             * <li>ALL_PATH: URI of the request.</li>
+             * <li>ALL_BODY: Request body.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_QUERY_PARAMETER</p>
              */
             public Builder extractKeySpec(String extractKeySpec) {
                 this.extractKeySpec = extractKeySpec;
@@ -212,7 +233,10 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * mappingType.
+             * <p>The backend parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder mappingType(String mappingType) {
                 this.mappingType = mappingType;
@@ -331,7 +355,10 @@ public class HttpDubboTranscoder extends TeaModel {
             } 
 
             /**
-             * dubboMethodName.
+             * <p>The Dubbo method name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sayName</p>
              */
             public Builder dubboMethodName(String dubboMethodName) {
                 this.dubboMethodName = dubboMethodName;
@@ -339,7 +366,10 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * httpMethod.
+             * <p>The HTTP method. Valid values: ALL_GET. ALL_POST. ALL_PUT. ALL_DELETE. ALL_PATCH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_GET</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -347,7 +377,10 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * methodPath.
+             * <p>The method matching path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mytestzbk/sayhello</p>
              */
             public Builder methodPath(String methodPath) {
                 this.methodPath = methodPath;
@@ -355,7 +388,7 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * paramMapsList.
+             * <p>The parameter mapping list.</p>
              */
             public Builder paramMapsList(java.util.List<ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
@@ -363,7 +396,15 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * passThroughAllHeaders.
+             * <p>The header pass-through type. Valid values:</p>
+             * <ul>
+             * <li>PASS_ALL: Pass through all headers.</li>
+             * <li>PASS_NOT: Do not pass through headers.</li>
+             * <li>PASS_ASSIGN: Pass through specified headers.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PASS_NOT</p>
              */
             public Builder passThroughAllHeaders(String passThroughAllHeaders) {
                 this.passThroughAllHeaders = passThroughAllHeaders;
@@ -371,7 +412,7 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * passThroughList.
+             * <p>The list of specified pass-through headers.</p>
              */
             public Builder passThroughList(java.util.List<String> passThroughList) {
                 this.passThroughList = passThroughList;

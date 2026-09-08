@@ -129,7 +129,7 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The attachment point ID.</p>
+         * <p>The ID of the attachment point.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cq7l5s5lhtgi6qasrdc0</p>
@@ -141,15 +141,15 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The types of attachment points supported by the policy. Valid values: </p>
+         * <p>The type of attachment point supported by the policy.</p>
          * <ul>
-         * <li>HttpApi</li>
-         * <li>Operation</li>
-         * <li>GatewayRoute</li>
-         * <li>GatewayService</li>
-         * <li>GatewayServicePort</li>
-         * <li>Domain</li>
-         * <li>Gateway</li>
+         * <li>HttpApi: HttpApi.</li>
+         * <li>Operation: Operation of HttpApi.</li>
+         * <li>GatewayRoute: gateway route.</li>
+         * <li>GatewayService: gateway service.</li>
+         * <li>GatewayServicePort: gateway service port.</li>
+         * <li>Domain: gateway domain name.</li>
+         * <li>Gateway: gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether it is a system policy.</p>
+         * <p>Specifies whether the policy is a system policy.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

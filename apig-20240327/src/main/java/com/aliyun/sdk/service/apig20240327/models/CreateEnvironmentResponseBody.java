@@ -93,7 +93,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Schema of Response</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>rg-acfmycs5expl7oq</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The request ID, which is used to trace the API call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>
@@ -179,7 +179,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The request ID, which is used to trace the call link.</p>
+             * <p>The environment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>env-cq7l5s5lhtgi6qasrdc0</p>

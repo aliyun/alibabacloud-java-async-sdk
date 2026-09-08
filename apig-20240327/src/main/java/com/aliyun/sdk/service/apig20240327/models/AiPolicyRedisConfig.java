@@ -119,7 +119,10 @@ public class AiPolicyRedisConfig extends TeaModel {
         } 
 
         /**
-         * databaseNumber.
+         * <p>The Redis database number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder databaseNumber(Integer databaseNumber) {
             this.databaseNumber = databaseNumber;
@@ -127,7 +130,10 @@ public class AiPolicyRedisConfig extends TeaModel {
         }
 
         /**
-         * host.
+         * <p>The Redis host address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-xxx.redis.rds.aliyuncs.com</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -135,7 +141,10 @@ public class AiPolicyRedisConfig extends TeaModel {
         }
 
         /**
-         * password.
+         * <p>The Redis password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -143,7 +152,10 @@ public class AiPolicyRedisConfig extends TeaModel {
         }
 
         /**
-         * port.
+         * <p>The Redis port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -151,7 +163,10 @@ public class AiPolicyRedisConfig extends TeaModel {
         }
 
         /**
-         * timeout.
+         * <p>The timeout period, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -159,7 +174,10 @@ public class AiPolicyRedisConfig extends TeaModel {
         }
 
         /**
-         * username.
+         * <p>The Redis username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder username(String username) {
             this.username = username;

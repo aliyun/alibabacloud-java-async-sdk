@@ -59,7 +59,7 @@ public class ListGatewayFeaturesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>

@@ -67,7 +67,10 @@ public class HttpApiPolicyReference extends TeaModel {
         } 
 
         /**
-         * <p>策略挂载ID</p>
+         * <p>The policy attachment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-3c8ayyy</p>
          */
         public Builder policyAttachmentId(String policyAttachmentId) {
             this.policyAttachmentId = policyAttachmentId;
@@ -75,7 +78,10 @@ public class HttpApiPolicyReference extends TeaModel {
         }
 
         /**
-         * <p>策略ID</p>
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pol-9f2exxx</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;

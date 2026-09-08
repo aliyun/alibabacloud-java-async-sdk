@@ -93,7 +93,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The deployment status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +104,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
         }
 
         /**
-         * platform.
+         * <p>The deployment platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAE</p>
          */
         public Builder platform(String platform) {
             this.platform = platform;
@@ -109,7 +115,7 @@ public class HiMarketPortalDeployConfig extends TeaModel {
         }
 
         /**
-         * saeConfig.
+         * <p>The SAE (Serverless App Engine) deployment configuration.</p>
          */
         public Builder saeConfig(SaeConfig saeConfig) {
             this.saeConfig = saeConfig;
@@ -117,7 +123,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The deployment status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -261,7 +270,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             } 
 
             /**
-             * appId.
+             * <p>The SAE application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-xxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -269,7 +281,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * namespaceId.
+             * <p>The SAE namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou:default</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -277,7 +292,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * oidcRoleName.
+             * <p>The OIDC role name used for SAE to access other cloud resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apig-portal-oidc-role</p>
              */
             public Builder oidcRoleName(String oidcRoleName) {
                 this.oidcRoleName = oidcRoleName;
@@ -285,7 +303,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of SAE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -293,7 +314,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * replicas.
+             * <p>The number of instance replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replicas(String replicas) {
                 this.replicas = replicas;
@@ -301,7 +325,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -309,7 +336,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * vSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -317,7 +347,10 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

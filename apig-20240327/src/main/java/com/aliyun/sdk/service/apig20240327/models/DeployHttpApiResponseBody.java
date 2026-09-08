@@ -93,7 +93,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</p>
@@ -179,7 +179,10 @@ public class DeployHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * httpApiId.
+             * <p>The ID of the HTTP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder httpApiId(String httpApiId) {
                 this.httpApiId = httpApiId;

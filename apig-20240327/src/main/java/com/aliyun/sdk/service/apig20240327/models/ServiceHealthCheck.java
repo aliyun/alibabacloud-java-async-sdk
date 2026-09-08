@@ -145,7 +145,10 @@ public class ServiceHealthCheck extends TeaModel {
         } 
 
         /**
-         * enable.
+         * <p>Specifies whether to enable the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -153,7 +156,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * healthyThreshold.
+         * <p>The healthy threshold for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -161,7 +167,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * httpHost.
+         * <p>The health check domain name. This parameter is optional when the health check protocol is HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder httpHost(String httpHost) {
             this.httpHost = httpHost;
@@ -169,7 +178,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * httpPath.
+         * <p>The health check path. This parameter is required when the health check protocol is HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/health</p>
          */
         public Builder httpPath(String httpPath) {
             this.httpPath = httpPath;
@@ -177,7 +189,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * interval.
+         * <p>The health check interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -185,7 +200,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The health check protocol. Valid values: TCP, HTTP, and GRPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -193,7 +211,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * timeout.
+         * <p>The health check response timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -201,7 +222,10 @@ public class ServiceHealthCheck extends TeaModel {
         }
 
         /**
-         * unhealthyThreshold.
+         * <p>The unhealthy threshold for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

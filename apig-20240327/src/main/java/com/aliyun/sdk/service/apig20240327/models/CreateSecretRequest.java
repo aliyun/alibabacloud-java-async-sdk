@@ -141,7 +141,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The type of the gateway.</p>
+         * <p>The gateway type.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -153,7 +153,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The key configuration information of KMS.</p>
+         * <p>The KMS key configuration.</p>
          */
         public Builder kmsConfig(KMSConfig kmsConfig) {
             this.putBodyParameter("kmsConfig", kmsConfig);
@@ -162,7 +162,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The key name. It can be up to 64 characters in length and can contain letters, digits, and underscores (_).</p>
+         * <p>The key name. The name can contain letters, digits, and underscores (_) and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my_secret</p>
@@ -174,7 +174,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The value of the KMS credential.</p>
+         * <p>The KMS credential value.</p>
          * 
          * <strong>example:</strong>
          * <p>apikey-123456xxxxxxxx</p>

@@ -93,7 +93,10 @@ public class HiMarketDomain extends TeaModel {
         } 
 
         /**
-         * domain.
+         * <p>The domain name address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.example.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -101,7 +104,10 @@ public class HiMarketDomain extends TeaModel {
         }
 
         /**
-         * networkType.
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -109,7 +115,10 @@ public class HiMarketDomain extends TeaModel {
         }
 
         /**
-         * port.
+         * <p>The port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -117,7 +126,10 @@ public class HiMarketDomain extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The access protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;

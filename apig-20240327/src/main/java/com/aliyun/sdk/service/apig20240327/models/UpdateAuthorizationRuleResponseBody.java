@@ -97,6 +97,9 @@ public class UpdateAuthorizationRuleResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019FCFBD-4B8D-57A4-91DA-A3B517002442</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

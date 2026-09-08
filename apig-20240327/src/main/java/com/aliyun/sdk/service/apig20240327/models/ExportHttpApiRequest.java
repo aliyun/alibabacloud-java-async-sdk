@@ -102,7 +102,7 @@ public class ExportHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>HTTP API ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ExportHttpApiRequest extends Request {
         }
 
         /**
-         * extensionConfig.
+         * <p>Specifies whether to export the plug-in configuration.</p>
          */
         public Builder extensionConfig(ExtensionConfig extensionConfig) {
             this.putBodyParameter("extensionConfig", extensionConfig);
@@ -124,7 +124,10 @@ public class ExportHttpApiRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway instance ID. This parameter is required when you export gateway extension information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -133,7 +136,7 @@ public class ExportHttpApiRequest extends Request {
         }
 
         /**
-         * operationIds.
+         * <p>The IDs of specific operations to export when exporting a REST API.</p>
          */
         public Builder operationIds(java.util.List<String> operationIds) {
             this.putBodyParameter("operationIds", operationIds);
@@ -240,7 +243,7 @@ public class ExportHttpApiRequest extends Request {
             } 
 
             /**
-             * withAuthConfig.
+             * <p>Specifies whether to export the consumer authorization configuration for operations or routes.</p>
              */
             public Builder withAuthConfig(Boolean withAuthConfig) {
                 this.withAuthConfig = withAuthConfig;
@@ -248,7 +251,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * withAuthConsumer.
+             * <p>Specifies whether to export the authorized consumers.</p>
              */
             public Builder withAuthConsumer(Boolean withAuthConsumer) {
                 this.withAuthConsumer = withAuthConsumer;
@@ -256,7 +259,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * withPlugin.
+             * <p>Specifies whether to export the plug-in configuration.</p>
              */
             public Builder withPlugin(Boolean withPlugin) {
                 this.withPlugin = withPlugin;
@@ -264,7 +267,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * withPolicy.
+             * <p>Specifies whether to export the policy configuration.</p>
              */
             public Builder withPolicy(Boolean withPolicy) {
                 this.withPolicy = withPolicy;
@@ -272,7 +275,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * withService.
+             * <p>Specifies whether to export the backend service.</p>
              */
             public Builder withService(Boolean withService) {
                 this.withService = withService;

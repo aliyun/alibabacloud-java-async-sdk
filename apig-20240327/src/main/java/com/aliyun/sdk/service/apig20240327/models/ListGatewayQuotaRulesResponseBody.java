@@ -119,7 +119,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;totalSize&quot;:100}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve at a time. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -143,7 +152,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>762b1fa4e2434fd3959b1f66481979cf</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -306,7 +321,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * periodType.
+             * <p>The period type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>week</p>
              */
             public Builder periodType(String periodType) {
                 this.periodType = periodType;
@@ -314,7 +332,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * quotaDimension.
+             * <p>The quota dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
              */
             public Builder quotaDimension(String quotaDimension) {
                 this.quotaDimension = quotaDimension;
@@ -322,7 +343,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * quotaLimit.
+             * <p>The quota limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder quotaLimit(Long quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -330,7 +354,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qr-xxxxx</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -338,7 +365,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily-token-limit</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -346,7 +376,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>The rule status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -354,7 +387,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone for the natural period, in UTC+x format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GMT+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -362,7 +398,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * windowAlignment.
+             * <p>The reset period type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>calendar</p>
              */
             public Builder windowAlignment(String windowAlignment) {
                 this.windowAlignment = windowAlignment;
@@ -455,7 +494,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;ruleId&quot;:&quot;rule-001&quot;}]</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -463,7 +505,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -471,7 +516,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The current page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +527,10 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

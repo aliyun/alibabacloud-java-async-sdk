@@ -104,7 +104,7 @@ public class UpdatePolicyRequest extends Request {
         } 
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy configuration</p>
+         * <p>The policy configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,10 +130,10 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * <p>Description</p>
+         * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>this is a timeout policy description</p>
+         * <p>这是一条网关超时策略</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -142,7 +142,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy name</p>
+         * <p>The Policy Name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -472,7 +472,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP API ID.</p>
+             * <p>HTTP API ID。</p>
              * 
              * <strong>example:</strong>
              * <p>api-d2vv43em201hxxxxxxxx</p>
@@ -616,7 +616,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the plug-in that references the current key.</p>
+             * <p>The plug-in information that references the current secret.</p>
              */
             public Builder pluginConfig(PluginConfig pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -624,7 +624,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service information that references the current key.</p>
+             * <p>The service information that references the current secret.</p>
              */
             public Builder serviceConfig(ServiceConfig serviceConfig) {
                 this.serviceConfig = serviceConfig;
@@ -632,7 +632,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer information that references the current key.</p>
+             * <p>The consumer information that references the current secret.</p>
              */
             public Builder consumerConfig(ConsumerConfig consumerConfig) {
                 this.consumerConfig = consumerConfig;
@@ -651,7 +651,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MCP service information that references the current key.</p>
+             * <p>The MCP server information that references the current secret.</p>
              */
             public Builder mcpServerConfig(McpServerConfig mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;
@@ -659,7 +659,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>Plugin</p>
@@ -785,7 +785,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>

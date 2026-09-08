@@ -97,6 +97,9 @@ public class RefreshPluginOAuthCodeResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566C6A32-A971-59F2-A9C6-9C73277BA0B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

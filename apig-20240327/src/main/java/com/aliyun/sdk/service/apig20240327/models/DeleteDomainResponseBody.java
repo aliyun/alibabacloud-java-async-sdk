@@ -80,7 +80,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to trace the API call link.</p>
+         * <p>The request ID, which is used to trace the API call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>

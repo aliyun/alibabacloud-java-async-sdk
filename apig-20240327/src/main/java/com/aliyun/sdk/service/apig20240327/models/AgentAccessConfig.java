@@ -108,7 +108,10 @@ public class AgentAccessConfig extends TeaModel {
         } 
 
         /**
-         * aiRequestLogEnabled.
+         * <p>Specifies whether to enable AI request logging. Default value if omitted: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder aiRequestLogEnabled(Boolean aiRequestLogEnabled) {
             this.aiRequestLogEnabled = aiRequestLogEnabled;
@@ -116,7 +119,7 @@ public class AgentAccessConfig extends TeaModel {
         }
 
         /**
-         * authorization.
+         * <p>The consumer authorization configuration for Agent access. If omitted, consumer authorization is not enabled.</p>
          */
         public Builder authorization(Authorization authorization) {
             this.authorization = authorization;
@@ -124,7 +127,11 @@ public class AgentAccessConfig extends TeaModel {
         }
 
         /**
+         * <p>The base path of the Agent access entry. The path must start with a forward slash (/).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/agent</p>
          */
         public Builder basePath(String basePath) {
             this.basePath = basePath;
@@ -132,6 +139,7 @@ public class AgentAccessConfig extends TeaModel {
         }
 
         /**
+         * <p>The list of domain name IDs bound to the Agent access entry. At least one domain name must be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
@@ -140,7 +148,10 @@ public class AgentAccessConfig extends TeaModel {
         }
 
         /**
-         * removeBasePathOnForward.
+         * <p>Specifies whether to remove the base path when forwarding requests to the backend. Default value if omitted: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder removeBasePathOnForward(Boolean removeBasePathOnForward) {
             this.removeBasePathOnForward = removeBasePathOnForward;
@@ -220,7 +231,10 @@ public class AgentAccessConfig extends TeaModel {
             } 
 
             /**
-             * authType.
+             * <p>The authentication type of the Agent access entry. Specify this parameter only when enabled is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apikey</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -228,7 +242,11 @@ public class AgentAccessConfig extends TeaModel {
             }
 
             /**
+             * <p>Specifies whether to enable consumer authorization. If set to true, authType must be specified and at least one principal must be provided. If set to false, no principals can be specified.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -236,7 +254,7 @@ public class AgentAccessConfig extends TeaModel {
             }
 
             /**
-             * principals.
+             * <p>The list of consumers or consumer groups that are granted Agent access permissions. At least one principal must be specified when enabled is set to true.</p>
              */
             public Builder principals(java.util.List<AgentAuthorizationPrincipal> principals) {
                 this.principals = principals;

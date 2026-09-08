@@ -93,7 +93,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -112,7 +112,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD19A442-93C5-5C97-AFA0-B9C57EBD781B</p>
@@ -192,7 +192,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of published APIs.</p>
+             * <p>The number of published APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -203,7 +203,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of APIs.</p>
+             * <p>The total number of APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -273,7 +273,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of running gateways.</p>
+             * <p>The number of running gateways.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -284,7 +284,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of gateway instances.</p>
+             * <p>The total number of gateway instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -426,7 +426,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk name list.</p>
+             * <p>The list of risk names.</p>
              */
             public Builder riskNames(java.util.List<String> riskNames) {
                 this.riskNames = riskNames;
@@ -517,7 +517,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of instances at a risk level.</p>
+             * <p>The number of instances at this risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -528,7 +528,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk details list.</p>
+             * <p>The list of risk details.</p>
              */
             public Builder riskDetails(java.util.List<RiskDetails> riskDetails) {
                 this.riskDetails = riskDetails;
@@ -619,7 +619,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API information.</p>
+             * <p>The API information.</p>
              */
             public Builder api(Api api) {
                 this.api = api;
@@ -627,7 +627,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Gateway information.</p>
+             * <p>The gateway information.</p>
              */
             public Builder gateway(Gateway gateway) {
                 this.gateway = gateway;

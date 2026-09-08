@@ -118,6 +118,9 @@ public class ListGlobalPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350E9393-B90C-5540-B2BE-6F4CF5965CDA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

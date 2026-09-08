@@ -118,6 +118,9 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019FCA83-0416-588D-9763-2474980495F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

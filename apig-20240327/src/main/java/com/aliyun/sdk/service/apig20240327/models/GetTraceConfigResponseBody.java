@@ -117,7 +117,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,11 @@ public class GetTraceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +259,11 @@ public class GetTraceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether tracing analysis is enabled. Valid values: true and false</p>
+             * <p>Indicates whether Tracing Analysis is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: enabled.</li>
+             * <li>false: shutdown.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -266,7 +274,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling rate.</p>
+             * <p>The sampling ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -277,7 +285,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID. This parameter exists when the traceType value is SKYWALKING.</p>
+             * <p>The service ID. This parameter is returned only when the Tracing Analysis type is SKYWALKING.</p>
              * 
              * <strong>example:</strong>
              * <p>ss-co370icmjeu****</p>
@@ -288,7 +296,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service port. This parameter exists when the traceType value is SKYWALKING.</p>
+             * <p>The service port. This parameter is returned only when the Tracing Analysis type is SKYWALKING.</p>
              * 
              * <strong>example:</strong>
              * <p>8090</p>
@@ -299,7 +307,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of tracing analysis. Valid values:</p>
+             * <p>The Tracing Analysis type. Valid values:</p>
              * <ul>
              * <li>XTRACE</li>
              * <li>SKYWALKING</li>

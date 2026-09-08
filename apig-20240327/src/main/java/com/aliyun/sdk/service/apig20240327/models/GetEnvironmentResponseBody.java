@@ -93,7 +93,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The environment ID.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The request ID, which is used to trace the API call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>3F8EE674-BB08-5E92-BE6F-E4756A748B0F</p>
@@ -192,7 +192,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>4</p>
+             * <p>The online resource count.</p>
              */
             public Builder resourceStatistics(java.util.List<ResourceStatistic> resourceStatistics) {
                 this.resourceStatistics = resourceStatistics;
@@ -200,7 +200,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -387,10 +387,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Test environment</p>
+             * <p>The environment alias.</p>
              * 
              * <strong>example:</strong>
-             * <p>The environment description.</p>
+             * <p>测试环境</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -398,7 +398,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update timestamp.</p>
+             * <p>The creation timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1719386834548</p>
@@ -409,7 +409,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation timestamp.</p>
+             * <p>Indicates whether this is the default environment.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -420,10 +420,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Testing environment for xx project of xxx</p>
+             * <p>The environment description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The instance information.</p>
+             * <p>这是xxx的xx项目测试环境</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -431,7 +431,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment name.</p>
+             * <p>The environment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -442,7 +442,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subdomains.</p>
+             * <p>The gateway information.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -450,7 +450,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment alias.</p>
+             * <p>The environment name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -461,7 +461,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>rg-aekzzzntl5njbpi</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekz4us4iruleja</p>
@@ -472,7 +472,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about online resources.</p>
+             * <p>The online resource information.</p>
              */
             public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
                 this.statisticsInfo = statisticsInfo;
@@ -480,7 +480,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subdomain information.</p>
+             * <p>The list of subdomains.</p>
              */
             public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
                 this.subDomainInfos = subDomainInfos;
@@ -488,7 +488,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The update timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1719386834548</p>

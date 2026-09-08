@@ -74,7 +74,7 @@ public class CreateHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to which the operation belongs.</p>
+         * <p>The ID of the HTTP API to which the operations belong.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CreateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * <p>The operation definitions.</p>
+         * <p>The list of operation definitions.</p>
          */
         public Builder operations(java.util.List<HttpApiOperation> operations) {
             this.putBodyParameter("operations", operations);

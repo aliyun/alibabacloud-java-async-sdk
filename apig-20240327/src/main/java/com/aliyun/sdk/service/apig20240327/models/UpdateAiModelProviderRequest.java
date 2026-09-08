@@ -89,6 +89,7 @@ public class UpdateAiModelProviderRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the model provider to update. This ID is returned by the model creation provider operation and is in the format that starts with mp-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,11 @@ public class UpdateAiModelProviderRequest extends Request {
         }
 
         /**
+         * <p>The display name of the model provider. This parameter is required. The name can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen Cloud / Alibaba Cloud Bailian.</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -110,7 +115,7 @@ public class UpdateAiModelProviderRequest extends Request {
         }
 
         /**
-         * serviceIds.
+         * <p>The complete set of AI service IDs to bind to the model provider. If this parameter is not specified, the existing bindings are retained. If an empty array is specified, all bindings are cleared. Duplicate and empty values are normalized.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.putBodyParameter("serviceIds", serviceIds);

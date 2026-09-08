@@ -174,7 +174,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The association IDs.</p>
+         * <p>The list of mount point IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
@@ -184,15 +184,16 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The supported associated resource type. Valid values:</p>
+         * <p>The type of mount point supported by the policy.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>HttpApi: an HTTP API</li>
-         * <li>Operation: an operation in an HTTP API</li>
-         * <li>GatewayRoute: a route</li>
-         * <li>GatewayService: a service</li>
-         * <li>GatewayServicePort: a service port</li>
-         * <li>Domain: a domain name</li>
-         * <li>Gateway: an instance</li>
+         * <li>HttpApi: HttpApi.</li>
+         * <li>Operation: Operation of HttpApi.</li>
+         * <li>GatewayRoute: gateway rule.</li>
+         * <li>GatewayService: gateway service.</li>
+         * <li>GatewayServicePort: gateway service port.</li>
+         * <li>Domain: gateway domain name.</li>
+         * <li>Gateway: gateway.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -206,11 +207,11 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The policy configurations. The value is a JSON string.</p>
+         * <p>The configuration information. A JSON string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;enable&quot;:false}</p>
+         * <p>{\&quot;enable\&quot;:false}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);
@@ -222,7 +223,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
          * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is the description.</p>
+         * <p>This is a policy description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -243,7 +244,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2avtllhtgja4dk5djg</p>

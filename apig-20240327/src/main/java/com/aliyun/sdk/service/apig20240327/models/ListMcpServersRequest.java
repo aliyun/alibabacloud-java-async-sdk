@@ -146,7 +146,7 @@ public class ListMcpServersRequest extends Request {
         } 
 
         /**
-         * <p>The type of source to create from.</p>
+         * <p>The creation source type.</p>
          * 
          * <strong>example:</strong>
          * <p>ApiGatewayHttpToMCP</p>
@@ -170,7 +170,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * <p>The gateway instance ID.</p>
+         * <p>The gateway ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * <p>The name to perform a fuzzy search on the MCP server.</p>
+         * <p>Fuzzy searches for MCP servers by API name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -195,7 +195,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+         * <p>The page number, starting from 1. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * <p>The type of the MCP server.</p>
+         * <p>The MCP server type.</p>
          * 
          * <strong>example:</strong>
          * <p>RealMCP</p>

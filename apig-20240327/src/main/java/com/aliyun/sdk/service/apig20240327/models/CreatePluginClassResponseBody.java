@@ -93,7 +93,10 @@ public class CreatePluginClassResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreatePluginClassResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreatePluginClassResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,6 +124,9 @@ public class CreatePluginClassResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>880F8DC9-1CD9-5A83-AA54-AD2D3B7D2466</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class CreatePluginClassResponseBody extends TeaModel {
             } 
 
             /**
-             * pluginClassId.
+             * <p>The plugin class ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pls-csqmjxxxxxxx</p>
              */
             public Builder pluginClassId(String pluginClassId) {
                 this.pluginClassId = pluginClassId;

@@ -160,6 +160,9 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF76AA7C-2C1E-5C3F-B366-5EC07F9662DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

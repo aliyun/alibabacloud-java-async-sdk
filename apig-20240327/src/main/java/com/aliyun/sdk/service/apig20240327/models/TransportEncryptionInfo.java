@@ -106,7 +106,7 @@ public class TransportEncryptionInfo extends TeaModel {
         } 
 
         /**
-         * certificates.
+         * <p>The list of transport certificates added by the user.</p>
          */
         public Builder certificates(java.util.List<TransportCertificateInfo> certificates) {
             this.certificates = certificates;
@@ -114,7 +114,10 @@ public class TransportEncryptionInfo extends TeaModel {
         }
 
         /**
-         * deployError.
+         * <p>The reason for the deployment failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder deployError(String deployError) {
             this.deployError = deployError;
@@ -122,7 +125,10 @@ public class TransportEncryptionInfo extends TeaModel {
         }
 
         /**
-         * deployStatus.
+         * <p>The submit status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder deployStatus(String deployStatus) {
             this.deployStatus = deployStatus;
@@ -130,7 +136,10 @@ public class TransportEncryptionInfo extends TeaModel {
         }
 
         /**
-         * http2Enabled.
+         * <p>Indicates whether HTTP/2 is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder http2Enabled(Boolean http2Enabled) {
             this.http2Enabled = http2Enabled;
@@ -138,7 +147,10 @@ public class TransportEncryptionInfo extends TeaModel {
         }
 
         /**
-         * tlsPolicy.
+         * <p>The TLS cipher suite policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_2</p>
          */
         public Builder tlsPolicy(String tlsPolicy) {
             this.tlsPolicy = tlsPolicy;

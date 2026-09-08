@@ -171,7 +171,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API for which you want to update the route.</p>
+         * <p>The ID of the HTTP API to which the route belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cqoub6tlhtgvof7***</p>
@@ -195,7 +195,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The backend service configurations for the route.</p>
+         * <p>The backend service configuration of the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -207,7 +207,7 @@ public class UpdateHttpApiRouteRequest extends Request {
          * <p>The route description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test route</p>
+         * <p>Product center service route</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -216,7 +216,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The list of domain IDs.</p>
+         * <p>The list of domain name IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -246,7 +246,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * mcpRouteConfig.
+         * <p>The MCP route configuration.</p>
          */
         public Builder mcpRouteConfig(McpRouteConfig mcpRouteConfig) {
             this.putBodyParameter("mcpRouteConfig", mcpRouteConfig);
@@ -255,7 +255,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * policyConfigs.
+         * <p>The route-level policy configurations.</p>
          */
         public Builder policyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
             this.putBodyParameter("policyConfigs", policyConfigs);
@@ -427,7 +427,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * groupName.
+             * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -435,7 +438,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * httpDubboTranscoder.
+             * <p>The HTTP-to-Dubbo protocol conversion configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
              */
             public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
                 this.httpDubboTranscoder = httpDubboTranscoder;
@@ -443,7 +449,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * modelName.
+             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -451,7 +460,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * namespace.
+             * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -459,7 +471,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service port (omit for dynamic ports).</p>
+             * <p>The service port. Do not specify this parameter for dynamic ports.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -496,7 +508,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * sourceType.
+             * <p>The service source type. Use MSE_NACOS for HTTP-to-Dubbo conversion scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE_NACOS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -515,7 +530,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The traffic weight percentage.</p>
+             * <p>The percentage value of the traffic ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -585,13 +600,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The backend service scenario. Valid values:</p>
-             * <ul>
-             * <li>SingleService</li>
-             * <li>MultiServiceByRatio</li>
-             * <li>Redirect</li>
-             * <li>Mock</li>
-             * </ul>
+             * <p>The backend service scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>SingleService</p>
@@ -682,7 +691,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * exposedUriPath.
+             * <p>The exposed URI path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mcp/chat</p>
              */
             public Builder exposedUriPath(String exposedUriPath) {
                 this.exposedUriPath = exposedUriPath;
@@ -690,7 +702,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * mcpStatisticsEnable.
+             * <p>Specifies whether to enable MCP statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mcpStatisticsEnable(Boolean mcpStatisticsEnable) {
                 this.mcpStatisticsEnable = mcpStatisticsEnable;
@@ -698,14 +713,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service protocol. Valid values:</p>
-             * <ul>
-             * <li>HTTP</li>
-             * <li>HTTPS</li>
-             * </ul>
+             * <p>The MCP protocol.</p>
              * 
              * <strong>example:</strong>
-             * <p>HTTP</p>
+             * <p>SSE</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

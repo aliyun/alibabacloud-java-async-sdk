@@ -249,7 +249,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         } 
 
         /**
-         * bufferLimit.
+         * <p>The response buffer size in KB. Default value: 1000. Valid values: 1 to 1500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder bufferLimit(Integer bufferLimit) {
             this.bufferLimit = bufferLimit;
@@ -257,7 +260,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * checkRequest.
+         * <p>Specifies whether to check request content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkRequest(Boolean checkRequest) {
             this.checkRequest = checkRequest;
@@ -265,7 +271,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * checkRequestImage.
+         * <p>Specifies whether to check request images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkRequestImage(Boolean checkRequestImage) {
             this.checkRequestImage = checkRequestImage;
@@ -273,7 +282,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * checkResponse.
+         * <p>Specifies whether to check response content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkResponse(Boolean checkResponse) {
             this.checkResponse = checkResponse;
@@ -281,7 +293,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * checkResponseImage.
+         * <p>Specifies whether to check response images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkResponseImage(Boolean checkResponseImage) {
             this.checkResponseImage = checkResponseImage;
@@ -289,7 +304,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * consumerRequestCheckService.
+         * <p>The consumer-level request detection service configuration.</p>
          */
         public Builder consumerRequestCheckService(java.util.List<ConsumerRequestCheckService> consumerRequestCheckService) {
             this.consumerRequestCheckService = consumerRequestCheckService;
@@ -297,7 +312,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * consumerResponseCheckService.
+         * <p>The consumer-level response detection service configuration.</p>
          */
         public Builder consumerResponseCheckService(java.util.List<ConsumerResponseCheckService> consumerResponseCheckService) {
             this.consumerResponseCheckService = consumerResponseCheckService;
@@ -305,7 +320,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * consumerRiskLevel.
+         * <p>The consumer-level risk level configuration.</p>
          */
         public Builder consumerRiskLevel(java.util.List<ConsumerRiskLevel> consumerRiskLevel) {
             this.consumerRiskLevel = consumerRiskLevel;
@@ -313,7 +328,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * pluginStatus.
+         * <p>The plugin running status.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;
@@ -321,7 +336,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * requestCheckService.
+         * <p>The ServiceCode of the request text detection service (system-injected default value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query_security_check</p>
          */
         public Builder requestCheckService(String requestCheckService) {
             this.requestCheckService = requestCheckService;
@@ -329,7 +347,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * requestImageCheckService.
+         * <p>The ServiceCode of the request image detection service (system-injected default value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img_query_guard</p>
          */
         public Builder requestImageCheckService(String requestImageCheckService) {
             this.requestImageCheckService = requestImageCheckService;
@@ -337,7 +358,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * responseCheckService.
+         * <p>The ServiceCode of the response text detection service (system-injected default value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>response_security_check</p>
          */
         public Builder responseCheckService(String responseCheckService) {
             this.responseCheckService = responseCheckService;
@@ -345,7 +369,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * responseImageCheckService.
+         * <p>The ServiceCode of the response image detection service (system-injected default value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img_response_guard</p>
          */
         public Builder responseImageCheckService(String responseImageCheckService) {
             this.responseImageCheckService = responseImageCheckService;
@@ -353,7 +380,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * riskAlertLevel.
+         * <p>The global risk alert level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskAlertLevel(String riskAlertLevel) {
             this.riskAlertLevel = riskAlertLevel;
@@ -361,7 +391,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * riskConfig.
+         * <p>The risk dimension configuration list (system-injected, normalized from ConsumerRiskLevel).</p>
          */
         public Builder riskConfig(java.util.List<RiskConfig> riskConfig) {
             this.riskConfig = riskConfig;
@@ -369,7 +399,10 @@ public class AiSecurityGuardConfig extends TeaModel {
         }
 
         /**
-         * serviceAddress.
+         * <p>The security guardrail service address (green-cip endpoint). Use the VPC internal address when the gateway and security guardrail are in the same region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://green-cip-vpc.cn-shanghai.aliyuncs.com">https://green-cip-vpc.cn-shanghai.aliyuncs.com</a></p>
          */
         public Builder serviceAddress(String serviceAddress) {
             this.serviceAddress = serviceAddress;
@@ -474,7 +507,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             } 
 
             /**
-             * matchType.
+             * <p>The consumer matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exact</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -482,7 +518,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * modalityType.
+             * <p>The modality type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder modalityType(String modalityType) {
                 this.modalityType = modalityType;
@@ -490,7 +529,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -498,7 +540,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * requestCheckService.
+             * <p>The check service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>query_security_check</p>
              */
             public Builder requestCheckService(String requestCheckService) {
                 this.requestCheckService = requestCheckService;
@@ -506,7 +551,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * requestImageCheckService.
+             * <p>The image check service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img_query_guard</p>
              */
             public Builder requestImageCheckService(String requestImageCheckService) {
                 this.requestImageCheckService = requestImageCheckService;
@@ -612,7 +660,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             } 
 
             /**
-             * matchType.
+             * <p>The consumer matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exact</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -620,7 +671,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * modalityType.
+             * <p>The modality type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder modalityType(String modalityType) {
                 this.modalityType = modalityType;
@@ -628,7 +682,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -636,7 +693,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * responseCheckService.
+             * <p>The check service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>query_security_check</p>
              */
             public Builder responseCheckService(String responseCheckService) {
                 this.responseCheckService = responseCheckService;
@@ -644,7 +704,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * responseImageCheckService.
+             * <p>The image check service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img_query_guard</p>
              */
             public Builder responseImageCheckService(String responseImageCheckService) {
                 this.responseImageCheckService = responseImageCheckService;
@@ -737,7 +800,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             } 
 
             /**
-             * level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -745,7 +811,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * matchType.
+             * <p>The consumer matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exact</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -753,7 +822,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -761,7 +833,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The risk dimension type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ContentModeration</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -828,7 +903,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             } 
 
             /**
-             * matchType.
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -836,7 +914,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * pattern.
+             * <p>The consumer matching pattern value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -916,7 +997,7 @@ public class AiSecurityGuardConfig extends TeaModel {
             } 
 
             /**
-             * consumerRules.
+             * <p>The consumer-level matching rules.</p>
              */
             public Builder consumerRules(ConsumerRules consumerRules) {
                 this.consumerRules = consumerRules;
@@ -924,7 +1005,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -932,7 +1016,10 @@ public class AiSecurityGuardConfig extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The risk dimension type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ContentModeration</p>
              */
             public Builder type(String type) {
                 this.type = type;

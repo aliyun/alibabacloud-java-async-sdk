@@ -199,7 +199,10 @@ public class UpdateServiceRequest extends Request {
         } 
 
         /**
-         * serviceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr6pk4tlhtgm58e***</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("serviceId", serviceId);
@@ -217,7 +220,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The agent service configurations.</p>
+         * <p>The agent service configuration.</p>
          */
         public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
             this.putBodyParameter("agentServiceConfig", agentServiceConfig);
@@ -226,7 +229,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The AI service configurations.</p>
+         * <p>The AI service configuration.</p>
          */
         public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
             this.putBodyParameter("aiServiceConfig", aiServiceConfig);
@@ -235,7 +238,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>A DNS service address.</p>
+         * <p>The DNS server addresses.</p>
          */
         public Builder dnsServers(java.util.List<String> dnsServers) {
             this.putBodyParameter("dnsServers", dnsServers);
@@ -244,7 +247,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The health check configurations.</p>
+         * <p>The health check configuration of the service.</p>
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putBodyParameter("healthCheckConfig", healthCheckConfig);
@@ -265,7 +268,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * modelProviderId.
+         * <p>The model provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp-xxx****</p>
          */
         public Builder modelProviderId(String modelProviderId) {
             this.putBodyParameter("modelProviderId", modelProviderId);
@@ -274,7 +280,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The passive health check configurations.</p>
+         * <p>The passive health check parameter settings.</p>
          */
         public Builder outlierDetectionConfig(OutlierDetectionConfig outlierDetectionConfig) {
             this.putBodyParameter("outlierDetectionConfig", outlierDetectionConfig);
@@ -292,7 +298,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The protocol of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -454,7 +460,7 @@ public class UpdateServiceRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable health checks.</p>
+             * <p>Specifies whether to enable health checks for the service.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -465,7 +471,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The normal status codes to be returned. This parameter is required if the health check protocol is HTTP.</p>
+             * <p>The list of expected normal status codes returned by requests. This parameter is required when the protocol is HTTP.</p>
              */
             public Builder expectedStatuses(java.util.List<String> expectedStatuses) {
                 this.expectedStatuses = expectedStatuses;
@@ -473,7 +479,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The healthy threshold.</p>
+             * <p>The healthy threshold for health checks.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -484,7 +490,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The domain name that you want to use for health checks. Optional. This parameter is available if the health check protocol is HTTP.</p>
+             * <p>The domain name for health checks. This parameter is optional and can be configured when the protocol is HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>dev.itemcener.com</p>
@@ -495,7 +501,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The request path of health checks. This parameter is required if the health check protocol is HTTP.</p>
+             * <p>The request path for health checks. This parameter is required when the protocol is HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -506,7 +512,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The health check interval. Unit: seconds</p>
+             * <p>The health check interval. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -517,12 +523,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The protocol over which the system performs health checks.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>TCP</li>
-             * <li>HTTP</li>
-             * </ul>
+             * <p>The protocol used for health checks.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -533,7 +534,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for a health check response. Unit: seconds</p>
+             * <p>The response timeout period for health checks. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -544,7 +545,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The unhealthy threshold.</p>
+             * <p>The unhealthy threshold for health checks.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -653,7 +654,7 @@ public class UpdateServiceRequest extends Request {
             } 
 
             /**
-             * <p>The initial isolation duration after a node is isolated (e.g., 30 seconds). The isolation time is calculated as: k * base_ejection_time (with k initially set to 1). Each subsequent isolation increases the isolation time (k is incremented by 1), while consecutive healthy checks gradually decrease the isolation time (k is decremented by 1).</p>
+             * <p>The base ejection time. This is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated using the formula: k × base_ejection_time (where k starts at 1). Each ejection increases the isolation time (k is incremented by one). If consecutive checks are healthy, the isolation time is gradually reduced (k is decremented by one).</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -676,7 +677,7 @@ public class UpdateServiceRequest extends Request {
 
             /**
              * <p>The panic threshold.</p>
-             * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally, and requests are only sent to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled, and requests are sent to all nodes, including those that have been ejected nodes.</p>
+             * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally and requests are sent only to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled and requests are sent to all nodes, including ejected nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -687,7 +688,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>When the request failure rate of a node reaches this threshold, the system triggers the isolation mechanism of the node.</p>
+             * <p>The failure percentage threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for that node.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -792,7 +793,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The port.</p>
+             * <p>The port number.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>

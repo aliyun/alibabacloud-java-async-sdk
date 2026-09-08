@@ -74,7 +74,7 @@ public class DeleteHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>The ID of the HTTP API to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DeleteHttpApiRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual deletion are executed (including admission checks such as whether a published API cannot be deleted), but the API is not deleted, no associated configurations are cleaned up, and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

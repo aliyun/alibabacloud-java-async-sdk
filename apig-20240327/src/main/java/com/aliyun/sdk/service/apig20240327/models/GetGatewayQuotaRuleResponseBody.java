@@ -93,7 +93,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ruleId&quot;:1001}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +195,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * id.
+             * <p>The subject (API consumer) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-aaa</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -194,7 +206,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The subject (API consumer) name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -274,7 +289,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * id.
+             * <p>The subject ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-xxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -282,7 +300,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The subject name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +311,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectType.
+             * <p>The subject type. Valid values: consumer or consumer_group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer</p>
              */
             public Builder subjectType(String subjectType) {
                 this.subjectType = subjectType;
@@ -513,7 +537,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * baseTimestamp.
+             * <p>The period base timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1745846400000</p>
              */
             public Builder baseTimestamp(Long baseTimestamp) {
                 this.baseTimestamp = baseTimestamp;
@@ -521,7 +548,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * consumerCount.
+             * <p>The number of API consumers associated with the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder consumerCount(Long consumerCount) {
                 this.consumerCount = consumerCount;
@@ -529,7 +559,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * consumers.
+             * <p>The list of subjects (API consumers) bound to this rule.</p>
              */
             public Builder consumers(java.util.List<Consumers> consumers) {
                 this.consumers = consumers;
@@ -537,7 +567,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * periodType.
+             * <p>The quota period type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder periodType(String periodType) {
                 this.periodType = periodType;
@@ -545,7 +578,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * quotaDimension.
+             * <p>The quota dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
              */
             public Builder quotaDimension(String quotaDimension) {
                 this.quotaDimension = quotaDimension;
@@ -553,7 +589,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * quotaLimit.
+             * <p>The quota limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder quotaLimit(Long quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -561,7 +600,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qr-d8j7fpmm1hks65xxxxxx</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -569,7 +611,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily-token-limit</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -577,7 +622,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>The rule status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -585,7 +633,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectCount.
+             * <p>The number of associated subjects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder subjectCount(Long subjectCount) {
                 this.subjectCount = subjectCount;
@@ -593,7 +644,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectType.
+             * <p>The rule subject type. Valid values: consumer or consumer_group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer_group</p>
              */
             public Builder subjectType(String subjectType) {
                 this.subjectType = subjectType;
@@ -601,7 +655,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjects.
+             * <p>The general subject list bound to this rule. Returned only when withSubjects is set to true.</p>
              */
             public Builder subjects(java.util.List<Subjects> subjects) {
                 this.subjects = subjects;
@@ -609,7 +663,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone corresponding to the calendar period, in UTC+x format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GMT+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -617,7 +674,10 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * windowAlignment.
+             * <p>The reset period type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>calendar</p>
              */
             public Builder windowAlignment(String windowAlignment) {
                 this.windowAlignment = windowAlignment;

@@ -80,7 +80,7 @@ public class UpdatePluginAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class UpdatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class UpdatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>F330090D-80F8-557B-8610-7EC7E386B4A4</p>

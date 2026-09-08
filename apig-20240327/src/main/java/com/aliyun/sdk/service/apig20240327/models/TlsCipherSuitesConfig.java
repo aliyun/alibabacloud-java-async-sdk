@@ -67,7 +67,10 @@ public class TlsCipherSuitesConfig extends TeaModel {
         } 
 
         /**
-         * configType.
+         * <p>The configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -75,7 +78,7 @@ public class TlsCipherSuitesConfig extends TeaModel {
         }
 
         /**
-         * tlsCipherSuite.
+         * <p>tlsCipherSuite</p>
          */
         public Builder tlsCipherSuite(java.util.List<TlsCipherSuite> tlsCipherSuite) {
             this.tlsCipherSuite = tlsCipherSuite;
@@ -141,7 +144,10 @@ public class TlsCipherSuitesConfig extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The TLS cipher suite name, such as ECDHE-ECDSA-AES256-GCM-SHA384.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECDHE-ECDSA-AES256-GCM-SHA384</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +155,7 @@ public class TlsCipherSuitesConfig extends TeaModel {
             }
 
             /**
-             * supportVersions.
+             * <p>The supported versions.</p>
              */
             public Builder supportVersions(java.util.List<String> supportVersions) {
                 this.supportVersions = supportVersions;

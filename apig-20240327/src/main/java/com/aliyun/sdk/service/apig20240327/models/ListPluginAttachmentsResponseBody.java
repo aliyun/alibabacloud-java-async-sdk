@@ -93,7 +93,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response payload.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>9640D776-794A-5077-9184-A247CA4B45C1</p>
@@ -283,14 +283,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The types of resource attachments.</p>
-             * <ul>
-             * <li>HttpApi</li>
-             * <li>Operation</li>
-             * <li>GatewayRoute</li>
-             * <li>GatewayDomain</li>
-             * <li>Gateway</li>
-             * </ul>
+             * <p>The plugin mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayRoute</p>
@@ -301,7 +294,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates if enabled.</p>
+             * <p>Indicates whether the plugin mount is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -312,7 +305,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment metadata.</p>
+             * <p>The environment context.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -320,7 +313,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent resource metadata.</p>
+             * <p>The parent resource information.</p>
              */
             public Builder parentResourceInfo(ParentResourceInfo parentResourceInfo) {
                 this.parentResourceInfo = parentResourceInfo;
@@ -328,7 +321,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource attachment.</p>
+             * <p>The plugin mount ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-d0j9t5em1hkncrlo51mg</p>
@@ -339,7 +332,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in type metadata.</p>
+             * <p>The plugin type information.</p>
              */
             public Builder pluginClassInfo(PluginClassInfo pluginClassInfo) {
                 this.pluginClassInfo = pluginClassInfo;
@@ -347,7 +340,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in configurations (Base64-encoded).</p>
+             * <p>The Base64-encoded content of the original plugin configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</p>
@@ -358,7 +351,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in ID.</p>
+             * <p>The plugin ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-cvu6r4um1hko3b3ti0a0</p>
@@ -369,7 +362,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of resource attachments.</p>
+             * <p>The mount resource information.</p>
              */
             public Builder resourceInfos(java.util.List<ResourceInfo> resourceInfos) {
                 this.resourceInfos = resourceInfos;
@@ -462,7 +455,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of resource attachments.</p>
+             * <p>The item details.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -492,7 +485,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

@@ -269,7 +269,7 @@ public class ListHttpApiRoutesRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>The HTTP API ID. This is a path parameter and is required. If not provided, the request URL cannot be constructed. You can obtain valid values from versionedHttpApis[].httpApiId returned by ListHttpApis. This parameter must point to an HTTP API of type Http, HttpIngress, or WebSocket. The Rest type does not support route operations.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31f***</p>
@@ -281,7 +281,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * backendServiceName.
+         * <p>The backend service name. You can use this name to filter routes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-svc</p>
          */
         public Builder backendServiceName(String backendServiceName) {
             this.putQueryParameter("backendServiceName", backendServiceName);
@@ -290,7 +293,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The string that is used to filter routes based on consumer authentication rules. Only authorized APIs are returned.</p>
+         * <p>Filters the API list by a specific consumer authorization rule ID. The response includes only authorized APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -302,17 +305,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The deployment state of the route.</p>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>Deploying: The route is being deployed.</li>
-         * <li>DeployedWithChanges: The route is deployed and modified.</li>
-         * <li>Undeploying: The route is being undeployed.</li>
-         * <li>NotDeployed: The route is not deployed.</li>
-         * <li>Deployed: The route is deployed.</li>
-         * <li>UndeployFailed: The route failed to be undeployed.</li>
-         * <li>DeployFailed: The route failed to be deployed.</li>
-         * </ul>
+         * <p>The deployment status of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>NotDeployed</p>
@@ -324,7 +317,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Specifies to filter routes by domain ID.</p>
+         * <p>Filters route information by domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-xxx</p>
@@ -348,7 +341,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Whether to filter for deployment scenario</p>
+         * <p>Specifies whether this is a deployment scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -360,7 +353,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Cloud-native API Gateway instance.</p>
+         * <p>The cloud-native API gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -384,7 +377,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The route name keyword for a fuzzy search.</p>
+         * <p>Fuzzy match by route name.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -396,7 +389,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number, starting from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -408,7 +401,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The page size. Valid range: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -420,7 +413,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The route path keyword for a fuzzy search.</p>
+         * <p>Fuzzy match by route path.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -432,7 +425,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The consumer authorization information in the response.</p>
+         * <p>Includes consumer authorization information in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -444,7 +437,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The authentication rules of the specified consumer in each route returned.</p>
+         * <p>Includes the authorization rule list of the specified consumer ID for each route in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -456,7 +449,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The mounting information of the specified plug-in in each route returned.</p>
+         * <p>Includes the plug-in attachment information of the specified plug-in ID for each route in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-xxx</p>

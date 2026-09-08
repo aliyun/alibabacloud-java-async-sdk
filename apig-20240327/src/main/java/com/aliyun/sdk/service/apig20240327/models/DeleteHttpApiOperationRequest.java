@@ -75,7 +75,7 @@ public class DeleteHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>The ID of the HTTP API to which the operation to be deleted belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -210,7 +210,7 @@ public class HttpRoute extends TeaModel {
         } 
 
         /**
-         * backend.
+         * <p>The backend service.</p>
          */
         public Builder backend(Backend backend) {
             this.backend = backend;
@@ -218,7 +218,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * builtin.
+         * <p>Indicates whether the route is a system built-in route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder builtin(String builtin) {
             this.builtin = builtin;
@@ -226,7 +229,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * <p>The creation time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1726649310593</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -234,7 +240,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * deployStatus.
+         * <p>The deployment status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed</p>
          */
         public Builder deployStatus(String deployStatus) {
             this.deployStatus = deployStatus;
@@ -242,7 +251,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The route description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Product center staging route</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -250,7 +262,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * domainInfos.
+         * <p>The list of domain name information.</p>
          */
         public Builder domainInfos(java.util.List<DomainInfos> domainInfos) {
             this.domainInfos = domainInfos;
@@ -258,7 +270,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * environmentInfo.
+         * <p>The environment context of the routing.</p>
          */
         public Builder environmentInfo(EnvironmentInfo environmentInfo) {
             this.environmentInfo = environmentInfo;
@@ -266,7 +278,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * gatewayStatus.
+         * <p>The route publish status.</p>
          */
         public Builder gatewayStatus(java.util.Map<String, String> gatewayStatus) {
             this.gatewayStatus = gatewayStatus;
@@ -274,7 +286,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * match.
+         * <p>The route matching rule.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.match = match;
@@ -282,7 +294,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * mcpServerInfo.
+         * <p>The MCP server information.</p>
          */
         public Builder mcpServerInfo(McpServerInfo mcpServerInfo) {
             this.mcpServerInfo = mcpServerInfo;
@@ -290,7 +302,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter-pre-route</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -298,7 +313,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * routeId.
+         * <p>The HttpApi route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-crf5l7tlhtgp91t***</p>
          */
         public Builder routeId(String routeId) {
             this.routeId = routeId;
@@ -306,7 +324,10 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * updateTimestamp.
+         * <p>The update time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1726819895636</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -385,7 +406,10 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cr3v7dllhtgi9s***</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -393,7 +417,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter.dev</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -401,7 +428,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The domain name protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -481,7 +511,10 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * gatewayEdition.
+             * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MultiTenantServerless</p>
              */
             public Builder gatewayEdition(String gatewayEdition) {
                 this.gatewayEdition = gatewayEdition;
@@ -489,7 +522,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cqoohqtlh***</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -497,7 +533,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The gateway name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter-gateway</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +629,10 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cqu19hdlhtgjuv4***</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -598,7 +640,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-crmic3llht***-cn-hangzhou-vpc.alicloudapi.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -606,7 +651,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The domain name access type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -614,7 +662,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The domain name protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -720,7 +771,10 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The environment name alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product center staging environment</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -728,7 +782,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-crhq1u5lhtgju***</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -736,7 +793,7 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * gatewayInfo.
+             * <p>The gateway information.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -744,7 +801,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter-pre</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -752,7 +812,7 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * subDomains.
+             * <p>The list of default second-level domain names of the environment.</p>
              */
             public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;
@@ -819,7 +879,10 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * exposedUriPath.
+             * <p>mcp route path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mcp</p>
              */
             public Builder exposedUriPath(String exposedUriPath) {
                 this.exposedUriPath = exposedUriPath;
@@ -827,7 +890,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The MCP protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSE</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -946,7 +1012,10 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * createFromType.
+             * <p>The creation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nacos</p>
              */
             public Builder createFromType(String createFromType) {
                 this.createFromType = createFromType;
@@ -954,7 +1023,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * importInstanceId.
+             * <p>The Nacos instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>import-001</p>
              */
             public Builder importInstanceId(String importInstanceId) {
                 this.importInstanceId = importInstanceId;
@@ -962,7 +1034,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * importMcpServerId.
+             * <p>The Nacos MCP server identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-002</p>
              */
             public Builder importMcpServerId(String importMcpServerId) {
                 this.importMcpServerId = importMcpServerId;
@@ -970,7 +1045,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * importNamespace.
+             * <p>The Nacos namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder importNamespace(String importNamespace) {
                 this.importNamespace = importNamespace;
@@ -978,7 +1056,7 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * mcpRouteConfig.
+             * <p>The MCP route information.</p>
              */
             public Builder mcpRouteConfig(McpRouteConfig mcpRouteConfig) {
                 this.mcpRouteConfig = mcpRouteConfig;
@@ -986,7 +1064,10 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * mcpServerConfig.
+             * <p>The MCP server metadata configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;config\&quot;:{}}</p>
              */
             public Builder mcpServerConfig(String mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;

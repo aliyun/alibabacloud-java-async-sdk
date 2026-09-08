@@ -253,7 +253,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * consumerGroupId.
+         * <p>The consumer group ID. If specified, the authorization rules of this consumer group are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("consumerGroupId", consumerGroupId);
@@ -262,7 +265,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * consumerGroupNameLike.
+         * <p>The consumer group name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
          */
         public Builder consumerGroupNameLike(String consumerGroupNameLike) {
             this.putQueryParameter("consumerGroupNameLike", consumerGroupNameLike);
@@ -283,7 +289,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The consumer name.</p>
+         * <p>The consumer name for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-xxx</p>
@@ -307,7 +313,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to group the results by API.</p>
+         * <p>Specifies whether to group results by API.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -319,7 +325,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,7 +337,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -355,7 +361,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * principalType.
+         * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumerGroup</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("principalType", principalType);
@@ -388,7 +397,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The resource types.</p>
+         * <p>The service source types.</p>
          * 
          * <strong>example:</strong>
          * <p>K8S</p>

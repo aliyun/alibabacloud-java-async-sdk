@@ -161,6 +161,9 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -179,6 +182,9 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1756348800</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -224,6 +230,9 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1756262400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);

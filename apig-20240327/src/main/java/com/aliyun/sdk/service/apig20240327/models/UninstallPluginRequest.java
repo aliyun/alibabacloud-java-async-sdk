@@ -59,7 +59,7 @@ public class UninstallPluginRequest extends Request {
         } 
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-cvd2b36m1hkhdosfhar0</p>

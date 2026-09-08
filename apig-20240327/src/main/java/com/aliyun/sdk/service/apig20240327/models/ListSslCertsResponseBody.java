@@ -93,7 +93,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -218,7 +218,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of certificate information.</p>
+             * <p>The list of certificates.</p>
              */
             public Builder items(java.util.List<SslCertMetaInfo> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -248,7 +248,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

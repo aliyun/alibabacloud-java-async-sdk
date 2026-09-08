@@ -67,7 +67,10 @@ public class KMSConfig extends TeaModel {
         } 
 
         /**
-         * kmsInstanceId.
+         * <p>The KMS instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-xxxxxxxx</p>
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.kmsInstanceId = kmsInstanceId;
@@ -75,7 +78,10 @@ public class KMSConfig extends TeaModel {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The KMS key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxxxxxxx</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;

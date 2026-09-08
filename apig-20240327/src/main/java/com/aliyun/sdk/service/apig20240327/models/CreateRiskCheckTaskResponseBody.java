@@ -118,6 +118,9 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A0220E-1F41-5260-A418-68286DF6B53D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

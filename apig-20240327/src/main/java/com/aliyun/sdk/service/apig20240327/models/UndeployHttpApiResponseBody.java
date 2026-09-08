@@ -80,7 +80,7 @@ public class UndeployHttpApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class UndeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class UndeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>

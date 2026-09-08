@@ -241,7 +241,7 @@ public class ImportHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>The API deployment configuration.</p>
+         * <p>The API deployment configurations.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -250,10 +250,10 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The imported API description (255-byte limit). If not specified, a description is extracted from the API definition file. A maximum of 255 bytes is supported.</p>
+         * <p>The description of the imported API. If not specified, the description is extracted from the API definition. Maximum length: 255 bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>API for testing</p>
+         * <p>Test API</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -262,7 +262,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a precheck. If set to true, a check is performed without actual import.</p>
+         * <p>Specifies whether to perform a dry run. If enabled, only validation is performed without the actual import.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -274,7 +274,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
@@ -298,7 +298,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The imported API name. If not specified, a name is extracted from the API definition file. If the API name and versioning configuration already exist, this import will update the existing API definition based on the strategy field.</p>
+         * <p>The name of the imported API. If not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, this import updates the existing API definition based on the strategy field.</p>
          * 
          * <strong>example:</strong>
          * <p>import-test</p>
@@ -313,7 +313,7 @@ public class ImportHttpApiRequest extends Request {
          * <p>The <a href="https://help.aliyun.com/document_detail/151181.html">resource group ID</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfm3q4zjh7fkki</p>
+         * <p>rg-aek23nsa353vmra</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -322,7 +322,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded API definition (supports OAS 2.0/OAS 3.0 in YAML/JSON). This parameter has higher priority than the specFileUrl parameter. However, if the file size exceeds 10 MB, use the specFileUrl parameter to pass the definition.</p>
+         * <p>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML or JSON format. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</p>
@@ -334,10 +334,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The download URL of the API definition file. Must be either a publicly accessible Object Storage Service (OSS) URL or an OSS intranet endpoint within the same region. Requires download permissions. For OSS URLs that are not publicly readable, refer to <a href="https://help.aliyun.com/document_detail/39607.html">https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects</a> and use URLs with download permissions. Currently, only OSS URLs are supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-api/api.yaml">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-api/api.yaml</a></p>
+         * <p>The download URL of the API definition file. The URL must be accessible over the Internet or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</p>
          */
         public Builder specFileUrl(String specFileUrl) {
             this.putBodyParameter("specFileUrl", specFileUrl);
@@ -346,7 +343,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The OSS configuration details.</p>
+         * <p>The OSS information.</p>
          */
         public Builder specOssConfig(SpecOssConfig specOssConfig) {
             this.putBodyParameter("specOssConfig", specOssConfig);
@@ -355,12 +352,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The conflict resolution strategy when the API to be imported has the same name and version as an existing one. Valid values:</p>
-         * <ul>
-         * <li>SpecOnly: full override.</li>
-         * <li>SpecFirst: Merge with priority on the newly imported file. New APIs are created and existing ones are updated. APIs not included in the file remain unchanged.</li>
-         * <li>ExistFirst (default): Merge with priority on existing APIs. New APIs are created but existing ones remain unchanged. If this parameter is not specified, the ExistFirst policy takes effect.</li>
-         * </ul>
+         * <p>The update strategy to use when the imported API name and version management match an existing API. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ExistFirst</p>
@@ -372,7 +364,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The target REST API ID for direct updates. If specified, the import operation will directly update the designated API instead of creating new APIs or updating existing APIs based on the name and version. Only REST APIs can be specified.</p>
+         * <p>If this field is specified, the import updates the specified API instead of importing a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxxx</p>
@@ -384,7 +376,7 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API versioning configuration. If versioning is enabled, an imported API that matches both the version number and the API name of an existing API will update that API. If versioning is disabled, an imported API that matches the API name of an existing API will update it.</p>
+         * <p>The API version configuration. If version configuration is enabled and the version number and API name match an existing API, this import is treated as an update. If version configuration is not enabled and the API name matches an existing API, this import is treated as an update.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
@@ -393,7 +385,10 @@ public class ImportHttpApiRequest extends Request {
         }
 
         /**
-         * withGatewayExtension.
+         * <p>Specifies whether to import gateway extension information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withGatewayExtension(Boolean withGatewayExtension) {
             this.putBodyParameter("withGatewayExtension", withGatewayExtension);
@@ -474,10 +469,10 @@ public class ImportHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>The OSS bucket name.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
-             * <p>api-1</p>
+             * <p>gms-service-prod</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -485,7 +480,7 @@ public class ImportHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The full file path in OSS.</p>
+             * <p>The full path of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>/test/swagger.json</p>
@@ -499,7 +494,7 @@ public class ImportHttpApiRequest extends Request {
              * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

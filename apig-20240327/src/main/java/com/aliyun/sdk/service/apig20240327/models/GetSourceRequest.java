@@ -59,7 +59,7 @@ public class GetSourceRequest extends Request {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The primary resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-d1596kem1hkv3o72qkdg</p>

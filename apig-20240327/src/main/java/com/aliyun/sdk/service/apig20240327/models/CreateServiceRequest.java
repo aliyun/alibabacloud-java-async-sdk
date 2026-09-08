@@ -115,7 +115,7 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * <p>The gateway instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq7l5s5lhtg***</p>
@@ -139,7 +139,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The list of service configurations.</p>
+         * <p>The list of service configurations. At least one service configuration is required.</p>
          */
         public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.putBodyParameter("serviceConfigs", serviceConfigs);
@@ -148,23 +148,16 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The service source type. Valid values:</p>
+         * <p>The service source. Valid values:</p>
          * <ul>
-         * <li>MSE_NACOS: MSE Nacos instance services</li>
-         * <li>K8S: Container Service for Kubernetes (ACK) cluster services</li>
-         * <li>VIP: fixed IP addresses</li>
-         * <li>DNS: Domain Name System (DNS) domains</li>
-         * <li>FC3: Function Compute services</li>
-         * <li>SAE_K8S_SERVICE: Serverless App Engine (SAE) Kubernetes services</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SAE_K8S_SERVICE</li>
-         * <li>K8S</li>
-         * <li>FC3</li>
-         * <li>DNS</li>
-         * <li>VIP</li>
-         * <li>MSE_NACOS</li>
+         * <li>MSE_NACOS: a service in MSE Nacos.</li>
+         * <li>K8S: a service in a Kubernetes cluster of Container Service.</li>
+         * <li>VIP: a fixed address service.</li>
+         * <li>DNS: a DNS domain name service.</li>
+         * <li>FC3: a service in Function Compute.</li>
+         * <li>SAE_K8S_SERVICE: an SAE Kubernetes service.</li>
+         * <li>AI: an AI service.</li>
+         * <li>AGENT: an Agent service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +170,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>clientToken</p>
+         * <p>The client token.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -235,7 +228,7 @@ public class CreateServiceRequest extends Request {
             } 
 
             /**
-             * <p>Skip AI chat completion verification</p>
+             * <p>Specifies whether to skip AI chat completion verification.</p>
              */
             public Builder skipVerifyAIChatCompletion(Boolean skipVerifyAIChatCompletion) {
                 this.skipVerifyAIChatCompletion = skipVerifyAIChatCompletion;
@@ -432,7 +425,7 @@ public class CreateServiceRequest extends Request {
             } 
 
             /**
-             * <p>The list of domain names or fixed IP addresses.</p>
+             * <p>The list of domain names or fixed addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -440,7 +433,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>Agent service configuration</p>
+             * <p>The Agent service configuration. Required when sourceType is AGENT.</p>
              */
             public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
                 this.agentServiceConfig = agentServiceConfig;
@@ -448,7 +441,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The AI service configurations.</p>
+             * <p>The AI service configuration. Required when sourceType is AI.</p>
              */
             public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
                 this.aiServiceConfig = aiServiceConfig;
@@ -456,7 +449,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The list of DNS service addresses.</p>
+             * <p>The list of DNS server addresses.</p>
              */
             public Builder dnsServers(java.util.List<String> dnsServers) {
                 this.dnsServers = dnsServers;
@@ -464,7 +457,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>Express type</p>
+             * <p>The service expression type that identifies the special type or mode of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -475,7 +468,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The service group name. This parameter is required if sourceType is set to MSE_NACOS.</p>
+             * <p>The service group name. Required when sourceType is MSE_NACOS.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -486,7 +479,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * modelProviderId.
+             * <p>The model provider ID. This parameter is applicable only to AI services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp-xxx****</p>
              */
             public Builder modelProviderId(String modelProviderId) {
                 this.modelProviderId = modelProviderId;
@@ -494,7 +490,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The service name.</p>
+             * <p>The service name. Required when sourceType is FC3.</p>
              * 
              * <strong>example:</strong>
              * <p>user-service</p>
@@ -505,12 +501,12 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The service namespace. This parameter is required when sourceType is set to K8S or MSE_NACOS.</p>
+             * <p>The namespace of the service:</p>
              * <ul>
-             * <li>If sourceType is set to K8S, this parameter specifies the namespace where the K8s service resides.</li>
-             * <li>If sourceType is set to MSE_NACOS, this parameter specifies a namespace in Nacos.</li>
+             * <li>If sourceType is K8S, this indicates the namespace of the Kubernetes service.</li>
+             * <li>If sourceType is MSE_NACOS, this indicates the namespace in Nacos.</li>
              * </ul>
-             * <p>This parameter is required if sourceType is set to K8S or MSE_NACOS.</p>
+             * <p>Required when sourceType is K8S or MSE_NACOS.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLIC</p>
@@ -521,7 +517,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The function version/alias.</p>
+             * <p>The function version or alias.</p>
              * 
              * <strong>example:</strong>
              * <p>LATEST</p>
@@ -532,7 +528,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>Service source ID</p>
+             * <p>The service source ID. Required in multi-Nacos instance scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>nacos-instance-001</p>
@@ -543,7 +539,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>Validation options</p>
+             * <p>The validation options for service verification configuration.</p>
              */
             public Builder validationOptions(ValidationOptions validationOptions) {
                 this.validationOptions = validationOptions;

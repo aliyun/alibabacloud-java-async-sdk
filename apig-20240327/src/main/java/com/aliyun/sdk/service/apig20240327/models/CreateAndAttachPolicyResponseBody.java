@@ -93,10 +93,10 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>Ok</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -104,7 +104,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to trace the call link.</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -192,7 +192,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The association information of the policy.</p>
+             * <p>The attachment information.</p>
              */
             public Builder attachment(Attachment attachment) {
                 this.attachment = attachment;
@@ -200,10 +200,10 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The ID of the newly created policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>p-cq7l5s5lhtgi6qasrdc0</p>
+             * <p>plc-xxx</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;

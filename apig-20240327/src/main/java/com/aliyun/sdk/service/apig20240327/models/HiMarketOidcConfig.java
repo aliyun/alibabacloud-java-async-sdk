@@ -132,7 +132,7 @@ public class HiMarketOidcConfig extends TeaModel {
         } 
 
         /**
-         * authCodeConfig.
+         * <p>The OAuth2 Authorization Code configuration.</p>
          */
         public Builder authCodeConfig(AuthCodeConfig authCodeConfig) {
             this.authCodeConfig = authCodeConfig;
@@ -140,7 +140,10 @@ public class HiMarketOidcConfig extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether the OIDC configuration is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -148,7 +151,10 @@ public class HiMarketOidcConfig extends TeaModel {
         }
 
         /**
-         * grantType.
+         * <p>The authorization type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorization_code</p>
          */
         public Builder grantType(String grantType) {
             this.grantType = grantType;
@@ -156,7 +162,7 @@ public class HiMarketOidcConfig extends TeaModel {
         }
 
         /**
-         * identityMapping.
+         * <p>The identity field mapping configuration.</p>
          */
         public Builder identityMapping(IdentityMapping identityMapping) {
             this.identityMapping = identityMapping;
@@ -164,7 +170,10 @@ public class HiMarketOidcConfig extends TeaModel {
         }
 
         /**
-         * logoUrl.
+         * <p>The provider logo URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/logo.png">https://example.com/logo.png</a></p>
          */
         public Builder logoUrl(String logoUrl) {
             this.logoUrl = logoUrl;
@@ -172,7 +181,10 @@ public class HiMarketOidcConfig extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The OIDC configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-oidc-config</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -180,7 +192,10 @@ public class HiMarketOidcConfig extends TeaModel {
         }
 
         /**
-         * provider.
+         * <p>The OIDC provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云IDaaS</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -337,7 +352,10 @@ public class HiMarketOidcConfig extends TeaModel {
             } 
 
             /**
-             * authorizationEndpoint.
+             * <p>The authorization endpoint URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idaas.example.com/oauth2/authorize">https://idaas.example.com/oauth2/authorize</a></p>
              */
             public Builder authorizationEndpoint(String authorizationEndpoint) {
                 this.authorizationEndpoint = authorizationEndpoint;
@@ -345,7 +363,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * clientId.
+             * <p>The OAuth2 client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-client-id</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -353,7 +374,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * clientSecret.
+             * <p>The OAuth2 client secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-client-secret</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -361,7 +385,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * issuer.
+             * <p>The OIDC issuer URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idaas.example.com">https://idaas.example.com</a></p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -369,7 +396,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * jwkSetUri.
+             * <p>The JWKS public key set URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idaas.example.com/.well-known/jwks.json">https://idaas.example.com/.well-known/jwks.json</a></p>
              */
             public Builder jwkSetUri(String jwkSetUri) {
                 this.jwkSetUri = jwkSetUri;
@@ -377,7 +407,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * redirectUri.
+             * <p>The OAuth2 redirect URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://gateway.example.com/callback">https://gateway.example.com/callback</a></p>
              */
             public Builder redirectUri(String redirectUri) {
                 this.redirectUri = redirectUri;
@@ -385,7 +418,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * scopes.
+             * <p>The OAuth2 authorization scopes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openid profile email</p>
              */
             public Builder scopes(String scopes) {
                 this.scopes = scopes;
@@ -393,7 +429,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * tokenEndpoint.
+             * <p>The token endpoint URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idaas.example.com/oauth2/token">https://idaas.example.com/oauth2/token</a></p>
              */
             public Builder tokenEndpoint(String tokenEndpoint) {
                 this.tokenEndpoint = tokenEndpoint;
@@ -401,7 +440,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * userInfoEndpoint.
+             * <p>The UserInfo endpoint URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idaas.example.com/userinfo">https://idaas.example.com/userinfo</a></p>
              */
             public Builder userInfoEndpoint(String userInfoEndpoint) {
                 this.userInfoEndpoint = userInfoEndpoint;
@@ -494,7 +536,7 @@ public class HiMarketOidcConfig extends TeaModel {
             } 
 
             /**
-             * customFields.
+             * <p>The custom field mappings.</p>
              */
             public Builder customFields(java.util.Map<String, String> customFields) {
                 this.customFields = customFields;
@@ -502,7 +544,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * emailField.
+             * <p>The identity field name that corresponds to the email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>email</p>
              */
             public Builder emailField(String emailField) {
                 this.emailField = emailField;
@@ -510,7 +555,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * userIdField.
+             * <p>The identity field name that corresponds to the user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sub</p>
              */
             public Builder userIdField(String userIdField) {
                 this.userIdField = userIdField;
@@ -518,7 +566,10 @@ public class HiMarketOidcConfig extends TeaModel {
             }
 
             /**
-             * userNameField.
+             * <p>The identity field name that corresponds to the username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder userNameField(String userNameField) {
                 this.userNameField = userNameField;

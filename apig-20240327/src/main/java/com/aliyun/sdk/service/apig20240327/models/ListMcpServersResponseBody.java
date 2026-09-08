@@ -93,7 +93,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response payload.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -205,7 +205,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP server ID.</p>
+             * <p>MCP Server ID</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-adfef2334fa</p>
@@ -216,7 +216,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MCP server.</p>
+             * <p>The MCP server name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-mcp</p>
@@ -318,10 +318,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronized MCP server ID.</p>
+             * <p>The synced MCP server ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>nacos-mcp-001</p>
+             * <p>The synced MCP server ID</p>
              */
             public Builder importMcpServerId(String importMcpServerId) {
                 this.importMcpServerId = importMcpServerId;
@@ -646,7 +646,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API ID.</p>
+             * <p>API ID。</p>
              * 
              * <strong>example:</strong>
              * <p>api-xxx</p>
@@ -657,7 +657,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
+             * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
              */
             public Builder assembledSources(java.util.List<AssembledSources> assembledSources) {
                 this.assembledSources = assembledSources;
@@ -673,12 +673,14 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of source for MCP server creation. Valid values: </p>
-             * <p>ApiGatewayHttpToMCP 
-             * ApiGatewayMcpHosting 
-             * ApiGatewayAssembly 
-             * NacosHttpToMCP 
-             * NacosMcpHosting</p>
+             * <p>The creation source type. Valid values:</p>
+             * <ul>
+             * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP.</li>
+             * <li>ApiGatewayMcpHosting: gateway-managed MCP direct proxy.</li>
+             * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
+             * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP.</li>
+             * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ApiGatewayHttpToMCP</p>
@@ -689,7 +691,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publishing status of the API in the current environment.</p>
+             * <p>The deployment status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployed</p>
@@ -703,7 +705,7 @@ public class ListMcpServersResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>My MCP Server</p>
+             * <p>This is the test environment for the xx project of xxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -711,7 +713,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name IDs.</p>
+             * <p>The list of domain name IDs.</p>
              */
             public Builder domainIds(java.util.List<String> domainIds) {
                 this.domainIds = domainIds;
@@ -719,7 +721,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of domain information.</p>
+             * <p>The list of domain name information.</p>
              */
             public Builder domainInfos(java.util.List<HttpApiDomainInfo> domainInfos) {
                 this.domainInfos = domainInfos;
@@ -738,7 +740,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP, and the type parameter is set to RealMCP.</p>
+             * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
              * 
              * <strong>example:</strong>
              * <p>/sse</p>
@@ -768,10 +770,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP-to-MCP configurations.</p>
+             * <p>The HTTP-to-MCP configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>mcp spec content</p>
+             * <p>Base64-encoded value of the HTTP-to-MCP configuration</p>
              */
             public Builder mcpServerConfig(String mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;
@@ -779,7 +781,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP server ID.</p>
+             * <p>MCP Server ID</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-feaff34va</p>
@@ -801,7 +803,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether MCP observability is enabled. Default value: false.</p>
+             * <p>Specifies whether MCP observability is enabled. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -812,7 +814,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP information synchronized and managed by Nacos.</p>
+             * <p>The Nacos-synced managed MCP information.</p>
              */
             public Builder nacosMcpSyncInfo(NacosMcpSyncInfo nacosMcpSyncInfo) {
                 this.nacosMcpSyncInfo = nacosMcpSyncInfo;
@@ -820,7 +822,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MCP server.</p>
+             * <p>The MCP server name.</p>
              * 
              * <strong>example:</strong>
              * <p>itemcenter-dev-cluster</p>
@@ -842,7 +844,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MCP server associated route.</p>
+             * <p>The route ID associated with the MCP server.</p>
              * 
              * <strong>example:</strong>
              * <p>hr-d11cj86m1hkvop6mp42g</p>
@@ -853,10 +855,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the MCP server. Valid values: RealMCP and AssemblyMCP.</p>
+             * <p>The MCP server type.</p>
              * 
              * <strong>example:</strong>
-             * <p>RealMCP</p>
+             * <p>Valid values: RealMCP, AssemblyMCP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -949,7 +951,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of MCP servers.</p>
+             * <p>The MCP server list information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -979,7 +981,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>

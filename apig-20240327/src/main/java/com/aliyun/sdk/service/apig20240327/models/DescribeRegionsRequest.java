@@ -59,7 +59,10 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * language.
+         * <p>The language of the response. Valid values: zh, en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("language", language);

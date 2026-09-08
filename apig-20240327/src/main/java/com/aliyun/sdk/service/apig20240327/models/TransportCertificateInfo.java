@@ -184,7 +184,10 @@ public class TransportCertificateInfo extends TeaModel {
         } 
 
         /**
-         * algorithm.
+         * <p>The signature/key algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder algorithm(String algorithm) {
             this.algorithm = algorithm;
@@ -192,7 +195,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * certIdentifier.
+         * <p>The certificate identifier (certificate ID under the APIG cloud account).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-1（1716***@cn-hangzhou 形态）</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -200,7 +206,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * certName.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-name</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -208,7 +217,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * certificateMatchStatus.
+         * <p>The match status between the certificate and gateway instance domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Matched</p>
          */
         public Builder certificateMatchStatus(String certificateMatchStatus) {
             this.certificateMatchStatus = certificateMatchStatus;
@@ -216,7 +228,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * commonName.
+         * <p>The certificate Common Name (CN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.example.com</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -224,7 +239,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * coveredDomains.
+         * <p>The set of covered domain names parsed from CN and SAN (deduplicated in lowercase, may contain *. wildcards).</p>
          */
         public Builder coveredDomains(java.util.List<String> coveredDomains) {
             this.coveredDomains = coveredDomains;
@@ -232,7 +247,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * issuer.
+         * <p>The certificate issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DigiCert Secure Site CN CA G3</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -240,7 +258,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * matchedDomains.
+         * <p>The gateway instance domain names matched by covered domains (ordered by instance domain name, deduplicated).</p>
          */
         public Builder matchedDomains(java.util.List<String> matchedDomains) {
             this.matchedDomains = matchedDomains;
@@ -248,7 +266,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * notAfterTimestamp.
+         * <p>The expiration timestamp (Unix milliseconds, from the certificate afterDate).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747958400000</p>
          */
         public Builder notAfterTimestamp(Long notAfterTimestamp) {
             this.notAfterTimestamp = notAfterTimestamp;
@@ -256,7 +277,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * notBeforeTimestamp.
+         * <p>The effective period UNIX timestamp (Unix milliseconds, from the certificate beforeDate).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716336000000</p>
          */
         public Builder notBeforeTimestamp(Long notBeforeTimestamp) {
             this.notBeforeTimestamp = notBeforeTimestamp;
@@ -264,7 +288,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * sans.
+         * <p>The raw SAN string (separated by commas, semicolons, or whitespace. Elements may have a DNS: prefix).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DNS:*.example.org, DNS:foo.example.net</p>
          */
         public Builder sans(String sans) {
             this.sans = sans;

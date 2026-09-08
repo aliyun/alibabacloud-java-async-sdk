@@ -93,7 +93,7 @@ public class UpdateDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class UpdateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class UpdateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class UpdateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this value to trace the API call.</p>
+         * <p>The request ID, which is used to trace the API call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>4BACB05C-3FE2-588F-9148-700C5C026B74</p>
@@ -179,10 +179,10 @@ public class UpdateDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The released version ID.</p>
+             * <p>The publish version ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>apr-xxx</p>
+             * <p>apr-xxxxx</p>
              */
             public Builder deployRevisionId(String deployRevisionId) {
                 this.deployRevisionId = deployRevisionId;

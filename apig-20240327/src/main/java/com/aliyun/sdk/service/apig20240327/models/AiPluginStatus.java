@@ -80,7 +80,7 @@ public class AiPluginStatus extends TeaModel {
         } 
 
         /**
-         * errorLogs.
+         * <p>The list of plug-in runtime error logs. Each item is a map[string]any key-value pair.</p>
          */
         public Builder errorLogs(java.util.List<java.util.Map<String, ?>> errorLogs) {
             this.errorLogs = errorLogs;
@@ -88,7 +88,10 @@ public class AiPluginStatus extends TeaModel {
         }
 
         /**
-         * pluginId.
+         * <p>The plug-in instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-xxx</p>
          */
         public Builder pluginId(String pluginId) {
             this.pluginId = pluginId;
@@ -96,7 +99,10 @@ public class AiPluginStatus extends TeaModel {
         }
 
         /**
-         * serviceHealthy.
+         * <p>Indicates whether the backend service that the plugin depends on is healthy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceHealthy(Boolean serviceHealthy) {
             this.serviceHealthy = serviceHealthy;

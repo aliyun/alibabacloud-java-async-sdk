@@ -93,7 +93,10 @@ public class SubDomainInfo extends TeaModel {
         } 
 
         /**
-         * domainId.
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cpudb0llhtgl2djvq2sg</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -101,7 +104,10 @@ public class SubDomainInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +115,10 @@ public class SubDomainInfo extends TeaModel {
         }
 
         /**
-         * networkType.
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -117,7 +126,10 @@ public class SubDomainInfo extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type supported by the subdomain. Valid values: HTTP, HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;

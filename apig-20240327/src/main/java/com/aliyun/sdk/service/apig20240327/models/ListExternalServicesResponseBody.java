@@ -93,7 +93,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListExternalServicesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The list of APIs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to upload data. Please try again</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9B03B59-B2D6-51B0-A7E9-AF8466E320CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable-slash-merge</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +203,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -271,7 +286,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -279,7 +297,10 @@ public class ListExternalServicesResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceShowName.
+             * <p>The display name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -287,7 +308,7 @@ public class ListExternalServicesResponseBody extends TeaModel {
             }
 
             /**
-             * services.
+             * <p>The backend services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;
@@ -341,7 +362,7 @@ public class ListExternalServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The service information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

@@ -210,7 +210,18 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
         /**
-         * backendScene.
+         * <p>The publishing scenario.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SingleService</li>
+         * <li>MultiServiceByRatio</li>
+         * <li>MultiServiceByContent</li>
+         * <li>MultiServiceByTag</li>
+         * <li>Mock</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SingleService</p>
          */
         public Builder backendScene(String backendScene) {
             this.backendScene = backendScene;
@@ -218,7 +229,17 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * backendType.
+         * <p>The type of the backend service.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DNS: a DNS domain name</li>
+         * <li>Service: an existing service</li>
+         * <li>VIP: a fixed IP address</li>
+         * <li>CloudProduct: a cloud service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Service</p>
          */
         public Builder backendType(String backendType) {
             this.backendType = backendType;
@@ -226,7 +247,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * cloudProductConfig.
+         * <p>The cloud service configurations.</p>
          */
         public Builder cloudProductConfig(CloudProductConfig cloudProductConfig) {
             this.cloudProductConfig = cloudProductConfig;
@@ -234,7 +255,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * <p>The publishing timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718807057927</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -242,7 +266,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * customDomains.
+         * <p>The custom domain names.</p>
          */
         public Builder customDomains(java.util.List<HttpApiDomainInfo> customDomains) {
             this.customDomains = customDomains;
@@ -250,7 +274,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * dnsConfigs.
+         * <p>The configurations of DNS domain names. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
          */
         public Builder dnsConfigs(java.util.List<DnsConfigs> dnsConfigs) {
             this.dnsConfigs = dnsConfigs;
@@ -258,7 +282,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * environmentInfo.
+         * <p>The environment information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentInfo(EnvironmentInfo environmentInfo) {
             this.environmentInfo = environmentInfo;
@@ -266,7 +293,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * isCurrentVersion.
+         * <p>Specifies whether the current version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isCurrentVersion(Boolean isCurrentVersion) {
             this.isCurrentVersion = isCurrentVersion;
@@ -274,7 +304,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * operations.
+         * <p>The operations.</p>
          */
         public Builder operations(java.util.List<HttpApiOperationInfo> operations) {
             this.operations = operations;
@@ -282,7 +312,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * revisionId.
+         * <p>The published version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apr-xxx</p>
          */
         public Builder revisionId(String revisionId) {
             this.revisionId = revisionId;
@@ -290,7 +323,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * serviceConfigs.
+         * <p>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
          */
         public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
@@ -298,7 +331,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * subDomains.
+         * <p>The default domain names of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx.com</p>
          */
         public Builder subDomains(java.util.List<HttpApiDomainInfo> subDomains) {
             this.subDomains = subDomains;
@@ -306,7 +342,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * vipConfigs.
+         * <p>The configurations of fixed IP addresses. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
          */
         public Builder vipConfigs(java.util.List<VipConfigs> vipConfigs) {
             this.vipConfigs = vipConfigs;
@@ -437,7 +473,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * gatewayServiceId.
+             * <p>The associated service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gs-xxx</p>
              */
             public Builder gatewayServiceId(String gatewayServiceId) {
                 this.gatewayServiceId = gatewayServiceId;
@@ -445,7 +484,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching conditions.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -453,7 +492,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The K8s service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -461,7 +503,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The K8s namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -469,7 +514,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -477,7 +525,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The service protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -485,7 +536,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The service weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -591,7 +645,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * gatewayServiceId.
+             * <p>The associated service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gs-xxx</p>
              */
             public Builder gatewayServiceId(String gatewayServiceId) {
                 this.gatewayServiceId = gatewayServiceId;
@@ -599,7 +656,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching conditions.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -607,7 +664,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-function</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -615,7 +675,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * qualifier.
+             * <p>The function version or alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LATEST</p>
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -623,7 +686,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The service weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -742,7 +808,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * gatewayServiceId.
+             * <p>The associated service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gs-xxx</p>
              */
             public Builder gatewayServiceId(String gatewayServiceId) {
                 this.gatewayServiceId = gatewayServiceId;
@@ -750,7 +819,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -758,7 +830,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching conditions.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -766,7 +838,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The Nacos service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -774,7 +849,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The Nacos namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -782,7 +860,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The service weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -875,7 +956,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * cloudProductType.
+             * <p>The type of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FC</p>
              */
             public Builder cloudProductType(String cloudProductType) {
                 this.cloudProductType = cloudProductType;
@@ -883,7 +967,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * containerServiceConfigs.
+             * <p>The ACK configurations.</p>
              */
             public Builder containerServiceConfigs(java.util.List<ContainerServiceConfigs> containerServiceConfigs) {
                 this.containerServiceConfigs = containerServiceConfigs;
@@ -891,7 +975,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * functionConfigs.
+             * <p>The Function Compute configurations.</p>
              */
             public Builder functionConfigs(java.util.List<FunctionConfigs> functionConfigs) {
                 this.functionConfigs = functionConfigs;
@@ -899,7 +983,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * mseNacosConfigs.
+             * <p>The MSE Nacos configurations.</p>
              */
             public Builder mseNacosConfigs(java.util.List<MseNacosConfigs> mseNacosConfigs) {
                 this.mseNacosConfigs = mseNacosConfigs;
@@ -979,7 +1063,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * dnsList.
+             * <p>The DNS domain names.</p>
              */
             public Builder dnsList(java.util.List<String> dnsList) {
                 this.dnsList = dnsList;
@@ -987,7 +1071,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching condition. This condition is valid only in content-based routing.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -995,7 +1079,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1062,7 +1149,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1070,7 +1160,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1163,7 +1256,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The environment alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -1171,7 +1267,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -1179,7 +1278,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * gatewayInfo.
+             * <p>The instance information.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -1187,7 +1286,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1306,7 +1408,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * gatewayServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gs-xxx</p>
              */
             public Builder gatewayServiceId(String gatewayServiceId) {
                 this.gatewayServiceId = gatewayServiceId;
@@ -1314,7 +1419,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching conditions.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1322,7 +1427,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1330,7 +1438,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The service protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1338,7 +1449,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1346,7 +1460,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The service weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1426,7 +1543,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * endpoints.
+             * <p>The IP addresses.</p>
              */
             public Builder endpoints(java.util.List<String> endpoints) {
                 this.endpoints = endpoints;
@@ -1434,7 +1551,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching condition. This condition is valid only in content-based routing.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1442,7 +1559,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

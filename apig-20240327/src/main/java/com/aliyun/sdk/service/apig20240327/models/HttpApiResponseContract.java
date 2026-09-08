@@ -68,6 +68,7 @@ public class HttpApiResponseContract extends TeaModel {
         } 
 
         /**
+         * <p>The content type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -79,7 +80,7 @@ public class HttpApiResponseContract extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The response definition.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -171,7 +172,10 @@ public class HttpApiResponseContract extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>The response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -179,7 +183,10 @@ public class HttpApiResponseContract extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The response description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -187,7 +194,10 @@ public class HttpApiResponseContract extends TeaModel {
             }
 
             /**
-             * example.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;result&quot;: &quot;ok&quot;}</p>
              */
             public Builder example(String example) {
                 this.example = example;
@@ -195,7 +205,21 @@ public class HttpApiResponseContract extends TeaModel {
             }
 
             /**
-             * jsonSchema.
+             * <p>The JSON definition description of the response body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;type&quot;: &quot;object&quot;,
+             *     &quot;required&quot;: [
+             *         &quot;result&quot;
+             *     ],
+             *     &quot;properties&quot;: {
+             *         &quot;result&quot;: {
+             *             &quot;type&quot;: &quot;string&quot;,
+             *             &quot;description&quot;: &quot;This is a description.&quot;
+             *         }
+             *     }
+             * }</p>
              */
             public Builder jsonSchema(String jsonSchema) {
                 this.jsonSchema = jsonSchema;

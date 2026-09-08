@@ -119,7 +119,10 @@ public class PolicyDetailInfo extends TeaModel {
         } 
 
         /**
-         * classId.
+         * <p>The policy class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cls-xxx</p>
          */
         public Builder classId(String classId) {
             this.classId = classId;
@@ -127,7 +130,10 @@ public class PolicyDetailInfo extends TeaModel {
         }
 
         /**
-         * className.
+         * <p>The policy type name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RateLimit</p>
          */
         public Builder className(String className) {
             this.className = className;
@@ -135,7 +141,10 @@ public class PolicyDetailInfo extends TeaModel {
         }
 
         /**
-         * config.
+         * <p>The policy configuration content (JSON string).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;rate&quot;:100,&quot;burst&quot;:50}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -143,7 +152,10 @@ public class PolicyDetailInfo extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>每秒限流100次</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -151,7 +163,10 @@ public class PolicyDetailInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-rate-limit</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -159,7 +174,10 @@ public class PolicyDetailInfo extends TeaModel {
         }
 
         /**
-         * policyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plc-xxx</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;

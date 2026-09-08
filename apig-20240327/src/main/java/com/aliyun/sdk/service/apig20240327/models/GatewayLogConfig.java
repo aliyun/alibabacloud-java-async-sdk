@@ -54,7 +54,7 @@ public class GatewayLogConfig extends TeaModel {
         } 
 
         /**
-         * slsConfig.
+         * <p>The Simple Log Service configurations.</p>
          */
         public Builder slsConfig(SlsConfig slsConfig) {
             this.slsConfig = slsConfig;
@@ -107,7 +107,10 @@ public class GatewayLogConfig extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to activate Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;

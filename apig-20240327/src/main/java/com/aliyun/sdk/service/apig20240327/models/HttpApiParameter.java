@@ -121,7 +121,10 @@ public class HttpApiParameter extends TeaModel {
         } 
 
         /**
-         * defaultValue.
+         * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -129,7 +132,10 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The example description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -137,7 +143,10 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
-         * exampleValue.
+         * <p>The sample value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder exampleValue(String exampleValue) {
             this.exampleValue = exampleValue;
@@ -145,7 +154,11 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
+         * <p>The parameter name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -153,7 +166,10 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
-         * required.
+         * <p>Specifies whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder required(Boolean required) {
             this.required = required;
@@ -161,10 +177,18 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
+         * <p>The parameter type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Integer</li>
+         * <li>Number</li>
+         * <li>String</li>
+         * <li>Boolean</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>string</p>
+         * <p>String</p>
          */
         public Builder type(String type) {
             this.type = type;

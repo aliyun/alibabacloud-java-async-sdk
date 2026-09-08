@@ -93,7 +93,10 @@ public class CreateSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateSourceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateSourceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateSourceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class CreateSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * sourceId.
+             * <p>The source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>src-crdddallhtgt***</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;

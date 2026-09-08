@@ -117,10 +117,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -199,10 +196,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>api-xxx</p>
+             * apiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -298,10 +292,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>api-xxx</p>
+             * apiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;

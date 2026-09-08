@@ -80,7 +80,10 @@ public class ConsumerInfo extends TeaModel {
         } 
 
         /**
-         * consumerId.
+         * <p>consumerId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-ctd4l1um1hkph7ki1k80</p>
          */
         public Builder consumerId(String consumerId) {
             this.consumerId = consumerId;
@@ -88,7 +91,10 @@ public class ConsumerInfo extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>enable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -96,7 +102,10 @@ public class ConsumerInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;

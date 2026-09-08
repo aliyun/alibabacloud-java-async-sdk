@@ -158,7 +158,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         } 
 
         /**
-         * authorizationEndpoint.
+         * <p>The OAuth2 authorization endpoint URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/oauth2/authorize">https://idp.example.com/oauth2/authorize</a></p>
          */
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = authorizationEndpoint;
@@ -166,7 +169,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The OAuth2 client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-client-id</p>
          */
         public Builder clientId(String clientId) {
             this.clientId = clientId;
@@ -174,7 +180,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * clientSecret.
+         * <p>The OAuth2 client secret. The secret is AES-encrypted when stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-client-secret</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = clientSecret;
@@ -182,7 +191,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * issuer.
+         * <p>The OIDC issuer URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com">https://idp.example.com</a></p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -190,7 +202,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * jwkSetUri.
+         * <p>The JWKS public key set URI, used for token signature verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/.well-known/jwks.json">https://idp.example.com/.well-known/jwks.json</a></p>
          */
         public Builder jwkSetUri(String jwkSetUri) {
             this.jwkSetUri = jwkSetUri;
@@ -198,7 +213,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * redirectUri.
+         * <p>The OAuth2 callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://gateway.example.com/callback">https://gateway.example.com/callback</a></p>
          */
         public Builder redirectUri(String redirectUri) {
             this.redirectUri = redirectUri;
@@ -206,7 +224,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * scopes.
+         * <p>The OAuth2 authorization scopes, separated by spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid profile email</p>
          */
         public Builder scopes(String scopes) {
             this.scopes = scopes;
@@ -214,7 +235,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * tokenEndpoint.
+         * <p>The OAuth2 token endpoint URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/oauth2/token">https://idp.example.com/oauth2/token</a></p>
          */
         public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
@@ -222,7 +246,10 @@ public class HiMarketAuthCodeConfig extends TeaModel {
         }
 
         /**
-         * userInfoEndpoint.
+         * <p>The OIDC UserInfo endpoint URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></p>
          */
         public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = userInfoEndpoint;

@@ -115,7 +115,7 @@ public class SyncMCPServersRequest extends Request {
         } 
 
         /**
-         * <p>The domain ID.</p>
+         * <p>The domain name IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -124,7 +124,7 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq7l5s5lhtg***</p>
@@ -136,7 +136,7 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * <p>The synchronized Nacos MCP server list. If the synchronized MCP server is included, add the mcpServerId parameter.</p>
+         * <p>The list of Nacos MCP Servers to sync. If the list contains MCP Servers that have already been synced, include the mcpServerId.</p>
          */
         public Builder nacosMcpServers(java.util.List<NacosMcpServers> nacosMcpServers) {
             this.putBodyParameter("nacosMcpServers", nacosMcpServers);
@@ -267,7 +267,7 @@ public class SyncMCPServersRequest extends Request {
             } 
 
             /**
-             * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</p>
+             * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
              * 
              * <strong>example:</strong>
              * <p>/sse</p>
@@ -289,7 +289,7 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * <p>The MCP server ID.</p>
+             * <p>MCP Server ID</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-d3s8qo6m1hknegofa3bg</p>
@@ -300,7 +300,7 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * <p>The name of the MCP server.</p>
+             * <p>The MCP Server name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -311,7 +311,7 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * <p>The protocol.</p>
+             * <p>The protocols.</p>
              */
             public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;

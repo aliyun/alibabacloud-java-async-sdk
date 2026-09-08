@@ -87,7 +87,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * resourceId.
+         * <p>The resource IDs. A maximum of 50 subkeys are supported.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -96,7 +96,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type used for the tagging operation. Set this to Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);
@@ -105,7 +108,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of labels.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);
@@ -173,7 +176,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +187,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

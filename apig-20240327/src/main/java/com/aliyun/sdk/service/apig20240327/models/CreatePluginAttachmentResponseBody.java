@@ -93,7 +93,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>EBCB8485-24F9-54CD-B258-CB15FDB27677</p>
@@ -179,7 +179,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plug-in ID.</p>
+             * <p>The plug-in mount ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-cvs7jpmm1hkgihaqv4a0</p>

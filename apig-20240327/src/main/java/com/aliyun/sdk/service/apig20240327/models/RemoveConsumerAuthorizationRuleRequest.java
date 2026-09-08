@@ -59,7 +59,7 @@ public class RemoveConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * <p>The authorization rule ID.</p>
+         * <p>The ID of the API consumer authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>car-ctgdn8em1hko5krqq03g</p>

@@ -139,7 +139,7 @@ public class UndeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq7l5s5lhtg***</p>
@@ -163,7 +163,7 @@ public class UndeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The route ID. You must specify this parameter when you unpublish the route of an HTTP API.</p>
+         * <p>The route ID. This parameter is required when you offline a route of an HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrle***</p>

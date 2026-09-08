@@ -93,7 +93,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
         } 
 
         /**
-         * <p>API Key 单来源兼容字段。未携带 apikeySources 时，服务端按该字段解释为单项来源；新多来源调用方使用 apikeySources。</p>
+         * <p>The API key source configuration.</p>
          */
         public Builder apikeySource(ApikeySource apikeySource) {
             this.apikeySource = apikeySource;
@@ -101,7 +101,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
 
         /**
-         * <p>API Key 凭证来源完整集合。集合包含一至三项；多来源仅适用于 AI 网关 Header 模式，Query String 和非 AI 网关仅允许单来源。与 apikeySource 同时提交时，后者必须与兼容投影一致。</p>
+         * <p>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to the AI gateway Header mode. Query String and non-AI gateway allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</p>
          */
         public Builder apikeySources(java.util.List<ApikeySources> apikeySources) {
             this.apikeySources = apikeySources;
@@ -109,7 +109,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
 
         /**
-         * credentials.
+         * <p>The list of credentials.</p>
          */
         public Builder credentials(java.util.List<Credentials> credentials) {
             this.credentials = credentials;
@@ -117,7 +117,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apikey</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -183,7 +186,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
             } 
 
             /**
-             * source.
+             * <p>The API key source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -191,7 +197,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The API key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -258,7 +267,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
             } 
 
             /**
-             * <p>凭证来源类别。</p>
+             * <p>The credential source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -266,7 +278,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
             }
 
             /**
-             * <p>HTTP Header 或 Query String 的字段名称。</p>
+             * <p>The field name of the HTTP header or query string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -333,7 +348,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
             } 
 
             /**
-             * apikey.
+             * <p>The API key configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder apikey(String apikey) {
                 this.apikey = apikey;
@@ -341,7 +359,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
             }
 
             /**
-             * generateMode.
+             * <p>The generation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder generateMode(String generateMode) {
                 this.generateMode = generateMode;

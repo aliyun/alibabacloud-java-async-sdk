@@ -106,7 +106,7 @@ public class HttpRouteMatch extends TeaModel {
         } 
 
         /**
-         * headers.
+         * <p>The list of HTTP request header matching rules.</p>
          */
         public Builder headers(java.util.List<Headers> headers) {
             this.headers = headers;
@@ -114,7 +114,10 @@ public class HttpRouteMatch extends TeaModel {
         }
 
         /**
-         * ignoreUriCase.
+         * <p>Specifies whether the path is case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreUriCase(Boolean ignoreUriCase) {
             this.ignoreUriCase = ignoreUriCase;
@@ -122,7 +125,7 @@ public class HttpRouteMatch extends TeaModel {
         }
 
         /**
-         * methods.
+         * <p>The list of request methods.</p>
          */
         public Builder methods(java.util.List<String> methods) {
             this.methods = methods;
@@ -130,7 +133,7 @@ public class HttpRouteMatch extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>The path rule.</p>
          */
         public Builder path(HttpRouteMatchPath path) {
             this.path = path;
@@ -138,7 +141,7 @@ public class HttpRouteMatch extends TeaModel {
         }
 
         /**
-         * queryParams.
+         * <p>The list of query request parameter matching rules.</p>
          */
         public Builder queryParams(java.util.List<QueryParams> queryParams) {
             this.queryParams = queryParams;
@@ -217,7 +220,10 @@ public class HttpRouteMatch extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +231,15 @@ public class HttpRouteMatch extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The header matching type. Valid values:</p>
+             * <ul>
+             * <li>Exact: exact match.</li>
+             * <li>Prefix: prefix match. </li>
+             * <li>Regex: regular expression match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -233,7 +247,10 @@ public class HttpRouteMatch extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value of the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -300,7 +317,15 @@ public class HttpRouteMatch extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The path matching rule. Valid values:</p>
+             * <ul>
+             * <li>Exact: exact match.</li>
+             * <li>Prefix: prefix match. </li>
+             * <li>Regex: regular expression match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prefix</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -308,7 +333,10 @@ public class HttpRouteMatch extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/user</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -388,7 +416,10 @@ public class HttpRouteMatch extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -396,7 +427,15 @@ public class HttpRouteMatch extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The query parameter matching type. Valid values:</p>
+             * <ul>
+             * <li>Exact: exact match. </li>
+             * <li>Prefix: prefix match. </li>
+             * <li>Regex: regular expression match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,7 +443,10 @@ public class HttpRouteMatch extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -93,7 +93,7 @@ public class HttpApiRequestContract extends TeaModel {
         } 
 
         /**
-         * body.
+         * <p>The body parameters.</p>
          */
         public Builder body(HttpApiRequestContractBody body) {
             this.body = body;
@@ -101,7 +101,7 @@ public class HttpApiRequestContract extends TeaModel {
         }
 
         /**
-         * headerParameters.
+         * <p>The request header parameters.</p>
          */
         public Builder headerParameters(java.util.List<HttpApiParameter> headerParameters) {
             this.headerParameters = headerParameters;
@@ -109,7 +109,7 @@ public class HttpApiRequestContract extends TeaModel {
         }
 
         /**
-         * pathParameters.
+         * <p>The path parameters.</p>
          */
         public Builder pathParameters(java.util.List<HttpApiParameter> pathParameters) {
             this.pathParameters = pathParameters;
@@ -117,7 +117,7 @@ public class HttpApiRequestContract extends TeaModel {
         }
 
         /**
-         * queryParameters.
+         * <p>The query parameters.</p>
          */
         public Builder queryParameters(java.util.List<HttpApiParameter> queryParameters) {
             this.queryParameters = queryParameters;
@@ -209,7 +209,10 @@ public class HttpApiRequestContract extends TeaModel {
             } 
 
             /**
-             * contentType.
+             * <p>The content type of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -217,7 +220,10 @@ public class HttpApiRequestContract extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +231,10 @@ public class HttpApiRequestContract extends TeaModel {
             }
 
             /**
-             * example.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;result&quot;:&quot;ok&quot;}</p>
              */
             public Builder example(String example) {
                 this.example = example;
@@ -233,7 +242,21 @@ public class HttpApiRequestContract extends TeaModel {
             }
 
             /**
-             * jsonSchema.
+             * <p>The JSON definition description of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;type&quot;: &quot;object&quot;,
+             *       &quot;required&quot;: [
+             *           &quot;result&quot;
+             *       ],
+             *       &quot;properties&quot;: {
+             *           &quot;result&quot;: {
+             *               &quot;type&quot;: &quot;string&quot;,
+             *               &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
+             *           }
+             *       }
+             *   }</p>
              */
             public Builder jsonSchema(String jsonSchema) {
                 this.jsonSchema = jsonSchema;

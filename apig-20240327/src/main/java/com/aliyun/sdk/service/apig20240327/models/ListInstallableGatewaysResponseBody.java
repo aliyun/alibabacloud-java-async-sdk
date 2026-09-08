@@ -118,6 +118,9 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019FA163-3664-5D34-81D1-5FFFC94AD7D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

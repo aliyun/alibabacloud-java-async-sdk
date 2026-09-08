@@ -93,7 +93,10 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code. Ok is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +205,7 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * failedConsumerIds.
+             * <p>The list of consumer IDs that failed to be removed.</p>
              */
             public Builder failedConsumerIds(java.util.List<String> failedConsumerIds) {
                 this.failedConsumerIds = failedConsumerIds;
@@ -207,7 +213,7 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * skippedConsumerIds.
+             * <p>The list of consumer IDs skipped because they are not in the consumer group.</p>
              */
             public Builder skippedConsumerIds(java.util.List<String> skippedConsumerIds) {
                 this.skippedConsumerIds = skippedConsumerIds;
@@ -215,7 +221,7 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * successConsumerIds.
+             * <p>The list of consumer IDs successfully removed from the consumer group.</p>
              */
             public Builder successConsumerIds(java.util.List<String> successConsumerIds) {
                 this.successConsumerIds = successConsumerIds;

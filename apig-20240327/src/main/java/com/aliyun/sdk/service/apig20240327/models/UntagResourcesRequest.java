@@ -124,7 +124,17 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * All.
+         * <p>Specifies whether to delete all tags. This parameter is valid only when tags are empty. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -133,7 +143,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource IDs. You can specify up to 50 subkeys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;gw-xxx&quot;,&quot;gw-yyy&quot;]</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
@@ -143,7 +156,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -152,7 +168,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The list of tag keys. You can specify up to 20 subkeys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;env&quot;,&quot;team&quot;]</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

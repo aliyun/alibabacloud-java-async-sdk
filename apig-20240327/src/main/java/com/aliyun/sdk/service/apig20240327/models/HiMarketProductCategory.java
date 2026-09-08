@@ -93,7 +93,10 @@ public class HiMarketProductCategory extends TeaModel {
         } 
 
         /**
-         * categoryId.
+         * <p>The categorization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cat-xxx</p>
          */
         public Builder categoryId(String categoryId) {
             this.categoryId = categoryId;
@@ -101,7 +104,10 @@ public class HiMarketProductCategory extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The categorization description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI网关相关产品分类</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +115,7 @@ public class HiMarketProductCategory extends TeaModel {
         }
 
         /**
-         * icon.
+         * <p>The icon configuration.</p>
          */
         public Builder icon(HiMarketIcon icon) {
             this.icon = icon;
@@ -117,7 +123,10 @@ public class HiMarketProductCategory extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The categorization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI网关</p>
          */
         public Builder name(String name) {
             this.name = name;

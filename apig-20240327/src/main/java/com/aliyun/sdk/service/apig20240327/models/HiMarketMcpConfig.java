@@ -93,7 +93,7 @@ public class HiMarketMcpConfig extends TeaModel {
         } 
 
         /**
-         * mcpServerConfig.
+         * <p>The MCP Server configuration.</p>
          */
         public Builder mcpServerConfig(McpServerConfig mcpServerConfig) {
             this.mcpServerConfig = mcpServerConfig;
@@ -101,7 +101,10 @@ public class HiMarketMcpConfig extends TeaModel {
         }
 
         /**
-         * mcpServerName.
+         * <p>The MCP Server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-mcp-server</p>
          */
         public Builder mcpServerName(String mcpServerName) {
             this.mcpServerName = mcpServerName;
@@ -109,7 +112,7 @@ public class HiMarketMcpConfig extends TeaModel {
         }
 
         /**
-         * meta.
+         * <p>The metadata.</p>
          */
         public Builder meta(Meta meta) {
             this.meta = meta;
@@ -117,7 +120,10 @@ public class HiMarketMcpConfig extends TeaModel {
         }
 
         /**
-         * tools.
+         * <p>The MCP tool definitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;搜索工具\&quot;}]</p>
          */
         public Builder tools(String tools) {
             this.tools = tools;
@@ -183,7 +189,7 @@ public class HiMarketMcpConfig extends TeaModel {
             } 
 
             /**
-             * domains.
+             * <p>The list of associated domain names.</p>
              */
             public Builder domains(java.util.List<HiMarketDomain> domains) {
                 this.domains = domains;
@@ -191,7 +197,10 @@ public class HiMarketMcpConfig extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path exposed by the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mcp</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -245,7 +254,10 @@ public class HiMarketMcpConfig extends TeaModel {
             } 
 
             /**
-             * protocol.
+             * <p>The MCP protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StreamableHTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

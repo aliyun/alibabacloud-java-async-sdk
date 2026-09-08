@@ -73,7 +73,7 @@ public class InstallPluginRequest extends Request {
         } 
 
         /**
-         * <p>The list of gateway IDs.</p>
+         * <p>The list of gateway IDs. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.IsEmpty. This field must be included in the body object.</p>
          */
         public Builder gatewayIds(java.util.List<String> gatewayIds) {
             this.putBodyParameter("gatewayIds", gatewayIds);
@@ -82,7 +82,7 @@ public class InstallPluginRequest extends Request {
         }
 
         /**
-         * <p>The plug-in type ID.</p>
+         * <p>The plug-in type ID. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.IsEmpty. This field must be included in the body object.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-csqmjndlhtguk0loef21</p>

@@ -80,7 +80,10 @@ public class UpdateGatewayQuotaRuleStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code or error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200, 404, 500</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class UpdateGatewayQuotaRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class UpdateGatewayQuotaRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

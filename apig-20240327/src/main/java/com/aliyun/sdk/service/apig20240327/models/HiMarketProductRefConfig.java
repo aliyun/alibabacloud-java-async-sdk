@@ -67,7 +67,7 @@ public class HiMarketProductRefConfig extends TeaModel {
         } 
 
         /**
-         * apigRefConfig.
+         * <p>The APIG resource reference configuration.</p>
          */
         public Builder apigRefConfig(ApigRefConfig apigRefConfig) {
             this.apigRefConfig = apigRefConfig;
@@ -75,7 +75,10 @@ public class HiMarketProductRefConfig extends TeaModel {
         }
 
         /**
-         * gatewayId.
+         * <p>The ID of the associated gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -206,7 +209,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             } 
 
             /**
-             * agentApiId.
+             * <p>The associated Agent API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder agentApiId(String agentApiId) {
                 this.agentApiId = agentApiId;
@@ -214,7 +220,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             }
 
             /**
-             * agentApiName.
+             * <p>The Agent API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-api</p>
              */
             public Builder agentApiName(String agentApiName) {
                 this.agentApiName = agentApiName;
@@ -222,7 +231,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             }
 
             /**
-             * mcpRouteId.
+             * <p>The associated MCP route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>route-xxx</p>
              */
             public Builder mcpRouteId(String mcpRouteId) {
                 this.mcpRouteId = mcpRouteId;
@@ -230,7 +242,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             }
 
             /**
-             * mcpServerId.
+             * <p>The associated MCP Server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-xxx</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -238,7 +253,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             }
 
             /**
-             * mcpServerName.
+             * <p>The MCP Server name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-mcp-server</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -246,7 +264,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             }
 
             /**
-             * modelApiId.
+             * <p>The associated Model API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-yyy</p>
              */
             public Builder modelApiId(String modelApiId) {
                 this.modelApiId = modelApiId;
@@ -254,7 +275,10 @@ public class HiMarketProductRefConfig extends TeaModel {
             }
 
             /**
-             * modelApiName.
+             * <p>The Model API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-model-api</p>
              */
             public Builder modelApiName(String modelApiName) {
                 this.modelApiName = modelApiName;

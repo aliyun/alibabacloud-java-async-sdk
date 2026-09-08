@@ -97,6 +97,9 @@ public class RunPluginPipelineResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9E6192C-E3D6-5176-9109-340E9DA7CADD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -73,7 +73,7 @@ public class UpdateSecretRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the key.</p>
+         * <p>The key pair ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -85,7 +85,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * <p>The key value.</p>
+         * <p>The key pair value.</p>
          * 
          * <strong>example:</strong>
          * <p>apikey-xxxxxxxx</p>

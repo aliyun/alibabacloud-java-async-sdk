@@ -185,7 +185,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         } 
 
         /**
-         * aiCacheConfig.
+         * <p>The AI cache configuration.</p>
          */
         public Builder aiCacheConfig(AiCacheConfig aiCacheConfig) {
             this.aiCacheConfig = aiCacheConfig;
@@ -193,7 +193,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * aiFallbackConfig.
+         * <p>The AI fallback configuration.</p>
          */
         public Builder aiFallbackConfig(AiFallbackConfig aiFallbackConfig) {
             this.aiFallbackConfig = aiFallbackConfig;
@@ -201,7 +201,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * aiNetworkSearchConfig.
+         * <p>The AI web search configuration.</p>
          */
         public Builder aiNetworkSearchConfig(AiNetworkSearchConfig aiNetworkSearchConfig) {
             this.aiNetworkSearchConfig = aiNetworkSearchConfig;
@@ -209,7 +209,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * aiSecurityGuardConfig.
+         * <p>The AI security protection configuration.</p>
          */
         public Builder aiSecurityGuardConfig(AiSecurityGuardConfig aiSecurityGuardConfig) {
             this.aiSecurityGuardConfig = aiSecurityGuardConfig;
@@ -217,7 +217,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * aiStatisticsConfig.
+         * <p>The AI statistics configuration.</p>
          */
         public Builder aiStatisticsConfig(AiStatisticsConfig aiStatisticsConfig) {
             this.aiStatisticsConfig = aiStatisticsConfig;
@@ -225,7 +225,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * aiTokenRateLimitConfig.
+         * <p>The AI token rate limiting configuration.</p>
          */
         public Builder aiTokenRateLimitConfig(AiTokenRateLimitConfig aiTokenRateLimitConfig) {
             this.aiTokenRateLimitConfig = aiTokenRateLimitConfig;
@@ -233,7 +233,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * aiToolSelectionConfig.
+         * <p>The AI tool selection configuration.</p>
          */
         public Builder aiToolSelectionConfig(AiToolSelectionConfig aiToolSelectionConfig) {
             this.aiToolSelectionConfig = aiToolSelectionConfig;
@@ -241,7 +241,10 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -249,7 +252,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * policyReference.
+         * <p>The read-only compatible reference. GetHttpApi returns policyId/policyAttachmentId for ModelAPI AiTokenRateLimit. This must be stripped before write path persistence and is not used as a bind/unbind instruction.</p>
          */
         public Builder policyReference(HttpApiPolicyReference policyReference) {
             this.policyReference = policyReference;
@@ -257,7 +260,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * semanticRouterConfig.
+         * <p>The semantic routing configuration.</p>
          */
         public Builder semanticRouterConfig(SemanticRouterConfig semanticRouterConfig) {
             this.semanticRouterConfig = semanticRouterConfig;
@@ -265,7 +268,10 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The policy template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K8S</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -318,7 +324,10 @@ public class HttpApiPolicyConfigs extends TeaModel {
             } 
 
             /**
-             * timeoutMillisecond.
+             * <p>The timeout period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder timeoutMillisecond(Integer timeoutMillisecond) {
                 this.timeoutMillisecond = timeoutMillisecond;

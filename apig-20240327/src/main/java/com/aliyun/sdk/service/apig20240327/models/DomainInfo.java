@@ -236,7 +236,10 @@ public class DomainInfo extends TeaModel {
         } 
 
         /**
-         * certIdentifier.
+         * <p>The certificate identity from SSL Certificates Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235556-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -244,7 +247,14 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * clientCACert.
+         * <p>The client CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+         * BQAwE************************************************2VwVOJ2gqX3
+         * YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+         * -----END CERTIFICATE-----</p>
          */
         public Builder clientCACert(String clientCACert) {
             this.clientCACert = clientCACert;
@@ -252,7 +262,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * createFrom.
+         * <p>The source from which the domain name was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Console</p>
          */
         public Builder createFrom(String createFrom) {
             this.createFrom = createFrom;
@@ -260,7 +273,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719386834548</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -268,7 +284,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * domainId.
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cq1lthllhtgja4dk54eg</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -276,7 +295,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * domainScope.
+         * <p>domainScope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder domainScope(String domainScope) {
             this.domainScope = domainScope;
@@ -284,7 +306,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * forceHttps.
+         * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceHttps(Boolean forceHttps) {
             this.forceHttps = forceHttps;
@@ -292,7 +317,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * mTLSEnabled.
+         * <p>Specifies whether to enable mutual TLS (mTLS) authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mTLSEnabled(Boolean mTLSEnabled) {
             this.mTLSEnabled = mTLSEnabled;
@@ -300,7 +328,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -308,7 +339,14 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type supported by the domain name.</p>
+         * <ul>
+         * <li>HTTP: Only HTTP is supported.</li>
+         * <li>HTTPS: Only HTTPS is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -316,7 +354,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -324,7 +365,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The domain name status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Published</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -332,7 +376,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * tlsMax.
+         * <p>The maximum TLS version. TLS 1.3 is the maximum supported version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.3</p>
          */
         public Builder tlsMax(String tlsMax) {
             this.tlsMax = tlsMax;
@@ -340,7 +387,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * tlsMin.
+         * <p>The minimum TLS version. TLS 1.0 is the minimum supported version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.0</p>
          */
         public Builder tlsMin(String tlsMin) {
             this.tlsMin = tlsMin;
@@ -348,7 +398,10 @@ public class DomainInfo extends TeaModel {
         }
 
         /**
-         * updateTimestamp.
+         * <p>The update timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719386834548</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;

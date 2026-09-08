@@ -69,7 +69,11 @@ public class AgentAuthorizationPrincipal extends TeaModel {
         } 
 
         /**
+         * <p>The ID of the authorization principal. Specify a consumer ID or consumer group ID based on the value of principalType.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-1</p>
          */
         public Builder principalId(String principalId) {
             this.principalId = principalId;
@@ -77,7 +81,15 @@ public class AgentAuthorizationPrincipal extends TeaModel {
         }
 
         /**
+         * <p>The type of the authorization principal. Valid values:</p>
+         * <ul>
+         * <li>Consumer: consumer.</li>
+         * <li>ConsumerGroup: consumer group.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Consumer</p>
          */
         public Builder principalType(String principalType) {
             this.principalType = principalType;

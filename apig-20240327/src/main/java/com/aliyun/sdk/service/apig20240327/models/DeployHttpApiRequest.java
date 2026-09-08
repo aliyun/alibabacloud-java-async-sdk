@@ -102,7 +102,7 @@ public class DeployHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>HTTP API ID.</p>
+         * <p>The ID of the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31fb***</p>
@@ -114,7 +114,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>httpApiConfig</p>
+         * <p>The HTTP API deployment configuration.</p>
          */
         public Builder httpApiConfig(HttpApiConfig httpApiConfig) {
             this.putBodyParameter("httpApiConfig", httpApiConfig);
@@ -123,7 +123,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The REST API deployment configuration. This parameter is required when you publish a REST API.</p>
+         * <p>The REST API deployment configuration. This parameter is required when the HTTP API being published is a REST API. At least one of revisionId, environment, or gatewayId must be provided to specify the publish target.</p>
          */
         public Builder restApiConfig(RestApiConfig restApiConfig) {
             this.putBodyParameter("restApiConfig", restApiConfig);
@@ -132,7 +132,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The route ID. You must specify this parameter when you publish an HTTP API.</p>
+         * <p>The route ID. This parameter is required when publishing a route of an HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrl***</p>
@@ -214,7 +214,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>routeIds</p>
+             * <p>The route IDs.</p>
              */
             public Builder routeIds(java.util.List<String> routeIds) {
                 this.routeIds = routeIds;
@@ -333,10 +333,10 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>The matching condition configurations related to API publishing.</p>
+             * <p>The match condition configuration related to API publishing.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;change_order_revision&quot;:&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter&quot;}</p>
+             * <p>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -344,7 +344,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
+             * <p>The service port. Do not specify this parameter for dynamic ports.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -381,7 +381,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The version of the microservice.</p>
+             * <p>The service version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -392,7 +392,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
+             * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -491,14 +491,7 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>The publishing scenario.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>SingleService</li>
-             * <li>MultiServiceByRatio</li>
-             * <li>MultiServiceByContent</li>
-             * <li>Mock</li>
-             * </ul>
+             * <p>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
              * 
              * <strong>example:</strong>
              * <p>SingleService</p>
@@ -509,7 +502,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The custom domain names.</p>
+             * <p>The list of custom domain names.</p>
              */
             public Builder customDomainIds(java.util.List<String> customDomainIds) {
                 this.customDomainIds = customDomainIds;
@@ -528,7 +521,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
+             * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</p>
              */
             public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
                 this.serviceConfigs = serviceConfigs;
@@ -595,7 +588,7 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>Operation type</p>
+             * <p>The action type.</p>
              * 
              * <strong>example:</strong>
              * <p>Publish</p>
@@ -606,7 +599,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Unique identifier of the operation</p>
+             * <p>The unique identifier of the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>op-xxx</p>
@@ -745,7 +738,7 @@ public class DeployHttpApiRequest extends Request {
              * <p>The publish description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The user service API</p>
+             * <p>User service API publish</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -753,7 +746,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * enableRouteCompression.
+             * <p>Specifies whether to enable REST API route compression. If this parameter is omitted or set to false, operations are published individually. If set to true, the API is published as a single prefix route. This field is ignored for historical revision publishing, which uses the route mode saved in the historical revision. When set to true, operationDeployments must not be specified because prefix route publishing supports only full publishing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRouteCompression(Boolean enableRouteCompression) {
                 this.enableRouteCompression = enableRouteCompression;
@@ -761,7 +757,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The environment configurations.</p>
+             * <p>The publish environment configuration.</p>
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
@@ -780,7 +776,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Operation-level deployment control list</p>
+             * <p>The operation-level deployment control list. This parameter takes effect only when enableRouteCompression is omitted or set to false. This field must not be specified when enableRouteCompression is set to true.</p>
              */
             public Builder operationDeployments(java.util.List<OperationDeployments> operationDeployments) {
                 this.operationDeployments = operationDeployments;
@@ -788,7 +784,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>operationIds</p>
+             * <p>The operation IDs.</p>
              */
             public Builder operationIds(java.util.List<String> operationIds) {
                 this.operationIds = operationIds;
@@ -796,7 +792,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The historical version of the API. If you specify this parameter, the corresponding version of the API is published.</p>
+             * <p>The historical revision ID. If this field is specified, the publish information is based on the historical revision.</p>
              * 
              * <strong>example:</strong>
              * <p>apr-xxx</p>

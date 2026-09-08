@@ -117,10 +117,7 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

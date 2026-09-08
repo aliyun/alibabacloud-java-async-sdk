@@ -80,7 +80,7 @@ public class DeleteEnvironmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class DeleteEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class DeleteEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to trace the request link.</p>
+         * <p>The request ID, which is used to trace the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>

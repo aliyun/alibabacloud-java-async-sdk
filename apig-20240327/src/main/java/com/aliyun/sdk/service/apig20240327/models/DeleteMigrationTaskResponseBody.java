@@ -97,6 +97,9 @@ public class DeleteMigrationTaskResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB56C0CE-37C8-5C5A-8A07-DFBF083A40D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

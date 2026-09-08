@@ -118,6 +118,9 @@ public class ListSyncMCPServerResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>211B1C7E-DD93-58D3-AA4B-9B392B63258C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

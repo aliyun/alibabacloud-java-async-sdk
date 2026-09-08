@@ -101,10 +101,10 @@ public class ListSecretsRequest extends Request {
         } 
 
         /**
-         * <p>Gateway type for filtering secrets of specific gateway type</p>
+         * <p>The gateway type used to filter results. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>API</p>
+         * <p>AI</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -113,10 +113,10 @@ public class ListSecretsRequest extends Request {
         }
 
         /**
-         * <p>Secret name for fuzzy matching, supports filtering secrets by name</p>
+         * <p>The key name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-secret</p>
+         * <p>my_secret</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -125,7 +125,7 @@ public class ListSecretsRequest extends Request {
         }
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +137,7 @@ public class ListSecretsRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page</p>
+         * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

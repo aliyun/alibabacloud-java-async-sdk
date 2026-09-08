@@ -118,6 +118,9 @@ public class GetGatewayElasticPolicyResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7F02714-182D-55BC-AF0B-F454364445E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

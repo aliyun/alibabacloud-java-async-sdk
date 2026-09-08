@@ -97,6 +97,9 @@ public class BatchUpdateHttpApiOperationResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CF2E0A5-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

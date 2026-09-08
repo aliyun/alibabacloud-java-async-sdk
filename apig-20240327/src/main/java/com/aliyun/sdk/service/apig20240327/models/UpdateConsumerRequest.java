@@ -141,7 +141,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The list of AK/SK authentication configurations.</p>
+         * <p>The list of AccessKey pair authentication configurations.</p>
          */
         public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
             this.putBodyParameter("akSkIdentityConfigs", akSkIdentityConfigs);
@@ -150,7 +150,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The API key authentication configurations.</p>
+         * <p>The API key authentication configuration.</p>
          */
         public Builder apikeyIdentityConfig(ApiKeyIdentityConfig apikeyIdentityConfig) {
             this.putBodyParameter("apikeyIdentityConfig", apikeyIdentityConfig);
@@ -162,7 +162,7 @@ public class UpdateConsumerRequest extends Request {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is the description.</p>
+         * <p>Test consumer</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -171,7 +171,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>Specifies the enablement status.</p>
+         * <p>Specifies whether to enable the consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

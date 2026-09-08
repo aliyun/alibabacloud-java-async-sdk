@@ -59,7 +59,7 @@ public class GetConsumerRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The API consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-ctb92p6m1hkqu85iph8g</p>

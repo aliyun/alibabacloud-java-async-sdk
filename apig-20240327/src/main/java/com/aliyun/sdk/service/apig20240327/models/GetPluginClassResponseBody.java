@@ -93,7 +93,10 @@ public class GetPluginClassResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetPluginClassResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetPluginClassResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,6 +124,9 @@ public class GetPluginClassResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29D8B6AE-326F-51AA-83F8-CC00DAF513F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +257,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The plug-in alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key Auth</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -256,7 +268,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authentication based on API Key</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,7 +279,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * document.
+             * <p>The document key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc-key-auth</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -272,7 +290,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-auth</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,7 +301,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * publishStatus.
+             * <p>The publish status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -288,7 +312,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The plug-in type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Auth</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -296,7 +323,10 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * wasmLanguage.
+             * <p>The Wasm plug-in programming language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TinyGo</p>
              */
             public Builder wasmLanguage(String wasmLanguage) {
                 this.wasmLanguage = wasmLanguage;

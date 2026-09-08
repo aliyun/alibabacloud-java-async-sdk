@@ -275,7 +275,10 @@ public class HttpApiDeployConfig extends TeaModel {
         } 
 
         /**
-         * autoDeploy.
+         * <p>Specifies whether to automatically deploy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoDeploy(Boolean autoDeploy) {
             this.autoDeploy = autoDeploy;
@@ -283,7 +286,10 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * backendScene.
+         * <p>The deployment scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SingleService</p>
          */
         public Builder backendScene(String backendScene) {
             this.backendScene = backendScene;
@@ -291,7 +297,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * builtinRouteNames.
+         * <p>The list of built-in route names.</p>
          */
         public Builder builtinRouteNames(java.util.List<String> builtinRouteNames) {
             this.builtinRouteNames = builtinRouteNames;
@@ -299,7 +305,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * customDomainIds.
+         * <p>The list of custom domain name IDs.</p>
          */
         public Builder customDomainIds(java.util.List<String> customDomainIds) {
             this.customDomainIds = customDomainIds;
@@ -307,7 +313,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * customDomainInfos.
+         * <p>The list of custom domain name details.</p>
          */
         public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
             this.customDomainInfos = customDomainInfos;
@@ -315,7 +321,10 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * enableSystemModels.
+         * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the deployment scenario is AiAutoRouter. Default value: false. If enabled, built-in Qwen candidates from the platform are merged with the user\&quot;s own candidates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSystemModels(Boolean enableSystemModels) {
             this.enableSystemModels = enableSystemModels;
@@ -323,7 +332,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * envDomainIds.
+         * <p>The list of environment domain name IDs. If not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</p>
          */
         public Builder envDomainIds(java.util.List<String> envDomainIds) {
             this.envDomainIds = envDomainIds;
@@ -331,7 +340,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * envDomainInfos.
+         * <p>The list of environment domain name details.</p>
          */
         public Builder envDomainInfos(java.util.List<EnvDomainInfos> envDomainInfos) {
             this.envDomainInfos = envDomainInfos;
@@ -339,7 +348,10 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -347,7 +359,10 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -355,7 +370,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * gatewayInfo.
+         * <p>The gateway information.</p>
          */
         public Builder gatewayInfo(GatewayInfo gatewayInfo) {
             this.gatewayInfo = gatewayInfo;
@@ -363,7 +378,10 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * gatewayType.
+         * <p>The gateway type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.gatewayType = gatewayType;
@@ -371,7 +389,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * mock.
+         * <p>The mock configuration.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -379,7 +397,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * policyConfigs.
+         * <p>The list of policy configurations.</p>
          */
         public Builder policyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
             this.policyConfigs = policyConfigs;
@@ -387,7 +405,10 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * restApiRouteMode.
+         * <p>The current online routing mode of the REST API. ordinary indicates per-Operation routing. compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ordinary</p>
          */
         public Builder restApiRouteMode(String restApiRouteMode) {
             this.restApiRouteMode = restApiRouteMode;
@@ -395,7 +416,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * routeBackend.
+         * <p>The backend service information.</p>
          */
         public Builder routeBackend(Backend routeBackend) {
             this.routeBackend = routeBackend;
@@ -403,7 +424,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * serviceConfigs.
+         * <p>The list of service configurations.</p>
          */
         public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
@@ -411,7 +432,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * subDomains.
+         * <p>The list of subdomain contents.</p>
          */
         public Builder subDomains(java.util.List<SubDomains> subDomains) {
             this.subDomains = subDomains;
@@ -490,7 +511,10 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cshee6dlhtgk******</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -498,7 +522,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello-server.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -506,7 +533,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -586,7 +616,10 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-env-xxx</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -594,7 +627,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api.example.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -602,7 +638,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -682,7 +721,10 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * mode.
+             * <p>The routing mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LeastBusy</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -690,7 +732,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * queueSize.
+             * <p>The queue size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder queueSize(Integer queueSize) {
                 this.queueSize = queueSize;
@@ -698,7 +743,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * rateLimit.
+             * <p>The maximum traffic ratio for a single service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder rateLimit(Float rateLimit) {
                 this.rateLimit = rateLimit;
@@ -908,7 +956,10 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * gatewayServiceId.
+             * <p>The gateway service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-svc-abc123</p>
              */
             public Builder gatewayServiceId(String gatewayServiceId) {
                 this.gatewayServiceId = gatewayServiceId;
@@ -916,7 +967,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * intentCode.
+             * <p>The intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INQUIRY</p>
              */
             public Builder intentCode(String intentCode) {
                 this.intentCode = intentCode;
@@ -924,7 +978,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The matching condition.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -932,7 +986,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -940,7 +997,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * modelNamePattern.
+             * <p>The model name matching rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-*</p>
              */
             public Builder modelNamePattern(String modelNamePattern) {
                 this.modelNamePattern = modelNamePattern;
@@ -948,7 +1008,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * multiServiceRouteStrategy.
+             * <p>The multi-service routing strategy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ByWeight</p>
              */
             public Builder multiServiceRouteStrategy(String multiServiceRouteStrategy) {
                 this.multiServiceRouteStrategy = multiServiceRouteStrategy;
@@ -956,7 +1019,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The service display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen-Max-Service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -964,7 +1030,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * observabilityRouteConfig.
+             * <p>The observability metric routing configuration.</p>
              */
             public Builder observabilityRouteConfig(ObservabilityRouteConfig observabilityRouteConfig) {
                 this.observabilityRouteConfig = observabilityRouteConfig;
@@ -972,7 +1038,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -980,7 +1049,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The service protocol (HTTP/HTTPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -988,7 +1060,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -996,7 +1071,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The service version label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1004,7 +1082,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The service weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -1097,7 +1178,10 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * domainId.
+             * <p>The domain name ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-csmn42um******</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -1105,7 +1189,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1113,7 +1200,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intranet</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1121,7 +1211,10 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

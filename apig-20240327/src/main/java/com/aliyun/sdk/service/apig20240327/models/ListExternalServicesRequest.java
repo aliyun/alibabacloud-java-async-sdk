@@ -129,7 +129,10 @@ public class ListExternalServicesRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID. Exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-d76t026m1hkv70tla0e0</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -138,7 +141,10 @@ public class ListExternalServicesRequest extends Request {
         }
 
         /**
-         * importableOnly.
+         * <p>Specifies whether to return only services that have not been imported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder importableOnly(Boolean importableOnly) {
             this.putQueryParameter("importableOnly", importableOnly);
@@ -147,7 +153,10 @@ public class ListExternalServicesRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The maximum number of results to return. Valid range: (0, 100]. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -156,7 +165,10 @@ public class ListExternalServicesRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>Fuzzy search by API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imah</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -165,7 +177,10 @@ public class ListExternalServicesRequest extends Request {
         }
 
         /**
-         * paiWorkspaceId.
+         * <p>The workspace ID of the PAI-EAS service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>667435</p>
          */
         public Builder paiWorkspaceId(String paiWorkspaceId) {
             this.putQueryParameter("paiWorkspaceId", paiWorkspaceId);
@@ -174,7 +189,10 @@ public class ListExternalServicesRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>The service source type used to query services. This parameter is essentially required. If not provided, the API returns 400 InvalidParameter.WithValue. Valid values: SAE_K8S_SERVICE, PAI_EAS_SERVICE, CloudFlow, K8S, FC3, PAI_WORKSPACE, and MSE_NACOS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC3</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

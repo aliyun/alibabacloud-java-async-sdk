@@ -67,7 +67,7 @@ public class ParentResourceInfo extends TeaModel {
         } 
 
         /**
-         * apiInfo.
+         * <p>The API information.</p>
          */
         public Builder apiInfo(HttpApiApiInfo apiInfo) {
             this.apiInfo = apiInfo;
@@ -75,7 +75,10 @@ public class ParentResourceInfo extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type. Valid values: HttpApi/Operation/GatewayRoute/Gateway/GatewayDomain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

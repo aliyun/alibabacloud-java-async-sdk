@@ -93,7 +93,7 @@ public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -179,7 +179,7 @@ public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication rule IDs.</p>
+             * <p>The list of consumer authorization rule IDs.</p>
              */
             public Builder consumerAuthorizationRuleIds(java.util.List<String> consumerAuthorizationRuleIds) {
                 this.consumerAuthorizationRuleIds = consumerAuthorizationRuleIds;

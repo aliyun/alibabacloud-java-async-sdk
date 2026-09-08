@@ -59,7 +59,10 @@ public class DeleteConsumerGroupRequest extends Request {
         } 
 
         /**
-         * consumerGroupId.
+         * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);

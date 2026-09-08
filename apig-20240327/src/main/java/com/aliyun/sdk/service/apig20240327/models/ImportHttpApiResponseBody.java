@@ -93,7 +93,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -112,7 +112,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -195,7 +195,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>The data struct is incorrectly defined.</p>
+             * <p>Invalid data structure definition</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -203,7 +203,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data struct name.</p>
+             * <p>The data structure name.</p>
              * 
              * <strong>example:</strong>
              * <p>orderDTO</p>
@@ -289,7 +289,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Missing response definition.</p>
+             * <p>Missing response definition</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -297,7 +297,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method of the operation.</p>
+             * <p>The operation method.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -381,7 +381,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Missing response definition.</p>
+             * <p>conflict</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -389,10 +389,10 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data struct name.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
-             * <p>orderDTO</p>
+             * <p>admin-route</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -459,11 +459,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action that will be performed for the data struct after the dry run.</p>
-             * <ul>
-             * <li>Create: The data struct is created.</li>
-             * <li>Update: The data struct is updated.</li>
-             * </ul>
+             * <p>The action to be performed after the dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -474,7 +470,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data struct name.</p>
+             * <p>The data structure name.</p>
              * 
              * <strong>example:</strong>
              * <p>userDTO</p>
@@ -570,11 +566,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action that will be performed for the operation after the dry run.</p>
-             * <ul>
-             * <li>Create: The operation is created.</li>
-             * <li>Update: The operation is updated.</li>
-             * </ul>
+             * <p>The action to be performed after the dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -585,7 +577,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method of the operation.</p>
+             * <p>The operation method.</p>
              * 
              * <strong>example:</strong>
              * <p>POST</p>
@@ -677,11 +669,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action that will be performed for the operation after the dry run.</p>
-             * <ul>
-             * <li>Create: The operation is created.</li>
-             * <li>Update: The operation is updated.</li>
-             * </ul>
+             * <p>The operation type.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -692,10 +680,10 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation name.</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>CreateUser</p>
+             * <p>user-route</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -866,7 +854,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error messages. If an error message is returned, the API fails to be imported.</p>
+             * <p>The error messages. If the error messages are not empty, the API cannot be imported successfully.</p>
              */
             public Builder errorMessages(java.util.List<String> errorMessages) {
                 this.errorMessages = errorMessages;
@@ -874,7 +862,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The existing APIs. If an existing API is returned, the import updates the existing API.</p>
+             * <p>The information about the existing API. If this field is not empty, the import action updates the existing API.</p>
              */
             public Builder existHttpApiInfo(HttpApiApiInfo existHttpApiInfo) {
                 this.existHttpApiInfo = existHttpApiInfo;
@@ -882,7 +870,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data structs that fail the dry run.</p>
+             * <p>The list of data structures that failed the dry run.</p>
              */
             public Builder failureComponents(java.util.List<FailureComponents> failureComponents) {
                 this.failureComponents = failureComponents;
@@ -890,7 +878,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operations that fail the dry run.</p>
+             * <p>The list of operations that failed the dry run.</p>
              */
             public Builder failureOperations(java.util.List<FailureOperations> failureOperations) {
                 this.failureOperations = failureOperations;
@@ -898,7 +886,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * failureRoutes.
+             * <p>The list of routes that failed to be imported.</p>
              */
             public Builder failureRoutes(java.util.List<FailureRoutes> failureRoutes) {
                 this.failureRoutes = failureRoutes;
@@ -906,7 +894,10 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * mcpToolsDefinition.
+             * <p>The MCP tool definition information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>...</p>
              */
             public Builder mcpToolsDefinition(String mcpToolsDefinition) {
                 this.mcpToolsDefinition = mcpToolsDefinition;
@@ -914,7 +905,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data structs that pass the dry run.</p>
+             * <p>The list of data structures that passed the dry run.</p>
              */
             public Builder successComponents(java.util.List<SuccessComponents> successComponents) {
                 this.successComponents = successComponents;
@@ -922,7 +913,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operations that pass the dry run.</p>
+             * <p>The list of operations that passed the dry run.</p>
              */
             public Builder successOperations(java.util.List<SuccessOperations> successOperations) {
                 this.successOperations = successOperations;
@@ -930,7 +921,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * successRoutes.
+             * <p>The list of routes that were successfully imported.</p>
              */
             public Builder successRoutes(java.util.List<SuccessRoutes> successRoutes) {
                 this.successRoutes = successRoutes;
@@ -938,7 +929,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alerts. If an alert is returned, specific operations or structs may fail to be imported.</p>
+             * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to be imported.</p>
              */
             public Builder warningMessages(java.util.List<String> warningMessages) {
                 this.warningMessages = warningMessages;
@@ -1026,7 +1017,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API ID.</p>
+             * <p>The unique ID of the HTTP API.</p>
              * 
              * <strong>example:</strong>
              * <p>api-xxx</p>

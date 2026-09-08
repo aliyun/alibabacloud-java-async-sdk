@@ -365,7 +365,6 @@ public class BatchImportHttpApisRequest extends Request {
             }
 
             /**
-             * <p>OSS Object Key。</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -171,7 +171,10 @@ public class EnvironmentInfo extends TeaModel {
         } 
 
         /**
-         * alias.
+         * <p>The environment alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-env</p>
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -179,7 +182,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721116090326</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -187,7 +193,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * default.
+         * <p>Specifies whether the environment is the default environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder _default(Boolean _default) {
             this._default = _default;
@@ -195,7 +204,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The environment descriptiont.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test environment.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -203,7 +215,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -211,7 +226,7 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * gatewayInfo.
+         * <p>The instance information.</p>
          */
         public Builder gatewayInfo(GatewayInfo gatewayInfo) {
             this.gatewayInfo = gatewayInfo;
@@ -219,7 +234,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The environment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -227,7 +245,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -235,7 +256,7 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * subDomainInfos.
+         * <p>The subdomains.</p>
          */
         public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
             this.subDomainInfos = subDomainInfos;
@@ -243,7 +264,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * updateTimestamp.
+         * <p>The update timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721116090326</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;

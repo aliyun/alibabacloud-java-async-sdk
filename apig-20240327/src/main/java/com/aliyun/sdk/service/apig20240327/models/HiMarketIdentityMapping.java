@@ -80,7 +80,10 @@ public class HiMarketIdentityMapping extends TeaModel {
         } 
 
         /**
-         * emailField.
+         * <p>The identity field name that corresponds to the mailbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         public Builder emailField(String emailField) {
             this.emailField = emailField;
@@ -88,7 +91,10 @@ public class HiMarketIdentityMapping extends TeaModel {
         }
 
         /**
-         * userIdField.
+         * <p>The identity field name that corresponds to the user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub</p>
          */
         public Builder userIdField(String userIdField) {
             this.userIdField = userIdField;
@@ -96,7 +102,10 @@ public class HiMarketIdentityMapping extends TeaModel {
         }
 
         /**
-         * userNameField.
+         * <p>The identity field name that corresponds to the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder userNameField(String userNameField) {
             this.userNameField = userNameField;

@@ -132,7 +132,12 @@ public class AiCacheConfig extends TeaModel {
         } 
 
         /**
-         * cacheKeyStrategy.
+         * <p>The cache key generation strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder cacheKeyStrategy(String cacheKeyStrategy) {
             this.cacheKeyStrategy = cacheKeyStrategy;
@@ -140,7 +145,10 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * cacheMode.
+         * <p>The cache mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         public Builder cacheMode(String cacheMode) {
             this.cacheMode = cacheMode;
@@ -148,7 +156,10 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * cacheTTL.
+         * <p>The cache expiration time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder cacheTTL(Integer cacheTTL) {
             this.cacheTTL = cacheTTL;
@@ -156,7 +167,7 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * embeddingConfig.
+         * <p>The embedding service configuration.</p>
          */
         public Builder embeddingConfig(EmbeddingConfig embeddingConfig) {
             this.embeddingConfig = embeddingConfig;
@@ -164,7 +175,7 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * pluginStatus.
+         * <p>The plugin running status.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;
@@ -172,7 +183,7 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * redisConfig.
+         * <p>The Redis configuration for exact cache count storage.</p>
          */
         public Builder redisConfig(AiPolicyRedisConfig redisConfig) {
             this.redisConfig = redisConfig;
@@ -180,7 +191,7 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * vectorConfig.
+         * <p>The vector database configuration.</p>
          */
         public Builder vectorConfig(VectorConfig vectorConfig) {
             this.vectorConfig = vectorConfig;
@@ -272,7 +283,10 @@ public class AiCacheConfig extends TeaModel {
             } 
 
             /**
-             * modelName.
+             * <p>The embedding model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text-embedding-v2</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -280,7 +294,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The embedding service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -288,7 +305,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * timeout.
+             * <p>The request timeout period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -296,7 +316,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The embedding service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dashscope</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -415,7 +438,10 @@ public class AiCacheConfig extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The API key of the vector database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -423,7 +449,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * collectionId.
+             * <p>The vector collection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col-xxx</p>
              */
             public Builder collectionId(String collectionId) {
                 this.collectionId = collectionId;
@@ -431,7 +460,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * serviceHost.
+             * <p>The service address of the vector database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vdb-xxx.dashvector.aliyuncs.com</p>
              */
             public Builder serviceHost(String serviceHost) {
                 this.serviceHost = serviceHost;
@@ -439,7 +471,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * threshold.
+             * <p>The similarity threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.95</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -447,7 +482,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * timeout.
+             * <p>The request timeout period, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -455,7 +493,10 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The vector database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dashvector</p>
              */
             public Builder type(String type) {
                 this.type = type;

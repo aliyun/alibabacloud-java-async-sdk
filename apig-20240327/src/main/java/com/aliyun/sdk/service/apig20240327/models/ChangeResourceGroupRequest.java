@@ -101,10 +101,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Target resource group ID.</p>
+         * <p>The ID of the destination resource group. You can view resource group IDs in the Resource Management console.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aekzdrfx2xdnaja</p>
+         * <p>rg-aekzuqyxxxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -113,10 +113,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource ID</p>
+         * <p>The ID of the resource to be moved. The value must match the specified ResourceType.</p>
          * 
          * <strong>example:</strong>
-         * <p>gw-ct4i14um1hkn0tpqfae0</p>
+         * <p>gw-cq2vmc93km41m3dm4bg0</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -125,10 +125,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource type</p>
+         * <p>The resource type. The value is case-sensitive and must exactly match one of the valid values.</p>
          * 
          * <strong>example:</strong>
-         * <p>gateway</p>
+         * <p>Gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -137,10 +137,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Service name, fixed value apig</p>
+         * <p>The cloud service identifier. Fixed as APIG. You generally do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>apig</p>
+         * <p>APIG</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

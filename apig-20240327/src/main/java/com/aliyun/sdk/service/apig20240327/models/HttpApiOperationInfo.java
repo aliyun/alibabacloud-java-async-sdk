@@ -210,7 +210,7 @@ public class HttpApiOperationInfo extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The authentication configurations of the operation.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -218,7 +218,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719386834548</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -226,7 +229,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * deployConfigs.
+         * <p>The backend service deployment information of the operation.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -234,7 +237,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The operation description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A example operation.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,7 +248,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * enableAuth.
+         * <p>Specifies whether to enable authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.enableAuth = enableAuth;
@@ -250,7 +259,22 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * method.
+         * <p>The HTTP method of the operation.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TRACE</li>
+         * <li>HEAD</li>
+         * <li>DELETE</li>
+         * <li>POST</li>
+         * <li>GET</li>
+         * <li>CONNECT</li>
+         * <li>OPTIONS</li>
+         * <li>PUT</li>
+         * <li>PATCH</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -258,7 +282,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * mock.
+         * <p>The mocked parameters of the operation.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -266,7 +290,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The operation name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetUserInfo</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -274,7 +301,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * operationId.
+         * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-xxx</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -282,7 +312,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>The operation path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/user/123</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -290,7 +323,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * request.
+         * <p>The request parameters of the operation.</p>
          */
         public Builder request(HttpApiRequestContract request) {
             this.request = request;
@@ -298,7 +331,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * response.
+         * <p>The response parameters of the operation.</p>
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;
@@ -306,7 +339,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The operation publishing status on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed</p>
          */
         public Builder status(String status) {
             this.status = status;

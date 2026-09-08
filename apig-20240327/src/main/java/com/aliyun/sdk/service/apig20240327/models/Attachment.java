@@ -132,7 +132,10 @@ public class Attachment extends TeaModel {
         } 
 
         /**
-         * attachResourceId.
+         * <p>attachResourceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder attachResourceId(String attachResourceId) {
             this.attachResourceId = attachResourceId;
@@ -140,7 +143,7 @@ public class Attachment extends TeaModel {
         }
 
         /**
-         * attachResourceIds.
+         * <p>The list of mounted resource IDs.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
             this.attachResourceIds = attachResourceIds;
@@ -148,7 +151,7 @@ public class Attachment extends TeaModel {
         }
 
         /**
-         * attachResourceParentIds.
+         * <p>The list of parent IDs of the mounted resource.</p>
          */
         public Builder attachResourceParentIds(java.util.List<String> attachResourceParentIds) {
             this.attachResourceParentIds = attachResourceParentIds;
@@ -156,7 +159,19 @@ public class Attachment extends TeaModel {
         }
 
         /**
-         * attachResourceType.
+         * <p>The type of mount point supported by the policy. Valid values:</p>
+         * <ul>
+         * <li>HttpApi: HttpApi.</li>
+         * <li>Operation: Operation of HttpApi.</li>
+         * <li>GatewayRoute: gateway route.</li>
+         * <li>GatewayService: gateway service.</li>
+         * <li>GatewayServicePort: gateway service port.</li>
+         * <li>Domain: gateway domain name.</li>
+         * <li>Gateway: gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApi</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.attachResourceType = attachResourceType;
@@ -164,7 +179,10 @@ public class Attachment extends TeaModel {
         }
 
         /**
-         * environmentId.
+         * <p>The environment to which the mounted resource belongs. If the environment ID is *, the mounted resource of the policy is not associated with any environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -172,7 +190,10 @@ public class Attachment extends TeaModel {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway to which the mounted resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpr4f9dlhtgq5ksfgmb0</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -180,7 +201,10 @@ public class Attachment extends TeaModel {
         }
 
         /**
-         * policyAttachmentId.
+         * <p>The policy mount ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pr-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder policyAttachmentId(String policyAttachmentId) {
             this.policyAttachmentId = policyAttachmentId;

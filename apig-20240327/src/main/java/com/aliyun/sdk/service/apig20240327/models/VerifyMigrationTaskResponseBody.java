@@ -118,6 +118,9 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB85272A-5F04-58D7-BDE1-8BB5EB390CE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -59,7 +59,7 @@ public class GetMcpServerRequest extends Request {
         } 
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>MCP Server ID</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-adfefz24afg</p>

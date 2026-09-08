@@ -101,7 +101,10 @@ public class ListConsumerGroupsRequest extends Request {
         } 
 
         /**
-         * gatewayType.
+         * <p>The gateway type. Valid values: API or AI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -110,7 +113,10 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>The fuzzy match condition for the consumer group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -119,7 +125,10 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

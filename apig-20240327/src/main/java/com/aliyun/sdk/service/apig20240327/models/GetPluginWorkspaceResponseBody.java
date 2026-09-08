@@ -118,6 +118,9 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AFA893B-A75B-5002-AACF-84CABE06197A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

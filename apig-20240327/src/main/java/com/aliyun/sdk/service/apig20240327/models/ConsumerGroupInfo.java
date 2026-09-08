@@ -80,7 +80,10 @@ public class ConsumerGroupInfo extends TeaModel {
         } 
 
         /**
-         * consumerGroupId.
+         * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.consumerGroupId = consumerGroupId;
@@ -88,7 +91,10 @@ public class ConsumerGroupInfo extends TeaModel {
         }
 
         /**
-         * gatewayType.
+         * <p>The gateway type. Valid values: API or AI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.gatewayType = gatewayType;
@@ -96,7 +102,10 @@ public class ConsumerGroupInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The consumer group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-consumer-group</p>
          */
         public Builder name(String name) {
             this.name = name;

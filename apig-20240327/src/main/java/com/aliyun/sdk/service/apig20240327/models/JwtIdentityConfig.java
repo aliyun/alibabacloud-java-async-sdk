@@ -132,7 +132,7 @@ public class JwtIdentityConfig extends TeaModel {
         } 
 
         /**
-         * claimsToHeadersConfigs.
+         * <p>The list of claim-to-header configurations.</p>
          */
         public Builder claimsToHeadersConfigs(java.util.List<ClaimsToHeadersConfigs> claimsToHeadersConfigs) {
             this.claimsToHeadersConfigs = claimsToHeadersConfigs;
@@ -140,7 +140,10 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
-         * jwks.
+         * <p>The JWKS configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder jwks(String jwks) {
             this.jwks = jwks;
@@ -148,7 +151,7 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
-         * jwtPayloadConfig.
+         * <p>The JWT payload configuration.</p>
          */
         public Builder jwtPayloadConfig(JwtPayloadConfig jwtPayloadConfig) {
             this.jwtPayloadConfig = jwtPayloadConfig;
@@ -156,7 +159,7 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
-         * jwtTokenConfig.
+         * <p>The JWT token configuration.</p>
          */
         public Builder jwtTokenConfig(JwtTokenConfig jwtTokenConfig) {
             this.jwtTokenConfig = jwtTokenConfig;
@@ -164,7 +167,10 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
-         * remoteJwks.
+         * <p>The remote JWKS configuration (JSON string).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;uri&quot;:&quot;<a href="https://example.com/.well-known/jwks.json%22%7D">https://example.com/.well-known/jwks.json&quot;}</a></p>
          */
         public Builder remoteJwks(String remoteJwks) {
             this.remoteJwks = remoteJwks;
@@ -172,7 +178,10 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
-         * secretType.
+         * <p>The secret type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Symmetry</p>
          */
         public Builder secretType(String secretType) {
             this.secretType = secretType;
@@ -180,7 +189,10 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The authentication configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jwt</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -259,7 +271,10 @@ public class JwtIdentityConfig extends TeaModel {
             } 
 
             /**
-             * claim.
+             * <p>The claim name in the JWT payload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sub</p>
              */
             public Builder claim(String claim) {
                 this.claim = claim;
@@ -267,7 +282,10 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * header.
+             * <p>The HTTP header name after conversion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Consumer-Id</p>
              */
             public Builder header(String header) {
                 this.header = header;
@@ -275,7 +293,10 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * override.
+             * <p>Specifies whether to overwrite an existing header with the same name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder override(Boolean override) {
                 this.override = override;
@@ -342,7 +363,10 @@ public class JwtIdentityConfig extends TeaModel {
             } 
 
             /**
-             * payloadKeyName.
+             * <p>The JWT payload key configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uid</p>
              */
             public Builder payloadKeyName(String payloadKeyName) {
                 this.payloadKeyName = payloadKeyName;
@@ -350,7 +374,10 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * payloadKeyValue.
+             * <p>The JWT payload value configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2222</p>
              */
             public Builder payloadKeyValue(String payloadKeyValue) {
                 this.payloadKeyValue = payloadKeyValue;
@@ -443,7 +470,10 @@ public class JwtIdentityConfig extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The key configuration of the JWT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -451,7 +481,10 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * pass.
+             * <p>Indicates whether the request is passed through.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pass(Boolean pass) {
                 this.pass = pass;
@@ -459,7 +492,10 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * position.
+             * <p>The location where the JWT is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HEADER</p>
              */
             public Builder position(String position) {
                 this.position = position;
@@ -467,7 +503,10 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * prefix.
+             * <p>The prefix configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;

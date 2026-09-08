@@ -93,7 +93,10 @@ public class AkSkIdentityConfig extends TeaModel {
         } 
 
         /**
-         * ak.
+         * <p>Access Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder ak(String ak) {
             this.ak = ak;
@@ -101,7 +104,10 @@ public class AkSkIdentityConfig extends TeaModel {
         }
 
         /**
-         * generateMode.
+         * <p>Generation mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder generateMode(String generateMode) {
             this.generateMode = generateMode;
@@ -109,7 +115,10 @@ public class AkSkIdentityConfig extends TeaModel {
         }
 
         /**
-         * sk.
+         * <p>Secret Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder sk(String sk) {
             this.sk = sk;
@@ -117,7 +126,10 @@ public class AkSkIdentityConfig extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>Identity authentication type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jwt</p>
          */
         public Builder type(String type) {
             this.type = type;

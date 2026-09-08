@@ -93,7 +93,10 @@ public class HttpApiBackendMatchCondition extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>The key of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>color</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -101,7 +104,16 @@ public class HttpApiBackendMatchCondition extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The operator. Exact match, prefix match, and regular expressions are supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>equal</li>
+         * <li>regex</li>
+         * <li>prefix</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>equal</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -109,7 +121,10 @@ public class HttpApiBackendMatchCondition extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The match type. Query and Header parameters can be matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Query</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +132,10 @@ public class HttpApiBackendMatchCondition extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder value(String value) {
             this.value = value;

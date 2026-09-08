@@ -74,7 +74,7 @@ public class GetHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>Target HTTP API ID.</p>
+         * <p>The ID of the target HTTP API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetHttpApiRequest extends Request {
         }
 
         /**
-         * expandPolicyConfigs.
+         * <p>Specifies whether to expand independent policy configurations. When omitted or set to true, a full compatible view is returned. When set to false, the ModelAPI Token throttling managed by Policy returns policy references and optional read-only plug-in status, and the rule body can be retrieved by calling GetPolicy.</p>
          */
         public Builder expandPolicyConfigs(Boolean expandPolicyConfigs) {
             this.putQueryParameter("expandPolicyConfigs", expandPolicyConfigs);

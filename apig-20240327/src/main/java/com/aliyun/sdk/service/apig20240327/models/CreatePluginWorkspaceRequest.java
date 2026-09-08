@@ -113,6 +113,9 @@ public class CreatePluginWorkspaceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>664f1e2xxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putBodyParameter("organizationId", organizationId);
@@ -122,6 +125,9 @@ public class CreatePluginWorkspaceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-custom-plugin</p>
          */
         public Builder repoName(String repoName) {
             this.putBodyParameter("repoName", repoName);

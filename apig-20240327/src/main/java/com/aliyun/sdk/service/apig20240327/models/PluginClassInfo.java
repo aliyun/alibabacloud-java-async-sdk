@@ -262,7 +262,10 @@ public class PluginClassInfo extends TeaModel {
         } 
 
         /**
-         * alias.
+         * <p>The plugin class alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI安全护栏</p>
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -270,7 +273,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * configExample.
+         * <p>The configuration example (JSON string).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;checkRequest&quot;:true}</p>
          */
         public Builder configExample(String configExample) {
             this.configExample = configExample;
@@ -278,7 +284,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The plugin class description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI请求内容安全检测插件</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -286,7 +295,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * executePriority.
+         * <p>The execution priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder executePriority(Integer executePriority) {
             this.executePriority = executePriority;
@@ -294,7 +306,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * executeStage.
+         * <p>The execution stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHN</p>
          */
         public Builder executeStage(String executeStage) {
             this.executeStage = executeStage;
@@ -302,7 +317,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * imageName.
+         * <p>The Wasm image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>higress-registry.tencentcloudcr.com/ai-security-guard</p>
          */
         public Builder imageName(String imageName) {
             this.imageName = imageName;
@@ -310,7 +328,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * innerPlugin.
+         * <p>Indicates whether the plugin is a built-in plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder innerPlugin(Boolean innerPlugin) {
             this.innerPlugin = innerPlugin;
@@ -318,7 +339,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * mode.
+         * <p>The plugin running mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wasm</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -326,7 +350,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The plugin class name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-security-guard</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -334,7 +361,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * pluginClassId.
+         * <p>The plugin class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cls-xxx</p>
          */
         public Builder pluginClassId(String pluginClassId) {
             this.pluginClassId = pluginClassId;
@@ -342,7 +372,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The plugin source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HigressOfficial</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -350,7 +383,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * supportedMinGatewayVersion.
+         * <p>The minimum supported gateway DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.11</p>
          */
         public Builder supportedMinGatewayVersion(String supportedMinGatewayVersion) {
             this.supportedMinGatewayVersion = supportedMinGatewayVersion;
@@ -358,7 +394,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The plugin type category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -366,7 +405,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The plugin version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -374,7 +416,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * versionDescription.
+         * <p>The version description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>初始版本</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = versionDescription;
@@ -382,7 +427,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * wasmLanguage.
+         * <p>The Wasm programming language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rust</p>
          */
         public Builder wasmLanguage(String wasmLanguage) {
             this.wasmLanguage = wasmLanguage;
@@ -390,7 +438,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * wasmUrl.
+         * <p>The Wasm file download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://...</p>
          */
         public Builder wasmUrl(String wasmUrl) {
             this.wasmUrl = wasmUrl;

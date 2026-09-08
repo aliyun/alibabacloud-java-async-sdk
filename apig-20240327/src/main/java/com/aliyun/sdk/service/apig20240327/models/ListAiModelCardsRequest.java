@@ -102,6 +102,7 @@ public class ListAiModelCardsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI gateway instance. The target instance must exist, belong to the current account, and be of the AI gateway type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListAiModelCardsRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The fuzzy match keyword for the model provider identifier or model name. If left empty, all model cards under the current gateway are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -123,7 +127,10 @@ public class ListAiModelCardsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1. The value must be greater than or equal to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -132,7 +139,10 @@ public class ListAiModelCardsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

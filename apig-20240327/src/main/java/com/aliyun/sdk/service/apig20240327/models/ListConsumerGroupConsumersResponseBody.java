@@ -93,7 +93,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code. Ok is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -238,7 +244,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * consumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-8c13d2b4f8a1</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -246,7 +255,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * deployStatus.
+             * <p>The consumer deployment status. Valid values: Processing, Failed, and Success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -254,7 +266,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The consumer description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online API caller.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +277,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the consumer is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -270,7 +288,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * joinTimestamp.
+             * <p>The time when the consumer joined the consumer group, in Unix millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715769600000</p>
              */
             public Builder joinTimestamp(Long joinTimestamp) {
                 this.joinTimestamp = joinTimestamp;
@@ -278,7 +299,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-consumer</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +395,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The consumer group member list.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -379,7 +403,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -387,7 +414,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -395,7 +425,10 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of consumers that match the filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

@@ -117,10 +117,7 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

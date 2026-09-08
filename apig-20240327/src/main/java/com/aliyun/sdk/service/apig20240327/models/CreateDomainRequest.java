@@ -271,7 +271,7 @@ public class CreateDomainRequest extends Request {
         } 
 
         /**
-         * <p>The CA certificate ID.</p>
+         * <p>The CA certificate identifier. This parameter is optional for Dedicated with HTTPS. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -283,7 +283,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The certificate identifier.</p>
+         * <p>The certificate identifier. This parameter is required for Dedicated with HTTPS and must pass validation. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -295,7 +295,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The client CA certificate content.</p>
+         * <p>The client CA certificate. This parameter is conditionally required for Dedicated with HTTPS (required when MTLSEnabled is set to true). This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -311,7 +311,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * domainScope.
+         * <p>The domain scope. Valid values: Dedicated (dedicated gateway domain name), Serverless (Serverless gateway domain name). Default value: Dedicated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder domainScope(String domainScope) {
             this.putBodyParameter("domainScope", domainScope);
@@ -320,7 +323,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable forced HTTP to HTTPS redirection.</p>
+         * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is HTTPS. This parameter is required for Serverless and for Dedicated with HTTPS. This parameter is not validated for Dedicated with HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -332,12 +335,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The gateway type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AI</li>
-         * <li>API</li>
-         * </ul>
+         * <p>The gateway type. If not specified, the default value is API.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -349,13 +347,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>HTTP/2 configuration options.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>GlobalConfig</li>
-         * <li>Close</li>
-         * <li>Open</li>
-         * </ul>
+         * <p>The HTTP/2 setting. Valid values: GlobalConfig (follows the global configuration), Open (enabled), Close (disabled). Default value: GlobalConfig. This setting is supported only for HTTPS domain names in the Dedicated scope.</p>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -367,7 +359,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable mutual Transport Layer Security (mTLS) authentication.</p>
+         * <p>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated with HTTPS. If set to true, ClientCACert is required. This parameter is not allowed for Serverless.</p>
          */
         public Builder mTLSEnabled(Boolean mTLSEnabled) {
             this.putBodyParameter("mTLSEnabled", mTLSEnabled);
@@ -376,7 +368,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name. The name must be 1 to 128 characters in length, such as abc.com.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,11 +381,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The protocol type supported by the domain name.</p>
-         * <ul>
-         * <li>HTTP: HTTP only</li>
-         * <li>HTTPS: HTTPS only</li>
-         * </ul>
+         * <p>The protocol type used by the domain name. Valid values: HTTP, HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -408,7 +396,7 @@ public class CreateDomainRequest extends Request {
          * <p>The <a href="https://help.aliyun.com/document_detail/151181.html">resource group ID</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aekzoiafjtr7zyq</p>
+         * <p>rg-aekzhiv7derfweq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -417,7 +405,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The cipher suite configuration.</p>
+         * <p>The TLS cipher suite configuration, including the configuration type, cipher suite names, and supported TLS versions. This configuration is supported only for HTTPS domain names in the Dedicated scope.</p>
          */
         public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
             this.putBodyParameter("tlsCipherSuitesConfig", tlsCipherSuitesConfig);
@@ -426,7 +414,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The maximum TLS protocol version (up to TLS 1.3).</p>
+         * <p>The maximum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS1.3</p>
@@ -438,7 +426,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The minimum TLS protocol version (minimum TLS 1.0).</p>
+         * <p>The minimum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the default value is TLS 1.0. Valid values range from TLS 1.0 to TLS 1.3, compatible with TLSv1.x. This parameter is not allowed for Serverless.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS1.0</p>
@@ -450,7 +438,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotency token generated by the caller as a globally unique value (UUID recommended). The value must be up to 64 characters in length. Within approximately 24 hours after the first successful request, a duplicate request with the same ClientToken and identical request parameters directly returns the domainId created by the first request without creating a duplicate domain name. If the same ClientToken is used with different request parameters, an IdempotentParameterMismatch error is returned. If the first request is still being processed, an IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is not enabled, and the behavior is consistent with the existing version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -459,7 +450,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations consistent with actual creation are performed (including idempotency checks for existing test domain names), but no domain name is created and no side effects are produced. If not specified or set to false, the behavior is consistent with the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

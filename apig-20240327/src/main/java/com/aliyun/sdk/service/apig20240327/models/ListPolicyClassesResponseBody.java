@@ -93,7 +93,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of policy template information.</p>
+         * <p>The policy template information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -218,7 +218,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The templates.</p>
+             * <p>The list of policy templates.</p>
              */
             public Builder items(java.util.List<PolicyClassInfo> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

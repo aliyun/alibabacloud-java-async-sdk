@@ -210,7 +210,10 @@ public class PolicyClassInfo extends TeaModel {
         } 
 
         /**
-         * alias.
+         * <p>The template alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rate Limit</p>
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -218,7 +221,7 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * attachableResourceTypes.
+         * <p>The list of resource types that can be mounted.</p>
          */
         public Builder attachableResourceTypes(java.util.List<String> attachableResourceTypes) {
             this.attachableResourceTypes = attachableResourceTypes;
@@ -226,7 +229,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * classId.
+         * <p>The template identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-cpqm0s94ckt1displ8ng</p>
          */
         public Builder classId(String classId) {
             this.classId = classId;
@@ -234,7 +240,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * configExample.
+         * <p>A configuration example.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder configExample(String configExample) {
             this.configExample = configExample;
@@ -242,7 +251,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * deprecated.
+         * <p>Specifies whether the policy has been deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deprecated(Boolean deprecated) {
             this.deprecated = deprecated;
@@ -250,7 +262,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Limits the number of requests per unit of time</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -258,7 +273,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * direction.
+         * <p>The direction of traffic on which the policy takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InBound</p>
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -266,7 +284,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * enableLog.
+         * <p>Specifies whether to enable logging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableLog(Boolean enableLog) {
             this.enableLog = enableLog;
@@ -274,7 +295,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * executePriority.
+         * <p>The execution priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executePriority(String executePriority) {
             this.executePriority = executePriority;
@@ -282,7 +306,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * executeStage.
+         * <p>The execution phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder executeStage(String executeStage) {
             this.executeStage = executeStage;
@@ -290,7 +317,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConcurrencyLimit</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -298,7 +328,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowControl</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -306,7 +339,10 @@ public class PolicyClassInfo extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The template version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.version = version;

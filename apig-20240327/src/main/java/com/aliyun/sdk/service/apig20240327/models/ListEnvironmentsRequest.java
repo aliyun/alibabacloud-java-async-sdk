@@ -157,10 +157,10 @@ public class ListEnvironmentsRequest extends Request {
         } 
 
         /**
-         * <p>Environment alias, fuzzy search.</p>
+         * <p>The environment alias. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>production</p>
+         * <p>测试</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);
@@ -169,7 +169,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>Gateway ID, exact search.</p>
+         * <p>The gateway ID. Exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cptv6ktlhtgnqr73h8d1</p>
@@ -181,7 +181,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>Gateway name, fuzzy search.</p>
+         * <p>The gateway name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test-gw</p>
@@ -193,7 +193,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>The gateway type</p>
+         * <p>The gateway type.</p>
          * 
          * <strong>example:</strong>
          * <p>APIGateway</p>
@@ -205,7 +205,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>Environment name, fuzzy search.</p>
+         * <p>The environment name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -217,7 +217,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>Page number, default is 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>Page size, default is 10.</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -241,10 +241,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aek2sy66mftleiq</p>
+         * <p>rg-aek2nqpppkzplmq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);

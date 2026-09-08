@@ -101,7 +101,10 @@ public class UpdateGatewayQuotaRuleStatusRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -110,7 +113,10 @@ public class UpdateGatewayQuotaRuleStatusRequest extends Request {
         }
 
         /**
-         * ruleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qr-xxxxx</p>
          */
         public Builder ruleId(String ruleId) {
             this.putPathParameter("ruleId", ruleId);
@@ -119,7 +125,10 @@ public class UpdateGatewayQuotaRuleStatusRequest extends Request {
         }
 
         /**
-         * clearHistory.
+         * <p>Specifies whether to clear historical quota usage when enabling or disabling the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder clearHistory(Boolean clearHistory) {
             this.putBodyParameter("clearHistory", clearHistory);
@@ -128,7 +137,10 @@ public class UpdateGatewayQuotaRuleStatusRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies whether to enable or disable the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);

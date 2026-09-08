@@ -143,7 +143,10 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * domainScope.
+         * <p>The domain name scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Serverless</p>
          */
         public Builder domainScope(String domainScope) {
             this.putQueryParameter("domainScope", domainScope);
@@ -152,10 +155,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>gw-xxx</p>
+         * <p>gw-xxxxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -164,7 +167,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * <p>The gateway type to filter. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+         * <p>The gateway type used for filtering. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -176,7 +179,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * <p>The domain name keyword for fuzzy search.</p>
+         * <p>The domain name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -188,7 +191,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,10 +215,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-ahr5uil8raz0rq3b</p>
+         * <p>rg-aek27lpqyiie6qy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);

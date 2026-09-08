@@ -60,6 +60,7 @@ public class GetAiModelProviderRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the model provider to query. This ID is returned by the model creation operation and is in a format that starts with mp-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

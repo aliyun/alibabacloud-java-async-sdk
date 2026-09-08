@@ -171,7 +171,7 @@ public class PolicyInfo extends TeaModel {
         } 
 
         /**
-         * attachments.
+         * <p>The mount information.</p>
          */
         public Builder attachments(java.util.List<Attachment> attachments) {
             this.attachments = attachments;
@@ -179,7 +179,10 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * classAlias.
+         * <p>The policy class alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流量控制</p>
          */
         public Builder classAlias(String classAlias) {
             this.classAlias = classAlias;
@@ -187,7 +190,32 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * className.
+         * <p>The class name supported by the policy. Different policies support different mount points. This parameter is used in combination with AttachResourceType.</p>
+         * <ul>
+         * <li>RateLimit: throttles traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>ConcurrencyLimit: controls concurrency. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>CircuitBreaker: breaks circuits and downgrades traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>HttpRewrite: rewrites HTTP traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>HeaderModify: modifies headers. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>Cors: supports CORS. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>FlowCopy: replicates traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>Timeout: times out requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>Retry: retries requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
+         * <li>IpAccessControl: implements IP address-based access control. Supported: HttpApi, Operation, GatewayRoute, Domain, and Gateway.</li>
+         * <li>DirectResponse: mocks responses. Supported: Operation and GatewayRoute.</li>
+         * <li>Redirect: redirects traffic. Supported: GatewayRoute.</li>
+         * <li>Fallback: implements fallback. Supported: Operation and GatewayRoute.</li>
+         * <li>ServiceTls: implements TLS authentication. Supported: GatewayService.</li>
+         * <li>ServiceLb: balances loads. Supported: GatewayService.</li>
+         * <li>ServicePortTls: implements service port TLS authentication. Supported: GatewayServicePort.</li>
+         * <li>Waf: implements WAF protection. Supported: GatewayRoute and Gateway.</li>
+         * <li>JWTAuth: implements global JWT authentication. Supported: Gateway.</li>
+         * <li>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</li>
+         * <li>ExternalZAuth: implements custom authentication. Supported: Gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RateLimit</p>
          */
         public Builder className(String className) {
             this.className = className;
@@ -195,7 +223,10 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * config.
+         * <p>The policy configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enable&quot;:false}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -203,7 +234,15 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * direction.
+         * <p>The direction of traffic on which the policy takes effect. Valid values:</p>
+         * <ul>
+         * <li>OutBound</li>
+         * <li>InBound</li>
+         * <li>Both</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InBound</p>
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -211,7 +250,10 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * executePriority.
+         * <p>The execution priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310</p>
          */
         public Builder executePriority(String executePriority) {
             this.executePriority = executePriority;
@@ -219,7 +261,19 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * executeStage.
+         * <p>The execution phase.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PluginStatistic</li>
+         * <li>PluginAuthorization</li>
+         * <li>PluginPre</li>
+         * <li>PluginAuthentication</li>
+         * <li>PluginDefault</li>
+         * <li>PluginPost</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PluginPost</p>
          */
         public Builder executeStage(String executeStage) {
             this.executeStage = executeStage;
@@ -227,7 +281,10 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-policy</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -235,7 +292,10 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * policyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -243,7 +303,10 @@ public class PolicyInfo extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>策略类型</p>
          */
         public Builder type(String type) {
             this.type = type;

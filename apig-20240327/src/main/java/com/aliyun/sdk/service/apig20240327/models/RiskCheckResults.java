@@ -159,7 +159,10 @@ public class RiskCheckResults extends TeaModel {
         } 
 
         /**
-         * checkTime.
+         * <p>The check time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890000</p>
          */
         public Builder checkTime(Long checkTime) {
             this.checkTime = checkTime;
@@ -167,7 +170,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>网关实例的唯一标识符</p>
+         * <p>The gateway ID</p>
          * 
          * <strong>example:</strong>
          * <p>gw-0364f863b1a04474911b48cd6d51d03d</p>
@@ -178,7 +181,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>实例的基本信息</p>
+         * <p>The instance metadata</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -186,7 +189,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>详细的风险项信息列表</p>
+         * <p>The risk details list</p>
          */
         public Builder riskDetails(java.util.List<RiskDetails> riskDetails) {
             this.riskDetails = riskDetails;
@@ -194,7 +197,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>整体风险等级，可选值：LOW（低风险）、MEDIUM（中风险）、HIGH（高风险）、CRITICAL（严重风险）</p>
+         * <p>The risk level</p>
          * 
          * <strong>example:</strong>
          * <p>MEDIUM</p>
@@ -205,7 +208,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>风险综合评分，取值范围0-100分，分数越高表示风险越低</p>
+         * <p>The risk score</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -216,7 +219,10 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * snapshotTime.
+         * <p>The snapshot time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890000</p>
          */
         public Builder snapshotTime(Long snapshotTime) {
             this.snapshotTime = snapshotTime;
@@ -224,7 +230,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>风险检测状态，可选值：SUCCESS（成功）、FAIL（失败）、RUNNING（运行中）</p>
+         * <p>The execution status</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -235,7 +241,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>检测到的风险项总数量</p>
+         * <p>The total number of risks</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -330,7 +336,10 @@ public class RiskCheckResults extends TeaModel {
             } 
 
             /**
-             * clusterType.
+             * <p>The cluster type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ingress</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -338,7 +347,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The replica count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -346,7 +358,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The specification</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apigw.small.x1</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -354,7 +369,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.14</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -525,7 +543,7 @@ public class RiskCheckResults extends TeaModel {
             } 
 
             /**
-             * <p>执行检测的模块名称</p>
+             * <p>The check module</p>
              * 
              * <strong>example:</strong>
              * <p>BaseInfo</p>
@@ -536,7 +554,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>风险相关的详细数据，不同风险类型数据结构不同</p>
+             * <p>The risk detailed data</p>
              */
             public Builder data(java.util.Map<String, String> data) {
                 this.data = data;
@@ -544,10 +562,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>风险的详细描述，JSON字符串格式</p>
+             * <p>The risk description</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;desc&quot;:&quot;单节点实例存在架构风险，单点故障会导致服务不可用。建议扩容到2节点及以上。&quot;}</p>
+             * <p>The version is outdated</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -555,7 +573,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>该风险项的告警通知是否已被屏蔽</p>
+             * <p>Whether to mute notifications</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -566,7 +584,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>风险项的唯一标识码</p>
+             * <p>The risk code</p>
              * 
              * <strong>example:</strong>
              * <p>30010010001</p>
@@ -577,7 +595,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>该风险项的等级，可选值：LOW、MEDIUM、HIGH、CRITICAL</p>
+             * <p>The risk level</p>
              * 
              * <strong>example:</strong>
              * <p>HIGH</p>
@@ -588,10 +606,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>风险项的名称</p>
+             * <p>The risk title</p>
              * 
              * <strong>example:</strong>
-             * <p>单节点架构风险</p>
+             * <p>Version Risk</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -599,7 +617,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>风险分类，可选值：SYSTEM（系统风险）、VERSION（版本风险）、SAFE（安全风险）、CAPACITY（容量风险）</p>
+             * <p>The risk type</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -610,10 +628,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>当前实例的风险现状，JSON字符串格式</p>
+             * <p>The risk situation</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;desc&quot;:&quot;集群节点数为1，不具备高可用能力&quot;}</p>
+             * <p>Current version is 2 releases behind</p>
              */
             public Builder situation(String situation) {
                 this.situation = situation;
@@ -621,10 +639,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>针对该风险的优化建议，JSON字符串格式，包含描述和操作链接</p>
+             * <p>The fix suggestion</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;desc&quot;:&quot;扩容到2节点及以上&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;点击扩容&quot;}]}</p>
+             * <p>Upgrade to the latest version</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;

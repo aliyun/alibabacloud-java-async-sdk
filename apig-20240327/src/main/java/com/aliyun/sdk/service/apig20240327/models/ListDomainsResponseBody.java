@@ -93,7 +93,7 @@ public class ListDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response parameters.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to trace the API call link.</p>
+         * <p>The request ID, which is used to trace the API call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>
@@ -218,7 +218,7 @@ public class ListDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of domain information.</p>
+             * <p>The list of domain name information.</p>
              */
             public Builder items(java.util.List<DomainInfo> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -248,7 +248,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

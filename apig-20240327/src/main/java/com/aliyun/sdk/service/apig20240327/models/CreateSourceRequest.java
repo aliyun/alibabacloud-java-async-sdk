@@ -115,7 +115,7 @@ public class CreateSourceRequest extends Request {
         } 
 
         /**
-         * <p>The gateway instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq7l5s5lhtgi6q***</p>
@@ -127,7 +127,7 @@ public class CreateSourceRequest extends Request {
         }
 
         /**
-         * <p>The source configuration when the source type is K8S.</p>
+         * <p>The Container Service source configuration.</p>
          */
         public Builder k8sSourceConfig(K8sSourceConfig k8sSourceConfig) {
             this.putBodyParameter("k8sSourceConfig", k8sSourceConfig);
@@ -136,7 +136,7 @@ public class CreateSourceRequest extends Request {
         }
 
         /**
-         * <p>The source configuration when the source type is MSE_NACOS.</p>
+         * <p>The MSE Nacos source configuration.</p>
          */
         public Builder nacosSourceConfig(NacosSourceConfig nacosSourceConfig) {
             this.putBodyParameter("nacosSourceConfig", nacosSourceConfig);
@@ -159,8 +159,8 @@ public class CreateSourceRequest extends Request {
         /**
          * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>MSE_NACOS: MSE Nacos</li>
-         * <li>K8S: Container Service for Kubernetes (ACK)</li>
+         * <li>MSE_NACOS: Microservices Engine (MSE) Nacos.</li>
+         * <li>K8S: Container Service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,6 +246,9 @@ public class CreateSourceRequest extends Request {
 
             /**
              * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>预发网关访问安全组</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +264,7 @@ public class CreateSourceRequest extends Request {
             }
 
             /**
-             * <p>The ID of a security group.</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp14w4fa4j***</p>
@@ -331,7 +334,7 @@ public class CreateSourceRequest extends Request {
             } 
 
             /**
-             * <p>The security group rules.</p>
+             * <p>The list of gateway security group authorization rule configurations.</p>
              */
             public Builder authorizeSecurityGroupRules(java.util.List<AuthorizeSecurityGroupRules> authorizeSecurityGroupRules) {
                 this.authorizeSecurityGroupRules = authorizeSecurityGroupRules;
@@ -339,7 +342,7 @@ public class CreateSourceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the ACK cluster.</p>
+             * <p>The Container Service cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c3fbe6caaaece4062b*****</p>

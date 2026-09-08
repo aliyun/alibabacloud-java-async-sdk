@@ -67,7 +67,10 @@ public class AuthConfig extends TeaModel {
         } 
 
         /**
-         * authMode.
+         * <p>The authentication mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoAuth</p>
          */
         public Builder authMode(String authMode) {
             this.authMode = authMode;
@@ -75,7 +78,10 @@ public class AuthConfig extends TeaModel {
         }
 
         /**
-         * authType.
+         * <p>The authentication type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jwt</p>
          */
         public Builder authType(String authType) {
             this.authType = authType;

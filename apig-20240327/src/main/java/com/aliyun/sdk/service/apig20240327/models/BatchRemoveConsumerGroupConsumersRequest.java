@@ -73,7 +73,10 @@ public class BatchRemoveConsumerGroupConsumersRequest extends Request {
         } 
 
         /**
-         * consumerGroupId.
+         * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -82,7 +85,10 @@ public class BatchRemoveConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * consumerIds.
+         * <p>The list of consumer IDs to remove from the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cs-8c13d2b4f8a1&quot;]</p>
          */
         public Builder consumerIds(java.util.List<String> consumerIds) {
             this.putBodyParameter("consumerIds", consumerIds);

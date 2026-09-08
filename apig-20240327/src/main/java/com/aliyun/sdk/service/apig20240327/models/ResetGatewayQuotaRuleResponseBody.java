@@ -93,7 +93,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code or error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200, 404, 500</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, World!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +260,15 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * conflictPeriodType.
+             * <p>The period type of the existing conflicting rule on the subject. Valid values:</p>
+             * <ul>
+             * <li>day: The period of the existing conflicting rule is daily.</li>
+             * <li>week: The period of the existing conflicting rule is weekly.</li>
+             * <li>month: The period of the existing conflicting rule is monthly.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>week</p>
              */
             public Builder conflictPeriodType(String conflictPeriodType) {
                 this.conflictPeriodType = conflictPeriodType;
@@ -256,7 +276,14 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * conflictType.
+             * <p>The type of the existing conflicting rule on the subject. Valid values:</p>
+             * <ul>
+             * <li>calendar: The existing conflicting rule uses a calendar period.</li>
+             * <li>epoch: The existing conflicting rule uses a custom period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>calendar</p>
              */
             public Builder conflictType(String conflictType) {
                 this.conflictType = conflictType;
@@ -264,7 +291,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * consumerId.
+             * <p>The consumer ID. You can use subjectId instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-d82n1g6m1hkm3xxxxxxx</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -272,7 +302,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * consumerName.
+             * <p>The consumer name. You can use subjectName instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
@@ -280,7 +313,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectId.
+             * <p>The ID of the conflicting subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-xxx</p>
              */
             public Builder subjectId(String subjectId) {
                 this.subjectId = subjectId;
@@ -288,7 +324,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectName.
+             * <p>The name of the conflicting subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer-a</p>
              */
             public Builder subjectName(String subjectName) {
                 this.subjectName = subjectName;
@@ -296,7 +335,14 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * subjectType.
+             * <p>The type of the conflicting subject. Valid values:</p>
+             * <ul>
+             * <li>consumer</li>
+             * <li>consumer_group</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer</p>
              */
             public Builder subjectType(String subjectType) {
                 this.subjectType = subjectType;
@@ -376,7 +422,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * conflictHash.
+             * <p>The conflict hash.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
              */
             public Builder conflictHash(String conflictHash) {
                 this.conflictHash = conflictHash;
@@ -384,7 +433,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The list of conflicting subjects.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -392,7 +441,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * totalConflictCount.
+             * <p>The total number of conflicts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalConflictCount(Integer totalConflictCount) {
                 this.totalConflictCount = totalConflictCount;
@@ -485,7 +537,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * accepted.
+             * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder accepted(Boolean accepted) {
                 this.accepted = accepted;
@@ -493,7 +548,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * conflictPreview.
+             * <p>The conflict preview.</p>
              */
             public Builder conflictPreview(ConflictPreview conflictPreview) {
                 this.conflictPreview = conflictPreview;
@@ -501,7 +556,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * dryRun.
+             * <p>Indicates whether the request is a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -509,7 +567,10 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qr-d8j7fpmm1hks65xxxx</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

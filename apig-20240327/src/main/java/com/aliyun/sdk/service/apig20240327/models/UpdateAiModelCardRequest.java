@@ -146,6 +146,7 @@ public class UpdateAiModelCardRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the model card to update. This ID is returned by the model creation operation and is in a format that starts with mc-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * availablePaths.
+         * <p>The list of invocation paths supported by the model. Each item must include both path and type. The list is overwritten as a whole during updates.</p>
          */
         public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
             this.putBodyParameter("availablePaths", availablePaths);
@@ -167,7 +168,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * credit.
+         * <p>The credit billing information of the model. Only the fixed type is supported. The unit is Credits per million tokens. If not specified, all cost values default to 0.</p>
          */
         public Builder credit(Credit credit) {
             this.putBodyParameter("credit", credit);
@@ -176,7 +177,10 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * features.
+         * <p>The model capability switches. Keys must be model capability names supported by the API gateway. Values are Boolean.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</p>
          */
         public Builder features(java.util.Map<String, ?> features) {
             this.putBodyParameter("features", features);
@@ -185,7 +189,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * meta.
+         * <p>The token limits and input/output modality information of the model.</p>
          */
         public Builder meta(Meta meta) {
             this.putBodyParameter("meta", meta);
@@ -194,6 +198,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
+         * <p>The model name. The name must be unique within the same AI gateway instance and model provider. Maximum length: 256 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +211,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
+         * <p>The model provider identifier. The value must reference an existing model provider in the target AI gateway instance. Maximum length: 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +283,10 @@ public class UpdateAiModelCardRequest extends Request {
             } 
 
             /**
-             * path.
+             * <p>The model invocation path. Maximum length: 2048 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1/chat/completions</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -285,7 +294,10 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The protocol type of the path. Maximum length: 64 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAICompatible</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -378,7 +390,10 @@ public class UpdateAiModelCardRequest extends Request {
             } 
 
             /**
-             * cacheCost.
+             * <p>The cache hit token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder cacheCost(Float cacheCost) {
                 this.cacheCost = cacheCost;
@@ -386,7 +401,10 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * inputCost.
+             * <p>The input token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder inputCost(Float inputCost) {
                 this.inputCost = inputCost;
@@ -394,7 +412,10 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * outputCost.
+             * <p>The output token cost in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder outputCost(Float outputCost) {
                 this.outputCost = outputCost;
@@ -402,7 +423,10 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The billing type. Only fixed is supported. Default value: fixed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -508,7 +532,10 @@ public class UpdateAiModelCardRequest extends Request {
             } 
 
             /**
-             * maxInputTokens.
+             * <p>The maximum number of input tokens supported by the model. The value must be greater than or equal to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxInputTokens(Long maxInputTokens) {
                 this.maxInputTokens = maxInputTokens;
@@ -516,7 +543,10 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * maxOutputTokens.
+             * <p>The maximum number of output tokens supported by the model. The value must be greater than or equal to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder maxOutputTokens(Long maxOutputTokens) {
                 this.maxOutputTokens = maxOutputTokens;
@@ -524,7 +554,10 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * maxTokens.
+             * <p>The maximum total number of context tokens supported by the model. The value must be greater than or equal to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxTokens(Long maxTokens) {
                 this.maxTokens = maxTokens;
@@ -532,7 +565,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * supportedInputModalities.
+             * <p>The list of input modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
              */
             public Builder supportedInputModalities(java.util.List<String> supportedInputModalities) {
                 this.supportedInputModalities = supportedInputModalities;
@@ -540,7 +573,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * supportedOutputModalities.
+             * <p>The list of output modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
              */
             public Builder supportedOutputModalities(java.util.List<String> supportedOutputModalities) {
                 this.supportedOutputModalities = supportedOutputModalities;

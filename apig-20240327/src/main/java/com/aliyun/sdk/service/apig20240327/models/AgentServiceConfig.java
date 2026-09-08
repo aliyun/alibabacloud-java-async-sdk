@@ -147,6 +147,7 @@ public class AgentServiceConfig extends TeaModel {
         } 
 
         /**
+         * <p>The address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * customConfig.
+         * <p>The custom configuration. Required when provider is set to custom.</p>
          */
         public Builder customConfig(CustomConfig customConfig) {
             this.customConfig = customConfig;
@@ -166,7 +167,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * dashScopeConfig.
+         * <p>The DashScope service configuration. Required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
          */
         public Builder dashScopeConfig(DashScopeConfig dashScopeConfig) {
             this.dashScopeConfig = dashScopeConfig;
@@ -174,7 +175,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * difyConfig.
+         * <p>The Dify service configuration. Required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
          */
         public Builder difyConfig(DifyConfig difyConfig) {
             this.difyConfig = difyConfig;
@@ -182,7 +183,10 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * enableHealthCheck.
+         * <p>Specifies whether to enable health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableHealthCheck(Boolean enableHealthCheck) {
             this.enableHealthCheck = enableHealthCheck;
@@ -190,7 +194,10 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * enableOutlierDetection.
+         * <p>Specifies whether to enable outlier detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOutlierDetection(Boolean enableOutlierDetection) {
             this.enableOutlierDetection = enableOutlierDetection;
@@ -198,7 +205,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * protocols.
+         * <p>The list of communication protocols.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.protocols = protocols;
@@ -206,7 +213,11 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
+         * <p>The service provider.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -272,7 +283,10 @@ public class AgentServiceConfig extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-xxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -280,7 +294,10 @@ public class AgentServiceConfig extends TeaModel {
             }
 
             /**
-             * apiKeyGenerateMode.
+             * <p>The key generation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reference</p>
              */
             public Builder apiKeyGenerateMode(String apiKeyGenerateMode) {
                 this.apiKeyGenerateMode = apiKeyGenerateMode;
@@ -347,7 +364,10 @@ public class AgentServiceConfig extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>apiKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -355,7 +375,10 @@ public class AgentServiceConfig extends TeaModel {
             }
 
             /**
-             * appId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-xxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -409,7 +432,7 @@ public class AgentServiceConfig extends TeaModel {
             } 
 
             /**
-             * appCredentials.
+             * <p>The application configuration.</p>
              */
             public Builder appCredentials(java.util.List<AppCredentials> appCredentials) {
                 this.appCredentials = appCredentials;
@@ -476,7 +499,10 @@ public class AgentServiceConfig extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>API Key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-xxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -484,7 +510,10 @@ public class AgentServiceConfig extends TeaModel {
             }
 
             /**
-             * botType.
+             * <p>The interaction type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatflow</p>
              */
             public Builder botType(String botType) {
                 this.botType = botType;

@@ -119,7 +119,10 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         } 
 
         /**
-         * portalId.
+         * <p>The portal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>portal-xxx</p>
          */
         public Builder portalId(String portalId) {
             this.portalId = portalId;
@@ -127,7 +130,10 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         }
 
         /**
-         * portalName.
+         * <p>The portal name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开发者门户</p>
          */
         public Builder portalName(String portalName) {
             this.portalName = portalName;
@@ -135,7 +141,10 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-xxx</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -143,7 +152,10 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         }
 
         /**
-         * productName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI网关API</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -151,7 +163,10 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         }
 
         /**
-         * productType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiGateway</p>
          */
         public Builder productType(String productType) {
             this.productType = productType;
@@ -159,7 +174,10 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         }
 
         /**
-         * publicationId.
+         * <p>The product publish ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pub-xxx</p>
          */
         public Builder publicationId(String publicationId) {
             this.publicationId = publicationId;

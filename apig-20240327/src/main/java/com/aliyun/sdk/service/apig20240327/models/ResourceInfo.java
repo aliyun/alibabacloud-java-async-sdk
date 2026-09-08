@@ -93,7 +93,10 @@ public class ResourceInfo extends TeaModel {
         } 
 
         /**
-         * resourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-1nsu2d****</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -101,7 +104,10 @@ public class ResourceInfo extends TeaModel {
         }
 
         /**
-         * resourceName.
+         * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1023</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -109,7 +115,10 @@ public class ResourceInfo extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type. Valid values: HttpApi, Operation, GatewayRoute, Gateway, and GatewayDomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpApi</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -117,7 +126,10 @@ public class ResourceInfo extends TeaModel {
         }
 
         /**
-         * resourceVersion.
+         * <p>The resource version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder resourceVersion(String resourceVersion) {
             this.resourceVersion = resourceVersion;

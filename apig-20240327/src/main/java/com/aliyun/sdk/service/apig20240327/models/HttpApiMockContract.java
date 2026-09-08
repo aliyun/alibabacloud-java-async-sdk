@@ -80,7 +80,10 @@ public class HttpApiMockContract extends TeaModel {
         } 
 
         /**
-         * enable.
+         * <p>Specifies whether to enable the Mock feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -88,7 +91,10 @@ public class HttpApiMockContract extends TeaModel {
         }
 
         /**
-         * responseCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder responseCode(Integer responseCode) {
             this.responseCode = responseCode;
@@ -96,7 +102,10 @@ public class HttpApiMockContract extends TeaModel {
         }
 
         /**
-         * responseContent.
+         * <p>The response content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mock content.</p>
          */
         public Builder responseContent(String responseContent) {
             this.responseContent = responseContent;

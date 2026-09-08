@@ -93,10 +93,10 @@ public class CreateMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>code</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -104,7 +104,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>object</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>message</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -203,7 +203,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MCP server name</p>
+             * <p>The MCP server name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-mcp</p>

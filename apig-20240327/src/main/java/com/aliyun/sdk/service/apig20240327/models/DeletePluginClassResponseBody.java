@@ -97,6 +97,9 @@ public class DeletePluginClassResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3699C3E4-19D8-5475-A9B8-4524E6C3D855</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

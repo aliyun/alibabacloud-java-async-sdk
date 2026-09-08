@@ -214,7 +214,7 @@ public class UpdateDomainRequest extends Request {
         } 
 
         /**
-         * <p>The domain ID.</p>
+         * <p>The domain name ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The CA certificate ID.</p>
+         * <p>The CA certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -239,7 +239,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -267,7 +267,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * domainScope.
+         * <p>The scope of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder domainScope(String domainScope) {
             this.putBodyParameter("domainScope", domainScope);
@@ -276,7 +279,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable forcible HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</p>
+         * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS. This parameter is required when the protocol is HTTPS.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -288,13 +291,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The HTTP/2 configuration.</p>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>GlobalConfig</li>
-         * <li>Close</li>
-         * <li>Open</li>
-         * </ul>
+         * <p>The HTTP/2 settings.</p>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -315,10 +312,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The protocol type to be supported by the domain name. Valid values:</p>
+         * <p>The protocol type supported by the domain name.</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP: Only HTTP is supported.</li>
+         * <li>HTTPS: Only HTTPS is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,7 +337,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The maximum TLS version. Up to TLS 1.3 is supported.</p>
+         * <p>The maximum TLS protocol version. TLS 1.3 is the maximum supported version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
@@ -352,7 +349,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The minimum TLS version. Down to TLS 1.0 is supported.</p>
+         * <p>The minimum TLS protocol version. TLS 1.0 is the minimum supported version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>

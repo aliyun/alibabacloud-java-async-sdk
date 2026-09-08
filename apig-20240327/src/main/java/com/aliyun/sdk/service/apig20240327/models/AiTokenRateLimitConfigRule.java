@@ -119,7 +119,10 @@ public class AiTokenRateLimitConfigRule extends TeaModel {
         } 
 
         /**
-         * limitMode.
+         * <p>The throttling mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TokenPerMinute</p>
          */
         public Builder limitMode(String limitMode) {
             this.limitMode = limitMode;
@@ -127,7 +130,10 @@ public class AiTokenRateLimitConfigRule extends TeaModel {
         }
 
         /**
-         * limitType.
+         * <p>The throttling type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Consumer</p>
          */
         public Builder limitType(String limitType) {
             this.limitType = limitType;
@@ -135,7 +141,10 @@ public class AiTokenRateLimitConfigRule extends TeaModel {
         }
 
         /**
-         * limitValue.
+         * <p>The throttling value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder limitValue(Integer limitValue) {
             this.limitValue = limitValue;
@@ -143,7 +152,10 @@ public class AiTokenRateLimitConfigRule extends TeaModel {
         }
 
         /**
-         * matchKey.
+         * <p>The match key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X-API-Key</p>
          */
         public Builder matchKey(String matchKey) {
             this.matchKey = matchKey;
@@ -151,7 +163,10 @@ public class AiTokenRateLimitConfigRule extends TeaModel {
         }
 
         /**
-         * matchType.
+         * <p>The matching method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
          */
         public Builder matchType(String matchType) {
             this.matchType = matchType;
@@ -159,7 +174,10 @@ public class AiTokenRateLimitConfigRule extends TeaModel {
         }
 
         /**
-         * matchValue.
+         * <p>The match value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
          */
         public Builder matchValue(String matchValue) {
             this.matchValue = matchValue;

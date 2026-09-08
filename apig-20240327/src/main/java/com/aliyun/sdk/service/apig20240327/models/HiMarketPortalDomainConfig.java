@@ -80,7 +80,10 @@ public class HiMarketPortalDomainConfig extends TeaModel {
         } 
 
         /**
-         * domain.
+         * <p>The domain name address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>portal.example.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -88,7 +91,10 @@ public class HiMarketPortalDomainConfig extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The request protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -96,7 +102,10 @@ public class HiMarketPortalDomainConfig extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The domain name type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.type = type;

@@ -118,6 +118,9 @@ public class ListPluginWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B690F39C-1BDA-55E0-9E94-5358E758C772</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

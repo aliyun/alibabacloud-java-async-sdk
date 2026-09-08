@@ -80,7 +80,10 @@ public class HiMarketPortalSettingConfig extends TeaModel {
         } 
 
         /**
-         * autoApproveDevelopers.
+         * <p>Specifies whether to automatically approve developer registration requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoApproveDevelopers(Boolean autoApproveDevelopers) {
             this.autoApproveDevelopers = autoApproveDevelopers;
@@ -88,7 +91,10 @@ public class HiMarketPortalSettingConfig extends TeaModel {
         }
 
         /**
-         * autoApproveSubscriptions.
+         * <p>Specifies whether to automatically approve API subscription requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoApproveSubscriptions(Boolean autoApproveSubscriptions) {
             this.autoApproveSubscriptions = autoApproveSubscriptions;
@@ -96,7 +102,10 @@ public class HiMarketPortalSettingConfig extends TeaModel {
         }
 
         /**
-         * builtinAuthEnabled.
+         * <p>Specifies whether to enable username-password authentication (built-in authentication).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder builtinAuthEnabled(Boolean builtinAuthEnabled) {
             this.builtinAuthEnabled = builtinAuthEnabled;

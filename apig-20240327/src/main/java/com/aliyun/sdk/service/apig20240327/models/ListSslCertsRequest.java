@@ -101,7 +101,7 @@ public class ListSslCertsRequest extends Request {
         } 
 
         /**
-         * <p>The name keyword for matching.</p>
+         * <p>The keyword for fuzzy match of the certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>ali</p>
@@ -125,7 +125,7 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

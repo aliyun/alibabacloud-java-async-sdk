@@ -93,7 +93,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -343,7 +343,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the consumer authorization rule.</p>
+             * <p>The consumer authorization rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>car-csgeka5lhtggrjcprok0</p>
@@ -376,7 +376,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment status of the API in the current environment.</p>
+             * <p>The publish status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -387,7 +387,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment information.</p>
+             * <p>The environment context.</p>
              */
             public Builder environmentInfo(EnvironmentInfo environmentInfo) {
                 this.environmentInfo = environmentInfo;
@@ -395,7 +395,11 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+             * <p>The expiration mode. Valid values:</p>
+             * <ul>
+             * <li>LongTerm</li>
+             * <li>ShortTerm</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ShortTerm</p>
@@ -406,7 +410,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule status.</p>
+             * <p>The expiration status.</p>
              * 
              * <strong>example:</strong>
              * <p>InEffect</p>
@@ -417,7 +421,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the rule expires.</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>172086834548</p>
@@ -573,7 +577,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -584,7 +588,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

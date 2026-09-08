@@ -93,7 +93,10 @@ public class HiMarketHttpRoute extends TeaModel {
         } 
 
         /**
-         * builtin.
+         * <p>Indicates whether the route is a built-in route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder builtin(Boolean builtin) {
             this.builtin = builtin;
@@ -101,7 +104,10 @@ public class HiMarketHttpRoute extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The route description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent route</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +115,7 @@ public class HiMarketHttpRoute extends TeaModel {
         }
 
         /**
-         * domains.
+         * <p>The list of associated domain names.</p>
          */
         public Builder domains(java.util.List<HiMarketDomain> domains) {
             this.domains = domains;
@@ -117,7 +123,7 @@ public class HiMarketHttpRoute extends TeaModel {
         }
 
         /**
-         * match.
+         * <p>The route matching rule.</p>
          */
         public Builder match(Match match) {
             this.match = match;
@@ -209,7 +215,10 @@ public class HiMarketHttpRoute extends TeaModel {
             } 
 
             /**
-             * caseSensitive.
+             * <p>Indicates whether the matching is case-sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -217,7 +226,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Agent-Type</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +237,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -233,7 +248,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The matching value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dashscope</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -326,7 +344,10 @@ public class HiMarketHttpRoute extends TeaModel {
             } 
 
             /**
-             * caseSensitive.
+             * <p>Indicates whether the matching is case-sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -334,7 +355,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Agent-Type</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +366,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -350,7 +377,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The matching value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dashscope</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -430,7 +460,10 @@ public class HiMarketHttpRoute extends TeaModel {
             } 
 
             /**
-             * caseSensitive.
+             * <p>Indicates whether the matching is case-sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -438,7 +471,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prefix</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -446,7 +482,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The path value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1/agents/invoke</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -539,7 +578,10 @@ public class HiMarketHttpRoute extends TeaModel {
             } 
 
             /**
-             * caseSensitive.
+             * <p>Indicates whether the matching is case-sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -547,7 +589,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Agent-Type</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -555,7 +600,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -563,7 +611,10 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The matching value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dashscope</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -669,7 +720,7 @@ public class HiMarketHttpRoute extends TeaModel {
             } 
 
             /**
-             * headers.
+             * <p>The list of header matching rules.</p>
              */
             public Builder headers(java.util.List<Headers> headers) {
                 this.headers = headers;
@@ -677,7 +728,7 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * methods.
+             * <p>The list of HTTP methods.</p>
              */
             public Builder methods(java.util.List<String> methods) {
                 this.methods = methods;
@@ -685,7 +736,7 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * modelMatches.
+             * <p>The list of model matching rules (specific to Agent API).</p>
              */
             public Builder modelMatches(java.util.List<ModelMatches> modelMatches) {
                 this.modelMatches = modelMatches;
@@ -693,7 +744,7 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path matching rule.</p>
              */
             public Builder path(MatchPath path) {
                 this.path = path;
@@ -701,7 +752,7 @@ public class HiMarketHttpRoute extends TeaModel {
             }
 
             /**
-             * queryParams.
+             * <p>The list of query parameter matching rules.</p>
              */
             public Builder queryParams(java.util.List<QueryParams> queryParams) {
                 this.queryParams = queryParams;

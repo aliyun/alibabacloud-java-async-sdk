@@ -127,7 +127,7 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+         * <p>The consumer authorization rule ID used to filter the API operation list. The API operation list in the response contains only authorized API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -148,7 +148,11 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * <p>The expiration mode. Valid values:</p>
+         * <ul>
+         * <li>LongTerm</li>
+         * <li>ShortTerm</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>LongTerm</p>

@@ -93,7 +93,7 @@ public class InstallPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class InstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response payload.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class InstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -123,7 +123,7 @@ public class InstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>201CFCA0-3AF5-52D0-A0F3-FBA697AF55CB</p>
@@ -260,7 +260,7 @@ public class InstallPluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The installation result.</p>
+             * <p>The installation results.</p>
              */
             public Builder installPluginResults(java.util.List<InstallPluginResults> installPluginResults) {
                 this.installPluginResults = installPluginResults;

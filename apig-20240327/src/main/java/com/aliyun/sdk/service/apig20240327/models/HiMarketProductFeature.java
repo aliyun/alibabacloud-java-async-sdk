@@ -54,7 +54,7 @@ public class HiMarketProductFeature extends TeaModel {
         } 
 
         /**
-         * modelFeature.
+         * <p>The model feature.</p>
          */
         public Builder modelFeature(HiMarketModelFeature modelFeature) {
             this.modelFeature = modelFeature;

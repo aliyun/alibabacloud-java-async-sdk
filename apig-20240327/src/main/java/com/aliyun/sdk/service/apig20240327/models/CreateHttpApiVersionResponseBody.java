@@ -96,10 +96,7 @@ public class CreateHttpApiVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

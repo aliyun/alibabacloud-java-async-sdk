@@ -129,7 +129,10 @@ public class ListGatewayQuotaRulesRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -138,7 +141,10 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The rule name keyword for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -147,7 +153,10 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve at a time. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -156,7 +165,10 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4tM8BlBJwHSNyjWpGaci4/7dKNGp1JMgsKtvCagmtY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -165,7 +177,10 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -174,7 +189,10 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

@@ -106,7 +106,10 @@ public class AiTokenRateLimitConfig extends TeaModel {
         } 
 
         /**
-         * enableGlobalRules.
+         * <p>Specifies whether to enable global (API-level) throttling rules. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableGlobalRules(Boolean enableGlobalRules) {
             this.enableGlobalRules = enableGlobalRules;
@@ -114,7 +117,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
         }
 
         /**
-         * globalRules.
+         * <p>The list of global throttling rules. Only the LimitByGlobal type is allowed.</p>
          */
         public Builder globalRules(java.util.List<AiTokenRateLimitConfigRule> globalRules) {
             this.globalRules = globalRules;
@@ -122,7 +125,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
         }
 
         /**
-         * pluginStatus.
+         * <p>The running status of the plugin.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;
@@ -130,7 +133,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
         }
 
         /**
-         * redisConfig.
+         * <p>The Redis configuration.</p>
          */
         public Builder redisConfig(AiPolicyRedisConfig redisConfig) {
             this.redisConfig = redisConfig;
@@ -138,7 +141,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
         }
 
         /**
-         * rules.
+         * <p>The list of throttling rules.</p>
          */
         public Builder rules(java.util.List<AiTokenRateLimitConfigRule> rules) {
             this.rules = rules;

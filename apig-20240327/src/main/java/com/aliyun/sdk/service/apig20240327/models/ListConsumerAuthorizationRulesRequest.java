@@ -113,7 +113,7 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>API name for fuzzy search.</p>
+         * <p>The fuzzy match parameter for the API name.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3</p>
@@ -137,7 +137,7 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned on each page. If you do not specify this parameter, the default value is 10.</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

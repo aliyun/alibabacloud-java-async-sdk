@@ -93,7 +93,7 @@ public class ListZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E8079207-B651-592A-A565-23E9EE5673B0</p>
@@ -192,7 +192,7 @@ public class ListZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether QAT (Quality Assurance Testing) is supported in this zone</p>
+             * <p>Indicates whether QuickAssist Technology (QAT) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -203,7 +203,7 @@ public class ListZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone identifier</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen-c</p>
@@ -260,7 +260,7 @@ public class ListZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of queried zones.</p>
+             * <p>The list of zones.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

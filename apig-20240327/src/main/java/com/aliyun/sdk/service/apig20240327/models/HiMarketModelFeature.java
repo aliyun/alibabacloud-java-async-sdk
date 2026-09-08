@@ -132,7 +132,10 @@ public class HiMarketModelFeature extends TeaModel {
         } 
 
         /**
-         * enableMultiModal.
+         * <p>Indicates whether multimodal input is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableMultiModal(Boolean enableMultiModal) {
             this.enableMultiModal = enableMultiModal;
@@ -140,7 +143,10 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * enableThinking.
+         * <p>Indicates whether chain-of-thought (Thinking) is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableThinking(Boolean enableThinking) {
             this.enableThinking = enableThinking;
@@ -148,7 +154,10 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * maxTokens.
+         * <p>The maximum number of tokens supported by the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder maxTokens(Integer maxTokens) {
             this.maxTokens = maxTokens;
@@ -156,7 +165,10 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * model.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder model(String model) {
             this.model = model;
@@ -164,7 +176,10 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * streaming.
+         * <p>Indicates whether streaming output is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder streaming(Boolean streaming) {
             this.streaming = streaming;
@@ -172,7 +187,10 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * temperature.
+         * <p>The temperature parameter that controls the randomness of generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7</p>
          */
         public Builder temperature(Float temperature) {
             this.temperature = temperature;
@@ -180,7 +198,10 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * webSearch.
+         * <p>Indicates whether web search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder webSearch(Boolean webSearch) {
             this.webSearch = webSearch;

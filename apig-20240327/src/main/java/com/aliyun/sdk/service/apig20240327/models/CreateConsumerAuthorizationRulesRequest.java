@@ -59,7 +59,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
         } 
 
         /**
-         * <p>The consumer authentication rules to be created.</p>
+         * <p>The consumer authentication rules.</p>
          */
         public Builder authorizationRules(java.util.List<AuthorizationRules> authorizationRules) {
             this.putBodyParameter("authorizationRules", authorizationRules);
@@ -156,7 +156,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
              * <p>The environment ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>env-cti17hem1hktoruj98ug</p>
+             * <p>env-******</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -164,7 +164,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>Parent resource ID</p>
+             * <p>The parent resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>api-******</p>
@@ -175,7 +175,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The ID of the target resource to authorize. The required ID type is determined by resourceType, and the prefix must match.</p>
              * 
              * <strong>example:</strong>
              * <p>ha-cn-li942gy8p03</p>
@@ -186,7 +186,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>List of resources</p>
+             * <p>The resource information.</p>
              */
             public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
@@ -318,7 +318,10 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             } 
 
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>csg-8c13d2b4f8a1</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -329,7 +332,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
              * <p>The consumer ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cs-cu08olem1hkokaut34i0</p>
+             * <p>cs-******</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -337,7 +340,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The expiration mode. Valid values: LongTerm and ShortTerm.</p>
+             * <p>The expiration mode. Currently only LongTerm is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>LongTerm</p>
@@ -348,10 +351,10 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The expiration timestamp.</p>
+             * <p>The expiration timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>174116222x</p>
+             * <p>1741162221</p>
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -359,7 +362,10 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * principalType.
+             * <p>The principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ConsumerGroup</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -367,7 +373,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The resource identifier, which is provided to non-standard code sources for space reuse.</p>
+             * <p>The resource identifier. Serves as a unique identifier for space reuse by non-standard code sources.</p>
              */
             public Builder resourceIdentifier(ResourceIdentifier resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;

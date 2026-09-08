@@ -60,6 +60,7 @@ public class DeleteAiModelCardRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the model card to delete. This ID is returned by the model creation operation and is in a format that starts with mc-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

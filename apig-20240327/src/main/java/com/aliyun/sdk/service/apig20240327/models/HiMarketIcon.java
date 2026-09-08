@@ -67,7 +67,10 @@ public class HiMarketIcon extends TeaModel {
         } 
 
         /**
-         * type.
+         * <p>The icon type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -75,7 +78,10 @@ public class HiMarketIcon extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The icon value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/icon.png">https://example.com/icon.png</a></p>
          */
         public Builder value(String value) {
             this.value = value;
