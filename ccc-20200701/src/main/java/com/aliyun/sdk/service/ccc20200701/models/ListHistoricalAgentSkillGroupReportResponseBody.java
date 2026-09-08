@@ -106,7 +106,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of historical agent skill group data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -425,7 +437,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentAnswerRate.
+             * <p>Agent-side answer rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已弃用，请使用AgentHandleRate代替此参数</p>
              */
             public Builder agentAnswerRate(Float agentAnswerRate) {
                 this.agentAnswerRate = agentAnswerRate;
@@ -433,7 +448,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AgentHandleRate.
+             * <p>Agent handle rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder agentHandleRate(Float agentHandleRate) {
                 this.agentHandleRate = agentHandleRate;
@@ -441,7 +459,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerRate.
+             * <p>Answer rate. Formula: CallsAnswered/CallsDialed (Because answer events and offered events might fall into different time ranges, the result might sometimes exceed 100%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder answerRate(Float answerRate) {
                 this.answerRate = answerRate;
@@ -449,7 +470,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageCustomerRingTime.
+             * <p>Average customer-side ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageCustomerRingTime(Float averageCustomerRingTime) {
                 this.averageCustomerRingTime = averageCustomerRingTime;
@@ -457,7 +481,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageRingTime.
+             * <p>Average ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageRingTime(Float averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -465,7 +492,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -473,7 +503,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAgentHandled.
+             * <p>Number of calls handled by agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAgentHandled(Long callsAgentHandled) {
                 this.callsAgentHandled = callsAgentHandled;
@@ -481,7 +514,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAnswered.
+             * <p>Number of calls answered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -489,7 +525,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsCustomerAnswered.
+             * <p>Number of calls answered by customers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsCustomerAnswered(Long callsCustomerAnswered) {
                 this.callsCustomerAnswered = callsCustomerAnswered;
@@ -497,7 +536,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsCustomerHandled.
+             * <p>Number of customer-side pickups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已弃用，请使用CallsCustomerAnswered代替此参数</p>
              */
             public Builder callsCustomerHandled(Long callsCustomerHandled) {
                 this.callsCustomerHandled = callsCustomerHandled;
@@ -505,7 +547,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsDialed.
+             * <p>Number of calls dialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -513,7 +558,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerAnswerRate.
+             * <p>Customer answer rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder customerAnswerRate(Float customerAnswerRate) {
                 this.customerAnswerRate = customerAnswerRate;
@@ -521,7 +569,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerHandleRate.
+             * <p>Customer-side handle rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已弃用，请使用CustomerAnswerRate代替此参数</p>
              */
             public Builder customerHandleRate(Float customerHandleRate) {
                 this.customerHandleRate = customerHandleRate;
@@ -529,7 +580,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCustomerRingTime.
+             * <p>Maximum customer-side ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxCustomerRingTime(Long maxCustomerRingTime) {
                 this.maxCustomerRingTime = maxCustomerRingTime;
@@ -537,7 +591,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRingTime.
+             * <p>Maximum ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -545,7 +602,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -553,7 +613,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCustomerRingTime.
+             * <p>Total customer-side ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCustomerRingTime(Long totalCustomerRingTime) {
                 this.totalCustomerRingTime = totalCustomerRingTime;
@@ -561,7 +624,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRingTime.
+             * <p>Total ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -569,7 +635,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1000,7 +1069,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageFirstResponseTime.
+             * <p>Average first response time in chat sessions, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder averageFirstResponseTime(Float averageFirstResponseTime) {
                 this.averageFirstResponseTime = averageFirstResponseTime;
@@ -1008,7 +1080,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageHoldTime.
+             * <p>Average call hold time in seconds. Formula: TotalHoldTime/CallsHold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
@@ -1016,7 +1091,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageResponseTime.
+             * <p>Average response time in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder averageResponseTime(Float averageResponseTime) {
                 this.averageResponseTime = averageResponseTime;
@@ -1024,7 +1102,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageRingTime.
+             * <p>Average ring time in seconds. Formula: TotalRingTime/CallsRinged.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageRingTime(Float averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -1032,7 +1113,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time in seconds. Formula: TotalTalkTime/CallsHandled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageTalkTime(Float averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1040,7 +1124,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average after-call work time in seconds. Formula: TotalWorkTime/CallsHandled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageWorkTime(Float averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1048,7 +1135,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAttendedTransferIn.
+             * <p>Number of attended transfers in. If a call is transferred multiple times to this agent, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAttendedTransferIn(Long callsAttendedTransferIn) {
                 this.callsAttendedTransferIn = callsAttendedTransferIn;
@@ -1056,7 +1146,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAttendedTransferOut.
+             * <p>Number of attended transfers out. If a call is transferred multiple times to other agents, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAttendedTransferOut(Long callsAttendedTransferOut) {
                 this.callsAttendedTransferOut = callsAttendedTransferOut;
@@ -1064,7 +1157,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsBlindTransferIn.
+             * <p>Number of blind transfers in. If a call is transferred multiple times to this agent, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsBlindTransferIn(Long callsBlindTransferIn) {
                 this.callsBlindTransferIn = callsBlindTransferIn;
@@ -1072,7 +1168,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsBlindTransferOut.
+             * <p>Number of blind transfers out. If a call is transferred multiple times to other agents, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsBlindTransferOut(Long callsBlindTransferOut) {
                 this.callsBlindTransferOut = callsBlindTransferOut;
@@ -1080,7 +1179,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHandled.
+             * <p>Number of calls handled, which is the number of times an agent answered a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -1088,7 +1190,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHold.
+             * <p>Number of calls on hold, which is the number of times a call was put on hold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsHold(Long callsHold) {
                 this.callsHold = callsHold;
@@ -1096,7 +1201,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>Number of calls offered, which is the number of times calls were assigned to this agent, including blind transfers and attended transfers from other agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -1104,7 +1212,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRinged.
+             * <p>Number of calls that rang for the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsRinged(Long callsRinged) {
                 this.callsRinged = callsRinged;
@@ -1112,7 +1223,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * HandleRate.
+             * <p>Handle rate. Formula: CallsHandled/CallsOffered (Because answer events and offered events might fall into different time ranges, the result might sometimes exceed 100%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder handleRate(Float handleRate) {
                 this.handleRate = handleRate;
@@ -1120,7 +1234,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHoldTime.
+             * <p>Maximum call hold time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
@@ -1128,7 +1245,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRingTime.
+             * <p>Maximum ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -1136,7 +1256,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1144,7 +1267,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum after-call work time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -1152,7 +1278,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -1160,7 +1289,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionRate.
+             * <p>Satisfaction rate. Formula: Number of satisfied ratings/Number of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder satisfactionRate(Float satisfactionRate) {
                 this.satisfactionRate = satisfactionRate;
@@ -1168,7 +1300,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Number of satisfaction surveys offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -1176,7 +1311,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Number of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -1184,7 +1322,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalHoldTime.
+             * <p>Total call hold time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
@@ -1192,7 +1333,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMessagesSent.
+             * <p>Total messages sent in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalMessagesSent(Long totalMessagesSent) {
                 this.totalMessagesSent = totalMessagesSent;
@@ -1200,7 +1344,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMessagesSentByAgent.
+             * <p>Total messages sent by agents in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalMessagesSentByAgent(Long totalMessagesSentByAgent) {
                 this.totalMessagesSentByAgent = totalMessagesSentByAgent;
@@ -1208,7 +1355,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMessagesSentByCustomer.
+             * <p>Total messages sent by customers in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
                 this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
@@ -1216,7 +1366,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRingTime.
+             * <p>Total ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -1224,7 +1377,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1232,7 +1388,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total after-call work time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -1390,7 +1549,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1398,7 +1560,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAnswered.
+             * <p>Number of calls answered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -1406,7 +1571,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsDialed.
+             * <p>Number of calls dialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -1414,7 +1582,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHandled.
+             * <p>Number of calls handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -1422,7 +1593,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>Number of calls offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -1430,7 +1604,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsTalk.
+             * <p>Number of calls the agent participated in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsTalk(Long callsTalk) {
                 this.callsTalk = callsTalk;
@@ -1438,7 +1615,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsTalked.
+             * <p>Number of calls participated in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder callsTalked(Long callsTalked) {
                 this.callsTalked = callsTalked;
@@ -1446,7 +1626,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1454,7 +1637,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1859,7 +2045,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerRate.
+             * <p>Answer rate. Formula: CallsAnswered/CallsDialed (Because answer events and offered events might fall into different time ranges, the result might sometimes exceed 100%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder answerRate(Float answerRate) {
                 this.answerRate = answerRate;
@@ -1867,7 +2056,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageDialingTime.
+             * <p>Average dialing time in seconds. Formula: TotalDialingTime/CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageDialingTime(Float averageDialingTime) {
                 this.averageDialingTime = averageDialingTime;
@@ -1875,7 +2067,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageHoldTime.
+             * <p>Average call hold time in seconds. Formula: TotalHoldTime/CallsHold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
@@ -1883,7 +2078,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageRingTime.
+             * <p>Average ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageRingTime(Float averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -1891,7 +2089,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time in seconds. Formula: TotalTalkTime/CallsAnswered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageTalkTime(Float averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1899,7 +2100,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average after-call work time in seconds. Formula: TotalWorkTime/CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageWorkTime(Float averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1907,7 +2111,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAnswered.
+             * <p>Number of calls answered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -1915,7 +2122,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAttendedTransferIn.
+             * <p>Number of attended transfers in. If a call is transferred multiple times to this agent, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAttendedTransferIn(Long callsAttendedTransferIn) {
                 this.callsAttendedTransferIn = callsAttendedTransferIn;
@@ -1923,7 +2133,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAttendedTransferOut.
+             * <p>Number of attended transfers out. If a call is transferred multiple times to other agents, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsAttendedTransferOut(Long callsAttendedTransferOut) {
                 this.callsAttendedTransferOut = callsAttendedTransferOut;
@@ -1931,7 +2144,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsBlindTransferIn.
+             * <p>Number of blind transfers in. If a call is transferred multiple times to this agent, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsBlindTransferIn(Long callsBlindTransferIn) {
                 this.callsBlindTransferIn = callsBlindTransferIn;
@@ -1939,7 +2155,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsBlindTransferOut.
+             * <p>Number of blind transfers out. If a call is transferred multiple times to other agents, each transfer counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsBlindTransferOut(Long callsBlindTransferOut) {
                 this.callsBlindTransferOut = callsBlindTransferOut;
@@ -1947,7 +2166,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsDialed.
+             * <p>Number of calls dialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -1955,7 +2177,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHold.
+             * <p>Number of calls on hold, which is the number of times a call was put on hold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsHold(Long callsHold) {
                 this.callsHold = callsHold;
@@ -1963,7 +2188,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRinged.
+             * <p>Number of calls that rang for the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsRinged(Long callsRinged) {
                 this.callsRinged = callsRinged;
@@ -1971,7 +2199,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDialingTime.
+             * <p>Maximum dialing time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxDialingTime(Long maxDialingTime) {
                 this.maxDialingTime = maxDialingTime;
@@ -1979,7 +2210,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHoldTime.
+             * <p>Maximum call hold time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
@@ -1987,7 +2221,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRingTime.
+             * <p>Maximum ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -1995,7 +2232,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -2003,7 +2243,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum after-call work time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -2011,7 +2254,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -2019,7 +2265,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionRate.
+             * <p>Satisfaction rate. Formula: Number of satisfied ratings/Number of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder satisfactionRate(Float satisfactionRate) {
                 this.satisfactionRate = satisfactionRate;
@@ -2027,7 +2276,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Number of satisfaction surveys offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -2035,7 +2287,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Number of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -2043,7 +2298,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDialingTime.
+             * <p>Total dialing time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalDialingTime(Long totalDialingTime) {
                 this.totalDialingTime = totalDialingTime;
@@ -2051,7 +2309,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalHoldTime.
+             * <p>Total call hold time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
@@ -2059,7 +2320,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRingTime.
+             * <p>Total ring time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -2067,7 +2331,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -2075,7 +2342,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total after-call work time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -2155,7 +2425,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>开会</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -2163,7 +2436,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>Count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -2171,7 +2447,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -2615,7 +2894,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageBreakTime.
+             * <p>Average break time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageBreakTime(Float averageBreakTime) {
                 this.averageBreakTime = averageBreakTime;
@@ -2623,7 +2905,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageHoldTime.
+             * <p>Average call hold time in seconds. Formula: TotalHoldTime/(Inbound CallsHold + Outbound CallsHold).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
@@ -2631,7 +2916,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageReadyTime.
+             * <p>Average ready time in seconds. Formula: TotalReadyTime/Number of ready events. The number of ready events is not an API statistical field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageReadyTime(Float averageReadyTime) {
                 this.averageReadyTime = averageReadyTime;
@@ -2639,7 +2927,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time in seconds. Formula: TotalTalkTime/(CallsAnswered+CallsHandled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageTalkTime(Float averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -2647,7 +2938,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average after-call work time in seconds. Formula: TotalWorkTime/TotalCalls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder averageWorkTime(Float averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -2655,7 +2949,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * BreakCodeDetailList.
+             * <p>List of break code details.</p>
              */
             public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
@@ -2663,7 +2957,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * FirstCheckInTime.
+             * <p>Earliest check-in time. Format is UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686030515000</p>
              */
             public Builder firstCheckInTime(Long firstCheckInTime) {
                 this.firstCheckInTime = firstCheckInTime;
@@ -2671,7 +2968,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckOutTime.
+             * <p>Latest check-out time. Format is UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686030515000</p>
              */
             public Builder lastCheckOutTime(Long lastCheckOutTime) {
                 this.lastCheckOutTime = lastCheckOutTime;
@@ -2679,7 +2979,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBreakTime.
+             * <p>Maximum break time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxBreakTime(Long maxBreakTime) {
                 this.maxBreakTime = maxBreakTime;
@@ -2687,7 +2990,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHoldTime.
+             * <p>Maximum call hold time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
@@ -2695,7 +3001,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReadyTime.
+             * <p>Maximum ready time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxReadyTime(Long maxReadyTime) {
                 this.maxReadyTime = maxReadyTime;
@@ -2703,7 +3012,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -2711,7 +3023,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum after-call work time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -2719,7 +3034,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * OccupancyRate.
+             * <p>Agent occupancy rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder occupancyRate(Float occupancyRate) {
                 this.occupancyRate = occupancyRate;
@@ -2727,7 +3045,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -2735,7 +3056,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionRate.
+             * <p>Satisfaction rate. Formula: Number of satisfied ratings/Number of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder satisfactionRate(Float satisfactionRate) {
                 this.satisfactionRate = satisfactionRate;
@@ -2743,7 +3067,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Number of satisfaction surveys offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -2751,7 +3078,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Number of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -2759,7 +3089,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBreakTime.
+             * <p>Total break time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalBreakTime(Long totalBreakTime) {
                 this.totalBreakTime = totalBreakTime;
@@ -2767,7 +3100,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCalls.
+             * <p>Total number of calls. Formula: CallsOffered + CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;
@@ -2775,7 +3111,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalHoldTime.
+             * <p>Total hold time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
@@ -2783,7 +3122,11 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLoggedInTime.
+             * <p>Total logged-in time in seconds.
+             * <em>Note: This does not include offline or break time.</em></p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalLoggedInTime(Long totalLoggedInTime) {
                 this.totalLoggedInTime = totalLoggedInTime;
@@ -2791,7 +3134,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOffSiteLggedInTime.
+             * <p>Total off-site logged-in time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder totalOffSiteLggedInTime(Long totalOffSiteLggedInTime) {
                 this.totalOffSiteLggedInTime = totalOffSiteLggedInTime;
@@ -2799,7 +3145,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOfficePhoneLoggedInTime.
+             * <p>Total office phone logged-in time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder totalOfficePhoneLoggedInTime(Long totalOfficePhoneLoggedInTime) {
                 this.totalOfficePhoneLoggedInTime = totalOfficePhoneLoggedInTime;
@@ -2807,7 +3156,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOnSiteLoggedInTime.
+             * <p>Total on-site logged-in time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder totalOnSiteLoggedInTime(String totalOnSiteLoggedInTime) {
                 this.totalOnSiteLoggedInTime = totalOnSiteLoggedInTime;
@@ -2815,7 +3167,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutboundScenarioLoggedInTime.
+             * <p>Total outbound-only logged-in time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder totalOutboundScenarioLoggedInTime(Long totalOutboundScenarioLoggedInTime) {
                 this.totalOutboundScenarioLoggedInTime = totalOutboundScenarioLoggedInTime;
@@ -2823,7 +3178,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutboundScenarioReadyTime.
+             * <p>Total outbound-only idle time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalOutboundScenarioReadyTime(Long totalOutboundScenarioReadyTime) {
                 this.totalOutboundScenarioReadyTime = totalOutboundScenarioReadyTime;
@@ -2831,7 +3189,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutboundScenarioTime.
+             * <p>Total outbound-only online time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalOutboundScenarioTime(Long totalOutboundScenarioTime) {
                 this.totalOutboundScenarioTime = totalOutboundScenarioTime;
@@ -2839,7 +3200,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReadyTime.
+             * <p>Total ready time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalReadyTime(Long totalReadyTime) {
                 this.totalReadyTime = totalReadyTime;
@@ -2847,7 +3211,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -2855,7 +3222,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total after-call work time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -3026,7 +3396,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent1@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -3034,7 +3407,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>Agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云呼测试坐席</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -3042,7 +3418,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Back2Back.
+             * <p>Back-to-back call metrics.</p>
              */
             public Builder back2Back(Back2Back back2Back) {
                 this.back2Back = back2Back;
@@ -3050,7 +3426,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayId.
+             * <p>Agent\&quot;s employee ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder displayId(String displayId) {
                 this.displayId = displayId;
@@ -3058,7 +3437,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Inbound.
+             * <p>Inbound metrics.</p>
              */
             public Builder inbound(Inbound inbound) {
                 this.inbound = inbound;
@@ -3066,7 +3445,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Internal.
+             * <p>Internal call metrics.</p>
              */
             public Builder internal(Internal internal) {
                 this.internal = internal;
@@ -3074,7 +3453,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Outbound.
+             * <p>Outbound metrics.</p>
              */
             public Builder outbound(Outbound outbound) {
                 this.outbound = outbound;
@@ -3082,7 +3461,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * Overall.
+             * <p>Overall metrics.</p>
              */
             public Builder overall(Overall overall) {
                 this.overall = overall;
@@ -3090,7 +3469,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup1@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -3098,7 +3480,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>Skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -3191,7 +3576,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of historical agent skill group data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -3199,7 +3584,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number. Valid values are 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -3207,7 +3595,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size. Valid values are 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -3215,7 +3606,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count. Data is available only when PageNumber is 1. Otherwise, the value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

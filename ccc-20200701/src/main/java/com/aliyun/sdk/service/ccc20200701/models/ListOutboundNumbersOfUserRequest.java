@@ -118,6 +118,7 @@ public class ListOutboundNumbersOfUserRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListOutboundNumbersOfUserRequest extends Request {
         }
 
         /**
+         * <p>The page number. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListOutboundNumbersOfUserRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class ListOutboundNumbersOfUserRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>A JSON-formatted list of skill group IDs. If specified, the operation returns outbound numbers for the specified skill groups. If omitted, it returns outbound numbers for all skill groups associated with the agent. Note: The agent must be a member of the specified skill groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
          */
         public Builder skillGroupIdList(String skillGroupIdList) {
             this.putQueryParameter("SkillGroupIdList", skillGroupIdList);
@@ -163,7 +169,10 @@ public class ListOutboundNumbersOfUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

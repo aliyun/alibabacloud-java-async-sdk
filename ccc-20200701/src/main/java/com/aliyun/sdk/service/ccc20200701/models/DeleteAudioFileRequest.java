@@ -75,6 +75,7 @@ public class DeleteAudioFileRequest extends Request {
         } 
 
         /**
+         * <p>Audio resource ID, which is the UUID of the audio file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

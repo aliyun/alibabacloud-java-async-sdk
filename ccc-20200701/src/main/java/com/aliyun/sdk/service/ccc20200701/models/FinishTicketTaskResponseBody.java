@@ -119,7 +119,10 @@ public class FinishTicketTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class FinishTicketTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class FinishTicketTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class FinishTicketTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class FinishTicketTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,10 @@ public class FinishTicketTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

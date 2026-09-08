@@ -89,7 +89,10 @@ public class GetConversationDetailRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -98,6 +101,7 @@ public class GetConversationDetailRequest extends Request {
         }
 
         /**
+         * <p>The ID of the conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class GetConversationDetailRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

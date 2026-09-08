@@ -102,6 +102,7 @@ public class ListSkillGroupStatesRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListSkillGroupStatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +127,10 @@ public class ListSkillGroupStatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -132,7 +139,10 @@ public class ListSkillGroupStatesRequest extends Request {
         }
 
         /**
-         * SkillGroupIds.
+         * <p>List of skill group IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
          */
         public Builder skillGroupIds(String skillGroupIds) {
             this.putQueryParameter("SkillGroupIds", skillGroupIds);

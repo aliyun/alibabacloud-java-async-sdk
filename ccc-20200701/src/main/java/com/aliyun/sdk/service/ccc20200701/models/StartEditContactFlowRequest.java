@@ -75,6 +75,7 @@ public class StartEditContactFlowRequest extends Request {
         } 
 
         /**
+         * <p>The contact flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class StartEditContactFlowRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

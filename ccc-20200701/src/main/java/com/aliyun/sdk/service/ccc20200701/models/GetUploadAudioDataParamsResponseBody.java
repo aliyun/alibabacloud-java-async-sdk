@@ -106,7 +106,10 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, which can be used for LogSearch of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -191,7 +203,7 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
             } 
 
             /**
-             * ParamsStr.
+             * <p>Parameters related to offline quality inspection audio files.</p>
              */
             public Builder paramsStr(String paramsStr) {
                 this.paramsStr = paramsStr;

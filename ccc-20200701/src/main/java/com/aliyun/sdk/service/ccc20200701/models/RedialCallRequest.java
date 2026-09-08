@@ -159,7 +159,10 @@ public class RedialCallRequest extends Request {
         } 
 
         /**
-         * Callee.
+         * <p>Callee number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1318888****</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -168,7 +171,10 @@ public class RedialCallRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>Caller number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0109810****</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -177,7 +183,10 @@ public class RedialCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Unique ID provided by the agent endpoint to identify an agent Workbench.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCC-x.x.x.x-chrome102-bsdf911812c60f61e</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -186,6 +195,7 @@ public class RedialCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the call center.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +208,10 @@ public class RedialCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>Call job ID. The job ID of the previous call used for redialing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6581536084722****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -207,7 +220,10 @@ public class RedialCallRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Per-call data. It must not exceed 128 bytes and is primarily used for extension purposes. Ordinary customers do not need to pay attention to it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -216,7 +232,10 @@ public class RedialCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Timeout. If the call is not answered within the time specified by this parameter, it is automatically disconnected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -225,7 +244,10 @@ public class RedialCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>User ID of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>samzhang@abc</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

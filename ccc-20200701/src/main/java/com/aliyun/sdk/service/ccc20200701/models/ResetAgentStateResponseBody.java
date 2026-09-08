@@ -119,7 +119,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ResetAgentStateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ResetAgentStateResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Reserved for future use.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -329,7 +341,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>The reason code for the agent\&quot;s break. This can be a system-defined or a custom code. System-defined codes include:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -337,7 +352,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The ID of the registered device, such as a browser-based WebRTC softphone or a physical phone. An agent can register only one device at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -345,7 +363,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The agent\&quot;s extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8001****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -353,7 +374,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +385,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the call. This parameter is returned only if the agent is on a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -369,7 +396,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the outbound-only mode is enabled for the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -377,7 +407,7 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>The IDs of the skill groups that the agent is signed in to.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -385,7 +415,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -393,7 +426,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>The current state of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -401,7 +437,10 @@ public class ResetAgentStateResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>The agent\&quot;s work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

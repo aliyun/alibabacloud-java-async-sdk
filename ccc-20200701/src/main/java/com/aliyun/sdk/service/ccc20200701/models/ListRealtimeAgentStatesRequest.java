@@ -216,7 +216,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         } 
 
         /**
-         * AgentIdList.
+         * <p>List of agent IDs, formatted as a JSON array string. The array can contain up to 20 elements. This parameter is optional and defaults to empty, which matches all agents under the current instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
          */
         public Builder agentIdList(String agentIdList) {
             this.putBodyParameter("AgentIdList", agentIdList);
@@ -225,7 +228,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * AgentName.
+         * <p>Perform fuzzy matching by agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -234,7 +240,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * CallTypeList.
+         * <p>Filters by a list of call types. The value is a string in JSON array format, where each array element is a call type. This parameter is optional and defaults to empty, which matches all call types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Inbound&quot;, &quot;Outbound&quot;]</p>
          */
         public Builder callTypeList(String callTypeList) {
             this.putQueryParameter("CallTypeList", callTypeList);
@@ -243,6 +252,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +265,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. The default is Audio. Other options include Chat (text), Video, and ALL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDIO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -264,7 +277,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * OutboundScenario.
+         * <p>Filters agents who are in outbound-only mode. This parameter is optional and defaults to empty, which means no filtering by outbound-only mode is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder outboundScenario(Boolean outboundScenario) {
             this.putQueryParameter("OutboundScenario", outboundScenario);
@@ -273,6 +289,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,6 +302,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +315,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Performs fuzzy filtering based on the full or partial agent display name, agent ID, or agent extension number. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -306,7 +327,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>Filter by skill group ID. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
@@ -315,7 +339,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * StateList.
+         * <p>Filters by a list of statuses. This parameter is optional and defaults to empty, which matches all statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ACW&quot;, &quot;Dialing&quot;]</p>
          */
         public Builder stateList(String stateList) {
             this.putBodyParameter("StateList", stateList);
@@ -324,7 +351,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * WorkModeList.
+         * <p>Filter by work mode list. This parameter is optional and defaults to empty, which means all work modes are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;OFFICE_PHONE&quot;,&quot;ON_SITE&quot;]</p>
          */
         public Builder workModeList(String workModeList) {
             this.putQueryParameter("WorkModeList", workModeList);

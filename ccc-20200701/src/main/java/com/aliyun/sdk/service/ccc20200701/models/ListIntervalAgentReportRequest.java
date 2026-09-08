@@ -133,6 +133,7 @@ public class ListIntervalAgentReportRequest extends Request {
         } 
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class ListIntervalAgentReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is the current time. If Interval is Daily, the maximum interval between StartTime and EndTime is 180 days. If Interval is Hourly, the maximum interval is 10 days. Time precision for statistics is at the hour level, rounded down to the next full hour, using an open interval. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned input time range becomes [11:00:00, 12:00:00), meaning greater than or equal to 11:00:00 and less than 12:00:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532707199000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -154,6 +158,7 @@ public class ListIntervalAgentReportRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +171,10 @@ public class ListIntervalAgentReportRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>Segment statistics type. Optional. Default value is Daily (aggregated by Day).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hourly</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -175,7 +183,10 @@ public class ListIntervalAgentReportRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. The default value is Audio. Other valid values include Chat and Video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -184,7 +195,10 @@ public class ListIntervalAgentReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is 00:00:00 of the current day. Time precision for statistics is at the hour level, rounded down to the previous full hour, using a closed interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532448000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

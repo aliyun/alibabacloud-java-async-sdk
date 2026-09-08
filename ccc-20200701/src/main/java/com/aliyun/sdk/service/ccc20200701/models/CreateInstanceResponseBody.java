@@ -106,7 +106,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data, which is the ID of the pipeline used to create the instance in the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75c1346c-1dc2-4ed8-973f-edf8b1e5fe77</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListFeedbacksResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned dataset.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26E54929-CA86-1035-9B42-0C8F291BB027</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +268,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-25920271311543****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -264,7 +279,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -272,7 +290,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20251216-8B9B7B02-16FE-54BE-942A-F59DE0656032</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -280,7 +301,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostCallAnalyzer:solution</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -288,7 +312,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
             }
 
             /**
-             * UserRating.
+             * <p>The user\&quot;s rating for the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder userRating(Integer userRating) {
                 this.userRating = userRating;
@@ -296,7 +323,10 @@ public class ListFeedbacksResponseBody extends TeaModel {
             }
 
             /**
-             * UserResponse.
+             * <p>The data from user feedback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxx</p>
              */
             public Builder userResponse(String userResponse) {
                 this.userResponse = userResponse;

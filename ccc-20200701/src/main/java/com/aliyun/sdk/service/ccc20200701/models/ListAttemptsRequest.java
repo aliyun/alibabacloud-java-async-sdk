@@ -246,7 +246,10 @@ public class ListAttemptsRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>Filter by agent ID. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -255,7 +258,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * AttemptId.
+         * <p>Call record ID, which has the same value as the call ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-16976964500325****</p>
          */
         public Builder attemptId(String attemptId) {
             this.putQueryParameter("AttemptId", attemptId);
@@ -264,7 +270,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * Callee.
+         * <p>Filter by called number. Optional. Default is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1888888****</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -273,7 +282,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>Filter by caller number. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05711234****</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -282,6 +294,7 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
+         * <p>Predictive outbound dialing Activity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,6 +307,7 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
+         * <p>System-generated contact ID. Customers do not need to concern themselves with this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +320,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * <p>Filter by call ID. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-16976964500325****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -315,7 +332,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * Criteria.
+         * <p>Extended query conditions in JSON format. Currently supports caseIds for batch queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;caseIds&quot;:[&quot;964f05a7-fc15-4a05-93a6-cd7421c4459e&quot;,&quot;5e2d508b-0df6-4077-8099-d3fff51ea6d0&quot;,&quot;da037029-8c83-4270-a90e-e7734be76af6&quot;]}</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -324,7 +344,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End Time. This parameter is optional. If not specified, it defaults to the End Time of the predictive outbound dialing Activity. The format is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634115698291</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -333,6 +356,7 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,6 +369,7 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
+         * <p>Page number. The product of PageNumber and PageSize must not exceed 10 000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,6 +382,7 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
+         * <p>Page size. The product of PageNumber and PageSize must not exceed 10 000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +395,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * <p>Filter by skill group ID. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -378,7 +407,10 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start Time. This parameter is optional. If not specified, it defaults to the Start Time of the predictive outbound dialing Activity. The format is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634115688291</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -106,7 +106,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,7 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
@@ -272,7 +281,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Message content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;variables&quot;:{},&quot;text&quot;:&quot;Hi，我是小云~ 很高兴遇见你！&quot;,&quot;contentType&quot;:&quot;Text&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -280,7 +292,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-65382141036853491</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -288,7 +303,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderAvatarUrl.
+             * <p>Sender profile picture URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxx.com/avatar.png">http://xxxxx.com/avatar.png</a></p>
              */
             public Builder senderAvatarUrl(String senderAvatarUrl) {
                 this.senderAvatarUrl = senderAvatarUrl;
@@ -296,7 +314,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderId.
+             * <p>Sender user ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fcd020fe-****-1a272a174a7d</p>
              */
             public Builder senderId(String senderId) {
                 this.senderId = senderId;
@@ -304,7 +325,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderName.
+             * <p>Sender name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>访客1</p>
              */
             public Builder senderName(String senderName) {
                 this.senderName = senderName;
@@ -312,7 +336,19 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderType.
+             * <p>Sender type</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p><strong>ADMIN</strong>: system</p>
+             * </li>
+             * <li><p><strong>CUSTOMER</strong>: visitor</p>
+             * </li>
+             * <li><p><strong>AGENT</strong>: agent</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder senderType(String senderType) {
                 this.senderType = senderType;
@@ -320,7 +356,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>UNIX timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1696126980371</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -387,7 +426,7 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Messages.
+             * <p>Message list</p>
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
@@ -395,7 +434,10 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * NextPageToken.
+             * <p>Token for the next page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737193352340::7463707254.EAUNIT</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;

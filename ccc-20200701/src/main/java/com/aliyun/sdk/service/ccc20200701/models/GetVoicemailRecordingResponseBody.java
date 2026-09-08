@@ -106,7 +106,10 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
             } 
 
             /**
-             * FileName.
+             * <p>Recording file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>voicemail.job-054ded02****.wav</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -212,7 +227,10 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The OSS download URL of the recording file. Note that the download URL expires after 1 day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;

@@ -88,7 +88,10 @@ public class ListCategoriesRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>The ID of the ticket category. Specify this parameter to return information about the subcategories of the specified category. If you leave this parameter empty, information about all categories in the instance is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43c2671b-<em><strong>-</strong></em>-86d0-6bd187905cc8</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -97,6 +100,7 @@ public class ListCategoriesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class ListCategoriesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The category type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ticket</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

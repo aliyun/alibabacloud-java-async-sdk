@@ -103,6 +103,7 @@ public class TakeBreakRequest extends Request {
         } 
 
         /**
+         * <p>Break status code. Customers can define any custom break status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class TakeBreakRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -124,6 +128,7 @@ public class TakeBreakRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class TakeBreakRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. If not specified, the agent mapped to the current RAM account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

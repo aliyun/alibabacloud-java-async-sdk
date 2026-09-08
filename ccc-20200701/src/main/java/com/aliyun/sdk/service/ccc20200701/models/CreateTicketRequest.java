@@ -144,7 +144,10 @@ public class CreateTicketRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * <p>The ID of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-38860977107324****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -153,7 +156,10 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * Context.
+         * <p>Ticket field information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;productName&quot;:&quot;玩具1&quot;}</p>
          */
         public Builder context(String context) {
             this.putQueryParameter("Context", context);
@@ -162,7 +168,10 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * CustomerId.
+         * <p>Customer ID, the customer ID in Cloud Contact Center customer profiles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51e155ce-3747-4f21-b402-13c69597b920</p>
          */
         public Builder customerId(String customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -171,6 +180,7 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +193,10 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>Ticket source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHAT</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -192,7 +205,10 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Ticket template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e9e4c76c-948d-4a6e-9ce2-9da0f5967a73</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -201,7 +217,10 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>Ticket title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>售后工单。</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

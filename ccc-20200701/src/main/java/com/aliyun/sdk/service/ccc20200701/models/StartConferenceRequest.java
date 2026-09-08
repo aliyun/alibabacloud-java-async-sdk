@@ -118,6 +118,7 @@ public class StartConferenceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class StartConferenceRequest extends Request {
         }
 
         /**
+         * <p>A JSON-formatted string representing an array of participants. Each array element represents a participant. For internal calls to agents, the participant is the target agent\&quot;s extension number. For external calls to customers, the participant is the customer\&quot;s phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,10 @@ public class StartConferenceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Ingest endpoint data. It cannot exceed 128 bytes and is primarily used for extension requirements. Ordinary customers do not need to concern themselves with it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -151,7 +156,10 @@ public class StartConferenceRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Timeout period. If the call is not answered within the time specified by this parameter, it will be automatically disconnected. This parameter is optional. The default value is 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -160,7 +168,10 @@ public class StartConferenceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID initiating the conference call. This parameter is optional. If not specified, the agent mapped to the current RAM account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

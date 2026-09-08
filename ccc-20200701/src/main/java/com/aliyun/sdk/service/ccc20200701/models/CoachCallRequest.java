@@ -133,6 +133,7 @@ public class CoachCallRequest extends Request {
         } 
 
         /**
+         * <p>Agent ID being coached.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class CoachCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This field is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -154,6 +158,7 @@ public class CoachCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +171,7 @@ public class CoachCallRequest extends Request {
         }
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +184,10 @@ public class CoachCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Coaching timeout. If the coaching session is not established within the specified time, the coaching operation is canceled. This field is optional and defaults to 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -187,7 +196,10 @@ public class CoachCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID initiating the coaching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

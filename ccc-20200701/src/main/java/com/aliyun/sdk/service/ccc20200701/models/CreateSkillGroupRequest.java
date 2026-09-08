@@ -118,7 +118,10 @@ public class CreateSkillGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Description of the skill group. This parameter is optional. If not specified, it defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试技能组。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -127,7 +130,11 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Display name of the skill group. It must be 1 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -136,6 +143,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +156,10 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHAT</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -157,6 +168,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>The skill group name. It must be 1 to 64 characters in length, can contain digits, letters, underscores (_), and hyphens (-), and must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

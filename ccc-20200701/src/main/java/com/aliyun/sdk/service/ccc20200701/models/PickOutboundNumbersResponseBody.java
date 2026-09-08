@@ -106,7 +106,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>City of number registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -225,7 +240,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1388888****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -233,7 +251,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>Province of number registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -313,7 +334,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>City of number registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -321,7 +345,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0108989****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -329,7 +356,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>Province of number registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -396,7 +426,7 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * Callee.
+             * <p>Callee number.</p>
              */
             public Builder callee(Callee callee) {
                 this.callee = callee;
@@ -404,7 +434,7 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>Caller number.</p>
              */
             public Builder caller(Caller caller) {
                 this.caller = caller;

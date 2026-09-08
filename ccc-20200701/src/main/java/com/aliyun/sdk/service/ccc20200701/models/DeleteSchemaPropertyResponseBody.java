@@ -106,7 +106,10 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User 244715989906081477 does not exist in instance worldfirst01.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The information about error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -138,7 +147,10 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

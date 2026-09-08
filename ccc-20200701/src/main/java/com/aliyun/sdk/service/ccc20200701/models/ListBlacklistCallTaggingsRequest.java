@@ -75,6 +75,7 @@ public class ListBlacklistCallTaggingsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Cloud Contact Center instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ListBlacklistCallTaggingsRequest extends Request {
         }
 
         /**
+         * <p>A list of numbers to query for their blacklist tag status. The jobId field is required if a number is encrypted (contains \<em>\</em>\*).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

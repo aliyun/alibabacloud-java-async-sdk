@@ -106,7 +106,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3A847C1-9800-57DF-9172-2CDDC026388D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +294,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AbandonRate.
+             * <p>Abandon rate, calculated as: number of abandoned calls divided by total calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.10</p>
              */
             public Builder abandonRate(Float abandonRate) {
                 this.abandonRate = abandonRate;
@@ -290,7 +305,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * AbandonedRate.
+             * <p>Deprecated. Refer to AbandonRate instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.10</p>
              */
             public Builder abandonedRate(Float abandonedRate) {
                 this.abandonedRate = abandonedRate;
@@ -298,7 +316,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerRate.
+             * <p>Answer rate, in %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.50</p>
              */
             public Builder answerRate(Float answerRate) {
                 this.answerRate = answerRate;
@@ -306,7 +327,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandoned.
+             * <p>Number of abandoned calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder callsAbandoned(Long callsAbandoned) {
                 this.callsAbandoned = callsAbandoned;
@@ -314,7 +338,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsConnected.
+             * <p>Number of connected calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder callsConnected(Long callsConnected) {
                 this.callsConnected = callsConnected;
@@ -322,7 +349,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsDialed.
+             * <p>Number of calls dialed, including retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -330,7 +360,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectedRate.
+             * <p>Deprecated. Refer to AnswerRate instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.50</p>
              */
             public Builder connectedRate(Float connectedRate) {
                 this.connectedRate = connectedRate;
@@ -338,7 +371,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             }
 
             /**
-             * OccupancyRate.
+             * <p>Agent occupancy rate, calculated as: (total talk duration + total post-processing duration) divided by total agent online duration. Total agent online duration refers to the sum of online durations of all agents in the skill group associated with this activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.50</p>
              */
             public Builder occupancyRate(Float occupancyRate) {
                 this.occupancyRate = occupancyRate;

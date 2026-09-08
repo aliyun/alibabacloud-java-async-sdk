@@ -131,7 +131,10 @@ public class ChangeWorkModeRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -140,6 +143,7 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,10 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>The agent\&quot;s personal phone number, which is used in off-site mode. The agent can use this number to answer calls in off-site mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1382114****</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -161,7 +168,10 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
-         * SignedSkillGroupIdList.
+         * <p>List of skill groups to sign in to. When changing the work mode to off-site mode, you can use this parameter to specify the list of skill groups that the off-site agent needs to sign in to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;online-1@ccc-test&quot;,&quot;online-2@ccc-test&quot;,&quot;online-3@ccc-test&quot;,&quot;skg-default@ccc-test&quot;]</p>
          */
         public Builder signedSkillGroupIdList(String signedSkillGroupIdList) {
             this.putQueryParameter("SignedSkillGroupIdList", signedSkillGroupIdList);
@@ -170,7 +180,10 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. If not specified, the agent mapped to the current Resource Access Management (RAM) user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -179,6 +192,7 @@ public class ChangeWorkModeRequest extends Request {
         }
 
         /**
+         * <p>Work mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

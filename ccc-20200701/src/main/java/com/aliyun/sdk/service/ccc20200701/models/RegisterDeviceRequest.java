@@ -104,6 +104,7 @@ public class RegisterDeviceRequest extends Request {
         } 
 
         /**
+         * <p>The custom device ID. No specific format is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class RegisterDeviceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class RegisterDeviceRequest extends Request {
         }
 
         /**
+         * <p>The password used to authenticate the SIP device during registration. Keep this password secure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class RegisterDeviceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

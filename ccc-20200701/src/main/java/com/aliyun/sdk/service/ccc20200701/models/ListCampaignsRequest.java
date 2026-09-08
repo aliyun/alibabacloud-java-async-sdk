@@ -188,7 +188,10 @@ public class ListCampaignsRequest extends Request {
         } 
 
         /**
-         * ActualStartTimeFrom.
+         * <p>The actual start time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1780329600000</p>
          */
         public Builder actualStartTimeFrom(String actualStartTimeFrom) {
             this.putQueryParameter("ActualStartTimeFrom", actualStartTimeFrom);
@@ -197,7 +200,10 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
-         * ActualStartTimeTo.
+         * <p>The actual end time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1781625600000</p>
          */
         public Builder actualStartTimeTo(String actualStartTimeTo) {
             this.putQueryParameter("ActualStartTimeTo", actualStartTimeTo);
@@ -206,6 +212,7 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +225,10 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Filters campaigns by predictive dialing campaign name. Fuzzy match is not supported. This parameter is optional and defaults to empty, which indicates no filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-campaign</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,6 +237,7 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
+         * <p>The page number. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +250,7 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
+         * <p>The page size. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +263,10 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
-         * PlanedStartTimeFrom.
+         * <p>The planned start time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1780243200000</p>
          */
         public Builder planedStartTimeFrom(String planedStartTimeFrom) {
             this.putQueryParameter("PlanedStartTimeFrom", planedStartTimeFrom);
@@ -260,7 +275,10 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
-         * PlanedStartTimeTo.
+         * <p>The planned end time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1781798399000</p>
          */
         public Builder planedStartTimeTo(String planedStartTimeTo) {
             this.putQueryParameter("PlanedStartTimeTo", planedStartTimeTo);
@@ -269,7 +287,10 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * <p>Filters campaigns by skill group ID. This parameter is optional and defaults to empty, which indicates no filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -278,7 +299,10 @@ public class ListCampaignsRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Filters campaigns by predictive dialing campaign state. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Draft</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

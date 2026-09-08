@@ -106,7 +106,10 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,7 +320,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The name of the administrator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>管理员</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -316,7 +331,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -324,7 +342,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The agent\&quot;s extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -332,7 +353,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -340,7 +364,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>The agent\&quot;s logon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -348,7 +375,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1382114****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -356,7 +386,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID. The format is: Role\@Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin@ccc-test</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -364,7 +397,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -372,7 +408,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -380,7 +419,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>The work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -587,7 +629,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心的测试技能组。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -595,7 +640,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -603,7 +651,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -611,7 +662,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -619,7 +673,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumberCount.
+             * <p>The number of phone numbers associated with the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder phoneNumberCount(Integer phoneNumberCount) {
                 this.phoneNumberCount = phoneNumberCount;
@@ -627,7 +684,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -635,7 +695,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * <p>The number of agents associated with the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -793,7 +856,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Indicates whether the number is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -801,7 +867,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>乐山</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -809,7 +878,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactFlowId.
+             * <p>The ID of the contact flow (IVR) associated with the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ec7a58f-3243-4815-bb21-97b480b95f5e</p>
              */
             public Builder contactFlowId(String contactFlowId) {
                 this.contactFlowId = contactFlowId;
@@ -817,7 +889,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -825,7 +900,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830011****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -833,7 +911,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>四川</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -841,7 +922,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroups.
+             * <p>The list of skill groups associated with the number.</p>
              */
             public Builder skillGroups(java.util.List<SkillGroups> skillGroups) {
                 this.skillGroups = skillGroups;
@@ -849,7 +930,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The purpose of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bidirection</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -857,7 +941,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID. If this parameter is not empty, the number is a personal outbound number for the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1041,7 +1128,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AdminList.
+             * <p>The list of administrators.</p>
              */
             public Builder adminList(java.util.List<AdminList> adminList) {
                 this.adminList = adminList;
@@ -1057,7 +1144,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunUid.
+             * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>157123456789****</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -1073,7 +1163,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ConsoleUrl.
+             * <p>The URL of the Cloud Contact Center instance homepage. This URL is formed by combining the base URL of Cloud Contact Center and the instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2.aliyun.com/#/workbench/ccc-test">https://ccc-v2.aliyun.com/#/workbench/ccc-test</a></p>
              */
             public Builder consoleUrl(String consoleUrl) {
                 this.consoleUrl = consoleUrl;
@@ -1081,7 +1174,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心的测试实例。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1089,7 +1185,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name of the instance. It is globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1097,7 +1196,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1105,7 +1207,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试实例</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1113,7 +1218,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NumberList.
+             * <p>The list of numbers.</p>
              */
             public Builder numberList(java.util.List<NumberList> numberList) {
                 this.numberList = numberList;
@@ -1121,7 +1226,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

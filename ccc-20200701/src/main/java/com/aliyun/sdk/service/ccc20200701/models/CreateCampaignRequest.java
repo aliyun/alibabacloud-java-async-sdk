@@ -322,6 +322,7 @@ public class CreateCampaignRequest extends Request {
         } 
 
         /**
+         * <p>The callable time window for the predictive outbound dialing activity, formatted as a JSON object containing two properties: beginTime and endTime. Example: [{&quot;beginTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:00:00&quot;}].</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +335,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * CaseFileKey.
+         * <p>Predictive outbound dialing contact file, specified as the key of an OSS object. Obtain this key by calling the GetCaseFileUploadUrl API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test/namelist.csv</p>
          */
         public Builder caseFileKey(String caseFileKey) {
             this.putQueryParameter("CaseFileKey", caseFileKey);
@@ -343,7 +347,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * CaseList.
+         * <p>List of predictive outbound dialing contacts. This parameter cannot be used together with CaseFileKey (import from file). You must choose either file import or list import.</p>
          */
         public Builder caseList(java.util.List<CaseList> caseList) {
             String caseListShrink = shrink(caseList, "CaseList", "json");
@@ -353,6 +357,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The contact flow ID associated with the predictive outbound dialing activity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,6 +370,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The end time of the predictive outbound calling activity, formatted as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,7 +383,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * ExecutingUntilTimeout.
+         * <p>Whether to keep the activity in the executing state until it expires. The default value is false. If false, the activity automatically transitions to the completed state after all contacts have been called. If true, the activity remains in the executing state even after all contacts have been called, allowing you to append additional contacts and continue dialing until the activity expires or is manually stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder executingUntilTimeout(Boolean executingUntilTimeout) {
             this.putQueryParameter("ExecutingUntilTimeout", executingUntilTimeout);
@@ -386,7 +395,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * FlashSmsParameters.
+         * <p>Flash SMS parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;applicationId&quot;:&quot;08e6b63a-<strong><strong>-</strong></strong>-****-689a288cdbb5&quot;,&quot;templateId&quot;:&quot;325&quot;}</p>
          */
         public Builder flashSmsParameters(String flashSmsParameters) {
             this.putQueryParameter("FlashSmsParameters", flashSmsParameters);
@@ -395,7 +407,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * InstGroupId.
+         * <p>Phone number collection ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d368091-2c70-4d26-979a-6997ddc9c34f</p>
          */
         public Builder instGroupId(String instGroupId) {
             this.putQueryParameter("InstGroupId", instGroupId);
@@ -404,6 +419,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,6 +432,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of attempts for the predictive outbound calling activity. This specifies how many times a number can be redialed if the initial call fails.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -428,6 +445,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The minimum redial interval for the predictive outbound calling activity, which specifies the minimum time interval between redial attempts after a failed call, in minutes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,6 +458,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>Name of the predictive outbound dialing activity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -452,7 +471,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>List of caller numbers</p>
          */
         public Builder numberList(java.util.List<String> numberList) {
             String numberListShrink = shrink(numberList, "NumberList", "json");
@@ -462,6 +481,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The skill group ID associated with the predictive outbound dialing activity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,7 +494,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * Simulation.
+         * <p>Indicates whether this is a simulation activity used for testing. Regular customers do not need to concern themselves with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder simulation(Boolean simulation) {
             this.putQueryParameter("Simulation", simulation);
@@ -483,7 +506,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * SimulationParameters.
+         * <p>Simulation parameters used for testing. Regular customers do not need to concern themselves with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder simulationParameters(String simulationParameters) {
             this.putQueryParameter("SimulationParameters", simulationParameters);
@@ -492,6 +518,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The start time of the predictive outbound dialing activity, in Unix timestamp format with millisecond precision.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -504,6 +531,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>Strategy parameters for the predictive outbound dialing activity. For PID strategy, an example format is: {&quot;abandonRate&quot;:&quot;5&quot;,&quot;historicalConnectedRate&quot;:&quot;35&quot;}. For PACING strategy, an example format is: {&quot;ratio&quot;:1}. abandonRate represents the desired abandonment rate, historicalConnectedRate represents the historical reference connection rate, and ratio represents the fixed dialing ratio.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -516,6 +544,7 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
+         * <p>The strategy pattern for the predictive outbound calling activity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -600,7 +629,10 @@ public class CreateCampaignRequest extends Request {
             } 
 
             /**
-             * CustomVariables.
+             * <p>Customer-defined custom variables in JSON object format. The object can contain up to 10 properties, each with a name and value defined by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;customer&quot;,&quot;客户标签&quot;:&quot;tag&quot;}</p>
              */
             public Builder customVariables(String customVariables) {
                 this.customVariables = customVariables;
@@ -608,7 +640,10 @@ public class CreateCampaignRequest extends Request {
             }
 
             /**
-             * PhoneNumber.
+             * <p>Contact phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1888888888</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -616,7 +651,10 @@ public class CreateCampaignRequest extends Request {
             }
 
             /**
-             * ReferenceId.
+             * <p>Business ID, an identifier from the Customer\&quot;s Operational System, used in integration scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;

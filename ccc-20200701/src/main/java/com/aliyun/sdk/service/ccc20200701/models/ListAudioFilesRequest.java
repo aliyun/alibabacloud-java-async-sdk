@@ -118,6 +118,7 @@ public class ListAudioFilesRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListAudioFilesRequest extends Request {
         }
 
         /**
+         * <p>The paging ordinal number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListAudioFilesRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,13 @@ public class ListAudioFilesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Converting (transforming)<br>
+         * Completed (transformation completed)<br>
+         * Failed (transformation failed)<br>
+         * If this parameter is not specified, resources in all statuses are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -163,7 +172,10 @@ public class ListAudioFilesRequest extends Request {
         }
 
         /**
-         * Usage.
+         * <p>Purpose of the audio file. The default value is General (used in scenarios such as IVR). Other optional values include HoldMusic (hold music during calls).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

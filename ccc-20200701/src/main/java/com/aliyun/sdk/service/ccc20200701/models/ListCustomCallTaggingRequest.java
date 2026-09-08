@@ -118,7 +118,10 @@ public class ListCustomCallTaggingRequest extends Request {
         } 
 
         /**
-         * CallTagNameList.
+         * <p>Filter by a list of number tag names. This parameter is optional and defaults to empty, which means no filtering is applied. The format is a JSON array string, where each array element is a number tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;TagA&quot;]</p>
          */
         public Builder callTagNameList(String callTagNameList) {
             this.putQueryParameter("CallTagNameList", callTagNameList);
@@ -127,6 +130,7 @@ public class ListCustomCallTaggingRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class ListCustomCallTaggingRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,7 @@ public class ListCustomCallTaggingRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,10 @@ public class ListCustomCallTaggingRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Perform fuzzy matching based on number or description. This parameter is optional and defaults to empty. An empty value indicates no filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1312121****</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);

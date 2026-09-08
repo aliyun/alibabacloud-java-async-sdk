@@ -116,7 +116,10 @@ public class RemoveUsersRequest extends Request {
         } 
 
         /**
-         * FilePath.
+         * <p>The ObjectKey of the OSS object containing the file with the list of users to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/removeUsers.xlsx</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -125,7 +128,10 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to force delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -134,6 +140,7 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +153,10 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
-         * NotificationEmail.
+         * <p>Notification email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@abc.com">123@abc.com</a></p>
          */
         public Builder notificationEmail(String notificationEmail) {
             this.putQueryParameter("NotificationEmail", notificationEmail);
@@ -155,7 +165,10 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
-         * UserIdList.
+         * <p>A JSON-formatted string representing an array of agent IDs. Each array element is an agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;agent1@ccc-test&quot;,&quot;agent2@ccc-test&quot;]</p>
          */
         public Builder userIdList(String userIdList) {
             this.putQueryParameter("UserIdList", userIdList);

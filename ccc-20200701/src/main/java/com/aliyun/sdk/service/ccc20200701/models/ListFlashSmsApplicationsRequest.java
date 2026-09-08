@@ -116,6 +116,7 @@ public class ListFlashSmsApplicationsRequest extends Request {
         } 
 
         /**
+         * <p>Cloud Contact Center instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListFlashSmsApplicationsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Flash SMS configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>闪信</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -137,7 +141,10 @@ public class ListFlashSmsApplicationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +153,10 @@ public class ListFlashSmsApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +165,10 @@ public class ListFlashSmsApplicationsRequest extends Request {
         }
 
         /**
-         * ProviderId.
+         * <p>Flash SMS provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Uincall</p>
          */
         public Builder providerId(String providerId) {
             this.putQueryParameter("ProviderId", providerId);

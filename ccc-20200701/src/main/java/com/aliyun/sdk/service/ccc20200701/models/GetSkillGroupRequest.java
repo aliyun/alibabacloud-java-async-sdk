@@ -75,6 +75,7 @@ public class GetSkillGroupRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID, in the format: skill group name\@instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

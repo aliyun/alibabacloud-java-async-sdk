@@ -104,7 +104,10 @@ public class ModifyPhoneNumberRequest extends Request {
         } 
 
         /**
-         * ContactFlowId.
+         * <p>The IVR contact flow ID attached to the number. This field is valid only when the number usage is Inbound or Bidirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78128960-bb00-4ddc-8a82-923a8c5bd22d</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -113,6 +116,7 @@ public class ModifyPhoneNumberRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class ModifyPhoneNumberRequest extends Request {
         }
 
         /**
+         * <p>Phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class ModifyPhoneNumberRequest extends Request {
         }
 
         /**
+         * <p>Number usage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

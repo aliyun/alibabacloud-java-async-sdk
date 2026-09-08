@@ -134,6 +134,7 @@ public class ListLegacyQueueEventLogsRequest extends Request {
         } 
 
         /**
+         * <p>End time, in UNIX timestamp format, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ListLegacyQueueEventLogsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListLegacyQueueEventLogsRequest extends Request {
         }
 
         /**
+         * <p>Page number for paging, ranging from 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,7 @@ public class ListLegacyQueueEventLogsRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +186,10 @@ public class ListLegacyQueueEventLogsRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>Filter by skill group ID. This parameter is optional and defaults to empty. An empty value means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
@@ -191,6 +198,7 @@ public class ListLegacyQueueEventLogsRequest extends Request {
         }
 
         /**
+         * <p>Start Time, in UNIX timestamp format, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class RedialCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of &quot;OK&quot; indicates that the request succeeded. For other error codes, see the error code list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class RedialCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class RedialCallResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class RedialCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class RedialCallResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class RedialCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF268B34-09C2-43FD-BAC4-5D31EA63****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +367,10 @@ public class RedialCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -363,7 +378,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelFlags.
+             * <p>Call channel flags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COACHING</p>
              */
             public Builder channelFlags(String channelFlags) {
                 this.channelFlags = channelFlags;
@@ -371,7 +389,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -379,7 +400,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelState.
+             * <p>The status of the voice channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATED</p>
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
@@ -387,7 +411,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>The callee of the voice channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8001****</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -395,7 +422,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6573574060089****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -403,7 +433,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>The calling party of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1318888****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -411,7 +444,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party that initiated the hang-up of the call channel, indicating who first terminated the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139xxxx0501</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -419,7 +455,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The release reason of the voice channel, indicating why the current voice channel was released. The value is derived from the response codes defined in the SIP protocol. Customers can refer to the SIP protocol to analyze the release reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>486:USER_BUSY</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -427,7 +466,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>UNIX timestamp of the last status change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609138903315</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -435,7 +477,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>User extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000****</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -443,7 +488,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent User ID information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>samzhang@abc</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -536,7 +584,10 @@ public class RedialCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type, indicating the type of the call when it was initially initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -544,7 +595,7 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelContexts.
+             * <p>The list of call channels.</p>
              */
             public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
@@ -552,7 +603,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Cloud Contact Center instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -560,7 +614,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -731,7 +788,20 @@ public class RedialCallResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code, which is divided into system-defined and customer-defined types.</p>
+             * <p>System-defined break codes:</p>
+             * <ul>
+             * <li><p>Warm-up: A temporary break state after an agent is published but before becoming idle.</p>
+             * </li>
+             * <li><p>RingingTimeout: A break caused by ringing timeout for the agent.</p>
+             * </li>
+             * <li><p>RejectCall: A break caused by the agent rejecting a call.</p>
+             * </li>
+             * </ul>
+             * <p>There are no restrictions on customer-defined status codes. Customers can define them according to their business needs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -739,7 +809,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC-x.x.x.x-chrome102-bsdf911812c60f61e</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -747,7 +820,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>User extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -755,7 +831,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -763,7 +842,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6573574060089****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -771,7 +853,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -779,7 +864,7 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>List of skill group IDs that the agent has signed into.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -787,7 +872,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent User ID information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>samzhang@abc</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -795,7 +883,26 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>Agent status. Enumeration values:</p>
+             * <ul>
+             * <li><p>READY: idle</p>
+             * </li>
+             * <li><p>WORKING: post-processing</p>
+             * </li>
+             * <li><p>DIALING: dial-up</p>
+             * </li>
+             * <li><p>BREAK: break</p>
+             * </li>
+             * <li><p>OFFLINE: offline</p>
+             * </li>
+             * <li><p>TALKING: talking</p>
+             * </li>
+             * <li><p>RINGING: ringing</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -803,7 +910,18 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode. Enumeration values:</p>
+             * <ul>
+             * <li><p>ON_SITE: On-site mode</p>
+             * </li>
+             * <li><p>OFF_SITE: Off-site mode</p>
+             * </li>
+             * <li><p>OFFICE_PHONE: Office phone mode</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -883,7 +1001,7 @@ public class RedialCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallContext.
+             * <p>Call context environment.</p>
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
@@ -891,7 +1009,10 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * ContextId.
+             * <p>Context ID, strictly ordered and incrementing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder contextId(Long contextId) {
                 this.contextId = contextId;
@@ -899,7 +1020,7 @@ public class RedialCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>Agent context environment.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

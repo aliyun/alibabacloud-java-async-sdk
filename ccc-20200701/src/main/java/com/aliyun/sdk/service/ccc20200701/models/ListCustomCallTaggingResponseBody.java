@@ -106,7 +106,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -212,7 +227,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>Number tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagA</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -331,7 +349,7 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             } 
 
             /**
-             * CallTagList.
+             * <p>List of number tags.</p>
              */
             public Builder callTagList(java.util.List<CallTagList> callTagList) {
                 this.callTagList = callTagList;
@@ -339,7 +357,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -347,7 +368,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the inbound number mark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王先生</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +379,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -363,7 +390,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>The number of the inbound number mark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312121****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -371,7 +401,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Last update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-05 00:00:00.0</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -464,7 +497,7 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of inbound number marks.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -472,7 +505,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -480,7 +516,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -488,7 +527,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

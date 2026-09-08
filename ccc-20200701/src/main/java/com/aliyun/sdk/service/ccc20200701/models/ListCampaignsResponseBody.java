@@ -119,7 +119,10 @@ public class ListCampaignsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -459,7 +474,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualEndTime.
+             * <p>The actual end time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634008800000</p>
              */
             public Builder actualEndTime(Long actualEndTime) {
                 this.actualEndTime = actualEndTime;
@@ -467,7 +485,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * ActualStartTime.
+             * <p>The actual start time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634000460000</p>
              */
             public Builder actualStartTime(Long actualStartTime) {
                 this.actualStartTime = actualStartTime;
@@ -475,7 +496,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * CampaignId.
+             * <p>The ID of the predictive dialing campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6badb397-a8b5-40b6-21019d382a09</p>
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -483,7 +507,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * CasesAborted.
+             * <p>The number of aborted cases in the predictive dialing campaign. An aborted case indicates that the call to the contact was canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder casesAborted(Long casesAborted) {
                 this.casesAborted = casesAborted;
@@ -491,7 +518,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * CasesConnected.
+             * <p>The number of connected cases in the predictive dialing campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder casesConnected(Long casesConnected) {
                 this.casesConnected = casesConnected;
@@ -499,7 +529,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * CasesUncompleted.
+             * <p>The number of uncompleted cases in the predictive dialing campaign. An uncompleted case indicates that the call was not connected and the maximum number of retry attempts was not reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder casesUncompleted(Long casesUncompleted) {
                 this.casesUncompleted = casesUncompleted;
@@ -507,7 +540,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionRate.
+             * <p>The completion rate. This parameter is deprecated. You can calculate the completion rate by using the formula (TotalCases - CasesUnCompleted) / TotalCases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder completionRate(Float completionRate) {
                 this.completionRate = completionRate;
@@ -515,7 +551,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactFlowId.
+             * <p>The ID of the IVR contact flow associated with the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
              */
             public Builder contactFlowId(String contactFlowId) {
                 this.contactFlowId = contactFlowId;
@@ -523,7 +562,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAttemptCount.
+             * <p>The maximum number of attempts for the predictive dialing campaign. This value specifies the maximum number of redial attempts when a call to a number fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxAttemptCount(Long maxAttemptCount) {
                 this.maxAttemptCount = maxAttemptCount;
@@ -531,7 +573,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * MinAttemptInterval.
+             * <p>The minimum redial interval for the predictive dialing campaign. This value specifies the minimum interval between redial attempts after a failure. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minAttemptInterval(Long minAttemptInterval) {
                 this.minAttemptInterval = minAttemptInterval;
@@ -539,7 +584,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the predictive dialing campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-campaign</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -547,7 +595,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanedEndTime.
+             * <p>The planned end time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634054400000</p>
              */
             public Builder planedEndTime(Long planedEndTime) {
                 this.planedEndTime = planedEndTime;
@@ -555,7 +606,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanedStartTime.
+             * <p>The planned start time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633968000000</p>
              */
             public Builder planedStartTime(Long planedStartTime) {
                 this.planedStartTime = planedStartTime;
@@ -563,7 +617,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * <p>The ID of the associated skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder queueId(String queueId) {
                 this.queueId = queueId;
@@ -571,7 +628,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -579,7 +639,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * Simulation.
+             * <p>Indicates whether the campaign is a simulated campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder simulation(Boolean simulation) {
                 this.simulation = simulation;
@@ -587,7 +650,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the predictive dialing campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -595,7 +661,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyParameters.
+             * <p>The strategy parameters of the predictive dialing campaign. Example for the PID strategy: {&quot;abandonRate&quot;:&quot;5&quot;,&quot;historicalConnectedRate&quot;:&quot;35&quot;}. Example for the PACING strategy: {&quot;ratio&quot;:1}. abandonRate specifies the expected call abandon rate. historicalConnectedRate specifies the historical reference connection rate. ratio specifies the fixed dialing ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ratio&quot;:1}</p>
              */
             public Builder strategyParameters(String strategyParameters) {
                 this.strategyParameters = strategyParameters;
@@ -603,7 +672,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyType.
+             * <p>The strategy mode of the predictive dialing campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACING</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
@@ -611,7 +683,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCases.
+             * <p>The total number of phone numbers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCases(Long totalCases) {
                 this.totalCases = totalCases;
@@ -704,7 +779,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of predictive dialing campaigns.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -712,7 +787,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -720,7 +798,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -728,7 +809,10 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

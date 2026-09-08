@@ -106,7 +106,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +242,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * MediaType.
+             * <p>Media type. The default value is AUDIO. Other optional values include CHAT and VIDEO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIDEO</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -238,7 +253,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -246,7 +264,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>Skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -254,7 +275,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * SkillLevel.
+             * <p>Skill level, with values ranging from 1 to 10. A smaller numeric value indicates stronger business capability and the ability to handle more calls per unit time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder skillLevel(String skillLevel) {
                 this.skillLevel = skillLevel;
@@ -347,7 +371,7 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of skill group levels.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -355,7 +379,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +390,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +401,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

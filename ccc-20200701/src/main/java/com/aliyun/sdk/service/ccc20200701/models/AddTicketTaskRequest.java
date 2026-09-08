@@ -134,6 +134,7 @@ public class AddTicketTaskRequest extends Request {
         } 
 
         /**
+         * <p>The assignee for the signature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +147,11 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
+         * <p>Comments.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请assignee处理。</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -155,6 +160,7 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +173,16 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
-         * Position.
+         * <p>The position to add the signature.</p>
+         * <ul>
+         * <li><p>Before: Before the current handler.</p>
+         * </li>
+         * <li><p>After: After the current handler.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>After</p>
          */
         public Builder position(String position) {
             this.putQueryParameter("Position", position);
@@ -176,6 +191,7 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
+         * <p>The ticket flow node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +204,7 @@ public class AddTicketTaskRequest extends Request {
         }
 
         /**
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

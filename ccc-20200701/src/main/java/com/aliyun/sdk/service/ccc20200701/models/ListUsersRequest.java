@@ -118,6 +118,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Fuzzy matching based on the agent logon name or agent display name. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -163,7 +169,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>The skill group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ankedayaopin@zcwlwhkf</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);

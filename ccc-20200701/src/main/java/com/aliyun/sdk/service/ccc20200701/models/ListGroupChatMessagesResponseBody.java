@@ -106,7 +106,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code returned in the response. A value of 200 indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +294,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;variables&quot;:{},&quot;text&quot;:&quot;<p>好的，不客气</p>&quot;,&quot;contentType&quot;:&quot;Text&quot;,&quot;subContentType&quot;:&quot;richtext&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -290,7 +305,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-65382141036853491</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -298,7 +316,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Recalled.
+             * <p>Indicates whether the message was revoked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder recalled(Boolean recalled) {
                 this.recalled = recalled;
@@ -306,7 +327,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderAvatarUrl.
+             * <p>Sender profile picture URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxx.com">http://xxxxx.com</a></p>
              */
             public Builder senderAvatarUrl(String senderAvatarUrl) {
                 this.senderAvatarUrl = senderAvatarUrl;
@@ -314,7 +338,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderId.
+             * <p>User ID of the message sender.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64bb4ececc34fc5ec1ca1153</p>
              */
             public Builder senderId(String senderId) {
                 this.senderId = senderId;
@@ -322,7 +349,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderName.
+             * <p>Sender name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-agent@test-instanceId</p>
              */
             public Builder senderName(String senderName) {
                 this.senderName = senderName;
@@ -330,7 +360,19 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SenderType.
+             * <p>Sender type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p><strong>ADMIN</strong>: system</p>
+             * </li>
+             * <li><p><strong>CUSTOMER</strong>: visitor</p>
+             * </li>
+             * <li><p><strong>AGENT</strong>: agent</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder senderType(String senderType) {
                 this.senderType = senderType;
@@ -338,7 +380,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>Message timestamp, in Unix timestamp format, measured in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1696126980371</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -405,7 +450,7 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Messages.
+             * <p>Message list.</p>
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
@@ -413,7 +458,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * NextPageToken.
+             * <p>Token for the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54d1a616d95a4a01ba58967a9115b649</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;

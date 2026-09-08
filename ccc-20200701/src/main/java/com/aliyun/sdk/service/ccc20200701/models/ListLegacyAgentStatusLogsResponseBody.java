@@ -119,7 +119,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C9A5D93-33A6-57F3-A423-4C83BD0A8455</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -537,7 +552,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentDropCall.
+             * <p>Indicates whether the agent hung up the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder agentDropCall(String agentDropCall) {
                 this.agentDropCall = agentDropCall;
@@ -545,7 +563,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentNo.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentNo(String agentNo) {
                 this.agentNo = agentNo;
@@ -553,7 +574,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AliHangupCause.
+             * <p>Hang-up reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder aliHangupCause(String aliHangupCause) {
                 this.aliHangupCause = aliHangupCause;
@@ -561,7 +585,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallDir.
+             * <p>Call direction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>内部</p>
              */
             public Builder callDir(String callDir) {
                 this.callDir = callDir;
@@ -569,7 +596,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>454326****</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -577,7 +607,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>呼入</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -585,7 +618,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CalleeId.
+             * <p>The callee number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312121****</p>
              */
             public Builder calleeId(String calleeId) {
                 this.calleeId = calleeId;
@@ -593,7 +629,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallerId.
+             * <p>Calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08337676****</p>
              */
             public Builder callerId(String callerId) {
                 this.callerId = callerId;
@@ -601,7 +640,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnId.
+             * <p>Call channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>487326****</p>
              */
             public Builder connId(String connId) {
                 this.connId = connId;
@@ -609,7 +651,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Extend1.
+             * <p>Custom extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder extend1(String extend1) {
                 this.extend1 = extend1;
@@ -617,7 +662,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Extend2.
+             * <p>Custom extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder extend2(String extend2) {
                 this.extend2 = extend2;
@@ -625,7 +673,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Extend3.
+             * <p>Custom extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder extend3(String extend3) {
                 this.extend3 = extend3;
@@ -633,7 +684,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Extend4.
+             * <p>Custom extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder extend4(String extend4) {
                 this.extend4 = extend4;
@@ -641,7 +695,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupNo.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder groupNo(String groupNo) {
                 this.groupNo = groupNo;
@@ -649,7 +706,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitedAgentNo.
+             * <p>The listener phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder monitedAgentNo(String monitedAgentNo) {
                 this.monitedAgentNo = monitedAgentNo;
@@ -657,7 +717,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitedAgentPhoneNo.
+             * <p>The monitored agent phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8012****</p>
              */
             public Builder monitedAgentPhoneNo(String monitedAgentPhoneNo) {
                 this.monitedAgentPhoneNo = monitedAgentPhoneNo;
@@ -665,7 +728,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -673,7 +739,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNo.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8012****</p>
              */
             public Builder phoneNo(String phoneNo) {
                 this.phoneNo = phoneNo;
@@ -681,7 +750,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticDate.
+             * <p>The time when the statistics were collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-03T10:15:30</p>
              */
             public Builder statisticDate(String statisticDate) {
                 this.statisticDate = statisticDate;
@@ -689,7 +761,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticTime.
+             * <p>Duration of the status, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder statisticTime(Integer statisticTime) {
                 this.statisticTime = statisticTime;
@@ -697,7 +772,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>振铃</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -705,7 +783,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetRequest.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder targetRequest(String targetRequest) {
                 this.targetRequest = targetRequest;
@@ -713,7 +794,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetSelect.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder targetSelect(String targetSelect) {
                 this.targetSelect = targetSelect;
@@ -721,7 +805,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc6736</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -729,7 +816,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferNo.
+             * <p>Transfer number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07551231****</p>
              */
             public Builder transferNo(String transferNo) {
                 this.transferNo = transferNo;
@@ -737,7 +827,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferNumber.
+             * <p>Transfer number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05711231****</p>
              */
             public Builder transferNumber(String transferNumber) {
                 this.transferNumber = transferNumber;
@@ -830,7 +923,7 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of agent status data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -838,7 +931,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -846,7 +942,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -854,7 +953,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

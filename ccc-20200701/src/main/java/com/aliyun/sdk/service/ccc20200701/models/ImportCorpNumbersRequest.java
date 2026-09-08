@@ -131,7 +131,10 @@ public class ImportCorpNumbersRequest extends Request {
         } 
 
         /**
-         * City.
+         * <p>The city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>西安</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -140,7 +143,10 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
-         * CorpName.
+         * <p>The enterprise name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx公司</p>
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -149,10 +155,11 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
+         * <p>The list of numbers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;02912345678&quot;]</p>
+         * <p>[\&quot;029xxxxxx\&quot;]</p>
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);
@@ -161,7 +168,11 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
+         * <p>The line information.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx通信-陕西线路</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -170,7 +181,10 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>The province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>陕西</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -179,7 +193,10 @@ public class ImportCorpNumbersRequest extends Request {
         }
 
         /**
-         * TagList.
+         * <p>The business tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder tagList(String tagList) {
             this.putQueryParameter("TagList", tagList);

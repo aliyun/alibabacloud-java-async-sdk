@@ -93,7 +93,10 @@ public class ResumeCampaignResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ResumeCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +115,10 @@ public class ResumeCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class ResumeCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F505C4C8-1E12-573A-9BA7-4BEAAD129553</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

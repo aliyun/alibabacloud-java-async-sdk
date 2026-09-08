@@ -148,7 +148,10 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>End time of the historical data to retrieve, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is the current time. The time precision for statistics is hourly, rounded down to the previous hour, and uses an open interval. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned input time range becomes [11:00:00, 12:00:00), meaning greater than or equal to 11:00:00 and less than 12:00:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532707199000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -157,6 +160,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +173,10 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. The default value is Audio. Other valid values include Chat and Video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -178,6 +185,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +198,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +211,10 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>List of skill group IDs to query, provided as a JSON array string. Each array element is a skill group ID. This parameter is optional. The default value is empty, which means all skill groups in the current page are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test2&quot;]</p>
          */
         public Builder skillGroupIdList(String skillGroupIdList) {
             this.putBodyParameter("SkillGroupIdList", skillGroupIdList);
@@ -211,7 +223,10 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time of the historical data to retrieve, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is 00:00:00 of the current day. The earliest allowed value is 180 days before the current time. The time precision for statistics is hourly, rounded down to the previous hour, and uses a closed interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532448000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

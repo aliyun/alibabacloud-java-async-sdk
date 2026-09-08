@@ -119,7 +119,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -316,7 +331,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -324,7 +342,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>Agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -332,7 +353,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * BreakCode.
+             * <p>Break code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -340,7 +364,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Dn.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8030****</p>
              */
             public Builder dn(String dn) {
                 this.dn = dn;
@@ -348,7 +375,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -356,7 +386,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>Agent logon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -364,7 +397,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -372,7 +408,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -380,7 +419,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * StateDuration.
+             * <p>Duration of the agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder stateDuration(String stateDuration) {
                 this.stateDuration = stateDuration;
@@ -473,7 +515,7 @@ public class ListAgentStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -481,7 +523,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -489,7 +534,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +545,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -132,7 +132,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF1C21B9-2D49-4B54-880F-FBE248C16903</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RowCount.
+         * <p>The number of rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rowCount(Long rowCount) {
             this.rowCount = rowCount;
@@ -172,7 +187,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +198,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         }
 
         /**
-         * TimeStamp.
+         * <p>The time when the record was generated, in Unix timestamp format, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1555492246000</p>
          */
         public Builder timeStamp(Long timeStamp) {
             this.timeStamp = timeStamp;

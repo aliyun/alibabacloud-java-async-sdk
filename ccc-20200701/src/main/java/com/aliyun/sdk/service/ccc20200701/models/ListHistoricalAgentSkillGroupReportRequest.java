@@ -162,7 +162,10 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         } 
 
         /**
-         * AgentIdList.
+         * <p>List of agent IDs. The list size is 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
          */
         public Builder agentIdList(String agentIdList) {
             this.putBodyParameter("AgentIdList", agentIdList);
@@ -171,7 +174,10 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time for historical data retrieval. Format is UNIX timestamp in milliseconds. Optional. Defaults to the current time. The statistical time granularity is hourly, rounded up to the nearest hour, in an open interval. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned request parameter time range is [11:00:00, 12:00:00), meaning greater than or equal to 11:00 and less than 12:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620273600000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -180,6 +186,7 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +199,10 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. Defaults to Audio. Other optional parameters include Chat and Video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -201,6 +211,7 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
+         * <p>Page number. Valid values are 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +224,7 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
+         * <p>Page size. Valid values are 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +237,13 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>List of skill group IDs. The list size is 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;skg1@ccc-test&quot;,
+         *       &quot;skg2@ccc-test&quot;
+         * ]</p>
          */
         public Builder skillGroupIdList(String skillGroupIdList) {
             this.putQueryParameter("SkillGroupIdList", skillGroupIdList);
@@ -234,7 +252,10 @@ public class ListHistoricalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start timestamp. Defaults to 00:00 on the current day. The statistical time granularity is hourly, rounded down to the nearest hour, in a closed interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634140800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

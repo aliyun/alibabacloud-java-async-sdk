@@ -75,6 +75,7 @@ public class GetAudioFileUploadParametersRequest extends Request {
         } 
 
         /**
+         * <p>Audio file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetAudioFileUploadParametersRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

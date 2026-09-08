@@ -88,7 +88,10 @@ public class GetUserRequest extends Request {
         } 
 
         /**
-         * Extension.
+         * <p>Agent extension number. This parameter is optional. You must specify either UserId or Extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8003****</p>
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -97,6 +100,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. This parameter is optional. You must specify either UserId or Extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

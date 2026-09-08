@@ -119,7 +119,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30C7D235-DDCF-4C7F-A462-5E2598252C2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +276,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703517780627</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -272,7 +287,7 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Schema ID。</p>
+             * <p>Schema ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ticketing</p>
@@ -283,7 +298,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -291,7 +309,7 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>List of fields.</p>
              */
             public Builder properties(java.util.Map<String, DataPropertiesValue> properties) {
                 this.properties = properties;
@@ -299,7 +317,10 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>Last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716211430928</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

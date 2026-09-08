@@ -89,6 +89,7 @@ public class RemoveBlacklistCallTaggingRequest extends Request {
         } 
 
         /**
+         * <p>ID of the Cloud Contact Center instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class RemoveBlacklistCallTaggingRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>Call ID. Provide this field only for masked numbers (containing \*). Do not provide it for unmasked numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -110,6 +114,7 @@ public class RemoveBlacklistCallTaggingRequest extends Request {
         }
 
         /**
+         * <p>Phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

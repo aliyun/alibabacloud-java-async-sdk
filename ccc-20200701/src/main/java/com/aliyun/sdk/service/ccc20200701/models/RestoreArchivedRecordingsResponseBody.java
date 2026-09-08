@@ -106,7 +106,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance 0 does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8066648-5D95-55AB-ACD3-2F4AD3BEA715</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +242,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactId.
+             * <p>Contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-25920271311543****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -238,7 +253,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * Exists.
+             * <p>Is the recording file existing?</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder exists(String exists) {
                 this.exists = exists;
@@ -246,7 +264,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The recording\&quot;s restored state. Values are Completed or Progressing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Progressing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +275,10 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>Storage class of the recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

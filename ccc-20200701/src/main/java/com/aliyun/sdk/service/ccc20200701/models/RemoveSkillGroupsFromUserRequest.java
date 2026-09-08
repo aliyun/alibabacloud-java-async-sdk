@@ -90,6 +90,7 @@ public class RemoveSkillGroupsFromUserRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class RemoveSkillGroupsFromUserRequest extends Request {
         }
 
         /**
+         * <p>A list of skill group IDs to disassociate, formatted as a JSON array string, where each array element is a skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class RemoveSkillGroupsFromUserRequest extends Request {
         }
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

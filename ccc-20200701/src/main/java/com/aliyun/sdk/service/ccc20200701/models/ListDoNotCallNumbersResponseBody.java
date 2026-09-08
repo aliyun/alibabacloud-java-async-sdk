@@ -119,7 +119,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +289,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>Creation time of the Do Not Call number configuration, in Unix timestamp format with millisecond precision. (Deprecated)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1626962425000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -285,7 +300,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>Creation time of the prohibited outbound call number configuration, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -293,7 +311,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator, which is the agent logon name of the agent who created this record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -301,7 +322,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1900000****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -309,7 +333,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -317,7 +344,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Scope of application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -410,7 +440,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of prohibited outbound call numbers.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -418,7 +448,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -426,7 +459,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -434,7 +470,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

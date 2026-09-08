@@ -103,6 +103,7 @@ public class ModifyCampaignNumbersRequest extends Request {
         } 
 
         /**
+         * <p>The campaign ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ModifyCampaignNumbersRequest extends Request {
         }
 
         /**
-         * InstGroupId.
+         * <p>The ID of the number collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3971876649-<strong><strong>-</strong></strong>-098763a382a09</p>
          */
         public Builder instGroupId(String instGroupId) {
             this.putQueryParameter("InstGroupId", instGroupId);
@@ -124,6 +128,7 @@ public class ModifyCampaignNumbersRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Cloud Call Center (CCC) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,7 @@ public class ModifyCampaignNumbersRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>The list of numbers.</p>
          */
         public Builder numberList(java.util.List<String> numberList) {
             String numberListShrink = shrink(numberList, "NumberList", "json");

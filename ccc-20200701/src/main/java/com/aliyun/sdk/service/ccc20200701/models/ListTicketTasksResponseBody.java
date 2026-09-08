@@ -119,7 +119,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -381,7 +393,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action performed on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CounterSignTask</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -389,7 +404,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Assignee.
+             * <p>The ID of the assignee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assignee@ccc-test</p>
              */
             public Builder assignee(String assignee) {
                 this.assignee = assignee;
@@ -397,7 +415,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AssigneeName.
+             * <p>The name of the assignee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assignee</p>
              */
             public Builder assigneeName(String assigneeName) {
                 this.assigneeName = assigneeName;
@@ -405,7 +426,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>同意</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -413,7 +437,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620269200000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -421,7 +448,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FileKeys.
+             * <p>A list of files.</p>
              */
             public Builder fileKeys(java.util.List<String> fileKeys) {
                 this.fileKeys = fileKeys;
@@ -429,7 +456,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrls.
+             * <p>A list of file access URLs.</p>
              */
             public Builder fileUrls(java.util.List<String> fileUrls) {
                 this.fileUrls = fileUrls;
@@ -437,7 +464,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -445,7 +475,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620259200000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -453,7 +486,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDefinitionNodeId.
+             * <p>The ID of the ticket node in the process definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVAL__6zu2QjAz</p>
              */
             public Builder taskDefinitionNodeId(String taskDefinitionNodeId) {
                 this.taskDefinitionNodeId = taskDefinitionNodeId;
@@ -461,7 +497,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDefinitionNodeType.
+             * <p>The type of the ticket node in the process definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVAL</p>
              */
             public Builder taskDefinitionNodeType(String taskDefinitionNodeType) {
                 this.taskDefinitionNodeType = taskDefinitionNodeType;
@@ -469,7 +508,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb039a4a6a5742c6b44ccff0c1fca745</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -477,7 +519,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -485,7 +530,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TicketId.
+             * <p>The ID of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
              */
             public Builder ticketId(String ticketId) {
                 this.ticketId = ticketId;

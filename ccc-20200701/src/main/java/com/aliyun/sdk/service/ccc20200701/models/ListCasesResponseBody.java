@@ -106,7 +106,10 @@ public class ListCasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CC6523B-0E51-1B62-8DA5-6A9831CAE316</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +294,18 @@ public class ListCasesResponseBody extends TeaModel {
             } 
 
             /**
-             * AbandonPhase.
+             * <p>Phase at which the call was abandoned.</p>
+             * <ul>
+             * <li><p>IVR (IVR interaction phase)</p>
+             * </li>
+             * <li><p>Queuing (queuing phase)</p>
+             * </li>
+             * <li><p>Ringing (agent ringing phase)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ringing</p>
              */
             public Builder abandonPhase(String abandonPhase) {
                 this.abandonPhase = abandonPhase;
@@ -290,7 +313,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * AbandonType.
+             * <p>The type of call abandonment, that is, the reason why the call was not successfully connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NA</p>
              */
             public Builder abandonType(String abandonType) {
                 this.abandonType = abandonType;
@@ -298,7 +324,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * AttemptCount.
+             * <p>Number of attempts, which is the total number of calls made to this contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attemptCount(Long attemptCount) {
                 this.attemptCount = attemptCount;
@@ -306,7 +335,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * CaseId.
+             * <p>System-generated contact ID. Customers do not need to concern themselves with this.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60ecb1a2-4480-4d01-bede-c5b7655bfadf</p>
              */
             public Builder caseId(String caseId) {
                 this.caseId = caseId;
@@ -314,7 +346,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomVariables.
+             * <p>Custom variables defined by the customer, formatted as a JSON object. The object can contain up to 10 properties, each with a name and value defined by the customer. These can be configured when creating a predictive outbound dialing activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;yy&quot;,&quot;客戶标签&quot;:&quot;tag-yy&quot;}</p>
              */
             public Builder customVariables(String customVariables) {
                 this.customVariables = customVariables;
@@ -322,7 +357,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * <p>Reason for outbound call failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -330,7 +368,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>Phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1888888****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -338,7 +379,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -431,7 +475,7 @@ public class ListCasesResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of contact list execution details.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -439,7 +483,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -447,7 +494,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -455,7 +505,10 @@ public class ListCasesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -133,7 +133,10 @@ public class ListPhoneNumbersRequest extends Request {
         } 
 
         /**
-         * Active.
+         * <p>Indicates whether the number is active. This parameter is optional. The default value is empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.putQueryParameter("Active", active);
@@ -142,6 +145,7 @@ public class ListPhoneNumbersRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +158,7 @@ public class ListPhoneNumbersRequest extends Request {
         }
 
         /**
+         * <p>The paging ordinal number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +171,7 @@ public class ListPhoneNumbersRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +184,10 @@ public class ListPhoneNumbersRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Performs fuzzy matching based on the number. This parameter is optional and defaults to empty. An empty value indicates no filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0833</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -187,7 +196,10 @@ public class ListPhoneNumbersRequest extends Request {
         }
 
         /**
-         * Usage.
+         * <p>Usage of the number. This parameter is optional. The default value is empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bidirection</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

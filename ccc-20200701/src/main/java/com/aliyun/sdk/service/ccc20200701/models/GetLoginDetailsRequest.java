@@ -88,7 +88,10 @@ public class GetLoginDetailsRequest extends Request {
         } 
 
         /**
-         * ChatDeviceId.
+         * <p>Chat Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c51c9116c36537cb850dc1081d745df</p>
          */
         public Builder chatDeviceId(String chatDeviceId) {
             this.putQueryParameter("ChatDeviceId", chatDeviceId);
@@ -97,6 +100,7 @@ public class GetLoginDetailsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class GetLoginDetailsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. This parameter is optional. If not specified, the agent mapped to the current RAM account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

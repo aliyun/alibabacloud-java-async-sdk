@@ -106,7 +106,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +242,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -238,7 +253,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -246,7 +264,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +275,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -464,7 +488,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Indicates whether the number is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -472,7 +499,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>乐山</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -480,7 +510,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * ContactFlowId.
+             * <p>The IVR contact flow ID associated with the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
              */
             public Builder contactFlowId(String contactFlowId) {
                 this.contactFlowId = contactFlowId;
@@ -488,7 +521,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * ContactFlowName.
+             * <p>Name of the IVR contact flow associated with the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认联系流</p>
              */
             public Builder contactFlowName(String contactFlowName) {
                 this.contactFlowName = contactFlowName;
@@ -496,7 +532,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The number creation time, which is the time when the number was associated with the instance, in Unix timestamp format with millisecond precision.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1617958538000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -504,7 +543,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -512,7 +554,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08330011****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -520,7 +565,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>Number provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicom</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -528,7 +576,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>四川</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -536,7 +587,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroups.
+             * <p>The list of skill groups associated with the number.</p>
              */
             public Builder skillGroups(java.util.List<SkillGroups> skillGroups) {
                 this.skillGroups = skillGroups;
@@ -544,7 +595,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Business tags for the number, primarily used for labeling and extended business purposes. Ordinary customers do not need to concern themselves with this.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M1</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -552,7 +606,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The usage of the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bidirection</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -560,7 +617,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID. If this parameter is not empty, the number is dedicated to the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -653,7 +713,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The phone number list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -661,7 +721,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -669,7 +732,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -677,7 +743,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

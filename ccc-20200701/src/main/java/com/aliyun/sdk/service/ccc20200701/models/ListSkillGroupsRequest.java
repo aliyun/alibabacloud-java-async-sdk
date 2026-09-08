@@ -118,6 +118,7 @@ public class ListSkillGroupsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class ListSkillGroupsRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The media type. The default is AUDIO. Other options include CHAT and VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Audio</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -139,6 +143,7 @@ public class ListSkillGroupsRequest extends Request {
         }
 
         /**
+         * <p>The page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,7 @@ public class ListSkillGroupsRequest extends Request {
         }
 
         /**
+         * <p>The paging size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,10 @@ public class ListSkillGroupsRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Performs fuzzy matching based on the skill group name or display name. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);

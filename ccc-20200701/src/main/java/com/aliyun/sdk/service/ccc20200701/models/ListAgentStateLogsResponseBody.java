@@ -106,7 +106,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +281,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>会议</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -277,7 +292,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Duration of the status, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -285,7 +303,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -293,7 +314,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start Time of the status, in UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620259200000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -301,7 +325,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Break</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -309,7 +336,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StateCode.
+             * <p>Sub-status, which provides additional details for the status code. In certain scenarios, an agent\&quot;s status is jointly identified by State and StateCode. For example, in a monitoring scenario, the State is Talking and the StateCode is Monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_IN_BREAK</p>
              */
             public Builder stateCode(String stateCode) {
                 this.stateCode = stateCode;
@@ -317,7 +347,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

@@ -115,7 +115,10 @@ public class ListGroupChatMessagesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Cloud Contact Center instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +127,10 @@ public class ListGroupChatMessagesRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>Call ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat-65382141036853491</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -133,7 +139,10 @@ public class ListGroupChatMessagesRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>Token for the next page. This is a 32-character UUID. Leave this parameter empty when requesting the first page. For subsequent pages, use the NextPageToken value from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2ad450b116e4f8396e58108acf5c020</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -142,7 +151,10 @@ public class ListGroupChatMessagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +163,13 @@ public class ListGroupChatMessagesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>Sorting order. Default is descending.</p>
+         * <p>Valid values:</p>
+         * <p>ASC: ascending.</p>
+         * <p>DESC: descending.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);

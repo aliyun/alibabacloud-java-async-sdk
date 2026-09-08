@@ -258,7 +258,10 @@ public class InitiateAttendedTransferRequest extends Request {
         } 
 
         /**
-         * CallPriority.
+         * <p>The queuing priority when transferring to a skill group queue. Valid values range from 0 to 9, where 0 is the highest priority and 9 is the lowest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder callPriority(Integer callPriority) {
             this.putQueryParameter("CallPriority", callPriority);
@@ -267,7 +270,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -276,6 +282,7 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +295,7 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +308,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * QueuingOverflowThreshold.
+         * <p>The queuing overflow threshold when the transfer target is a skill group queue. The default value is 0, which means no overflow occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder queuingOverflowThreshold(Long queuingOverflowThreshold) {
             this.putQueryParameter("QueuingOverflowThreshold", queuingOverflowThreshold);
@@ -309,7 +320,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * QueuingTimeoutSeconds.
+         * <p>The queuing timeout period in seconds when the transfer target is a skill group queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder queuingTimeoutSeconds(Long queuingTimeoutSeconds) {
             this.putQueryParameter("QueuingTimeoutSeconds", queuingTimeoutSeconds);
@@ -318,7 +332,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * RoutingType.
+         * <p>The call assignment type. Valid values are Automatic or Manual. If this parameter is empty, the default value is Automatic, which is also the current system\&quot;s default behavior. When Manual is selected, you must invoke APIs such as ClaimCall to assign the call to a specific agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         public Builder routingType(String routingType) {
             this.putQueryParameter("RoutingType", routingType);
@@ -327,7 +344,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * <p>The policy name for agent assignment when transferring to a skill group queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MOST_IDLE，MOST_SKILLED，MOST_ACQUAINTED，CUSTOMIZED等</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -336,7 +356,14 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * StrategyParams.
+         * <p>The policy parameters for agent assignment when transferring to a skill group queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>当分配策略为CUSTOMIZED时，本参数的内容为如下格式：
+         *  {
+         *   &quot;functionId&quot;: &quot;512fed64-e379-400f-a1a5-14d5730xxxxx&quot;,
+         *   &quot;functionName&quot;: &quot;routing-strategy-test-2&quot;
+         * }</p>
          */
         public Builder strategyParams(String strategyParams) {
             this.putQueryParameter("StrategyParams", strategyParams);
@@ -345,7 +372,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Ingest endpoint data, primarily used for extension requirements. Regular users do not need to concern themselves with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -354,7 +384,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Timeout duration for the consultation transfer, in seconds. If the transferee does not answer within the specified time, the call is disconnected. This field is optional. Default value is 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -363,6 +396,7 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
+         * <p>The transferee, which can be an agent ID or a skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -375,7 +409,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * TransfereeType.
+         * <p>The destination type for the transfer. Valid values are AGENT, SKILL_GROUP, and EXTERNAL. If this parameter is not provided, the system determines the destination type based on the format of the target number. If inaccurate detection occurs, explicitly specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SKILL_GROUP</p>
          */
         public Builder transfereeType(String transfereeType) {
             this.putQueryParameter("TransfereeType", transfereeType);
@@ -384,7 +421,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * Transferor.
+         * <p>The party initiating the transfer. When transferring to an external number, this parameter specifies the caller number. This parameter is invalid when transferring to an internal agent or skill group; in such cases, the initiator is determined by the UserId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder transferor(String transferor) {
             this.putQueryParameter("Transferor", transferor);
@@ -393,7 +433,10 @@ public class InitiateAttendedTransferRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID initiating the consultation transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

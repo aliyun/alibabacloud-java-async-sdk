@@ -106,7 +106,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetNumberLocationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>584AA2E3-9AC4-561B-BC8D-C74BA11B1387</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>City of the number\&quot;s registration location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -225,7 +240,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312121****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -233,7 +251,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>Province of the number\&quot;s registration location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder province(String province) {
                 this.province = province;

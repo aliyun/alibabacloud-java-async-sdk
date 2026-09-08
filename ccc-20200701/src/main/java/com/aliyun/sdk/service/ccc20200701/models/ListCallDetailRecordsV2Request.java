@@ -428,7 +428,15 @@ public class ListCallDetailRecordsV2Request extends Request {
         } 
 
         /**
-         * AccessChannelTypeList.
+         * <p>The list of visitor channel types.</p>
+         * <p>Valid values:</p>
+         * <p>Web: web page.</p>
+         * <p>DingTalkServiceWindow: DingTalk service window.</p>
+         * <p>AliMe: chatbot.</p>
+         * <p>DingTalkRobot: DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Web&quot;,&quot;AliMe&quot;]</p>
          */
         public Builder accessChannelTypeList(String accessChannelTypeList) {
             this.putQueryParameter("AccessChannelTypeList", accessChannelTypeList);
@@ -437,7 +445,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * AgentId.
+         * <p>The ID of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -446,7 +457,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * AnalyticsReportReady.
+         * <p>Indicates whether the AI post-call analytics report is ready.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder analyticsReportReady(Boolean analyticsReportReady) {
             this.putQueryParameter("AnalyticsReportReady", analyticsReportReady);
@@ -455,7 +469,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * Broker.
+         * <p>The intermediate number. The number must be an available outbound number under the instance. In a back-to-back call, this number is used to call the caller and the callee sequentially.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021****4972</p>
          */
         public Builder broker(String broker) {
             this.putQueryParameter("Broker", broker);
@@ -464,7 +481,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>191***9993</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -473,7 +493,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>191***9993</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -482,7 +505,24 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * ContactDispositionList.
+         * <p>Filters results by hangup cause.</p>
+         * <p>Valid values:</p>
+         * <p>AbandonedInQueue: Abandoned while queuing.</p>
+         * <p>NoAnswer: Customer did not answer.</p>
+         * <p>QueuingTimeout: Queuing timed out.</p>
+         * <p>Voicemail: Transferred to voice mail.</p>
+         * <p>QueuingFailed: Transfer to agent failed.</p>
+         * <p>QueuingOverflow: Queue overflow.</p>
+         * <p>AbandonedInVoiceNavigator: Abandoned during intelligent navigation.</p>
+         * <p>Success: Ended normally.</p>
+         * <p>IVRException: IVR exception.</p>
+         * <p>AbandonedInRing: Abandoned while ringing.</p>
+         * <p>AbandonedInIVR: Abandoned in IVR.</p>
+         * <p>Reject: Customer rejected the call.</p>
+         * <p>ForwardToOutsideNumber: Forwarded to an external number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Success&quot;,&quot;NoAnswer&quot;]</p>
          */
         public Builder contactDispositionList(String contactDispositionList) {
             this.putQueryParameter("ContactDispositionList", contactDispositionList);
@@ -491,7 +531,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * ContactIdList.
+         * <p>The list of call IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;job-123456789&quot;,&quot;job-234567891&quot;]</p>
          */
         public Builder contactIdList(String contactIdList) {
             this.putQueryParameter("ContactIdList", contactIdList);
@@ -500,7 +543,18 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * ContactTypeList.
+         * <p>Filters results by call type.</p>
+         * <p>Valid values:</p>
+         * <p>OUTBOUND: outbound call.</p>
+         * <p>BACK2BACK: back-to-back call.</p>
+         * <p>PRIVACY_DIAL: encrypted call.</p>
+         * <p>INTERNAL: internal call.</p>
+         * <p>PREDICTIVE: predictive outbound call.</p>
+         * <p>INBOUND: inbound call.</p>
+         * <p>CONFERENCE: conference call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;INBOUND&quot;,&quot;OUTBOUND&quot;]</p>
          */
         public Builder contactTypeList(String contactTypeList) {
             this.putQueryParameter("ContactTypeList", contactTypeList);
@@ -509,7 +563,18 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * EarlyMediaStateList.
+         * <p>Filters results by the reason for unanswered calls.</p>
+         * <p>Valid values:</p>
+         * <p>NoAnswer: No answer.</p>
+         * <p>OutOfService: Out of service.</p>
+         * <p>NotExist: Number does not exist.</p>
+         * <p>Restricted: Call restricted.</p>
+         * <p>Busy: Line busy.</p>
+         * <p>NotConnected: Cannot be connected.</p>
+         * <p>PowerOff: Phone powered off.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;NotConnected&quot;,&quot;NoAnswer&quot;]</p>
          */
         public Builder earlyMediaStateList(String earlyMediaStateList) {
             this.putQueryParameter("EarlyMediaStateList", earlyMediaStateList);
@@ -518,7 +583,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the historical data to retrieve. The default value is the current time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657879880010</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -527,7 +595,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * FirstAgentId.
+         * <p>The ID of the first agent who participated in the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder firstAgentId(String firstAgentId) {
             this.putQueryParameter("FirstAgentId", firstAgentId);
@@ -536,6 +607,7 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
+         * <p>The instance ID of the call center.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,7 +620,15 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The media type.</p>
+         * <p>Valid values:</p>
+         * <p>AUDIO: voice call.</p>
+         * <p>VIDEO: video call.</p>
+         * <p>CHAT: message.</p>
+         * <p>ALL: all types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDIO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -557,7 +637,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * Number.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>191***9993</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -566,7 +649,12 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * OrderByField.
+         * <p>The field by which to sort the results. This parameter is optional. Default value: startTime (call start time).</p>
+         * <p>Valid values:</p>
+         * <p>startTime: call start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>startTime</p>
          */
         public Builder orderByField(String orderByField) {
             this.putQueryParameter("OrderByField", orderByField);
@@ -575,6 +663,7 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
+         * <p>The page number. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -587,6 +676,7 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -599,7 +689,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * ReleaseInitiatorList.
+         * <p>The party that hung up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;AGENT\&quot;]</p>
          */
         public Builder releaseInitiatorList(String releaseInitiatorList) {
             this.putQueryParameter("ReleaseInitiatorList", releaseInitiatorList);
@@ -608,7 +701,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * ReleaseReasonList.
+         * <p>The hangup reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;VisitorInitiatedClosure\&quot;,\&quot;AgentInitiatedClosure\&quot;]</p>
          */
         public Builder releaseReasonList(String releaseReasonList) {
             this.putQueryParameter("ReleaseReasonList", releaseReasonList);
@@ -617,7 +713,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * SatisfactionDescriptionList.
+         * <p>Filters results by satisfaction description. The description content is defined by the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Satisfied&quot;,&quot;Average&quot;]</p>
          */
         public Builder satisfactionDescriptionList(String satisfactionDescriptionList) {
             this.putQueryParameter("SatisfactionDescriptionList", satisfactionDescriptionList);
@@ -626,7 +725,16 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * SatisfactionRateList.
+         * <p>Filters results by satisfaction rating. Separate multiple satisfaction ratings with commas (,).</p>
+         * <p>Valid values:</p>
+         * <p>-2: Not sent.</p>
+         * <p>-1: Not rated.</p>
+         * <p>Other positive numbers: custom satisfaction rating values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;-1&quot;,&quot;3&quot;]
+         * [&quot;&gt;2&quot;]
+         * [&quot;&lt;3&quot;]</p>
          */
         public Builder satisfactionRateList(String satisfactionRateList) {
             this.putQueryParameter("SatisfactionRateList", satisfactionRateList);
@@ -635,7 +743,14 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * SatisfactionSurveyChannel.
+         * <p>The satisfaction survey channel.</p>
+         * <p>Valid values:</p>
+         * <p>IVR: voice-based satisfaction survey.</p>
+         * <p>SMS: SMS-based satisfaction survey.</p>
+         * <p>CHAT: message-based satisfaction survey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IVR</p>
          */
         public Builder satisfactionSurveyChannel(String satisfactionSurveyChannel) {
             this.putQueryParameter("SatisfactionSurveyChannel", satisfactionSurveyChannel);
@@ -644,7 +759,14 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>The custom query text that follows the Lucene query syntax.</p>
+         * <p>The following table describes the supported query fields and query types:</p>
+         * <p>accessChannelUserId: the visitor ID. Supports exact match and fuzzy match.</p>
+         * <p>accessChannelName: the channel name. Supports exact match and fuzzy match.</p>
+         * <p>text: the session text. Supports fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text:please wait AND accessChannelUserId:af1a0-afaa-5086e2946e0b* AND accessChannelName:dedicated development channel*</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -653,7 +775,13 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>The list of skill group IDs to which the agent belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;skg1@ccc-test&quot;,
+         *       &quot;skg2@ccc-test&quot;
+         * ]</p>
          */
         public Builder skillGroupIdList(String skillGroupIdList) {
             this.putQueryParameter("SkillGroupIdList", skillGroupIdList);
@@ -662,7 +790,13 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Default value: DESC.</p>
+         * <p>Valid values:</p>
+         * <p>ASC: ascending order.</p>
+         * <p>DESC: descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -671,7 +805,10 @@ public class ListCallDetailRecordsV2Request extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the historical data to retrieve. The default value is 00:00 of the current day. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657853640015</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

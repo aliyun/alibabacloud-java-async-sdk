@@ -161,7 +161,10 @@ public class ListVoicemailsRequest extends Request {
         } 
 
         /**
-         * Caller.
+         * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>073xxxx7539</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -170,7 +173,10 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * <p>The ID of the call. You can use this parameter to query the record of a specific call. You can obtain the contact ID from the softphone SDK during a call. If you specify this parameter, other query parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-125152394144124921</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -179,7 +185,10 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query range. This is a UNIX timestamp in milliseconds. The default value is the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532707199000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,6 +197,7 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Cloud Contact Center (CC) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +210,10 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the voicemail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>voicemail-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -209,6 +222,7 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
+         * <p>The page number. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +235,7 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +248,10 @@ public class ListVoicemailsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query range. This is a UNIX timestamp in milliseconds. The default value is 00:00 on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532448000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -132,6 +132,7 @@ public class LaunchAuthenticationRequest extends Request {
         } 
 
         /**
+         * <p>The contact flow ID for the IVR identity verification flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,15 @@ public class LaunchAuthenticationRequest extends Request {
         }
 
         /**
-         * ContactFlowVariables.
+         * <p>Variables passed to the contact flow. This parameter is optional. The configured variables can be retrieved and used within the IVR flow. The format is a JSON string representing a collection of key-value pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;customerID&quot;: &quot;208880281831****&quot;,
+         *       &quot;operateType&quot;: &quot;cipherCode&quot;,
+         *       &quot;taskId&quot;: &quot;1234567890&quot;,
+         *       &quot;crmOther&quot;: &quot;123&quot;
+         * }</p>
          */
         public Builder contactFlowVariables(String contactFlowVariables) {
             this.putQueryParameter("ContactFlowVariables", contactFlowVariables);
@@ -153,7 +162,10 @@ public class LaunchAuthenticationRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled in with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -162,6 +174,7 @@ public class LaunchAuthenticationRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +187,7 @@ public class LaunchAuthenticationRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +200,10 @@ public class LaunchAuthenticationRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID that initiates identity verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

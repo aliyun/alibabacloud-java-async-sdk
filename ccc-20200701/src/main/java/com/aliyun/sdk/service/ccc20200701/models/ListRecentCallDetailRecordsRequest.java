@@ -134,7 +134,10 @@ public class ListRecentCallDetailRecordsRequest extends Request {
         } 
 
         /**
-         * Criteria.
+         * <p>Fuzzy search criteria in JSON object format. The object contains three properties that can be combined arbitrarily: phoneNumber (fuzzy search by calling or called number), callingNumber (fuzzy search by calling number), and calledNumber (fuzzy search by called number).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;phoneNumber&quot;:&quot;1312121****&quot;,&quot;callingNumber&quot;:&quot;1312121****&quot;,&quot;calledNumber&quot;:&quot;1312121****&quot;}</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -143,7 +146,10 @@ public class ListRecentCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End UNIX timestamp. The default value is the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -152,6 +158,7 @@ public class ListRecentCallDetailRecordsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +171,7 @@ public class ListRecentCallDetailRecordsRequest extends Request {
         }
 
         /**
+         * <p>Page ordinal number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +184,7 @@ public class ListRecentCallDetailRecordsRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +197,10 @@ public class ListRecentCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start UNIX timestamp. The default value is the start time of the current day. The earliest allowed time is 180 days before the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1604638129000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

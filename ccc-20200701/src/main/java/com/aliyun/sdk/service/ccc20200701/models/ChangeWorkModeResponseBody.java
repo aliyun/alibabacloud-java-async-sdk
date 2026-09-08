@@ -119,7 +119,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ChangeWorkModeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ChangeWorkModeResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87731ED1-6224-48A5-99E3-6237FF9B1C00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -329,7 +341,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent rejecting a call). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -337,7 +352,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -345,7 +363,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8001****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -353,7 +374,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +385,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID. If this field has a value, the agent is currently in a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -369,7 +396,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent has enabled outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -377,7 +407,7 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>List of skill group IDs that the agent has signed into.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -385,7 +415,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -393,7 +426,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>Agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -401,7 +437,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

@@ -188,6 +188,7 @@ public class MakeCallRequest extends Request {
         } 
 
         /**
+         * <p>Callee number. For internal calls, specify the target agent\&quot;s extension number in this field. For outbound calls, specify the customer\&quot;s phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>Caller number. This parameter is invalid for internal calls. For outbound calls, specify an outbound number available to the current agent. Ensure that the number supports outbound calling and that the agent has permission to use it. Permission can be granted in two ways: either by attaching the number to the skill group the agent signed into, or by setting the number as the agent\&quot;s personal outbound number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>010989****</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -209,7 +213,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This field is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -218,7 +225,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * FlashSmsVariables.
+         * <p>Flash SMS configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;applicationId\&quot;:\&quot;6bd18325-ea7f-4881-8902-4d06283d3b3b\&quot;,\&quot;templateId\&quot;:\&quot;1722217249064\&quot;}</p>
          */
         public Builder flashSmsVariables(String flashSmsVariables) {
             this.putQueryParameter("FlashSmsVariables", flashSmsVariables);
@@ -227,6 +237,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +250,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * MaskedCallee.
+         * <p>The desensitized callee number. If this field is not empty, it indicates that the callee number must be desensitized. The desensitization rule is defined by the customer. You only need to enter the desensitized callee number here. Using a desensitized callee number means that in certain scenarios, you will see the desensitized callee number and cannot view the real callee number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131****8888</p>
          */
         public Builder maskedCallee(String maskedCallee) {
             this.putQueryParameter("MaskedCallee", maskedCallee);
@@ -248,7 +262,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. The default value is AUDIO. Other valid values include VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDIO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -257,7 +274,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Ingest endpoint data. The customer does not need to concern themselves with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tags</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -266,7 +286,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Timeout. If the call is not answered within the time specified by this parameter, the system automatically hangs up. Valid values range from 30 to 300 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -275,7 +298,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID initiating the outbound call. This field is optional. If not specified, the system uses the agent mapped to the current RAM user by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

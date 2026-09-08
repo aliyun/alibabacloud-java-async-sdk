@@ -90,6 +90,7 @@ public class DiscardEditingContactFlowRequest extends Request {
         } 
 
         /**
+         * <p>Contact flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DiscardEditingContactFlowRequest extends Request {
         }
 
         /**
+         * <p>Draft ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DiscardEditingContactFlowRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

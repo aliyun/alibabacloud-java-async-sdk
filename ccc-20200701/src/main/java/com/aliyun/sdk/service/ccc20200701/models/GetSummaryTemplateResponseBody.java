@@ -119,7 +119,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30C7D235-DDCF-4C7F-A462-5E2598252C2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -472,7 +484,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Array.
+             * <p>Indicates whether the field is an array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -480,7 +495,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Attributes.
+             * <p>The extended properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -488,7 +506,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the field was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717664210000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -496,7 +517,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user who created the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cretor-xxx@ccc-test</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -504,7 +528,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -512,7 +539,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description-xxxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -520,7 +550,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Disabled.
+             * <p>Indicates whether the field is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -528,7 +561,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DisplayName-A</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -536,7 +572,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayOrder.
+             * <p>The display order in the list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -544,7 +583,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * EditorType.
+             * <p>The type of the editor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textbox</p>
              */
             public Builder editorType(String editorType) {
                 this.editorType = editorType;
@@ -552,7 +594,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLength.
+             * <p>The maximum length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -560,7 +605,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Maximum.
+             * <p>The maximum value of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maximum(Double maximum) {
                 this.maximum = maximum;
@@ -568,7 +616,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MinLength.
+             * <p>The minimum length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minLength(Integer minLength) {
                 this.minLength = minLength;
@@ -576,7 +627,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Minimum.
+             * <p>The minimum value of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minimum(Double minimum) {
                 this.minimum = minimum;
@@ -584,7 +638,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name-A</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -592,7 +649,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * <p>The validation rule that is specified by a regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -600,7 +660,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PatternErrorMessage.
+             * <p>The error message that is returned when the regular expression fails to pass the validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>不是有效的email地址</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -608,7 +671,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the field is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -616,7 +682,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -624,7 +693,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * <p>Indicates whether the field is a system field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder system(Boolean system) {
                 this.system = system;
@@ -632,7 +704,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the field was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717664210000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -764,7 +839,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The ID of the summary category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8939-4223-86d0-6bd187905cc8</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -772,7 +850,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Editor.
+             * <p>The user who edited the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editor-xxx@ccc-test</p>
              */
             public Builder editor(String editor) {
                 this.editor = editor;
@@ -780,7 +861,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -788,7 +872,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试模板</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -796,7 +883,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyList.
+             * <p>The list of template fields.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -804,7 +891,16 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status code.</p>
+             * <ul>
+             * <li><p>Enabled: The template is enabled.</p>
+             * </li>
+             * <li><p>Disabled: The template is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -812,7 +908,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43c2671b-8939-4223-86d0-6bd187905cc8_1717664210492</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

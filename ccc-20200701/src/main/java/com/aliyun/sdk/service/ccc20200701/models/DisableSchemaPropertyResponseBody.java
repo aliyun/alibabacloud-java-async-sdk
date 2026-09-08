@@ -106,7 +106,10 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Additional information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User 244715989906081477 does not exist in instance worldfirst01.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Parameter information</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -138,7 +147,10 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

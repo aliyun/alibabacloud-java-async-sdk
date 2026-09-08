@@ -132,7 +132,10 @@ public class SignInGroupRequest extends Request {
         } 
 
         /**
-         * Additivity.
+         * <p>If an agent has already signed in to some skill groups, setting this parameter to true allows the agent to sign in to additional skill groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder additivity(Boolean additivity) {
             this.putQueryParameter("Additivity", additivity);
@@ -141,7 +144,10 @@ public class SignInGroupRequest extends Request {
         }
 
         /**
-         * ChatDeviceId.
+         * <p>Chat device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c51c9116c36537cb850dc1081d745df</p>
          */
         public Builder chatDeviceId(String chatDeviceId) {
             this.putQueryParameter("ChatDeviceId", chatDeviceId);
@@ -150,10 +156,11 @@ public class SignInGroupRequest extends Request {
         }
 
         /**
+         * <p>Voice device ID. When multiple voice devices are active, use this parameter to specify one of them, such as a browser Web Real-Time Communication (WebRTC) endpoint or a SIP phone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>device</p>
+         * <p>CCC-xx.xx.xx.xx-chrome119-bse1b618bff3xxxxd</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -162,6 +169,7 @@ public class SignInGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +182,7 @@ public class SignInGroupRequest extends Request {
         }
 
         /**
+         * <p>List of skill group IDs to sign in to, formatted as a JSON array string, where each array element is a skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +195,10 @@ public class SignInGroupRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. If not specified, the agent mapped to the current Resource Access Management (RAM) user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

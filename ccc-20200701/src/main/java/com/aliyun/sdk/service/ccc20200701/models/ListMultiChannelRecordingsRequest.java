@@ -103,7 +103,10 @@ public class ListMultiChannelRecordingsRequest extends Request {
         } 
 
         /**
-         * AgentChannelId.
+         * <p>Agent call channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch-user-<strong><strong>-</strong></strong>-1772180844645-job-******</p>
          */
         public Builder agentChannelId(String agentChannelId) {
             this.putQueryParameter("AgentChannelId", agentChannelId);
@@ -112,7 +115,10 @@ public class ListMultiChannelRecordingsRequest extends Request {
         }
 
         /**
-         * AgentId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -121,6 +127,7 @@ public class ListMultiChannelRecordingsRequest extends Request {
         }
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class ListMultiChannelRecordingsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

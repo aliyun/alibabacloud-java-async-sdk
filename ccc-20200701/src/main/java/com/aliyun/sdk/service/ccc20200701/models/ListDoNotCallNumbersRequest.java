@@ -118,6 +118,7 @@ public class ListDoNotCallNumbersRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListDoNotCallNumbersRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListDoNotCallNumbersRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class ListDoNotCallNumbersRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>Scope of application, including SYSTEM and INSTANCE. SYSTEM corresponds to system-level Do Not Call configurations associated with the Alibaba Cloud account to which the instance belongs. INSTANCE corresponds to custom Do Not Call configurations specific to the current instance. This parameter is optional, with a default value of INSTANCE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -163,7 +169,10 @@ public class ListDoNotCallNumbersRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Fuzzy matching based on phone number or remark. This parameter is optional, with a default value of empty, meaning no filtering is applied when empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RemarkA</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);

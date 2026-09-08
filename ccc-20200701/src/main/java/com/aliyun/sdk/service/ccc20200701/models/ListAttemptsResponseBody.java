@@ -106,7 +106,10 @@ public class ListAttemptsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListAttemptsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListAttemptsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListAttemptsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListAttemptsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CC6523B-0E51-1B62-8DA5-6A9831CAE315</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -438,7 +450,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentEstablishedTime.
+             * <p>The time when the agent answered the call, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632883592732</p>
              */
             public Builder agentEstablishedTime(Long agentEstablishedTime) {
                 this.agentEstablishedTime = agentEstablishedTime;
@@ -446,7 +461,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -454,7 +472,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentRingDuration.
+             * <p>Agent ring duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder agentRingDuration(Long agentRingDuration) {
                 this.agentRingDuration = agentRingDuration;
@@ -462,7 +483,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * AssignAgentTime.
+             * <p>The time when the agent was assigned, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634196287869</p>
              */
             public Builder assignAgentTime(Long assignAgentTime) {
                 this.assignAgentTime = assignAgentTime;
@@ -470,7 +494,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * AttemptId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-1704342174816****</p>
              */
             public Builder attemptId(String attemptId) {
                 this.attemptId = attemptId;
@@ -478,7 +505,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * Callee.
+             * <p>Callee number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1888888****</p>
              */
             public Builder callee(String callee) {
                 this.callee = callee;
@@ -486,7 +516,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>Calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05711234****</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -494,7 +527,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * CampaignId.
+             * <p>Predictive outbound dialing Activity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>083046e3-5822-4cda-9b84-04f2a02eb605</p>
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -502,7 +538,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * CaseId.
+             * <p>A contact ID generated by the system. Customers do not need to be concerned with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21d194a7-60b7-4824-932b-48ed03a83704</p>
              */
             public Builder caseId(String caseId) {
                 this.caseId = caseId;
@@ -510,7 +549,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-1704342174816****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -518,7 +560,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerEstablishedTime.
+             * <p>The time when the Customer answered the call, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634196286708</p>
              */
             public Builder customerEstablishedTime(Long customerEstablishedTime) {
                 this.customerEstablishedTime = customerEstablishedTime;
@@ -526,7 +571,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerReleasedTime.
+             * <p>The time when the Customer hung up, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634196317888</p>
              */
             public Builder customerReleasedTime(Long customerReleasedTime) {
                 this.customerReleasedTime = customerReleasedTime;
@@ -534,7 +582,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * DialDuration.
+             * <p>The dial-up duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2734</p>
              */
             public Builder dialDuration(Long dialDuration) {
                 this.dialDuration = dialDuration;
@@ -542,7 +593,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * DialTime.
+             * <p>Time when the dial-up was initiated, in UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634196283974</p>
              */
             public Builder dialTime(Long dialTime) {
                 this.dialTime = dialTime;
@@ -550,7 +604,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * EnqueueTime.
+             * <p>The time when the contact entered the queue, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634196287789</p>
              */
             public Builder enqueueTime(Long enqueueTime) {
                 this.enqueueTime = enqueueTime;
@@ -558,7 +615,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * EnterIvrTime.
+             * <p>The time when the call was transferred into IVR, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634196286740</p>
              */
             public Builder enterIvrTime(Long enterIvrTime) {
                 this.enterIvrTime = enterIvrTime;
@@ -566,7 +626,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -574,7 +637,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * IvrDuration.
+             * <p>The duration spent in IVR, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1049</p>
              */
             public Builder ivrDuration(Long ivrDuration) {
                 this.ivrDuration = ivrDuration;
@@ -582,7 +648,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueDuration.
+             * <p>The queue duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder queueDuration(Long queueDuration) {
                 this.queueDuration = queueDuration;
@@ -590,7 +659,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder queueId(String queueId) {
                 this.queueId = queueId;
@@ -683,7 +755,7 @@ public class ListAttemptsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of contact dialing records.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -691,7 +763,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number. The product of PageNumber and PageSize must not exceed 10 000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -699,7 +774,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size. The product of PageNumber and PageSize must not exceed 10 000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -707,7 +785,10 @@ public class ListAttemptsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

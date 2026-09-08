@@ -106,7 +106,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -212,7 +227,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>Break count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -396,7 +414,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCodeDetailList.
+             * <p>List of distributions of break code counts.</p>
              */
             public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
@@ -404,7 +422,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * BreakingAgents.
+             * <p>Number of agents on break.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder breakingAgents(Long breakingAgents) {
                 this.breakingAgents = breakingAgents;
@@ -412,7 +433,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -420,7 +444,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * InteractiveCalls.
+             * <p>Number of calls interacting within IVR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder interactiveCalls(Long interactiveCalls) {
                 this.interactiveCalls = interactiveCalls;
@@ -428,7 +455,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * LoggedInAgents.
+             * <p>Number of logged-in agents (including agents in ready, on break, on call, or other non-unpublished statuses).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loggedInAgents(Long loggedInAgents) {
                 this.loggedInAgents = loggedInAgents;
@@ -436,7 +466,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * LongestWaitingTime.
+             * <p>Maximum queue waiting time among currently queued incoming calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder longestWaitingTime(Long longestWaitingTime) {
                 this.longestWaitingTime = longestWaitingTime;
@@ -444,7 +477,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadyAgents.
+             * <p>Number of agents in ready status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder readyAgents(Long readyAgents) {
                 this.readyAgents = readyAgents;
@@ -452,7 +488,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TalkingAgents.
+             * <p>Number of agents on calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder talkingAgents(Long talkingAgents) {
                 this.talkingAgents = talkingAgents;
@@ -460,7 +499,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAgents.
+             * <p>Total number of agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalAgents(Long totalAgents) {
                 this.totalAgents = totalAgents;
@@ -468,7 +510,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingCalls.
+             * <p>Number of incoming calls currently queued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder waitingCalls(Long waitingCalls) {
                 this.waitingCalls = waitingCalls;
@@ -476,7 +521,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingAgents.
+             * <p>Number of agents in post-processing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder workingAgents(Long workingAgents) {
                 this.workingAgents = workingAgents;

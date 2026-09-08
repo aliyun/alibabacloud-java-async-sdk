@@ -106,7 +106,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试消息</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -225,7 +240,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * SenderId.
+             * <p>Message sender ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c361765f-******-4e07-b81c-4b5d9183fac6</p>
              */
             public Builder senderId(String senderId) {
                 this.senderId = senderId;
@@ -233,7 +251,16 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * SenderType.
+             * <p>Sender type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>CUSTOMER</strong>: visitor</p>
+             * </li>
+             * <li><p><strong>AGENT</strong>: agent</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;variables&quot;:{},&quot;text&quot;:&quot;<p>这种的名片选单面还是双面</p>&quot;}</p>
              */
             public Builder senderType(String senderType) {
                 this.senderType = senderType;
@@ -326,7 +353,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             } 
 
             /**
-             * AvatarUrl.
+             * <p>Profile picture URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -334,7 +364,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c361765f-******-4e07-b81c-4b5d9183fac6</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -342,7 +375,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>User name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>访客-1c***</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -350,7 +386,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * <p>User type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -508,7 +547,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessChannelId.
+             * <p>Access channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>843073c2-*****-49fb-a616-738ddddfebdc</p>
              */
             public Builder accessChannelId(String accessChannelId) {
                 this.accessChannelId = accessChannelId;
@@ -516,7 +558,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessChannelType.
+             * <p>Access channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Web</p>
              */
             public Builder accessChannelType(String accessChannelType) {
                 this.accessChannelType = accessChannelType;
@@ -524,7 +569,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * BeingAssigned.
+             * <p>Indicates whether the session has been assigned to an agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder beingAssigned(Boolean beingAssigned) {
                 this.beingAssigned = beingAssigned;
@@ -532,7 +580,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatConversationId.
+             * <p>Chat session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$23086709$EAUNIT</p>
              */
             public Builder chatConversationId(String chatConversationId) {
                 this.chatConversationId = chatConversationId;
@@ -540,7 +591,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * EnqueueTime.
+             * <p>Enqueue time, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718868572094</p>
              */
             public Builder enqueueTime(Long enqueueTime) {
                 this.enqueueTime = enqueueTime;
@@ -548,7 +602,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-434537064047960064</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -556,7 +613,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * Messages.
+             * <p>Message list.</p>
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
@@ -564,7 +621,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -572,7 +632,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             }
 
             /**
-             * UserList.
+             * <p>User list.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;

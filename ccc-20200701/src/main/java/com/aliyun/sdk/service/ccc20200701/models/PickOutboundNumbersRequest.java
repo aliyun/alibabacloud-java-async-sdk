@@ -105,6 +105,7 @@ public class PickOutboundNumbersRequest extends Request {
         } 
 
         /**
+         * <p>Called number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,10 @@ public class PickOutboundNumbersRequest extends Request {
         }
 
         /**
-         * Count.
+         * <p>The desired quantity of selectable numbers to return. Default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -126,6 +130,7 @@ public class PickOutboundNumbersRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +143,7 @@ public class PickOutboundNumbersRequest extends Request {
         }
 
         /**
+         * <p>A collection of skill group IDs, formatted as a JSON array string. Each array element is a skill group ID. Numbers are associated with skill groups, and this parameter specifies from which skill groups to select numbers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

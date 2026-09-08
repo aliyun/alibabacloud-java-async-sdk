@@ -106,7 +106,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +255,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心的测试技能组。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +266,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +277,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIDEO</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -267,7 +288,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +299,10 @@ public class CreateSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID, in the format: skill group name\@instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;

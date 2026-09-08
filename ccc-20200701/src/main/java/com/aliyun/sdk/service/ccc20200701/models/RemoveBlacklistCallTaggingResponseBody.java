@@ -93,7 +93,10 @@ public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +115,10 @@ public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,7 @@ public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>

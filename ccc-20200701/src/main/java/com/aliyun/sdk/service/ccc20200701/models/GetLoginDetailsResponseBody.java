@@ -119,7 +119,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Logon information data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1A4774A-F28B-5C40-AEF6-D88D2DD6C7E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -472,7 +484,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentServerUrl.
+             * <p>Agent data push server URL. After a successful connection, the server pushes agent status data to the agent Workbench.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh-wss-ccc.aliyuncs.com</p>
              */
             public Builder agentServerUrl(String agentServerUrl) {
                 this.agentServerUrl = agentServerUrl;
@@ -480,7 +495,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarUrl.
+             * <p>Agent profile picture URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://abc.com/sam.jpb">http://abc.com/sam.jpb</a></p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -488,7 +506,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatAppId.
+             * <p>Chat session application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7pjxxx</p>
              */
             public Builder chatAppId(String chatAppId) {
                 this.chatAppId = chatAppId;
@@ -496,7 +517,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatAppKey.
+             * <p>Chat session application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>955e4bd7xxxxxxxxxxxxxd7898ba9fa0d0</p>
              */
             public Builder chatAppKey(String chatAppKey) {
                 this.chatAppKey = chatAppKey;
@@ -504,7 +528,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatDeviceId.
+             * <p>Chat Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4c51c9116c36537cb850dc1081d745df</p>
              */
             public Builder chatDeviceId(String chatDeviceId) {
                 this.chatDeviceId = chatDeviceId;
@@ -512,7 +539,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatLoginToken.
+             * <p>Chat session logon token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;accessToken&quot;:&quot;oauth_cloud_key:4xxx0=&quot;,&quot;accessTokenExpiredTime&quot;:864xxxx,&quot;refreshToken&quot;:&quot;oauth_cloud_key:Paxxxx==&quot;}</p>
              */
             public Builder chatLoginToken(String chatLoginToken) {
                 this.chatLoginToken = chatLoginToken;
@@ -520,7 +550,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatServerUrl.
+             * <p>Chat session server URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wss://wss.im.dingtalk.cn</p>
              */
             public Builder chatServerUrl(String chatServerUrl) {
                 this.chatServerUrl = chatServerUrl;
@@ -528,7 +561,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatUserId.
+             * <p>Chat session Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A-8000100x</p>
              */
             public Builder chatUserId(String chatUserId) {
                 this.chatUserId = chatUserId;
@@ -536,7 +572,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceExt.
+             * <p>SIP device extension number. This field is required when using a SIP phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8033****</p>
              */
             public Builder deviceExt(String deviceExt) {
                 this.deviceExt = deviceExt;
@@ -544,7 +583,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>If the agent has registered an SIP phone, this parameter is the Device ID of the SIP phone device; otherwise, it is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yealink SIP-T23G 44.84.XX.XX</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -552,7 +594,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceState.
+             * <p>SIP device status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder deviceState(String deviceState) {
                 this.deviceState = deviceState;
@@ -560,7 +605,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -568,7 +616,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8001****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -576,7 +627,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Nickname.
+             * <p>Agent nickname</p>
+             * 
+             * <strong>example:</strong>
+             * <p>老王</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -584,7 +638,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>Signature information generated using an asymmetric key encryption algorithm. This information is required for authentication when registering with the SIP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zi31STIMtIfa/UN2l+6lww****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -592,7 +649,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Signature2.
+             * <p>Signature information generated using an asymmetric key encryption algorithm. This information is required for authentication when registering with the SIP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zi31STIMtIfa/UN2l+6lww****</p>
              */
             public Builder signature2(String signature2) {
                 this.signature2 = signature2;
@@ -600,7 +660,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SipServerUrl.
+             * <p>SIP registration server URL. The agent must register with the server as an SIP user to perform transactional processing (TP) operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh-sip-ccc.aliyuncs.com:443</p>
              */
             public Builder sipServerUrl(String sipServerUrl) {
                 this.sipServerUrl = sipServerUrl;
@@ -608,7 +671,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -616,7 +682,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UserKey.
+             * <p>Signature data used to generate signature information. Because this signature mechanism does not support Chinese characters, UserKey2 is currently used for signing instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席@aliyun:802001:1656406628862</p>
              */
             public Builder userKey(String userKey) {
                 this.userKey = userKey;
@@ -624,7 +693,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UserKey2.
+             * <p>Signature data used to generate signature information. UserKey2 was added because UserKey does not support Chinese characters in signatures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>802001:1656406628862&quot;</p>
              */
             public Builder userKey2(String userKey2) {
                 this.userKey2 = userKey2;
@@ -632,7 +704,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

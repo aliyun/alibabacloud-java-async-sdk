@@ -89,6 +89,7 @@ public class GetMonoRecordingRequest extends Request {
         } 
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class GetMonoRecordingRequest extends Request {
         }
 
         /**
-         * ExpireSeconds.
+         * <p>Expiration time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder expireSeconds(Long expireSeconds) {
             this.putQueryParameter("ExpireSeconds", expireSeconds);
@@ -110,6 +114,7 @@ public class GetMonoRecordingRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

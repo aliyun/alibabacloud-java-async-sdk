@@ -106,7 +106,10 @@ public class EnableSchemaPropertyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class EnableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class EnableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operation is not allowed. User state (READY) does not meet expectations (OFFLINE).</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class EnableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -138,7 +147,10 @@ public class EnableSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

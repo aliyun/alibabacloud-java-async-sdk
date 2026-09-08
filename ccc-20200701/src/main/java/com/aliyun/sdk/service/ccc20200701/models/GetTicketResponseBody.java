@@ -119,7 +119,10 @@ public class GetTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetTicketResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of incorrect parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF268B34-09C2-43FD-BAC4-5D31EA633111</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -524,7 +536,10 @@ public class GetTicketResponseBody extends TeaModel {
             } 
 
             /**
-             * Assignee.
+             * <p>The ID of the assignee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent1@ccc-test</p>
              */
             public Builder assignee(String assignee) {
                 this.assignee = assignee;
@@ -532,7 +547,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * AssigneeName.
+             * <p>The name of the assignee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席A</p>
              */
             public Builder assigneeName(String assigneeName) {
                 this.assigneeName = assigneeName;
@@ -540,7 +558,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The ticket category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8939-4223-86d0-6bd187905cc8</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -548,7 +569,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The name of the ticket category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>售后类目</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -556,7 +580,16 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CloseCode.
+             * <p>The reason for closing the ticket.</p>
+             * <ul>
+             * <li><p>Completed</p>
+             * </li>
+             * <li><p>Terminated</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder closeCode(String closeCode) {
                 this.closeCode = closeCode;
@@ -564,7 +597,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -572,7 +608,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Context.
+             * <p>The fields of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;productName&quot;:&quot;商品A&quot;}</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -580,7 +619,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the ticket was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620259200000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -588,7 +630,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>creator@ccc-test</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -596,7 +641,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席B</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -604,7 +652,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskId.
+             * <p>The ID of the current node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>912f0b78-6639-4a93-ae18-0d832885c27e</p>
              */
             public Builder currentTaskId(String currentTaskId) {
                 this.currentTaskId = currentTaskId;
@@ -612,7 +663,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskName.
+             * <p>The name of the current node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点1</p>
              */
             public Builder currentTaskName(String currentTaskName) {
                 this.currentTaskName = currentTaskName;
@@ -620,7 +674,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskStartTime.
+             * <p>The time when the current node started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1693793208075</p>
              */
             public Builder currentTaskStartTime(Long currentTaskStartTime) {
                 this.currentTaskStartTime = currentTaskStartTime;
@@ -628,7 +685,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerId.
+             * <p>The customer ID. This is the customer ID in the customer profile of Cloud Contact Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4223-86d0-6bd187905-891798749</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -636,7 +696,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the ticket processing was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687846259999</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -644,7 +707,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -652,7 +718,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-399383842187575296</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -660,7 +729,18 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the ticket.</p>
+             * <ul>
+             * <li><p>AUDIO: Voice service.</p>
+             * </li>
+             * <li><p>CHAT: Web service.</p>
+             * </li>
+             * <li><p>Console: Created in the ticket console.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Audio</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -668,7 +748,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the ticket processing started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620259200000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -676,7 +759,20 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The ticket status.</p>
+             * <ul>
+             * <li><p>Processing</p>
+             * </li>
+             * <li><p>Withdrawal</p>
+             * </li>
+             * <li><p>Rejected</p>
+             * </li>
+             * <li><p>Closed</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Processing</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -684,7 +780,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ticket template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test_43c2671b-8939-4223-86d0-6bd187905cc8_*****0666238</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -692,7 +791,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * <p>The version of the ticket template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -700,7 +802,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * TicketId.
+             * <p>The ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b3a6a131-359e-46bd-9bc5-1f5cb0ea093f</p>
              */
             public Builder ticketId(String ticketId) {
                 this.ticketId = ticketId;
@@ -708,7 +813,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The ticket title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>售后工单</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -716,7 +824,10 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time of the last update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1693793208075</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

@@ -106,7 +106,10 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,13 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return Result. The content varies depending on the analysis job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;订单号&quot;: &quot;1234&quot;,
+         *   &quot;商品名称&quot;: &quot;笔记本&quot;
+         * }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +131,10 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +142,10 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +153,10 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, which can be used for LogSearch of this API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F766284-F103-4298-8EC5-19F9F9BE5522</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -119,7 +119,10 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +276,10 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Whether the number is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -272,7 +287,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>City where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>乐山</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -280,7 +298,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830011****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -288,7 +309,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province of the phone number\&quot;s registration location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>四川</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -296,7 +320,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>Usage of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bidirection</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -376,7 +403,10 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * SkillGroupId.
+             * <p>The ID of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -384,7 +414,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -392,7 +425,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SkillLevel.
+             * <p>The skill level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder skillLevel(Integer skillLevel) {
                 this.skillLevel = skillLevel;
@@ -667,7 +703,10 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceExt.
+             * <p>SIP phone extension number. If the agent has registered a SIP phone, this parameter is the extension number of the SIP phone device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8033****</p>
              */
             public Builder deviceExt(String deviceExt) {
                 this.deviceExt = deviceExt;
@@ -675,7 +714,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -683,7 +725,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceState.
+             * <p>The status of the SIP phone device. If no SIP phone is registered, the status is UNREGISTERED (Unregistered). If a SIP phone is registered but offline, the status is OFFLINE (Offline). If a SIP phone is registered and online, the status is ONLINE (Online).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder deviceState(String deviceState) {
                 this.deviceState = deviceState;
@@ -691,7 +736,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayId.
+             * <p>The agent\&quot;s employee ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder displayId(String displayId) {
                 this.displayId = displayId;
@@ -699,7 +747,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -707,7 +758,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -715,7 +769,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The landline extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8031****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -723,7 +780,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>Agent logon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -731,7 +791,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1382114****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -739,7 +802,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PersonalOutboundNumberList.
+             * <p>List of personal outbound numbers for the agent.</p>
              */
             public Builder personalOutboundNumberList(java.util.List<PersonalOutboundNumberList> personalOutboundNumberList) {
                 this.personalOutboundNumberList = personalOutboundNumberList;
@@ -747,7 +810,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Primary.
+             * <p>Indicates whether the RAM account mapped to the agent is a RAM root account.</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -755,7 +818,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryAccount.
+             * <p>Indicates whether the RAM account mapped to the agent is a RAM primary account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已弃用，请使用Primary代替此参数。</p>
              */
             public Builder primaryAccount(Boolean primaryAccount) {
                 this.primaryAccount = primaryAccount;
@@ -763,7 +829,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RamId.
+             * <p>The UID of the Resource Access Management (RAM) user associated with the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21234502254620****</p>
              */
             public Builder ramId(Long ramId) {
                 this.ramId = ramId;
@@ -771,7 +840,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID, in the format: role\@instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin@ccc-test</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -779,7 +851,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -787,7 +862,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SkillLevelList.
+             * <p>The list of skill group levels associated with the agent.</p>
              */
             public Builder skillLevelList(java.util.List<SkillLevelList> skillLevelList) {
                 this.skillLevelList = skillLevelList;
@@ -795,7 +870,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -803,7 +881,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -896,7 +977,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>Agent list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -904,7 +985,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -912,7 +996,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -920,7 +1007,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

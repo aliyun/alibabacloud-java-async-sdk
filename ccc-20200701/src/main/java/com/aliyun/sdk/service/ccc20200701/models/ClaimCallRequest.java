@@ -131,7 +131,15 @@ public class ClaimCallRequest extends Request {
         } 
 
         /**
-         * CandidateUserListJson.
+         * <p>A JSON string that lists the agents and their corresponding skill groups eligible to claim the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         * {
+         * &quot;f0&quot;: &quot;zeren001@report-test-2&quot;,
+         * &quot;f1&quot;: &quot;desktop-voip-box@report-test-2&quot;
+         * }
+         * ]</p>
          */
         public Builder candidateUserListJson(String candidateUserListJson) {
             this.putQueryParameter("CandidateUserListJson", candidateUserListJson);
@@ -140,6 +148,7 @@ public class ClaimCallRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +161,7 @@ public class ClaimCallRequest extends Request {
         }
 
         /**
+         * <p>The ID of the call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +174,10 @@ public class ClaimCallRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>The ID of the skill group that the call is assigned to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_sg_****@ccc-test</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
@@ -173,7 +186,10 @@ public class ClaimCallRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>A unique business identifier for scheduling purposes. Subsequent event notifications include this identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tags</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -182,7 +198,10 @@ public class ClaimCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the agent claiming the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>invoker@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

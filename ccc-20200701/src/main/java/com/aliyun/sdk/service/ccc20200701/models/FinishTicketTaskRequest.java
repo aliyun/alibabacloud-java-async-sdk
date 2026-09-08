@@ -103,7 +103,11 @@ public class FinishTicketTaskRequest extends Request {
         } 
 
         /**
+         * <p>Processing comments.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -112,6 +116,7 @@ public class FinishTicketTaskRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +129,10 @@ public class FinishTicketTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b52a34dc-f514-4600-9c39-3cf657167c97</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -133,7 +141,10 @@ public class FinishTicketTaskRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>Ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2c6722b-cd13-442d-bf10-22a07c70d6d5</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

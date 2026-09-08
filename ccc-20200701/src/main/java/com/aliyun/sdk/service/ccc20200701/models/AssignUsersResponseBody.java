@@ -119,7 +119,10 @@ public class AssignUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class AssignUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data, which is the same as the workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca2b084-6f0a-454b-9851-29768a9a5832</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class AssignUsersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class AssignUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class AssignUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class AssignUsersResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca2b084-6f0a-454b-9851-29768a9a5832</p>
          */
         public Builder workflowId(String workflowId) {
             this.workflowId = workflowId;

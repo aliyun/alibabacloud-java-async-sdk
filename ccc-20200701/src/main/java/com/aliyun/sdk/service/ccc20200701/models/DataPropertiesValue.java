@@ -314,7 +314,10 @@ public class DataPropertiesValue extends TeaModel {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>姓名</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -322,7 +325,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -330,7 +336,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -338,7 +347,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -346,7 +358,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Pattern.
+         * <p>The regular expression that is used for validation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^</p>
          */
         public Builder pattern(String pattern) {
             this.pattern = pattern;
@@ -354,7 +369,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * PatternErrorMessage.
+         * <p>The error message that is returned if the value does not match the regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不是有效的email地址</p>
          */
         public Builder patternErrorMessage(String patternErrorMessage) {
             this.patternErrorMessage = patternErrorMessage;
@@ -362,7 +380,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * MinLength.
+         * <p>The minimum length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minLength(Integer minLength) {
             this.minLength = minLength;
@@ -370,7 +391,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * MaxLength.
+         * <p>The maximum length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxLength(Integer maxLength) {
             this.maxLength = maxLength;
@@ -378,7 +402,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Minimum.
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minimum(Double minimum) {
             this.minimum = minimum;
@@ -386,7 +413,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Maximum.
+         * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximum(Double maximum) {
             this.maximum = maximum;
@@ -394,7 +424,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Required.
+         * <p>Indicates whether the field is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder required(Boolean required) {
             this.required = required;
@@ -402,7 +435,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * System.
+         * <p>Indicates whether the field is a system field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder system(Boolean system) {
             this.system = system;
@@ -410,7 +446,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Disabled.
+         * <p>Indicates whether the field is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -418,7 +457,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Array.
+         * <p>Indicates whether the field is an array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder array(Boolean array) {
             this.array = array;
@@ -426,7 +468,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * ReadOnly.
+         * <p>Indicates whether the field is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;
@@ -434,7 +479,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * EditorType.
+         * <p>The type of the editor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>textbox</p>
          */
         public Builder editorType(String editorType) {
             this.editorType = editorType;
@@ -442,7 +490,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Attributes.
+         * <p>The extended properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder attributes(String attributes) {
             this.attributes = attributes;
@@ -450,7 +501,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * DisplayOrder.
+         * <p>The display order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder displayOrder(Integer displayOrder) {
             this.displayOrder = displayOrder;
@@ -458,7 +512,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The time when the field was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -466,7 +523,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * <p>The time when the field was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
          */
         public Builder updatedTime(Long updatedTime) {
             this.updatedTime = updatedTime;
@@ -474,7 +534,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>Creator</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tom</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;

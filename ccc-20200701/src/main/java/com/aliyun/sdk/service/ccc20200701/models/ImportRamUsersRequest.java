@@ -119,6 +119,7 @@ public class ImportRamUsersRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class ImportRamUsersRequest extends Request {
         }
 
         /**
+         * <p>List of RAM user IDs to add.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +145,7 @@ public class ImportRamUsersRequest extends Request {
         }
 
         /**
+         * <p>Role ID. This is the agent\&quot;s role in the instance after successful import. Roles include administrator, skill group leader, and agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +158,10 @@ public class ImportRamUsersRequest extends Request {
         }
 
         /**
-         * SkillLevelList.
+         * <p>Skill level list for the skill group. This is a JSON array string. Each array element is an object with two fields: skillGroupId and skillLevel. skillGroupId is the ID of the skill group the agent wants to associate with. skillLevel is the agent\&quot;s skill level in that skill group. The range is 1-10. A smaller value indicates stronger business capability and the ability to handle more calls per unit of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillGroupId&quot;:&quot;skillgroup@ccc-test&quot;,&quot;skillLevel&quot;:5}]</p>
          */
         public Builder skillLevelList(String skillLevelList) {
             this.putQueryParameter("SkillLevelList", skillLevelList);
@@ -164,6 +170,7 @@ public class ImportRamUsersRequest extends Request {
         }
 
         /**
+         * <p>Work mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

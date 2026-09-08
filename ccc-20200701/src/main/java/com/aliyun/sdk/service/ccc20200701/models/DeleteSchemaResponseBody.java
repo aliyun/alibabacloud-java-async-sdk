@@ -106,7 +106,10 @@ public class DeleteSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DeleteSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DeleteSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -138,7 +147,10 @@ public class DeleteSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>678F7002-CA01-4ABF-A112-585AFBDF3A3B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

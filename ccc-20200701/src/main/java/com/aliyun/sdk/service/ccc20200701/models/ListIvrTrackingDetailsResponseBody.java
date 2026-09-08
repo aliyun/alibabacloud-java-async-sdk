@@ -106,7 +106,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2RB671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -386,7 +398,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Callee.
+             * <p>Callee number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533128****</p>
              */
             public Builder callee(String callee) {
                 this.callee = callee;
@@ -394,7 +409,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1332315****</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -402,7 +420,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Voice channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65cp2c15-92ac-4e67-98b2-073a3c541c5d</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -410,7 +431,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelVariables.
+             * <p>Channel-associated data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A=B;C=D</p>
              */
             public Builder channelVariables(String channelVariables) {
                 this.channelVariables = channelVariables;
@@ -418,7 +442,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-10963442671187****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -426,7 +453,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EnterTime.
+             * <p>The time when the call entered this IVR edge zone, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621910542876</p>
              */
             public Builder enterTime(Long enterTime) {
                 this.enterTime = enterTime;
@@ -434,7 +464,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>Contact flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc99462-1058-47d0-a114-f145ea7444ff</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -442,7 +475,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>The name of the contact flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试IVR</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -450,7 +486,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Instance.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -458,7 +497,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * LeaveTime.
+             * <p>Time when leaving this IVR node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621910545105</p>
              */
             public Builder leaveTime(Long leaveTime) {
                 this.leaveTime = leaveTime;
@@ -466,7 +508,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeExitCode.
+             * <p>Status code of the edge zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder nodeExitCode(String nodeExitCode) {
                 this.nodeExitCode = nodeExitCode;
@@ -474,7 +519,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e0bc19a3</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -482,7 +530,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>Edge zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>放音</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -490,7 +541,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeProperties.
+             * <p>A collection of properties of the edge zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;say&quot;:&quot;您好。&quot;}</p>
              */
             public Builder nodeProperties(java.util.Map<String, ?> nodeProperties) {
                 this.nodeProperties = nodeProperties;
@@ -498,7 +552,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>File Type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLAY_SAY</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -506,7 +563,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeVariables.
+             * <p>Node variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;digits&quot;:&quot;2&quot;}</p>
              */
             public Builder nodeVariables(java.util.Map<String, ?> nodeVariables) {
                 this.nodeVariables = nodeVariables;
@@ -599,7 +659,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of IVR tracking details.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -607,7 +667,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -615,7 +678,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -623,7 +689,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

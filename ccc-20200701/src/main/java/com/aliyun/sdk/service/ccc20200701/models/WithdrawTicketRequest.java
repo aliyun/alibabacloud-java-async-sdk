@@ -90,7 +90,11 @@ public class WithdrawTicketRequest extends Request {
         } 
 
         /**
+         * <p>The comments.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>撤回，补充信息</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -99,6 +103,7 @@ public class WithdrawTicketRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +116,7 @@ public class WithdrawTicketRequest extends Request {
         }
 
         /**
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

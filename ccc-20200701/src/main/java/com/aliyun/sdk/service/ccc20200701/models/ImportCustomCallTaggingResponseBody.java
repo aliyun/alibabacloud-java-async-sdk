@@ -106,7 +106,10 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of inbound number tags that failed to be created.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
             } 
 
             /**
-             * Item.
+             * <p>The number of the inbound number tag that failed to be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312121****</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -212,7 +227,10 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason why the inbound number tag creation failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM_NUMBER_DUPLICATED</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

@@ -132,6 +132,7 @@ public class ListSkillLevelsOfUserRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,10 @@ public class ListSkillLevelsOfUserRequest extends Request {
         }
 
         /**
-         * IsMember.
+         * <p>Indicates whether to associate with the specified agent. If true, retrieves the skill levels of skill groups associated with the agent. If false, retrieves the list of skill groups that the agent can be associated with but is not currently associated with. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMember(Boolean isMember) {
             this.putQueryParameter("IsMember", isMember);
@@ -153,6 +157,7 @@ public class ListSkillLevelsOfUserRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +170,7 @@ public class ListSkillLevelsOfUserRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +183,10 @@ public class ListSkillLevelsOfUserRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Perform fuzzy matching based on skill group name or display name. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -186,7 +195,10 @@ public class ListSkillLevelsOfUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

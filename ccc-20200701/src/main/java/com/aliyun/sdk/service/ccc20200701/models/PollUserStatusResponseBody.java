@@ -119,7 +119,10 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -394,7 +406,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -402,7 +417,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelFlags.
+             * <p>Call channel flags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MONITORING</p>
              */
             public Builder channelFlags(String channelFlags) {
                 this.channelFlags = channelFlags;
@@ -410,7 +428,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -418,7 +439,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelState.
+             * <p>The status of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATED</p>
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
@@ -426,7 +450,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelVariables.
+             * <p>Channel-associated data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder channelVariables(String channelVariables) {
                 this.channelVariables = channelVariables;
@@ -434,7 +461,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>Callee of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -442,7 +472,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Auto-incremented system ID. Customers do not need to concern themselves with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -450,7 +483,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -458,7 +494,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>The calling party of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -466,7 +505,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party that initiated the hang-up of the call channel, indicating who first terminated the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -474,7 +516,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The hang-up reason for the call channel, indicating why the current call channel was disconnected. The value comes from the response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the hang-up reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404 - No destination</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -482,7 +527,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID associated with the channel. In inbound scenarios, the associated skill group ID is determined by the skill group configured in the IVR transfer-to-agent module. In outbound scenarios, the associated skill group ID is the first skill group the agent signed into.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -490,7 +538,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The UNIX timestamp indicating the most recent status change of the channel, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609138903315</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -498,7 +549,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>The extension number of the agent associated with the voice channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -506,7 +560,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID associated with the voice channel. This field is empty if the channel belongs to a customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -612,7 +669,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -620,7 +680,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CallVariables.
+             * <p>Ingest endpoint data. Custom data passed through SIP signaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a=b;c=d</p>
              */
             public Builder callVariables(String callVariables) {
                 this.callVariables = callVariables;
@@ -628,7 +691,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelContexts.
+             * <p>List of call channels.</p>
              */
             public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
@@ -636,7 +699,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -644,7 +710,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -776,7 +845,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Index.
+             * <p>System auto increment ID. Customers do not need to concern themselves with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -784,7 +856,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party that initiated the hang-up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -792,7 +867,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The hang-up reason for the call channel, indicating why the current call channel was terminated. The value is derived from the response codes defined in the SIP protocol. Customers should refer to the SIP protocol for analysis of the hang-up reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -800,7 +878,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a527a80a-75cf-448f-aba0-fca37c61946d</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -808,7 +889,21 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the agent in this session.</p>
+             * <p>Enumeration values:</p>
+             * <ul>
+             * <li><p>RINGING</p>
+             * </li>
+             * <li><p>TALKING</p>
+             * </li>
+             * <li><p>RELEASED (End)</p>
+             * </li>
+             * <li><p>MISSED (Missed)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RINGING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -816,7 +911,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -824,7 +922,17 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * <p>User type.</p>
+             * <p>Enumeration values:</p>
+             * <ul>
+             * <li><p>CUSTOMER: Customer</p>
+             * </li>
+             * <li><p>AGENT: Agent</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manager</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -930,7 +1038,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * CallVariables.
+             * <p>Ingest endpoint data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder callVariables(String callVariables) {
                 this.callVariables = callVariables;
@@ -938,7 +1049,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChatType.
+             * <p>Session type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INBOUND</p>
              */
             public Builder chatType(String chatType) {
                 this.chatType = chatType;
@@ -946,7 +1060,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -954,7 +1071,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-65382141036853491</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -962,7 +1082,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Members.
+             * <p>Information about the agents and customers participating in this chat session.</p>
              */
             public Builder members(java.util.List<Members> members) {
                 this.members = members;
@@ -1042,7 +1162,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * JobId.
+             * <p>Session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1050,7 +1173,21 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The agent\&quot;s status in this session.</p>
+             * <h3>Enumeration values:</h3>
+             * <ul>
+             * <li><p>RINGING</p>
+             * </li>
+             * <li><p>TALKING</p>
+             * </li>
+             * <li><p>RELEASED (End)</p>
+             * </li>
+             * <li><p>MISSED (Missed)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RINGING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1058,7 +1195,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the status changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1281,7 +1421,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code, which can be either System-defined or Customer-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent call rejection). There are no restrictions on Customer-defined status codes, and customers can define them according to their business needs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -1289,7 +1432,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -1297,7 +1443,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -1305,7 +1454,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Heartbeat.
+             * <p>The time when the last heartbeat was received from the agent, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder heartbeat(Long heartbeat) {
                 this.heartbeat = heartbeat;
@@ -1313,7 +1465,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1321,7 +1476,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1329,7 +1487,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1324730****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -1337,7 +1498,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -1345,7 +1509,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ParallelJobList.
+             * <p>Chat sessions currently being handled or already handled by the agent</p>
              */
             public Builder parallelJobList(java.util.List<ParallelJobList> parallelJobList) {
                 this.parallelJobList = parallelJobList;
@@ -1353,7 +1517,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * <p>The UNIX timestamp (in milliseconds) indicating when the agent was most recently reserved. Being reserved means an incoming call will soon be assigned to the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder reserved(Long reserved) {
                 this.reserved = reserved;
@@ -1361,7 +1528,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>List of skill group IDs that the agent has signed into.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -1369,7 +1536,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1377,7 +1547,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>Agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BREAK</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -1385,7 +1558,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -1478,7 +1654,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * CallContext.
+             * <p>Call context environment.</p>
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
@@ -1486,7 +1662,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChatContexts.
+             * <p>Session context environment.</p>
              */
             public Builder chatContexts(java.util.List<ChatContexts> chatContexts) {
                 this.chatContexts = chatContexts;
@@ -1494,7 +1670,10 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ContextId.
+             * <p>System auto increment ID. Customers do not need to concern themselves with this.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103655</p>
              */
             public Builder contextId(Long contextId) {
                 this.contextId = contextId;
@@ -1502,7 +1681,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>Agent context environment.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

@@ -117,7 +117,10 @@ public class MonitorCallRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -126,6 +129,7 @@ public class MonitorCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +142,7 @@ public class MonitorCallRequest extends Request {
         }
 
         /**
+         * <p>The ID of the agent being monitored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +155,10 @@ public class MonitorCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>The timeout period for the listening operation, in seconds. If the listening operation does not succeed within the specified time, it is canceled. Normally, the listening operation succeeds immediately. The timeout setting is provided to handle abnormal scenarios. This field is optional and defaults to 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -159,7 +167,10 @@ public class MonitorCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -106,7 +106,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -284,7 +296,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>The city where the phone number is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>乐山</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -292,7 +307,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -340,7 +358,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province where the phone number is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>四川</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -433,7 +454,7 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>A list of phone numbers.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -441,7 +462,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -449,7 +473,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -457,7 +484,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

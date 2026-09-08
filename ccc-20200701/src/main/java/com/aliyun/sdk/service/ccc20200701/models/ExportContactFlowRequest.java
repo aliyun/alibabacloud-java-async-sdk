@@ -89,6 +89,7 @@ public class ExportContactFlowRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the IVR contact flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class ExportContactFlowRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class ExportContactFlowRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF9834D8-6D09-4A1B-BADB-B019D9D444C8</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);

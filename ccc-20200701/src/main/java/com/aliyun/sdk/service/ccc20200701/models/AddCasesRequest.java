@@ -89,6 +89,7 @@ public class AddCasesRequest extends Request {
         } 
 
         /**
+         * <p>The predictive outbound call activity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class AddCasesRequest extends Request {
         }
 
         /**
-         * CaseList.
+         * <p>The list of outbound call cases.</p>
          */
         public Builder caseList(java.util.List<CaseList> caseList) {
             String caseListShrink = shrink(caseList, "CaseList", "json");
@@ -111,6 +112,7 @@ public class AddCasesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +223,10 @@ public class AddCasesRequest extends Request {
             } 
 
             /**
-             * Caller.
+             * <p>The caller number. If this field is specified, the corresponding contact will be called using this number instead of a randomly selected one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185022xxxx</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -229,7 +234,10 @@ public class AddCasesRequest extends Request {
             }
 
             /**
-             * CustomVariables.
+             * <p>Customer-defined custom variables in JSON object format. The object can contain up to 10 properties, and both the name and value of each property are defined by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;customer&quot;,&quot;客户标签&quot;:&quot;tag&quot;}</p>
              */
             public Builder customVariables(String customVariables) {
                 this.customVariables = customVariables;
@@ -237,7 +245,10 @@ public class AddCasesRequest extends Request {
             }
 
             /**
-             * MaskedCallee.
+             * <p>The desensitized callee number. If this field is not empty, it indicates that the callee number must be desensitized. The desensitization rule is defined by the customer, and only the desensitized callee number needs to be provided here. Using a desensitized callee number means that in certain scenarios, the displayed callee number will be the desensitized version, and the real callee number cannot be viewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>166******66</p>
              */
             public Builder maskedCallee(String maskedCallee) {
                 this.maskedCallee = maskedCallee;
@@ -245,7 +256,10 @@ public class AddCasesRequest extends Request {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The contact\&quot;s phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188888****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -253,7 +267,10 @@ public class AddCasesRequest extends Request {
             }
 
             /**
-             * ReferenceId.
+             * <p>The business ID, which is an identifier from the customer\&quot;s operational system used in integration scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;

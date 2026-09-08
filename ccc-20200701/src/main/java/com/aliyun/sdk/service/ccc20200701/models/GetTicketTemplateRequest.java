@@ -88,6 +88,7 @@ public class GetTicketTemplateRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetTicketTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ca2e2-c8d19b82c-d7ce393ac8197d3ab</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -109,7 +113,10 @@ public class GetTicketTemplateRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * <p>Template version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1703517780627</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

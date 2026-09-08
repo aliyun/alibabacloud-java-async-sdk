@@ -90,6 +90,7 @@ public class RemovePersonalNumbersFromUserRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class RemovePersonalNumbersFromUserRequest extends Request {
         }
 
         /**
+         * <p>List of personal outbound numbers to delete. You can obtain the current list of personal outbound numbers associated with the agent by invoking ListPersonalNumbersOfUser.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class RemovePersonalNumbersFromUserRequest extends Request {
         }
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -104,6 +104,7 @@ public class DeleteSchemaPropertyRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DeleteSchemaPropertyRequest extends Request {
         }
 
         /**
+         * <p>The field name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class DeleteSchemaPropertyRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -137,7 +142,7 @@ public class DeleteSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>schema id</p>
+         * <p>The schema ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +276,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>Registration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71b396fa-***********-bd80e070b7c0</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -272,7 +287,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -280,7 +298,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>闪信配置</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +309,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderId.
+             * <p>Flash SMS provider ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Uincall</p>
              */
             public Builder providerId(String providerId) {
                 this.providerId = providerId;
@@ -296,7 +320,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Configuration content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;user&quot;:&quot;600******_dev&quot;,&quot;pwd&quot;:&quot;85abf3****<strong><strong><strong>f494e&quot;,&quot;account&quot;:&quot;6004</strong></strong></strong>&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -389,7 +416,7 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of flash SMS configurations.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -397,7 +424,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -405,7 +435,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +446,10 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

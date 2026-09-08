@@ -135,6 +135,7 @@ public class SaveWebRTCStatsRequest extends Request {
         } 
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +148,11 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
+         * <p>General information.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[null,&quot;&quot;,&quot;&quot;,&quot;1647337928819&quot;,&quot;1647337888816&quot;,&quot;agent&quot;,null,&quot;上海&quot;,&quot;10.10.XX.XX&quot;,&quot;11.1.XX.XX&quot;,&quot;2002&quot;]</p>
          */
         public Builder generalInfo(String generalInfo) {
             this.putQueryParameter("GeneralInfo", generalInfo);
@@ -156,6 +161,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
+         * <p>The access point address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +174,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +187,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
+         * <p>The content of the receiver report.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +200,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
+         * <p>The content of the sender report.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

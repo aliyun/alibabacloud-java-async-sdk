@@ -93,7 +93,10 @@ public class AddFeedbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class AddFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +115,10 @@ public class AddFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class AddFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C81FD1A5-4B99-470A-A527-D80150228784</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

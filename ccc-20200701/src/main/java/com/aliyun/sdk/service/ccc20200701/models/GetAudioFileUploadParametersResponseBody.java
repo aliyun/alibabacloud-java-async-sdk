@@ -106,7 +106,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C81FD1A5-4B99-470A-A527-D80150228784</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +268,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>AccessKey ID used for signing.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -264,7 +279,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>Expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647313420</p>
              */
             public Builder expireTime(Integer expireTime) {
                 this.expireTime = expireTime;
@@ -272,7 +290,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>Key of the OSS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test/test-file.wav</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -280,7 +301,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>Endpoint domain name of OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -288,7 +312,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>Signature policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wNi0yOVQwMDoyOTowMC42NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiYXVkaW8vMTU3NzI0NzExNTQ5MDQwMS9seS1vbmxpbmUvMjAyMjA2MjkwNzI5MDAvIl1d****</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -296,7 +323,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>Signature information of the temporary credential for file upload, used to authenticate the upload request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HIyClras8IcVlbTV7RIJWJbU****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;

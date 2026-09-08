@@ -90,6 +90,7 @@ public class ClaimChatRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ClaimChatRequest extends Request {
         }
 
         /**
+         * <p>The ID of the call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ClaimChatRequest extends Request {
         }
 
         /**
+         * <p>Filter by skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

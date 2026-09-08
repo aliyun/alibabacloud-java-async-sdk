@@ -106,7 +106,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +294,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心的测试技能组。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -290,7 +305,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -298,7 +316,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -306,7 +327,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The media type. The default is AUDIO. Other options include CHAT and VIDEO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHAT</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -314,7 +338,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumberCount.
+             * <p>Quantity of phone numbers associated with the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder phoneNumberCount(Integer phoneNumberCount) {
                 this.phoneNumberCount = phoneNumberCount;
@@ -322,7 +349,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -330,7 +360,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>Name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -338,7 +371,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * <p>The number of agents associated with the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -431,7 +467,7 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of skill groups.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -439,7 +475,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -447,7 +486,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -455,7 +497,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

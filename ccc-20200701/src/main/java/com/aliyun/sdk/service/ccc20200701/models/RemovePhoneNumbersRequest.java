@@ -89,7 +89,10 @@ public class RemovePhoneNumbersRequest extends Request {
         } 
 
         /**
-         * Force.
+         * <p>Specifies whether to force the removal. If a number is associated with a skill group, contact flow, or agent, you must set this parameter to <code>true</code> to remove it. The default value is <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -98,6 +101,7 @@ public class RemovePhoneNumbersRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class RemovePhoneNumbersRequest extends Request {
         }
 
         /**
+         * <p>The list of numbers to remove.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

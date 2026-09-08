@@ -88,6 +88,7 @@ public class ChangeVisibilityRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Cloud Connect Center instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ChangeVisibilityRequest extends Request {
         }
 
         /**
-         * Invisible.
+         * <p>Specifies whether to set the agent\&quot;s status to invisible.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder invisible(Boolean invisible) {
             this.putQueryParameter("Invisible", invisible);
@@ -109,7 +113,10 @@ public class ChangeVisibilityRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sam@szpczf</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -117,7 +117,10 @@ public class MuteCallRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * <p>The ID of the voice channel to be muted. This parameter is optional and defaults to empty. If it is empty, the voice channel of the agent corresponding to UserId will be muted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch:user:1318888****-&gt;8001****:1609253204816:job-6581536084722****</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -126,7 +129,10 @@ public class MuteCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -135,6 +141,7 @@ public class MuteCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class MuteCallRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class MuteCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID to be muted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

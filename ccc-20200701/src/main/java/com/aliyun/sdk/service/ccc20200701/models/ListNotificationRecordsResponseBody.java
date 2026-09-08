@@ -119,7 +119,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of invalid parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0630E5DF-CEB0-445B-8626-D5C7481181C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +263,22 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The notification content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;agentId&quot;: &quot;agent@ccc-test&quot;,
+             *     &quot;callType&quot;: &quot;OUTBOUND&quot;,
+             *     &quot;callee&quot;: &quot;13<strong><strong>00&quot;,
+             *     &quot;caller&quot;: &quot;05</strong></strong>81&quot;,
+             *     &quot;channelId&quot;: &quot;ch-user-13<strong><strong>00-05</strong></strong>81-1772619731285-job-<em><strong><strong>&quot;,
+             *     &quot;contactId&quot;: &quot;job-</strong></strong></em>&quot;,
+             *     &quot;eventTime&quot;: &quot;2026-03-04T10:22:11.309Z&quot;,
+             *     &quot;eventType&quot;: &quot;Dialing&quot;,
+             *     &quot;instanceId&quot;: &quot;ccc-test&quot;,
+             *     &quot;mediaType&quot;: &quot;AUDIO&quot;,
+             *     &quot;skillGroupId&quot;: &quot;skill@ccc-test&quot;
+             * }</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -259,7 +286,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -267,7 +297,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationKey.
+             * <p>The notification key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-468a63a2-<strong><strong>-</strong></strong>-****-b1ecf726d4be</p>
              */
             public Builder notificationKey(String notificationKey) {
                 this.notificationKey = notificationKey;
@@ -275,7 +308,10 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationType.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dialing</p>
              */
             public Builder notificationType(String notificationType) {
                 this.notificationType = notificationType;

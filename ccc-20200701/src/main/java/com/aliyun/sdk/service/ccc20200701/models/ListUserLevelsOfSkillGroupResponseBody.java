@@ -106,7 +106,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -295,7 +307,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>Agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -303,7 +318,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>Agent logon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -311,7 +329,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RamId.
+             * <p>The user\&quot;s Resource Access Management (RAM) account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28036411123456****</p>
              */
             public Builder ramId(String ramId) {
                 this.ramId = ramId;
@@ -319,7 +340,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Role ID, in the format: role\@instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin@ccc-test</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -327,7 +351,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -335,7 +362,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -343,7 +373,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>Skill group Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -351,7 +384,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkillLevel.
+             * <p>Agent skill Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder skillLevel(Integer skillLevel) {
                 this.skillLevel = skillLevel;
@@ -359,7 +395,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -452,7 +491,7 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of skill levels.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -460,7 +499,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -468,7 +510,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +521,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

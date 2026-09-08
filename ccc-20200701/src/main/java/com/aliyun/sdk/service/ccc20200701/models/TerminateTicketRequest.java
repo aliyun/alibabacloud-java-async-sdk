@@ -88,7 +88,10 @@ public class TerminateTicketRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>Resolution comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>关单</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -97,6 +100,7 @@ public class TerminateTicketRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class TerminateTicketRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

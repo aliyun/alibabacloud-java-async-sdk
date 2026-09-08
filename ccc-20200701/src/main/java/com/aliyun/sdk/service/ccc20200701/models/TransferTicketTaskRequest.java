@@ -117,6 +117,7 @@ public class TransferTicketTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the assignee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class TransferTicketTaskRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>Comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请assignee处理</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -138,6 +142,7 @@ public class TransferTicketTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +155,10 @@ public class TransferTicketTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f780ade8-3ca9-458b-b067-63077946a570</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -159,7 +167,10 @@ public class TransferTicketTaskRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

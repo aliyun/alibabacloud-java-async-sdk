@@ -103,7 +103,10 @@ public class SwitchToConferenceRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>Invalid field. You can enter any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -112,6 +115,7 @@ public class SwitchToConferenceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class SwitchToConferenceRequest extends Request {
         }
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class SwitchToConferenceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. If not specified, the agent mapped to the current Resource Access Management (RAM) user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

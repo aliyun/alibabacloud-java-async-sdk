@@ -106,7 +106,10 @@ public class ListTicketsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -503,7 +515,10 @@ public class ListTicketsResponseBody extends TeaModel {
             } 
 
             /**
-             * Assignee.
+             * <p>Assignee ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assignee@ccc-test</p>
              */
             public Builder assignee(String assignee) {
                 this.assignee = assignee;
@@ -511,7 +526,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssigneeName.
+             * <p>Assignee name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Assignee</p>
              */
             public Builder assigneeName(String assigneeName) {
                 this.assigneeName = assigneeName;
@@ -519,7 +537,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>Ticket category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43c2671b-*****-4223-86d0-6bd187905cc8</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -527,7 +548,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>Ticket category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>类目1</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -535,7 +559,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CloseCode.
+             * <p>Ticket close reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder closeCode(String closeCode) {
                 this.closeCode = closeCode;
@@ -543,7 +570,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>Comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -551,7 +581,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Context.
+             * <p>Ticket form information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;productName&quot;:&quot;alynx&quot;}</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -559,7 +592,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -567,7 +603,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>creator@ccc-test</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -575,7 +614,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>Creator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creator</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -583,7 +625,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskId.
+             * <p>Current node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0707dab6-34a8-11ef-9823-161e3802b2d4</p>
              */
             public Builder currentTaskId(String currentTaskId) {
                 this.currentTaskId = currentTaskId;
@@ -591,7 +636,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskName.
+             * <p>Current node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点1</p>
              */
             public Builder currentTaskName(String currentTaskName) {
                 this.currentTaskName = currentTaskName;
@@ -599,7 +647,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentTaskStartTime.
+             * <p>Current node start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder currentTaskStartTime(Long currentTaskStartTime) {
                 this.currentTaskStartTime = currentTaskStartTime;
@@ -607,7 +658,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerId.
+             * <p>Customer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51e155ce-*****1-b402-13c69597b920</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -615,7 +669,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>Ticket end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -623,7 +680,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -631,7 +691,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-47150***150396416</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -639,7 +702,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>Ticket source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHAT</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -647,7 +713,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Ticket start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -655,7 +724,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>State.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Processing</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -663,7 +735,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c844a5f0-496c-4c5b-8a0c-dd27686e8ff6</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -671,7 +746,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * <p>Template version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -679,7 +757,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * TicketId.
+             * <p>Ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feb83abd-9f08-49d2-9b56-41d1b66ca0ac</p>
              */
             public Builder ticketId(String ticketId) {
                 this.ticketId = ticketId;
@@ -687,7 +768,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>Ticket title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标题</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -695,7 +779,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -788,7 +875,7 @@ public class ListTicketsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>Tickets list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -796,7 +883,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Paging ordinal number. Range: 1-100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -804,7 +894,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Paging size. Range: 1-100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -812,7 +905,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

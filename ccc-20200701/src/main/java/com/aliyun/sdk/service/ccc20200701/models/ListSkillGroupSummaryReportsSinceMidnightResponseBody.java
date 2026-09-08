@@ -119,7 +119,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
-         * PagedSkillGroupSummaryReport.
+         * <p>The returned data.</p>
          */
         public Builder pagedSkillGroupSummaryReport(PagedSkillGroupSummaryReport pagedSkillGroupSummaryReport) {
             this.pagedSkillGroupSummaryReport = pagedSkillGroupSummaryReport;
@@ -151,7 +160,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B36CEBC-6D11-5451-9E6B-C6D1927841C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -680,7 +695,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             } 
 
             /**
-             * AbandonedInQueueOfQueueCount.
+             * <p>The number of calls abandoned while waiting in the skill group queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder abandonedInQueueOfQueueCount(Long abandonedInQueueOfQueueCount) {
                 this.abandonedInQueueOfQueueCount = abandonedInQueueOfQueueCount;
@@ -688,7 +706,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AnsweredByAgentOfQueueCount.
+             * <p>The number of calls routed to the skill group and answered by an agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder answeredByAgentOfQueueCount(Long answeredByAgentOfQueueCount) {
                 this.answeredByAgentOfQueueCount = answeredByAgentOfQueueCount;
@@ -696,7 +717,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AnsweredByAgentOfQueueMaxWaitTimeDuration.
+             * <p>The maximum queue wait time for a call answered by an agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder answeredByAgentOfQueueMaxWaitTimeDuration(Long answeredByAgentOfQueueMaxWaitTimeDuration) {
                 this.answeredByAgentOfQueueMaxWaitTimeDuration = answeredByAgentOfQueueMaxWaitTimeDuration;
@@ -704,7 +728,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AnsweredByAgentOfQueueWaitTimeDuration.
+             * <p>The total queue wait time for calls answered by an agent, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder answeredByAgentOfQueueWaitTimeDuration(Long answeredByAgentOfQueueWaitTimeDuration) {
                 this.answeredByAgentOfQueueWaitTimeDuration = answeredByAgentOfQueueWaitTimeDuration;
@@ -712,7 +739,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageRingTime.
+             * <p>The average ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageRingTime(Long averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -720,7 +750,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageTalkTime.
+             * <p>The average talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -728,7 +761,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageWorkTime.
+             * <p>The average after-call work time, in seconds (<code>TotalWorkTime</code> / <code>CallsHandled</code>).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Long averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -744,7 +780,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsAttendedTransferOut.
+             * <p>The number of attended transfers initiated. If a call is transferred multiple times, each transfer is counted separately.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAttendedTransferOut(Long callsAttendedTransferOut) {
                 this.callsAttendedTransferOut = callsAttendedTransferOut;
@@ -752,7 +791,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsBlindTransferOut.
+             * <p>The number of blind transfers initiated. If a call is transferred multiple times, each transfer is counted separately.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsBlindTransferOut(Long callsBlindTransferOut) {
                 this.callsBlindTransferOut = callsBlindTransferOut;
@@ -760,7 +802,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsHandled.
+             * <p>The number of handled inbound calls. Each call is counted once per queue entry, regardless of how many agents answer it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -768,7 +813,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsOffered.
+             * <p>The number of calls offered to the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -816,7 +864,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsServiceLevel10.
+             * <p>The number of calls answered by an agent within 10 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsServiceLevel10(Long callsServiceLevel10) {
                 this.callsServiceLevel10 = callsServiceLevel10;
@@ -824,7 +875,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsServiceLevel20.
+             * <p>The number of calls answered by an agent within 20 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsServiceLevel20(Long callsServiceLevel20) {
                 this.callsServiceLevel20 = callsServiceLevel20;
@@ -832,7 +886,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsServiceLevel30.
+             * <p>The number of calls answered by an agent within 30 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsServiceLevel30(Long callsServiceLevel30) {
                 this.callsServiceLevel30 = callsServiceLevel30;
@@ -848,7 +905,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * GiveUpByAgentOfQueueCount.
+             * <p>The number of calls that were abandoned while an agent in the skill group was being alerted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder giveUpByAgentOfQueueCount(Long giveUpByAgentOfQueueCount) {
                 this.giveUpByAgentOfQueueCount = giveUpByAgentOfQueueCount;
@@ -856,7 +916,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * HandleRate.
+             * <p>The handle rate (<code>CallsHandled</code> / <code>CallsOffered</code>). The value can exceed 100% because the handle and offer events might occur in different time windows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder handleRate(Float handleRate) {
                 this.handleRate = handleRate;
@@ -864,7 +927,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * InComingQueueOfQueueCount.
+             * <p>The number of calls that entered the skill group queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inComingQueueOfQueueCount(Long inComingQueueOfQueueCount) {
                 this.inComingQueueOfQueueCount = inComingQueueOfQueueCount;
@@ -872,7 +938,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxRingTime.
+             * <p>The maximum ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -880,7 +949,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(String maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -888,7 +960,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxWorkTime.
+             * <p>The maximum after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -896,7 +971,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * OverFlowInQueueOfQueueCount.
+             * <p>The number of calls that overflowed from the skill group queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder overFlowInQueueOfQueueCount(Long overFlowInQueueOfQueueCount) {
                 this.overFlowInQueueOfQueueCount = overFlowInQueueOfQueueCount;
@@ -904,7 +982,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * QueueMaxWaitTimeDuration.
+             * <p>The maximum queue wait time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queueMaxWaitTimeDuration(Long queueMaxWaitTimeDuration) {
                 this.queueMaxWaitTimeDuration = queueMaxWaitTimeDuration;
@@ -912,7 +993,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * QueueWaitTimeDuration.
+             * <p>The queue wait time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queueWaitTimeDuration(Long queueWaitTimeDuration) {
                 this.queueWaitTimeDuration = queueWaitTimeDuration;
@@ -920,7 +1004,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>The satisfaction index, calculated as the average of single-digit keypad inputs from satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -928,7 +1015,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>The number of satisfaction surveys offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -936,7 +1026,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>The number of satisfaction surveys responded to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -944,7 +1037,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * ServiceLevel20.
+             * <p>The percentage of calls answered within 20 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceLevel20(Float serviceLevel20) {
                 this.serviceLevel20 = serviceLevel20;
@@ -952,7 +1048,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalRingTime.
+             * <p>The total ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -960,7 +1059,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalTalkTime.
+             * <p>The total talk time for inbound calls, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -968,7 +1070,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalWorkTime.
+             * <p>The total after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -1360,7 +1465,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             } 
 
             /**
-             * AnswerRate.
+             * <p>The answer rate, expressed as a percentage (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder answerRate(Float answerRate) {
                 this.answerRate = answerRate;
@@ -1368,7 +1476,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageDialingTime.
+             * <p>The average dialing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageDialingTime(Long averageDialingTime) {
                 this.averageDialingTime = averageDialingTime;
@@ -1376,7 +1487,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageTalkTime.
+             * <p>The average talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1384,7 +1498,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageWorkTime.
+             * <p>The average after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Long averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1408,7 +1525,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsAnswered.
+             * <p>The number of answered outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -1416,7 +1536,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsDialed.
+             * <p>The number of outbound calls dialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -1424,7 +1547,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsOffered.
+             * <p>The number of calls offered to the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -1480,7 +1606,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * CallsServiceLevel30.
+             * <p>The number of calls answered by an agent within 30 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsServiceLevel30(String callsServiceLevel30) {
                 this.callsServiceLevel30 = callsServiceLevel30;
@@ -1496,7 +1625,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxDialingTime.
+             * <p>The maximum dialing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxDialingTime(Long maxDialingTime) {
                 this.maxDialingTime = maxDialingTime;
@@ -1504,7 +1636,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1512,7 +1647,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxWorkTime.
+             * <p>The maximum after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -1520,7 +1658,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>The satisfaction index, calculated as the average of single-digit keypad inputs from satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -1528,7 +1669,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>The number of satisfaction surveys offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -1536,7 +1680,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>The number of satisfaction surveys responded to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -1544,7 +1691,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalDialingTime.
+             * <p>The total dialing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDialingTime(Long totalDialingTime) {
                 this.totalDialingTime = totalDialingTime;
@@ -1552,7 +1702,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalTalkTime.
+             * <p>The total talk time for outbound calls, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1568,7 +1721,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalWorkTime.
+             * <p>The total after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -1817,7 +1973,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             } 
 
             /**
-             * AverageReadyTime.
+             * <p>The average ready time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageReadyTime(Long averageReadyTime) {
                 this.averageReadyTime = averageReadyTime;
@@ -1825,7 +1984,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageTalkTime.
+             * <p>The average talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1833,7 +1995,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * AverageWorkTime.
+             * <p>The average after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Long averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1841,7 +2006,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxReadyTime.
+             * <p>The maximum ready time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxReadyTime(Long maxReadyTime) {
                 this.maxReadyTime = maxReadyTime;
@@ -1849,7 +2017,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1857,7 +2028,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * MaxWorkTime.
+             * <p>The maximum after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -1865,7 +2039,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * OccupancyRate.
+             * <p>The agent occupancy rate, expressed as a percentage (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder occupancyRate(Float occupancyRate) {
                 this.occupancyRate = occupancyRate;
@@ -1873,7 +2050,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>The satisfaction index, calculated as the average of single-digit keypad inputs from satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -1881,7 +2061,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>The number of satisfaction surveys offered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -1889,7 +2072,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>The number of satisfaction surveys responded to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -1897,7 +2083,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalBreakTime.
+             * <p>The total break time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBreakTime(Long totalBreakTime) {
                 this.totalBreakTime = totalBreakTime;
@@ -1905,7 +2094,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalCalls.
+             * <p>The total number of calls (<code>CallsOffered</code> + <code>CallsDialed</code>).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;
@@ -1913,7 +2105,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalLoggedInTime.
+             * <p>The total logged-in time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalLoggedInTime(Long totalLoggedInTime) {
                 this.totalLoggedInTime = totalLoggedInTime;
@@ -1921,7 +2116,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalReadyTime.
+             * <p>The total ready time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalReadyTime(Long totalReadyTime) {
                 this.totalReadyTime = totalReadyTime;
@@ -1929,7 +2127,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalTalkTime.
+             * <p>The total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1937,7 +2138,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalWorkTime.
+             * <p>The total after-call work time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -2069,7 +2273,7 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             } 
 
             /**
-             * Inbound.
+             * <p>Inbound call metrics.</p>
              */
             public Builder inbound(Inbound inbound) {
                 this.inbound = inbound;
@@ -2077,7 +2281,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2085,7 +2292,7 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * Outbound.
+             * <p>Outbound call metrics.</p>
              */
             public Builder outbound(Outbound outbound) {
                 this.outbound = outbound;
@@ -2093,7 +2300,7 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * Overall.
+             * <p>Overall metrics.</p>
              */
             public Builder overall(Overall overall) {
                 this.overall = overall;
@@ -2101,7 +2308,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -2109,7 +2319,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * SkillGroupName.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -2117,7 +2330,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp when the metrics were collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-13 00:00:00</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -2210,7 +2426,7 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             } 
 
             /**
-             * List.
+             * <p>A list of skill group summary reports.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -2218,7 +2434,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. The valid range is 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -2226,7 +2445,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. The valid range is 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -2234,7 +2456,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -75,6 +75,7 @@ public class GetCaseFileUploadUrlRequest extends Request {
         } 
 
         /**
+         * <p>The file name of the predictive outbound calling Activity list. The name must consist of uppercase and lowercase English letters, and the file format must be CSV.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetCaseFileUploadUrlRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

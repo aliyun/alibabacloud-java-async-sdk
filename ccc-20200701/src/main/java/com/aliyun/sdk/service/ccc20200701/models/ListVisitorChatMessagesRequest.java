@@ -171,7 +171,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         } 
 
         /**
-         * AccessChannelId.
+         * <p>Web business channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf584733-<em><strong>-</strong></em>-9699-cb77aa3b7aa6</p>
          */
         public Builder accessChannelId(String accessChannelId) {
             this.putQueryParameter("AccessChannelId", accessChannelId);
@@ -180,7 +183,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * <p>Web business channel token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9XYGTGWtq2wXzVikKuip_zeVGl6O4VJ-l-<em>-</em>-JPofhap4P7fAevuE=</p>
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("AccessToken", accessToken);
@@ -189,7 +195,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650316799000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -198,7 +207,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Cloud Contact Center instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +219,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>Token for the next page. Do not include this parameter in your first request. The service returns it in the response. Include it in subsequent requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1737193352340::7463707254.EAUNIT</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -216,7 +231,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +243,13 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>Sorting order. Default is descending.</p>
+         * <p>Valid values:</p>
+         * <p>ASC: ascending.</p>
+         * <p>DESC: descending.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -234,7 +258,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647325450000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -243,7 +270,10 @@ public class ListVisitorChatMessagesRequest extends Request {
         }
 
         /**
-         * VisitorId.
+         * <p>Visitor ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fcd020fe-****-1a272a174a7d</p>
          */
         public Builder visitorId(String visitorId) {
             this.putQueryParameter("VisitorId", visitorId);

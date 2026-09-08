@@ -146,6 +146,7 @@ public class ListContactFlowsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,10 @@ public class ListContactFlowsRequest extends Request {
         }
 
         /**
-         * OrderByField.
+         * <p>The field by which to sort the results. Default value: updatedTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updatedTime</p>
          */
         public Builder orderByField(String orderByField) {
             this.putQueryParameter("OrderByField", orderByField);
@@ -167,6 +171,7 @@ public class ListContactFlowsRequest extends Request {
         }
 
         /**
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +184,7 @@ public class ListContactFlowsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +197,7 @@ public class ListContactFlowsRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>A keyword to search for in the names or descriptions of IVR flows.</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -200,7 +206,16 @@ public class ListContactFlowsRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><code>ASC</code>: The results are sorted in ascending order.</p>
+         * </li>
+         * <li><p><code>DESC</code>: The results are sorted in descending order. This is the default value.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -209,7 +224,10 @@ public class ListContactFlowsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Specifies the type of IVR flow to list. If you omit this parameter, IVR flows of all types are listed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN_FLOW</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

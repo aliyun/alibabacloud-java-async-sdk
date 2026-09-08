@@ -106,7 +106,10 @@ public class AddSchemaPropertyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class AddSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class AddSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class AddSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -138,7 +147,10 @@ public class AddSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF268B34-09C2-43FD-BAC4-5D31EA633111</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

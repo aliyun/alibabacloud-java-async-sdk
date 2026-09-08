@@ -90,6 +90,7 @@ public class AddPersonalNumbersToUserRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class AddPersonalNumbersToUserRequest extends Request {
         }
 
         /**
+         * <p>List of numbers to be added. The numbers must be attachable to the agent corresponding to UserId. If you are unsure which numbers the agent can attach, refer to the ListPersonalNumbersOfUser API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class AddPersonalNumbersToUserRequest extends Request {
         }
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

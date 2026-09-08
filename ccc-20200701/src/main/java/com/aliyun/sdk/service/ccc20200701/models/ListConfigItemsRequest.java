@@ -90,6 +90,7 @@ public class ListConfigItemsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ListConfigItemsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the object to which the config item applies. This can be the ID of an Alibaba Cloud account, an instance, a skill group, or an agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ListConfigItemsRequest extends Request {
         }
 
         /**
+         * <p>The type of the object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

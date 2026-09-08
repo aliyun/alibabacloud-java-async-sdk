@@ -75,6 +75,7 @@ public class GetEarlyMediaRecordingRequest extends Request {
         } 
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetEarlyMediaRecordingRequest extends Request {
         }
 
         /**
+         * <p>Cloud Contact Center instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -121,9 +121,6 @@ public class ListLegacyAppraiseLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1620273600000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -133,9 +130,6 @@ public class ListLegacyAppraiseLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,9 +139,6 @@ public class ListLegacyAppraiseLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,9 +148,6 @@ public class ListLegacyAppraiseLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,9 +157,6 @@ public class ListLegacyAppraiseLogsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1604638129000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

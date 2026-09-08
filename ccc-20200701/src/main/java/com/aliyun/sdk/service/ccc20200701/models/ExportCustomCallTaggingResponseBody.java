@@ -106,7 +106,10 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data. The download link to the OSS object containing the export result. The link has a validity period of 24 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/tagging.xlsx">http://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/tagging.xlsx</a> ?Expires=1610910578&amp;OSSAccessKeyId=<strong><strong>&amp;Signature=</strong></strong></p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

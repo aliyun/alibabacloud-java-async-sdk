@@ -106,7 +106,10 @@ public class CreateTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data, ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d26b90a-c5d2-4b09-8219-60cda1******</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A450574A-337F-43E2-BC59-9C6594C994C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

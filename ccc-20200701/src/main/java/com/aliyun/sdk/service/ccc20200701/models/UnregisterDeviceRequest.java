@@ -74,6 +74,7 @@ public class UnregisterDeviceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class UnregisterDeviceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

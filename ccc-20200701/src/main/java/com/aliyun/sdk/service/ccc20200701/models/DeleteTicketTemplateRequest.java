@@ -73,7 +73,10 @@ public class DeleteTicketTemplateRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef1e71e9-ae9d-487c-96ad-9181d85cf802</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class DeleteTicketTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the ticket template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>43c2671b-8939-4223-</strong>*-6bd187905cc8_1717664210492</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

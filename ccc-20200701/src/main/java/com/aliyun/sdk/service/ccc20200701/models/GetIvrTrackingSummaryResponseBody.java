@@ -106,7 +106,10 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error code \&quot;NoPermission.Recording\&quot;. Reason: null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

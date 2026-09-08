@@ -106,7 +106,10 @@ public class ModifyAudioFileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class ModifyAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class ModifyAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class ModifyAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class ModifyAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2F84AAC-7C79-547F-8EE9-7B735F42B93F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

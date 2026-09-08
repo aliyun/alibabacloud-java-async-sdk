@@ -134,6 +134,7 @@ public class ListUserLevelsOfSkillGroupRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ListUserLevelsOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether to associate with the specified skill group. If the value is true, the operation retrieves the skill level list of agents associated with the skill group ID. If the value is false, the operation retrieves the list of agents that can be associated with but are not currently associated with the skill group ID. The default value is true.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListUserLevelsOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,7 @@ public class ListUserLevelsOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +186,10 @@ public class ListUserLevelsOfSkillGroupRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Perform fuzzy matching based on agent logon name or agent display name. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试坐席</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -191,6 +198,7 @@ public class ListUserLevelsOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

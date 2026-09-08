@@ -74,6 +74,7 @@ public class GetUploadAudioDataParamsRequest extends Request {
         } 
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetUploadAudioDataParamsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Cloud Contact Center instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

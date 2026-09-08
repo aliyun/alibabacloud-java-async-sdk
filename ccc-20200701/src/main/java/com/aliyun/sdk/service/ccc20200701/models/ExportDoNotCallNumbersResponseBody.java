@@ -119,7 +119,10 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The OSS download link for the exported file. The link is valid for 24 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong><strong>.oss-cn-shanghai.aliyuncs.com/ccc-test/blacklist.xlsx?Expires=3294624578&amp;OSSAccessKeyId=</strong></strong>&amp;Signature=****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,10 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

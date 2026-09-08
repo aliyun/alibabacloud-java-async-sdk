@@ -90,7 +90,10 @@ public class DeleteSkillGroupRequest extends Request {
         } 
 
         /**
-         * Force.
+         * <p>Whether to force delete. If the skill group is associated with a number or agent, you must enable the force delete flag to successfully delete it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -99,6 +102,7 @@ public class DeleteSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +115,7 @@ public class DeleteSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

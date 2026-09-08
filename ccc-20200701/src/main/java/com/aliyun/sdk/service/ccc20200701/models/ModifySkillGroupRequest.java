@@ -104,7 +104,10 @@ public class ModifySkillGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Description of the skill group. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的新测试技能组。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -113,7 +116,10 @@ public class ModifySkillGroupRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>Display name of the skill group, which must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新测试技能组</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -122,6 +128,7 @@ public class ModifySkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +141,7 @@ public class ModifySkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -73,7 +73,10 @@ public class ListFeedbacksRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the CCC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class ListFeedbacksRequest extends Request {
         }
 
         /**
-         * TaskIdList.
+         * <p>A list of task IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;20251216-8B9B7B02-16FE-54BE-942A-F59DE0656032&quot;]</p>
          */
         public Builder taskIdList(String taskIdList) {
             this.putQueryParameter("TaskIdList", taskIdList);

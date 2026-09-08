@@ -119,7 +119,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of invalid parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +250,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             } 
 
             /**
-             * Disabled.
+             * <p>Indicates whether the push is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -246,7 +261,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dialing</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +272,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>The event topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -399,7 +420,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessPoint.
+             * <p>The endpoint for MQ. The service endpoint for webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-****.cn-shanghai.rmq.aliyuncs.com:8080</p>
              */
             public Builder accessPoint(String accessPoint) {
                 this.accessPoint = accessPoint;
@@ -407,7 +431,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * EventList.
+             * <p>The event checklist.</p>
              */
             public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
@@ -415,7 +439,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -423,7 +450,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * MqInstanceId.
+             * <p>The MQ instance ID. Specify this only when MqType is rocketmq4 or rocketmq5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-****</p>
              */
             public Builder mqInstanceId(String mqInstanceId) {
                 this.mqInstanceId = mqInstanceId;
@@ -431,7 +461,18 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * MqType.
+             * <p>The message push type.</p>
+             * <ul>
+             * <li><p>rocketmq4</p>
+             * </li>
+             * <li><p>rocketmq5</p>
+             * </li>
+             * <li><p>webhook</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rocketmq5</p>
              */
             public Builder mqType(String mqType) {
                 this.mqType = mqType;
@@ -439,7 +480,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * ProducerId.
+             * <p>For MQ, enter the Group ID. For webhook, enter PID_Webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_xxx</p>
              */
             public Builder producerId(String producerId) {
                 this.producerId = producerId;
@@ -447,7 +491,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>For MQ, enter the topic name. For webhook, enter Topic_Webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-event</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -455,7 +502,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The MQ username. Specify this only when MqType is rocketmq5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder username(String username) {
                 this.username = username;

@@ -106,7 +106,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -321,7 +333,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentIds.
+             * <p>List of agent IDs. Multiple values are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentIds(String agentIds) {
                 this.agentIds = agentIds;
@@ -329,7 +344,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CallDuration.
+             * <p>Call duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder callDuration(String callDuration) {
                 this.callDuration = callDuration;
@@ -337,7 +355,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>Called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1332315****</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -345,7 +366,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>Calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533128****</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -353,7 +377,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactDisposition.
+             * <p>The reason the call ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder contactDisposition(String contactDisposition) {
                 this.contactDisposition = contactDisposition;
@@ -361,7 +388,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-7660472242845****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -369,7 +399,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Outbound</p>
              */
             public Builder contactType(String contactType) {
                 this.contactType = contactType;
@@ -377,7 +410,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Call duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -385,7 +421,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -393,7 +432,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupIds.
+             * <p>Skill groups to which the agent participating in the call belongs. Multiple skill groups are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupIds(String skillGroupIds) {
                 this.skillGroupIds = skillGroupIds;
@@ -401,7 +443,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Call start time. For inbound calls, it starts when the call enters IVR. For outbound calls, it starts when the call is answered. The format is a Unix timestamp string in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532448000000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -494,7 +539,7 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of call records.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -502,7 +547,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -510,7 +558,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -518,7 +569,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count. The actual total is returned only when PageNumber is 1; otherwise, it is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

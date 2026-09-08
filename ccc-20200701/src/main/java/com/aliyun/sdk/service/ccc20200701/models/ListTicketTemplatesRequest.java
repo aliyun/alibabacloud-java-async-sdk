@@ -130,7 +130,10 @@ public class ListTicketTemplatesRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>The ID of the ticket category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43c2671b-********86d0-6bd187905cc8</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -139,6 +142,7 @@ public class ListTicketTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +155,10 @@ public class ListTicketTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be between 1 and 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +167,10 @@ public class ListTicketTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value must be between 1 and 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +179,10 @@ public class ListTicketTemplatesRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>The name of the template. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模板1</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -178,7 +191,16 @@ public class ListTicketTemplatesRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The status of the template.</p>
+         * <ul>
+         * <li><p>Enabled: The template is published.</p>
+         * </li>
+         * <li><p>Disabled: The template is unpublished.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

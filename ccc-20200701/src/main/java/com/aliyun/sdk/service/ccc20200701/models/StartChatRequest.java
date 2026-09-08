@@ -102,7 +102,10 @@ public class StartChatRequest extends Request {
         } 
 
         /**
-         * AccessChannelId.
+         * <p>The ID of the web service channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf584733-<em><strong>-</strong></em>-9699-cb77aa3b7aa6</p>
          */
         public Builder accessChannelId(String accessChannelId) {
             this.putQueryParameter("AccessChannelId", accessChannelId);
@@ -111,7 +114,10 @@ public class StartChatRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +126,10 @@ public class StartChatRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The channel token for the web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3bjEn0YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jg************Hwej7WgWrmA=</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -129,6 +138,7 @@ public class StartChatRequest extends Request {
         }
 
         /**
+         * <p>The information about chat members.</p>
          * <p>This parameter is required.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
@@ -224,7 +234,10 @@ public class StartChatRequest extends Request {
             } 
 
             /**
-             * AvatarUrl.
+             * <p>The URL of the member\&quot;s profile picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.com/image">http://xxx.com/image</a></p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -232,7 +245,10 @@ public class StartChatRequest extends Request {
             }
 
             /**
-             * Nickname.
+             * <p>The nickname of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>访客-1a272a174a7d</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -240,7 +256,10 @@ public class StartChatRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fcd020fe-d8e4-40e5-8c77-1a272a174a7d</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -248,7 +267,16 @@ public class StartChatRequest extends Request {
             }
 
             /**
-             * UserType.
+             * <p>The type of the member.</p>
+             * <ul>
+             * <li><p>AGENT: An agent.</p>
+             * </li>
+             * <li><p>CUSTOMER: A visitor.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;

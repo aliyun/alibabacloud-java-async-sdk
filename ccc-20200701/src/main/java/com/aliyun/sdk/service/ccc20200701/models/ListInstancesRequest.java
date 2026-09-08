@@ -75,6 +75,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The paging ordinal number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * <p>The paging size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,6 +102,7 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to return. The value must be in the range of 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +127,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. The value must be in the range of 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -132,7 +139,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends Request {
         }
 
         /**
-         * SkillGroups.
+         * <p>A JSON-formatted string that contains the IDs of the skill groups to query. If this parameter is omitted, the query includes all skill groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test2&quot;]</p>
          */
         public Builder skillGroups(String skillGroups) {
             this.putQueryParameter("SkillGroups", skillGroups);

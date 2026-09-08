@@ -106,7 +106,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -225,7 +240,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Permission Name. Regular Customers do not need to understand specific permission names; this API is primarily invoked by the Workbench.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Workbench:Call</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +251,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Permission Scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELF_ONLY</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;

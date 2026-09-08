@@ -145,6 +145,7 @@ public class ListDocumentsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0YWJsZUlkIjoiY2Y2MTQxYjA5NDY0NDUxMzk5YjFjMTA5YTMxZWNkMzEiLCJ0b2tlbiI6IjAwMDAwMDAwMDAwNzAzNzcifQ==</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putBodyParameter("NextPageToken", nextPageToken);
@@ -166,7 +170,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -175,7 +182,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -184,7 +194,7 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * <p>schema id</p>
+         * <p>The schema ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +207,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>The search conditional expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>支持Lucene搜索语法</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putBodyParameter("SearchPattern", searchPattern);
@@ -206,7 +219,7 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * Sorts.
+         * <p>The custom sorting value.</p>
          */
         public Builder sorts(java.util.List<Sorts> sorts) {
             String sortsShrink = shrink(sorts, "Sorts", "json");
@@ -275,7 +288,16 @@ public class ListDocumentsRequest extends Request {
             } 
 
             /**
-             * Order.
+             * <p>The sorting order. Valid values:</p>
+             * <ul>
+             * <li><p>ASC (default): ascending order.</p>
+             * </li>
+             * <li><p>DESC: descending order.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder order(String order) {
                 this.order = order;
@@ -283,7 +305,10 @@ public class ListDocumentsRequest extends Request {
             }
 
             /**
-             * PropertyName.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;

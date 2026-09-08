@@ -119,7 +119,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of incorrect parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -303,7 +315,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15772400000****</p>
              */
             public Builder aliyunUid(Long aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -311,7 +326,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>漏话短信配置</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -319,7 +337,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -327,7 +348,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>漏话短信提醒</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +359,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * <p>The scenario type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MISSED_CALL_NOTIFICATION</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -343,7 +370,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * SignName.
+             * <p>The name of the SMS signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云呼叫中心</p>
              */
             public Builder signName(String signName) {
                 this.signName = signName;
@@ -351,7 +381,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * SmsMetadataId.
+             * <p>The ID of the SMS configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ffc1c9a-4d3d-4019-*****-73255fb01d1c</p>
              */
             public Builder smsMetadataId(String smsMetadataId) {
                 this.smsMetadataId = smsMetadataId;
@@ -359,7 +392,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS_468xxxx298</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -452,7 +488,7 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of SMS configurations.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -460,7 +496,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -468,7 +507,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +518,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

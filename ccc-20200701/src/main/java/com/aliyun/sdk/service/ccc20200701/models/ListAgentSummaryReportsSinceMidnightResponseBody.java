@@ -119,7 +119,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         }
 
         /**
-         * PagedAgentSummaryReport.
+         * <p>Data.</p>
          */
         public Builder pagedAgentSummaryReport(PagedAgentSummaryReport pagedAgentSummaryReport) {
             this.pagedAgentSummaryReport = pagedAgentSummaryReport;
@@ -151,7 +160,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27DD30C4-CAE2-481A-97CC-D3C54625341D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -407,7 +422,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageRingTime.
+             * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageRingTime(Long averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -415,7 +433,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -423,7 +444,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Long averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -431,7 +455,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHandled.
+             * <p>Acknowledgement Count, which is the number of times the agent answered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -439,7 +466,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>Assign Count, which is the number of calls assigned to this agent, including calls blindly transferred or consultation-transferred from other agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -447,7 +477,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * HandleRate.
+             * <p>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assign events may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder handleRate(Float handleRate) {
                 this.handleRate = handleRate;
@@ -455,7 +488,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRingTime.
+             * <p>Maximum ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -463,7 +499,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -471,7 +510,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -479,7 +521,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction Index, which is the average value of the single-digit satisfaction rating entered by customers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -487,7 +532,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Sending Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -495,7 +543,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Response Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -503,7 +554,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceLevel20.
+             * <p>Answer rate within 20 seconds, in percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceLevel20(Float serviceLevel20) {
                 this.serviceLevel20 = serviceLevel20;
@@ -511,7 +565,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRingTime.
+             * <p>Total ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -519,7 +576,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -527,7 +587,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -763,7 +826,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerRate.
+             * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because management events for answering and acknowledgement may fall into different Time Ranges, the Result may exceed 100% in some cases.)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder answerRate(Float answerRate) {
                 this.answerRate = answerRate;
@@ -771,7 +837,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageDialingTime.
+             * <p>Average dial-up time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageDialingTime(Long averageDialingTime) {
                 this.averageDialingTime = averageDialingTime;
@@ -779,7 +848,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -787,7 +859,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average post-processing duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Long averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -795,7 +870,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAnswered.
+             * <p>Number of answered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -803,7 +881,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * CallsDialed.
+             * <p>Number of dial-up calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -811,7 +892,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDialingTime.
+             * <p>Maximum dial-up duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxDialingTime(Long maxDialingTime) {
                 this.maxDialingTime = maxDialingTime;
@@ -819,7 +903,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -827,7 +914,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum post-processing duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(String maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -835,7 +925,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the satisfaction rating digits (single-digit numbers).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -843,7 +936,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Sending Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -851,7 +947,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Response Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -859,7 +958,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDialingTime.
+             * <p>Total dial-up time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDialingTime(Long totalDialingTime) {
                 this.totalDialingTime = totalDialingTime;
@@ -867,7 +969,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -875,7 +980,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -1137,7 +1245,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageReadyTime.
+             * <p>Average ready time. Calculation Formula: TotalReadyTime divided by the Count of ready events. The Count of ready events is a non-API statistical field, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageReadyTime(Long averageReadyTime) {
                 this.averageReadyTime = averageReadyTime;
@@ -1145,7 +1256,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time. Calculation Formula: TotalTalkTime / (CallsAnswered + CallsHandled), in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Long averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1153,7 +1267,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average post-processing time. Calculation Formula: TotalWorkTime divided by TotalCalls, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Long averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1161,7 +1278,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReadyTime.
+             * <p>Maximum ready time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37</p>
              */
             public Builder maxReadyTime(Long maxReadyTime) {
                 this.maxReadyTime = maxReadyTime;
@@ -1169,7 +1289,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1177,7 +1300,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum post-processing time after a call, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -1185,7 +1311,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * OccupancyRate.
+             * <p>Agent occupancy rate. Calculation Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder occupancyRate(Float occupancyRate) {
                 this.occupancyRate = occupancyRate;
@@ -1193,7 +1322,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * OneTransferCalls.
+             * <p>Quantity of directly transferred calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder oneTransferCalls(Long oneTransferCalls) {
                 this.oneTransferCalls = oneTransferCalls;
@@ -1201,7 +1333,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average of the satisfaction rating digits (single-digit numbers).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -1209,7 +1344,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Sending Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -1217,7 +1355,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Count of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -1225,7 +1366,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBreakTime.
+             * <p>Total break time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBreakTime(Long totalBreakTime) {
                 this.totalBreakTime = totalBreakTime;
@@ -1233,7 +1377,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCalls.
+             * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;
@@ -1241,7 +1388,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLoggedInTime.
+             * <p>Total logon time, excluding break time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalLoggedInTime(Long totalLoggedInTime) {
                 this.totalLoggedInTime = totalLoggedInTime;
@@ -1249,7 +1399,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReadyTime.
+             * <p>Total ready time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalReadyTime(Long totalReadyTime) {
                 this.totalReadyTime = totalReadyTime;
@@ -1257,7 +1410,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1265,7 +1421,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -1436,7 +1595,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -1444,7 +1606,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>Agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王。</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -1452,7 +1617,7 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * Inbound.
+             * <p>Inbound metrics.</p>
              */
             public Builder inbound(Inbound inbound) {
                 this.inbound = inbound;
@@ -1460,7 +1625,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1468,7 +1636,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>Agent logon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -1476,7 +1647,7 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * Outbound.
+             * <p>Outbound metrics.</p>
              */
             public Builder outbound(Outbound outbound) {
                 this.outbound = outbound;
@@ -1484,7 +1655,7 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * Overall.
+             * <p>Overall metric.</p>
              */
             public Builder overall(Overall overall) {
                 this.overall = overall;
@@ -1492,7 +1663,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupIds.
+             * <p>List of skill group IDs to which the agent belongs, formatted as a JSON array string, where each array element is a skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
              */
             public Builder skillGroupIds(String skillGroupIds) {
                 this.skillGroupIds = skillGroupIds;
@@ -1500,7 +1674,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupNames.
+             * <p>List of skill group names to which the agent belongs, formatted as a JSON array string, where each array element is a skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;测试技能组1&quot;,&quot;测试技能组2&quot;]</p>
              */
             public Builder skillGroupNames(String skillGroupNames) {
                 this.skillGroupNames = skillGroupNames;
@@ -1508,7 +1685,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp of the statistics data point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-13 00:00:00</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1601,7 +1781,7 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of agent summary data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1609,7 +1789,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1617,7 +1800,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1625,7 +1811,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

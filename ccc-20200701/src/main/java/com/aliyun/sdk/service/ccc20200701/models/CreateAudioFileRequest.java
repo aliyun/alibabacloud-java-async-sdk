@@ -119,6 +119,7 @@ public class CreateAudioFileRequest extends Request {
         } 
 
         /**
+         * <p>Audio file name, containing 1 to 32 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,11 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Display name of the audio, containing 1 to 32 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欢迎语</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -152,6 +158,7 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Key of the OSS file, returned by the GetAudioFileUploadParameters API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +171,10 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * Usage.
+         * <p>Usage of the audio file. The default value is General (used in scenarios such as IVR). Other optional values include HoldMusic (hold music during a call).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

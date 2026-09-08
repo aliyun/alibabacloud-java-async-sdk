@@ -89,6 +89,7 @@ public class GetSchemaRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class GetSchemaRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -110,7 +114,7 @@ public class GetSchemaRequest extends Request {
         }
 
         /**
-         * <p>schema id</p>
+         * <p>The ID of the schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30C7D235-DDCF-4C7F-A462-5E2598252C2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +242,25 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentConcurrencySettings.
+             * <p>Agent session concurrent configuration.</p>
+             * <ul>
+             * <li><p>AllowExceedingLimitWhenTransferring: Allow exceeding the limit when transferring. When transferring sessions to other agents, exceeding the recipient\&quot;s limit is allowed, but the total cannot exceed 30.</p>
+             * </li>
+             * <li><p>AllowExceedingLimitWhenClaiming: Allow exceeding the limit when claiming. When an agent actively claims sessions from the queue, exceeding the limit is allowed, but the total cannot exceed 30.</p>
+             * </li>
+             * <li><p>ConcurrencyLimit: The number of network business sessions an agent can process simultaneously.</p>
+             * </li>
+             * <li><p>Enabled: Enable this configuration.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;AllowExceedingLimitWhenTransferring&quot;: false,
+             *     &quot;ConcurrencyLimit&quot;: 4,
+             *     &quot;AllowExceedingLimitWhenClaiming&quot;: true,
+             *     &quot;Enabled&quot;: true
+             * }</p>
              */
             public Builder agentConcurrencySettings(String agentConcurrencySettings) {
                 this.agentConcurrencySettings = agentConcurrencySettings;
@@ -238,7 +268,13 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
             }
 
             /**
-             * ChatSettings.
+             * <p>Session configuration.</p>
+             * <ul>
+             * <li>IdleChatTimeoutSeconds: Automatic session end time. If no customer response is received within a specific period, the system ends the session. Unit: seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;IdleChatTimeoutSeconds&quot;:300}</p>
              */
             public Builder chatSettings(String chatSettings) {
                 this.chatSettings = chatSettings;
@@ -246,7 +282,25 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
             }
 
             /**
-             * DistributionSettings.
+             * <p>Agent session allocation configuration.</p>
+             * <ul>
+             * <li><p>AgentRingTimeoutSeconds: Agent processing timeout limit.</p>
+             * </li>
+             * <li><p>MaxNumberOfConversationsAgentCanMiss: The maximum number of consecutive unanswered sessions an agent can miss.</p>
+             * </li>
+             * <li><p>PostAgentMissingConversionsAction: After an agent misses more than the set number of consecutive responses, the system sets the agent\&quot;s status, such as Break, Invisible, or Nothing (remain unchanged).</p>
+             * </li>
+             * <li><p>Enabled: Enable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;AgentRingTimeoutSeconds&quot;: 30,
+             *     &quot;Enabled&quot;: true,
+             *     &quot;MaxNumberOfConversationsAgentCanMiss&quot;: 5,
+             *     &quot;PostAgentMissingConversionsAction&quot;: &quot;Nothing&quot;
+             * }</p>
              */
             public Builder distributionSettings(String distributionSettings) {
                 this.distributionSettings = distributionSettings;
@@ -254,7 +308,16 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
             }
 
             /**
-             * RoutingType.
+             * <p>Call distribution type.</p>
+             * <ul>
+             * <li><p>Automatic distribution (Automatic).</p>
+             * </li>
+             * <li><p>Manual distribution (Manual).</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Automatic</p>
              */
             public Builder routingType(String routingType) {
                 this.routingType = routingType;

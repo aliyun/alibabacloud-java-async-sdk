@@ -106,7 +106,10 @@ public class CreateCampaignResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The predictive outbound calling campaign ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c58b9719-3bc3-441d-a4d3-fc0309ef7066</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CC6523B-0E51-1B62-8DA5-6A9831CAE315</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

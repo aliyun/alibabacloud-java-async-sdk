@@ -106,7 +106,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListAudioFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53223330-EBF1-586B-A2CB-93C3B711FDA0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,7 +320,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioFileName.
+             * <p>Audio file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-file.wav</p>
              */
             public Builder audioFileName(String audioFileName) {
                 this.audioFileName = audioFileName;
@@ -316,7 +331,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * AudioResourceId.
+             * <p>Audio resource ID, which is the UUID of the audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d5cd7a94-3b6a-47d2-b7fd-0b1cd839bf77</p>
              */
             public Builder audioResourceId(String audioResourceId) {
                 this.audioResourceId = audioResourceId;
@@ -324,7 +342,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * AuditResult.
+             * <p>Audio content threat review result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder auditResult(String auditResult) {
                 this.auditResult = auditResult;
@@ -332,7 +353,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time of the audio resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-05 17:35:45.0</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -340,7 +364,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -348,7 +375,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Display name of the audio resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>欢迎语</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +386,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFileKey.
+             * <p>The key of the audio resource file in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test/test-file.wav</p>
              */
             public Builder ossFileKey(String ossFileKey) {
                 this.ossFileKey = ossFileKey;
@@ -364,7 +397,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -372,7 +408,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>Last modified time of the audio resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-08 15:34:49.0</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -380,7 +419,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The usage of the audio file. The default value is General (used in scenarios such as IVR). Other optional values include HoldMusic (hold music during call waiting).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -473,7 +515,7 @@ public class ListAudioFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of audio files.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -481,7 +523,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -489,7 +534,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The paging size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +545,10 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -134,6 +134,7 @@ public class ModifyAudioFileRequest extends Request {
         } 
 
         /**
+         * <p>Name of the audio file to be modified. You can specify new content for the audio file here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Audio resource ID, which uniquely identifies an audio file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +173,11 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Display name of the audio file. It must be 1 to 32 characters in length. The display name cannot be changed when modifying the audio file, so you must provide the original display name here.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欢迎语</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -179,6 +186,7 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
+         * <p>The OSS key of the audio file to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +199,10 @@ public class ModifyAudioFileRequest extends Request {
         }
 
         /**
-         * Usage.
+         * <p>Usage of the audio file. The default value is General (used in scenarios such as IVR). Other valid values include HoldMusic (hold music during call waiting).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

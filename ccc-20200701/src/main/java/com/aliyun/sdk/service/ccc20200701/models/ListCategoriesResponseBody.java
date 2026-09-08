@@ -119,7 +119,10 @@ public class ListCategoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data. The category node information, in the format of a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;categoryId\&quot;:\&quot;43c2671b-8939-4223-<strong><strong>-6bd187905cc8\&quot;,\&quot;childCategoryList\&quot;:[{\&quot;categoryId\&quot;:\&quot;120816ad-4392-4edf-</strong></strong>-6d053d5cfa5a\&quot;,\&quot;childCategoryList\&quot;:[],\&quot;deleted\&quot;:0,\&quot;editor\&quot;:\&quot;283277706217028904\&quot;,\&quot;editorName\&quot;:\&quot;283277706217028904\&quot;,\&quot;instanceId\&quot;:\&quot;cccV2-kmz\&quot;,\&quot;itemCount\&quot;:0,\&quot;level\&quot;:2,\&quot;name\&quot;:\&quot;客户反馈\&quot;,\&quot;parentCategoryId\&quot;:\&quot;43c2671b-8939-<strong><strong>-86d0-6bd187905cc8\&quot;,\&quot;type\&quot;:\&quot;Ticket\&quot;}],\&quot;deleted\&quot;:0,\&quot;editor\&quot;:\&quot;283277706217028904\&quot;,\&quot;editorName\&quot;:\&quot;283277706217028904\&quot;,\&quot;instanceId\&quot;:\&quot;cccV2-kmz\&quot;,\&quot;itemCount\&quot;:10,\&quot;level\&quot;:1,\&quot;name\&quot;:\&quot;测试一01类目\&quot;,\&quot;type\&quot;:\&quot;Ticket\&quot;},{\&quot;categoryId\&quot;:\&quot;4948fcd0-2972-</strong></strong>-81c6-1a00927e1802\&quot;,\&quot;childCategoryList\&quot;:[],\&quot;deleted\&quot;:0,\&quot;editor\&quot;:\&quot;283277706217028904\&quot;,\&quot;editorName\&quot;:\&quot;283277706217028904\&quot;,\&quot;instanceId\&quot;:\&quot;cccV2-kmz\&quot;,\&quot;itemCount\&quot;:0,\&quot;level\&quot;:1,\&quot;name\&quot;:\&quot;生产环境验证\&quot;,\&quot;type\&quot;:\&quot;Ticket\&quot;},{\&quot;categoryId\&quot;:\&quot;c426bd7f-9661-47c3-****-2508f1a32f66\&quot;,\&quot;childCategoryList\&quot;:[],\&quot;deleted\&quot;:0,\&quot;editor\&quot;:\&quot;269801834095770945\&quot;,\&quot;editorName\&quot;:\&quot;269801834095770945\&quot;,\&quot;instanceId\&quot;:\&quot;cccV2-kmz\&quot;,\&quot;itemCount\&quot;:4,\&quot;level\&quot;:1,\&quot;name\&quot;:\&quot;测试环境测试\&quot;,\&quot;type\&quot;:\&quot;Ticket\&quot;}]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of incorrect parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,10 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

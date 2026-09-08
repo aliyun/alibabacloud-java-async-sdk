@@ -119,7 +119,10 @@ public class CreateCallSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data. The summary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c58b9719-3bc3-441d-a4d3-fc0309ef7066</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class CreateCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CreateCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class CreateCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of invalid parameters</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,10 @@ public class CreateCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -314,7 +314,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -322,7 +325,12 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder description(String description) {
             this.description = description;
@@ -330,7 +338,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -338,7 +349,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -346,7 +360,12 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Pattern.
+         * <p>The regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder pattern(String pattern) {
             this.pattern = pattern;
@@ -354,7 +373,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * PatternErrorMessage.
+         * <p>The error message for the regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>格式错误</p>
          */
         public Builder patternErrorMessage(String patternErrorMessage) {
             this.patternErrorMessage = patternErrorMessage;
@@ -362,7 +384,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * MinLength.
+         * <p>The minimum length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minLength(Integer minLength) {
             this.minLength = minLength;
@@ -370,7 +395,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * MaxLength.
+         * <p>The maximum length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxLength(Integer maxLength) {
             this.maxLength = maxLength;
@@ -378,7 +406,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Minimum.
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minimum(Double minimum) {
             this.minimum = minimum;
@@ -386,7 +417,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Maximum.
+         * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maximum(Double maximum) {
             this.maximum = maximum;
@@ -394,7 +428,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Required.
+         * <p>Indicates whether the field is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder required(Boolean required) {
             this.required = required;
@@ -402,7 +439,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * System.
+         * <p>Indicates whether the field is a system field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder system(Boolean system) {
             this.system = system;
@@ -410,7 +450,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Disabled.
+         * <p>Indicates whether the field is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -418,7 +461,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Array.
+         * <p>Indicates whether the field is an array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder array(Boolean array) {
             this.array = array;
@@ -426,7 +472,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * ReadOnly.
+         * <p>Indicates whether the field is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;
@@ -434,7 +483,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * EditorType.
+         * <p>The editor type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>textbox</p>
          */
         public Builder editorType(String editorType) {
             this.editorType = editorType;
@@ -442,7 +494,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Attributes.
+         * <p>The extended properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder attributes(String attributes) {
             this.attributes = attributes;
@@ -450,7 +505,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * DisplayOrder.
+         * <p>The display order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder displayOrder(Integer displayOrder) {
             this.displayOrder = displayOrder;
@@ -458,7 +516,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The time when the field was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-14T09:53:53Z</p>
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -466,7 +527,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * <p>The time when the field was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-14T09:53:53Z</p>
          */
         public Builder updatedTime(Long updatedTime) {
             this.updatedTime = updatedTime;
@@ -474,7 +538,10 @@ public class DataSchemaPropertiesValue extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tom</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;

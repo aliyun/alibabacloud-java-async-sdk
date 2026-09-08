@@ -106,7 +106,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
             } 
 
             /**
-             * TicketsAssigned.
+             * <p>Number of tickets pending processing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ticketsAssigned(String ticketsAssigned) {
                 this.ticketsAssigned = ticketsAssigned;
@@ -225,7 +240,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
             }
 
             /**
-             * TicketsCreated.
+             * <p>Number of tickets created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ticketsCreated(String ticketsCreated) {
                 this.ticketsCreated = ticketsCreated;
@@ -233,7 +251,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
             }
 
             /**
-             * TicketsParticipated.
+             * <p>Number of tickets processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder ticketsParticipated(String ticketsParticipated) {
                 this.ticketsParticipated = ticketsParticipated;

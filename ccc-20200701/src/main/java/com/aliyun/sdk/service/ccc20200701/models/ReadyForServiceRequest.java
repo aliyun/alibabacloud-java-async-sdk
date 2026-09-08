@@ -102,7 +102,10 @@ public class ReadyForServiceRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -111,6 +114,7 @@ public class ReadyForServiceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ReadyForServiceRequest extends Request {
         }
 
         /**
-         * OutboundScenario.
+         * <p>Specifies whether to enter outbound-only mode after being published. This parameter is optional and defaults to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder outboundScenario(Boolean outboundScenario) {
             this.putQueryParameter("OutboundScenario", outboundScenario);
@@ -132,7 +139,10 @@ public class ReadyForServiceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. If not specified, it defaults to the agent mapped to the current RAM account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-test@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

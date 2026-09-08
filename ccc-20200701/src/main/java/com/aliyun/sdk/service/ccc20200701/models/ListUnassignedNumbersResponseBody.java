@@ -106,7 +106,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>City where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>乐山</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -225,7 +240,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08330011****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -233,7 +251,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>Province where the number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>四川</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -326,7 +347,7 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of numbers.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -334,7 +355,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -342,7 +366,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +377,10 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

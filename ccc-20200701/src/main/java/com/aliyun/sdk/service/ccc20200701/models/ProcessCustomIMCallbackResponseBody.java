@@ -132,7 +132,10 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat-65382141036853491</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -164,7 +176,10 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +187,7 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -180,7 +195,10 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

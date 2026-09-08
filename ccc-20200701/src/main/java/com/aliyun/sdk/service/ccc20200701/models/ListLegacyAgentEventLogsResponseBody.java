@@ -119,7 +119,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2802EE59-3B53-513A-A130-85E480AF689D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -433,7 +448,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentDropCall.
+             * <p>Indicates whether the agent hung up the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder agentDropCall(String agentDropCall) {
                 this.agentDropCall = agentDropCall;
@@ -441,7 +459,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentNo.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentNo(String agentNo) {
                 this.agentNo = agentNo;
@@ -449,7 +470,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallDir.
+             * <p>Call direction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>内部</p>
              */
             public Builder callDir(String callDir) {
                 this.callDir = callDir;
@@ -457,7 +481,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>378654****</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -465,7 +492,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallMode.
+             * <p>Call pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>呼入</p>
              */
             public Builder callMode(String callMode) {
                 this.callMode = callMode;
@@ -473,7 +503,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>呼入</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -481,7 +514,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CalleeId.
+             * <p>Callee number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312343****</p>
              */
             public Builder calleeId(String calleeId) {
                 this.calleeId = calleeId;
@@ -489,7 +525,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CallerId.
+             * <p>Calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08331111****</p>
              */
             public Builder callerId(String callerId) {
                 this.callerId = callerId;
@@ -497,7 +536,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnId.
+             * <p>Call channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345467****</p>
              */
             public Builder connId(String connId) {
                 this.connId = connId;
@@ -505,7 +547,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Event.
+             * <p>Type of management event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>拨号</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -513,7 +558,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupNo.
+             * <p>List of skill group IDs that the agent signed in to. Separate multiple skill group IDs with commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup1@ccc-test,skillgroup2@ccc-test</p>
              */
             public Builder groupNo(String groupNo) {
                 this.groupNo = groupNo;
@@ -521,7 +569,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -529,7 +580,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNo.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8012****</p>
              */
             public Builder phoneNo(String phoneNo) {
                 this.phoneNo = phoneNo;
@@ -537,7 +591,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticDate.
+             * <p>Statistics timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-03T10:15:30</p>
              */
             public Builder statisticDate(String statisticDate) {
                 this.statisticDate = statisticDate;
@@ -545,7 +602,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetRequest.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder targetRequest(String targetRequest) {
                 this.targetRequest = targetRequest;
@@ -553,7 +613,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetSelect.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder targetSelect(String targetSelect) {
                 this.targetSelect = targetSelect;
@@ -561,7 +624,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc101</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -569,7 +635,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferNumber.
+             * <p>Transfer number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07518888****</p>
              */
             public Builder transferNumber(String transferNumber) {
                 this.transferNumber = transferNumber;
@@ -662,7 +731,7 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of agent event logs.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -670,7 +739,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -678,7 +750,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -686,7 +761,10 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

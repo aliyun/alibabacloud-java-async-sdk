@@ -88,7 +88,10 @@ public class RejectTicketRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The comment on the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请补充信息。</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -97,6 +100,7 @@ public class RejectTicketRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class RejectTicketRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2c6722b-cd13-442d-bf10-22a07c70d6d5</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

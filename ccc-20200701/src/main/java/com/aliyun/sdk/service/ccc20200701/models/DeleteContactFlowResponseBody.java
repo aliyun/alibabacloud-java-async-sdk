@@ -93,7 +93,10 @@ public class DeleteContactFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +115,10 @@ public class DeleteContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class DeleteContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07511949-6DC4-5D0B-8FA8-FF8FA29B4217</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

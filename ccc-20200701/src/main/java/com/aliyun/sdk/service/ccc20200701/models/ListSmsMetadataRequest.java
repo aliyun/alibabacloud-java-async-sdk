@@ -104,6 +104,7 @@ public class ListSmsMetadataRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ListSmsMetadataRequest extends Request {
         }
 
         /**
+         * <p>The page number. The value ranges from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ListSmsMetadataRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. The value ranges from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,20 @@ public class ListSmsMetadataRequest extends Request {
         }
 
         /**
-         * ScenarioListJson.
+         * <p>The type of the scenario. Valid values:</p>
+         * <ul>
+         * <li><p>SATISFACTION_SURVEY: satisfaction survey</p>
+         * </li>
+         * <li><p>CONTACT_FLOW_NODE: Interactive Voice Response (IVR) flow node</p>
+         * </li>
+         * <li><p>MISSED_CALL_NOTIFICATION: missed call notification</p>
+         * </li>
+         * <li><p>FLASH_SMS: Alibaba Cloud flash SMS notification</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;SATISFACTION_SURVEY&quot;,&quot;CONTACT_FLOW_NODE&quot;]</p>
          */
         public Builder scenarioListJson(String scenarioListJson) {
             this.putQueryParameter("ScenarioListJson", scenarioListJson);

@@ -106,7 +106,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of instance segment statistics data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -958,7 +970,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AbandonRate.
+             * <p>Abandon rate. Calculation Formula: CallsAbandoned / CallsOffered (because management events related to abandonment and assignment may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder abandonRate(Float abandonRate) {
                 this.abandonRate = abandonRate;
@@ -966,7 +981,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AbandonedRate.
+             * <p>Deprecated. Refer to the AbandonRate field instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder abandonedRate(Float abandonedRate) {
                 this.abandonedRate = abandonedRate;
@@ -974,7 +992,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageAbandonTime.
+             * <p>The average abandon time, in seconds. Calculation Formula: TotalAbandonTime / CallsAbandoned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageAbandonTime(Float averageAbandonTime) {
                 this.averageAbandonTime = averageAbandonTime;
@@ -982,7 +1003,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageAbandonedInIVRTime.
+             * <p>Average IVR abandonment time, in seconds. Calculation Formula: TotalAbandonedInIVRTime / CallsAbandonedInIVR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageAbandonedInIVRTime(Float averageAbandonedInIVRTime) {
                 this.averageAbandonedInIVRTime = averageAbandonedInIVRTime;
@@ -990,7 +1014,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageAbandonedInQueueTime.
+             * <p>Average queue abandonment duration, in seconds. Calculation Formula: TotalAbandonedInQueueTime / CallsAbandonedInQueue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageAbandonedInQueueTime(Float averageAbandonedInQueueTime) {
                 this.averageAbandonedInQueueTime = averageAbandonedInQueueTime;
@@ -998,7 +1025,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageAbandonedInRingTime.
+             * <p>Average abandoned-in-ring time, in seconds. Calculation Formula: TotalAbandonedInRingTime / CallsAbandonedInRing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageAbandonedInRingTime(Float averageAbandonedInRingTime) {
                 this.averageAbandonedInRingTime = averageAbandonedInRingTime;
@@ -1006,7 +1036,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageFirstResponseTime.
+             * <p>Average first response time for chat sessions, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder averageFirstResponseTime(Float averageFirstResponseTime) {
                 this.averageFirstResponseTime = averageFirstResponseTime;
@@ -1014,7 +1047,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageHoldTime.
+             * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
@@ -1022,7 +1058,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageResponseTime.
+             * <p>Average response time (RT) of chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder averageResponseTime(Float averageResponseTime) {
                 this.averageResponseTime = averageResponseTime;
@@ -1030,7 +1069,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageRingTime.
+             * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder averageRingTime(Float averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -1038,7 +1080,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsHandled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder averageTalkTime(Float averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1046,7 +1091,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWaitTime.
+             * <p>Average wait time, which is the average duration callers wait before an agent answers a call. Calculation Formula: TotalWaitTime / CallsHandled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder averageWaitTime(Float averageWaitTime) {
                 this.averageWaitTime = averageWaitTime;
@@ -1054,7 +1102,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average post-processing time, in seconds. Calculation Formula: TotalWorkTime / CallsHandled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder averageWorkTime(Float averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1062,7 +1113,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandoned.
+             * <p>Total abandoned calls. Calculation Formula: CallsAbandonedInIVR + CallsAbandonedInQueue + CallsAbandonedInRing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandoned(Long callsAbandoned) {
                 this.callsAbandoned = callsAbandoned;
@@ -1070,7 +1124,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandonedInIVR.
+             * <p>Number of calls abandoned in IVR, which refers to the count of calls where the Customer hung up during the IVR flow after entering the IVR process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInIVR(Long callsAbandonedInIVR) {
                 this.callsAbandonedInIVR = callsAbandonedInIVR;
@@ -1078,7 +1135,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandonedInQueue.
+             * <p>The number of calls abandoned in the queue, which refers to calls where the customer hung up while waiting in the queue after entering it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInQueue(Long callsAbandonedInQueue) {
                 this.callsAbandonedInQueue = callsAbandonedInQueue;
@@ -1086,7 +1146,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandonedInRing.
+             * <p>Number of calls abandoned during ringing, which refers to the Quantity of calls where the Customer hung up while the agent\&quot;s phone was ringing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInRing(Long callsAbandonedInRing) {
                 this.callsAbandonedInRing = callsAbandonedInRing;
@@ -1094,7 +1157,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandonedInVoiceNavigator.
+             * <p>The number of calls abandoned in the Intelligent Navigation module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInVoiceNavigator(Long callsAbandonedInVoiceNavigator) {
                 this.callsAbandonedInVoiceNavigator = callsAbandonedInVoiceNavigator;
@@ -1102,7 +1168,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAttendedTransferred.
+             * <p>Number of consult transfers, which refers to the Count of calls that involved a consult transfer. If a single call initiated multiple transfers, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAttendedTransferred(Long callsAttendedTransferred) {
                 this.callsAttendedTransferred = callsAttendedTransferred;
@@ -1110,7 +1179,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsBlindTransferred.
+             * <p>Quantity of blind transfers, which is the number of calls that were directly transferred. If a single call was transferred multiple times, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsBlindTransferred(Long callsBlindTransferred) {
                 this.callsBlindTransferred = callsBlindTransferred;
@@ -1118,7 +1190,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsCausedIVRException.
+             * <p>Number of calls that caused IVR exceptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsCausedIVRException(Long callsCausedIVRException) {
                 this.callsCausedIVRException = callsCausedIVRException;
@@ -1126,7 +1201,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsForwardToOutsideNumber.
+             * <p>The number of calls forwarded to an external number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsForwardToOutsideNumber(Long callsForwardToOutsideNumber) {
                 this.callsForwardToOutsideNumber = callsForwardToOutsideNumber;
@@ -1134,7 +1212,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHandled.
+             * <p>The acknowledgement count, which refers to the number of calls answered by agents. If a single call is answered by multiple agents, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -1142,7 +1223,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHold.
+             * <p>Number of calls placed on hold. If a single call is placed on hold multiple times, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsHold(Long callsHold) {
                 this.callsHold = callsHold;
@@ -1150,7 +1234,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsIVRException.
+             * <p>The number of calls with IVR exceptions. A call is counted when the IVR enters a hang-up reason node and the hang-up reason configured for that node is &quot;failed transfer to agent.&quot; In this case, the count increases by 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsIVRException(Long callsIVRException) {
                 this.callsIVRException = callsIVRException;
@@ -1158,7 +1245,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>Number of calls offered to Cloud Contact Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -1166,7 +1256,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsQueued.
+             * <p>Number of calls that entered the queue. If a single call entered the queue multiple times, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsQueued(Long callsQueued) {
                 this.callsQueued = callsQueued;
@@ -1174,7 +1267,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsQueuingFailed.
+             * <p>Queue Failure quantity, which refers to the number of calls where the customer hung up during queuing after the call entered the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsQueuingFailed(Long callsQueuingFailed) {
                 this.callsQueuingFailed = callsQueuingFailed;
@@ -1182,7 +1278,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsQueuingOverflow.
+             * <p>Quantity of calls that overflowed from the queue, meaning calls that encountered queue overflow while waiting in the IVR queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsQueuingOverflow(Long callsQueuingOverflow) {
                 this.callsQueuingOverflow = callsQueuingOverflow;
@@ -1190,7 +1289,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsQueuingTimeout.
+             * <p>Number of calls that timed out during the queuing phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsQueuingTimeout(Long callsQueuingTimeout) {
                 this.callsQueuingTimeout = callsQueuingTimeout;
@@ -1198,7 +1300,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRinged.
+             * <p>Number of calls that rang to agents. If a single call was assigned to multiple agents and rang for each, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsRinged(Long callsRinged) {
                 this.callsRinged = callsRinged;
@@ -1206,7 +1311,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsToVoicemail.
+             * <p>Quantity of calls transferred to voicemail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callsToVoicemail(Long callsToVoicemail) {
                 this.callsToVoicemail = callsToVoicemail;
@@ -1214,7 +1322,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsVoicemail.
+             * <p>The number of calls directed to voicemail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsVoicemail(Long callsVoicemail) {
                 this.callsVoicemail = callsVoicemail;
@@ -1222,7 +1333,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * HandleRate.
+             * <p>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assign events may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder handleRate(Float handleRate) {
                 this.handleRate = handleRate;
@@ -1230,7 +1344,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAbandonTime.
+             * <p>The maximum abandon time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxAbandonTime(Long maxAbandonTime) {
                 this.maxAbandonTime = maxAbandonTime;
@@ -1238,7 +1355,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAbandonedInIVRTime.
+             * <p>Maximum IVR abandonment duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxAbandonedInIVRTime(Long maxAbandonedInIVRTime) {
                 this.maxAbandonedInIVRTime = maxAbandonedInIVRTime;
@@ -1246,7 +1366,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAbandonedInQueueTime.
+             * <p>Maximum abandoned-in-queue time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxAbandonedInQueueTime(Long maxAbandonedInQueueTime) {
                 this.maxAbandonedInQueueTime = maxAbandonedInQueueTime;
@@ -1254,7 +1377,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAbandonedInRingTime.
+             * <p>Maximum ring abandonment duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxAbandonedInRingTime(Long maxAbandonedInRingTime) {
                 this.maxAbandonedInRingTime = maxAbandonedInRingTime;
@@ -1262,7 +1388,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHoldTime.
+             * <p>Maximum hold time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
@@ -1270,7 +1399,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRingTime.
+             * <p>Maximum ring duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -1278,7 +1410,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1286,7 +1421,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWaitTime.
+             * <p>The maximum wait time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder maxWaitTime(Long maxWaitTime) {
                 this.maxWaitTime = maxWaitTime;
@@ -1294,7 +1432,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -1302,7 +1443,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -1310,7 +1454,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionRate.
+             * <p>Satisfaction rate. Calculation Formula: Number of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionRate(Float satisfactionRate) {
                 this.satisfactionRate = satisfactionRate;
@@ -1318,7 +1465,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Sending Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -1326,7 +1476,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>The count of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -1334,7 +1487,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceLevel20.
+             * <p>Service level within 20 seconds, calculated as the number of calls with wait time less than or equal to 20 seconds divided by CallsQueued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceLevel20(Float serviceLevel20) {
                 this.serviceLevel20 = serviceLevel20;
@@ -1342,7 +1498,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAbandonTime.
+             * <p>Total abandon time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalAbandonTime(Long totalAbandonTime) {
                 this.totalAbandonTime = totalAbandonTime;
@@ -1350,7 +1509,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAbandonedInIVRTime.
+             * <p>Total IVR abandonment duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalAbandonedInIVRTime(Long totalAbandonedInIVRTime) {
                 this.totalAbandonedInIVRTime = totalAbandonedInIVRTime;
@@ -1358,7 +1520,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAbandonedInQueueTime.
+             * <p>Total abandoned-in-queue time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalAbandonedInQueueTime(Long totalAbandonedInQueueTime) {
                 this.totalAbandonedInQueueTime = totalAbandonedInQueueTime;
@@ -1366,7 +1531,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAbandonedInRingTime.
+             * <p>Total abandoned-in-ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalAbandonedInRingTime(Long totalAbandonedInRingTime) {
                 this.totalAbandonedInRingTime = totalAbandonedInRingTime;
@@ -1374,7 +1542,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalHoldTime.
+             * <p>Total hold time during calls, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
@@ -1382,7 +1553,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMessagesSent.
+             * <p>Total number of messages sent in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalMessagesSent(Long totalMessagesSent) {
                 this.totalMessagesSent = totalMessagesSent;
@@ -1390,7 +1564,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMessagesSentByAgent.
+             * <p>Total number of messages sent by agents in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalMessagesSentByAgent(Long totalMessagesSentByAgent) {
                 this.totalMessagesSentByAgent = totalMessagesSentByAgent;
@@ -1398,7 +1575,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMessagesSentByCustomer.
+             * <p>Total number of messages sent by the Customer in chat sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
                 this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
@@ -1406,7 +1586,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRingTime.
+             * <p>Total ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -1414,7 +1597,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>447</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -1422,7 +1608,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWaitTime.
+             * <p>The total wait time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder totalWaitTime(Long totalWaitTime) {
                 this.totalWaitTime = totalWaitTime;
@@ -1430,7 +1619,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -1809,7 +2001,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerRate.
+             * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed (because management events for answering and acknowledgement may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder answerRate(Float answerRate) {
                 this.answerRate = answerRate;
@@ -1817,7 +2012,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageDialingTime.
+             * <p>Average dial-up duration, in seconds. Calculation Formula: TotalDialingTime / CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageDialingTime(Float averageDialingTime) {
                 this.averageDialingTime = averageDialingTime;
@@ -1825,7 +2023,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageHoldTime.
+             * <p>Average hold duration, in seconds. Calculation formula: TotalHoldTime / CallsHold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
@@ -1833,7 +2034,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageRingTime.
+             * <p>Average ring time in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageRingTime(Float averageRingTime) {
                 this.averageRingTime = averageRingTime;
@@ -1841,7 +2045,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsAnswered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Float averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -1849,7 +2056,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average post-processing time in seconds. Calculation Formula: TotalWorkTime / CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Float averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -1857,7 +2067,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAnswered.
+             * <p>Number of answered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -1865,7 +2078,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAttendedTransferred.
+             * <p>The number of calls transferred via consultation, which refers to the quantity of calls that underwent consultation-based transfer. If a single call was transferred multiple times, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAttendedTransferred(Long callsAttendedTransferred) {
                 this.callsAttendedTransferred = callsAttendedTransferred;
@@ -1873,7 +2089,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsBlindTransferred.
+             * <p>Quantity of blind transfers, which refers to the number of calls that were directly transferred. If a single call is transferred multiple times, it counts as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsBlindTransferred(Long callsBlindTransferred) {
                 this.callsBlindTransferred = callsBlindTransferred;
@@ -1881,7 +2100,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsDialed.
+             * <p>Number of dialed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
@@ -1889,7 +2111,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHold.
+             * <p>Number of calls placed on hold. If a single call is placed on hold multiple times, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsHold(Long callsHold) {
                 this.callsHold = callsHold;
@@ -1897,7 +2122,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRinged.
+             * <p>Number of calls that rang for agents. If a single call is assigned to multiple agents and rings for each, it is counted as one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsRinged(Long callsRinged) {
                 this.callsRinged = callsRinged;
@@ -1905,7 +2133,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDialingTime.
+             * <p>Maximum dial-up duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxDialingTime(Long maxDialingTime) {
                 this.maxDialingTime = maxDialingTime;
@@ -1913,7 +2144,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHoldTime.
+             * <p>Maximum hold time during calls, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
@@ -1921,7 +2155,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRingTime.
+             * <p>Maximum ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxRingTime(Long maxRingTime) {
                 this.maxRingTime = maxRingTime;
@@ -1929,7 +2166,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -1937,7 +2177,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum post-processing time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -1945,7 +2188,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -1953,7 +2199,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionRate.
+             * <p>Satisfaction rate. Calculation Formula: Quantity of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionRate(Float satisfactionRate) {
                 this.satisfactionRate = satisfactionRate;
@@ -1961,7 +2210,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Sending Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -1969,7 +2221,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Count of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -1977,7 +2232,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDialingTime.
+             * <p>Total dial-up duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDialingTime(Long totalDialingTime) {
                 this.totalDialingTime = totalDialingTime;
@@ -1985,7 +2243,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalHoldTime.
+             * <p>Total hold duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
@@ -1993,7 +2254,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRingTime.
+             * <p>Total ring time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalRingTime(Long totalRingTime) {
                 this.totalRingTime = totalRingTime;
@@ -2001,7 +2265,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -2009,7 +2276,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total post-processing duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -2336,7 +2606,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageBreakTime.
+             * <p>Average break time, in seconds. Calculation Formula: TotalBreakTime / Break Count. Break Count is not an API statistics field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageBreakTime(Float averageBreakTime) {
                 this.averageBreakTime = averageBreakTime;
@@ -2344,7 +2617,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageHoldTime.
+             * <p>Average call hold time, in seconds. Calculation Formula: TotalHoldTime / (Inbound Calls on Hold + Outbound Calls on Hold).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
@@ -2352,7 +2628,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageReadyTime.
+             * <p>Average ready time, in seconds. Calculation Formula: TotalReadyTime / Ready Count. Ready Count is not an API statistics field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageReadyTime(Float averageReadyTime) {
                 this.averageReadyTime = averageReadyTime;
@@ -2360,7 +2639,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageTalkTime.
+             * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / (CallsAnswered + CallsHandled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageTalkTime(Float averageTalkTime) {
                 this.averageTalkTime = averageTalkTime;
@@ -2368,7 +2650,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * AverageWorkTime.
+             * <p>Average post-processing time per call, in seconds. Calculation Formula: TotalWorkTime / TotalCalls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder averageWorkTime(Float averageWorkTime) {
                 this.averageWorkTime = averageWorkTime;
@@ -2376,7 +2661,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBreakTime.
+             * <p>Maximum break time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxBreakTime(Long maxBreakTime) {
                 this.maxBreakTime = maxBreakTime;
@@ -2384,7 +2672,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxHoldTime.
+             * <p>Maximum call hold time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
@@ -2392,7 +2683,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReadyTime.
+             * <p>Maximum ready time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxReadyTime(Long maxReadyTime) {
                 this.maxReadyTime = maxReadyTime;
@@ -2400,7 +2694,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>Maximum talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -2408,7 +2705,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkTime.
+             * <p>Maximum post-processing time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxWorkTime(Long maxWorkTime) {
                 this.maxWorkTime = maxWorkTime;
@@ -2416,7 +2716,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * OccupancyRate.
+             * <p>Agent occupancy rate. Calculation Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder occupancyRate(Float occupancyRate) {
                 this.occupancyRate = occupancyRate;
@@ -2424,7 +2727,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionIndex(Float satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -2432,7 +2738,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionRate.
+             * <p>Satisfaction rate. Calculation Formula: Count of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionRate(Float satisfactionRate) {
                 this.satisfactionRate = satisfactionRate;
@@ -2440,7 +2749,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysOffered.
+             * <p>Sending Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysOffered(Long satisfactionSurveysOffered) {
                 this.satisfactionSurveysOffered = satisfactionSurveysOffered;
@@ -2448,7 +2760,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveysResponded.
+             * <p>Response Count of satisfaction surveys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder satisfactionSurveysResponded(Long satisfactionSurveysResponded) {
                 this.satisfactionSurveysResponded = satisfactionSurveysResponded;
@@ -2456,7 +2771,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBreakTime.
+             * <p>Total break time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBreakTime(Long totalBreakTime) {
                 this.totalBreakTime = totalBreakTime;
@@ -2464,7 +2782,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCalls.
+             * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;
@@ -2472,7 +2793,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalHoldTime.
+             * <p>Total hold time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
@@ -2480,7 +2804,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLoggedInTime.
+             * <p>Total logon duration, in seconds. Exclude break time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalLoggedInTime(Long totalLoggedInTime) {
                 this.totalLoggedInTime = totalLoggedInTime;
@@ -2488,7 +2815,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReadyTime.
+             * <p>Total ready time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalReadyTime(Long totalReadyTime) {
                 this.totalReadyTime = totalReadyTime;
@@ -2496,7 +2826,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>Total talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -2504,7 +2837,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWorkTime.
+             * <p>Total post-processing time in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalWorkTime(Long totalWorkTime) {
                 this.totalWorkTime = totalWorkTime;
@@ -2597,7 +2933,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Inbound.
+             * <p>Inbound metrics.</p>
              */
             public Builder inbound(Inbound inbound) {
                 this.inbound = inbound;
@@ -2605,7 +2941,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * Outbound.
+             * <p>Outbound metrics.</p>
              */
             public Builder outbound(Outbound outbound) {
                 this.outbound = outbound;
@@ -2613,7 +2949,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * Overall.
+             * <p>Overall metrics.</p>
              */
             public Builder overall(Overall overall) {
                 this.overall = overall;
@@ -2621,7 +2957,10 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>Start Time, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620230400000</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;

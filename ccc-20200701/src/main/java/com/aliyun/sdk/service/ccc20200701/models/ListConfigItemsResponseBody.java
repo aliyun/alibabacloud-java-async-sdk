@@ -119,7 +119,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListConfigItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of config items.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListConfigItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +276,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -272,7 +287,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the config item. A name can be system-defined or custom. You can customize the value of a system-defined item. You can also create custom items with custom names and values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>config-item</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,7 +298,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectId.
+             * <p>The ID of the object to which the config item applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -288,7 +309,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * <p>The type of the object to which the config item applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -296,7 +320,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the config item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -102,7 +102,10 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * <p>Call ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-10963442671187****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -111,7 +114,21 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * FieldListJson.
+         * <p>When the TaskListJson parameter is set to &quot;fields&quot;, this parameter specifies the field content to fetch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *   {
+         *     &quot;code&quot;: &quot;OrderNo&quot;,
+         *     &quot;name&quot;: &quot;订单号&quot;,
+         *     &quot;description&quot;: &quot;订单号&quot;
+         *   },
+         *   {
+         *     &quot;code&quot;: &quot;ProductName&quot;,
+         *     &quot;name&quot;: &quot;商品名称&quot;,
+         *     &quot;description&quot;: &quot;商品名称&quot;
+         *   }
+         * ]</p>
          */
         public Builder fieldListJson(String fieldListJson) {
             this.putQueryParameter("FieldListJson", fieldListJson);
@@ -120,6 +137,7 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
+         * <p>Cloud Contact Center instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +150,21 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * TaskListJson.
+         * <p>List of Task Types for analysis. Valid values include:</p>
+         * <ul>
+         * <li><p>title: title</p>
+         * </li>
+         * <li><p>summary: summary</p>
+         * </li>
+         * <li><p>keywords: keywords</p>
+         * </li>
+         * <li><p>fields: fields</p>
+         * </li>
+         * </ul>
+         * <p>Currently, only &quot;summary&quot; and &quot;title&quot; can be passed together. All other parameters must be passed individually.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;keywords&quot;]</p>
          */
         public Builder taskListJson(String taskListJson) {
             this.putQueryParameter("TaskListJson", taskListJson);

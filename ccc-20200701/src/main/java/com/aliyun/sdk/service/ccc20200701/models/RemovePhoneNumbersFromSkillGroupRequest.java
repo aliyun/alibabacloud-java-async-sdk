@@ -90,6 +90,7 @@ public class RemovePhoneNumbersFromSkillGroupRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class RemovePhoneNumbersFromSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>List of phone numbers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class RemovePhoneNumbersFromSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

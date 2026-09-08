@@ -118,7 +118,10 @@ public class SaveDocumentRequest extends Request {
         } 
 
         /**
-         * DocumentId.
+         * <p>Document ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder documentId(String documentId) {
             this.putBodyParameter("DocumentId", documentId);
@@ -127,6 +130,7 @@ public class SaveDocumentRequest extends Request {
         }
 
         /**
+         * <p>The document content to save. It must conform to the rules defined in the schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class SaveDocumentRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +156,10 @@ public class SaveDocumentRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);

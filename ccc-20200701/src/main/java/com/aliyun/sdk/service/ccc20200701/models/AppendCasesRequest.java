@@ -89,6 +89,7 @@ public class AppendCasesRequest extends Request {
         } 
 
         /**
+         * <p>The predictive campaign ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class AppendCasesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class AppendCasesRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The list of cases to be added.</p>
          */
         public Builder body(java.util.List<AppendCasesRequestBody> body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -234,7 +236,10 @@ public class AppendCasesRequest extends Request {
             } 
 
             /**
-             * AgentId.
+             * <p>The agent ID. If you specify this parameter, the system routes the call to the specified agent. If you leave this parameter empty, the system routes the call to an idle agent in the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -242,7 +247,10 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * Caller.
+             * <p>The caller number. If you specify this parameter, the system preferentially uses the specified number to initiate a call. If you leave this parameter empty, the system automatically selects a number to initiate a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01012345678</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -250,7 +258,13 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * CustomVariables.
+             * <p>Custom variables in the format of a JSON object. The object can contain up to 10 properties, and the name and value of each property are custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;name&quot;: &quot;customer&quot;,
+             *       &quot;客户标签&quot;: &quot;tag&quot;
+             * }</p>
              */
             public Builder customVariables(String customVariables) {
                 this.customVariables = customVariables;
@@ -258,7 +272,10 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * MaskedCallee.
+             * <p>The masked callee number. If this parameter is not empty, the callee number will be masked. You can define the masking rule and specify the masked callee number. In some cases, you can only view the masked callee number instead of the real one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>071*****801</p>
              */
             public Builder maskedCallee(String maskedCallee) {
                 this.maskedCallee = maskedCallee;
@@ -266,7 +283,10 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188888****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -274,7 +294,10 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * ReferenceId.
+             * <p>The business ID, which is a custom ID from your business system, used for integration purposes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;

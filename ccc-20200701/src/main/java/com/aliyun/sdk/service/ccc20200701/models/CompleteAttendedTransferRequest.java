@@ -103,7 +103,10 @@ public class CompleteAttendedTransferRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -112,6 +115,7 @@ public class CompleteAttendedTransferRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class CompleteAttendedTransferRequest extends Request {
         }
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class CompleteAttendedTransferRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID initiating the consultation transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

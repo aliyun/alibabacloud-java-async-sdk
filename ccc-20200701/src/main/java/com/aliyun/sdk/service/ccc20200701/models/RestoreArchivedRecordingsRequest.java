@@ -74,7 +74,10 @@ public class RestoreArchivedRecordingsRequest extends Request {
         } 
 
         /**
-         * ContactIds.
+         * <p>List of contact IDs, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;job-216750038017142784\&quot;]</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -83,6 +86,7 @@ public class RestoreArchivedRecordingsRequest extends Request {
         }
 
         /**
+         * <p>Cloud Contact Center instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

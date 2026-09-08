@@ -75,6 +75,7 @@ public class DeleteCallTagRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteCallTagRequest extends Request {
         }
 
         /**
+         * <p>The phone number tag name. Ensure that the tag you specify has already been created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

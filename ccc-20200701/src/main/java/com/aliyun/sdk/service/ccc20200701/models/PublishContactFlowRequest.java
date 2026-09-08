@@ -90,6 +90,7 @@ public class PublishContactFlowRequest extends Request {
         } 
 
         /**
+         * <p>The contact flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class PublishContactFlowRequest extends Request {
         }
 
         /**
+         * <p>The draft ID. This is the ID of the draft version that corresponds to the current contact flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class PublishContactFlowRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

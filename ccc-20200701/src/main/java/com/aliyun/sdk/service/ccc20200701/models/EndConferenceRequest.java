@@ -89,6 +89,7 @@ public class EndConferenceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class EndConferenceRequest extends Request {
         }
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class EndConferenceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID to leave the meeting. Optional. If not specified, defaults to the agent mapped to the current RAM account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

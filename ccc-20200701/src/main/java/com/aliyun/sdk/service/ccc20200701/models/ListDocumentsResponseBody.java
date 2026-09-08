@@ -119,7 +119,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +302,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The time when the schema was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T09:53:53Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -298,7 +313,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the schema is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -306,7 +324,12 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +337,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>schame id</p>
+             * <p>The schema ID.</p>
              * 
              * <strong>example:</strong>
              * <p>profile</p>
@@ -325,7 +348,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87b12784-8ce2-40b6-b21f-c49cb3b5501e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -333,7 +359,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The list of fields.</p>
              */
             public Builder properties(java.util.Map<String, DataSchemaPropertiesValue> properties) {
                 this.properties = properties;
@@ -341,7 +367,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the schema was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T09:53:53Z</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -434,7 +463,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Documents.
+             * <p>The list of documents.</p>
              */
             public Builder documents(java.util.List<java.util.Map<String, ?>> documents) {
                 this.documents = documents;
@@ -442,7 +471,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPageToken.
+             * <p>The token for the next page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54d1a616d95a4a01ba58967a9115b649</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;
@@ -450,7 +482,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>scheme</p>
+             * <p>The schema.</p>
              */
             public Builder schema(Schema schema) {
                 this.schema = schema;
@@ -458,7 +490,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

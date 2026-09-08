@@ -148,7 +148,10 @@ public class StartBack2BackCallRequest extends Request {
         } 
 
         /**
-         * AdditionalBroker.
+         * <p>Additional intermediate number. If this parameter is provided, the intermediate number specified by the Broker parameter is used to call the caller, and the number specified by this parameter is used to call the callee. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0102156****</p>
          */
         public Builder additionalBroker(String additionalBroker) {
             this.putQueryParameter("AdditionalBroker", additionalBroker);
@@ -157,6 +160,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
+         * <p>The intermediate number, which must be an active outbound number under the instance. This number is used to sequentially call the caller and the callee in a double-call scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +173,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
+         * <p>The callee number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +186,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
+         * <p>Caller number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +199,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +212,10 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Ingest endpoint data. It must not exceed 128 bytes and is primarily used for extension purposes. Ordinary customers do not need to concern themselves with it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -214,7 +224,10 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>The timeout for the dual-call, in seconds. If the call is not answered within the specified time, it will be automatically disconnected. This parameter is optional and defaults to 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);

@@ -106,7 +106,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF1C21B9-2D49-4B54-880F-FBE248C16903</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +268,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心的测试技能组。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,7 +279,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Display name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -272,7 +290,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -280,7 +301,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIDEO</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -288,7 +312,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +323,10 @@ public class GetSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID, in the format: skill group name\@instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;

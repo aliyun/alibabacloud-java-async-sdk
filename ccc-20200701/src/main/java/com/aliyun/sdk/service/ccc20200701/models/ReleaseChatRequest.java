@@ -117,7 +117,10 @@ public class ReleaseChatRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,6 +129,7 @@ public class ReleaseChatRequest extends Request {
         }
 
         /**
+         * <p>Job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,10 @@ public class ReleaseChatRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>Channel token for network services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3bjEn0YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jg************Hwej7WgWrmA=</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -147,7 +154,10 @@ public class ReleaseChatRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>User ID. Visitor ID or agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edbcf95a-ef9f-4296-a0a6-985ac9e36db3</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -156,6 +166,13 @@ public class ReleaseChatRequest extends Request {
         }
 
         /**
+         * <p>User type.</p>
+         * <ul>
+         * <li><p>CUSTOMER: visitor</p>
+         * </li>
+         * <li><p>AGENT: agent</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

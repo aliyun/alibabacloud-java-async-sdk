@@ -232,7 +232,10 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * AvatarUrl.
+         * <p>The URL of the agent\&quot;s profile picture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://abc.com/sam.jpg">http://abc.com/sam.jpg</a></p>
          */
         public Builder avatarUrl(String avatarUrl) {
             this.putQueryParameter("AvatarUrl", avatarUrl);
@@ -241,7 +244,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * DisplayId.
+         * <p>The agent\&quot;s ID number. Set this as needed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder displayId(String displayId) {
             this.putQueryParameter("DisplayId", displayId);
@@ -250,7 +256,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * <p>The display name of the agent. It must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -259,6 +269,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * <p>The email address of the agent. After the agent is created, an email is sent to this address. The email contains the logon URL for Cloud Contact Center, and the username and password for the RAM account. Keep this information secure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +282,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +295,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * <p>The logon name of the agent. It must be 4 to 64 characters in length and can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +308,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>The personal phone number of the agent. This number is used in OFF_SITE mode. The agent can use this number to answer calls in OFF_SITE mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1382114****</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -304,7 +320,16 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * NeedEmailNotification.
+         * <p>Specifies whether to send an email notification.</p>
+         * <ul>
+         * <li><p>true: Send</p>
+         * </li>
+         * <li><p>false: Do not send</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needEmailNotification(String needEmailNotification) {
             this.putQueryParameter("NeedEmailNotification", needEmailNotification);
@@ -313,7 +338,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Nickname.
+         * <p>The agent\&quot;s nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>老王</p>
          */
         public Builder nickname(String nickname) {
             this.putQueryParameter("Nickname", nickname);
@@ -322,7 +350,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * ResetPassword.
+         * <p>Specifies whether the agent must reset the password upon the first logon. If set to true, the agent is prompted to reset the password when they first log on to the RAM account. Otherwise, they are not prompted. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder resetPassword(Boolean resetPassword) {
             this.putQueryParameter("ResetPassword", resetPassword);
@@ -331,6 +362,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * <p>The role ID. The format is Role\@InstanceID. The following roles are supported: Admin (administrator), Manager (skill group leader), and Agent (agent).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +375,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * SkillLevelList.
+         * <p>A list of skill levels for skill groups. This is a string in the format of a JSON array. The array can contain up to 100 elements. Each element is an object that contains two fields: skillGroupId and skillLevel. For skillGroupId, enter the ID of the skill group to add. For skillLevel, enter the skill level to add. The value can range from 1 to 10. A smaller value indicates a higher skill level, meaning the agent can handle more calls per unit of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillGroupId&quot;:&quot;skillgroup1@ccc-test&quot;,&quot;skillLevel&quot;:1},{&quot;skillGroupId&quot;:&quot;skillgroup2@ccc-test&quot;,&quot;skillLevel&quot;:10}]</p>
          */
         public Builder skillLevelList(String skillLevelList) {
             this.putQueryParameter("SkillLevelList", skillLevelList);
@@ -352,7 +387,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * WorkMode.
+         * <p>The work mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
          */
         public Builder workMode(String workMode) {
             this.putQueryParameter("WorkMode", workMode);

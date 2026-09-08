@@ -106,7 +106,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -633,7 +645,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * AdditionalBroker.
+             * <p>An additional broker number, which may be used in double-call scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533128****</p>
              */
             public Builder additionalBroker(String additionalBroker) {
                 this.additionalBroker = additionalBroker;
@@ -641,7 +656,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentIds.
+             * <p>A list of agent IDs, with multiple values separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentIds(String agentIds) {
                 this.agentIds = agentIds;
@@ -649,7 +667,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentNames.
+             * <p>List of agent names involved in the call, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder agentNames(String agentNames) {
                 this.agentNames = agentNames;
@@ -657,7 +678,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Broker.
+             * <p>The intermediary number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533127****</p>
              */
             public Builder broker(String broker) {
                 this.broker = broker;
@@ -665,7 +689,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CallDuration.
+             * <p>Call duration. For inbound calls, timing starts when the call enters IVR. For outbound calls, timing starts when the call is connected. The unit is seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder callDuration(String callDuration) {
                 this.callDuration = callDuration;
@@ -673,7 +700,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CallIds.
+             * <p>The Call-Id field in the underlying SIP protocol. If you need to obtain the call ID from the number provider side, you can retrieve it from this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
              */
             public Builder callIds(String callIds) {
                 this.callIds = callIds;
@@ -681,7 +711,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>Called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1332315****</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -689,7 +722,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CalleeLocation.
+             * <p>The callee\&quot;s location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>山东省-济南</p>
              */
             public Builder calleeLocation(String calleeLocation) {
                 this.calleeLocation = calleeLocation;
@@ -697,7 +733,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CallerLocation.
+             * <p>Caller location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京市-北京</p>
              */
             public Builder callerLocation(String callerLocation) {
                 this.callerLocation = callerLocation;
@@ -705,7 +744,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>Calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533128****</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -713,7 +755,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactDisposition.
+             * <p>Reason for call termination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder contactDisposition(String contactDisposition) {
                 this.contactDisposition = contactDisposition;
@@ -721,7 +766,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-12515239414412****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -729,7 +777,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Outbound</p>
              */
             public Builder contactType(String contactType) {
                 this.contactType = contactType;
@@ -737,7 +788,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DialingTime.
+             * <p>Dial-up duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dialingTime(Long dialingTime) {
                 this.dialingTime = dialingTime;
@@ -745,7 +799,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EarlyMediaState.
+             * <p>Reason for failure to connect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotConnected</p>
              */
             public Builder earlyMediaState(String earlyMediaState) {
                 this.earlyMediaState = earlyMediaState;
@@ -753,7 +810,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EstablishedTime.
+             * <p>The time when the call was established. If the call was not established, this value is empty. The format is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532448000000</p>
              */
             public Builder establishedTime(Long establishedTime) {
                 this.establishedTime = establishedTime;
@@ -761,7 +821,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HeldTime.
+             * <p>The hold duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder heldTime(Long heldTime) {
                 this.heldTime = heldTime;
@@ -769,7 +832,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -777,7 +843,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IvrTime.
+             * <p>IVR duration, in seconds. This is the time interval from when the IVR starts until the call enters the agent queue (or the customer hangs up).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder ivrTime(Long ivrTime) {
                 this.ivrTime = ivrTime;
@@ -785,7 +854,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueTime.
+             * <p>The queue duration, in seconds, measured from when the customer entered the agent queue until the agent started ringing (or the customer abandoned the call, the queue timed out, or the queue overflowed).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queueTime(Long queueTime) {
                 this.queueTime = queueTime;
@@ -793,7 +865,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingDuration.
+             * <p>Recording duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recordingDuration(Long recordingDuration) {
                 this.recordingDuration = recordingDuration;
@@ -801,7 +876,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingReady.
+             * <p>Indicates whether the recording has been generated. Returns false if the call was not established.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder recordingReady(Boolean recordingReady) {
                 this.recordingReady = recordingReady;
@@ -809,7 +887,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party that ended the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -817,7 +898,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>Hang-up reason for the channel, indicating why the current channel was disconnected. The value is derived from response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the hang-up reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>486:USER_BUSY</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -825,7 +909,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The call end time, formatted as a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532707199000</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -833,7 +920,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RingTime.
+             * <p>Ring duration, which is the time from when the agent\&quot;s phone starts ringing until the agent answers (or the customer hangs up), in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder ringTime(Long ringTime) {
                 this.ringTime = ringTime;
@@ -841,7 +931,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionDescription.
+             * <p>The satisfaction description, corresponding to the configuration of the satisfaction module in the satisfaction IVR. This is defined by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>满意</p>
              */
             public Builder satisfactionDescription(String satisfactionDescription) {
                 this.satisfactionDescription = satisfactionDescription;
@@ -849,7 +942,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionIndex.
+             * <p>Satisfaction rating, represented as a single-digit numeric value entered by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder satisfactionIndex(Integer satisfactionIndex) {
                 this.satisfactionIndex = satisfactionIndex;
@@ -857,7 +953,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveyChannel.
+             * <p>The channel used for the satisfaction survey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IVR</p>
              */
             public Builder satisfactionSurveyChannel(String satisfactionSurveyChannel) {
                 this.satisfactionSurveyChannel = satisfactionSurveyChannel;
@@ -865,7 +964,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveyOffered.
+             * <p>Indicates whether a satisfaction survey was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder satisfactionSurveyOffered(Boolean satisfactionSurveyOffered) {
                 this.satisfactionSurveyOffered = satisfactionSurveyOffered;
@@ -873,7 +975,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupIds.
+             * <p>The IDs of the skill groups to which the agents participating in the call belong. Multiple skill group IDs are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupIds(String skillGroupIds) {
                 this.skillGroupIds = skillGroupIds;
@@ -881,7 +986,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupNames.
+             * <p>The names of the skill groups to which the agents participating in the call belong. Multiple skill group names are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder skillGroupNames(String skillGroupNames) {
                 this.skillGroupNames = skillGroupNames;
@@ -889,7 +997,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Call start time. For inbound calls, timing starts when the call enters IVR. For outbound calls, timing starts from dial-up. The format is a Unix string in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532448000000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -897,7 +1008,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTime.
+             * <p>Talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder talkTime(Long talkTime) {
                 this.talkTime = talkTime;
@@ -905,7 +1019,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * WaitTime.
+             * <p>The customer\&quot;s waiting duration, which equals QueueTime plus RingTime. If the customer abandons the call during waiting, the value is 0. The unit is seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder waitTime(Long waitTime) {
                 this.waitTime = waitTime;
@@ -998,7 +1115,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of call records.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1006,7 +1123,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1014,7 +1134,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1022,7 +1145,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count. A real numeric value is returned only when PageNumber is 1; otherwise, 0 is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

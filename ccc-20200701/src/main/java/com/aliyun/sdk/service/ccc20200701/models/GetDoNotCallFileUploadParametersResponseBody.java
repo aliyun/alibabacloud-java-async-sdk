@@ -119,7 +119,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>AccessKeyId used for signing.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -285,7 +303,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>Expiration time, formatted as a Unix timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647313420</p>
              */
             public Builder expireTime(Integer expireTime) {
                 this.expireTime = expireTime;
@@ -293,7 +314,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>Key of the OSS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test/blacklist.xlsx</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -301,7 +325,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>Endpoint domain name of OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -309,7 +336,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>Signature policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wMy0xNVQwMzowMzo0MC4zMTJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwidGVtcC9ibGFja2xpc3QvaW1wb3J0LzE1NzcyNDcxMTU0OTA0MDEvY2NjVjIta216LzIwMjIE1MTAwMzQwLyJd****</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -317,7 +347,10 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>Signature information of the temporary credential for file upload, used to authenticate validity during upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zi31STIMtIfa/UN2l+6lww****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;

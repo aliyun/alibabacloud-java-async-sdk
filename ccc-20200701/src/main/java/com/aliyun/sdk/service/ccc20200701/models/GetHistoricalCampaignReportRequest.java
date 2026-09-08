@@ -75,6 +75,7 @@ public class GetHistoricalCampaignReportRequest extends Request {
         } 
 
         /**
+         * <p>Predictive outbound call activity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetHistoricalCampaignReportRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

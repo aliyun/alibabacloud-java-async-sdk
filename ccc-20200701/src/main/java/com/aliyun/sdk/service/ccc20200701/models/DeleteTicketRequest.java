@@ -74,6 +74,7 @@ public class DeleteTicketRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteTicketRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d26b90a-c5d2-4b09-8219-********</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);

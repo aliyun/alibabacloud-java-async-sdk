@@ -132,6 +132,7 @@ public class HoldCallRequest extends Request {
         } 
 
         /**
+         * <p>Channel ID to be held.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>A unique ID provided by the agent endpoint to represent an agent workbench. An agent can have multiple workbenches of different types, such as browser, iOS, or Android, but only one can be active at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -153,6 +157,7 @@ public class HoldCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +170,7 @@ public class HoldCallRequest extends Request {
         }
 
         /**
+         * <p>Call job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +183,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * Music.
+         * <p>Name of the hold music. This parameter is optional and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder music(String music) {
             this.putQueryParameter("Music", music);
@@ -186,7 +195,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

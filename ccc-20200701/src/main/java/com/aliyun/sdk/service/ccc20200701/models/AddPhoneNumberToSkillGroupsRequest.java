@@ -90,6 +90,7 @@ public class AddPhoneNumberToSkillGroupsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class AddPhoneNumberToSkillGroupsRequest extends Request {
         }
 
         /**
+         * <p>Phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class AddPhoneNumberToSkillGroupsRequest extends Request {
         }
 
         /**
+         * <p>List of skill group IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

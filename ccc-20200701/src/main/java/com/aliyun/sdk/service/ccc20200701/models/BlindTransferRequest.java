@@ -287,7 +287,10 @@ public class BlindTransferRequest extends Request {
         } 
 
         /**
-         * CallPriority.
+         * <p>The queue priority when transferring to a skill group. Valid values are 0–9, where 0 is the highest priority and 9 is the lowest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder callPriority(Integer callPriority) {
             this.putQueryParameter("CallPriority", callPriority);
@@ -296,7 +299,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * ContactFlowVariables.
+         * <p>Variables passed to the contact flow. This field is optional. The variables configured here can be retrieved and used in the IVR flow. The format is a JSON string representing a set of key-value pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;王先生&quot;,&quot;time&quot;:&quot;19点20分&quot;,&quot;address&quot;:&quot;某某中心&quot;}</p>
          */
         public Builder contactFlowVariables(String contactFlowVariables) {
             this.putQueryParameter("ContactFlowVariables", contactFlowVariables);
@@ -305,7 +311,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -314,6 +323,7 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,6 +336,7 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,7 +349,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * QueuingOverflowThreshold.
+         * <p>The queuing overflow threshold when the transfer target is a skill group queue. The default value is 0, which means no overflow occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder queuingOverflowThreshold(Long queuingOverflowThreshold) {
             this.putQueryParameter("QueuingOverflowThreshold", queuingOverflowThreshold);
@@ -347,7 +361,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * QueuingTimeoutSeconds.
+         * <p>The queuing timeout duration in seconds when the transfer target is a skill group queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder queuingTimeoutSeconds(Long queuingTimeoutSeconds) {
             this.putQueryParameter("QueuingTimeoutSeconds", queuingTimeoutSeconds);
@@ -356,7 +373,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * RoutingType.
+         * <p>The call routing type. Valid values are Automatic or Manual. If this parameter is empty, the system defaults to Automatic routing, which is also the current default behavior of the system. When Manual routing is selected, you must invoke APIs such as ClaimCall to assign the call to a specific agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder routingType(String routingType) {
             this.putQueryParameter("RoutingType", routingType);
@@ -365,7 +385,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>Skill group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ee914df4-82bf-4919-bcb3-9cb8aa437f35</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
@@ -374,7 +397,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * <p>The policy name for agent assignment when transferring to a skill group queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MOST_IDLE，MOST_SKILLED，MOST_ACQUAINTED，CUSTOMIZED等</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -383,7 +409,14 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * StrategyParams.
+         * <p>The parameters for the agent assignment policy when transferring to a skill group queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>当分配策略为CUSTOMIZED时，本参数的内容为如下格式：
+         *  {
+         *   &quot;functionId&quot;: &quot;512fed64-e379-400f-a1a5-14d5730xxxxx&quot;,
+         *   &quot;functionName&quot;: &quot;routing-strategy-test-2&quot;
+         * }</p>
          */
         public Builder strategyParams(String strategyParams) {
             this.putQueryParameter("StrategyParams", strategyParams);
@@ -392,7 +425,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Ingest endpoint data, primarily used for extension purposes. Regular users do not need to concern themselves with this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5295578135#WAEtqY5U&amp;Biz_Package_Rexian_Zhuanjieanquanyungaojie_2527</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -401,7 +437,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Timeout duration for the direct transfer, in seconds. If the transferee does not answer within the specified time, the call is disconnected. This field is optional and defaults to 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -410,6 +449,7 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
+         * <p>The transfer recipient, which can be either an agent ID or a skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -422,7 +462,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * TransfereeType.
+         * <p>Destination type for the transfer. Valid values are AGENT, SKILL_GROUP, IVR, and EXTERNAL_NUMBER. If this parameter is not specified, the system determines the destination type based on the format of the target number. If the automatic detection is inaccurate, you must explicitly specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SKILL_GROUP</p>
          */
         public Builder transfereeType(String transfereeType) {
             this.putQueryParameter("TransfereeType", transfereeType);
@@ -431,7 +474,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * Transferor.
+         * <p>The transfer initiator. When the scenario involves directly transferring to an external number, the number specified by this parameter is used as the caller. This parameter is invalid when transferring to an internal agent or skill group; in such cases, the initiator is specified by the UserId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08314325****</p>
          */
         public Builder transferor(String transferor) {
             this.putQueryParameter("Transferor", transferor);
@@ -440,7 +486,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID that initiates a direct transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

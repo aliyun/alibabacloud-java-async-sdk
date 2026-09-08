@@ -74,7 +74,7 @@ public class ListCallSummariesRequest extends Request {
         } 
 
         /**
-         * ContactIdList.
+         * <p>List of call IDs.</p>
          */
         public Builder contactIdList(java.util.List<String> contactIdList) {
             String contactIdListShrink = shrink(contactIdList, "ContactIdList", "json");
@@ -84,6 +84,7 @@ public class ListCallSummariesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class GetSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service abnormal, the instance 0418 is ceased.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19D09CCC-F298-4124-849A-AFA217819011</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +302,10 @@ public class GetSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The time when the schema was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-14 10:48:43.0</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -298,7 +313,10 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the schema is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -306,7 +324,10 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户profile</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +335,7 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>schema id</p>
+             * <p>The ID of the schema.</p>
              * 
              * <strong>example:</strong>
              * <p>profile</p>
@@ -325,7 +346,10 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5e0964fd-951c-4e45-b518-d09d4d2db8ca</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -333,7 +357,7 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The list of fields.</p>
              */
             public Builder properties(java.util.Map<String, DataPropertiesValue> properties) {
                 this.properties = properties;
@@ -341,7 +365,10 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the schema was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-14 10:48:43.0</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

@@ -103,6 +103,7 @@ public class UpdateSchemaPropertyRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class UpdateSchemaPropertyRequest extends Request {
         }
 
         /**
-         * Property.
+         * <p>Field</p>
          */
         public Builder property(Property property) {
             String propertyShrink = shrink(property, "Property", "json");
@@ -125,7 +126,10 @@ public class UpdateSchemaPropertyRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -403,7 +407,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             } 
 
             /**
-             * Array.
+             * <p>Specifies whether the property is an array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -411,7 +418,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Attributes.
+             * <p>Extension attributes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;instanceId\&quot;:\&quot;4cc3f160-ca64-49ff-bc70-390a044a4e83\&quot;,\&quot;appId\&quot;:\&quot;1684145288664\&quot;,\&quot;commodityCode\&quot;:\&quot;dide_pre\&quot;,\&quot;dide_pre_set\&quot;:\&quot;version_ent\&quot;}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -419,6 +429,7 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
+             * <p>Data type</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -430,7 +441,12 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -438,7 +454,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Disabled.
+             * <p>Indicates whether the property is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -446,7 +465,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>Display name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>姓名</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -454,7 +476,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * DisplayOrder.
+             * <p>Display order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -462,7 +487,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * EditorType.
+             * <p>Editor type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textbox</p>
              */
             public Builder editorType(String editorType) {
                 this.editorType = editorType;
@@ -470,7 +498,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * MaxLength.
+             * <p>Maximum length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -478,7 +509,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Maximum.
+             * <p>Maximum value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder maximum(Double maximum) {
                 this.maximum = maximum;
@@ -486,7 +520,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * MinLength.
+             * <p>Minimum length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minLength(Integer minLength) {
                 this.minLength = minLength;
@@ -494,7 +531,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Minimum.
+             * <p>Minimum value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10800</p>
              */
             public Builder minimum(Double minimum) {
                 this.minimum = minimum;
@@ -502,6 +542,7 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
+             * <p>Name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -513,7 +554,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Pattern.
+             * <p>Regular expression validation rule</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(.*)</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -521,7 +565,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * PatternErrorMessage.
+             * <p>Regular expression validation error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>不是有效的email地址</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -529,7 +576,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * ReadOnly.
+             * <p>Read-only</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -537,7 +587,10 @@ public class UpdateSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>Required</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;

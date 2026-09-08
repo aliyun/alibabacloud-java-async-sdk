@@ -93,7 +93,10 @@ public class GetCampaignResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -117,7 +123,10 @@ public class GetCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -456,7 +465,10 @@ public class GetCampaignResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualEndTime.
+             * <p>The actual end time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634008800000</p>
              */
             public Builder actualEndTime(Long actualEndTime) {
                 this.actualEndTime = actualEndTime;
@@ -464,7 +476,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * ActualStartTime.
+             * <p>The actual start time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634000460000</p>
              */
             public Builder actualStartTime(Long actualStartTime) {
                 this.actualStartTime = actualStartTime;
@@ -472,7 +487,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CampaignId.
+             * <p>The ID of the predictive outbound campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6badb397-a8b5-40b6-21019d382a09</p>
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -480,7 +498,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CasesAborted.
+             * <p>The number of aborted contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder casesAborted(Long casesAborted) {
                 this.casesAborted = casesAborted;
@@ -488,7 +509,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CasesConnected.
+             * <p>The number of connected contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder casesConnected(Long casesConnected) {
                 this.casesConnected = casesConnected;
@@ -496,7 +520,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CasesUncompleted.
+             * <p>The number of uncompleted contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder casesUncompleted(Long casesUncompleted) {
                 this.casesUncompleted = casesUncompleted;
@@ -512,7 +539,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CasesUncompletedAfterAttempted.
+             * <p>The number of attempted but unconnected contacts that are still eligible for redial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder casesUncompletedAfterAttempted(Long casesUncompletedAfterAttempted) {
                 this.casesUncompletedAfterAttempted = casesUncompletedAfterAttempted;
@@ -520,7 +550,7 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionRate.
+             * <p>The ratio of connected contacts to the total number of contacts.</p>
              */
             public Builder completionRate(Float completionRate) {
                 this.completionRate = completionRate;
@@ -528,7 +558,7 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * ContactFlowId.
+             * <p>The ID of the associated Contact Flow.</p>
              */
             public Builder contactFlowId(String contactFlowId) {
                 this.contactFlowId = contactFlowId;
@@ -536,7 +566,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAttemptCount.
+             * <p>The maximum number of call attempts for each contact. If an attempt fails, the contact is redialed until this limit is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxAttemptCount(Long maxAttemptCount) {
                 this.maxAttemptCount = maxAttemptCount;
@@ -544,7 +577,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * MinAttemptInterval.
+             * <p>The minimum interval, in seconds, to wait before redialing a failed call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minAttemptInterval(Long minAttemptInterval) {
                 this.minAttemptInterval = minAttemptInterval;
@@ -552,7 +588,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the predictive outbound campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-campaign</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -560,7 +599,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * PlanedEndTime.
+             * <p>The planned end time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634054400000</p>
              */
             public Builder planedEndTime(Long planedEndTime) {
                 this.planedEndTime = planedEndTime;
@@ -568,7 +610,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * PlanedStartTime.
+             * <p>The planned start time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633968000000</p>
              */
             public Builder planedStartTime(Long planedStartTime) {
                 this.planedStartTime = planedStartTime;
@@ -576,7 +621,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * <p>The ID of the associated skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder queueId(String queueId) {
                 this.queueId = queueId;
@@ -584,7 +632,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The name of the associated skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -592,7 +643,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * Simulation.
+             * <p>Indicates whether the campaign is a test simulation. This parameter is not intended for production use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder simulation(Boolean simulation) {
                 this.simulation = simulation;
@@ -600,7 +654,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * SimulationParameters.
+             * <p>The parameters for a test simulation. This parameter is not intended for production use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder simulationParameters(String simulationParameters) {
                 this.simulationParameters = simulationParameters;
@@ -608,7 +665,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the predictive outbound campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -616,7 +676,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyParameters.
+             * <p>The strategy parameters for the predictive outbound campaign, in JSON format. For a <code>PID</code> strategy, the format is <code>{&quot;abandonRate&quot;:&quot;5&quot;,&quot;historicalConnectedRate&quot;:&quot;35&quot;}</code>. For a <code>PACING</code> strategy, the format is <code>{&quot;ratio&quot;:1}</code>. <code>abandonRate</code> specifies the target abandon rate, <code>historicalConnectedRate</code> specifies the historical connection rate for reference, and <code>ratio</code> specifies the fixed dialing ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ratio&quot;:1}</p>
              */
             public Builder strategyParameters(String strategyParameters) {
                 this.strategyParameters = strategyParameters;
@@ -624,7 +687,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyType.
+             * <p>The dialing strategy for the predictive outbound campaign.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PACING</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
@@ -632,7 +698,10 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCases.
+             * <p>The total number of contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCases(Long totalCases) {
                 this.totalCases = totalCases;

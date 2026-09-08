@@ -75,6 +75,7 @@ public class GetAudioFileRequest extends Request {
         } 
 
         /**
+         * <p>Audio resource ID, the UUID of the audio file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetAudioFileRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

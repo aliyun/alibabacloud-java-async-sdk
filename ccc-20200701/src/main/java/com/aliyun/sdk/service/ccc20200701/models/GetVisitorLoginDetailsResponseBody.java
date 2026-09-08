@@ -119,7 +119,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Parameter information.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19D09CCC-F298-4124-849A-AFA217819011</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +289,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChatAppId.
+             * <p>Chat session application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7pjxxx</p>
              */
             public Builder chatAppId(String chatAppId) {
                 this.chatAppId = chatAppId;
@@ -285,7 +300,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatAppKey.
+             * <p>Chat session application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>955e4bd7xxxxxxxxxxxxxd7898ba9fa0d0</p>
              */
             public Builder chatAppKey(String chatAppKey) {
                 this.chatAppKey = chatAppKey;
@@ -293,7 +311,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatDeviceId.
+             * <p>Chat device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4c51c9116c36537cb850dc1081d745df</p>
              */
             public Builder chatDeviceId(String chatDeviceId) {
                 this.chatDeviceId = chatDeviceId;
@@ -301,7 +322,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatLoginToken.
+             * <p>Chat session login token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;accessToken&quot;:&quot;oauth_cloud_key:+4oJXUAFSWxGD2YuRW4V/oUN0/8qJGNc0I<em><strong><strong><strong><strong>n1E3DOr3Q3lX00ZnTpyqRi8Y6hYoLYA7n2ZkWuv485hVtXeSgnIQkKxXPbMgwoLxWaK//lI5Dn/mb4YuDifigv+ZyFzc+07vxm9ZFu/NjA==&quot;,&quot;accessTokenExpiredTime&quot;:86400000,&quot;refreshToken&quot;:&quot;oauth_cloud_key:/U+8UueDmpeUszhXC+SWow4pNLZp2C</strong></strong></strong></strong></em>**U/377BNXF+Mjo1lFgDk6GtEjNNoJpapX2mHH8GcRke2+yKQs/w4gAN9xSMn543Ciung+93pXV6IpQGbEVlu&quot;}</p>
              */
             public Builder chatLoginToken(String chatLoginToken) {
                 this.chatLoginToken = chatLoginToken;
@@ -309,7 +333,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatServerUrl.
+             * <p>Chat session server address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wss://wss.im.dingtalk.cn</p>
              */
             public Builder chatServerUrl(String chatServerUrl) {
                 this.chatServerUrl = chatServerUrl;
@@ -317,7 +344,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatUserId.
+             * <p>Visitor\&quot;s identity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dac9c001****a15684ea91a81317</p>
              */
             public Builder chatUserId(String chatUserId) {
                 this.chatUserId = chatUserId;

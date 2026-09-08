@@ -119,7 +119,10 @@ public class InterceptCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>响应码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class InterceptCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class InterceptCallResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class InterceptCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class InterceptCallResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class InterceptCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -381,7 +393,10 @@ public class InterceptCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERCEPT</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -389,7 +404,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelFlags.
+             * <p>话务通道标志。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder channelFlags(String channelFlags) {
                 this.channelFlags = channelFlags;
@@ -397,7 +415,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>话务通道 ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -405,7 +426,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelState.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_CallType_enumValueTitles_COACH]Coaching</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANSWERED</p>
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
@@ -413,7 +437,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_CallType_enumValueTitles_BARGE]Barge-in</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -421,7 +448,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>An auto-incremented ID assigned by the system. Customers do not need to concern themselves with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -429,7 +459,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>通话 ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -437,7 +470,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>话务通道的主叫方。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -445,7 +481,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_CallType_type]string</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -453,7 +492,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>话务通道的挂断原因，表示当前话务通道为什么会被挂断，取值来自 SIP 协议中定义的响应码，请客户参考 SIP 协议分析挂断原因。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404 - No destination</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -461,7 +503,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>话务通道关联的技能组 ID，呼入场景下，关联的技能组 ID 由 IVR 中转人工模块配置的技能组决定，呼出场景下，关联的技能组 ID 为座席签入的第一个技能组的 ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -469,7 +514,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>话务通道最近一次状态变化的时间戳，格式是 Unix 时间戳，单位毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609138903315</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -477,7 +525,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>话务通道关联的坐席的分机号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -485,7 +536,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>话务通道关联的坐席 ID，如果是客户的话务通道，该字段为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -578,7 +632,10 @@ public class InterceptCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERCEPT</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -586,7 +643,7 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelContexts.
+             * <p>The list of channels.</p>
              */
             public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
@@ -594,7 +651,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -602,7 +662,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -812,7 +875,10 @@ public class InterceptCallResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent call rejection). There are no restrictions on Custom-defined status codes, and customers can define them according to their business needs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -820,7 +886,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -828,7 +897,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -836,7 +908,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Heartbeat.
+             * <p>The time when the last heartbeat was received from the agent, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder heartbeat(Long heartbeat) {
                 this.heartbeat = heartbeat;
@@ -844,7 +919,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -852,7 +930,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -860,7 +941,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1324730****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -868,7 +952,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -876,7 +963,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * <p>The time when the agent was most recently reserved. Being reserved means an incoming call will be assigned to the agent shortly. The format is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder reserved(Long reserved) {
                 this.reserved = reserved;
@@ -884,7 +974,7 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>List of skill group IDs that the agent has signed into.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -892,7 +982,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -900,7 +993,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>Agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TALKING</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -908,7 +1004,10 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -975,7 +1074,7 @@ public class InterceptCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallContext.
+             * <p>Call context environment.</p>
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
@@ -983,7 +1082,7 @@ public class InterceptCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>Agent context environment.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

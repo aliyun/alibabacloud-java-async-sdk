@@ -106,7 +106,10 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * CaseFileKey.
+             * <p>The key of the OSS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test/namelist.csv</p>
              */
             public Builder caseFileKey(String caseFileKey) {
                 this.caseFileKey = caseFileKey;
@@ -212,7 +227,10 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>A pre-signed OSS file upload URL for uploading the file. The validity period is one hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
              */
             public Builder url(String url) {
                 this.url = url;

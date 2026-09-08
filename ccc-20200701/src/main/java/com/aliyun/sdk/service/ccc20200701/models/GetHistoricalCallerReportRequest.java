@@ -105,6 +105,7 @@ public class GetHistoricalCallerReportRequest extends Request {
         } 
 
         /**
+         * <p>Calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
+         * <p>Start time of the query, formatted as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
+         * <p>End time of the query, formatted as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

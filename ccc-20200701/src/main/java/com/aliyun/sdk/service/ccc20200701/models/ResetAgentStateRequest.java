@@ -88,7 +88,10 @@ public class ResetAgentStateRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>A string that identifies the device. The value is not processed by the system and can be any string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -97,6 +100,7 @@ public class ResetAgentStateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Cloud Call Center (CCC) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class ResetAgentStateRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the agent. This parameter is optional. If omitted, the agent mapped to the current RAM account is reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

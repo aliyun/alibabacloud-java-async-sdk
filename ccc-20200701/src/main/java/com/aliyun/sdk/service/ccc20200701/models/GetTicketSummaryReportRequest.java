@@ -200,7 +200,10 @@ public class GetTicketSummaryReportRequest extends Request {
         } 
 
         /**
-         * Assignee.
+         * <p>Assignee ID. This can be an agent ID or a skill group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assignee@ccc-test</p>
          */
         public Builder assignee(String assignee) {
             this.putQueryParameter("Assignee", assignee);
@@ -209,7 +212,16 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * AssigneeType.
+         * <p>Assignee type.</p>
+         * <ul>
+         * <li><p>Agent</p>
+         * </li>
+         * <li><p>SkillGroup</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent</p>
          */
         public Builder assigneeType(String assigneeType) {
             this.putQueryParameter("AssigneeType", assigneeType);
@@ -218,7 +230,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>Ticket category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43c2671b-<em><strong>-</strong></em>-86d0-6bd187905cc8</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -227,7 +242,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>Creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>creator@ccc-test</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -236,7 +254,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time. Filter tickets by creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719590399999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -245,6 +266,7 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +279,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -266,7 +291,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -275,7 +303,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * Participant.
+         * <p>Participant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>participant@ccc-test</p>
          */
         public Builder participant(String participant) {
             this.putQueryParameter("Participant", participant);
@@ -284,7 +315,10 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time. Filter tickets by creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716998400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -293,7 +327,20 @@ public class GetTicketSummaryReportRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Ticket state.</p>
+         * <ul>
+         * <li><p>Processing</p>
+         * </li>
+         * <li><p>Withdrawal</p>
+         * </li>
+         * <li><p>Rejected</p>
+         * </li>
+         * <li><p>Closed</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

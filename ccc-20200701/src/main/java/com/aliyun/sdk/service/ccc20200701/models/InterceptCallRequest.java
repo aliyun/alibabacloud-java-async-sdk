@@ -133,7 +133,10 @@ public class InterceptCallRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled in with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -142,6 +145,7 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
+         * <p>实例 ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +158,7 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
+         * <p>The agent ID that is forcibly disconnected.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +171,7 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +184,10 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>强拆超时时间，经过指定的时间强拆仍未成功，则取消强拆，正常情况下，强拆操作会马上成功，设置超时时间是为了防止异常发生，此字段选填，默认 30，单位秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);
@@ -187,7 +196,10 @@ public class InterceptCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>发起强拆的坐席。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

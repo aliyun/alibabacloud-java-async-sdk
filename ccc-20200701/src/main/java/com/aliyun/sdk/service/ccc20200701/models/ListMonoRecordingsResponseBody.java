@@ -106,7 +106,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of recording information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E836EF2A-EDAE-5310-8921-F983C967D42D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -295,7 +307,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -303,7 +318,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -311,7 +329,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-25920271311543****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -319,7 +340,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the recording in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5903871</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -327,7 +351,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -335,7 +362,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The Object Storage Service (OSS) download URL for the recording file. Note that the download URL is valid for one day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav?Expires=1657014031&OSSAccessKeyId=****&Signature=">https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav?Expires=1657014031&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -343,7 +373,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * RamId.
+             * <p>The ID of the Resource Access Management (RAM) account that corresponds to the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26972543893791****</p>
              */
             public Builder ramId(String ramId) {
                 this.ramId = ramId;
@@ -351,7 +384,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -359,7 +395,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the recording. This is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620259200000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

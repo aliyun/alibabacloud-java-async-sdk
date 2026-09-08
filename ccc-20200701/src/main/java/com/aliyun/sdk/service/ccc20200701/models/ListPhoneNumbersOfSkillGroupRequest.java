@@ -148,7 +148,10 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         } 
 
         /**
-         * Active.
+         * <p>Indicates whether the phone number is active. This parameter is optional. The default value is empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.putQueryParameter("Active", active);
@@ -157,6 +160,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +173,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether the phone numbers are associated with the skill group. If true, the API queries the list of phone numbers already associated with the specified SkillGroupId. If false, the API queries the list of phone numbers that can be associated with the specified SkillGroupId but are not currently associated. This parameter is typically used together with the AddNumbersToSkillGroup API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +186,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Page number for paging. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +199,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Page size for paging. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +212,10 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Performs Fuzzy Matching on phone numbers. This parameter is optional. The default value is empty, which means no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0833</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -214,6 +224,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

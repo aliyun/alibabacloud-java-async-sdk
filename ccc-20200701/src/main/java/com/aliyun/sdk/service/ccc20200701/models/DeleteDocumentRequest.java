@@ -104,6 +104,7 @@ public class DeleteDocumentRequest extends Request {
         } 
 
         /**
+         * <p>The document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -137,7 +142,7 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
-         * <p>schema id</p>
+         * <p>The schema ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

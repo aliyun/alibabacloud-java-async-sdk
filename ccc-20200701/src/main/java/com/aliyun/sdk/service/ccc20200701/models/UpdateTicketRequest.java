@@ -117,7 +117,10 @@ public class UpdateTicketRequest extends Request {
         } 
 
         /**
-         * Context.
+         * <p>The ticket form information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;productName&quot;:&quot;玩具1&quot;}</p>
          */
         public Builder context(String context) {
             this.putQueryParameter("Context", context);
@@ -126,7 +129,10 @@ public class UpdateTicketRequest extends Request {
         }
 
         /**
-         * CustomerId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51e155ce-<em><strong>-</strong></em>*-b402-13c69597b920</p>
          */
         public Builder customerId(String customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -135,6 +141,7 @@ public class UpdateTicketRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class UpdateTicketRequest extends Request {
         }
 
         /**
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class UpdateTicketRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The ticket title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

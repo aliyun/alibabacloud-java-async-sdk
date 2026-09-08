@@ -297,6 +297,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</p>
+     * 
      * @param request the request parameters of AnalyzeConversation  AnalyzeConversationRequest
      * @return AnalyzeConversationResponse
      */
@@ -351,7 +354,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.  * @param request  the request parameters of AssignUsers  AssignUsersRequest
+     * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.  * @description Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\\://ram.console.aliyun.com/users.
+     * 
+     * @param request the request parameters of AssignUsers  AssignUsersRequest
      * @return AssignUsersResponse
      */
     @Deprecated
@@ -767,6 +772,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</p>
+     * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -2247,6 +2255,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</p>
+     * 
      * @param request the request parameters of ListCallDetailRecords  ListCallDetailRecordsRequest
      * @return ListCallDetailRecordsResponse
      */
@@ -2265,6 +2276,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</p>
+     * 
      * @param request the request parameters of ListCallDetailRecordsV2  ListCallDetailRecordsV2Request
      * @return ListCallDetailRecordsV2Response
      */
@@ -2662,6 +2676,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</p>
+     * 
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -2934,6 +2951,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</p>
+     * 
      * @param request the request parameters of ListPersonalNumbersOfUser  ListPersonalNumbersOfUserRequest
      * @return ListPersonalNumbersOfUserResponse
      */
@@ -2970,6 +2990,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</p>
+     * 
      * @param request the request parameters of ListPhoneNumbersOfSkillGroup  ListPhoneNumbersOfSkillGroupRequest
      * @return ListPhoneNumbersOfSkillGroupResponse
      */
@@ -3006,6 +3029,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</p>
+     * 
      * @param request the request parameters of ListRamUsers  ListRamUsersRequest
      * @return ListRamUsersResponse
      */
@@ -4250,6 +4276,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</p>
+     * 
      * @param request the request parameters of StartBack2BackCall  StartBack2BackCallRequest
      * @return StartBack2BackCallResponse
      */
@@ -4322,6 +4351,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+     * For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+     * Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</p>
+     * 
      * @param request the request parameters of StartPredictiveCall  StartPredictiveCallRequest
      * @return StartPredictiveCallResponse
      */

@@ -106,7 +106,10 @@ public class ImportAdminsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImportAdminsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>A list of imported admins.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImportAdminsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ImportAdminsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ImportAdminsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CDB5C94-ACFB-59B5-85FE-C1DAF8049C63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +255,10 @@ public class ImportAdminsResponseBody extends TeaModel {
             } 
 
             /**
-             * Extension.
+             * <p>The agent extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8021****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -251,7 +266,10 @@ public class ImportAdminsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +277,10 @@ public class ImportAdminsResponseBody extends TeaModel {
             }
 
             /**
-             * RamId.
+             * <p>The UID of the Alibaba Cloud RAM account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26972543893791****</p>
              */
             public Builder ramId(String ramId) {
                 this.ramId = ramId;
@@ -267,7 +288,10 @@ public class ImportAdminsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin@ccc-test</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -275,7 +299,10 @@ public class ImportAdminsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

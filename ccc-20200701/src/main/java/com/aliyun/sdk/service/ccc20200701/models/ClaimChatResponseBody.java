@@ -119,7 +119,10 @@ public class ClaimChatResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ClaimChatResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ClaimChatResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ClaimChatResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ClaimChatResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ClaimChatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -303,7 +315,10 @@ public class ClaimChatResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessChannelId.
+             * <p>Network service channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>226****-cbb6-****-8fea-1e71baf7bfa7</p>
              */
             public Builder accessChannelId(String accessChannelId) {
                 this.accessChannelId = accessChannelId;
@@ -311,7 +326,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * AccessChannelName.
+             * <p>Network service channel name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试渠道</p>
              */
             public Builder accessChannelName(String accessChannelName) {
                 this.accessChannelName = accessChannelName;
@@ -319,7 +337,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * AccessChannelType.
+             * <p>Network service channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Web</p>
              */
             public Builder accessChannelType(String accessChannelType) {
                 this.accessChannelType = accessChannelType;
@@ -327,7 +348,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * BeingAssigned.
+             * <p>Whether the session has been assigned to an agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder beingAssigned(Boolean beingAssigned) {
                 this.beingAssigned = beingAssigned;
@@ -335,7 +359,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * CallVariables.
+             * <p>Call variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder callVariables(String callVariables) {
                 this.callVariables = callVariables;
@@ -343,7 +370,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * ChatType.
+             * <p>Session type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INBOUND</p>
              */
             public Builder chatType(String chatType) {
                 this.chatType = chatType;
@@ -351,7 +381,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -359,7 +392,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-65382141036853491</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -582,7 +618,10 @@ public class ClaimChatResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -590,7 +629,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC-169.254.165.2-browser125.0.0-bs48b41903450e6c8</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -598,7 +640,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceState.
+             * <p>Device state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder deviceState(String deviceState) {
                 this.deviceState = deviceState;
@@ -606,7 +651,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -614,7 +662,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * Heartbeat.
+             * <p>Time of the agent\&quot;s last heartbeat, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder heartbeat(Long heartbeat) {
                 this.heartbeat = heartbeat;
@@ -622,7 +673,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -630,7 +684,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-65382141036853491</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -638,7 +695,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>Agent\&quot;s personal phone number. Not applicable for chat scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18******102</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -646,7 +706,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Outbound call scenario only. Not applicable for chat services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -654,7 +717,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * <p>Time when the agent was last reserved, in Unix timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder reserved(Long reserved) {
                 this.reserved = reserved;
@@ -662,7 +728,7 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>List of skill group IDs the agent is signed into.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -670,7 +736,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userId@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -678,7 +747,25 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>Agent state.</p>
+             * <p>Enumerated values:</p>
+             * <ul>
+             * <li><p>READY: Idle.</p>
+             * </li>
+             * <li><p>WORKING: Post-call processing.</p>
+             * </li>
+             * <li><p>BREAK: Break.</p>
+             * </li>
+             * <li><p>OFFLINE: Offline.</p>
+             * </li>
+             * <li><p>TALKING: Chatting.</p>
+             * </li>
+             * <li><p>RINGING: Incoming chat.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TALKING</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -686,7 +773,19 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode. Not applicable for chat scenarios.</p>
+             * <p>Enumerated values:</p>
+             * <ul>
+             * <li><p>ON_SITE: On-site mode.</p>
+             * </li>
+             * <li><p>OFF_SITE: Off-site mode.</p>
+             * </li>
+             * <li><p>OFFICE_PHONE: Office phone mode.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -766,7 +865,7 @@ public class ClaimChatResponseBody extends TeaModel {
             } 
 
             /**
-             * ChatContexts.
+             * <p>Session context.</p>
              */
             public Builder chatContexts(java.util.List<ChatContexts> chatContexts) {
                 this.chatContexts = chatContexts;
@@ -774,7 +873,10 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * ContextId.
+             * <p>System auto-increment ID. Customers do not need to be concerned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder contextId(Long contextId) {
                 this.contextId = contextId;
@@ -782,7 +884,7 @@ public class ClaimChatResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>Agent context.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

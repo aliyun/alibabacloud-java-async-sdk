@@ -105,6 +105,7 @@ public class UpdateConfigItemsRequest extends Request {
         } 
 
         /**
+         * <p>A JSON-formatted string representing an array of configuration items. Each object in the array must contain a name to identify the configuration item and its value. You can use system-defined items (which have fixed names and customizable values, such as agent permissions to hang up or the ring no answer timeout) or create custom items.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class UpdateConfigItemsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class UpdateConfigItemsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the object to be configured.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class UpdateConfigItemsRequest extends Request {
         }
 
         /**
+         * <p>The type of the object to be configured.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

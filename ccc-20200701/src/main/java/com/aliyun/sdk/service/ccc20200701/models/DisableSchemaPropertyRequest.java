@@ -104,6 +104,7 @@ public class DisableSchemaPropertyRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
+         * <p>Field name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -137,7 +142,7 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>schema id</p>
+         * <p>Schema ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

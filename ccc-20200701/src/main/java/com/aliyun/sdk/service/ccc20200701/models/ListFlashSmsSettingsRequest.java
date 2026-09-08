@@ -118,6 +118,7 @@ public class ListFlashSmsSettingsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the CC instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListFlashSmsSettingsRequest extends Request {
         }
 
         /**
+         * <p>The page number. The value ranges from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListFlashSmsSettingsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. The value ranges from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class ListFlashSmsSettingsRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>A list of skill group IDs.</p>
          */
         public Builder skillGroupIdList(java.util.List<String> skillGroupIdList) {
             String skillGroupIdListShrink = shrink(skillGroupIdList, "SkillGroupIdList", "json");
@@ -164,7 +167,10 @@ public class ListFlashSmsSettingsRequest extends Request {
         }
 
         /**
-         * SkillGroupName.
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>闪信测试技能组</p>
          */
         public Builder skillGroupName(String skillGroupName) {
             this.putQueryParameter("SkillGroupName", skillGroupName);

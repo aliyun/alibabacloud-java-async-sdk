@@ -117,7 +117,10 @@ public class ReleaseCallRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * <p>Channel ID of the call to hang up. This parameter is optional. If not specified, it defaults to the channel where the agent corresponding to the UserId is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-6538214103685****</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -126,7 +129,10 @@ public class ReleaseCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -135,6 +141,7 @@ public class ReleaseCallRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class ReleaseCallRequest extends Request {
         }
 
         /**
+         * <p>Call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class ReleaseCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Agent ID. If not specified, the agent mapped to the current Resource Access Management (RAM) user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

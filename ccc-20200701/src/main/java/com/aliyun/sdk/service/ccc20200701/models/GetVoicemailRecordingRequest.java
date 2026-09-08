@@ -75,6 +75,7 @@ public class GetVoicemailRecordingRequest extends Request {
         } 
 
         /**
+         * <p>Call ID. Ensure that this call ID has a voicemail message; otherwise, the return result will contain no data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetVoicemailRecordingRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

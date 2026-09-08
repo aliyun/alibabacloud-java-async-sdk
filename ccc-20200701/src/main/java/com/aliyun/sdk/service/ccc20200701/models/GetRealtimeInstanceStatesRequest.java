@@ -74,6 +74,7 @@ public class GetRealtimeInstanceStatesRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetRealtimeInstanceStatesRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>Media type. The default is audio (AUDIO).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDIO</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);

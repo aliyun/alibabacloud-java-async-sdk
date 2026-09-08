@@ -105,6 +105,7 @@ public class ListIvrTrackingDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ListIvrTrackingDetailsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ListIvrTrackingDetailsRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ListIvrTrackingDetailsRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

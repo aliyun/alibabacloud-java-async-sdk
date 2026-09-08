@@ -75,6 +75,7 @@ public class SubmitCampaignRequest extends Request {
         } 
 
         /**
+         * <p>The predictive outbound calling activity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class SubmitCampaignRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

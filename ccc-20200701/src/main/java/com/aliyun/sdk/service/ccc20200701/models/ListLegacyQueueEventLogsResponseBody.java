@@ -119,7 +119,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A5A8998-41F9-5F85-BFCF-EB2B6E376812</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the invocation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +357,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Acid.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456328****</p>
              */
             public Builder acid(String acid) {
                 this.acid = acid;
@@ -350,7 +368,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Ani.
+             * <p>Calling party</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8012****</p>
              */
             public Builder ani(String ani) {
                 this.ani = ani;
@@ -358,7 +379,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerPhone.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder answerPhone(String answerPhone) {
                 this.answerPhone = answerPhone;
@@ -366,7 +390,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerTime.
+             * <p>Acknowledgement duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder answerTime(Long answerTime) {
                 this.answerTime = answerTime;
@@ -374,7 +401,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Cause.
+             * <p>Hang-up reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>正常</p>
              */
             public Builder cause(String cause) {
                 this.cause = cause;
@@ -382,7 +412,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Dnis.
+             * <p>Dialed number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312211****</p>
              */
             public Builder dnis(String dnis) {
                 this.dnis = dnis;
@@ -390,7 +423,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Primary key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109160</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -398,7 +434,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueTime.
+             * <p>Queue duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder queueTime(Long queueTime) {
                 this.queueTime = queueTime;
@@ -406,7 +445,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticDate.
+             * <p>Statistics date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-03T10:15:30</p>
              */
             public Builder statisticDate(String statisticDate) {
                 this.statisticDate = statisticDate;
@@ -414,7 +456,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc3733</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -422,7 +467,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Vq.
+             * <p>Queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder vq(String vq) {
                 this.vq = vq;
@@ -515,7 +563,7 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of queue event logs.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -523,7 +571,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -531,7 +582,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -539,7 +593,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

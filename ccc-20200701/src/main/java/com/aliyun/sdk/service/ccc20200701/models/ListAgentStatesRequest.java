@@ -144,7 +144,10 @@ public class ListAgentStatesRequest extends Request {
         } 
 
         /**
-         * AgentIds.
+         * <p>Filters by a list of agent IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentIds(String agentIds) {
             this.putQueryParameter("AgentIds", agentIds);
@@ -153,7 +156,10 @@ public class ListAgentStatesRequest extends Request {
         }
 
         /**
-         * ExcludeOfflineUsers.
+         * <p>Filters out offline agents. This parameter is fixed to true and does not support false at present.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder excludeOfflineUsers(Boolean excludeOfflineUsers) {
             this.putQueryParameter("ExcludeOfflineUsers", excludeOfflineUsers);
@@ -162,6 +168,7 @@ public class ListAgentStatesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +181,10 @@ public class ListAgentStatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,7 +193,10 @@ public class ListAgentStatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, ranging from 1 to 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +205,10 @@ public class ListAgentStatesRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>Filters by skill group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
@@ -201,7 +217,10 @@ public class ListAgentStatesRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Filters agents by status. Only a single status can be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

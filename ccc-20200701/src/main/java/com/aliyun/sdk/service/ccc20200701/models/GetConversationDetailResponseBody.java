@@ -106,7 +106,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class GetConversationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Phrases.
+         * <p>List of conversations.</p>
          */
         public Builder phrases(java.util.List<Phrases> phrases) {
             this.phrases = phrases;
@@ -138,7 +147,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E407F9B-A278-52A0-B193-3EE5471D7A87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +268,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The offset of the sentence start time relative to the session start time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -264,7 +279,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The offset of the sentence end time relative to the session start time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -272,7 +290,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Finished.
+             * <p>Is finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder finished(Boolean finished) {
                 this.finished = finished;
@@ -280,7 +301,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>The ARN of the role. The system uses this identifier internally to identify the role. This parameter does not require management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder identity(String identity) {
                 this.identity = identity;
@@ -288,7 +312,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -296,7 +323,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>Conversation text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>欢迎致电云联络中心</p>
              */
             public Builder words(String words) {
                 this.words = words;

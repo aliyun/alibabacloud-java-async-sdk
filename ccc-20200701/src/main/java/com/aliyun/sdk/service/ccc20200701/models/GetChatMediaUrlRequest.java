@@ -89,6 +89,7 @@ public class GetChatMediaUrlRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class GetChatMediaUrlRequest extends Request {
         }
 
         /**
-         * <p>media id</p>
+         * <p>Media ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class GetChatMediaUrlRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);

@@ -90,6 +90,7 @@ public class RemovePhoneNumberFromSkillGroupsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class RemovePhoneNumberFromSkillGroupsRequest extends Request {
         }
 
         /**
+         * <p>The phone number to detach.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class RemovePhoneNumberFromSkillGroupsRequest extends Request {
         }
 
         /**
+         * <p>List of skill group IDs to detach. Ensure that each skill group is already associated with the phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class ListRamUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListRamUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListRamUsersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListRamUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListRamUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListRamUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24753D71-C91D-1A38-A8AD-372BF12453F6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +302,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunUid.
+             * <p>The UID of the Alibaba Cloud account to which the RAM user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15772400000****</p>
              */
             public Builder aliyunUid(Long aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -298,7 +313,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试账号</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -306,7 +324,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -314,7 +335,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -322,7 +346,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The mobile number of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1382114****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -330,7 +357,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Primary.
+             * <p>Indicates whether the user is a primary account. A value of <code>false</code> indicates that the user is a RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -338,7 +368,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RamId.
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28036411123456****</p>
              */
             public Builder ramId(String ramId) {
                 this.ramId = ramId;
@@ -431,7 +464,7 @@ public class ListRamUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>A list of RAM users.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -439,7 +472,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The returned page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -447,7 +483,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -455,7 +494,10 @@ public class ListRamUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

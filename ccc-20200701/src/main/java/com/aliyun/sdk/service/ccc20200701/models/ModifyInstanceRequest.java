@@ -74,7 +74,10 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Description of the instance. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新的实例描述。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -83,6 +86,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

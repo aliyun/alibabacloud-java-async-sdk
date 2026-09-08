@@ -119,7 +119,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +289,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>AccessKeyId used for signing</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -285,7 +300,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>Expired At</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647313420</p>
              */
             public Builder expireTime(Integer expireTime) {
                 this.expireTime = expireTime;
@@ -293,7 +311,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>OSS file path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test/blacklist.xlsx</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -301,7 +322,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>oss host</p>
+             * <p>OSS host</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
@@ -312,7 +333,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>Signature policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Permit</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -320,7 +344,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>Signature</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zi31STIMtIfa/UN2l+6lww****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;

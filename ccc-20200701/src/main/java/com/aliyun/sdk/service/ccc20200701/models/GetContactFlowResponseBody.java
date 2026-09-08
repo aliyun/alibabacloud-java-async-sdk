@@ -106,7 +106,10 @@ public class GetContactFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -321,7 +333,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactFlowId.
+             * <p>The contact flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>274601be-a6d5-4429-bcef-32b51d031c6e</p>
              */
             public Builder contactFlowId(String contactFlowId) {
                 this.contactFlowId = contactFlowId;
@@ -329,7 +344,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the contact flow draft was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-14 10:48:43.0</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -337,7 +355,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Definition.
+             * <p>IVR content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;activities&quot;:[{&quot;type&quot;:&quot;INCOMING_CALL&quot;,&quot;id&quot;:&quot;e98f0d47&quot;,&quot;name&quot;:&quot;开始&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:263,&quot;y&quot;:164}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;2d3ad2c2&quot;,&quot;edgeId&quot;:&quot;41f7dbd0&quot;}],&quot;nodeIndex&quot;:0},{&quot;type&quot;:&quot;HANGUP&quot;,&quot;id&quot;:&quot;bd4f37e2&quot;,&quot;name&quot;:&quot;挂机&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:765,&quot;y&quot;:185}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:null}],&quot;nodeIndex&quot;:999},{&quot;type&quot;:&quot;PLAY_SAY&quot;,&quot;id&quot;:&quot;2d3ad2c2&quot;,&quot;name&quot;:&quot;放音&quot;,&quot;properties&quot;:{&quot;say&quot;:&quot;您好，欢迎来到云联络中心。&quot;,&quot;audioResourceId&quot;:&quot;&quot;,&quot;position&quot;:{&quot;x&quot;:485.5,&quot;y&quot;:153.5},&quot;audioType&quot;:&quot;tts&quot;,&quot;audioInterrupt&quot;:false},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;bd4f37e2&quot;,&quot;edgeId&quot;:&quot;e1af4f1f&quot;}],&quot;nodeIndex&quot;:1}],&quot;description&quot;:&quot;&quot;}</p>
              */
             public Builder definition(String definition) {
                 this.definition = definition;
@@ -345,7 +366,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -353,7 +377,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * DraftId.
+             * <p>The draft ID. This is the ID of the editable draft version for the current contact flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>566399d7-5558-447c-a72f-9be2768b6a82</p>
              */
             public Builder draftId(String draftId) {
                 this.draftId = draftId;
@@ -361,7 +388,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Editor.
+             * <p>The agent login name of the current editor of this draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editor-xxx</p>
              */
             public Builder editor(String editor) {
                 this.editor = editor;
@@ -369,7 +399,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -377,7 +410,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The IVR name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>欢迎语</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -385,7 +421,12 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Published.
+             * <p>Indicates whether the contact flow is published.
+             * True: Published
+             * False: Not published</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder published(Boolean published) {
                 this.published = published;
@@ -393,7 +434,13 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The flow type:<br>
+             * MAIN_FLOW (main flow)<br>
+             * SUB_FLOW (child flow)<br>
+             * SURVEY_FLOW (survey flow)<br><br><br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN_FLOW</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +448,10 @@ public class GetContactFlowResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the contact flow was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-14 10:48:43.0</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

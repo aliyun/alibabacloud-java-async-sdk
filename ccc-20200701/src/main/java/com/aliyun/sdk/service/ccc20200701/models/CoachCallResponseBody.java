@@ -119,7 +119,10 @@ public class CoachCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CoachCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CoachCallResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CoachCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class CoachCallResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class CoachCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -381,7 +393,10 @@ public class CoachCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COACH</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -389,7 +404,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelFlags.
+             * <p>Channel flags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COACHING</p>
              */
             public Builder channelFlags(String channelFlags) {
                 this.channelFlags = channelFlags;
@@ -397,7 +415,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -405,7 +426,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelState.
+             * <p>The status of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANSWERED</p>
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
@@ -413,7 +437,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>The called party of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -421,7 +448,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>An auto-incremented ID assigned by the system. Customers do not need to concern themselves with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -429,7 +459,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -437,7 +470,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>The originator of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -445,7 +481,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party that initiated the hang-up of the call channel, indicating who first terminated the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -453,7 +492,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The reason for releasing the channel, indicating why the current channel was disconnected. The value corresponds to response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the disconnection reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404 - No destination</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -461,7 +503,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID associated with the channel. In inbound scenarios, the associated skill group ID is determined by the agent transfer module configured in the IVR. In outbound scenarios, the associated skill group ID is the first skill group ID that the agent signed into.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -469,7 +514,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The UNIX timestamp indicating the most recent status change of the channel, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609138903315</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -477,7 +525,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>The extension number of the agent associated with the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -485,7 +536,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID associated with the channel. This field is empty for a Customer channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -578,7 +632,10 @@ public class CoachCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COACH</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -586,7 +643,7 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelContexts.
+             * <p>List of call channels.</p>
              */
             public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
@@ -594,7 +651,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -602,7 +662,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -825,7 +888,10 @@ public class CoachCallResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent call rejection). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -833,7 +899,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -841,7 +910,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceState.
+             * <p>The status of the SIP phone device. If the SIP phone is not registered, the status is UNREGISTERED (unregistered). If the SIP phone was previously registered but is currently offline, the status is OFFLINE (offline). If the SIP phone is registered and online, the status is ONLINE (online).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNREGISTERED</p>
              */
             public Builder deviceState(String deviceState) {
                 this.deviceState = deviceState;
@@ -849,7 +921,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The agent\&quot;s extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -857,7 +932,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Heartbeat.
+             * <p>The UNIX timestamp in milliseconds of the last heartbeat received from the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder heartbeat(Long heartbeat) {
                 this.heartbeat = heartbeat;
@@ -865,7 +943,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -873,7 +954,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -881,7 +965,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1324730****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -889,7 +976,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -897,7 +987,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * <p>The UNIX timestamp in milliseconds when the agent was most recently reserved. Being reserved means an incoming call will be assigned to the agent shortly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956370</p>
              */
             public Builder reserved(Long reserved) {
                 this.reserved = reserved;
@@ -905,7 +998,7 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>List of skill group IDs that the agent has signed into.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -913,7 +1006,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -921,7 +1017,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>Agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TALKING</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -929,7 +1028,10 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -996,7 +1098,7 @@ public class CoachCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallContext.
+             * <p>Call context environment.</p>
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
@@ -1004,7 +1106,7 @@ public class CoachCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>Agent context environment.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

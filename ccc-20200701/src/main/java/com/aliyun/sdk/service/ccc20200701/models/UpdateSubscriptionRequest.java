@@ -188,6 +188,7 @@ public class UpdateSubscriptionRequest extends Request {
         } 
 
         /**
+         * <p>The endpoint for MQ. The service endpoint for webhook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * AliyunUid.
+         * <p>Leave blank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder aliyunUid(Long aliyunUid) {
             this.putQueryParameter("AliyunUid", aliyunUid);
@@ -209,7 +213,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * DefaultTopic.
+         * <p>For MQ, enter the topic name. For webhook, enter Topic_Webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-event</p>
          */
         public Builder defaultTopic(String defaultTopic) {
             this.putQueryParameter("DefaultTopic", defaultTopic);
@@ -218,6 +225,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
+         * <p>The message subscription checklist.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +238,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Cloud Contact Center instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +251,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * MqInstanceId.
+         * <p>The MQ instance ID. Specify this only when MqType is rocketmq4 or rocketmq5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-****</p>
          */
         public Builder mqInstanceId(String mqInstanceId) {
             this.putQueryParameter("MqInstanceId", mqInstanceId);
@@ -251,7 +263,18 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * MqType.
+         * <p>The message push type.</p>
+         * <ul>
+         * <li><p>rocketmq4</p>
+         * </li>
+         * <li><p>rocketmq5</p>
+         * </li>
+         * <li><p>webhook</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rocketmq5</p>
          */
         public Builder mqType(String mqType) {
             this.putQueryParameter("MqType", mqType);
@@ -260,7 +283,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The MQ password. Specify this only when MqType is rocketmq5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -269,7 +295,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * ProducerId.
+         * <p>For Message Queue (MQ), enter the Group ID. For webhook, enter PID_Webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_xxx</p>
          */
         public Builder producerId(String producerId) {
             this.putQueryParameter("ProducerId", producerId);
@@ -278,7 +307,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The MQ username. Specify this only when MqType is rocketmq5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

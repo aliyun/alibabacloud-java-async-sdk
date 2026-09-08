@@ -258,7 +258,10 @@ public class ListTicketsRequest extends Request {
         } 
 
         /**
-         * Assignee.
+         * <p>Assignee ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assignee@cccV2-kmz</p>
          */
         public Builder assignee(String assignee) {
             this.putQueryParameter("Assignee", assignee);
@@ -267,7 +270,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * AssigneeType.
+         * <p>Assignee type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent</p>
          */
         public Builder assigneeType(String assigneeType) {
             this.putQueryParameter("AssigneeType", assigneeType);
@@ -276,7 +282,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>Ticket category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43c2671b-****-4223-86d0-6bd187905cc8</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -285,7 +294,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>Creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>creator@cccV2-kmz</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -294,7 +306,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * CustomerId.
+         * <p>Customer ID. The Cloud Contact Center customer profile ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51e155ce-3747-*****-b402-13c69597b920</p>
          */
         public Builder customerId(String customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -303,7 +318,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time. Filter by ticket creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646928000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -312,6 +330,7 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,7 +343,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * JobIdList.
+         * <p>A list of contact IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;job-12******&quot;,&quot;job-23****&quot;]</p>
          */
         public Builder jobIdList(String jobIdList) {
             this.putQueryParameter("JobIdList", jobIdList);
@@ -333,6 +355,7 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
+         * <p>Paging ordinal number. Range: 1-100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,6 +368,7 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
+         * <p>Paging size. Range: 1-100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +381,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * Participant.
+         * <p>Participant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>participant@cccV2-kmz</p>
          */
         public Builder participant(String participant) {
             this.putQueryParameter("Participant", participant);
@@ -366,7 +393,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time. Filter by ticket creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646841600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -375,7 +405,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Ticket state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Processing</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -384,7 +417,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>Ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
          */
         public Builder ticketId(String ticketId) {
             this.putQueryParameter("TicketId", ticketId);
@@ -393,7 +429,10 @@ public class ListTicketsRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>Ticket title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

@@ -133,6 +133,7 @@ public class ListCasesRequest extends Request {
         } 
 
         /**
+         * <p>Predictive outbound dialing activity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class ListCasesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +159,7 @@ public class ListCasesRequest extends Request {
         }
 
         /**
+         * <p>The paging ordinal number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +172,7 @@ public class ListCasesRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +185,10 @@ public class ListCasesRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>Filters by phone number. Fuzzy Matching is not supported. This parameter is not Required and defaults to empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -190,7 +197,15 @@ public class ListCasesRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Pending (to be dialed)<br>
+         * Executing (dialing in progress)<br>
+         * Connected (contact succeeded)<br>
+         * Failed (contact failed)<br>
+         * Aborted (call stopped or canceled)<br>
+         * Forbidden (call prohibited by rule, such as blacklist)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

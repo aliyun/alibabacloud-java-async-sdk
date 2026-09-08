@@ -159,7 +159,15 @@ public class UpdateCampaignRequest extends Request {
         } 
 
         /**
-         * CallableTime.
+         * <p>Callable time, supports multiple time segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;beginTime&quot;: &quot;09:00:00&quot;,
+         *             &quot;endTime&quot;: &quot;12:00:00&quot;
+         *       }
+         * ]</p>
          */
         public Builder callableTime(String callableTime) {
             this.putQueryParameter("CallableTime", callableTime);
@@ -168,6 +176,7 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
+         * <p>Predictive outbound campaign ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +189,10 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
-         * ContactFlowId.
+         * <p>Contact stream ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a310f56-4d30-4081-ba24-5d87a3b7262e</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -189,7 +201,10 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time, in Unix timestamp format, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689933600000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -198,6 +213,7 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
+         * <p>Cloud Contact Center instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +226,10 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Predictive outbound campaign name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心测试</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -219,7 +238,10 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time, in Unix timestamp format, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689901200000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -228,7 +250,18 @@ public class UpdateCampaignRequest extends Request {
         }
 
         /**
-         * StrategyParameters.
+         * <p>Policy parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACING策略，参考参数
+         * {
+         *       &quot;ratio&quot;: 2
+         * }</p>
+         * <p>PID策略，参考参数
+         * {
+         *     &quot;abandonRate&quot;:5,
+         *     &quot;historicalConnectedRate&quot;:45
+         * }</p>
          */
         public Builder strategyParameters(String strategyParameters) {
             this.putQueryParameter("StrategyParameters", strategyParameters);

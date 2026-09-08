@@ -119,7 +119,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal service issue. Detail:.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24BE19E8-BF7D-4992-A35E-15EBA874F2E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -329,7 +341,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>The break code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>会议</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -337,7 +352,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The device ID. This can be the ID of a browser-based WebRTC softphone or a physical phone. Only one device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yealink SIP-T23G 44.84.203.6</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -345,7 +363,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The agent\&quot;s extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8001****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -353,7 +374,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>szpczf</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +385,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID. If populated, this field indicates that the agent is in a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-330557290544431104</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -369,7 +396,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -377,7 +407,7 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>The IDs of the skill groups to which the agent is signed in.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -385,7 +415,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sam@szpczf</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -393,7 +426,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>The agent state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -401,7 +437,10 @@ public class ChangeVisibilityResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>The work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

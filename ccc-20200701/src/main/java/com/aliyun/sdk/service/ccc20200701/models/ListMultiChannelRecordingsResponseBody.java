@@ -106,7 +106,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Recording list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B19CD719-9F65-56A6-8B79-DA4282EA4797</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the call hold, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687860143925</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -212,7 +227,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Call hold start time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673255098049</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -396,7 +414,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentChannelId.
+             * <p>Agent call channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch-user-8526899****-8602****-1656926504363-job-25920271311543****</p>
              */
             public Builder agentChannelId(String agentChannelId) {
                 this.agentChannelId = agentChannelId;
@@ -404,7 +425,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -412,7 +436,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>Agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -420,7 +447,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-25920271311543****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -428,7 +458,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Recording duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56321</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -436,7 +469,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>Recording file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.mkv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -444,7 +480,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>OSS download URL for the recording file. Note the time-to-live (TTL) of the download URL. The download URL is valid for 1 day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.mkv?Expires=1657014031&OSSAccessKeyId=****&Signature=">https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.mkv?Expires=1657014031&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -452,7 +491,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * HoldTimeSegments.
+             * <p>List of call hold time segments.</p>
              */
             public Builder holdTimeSegments(java.util.List<HoldTimeSegments> holdTimeSegments) {
                 this.holdTimeSegments = holdTimeSegments;
@@ -460,7 +499,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * RamId.
+             * <p>RAM account ID for the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22807673106369****</p>
              */
             public Builder ramId(String ramId) {
                 this.ramId = ramId;
@@ -468,7 +510,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -476,7 +521,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Recording start time, in UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656926518491</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

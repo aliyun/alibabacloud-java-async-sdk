@@ -74,6 +74,7 @@ public class EnableTicketTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class EnableTicketTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the ticket template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43c2671b-8939-4223-86d0-6bd187905cc8_1717664210492</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

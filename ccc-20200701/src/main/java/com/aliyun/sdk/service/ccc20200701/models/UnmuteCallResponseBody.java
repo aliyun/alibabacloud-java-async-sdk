@@ -119,7 +119,10 @@ public class UnmuteCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UnmuteCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_Heartbeat_description]The UNIX timestamp in milliseconds indicating when the last heartbeat was received from the agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UnmuteCallResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_UserId_type]string</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UnmuteCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_InstanceId_type]string</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class UnmuteCallResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_BreakCode_enumValueTitles_RejectCall]Break caused by agent rejecting a call</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class UnmuteCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_DeviceId_type]string</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -381,7 +393,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -389,7 +404,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelFlags.
+             * <p>Channel flags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MONITORING</p>
              */
             public Builder channelFlags(String channelFlags) {
                 this.channelFlags = channelFlags;
@@ -397,7 +415,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-6538214103685****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -405,7 +426,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelState.
+             * <p>[parameters_JobId_schema_description]The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATED</p>
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
@@ -413,7 +437,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>Called party of the call channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -421,7 +448,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>An auto-incremented ID assigned by the system. Customers do not need to concern themselves with this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -429,7 +459,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -437,7 +470,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>The originator of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -445,7 +481,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>[parameters_JobId_in]query</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -453,7 +492,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The reason for releasing the channel. This indicates why the current channel was disconnected. The value corresponds to a response code defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the disconnection reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404 - No destination</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -461,7 +503,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group associated with this call. In inbound scenarios, the skill group is specified by the queue routed through IVR. In outbound scenarios, the skill group is the first one the agent signs into.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -469,7 +514,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The UNIX timestamp of the most recent status change of the channel, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609138903315</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -477,7 +525,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>The extension number of the agent associated with the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -485,7 +536,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID associated with the channel. This field is empty if the channel belongs to a customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -578,7 +632,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -586,7 +643,7 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelContexts.
+             * <p>List of call channels.</p>
              */
             public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
@@ -594,7 +651,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_ChannelFlags_enumValueTitles_MONITORING]Monitoring</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -602,7 +662,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -799,7 +862,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>Break status code, which can be either system-defined or customer-defined. System-defined break codes include: Warm-up (temporary break state after an agent goes online but before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent rejecting a call). Customer-defined status codes have no restrictions, and customers can define them according to their business needs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm-up</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -807,7 +873,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -815,7 +884,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_Mobile_description]The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8032****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -823,7 +895,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Heartbeat.
+             * <p>The UNIX timestamp in milliseconds indicating when the last heartbeat was received from the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609136956378</p>
              */
             public Builder heartbeat(Long heartbeat) {
                 this.heartbeat = heartbeat;
@@ -831,7 +906,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -839,7 +917,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_SkillGroupId_type]string</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -847,7 +928,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1324730****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -855,7 +939,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether the agent is in outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -863,7 +950,7 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_ChannelId_type]string</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -871,7 +958,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -879,7 +969,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_CallType_description]Call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TALKING</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -887,7 +980,10 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_Index_type]integer</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -954,7 +1050,7 @@ public class UnmuteCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallContext.
+             * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_ReleaseReason_type]string</p>
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
@@ -962,7 +1058,7 @@ public class UnmuteCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_OutboundScenario_description]Indicates whether the agent is in outbound-only mode.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

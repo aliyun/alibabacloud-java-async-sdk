@@ -120,7 +120,11 @@ public class CreateContactFlowRequest extends Request {
         } 
 
         /**
+         * <p>IVR content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;activities&quot;:[{&quot;type&quot;:&quot;INCOMING_CALL&quot;,&quot;id&quot;:&quot;e98f0d47&quot;,&quot;name&quot;:&quot;开始&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:263,&quot;y&quot;:164}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;2d3ad2c2&quot;,&quot;edgeId&quot;:&quot;41f7dbd0&quot;}],&quot;nodeIndex&quot;:0},{&quot;type&quot;:&quot;HANGUP&quot;,&quot;id&quot;:&quot;bd4f37e2&quot;,&quot;name&quot;:&quot;挂机&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:765,&quot;y&quot;:185}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:null}],&quot;nodeIndex&quot;:999},{&quot;type&quot;:&quot;PLAY_SAY&quot;,&quot;id&quot;:&quot;2d3ad2c2&quot;,&quot;name&quot;:&quot;放音&quot;,&quot;properties&quot;:{&quot;say&quot;:&quot;您好，欢迎来到云联络中心。&quot;,&quot;audioResourceId&quot;:&quot;&quot;,&quot;position&quot;:{&quot;x&quot;:485.5,&quot;y&quot;:153.5},&quot;audioType&quot;:&quot;tts&quot;,&quot;audioInterrupt&quot;:false},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;bd4f37e2&quot;,&quot;edgeId&quot;:&quot;e1af4f1f&quot;}],&quot;nodeIndex&quot;:1}],&quot;description&quot;:&quot;&quot;}</p>
          */
         public Builder definition(String definition) {
             this.putQueryParameter("Definition", definition);
@@ -129,6 +133,7 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
+         * <p>Version description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +146,7 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +159,11 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
+         * <p>Contact flow name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认流程</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -162,6 +172,10 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
+         * <p>Flow type.<br>
+         * Main flow: MAIN_FLOW<br>
+         * Child flow: SUB_FLOW<br>
+         * Survey flow: SURVEY_FLOW<br><br><br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

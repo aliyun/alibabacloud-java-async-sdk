@@ -106,7 +106,10 @@ public class GetAudioFileDownloadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetAudioFileDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data. The OSS download link for the audio resource file. Note that the validity period of the download link is 24 hours. Do not store this link permanently.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong><strong>.oss-cn-shanghai.aliyuncs.com/ccc-test/</strong></strong>.wav?Expires=1656472158&amp;OSSAccessKeyId=<strong><strong>&amp;Signature=</strong></strong></p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetAudioFileDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class GetAudioFileDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class GetAudioFileDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

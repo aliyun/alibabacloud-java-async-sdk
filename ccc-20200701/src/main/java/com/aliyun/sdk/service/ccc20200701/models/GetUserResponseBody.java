@@ -119,7 +119,10 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>Extension parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -407,7 +419,10 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * AvatarUrl.
+             * <p>Agent profile picture URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.com/xxx.jpg">http://xxx.com/xxx.jpg</a></p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -415,7 +430,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceExt.
+             * <p>SIP phone extension number. If the agent has registered a SIP phone, this parameter is the extension number of the SIP phone device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8033****</p>
              */
             public Builder deviceExt(String deviceExt) {
                 this.deviceExt = deviceExt;
@@ -423,7 +441,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC-YUNBS-1.0.10-****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -431,7 +452,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceState.
+             * <p>The status of the SIP phone device. If no SIP phone is registered, the status is UNREGISTERED (Unregistered). If a SIP phone was previously registered but is currently offline, the status is OFFLINE (Offline). If a SIP phone is registered and currently online, the status is ONLINE (Online).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder deviceState(String deviceState) {
                 this.deviceState = deviceState;
@@ -439,7 +463,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayId.
+             * <p>Agent\&quot;s employee ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder displayId(String displayId) {
                 this.displayId = displayId;
@@ -447,7 +474,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -455,7 +485,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -463,7 +496,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8003****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -471,7 +507,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -479,7 +518,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>Agent logon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -487,7 +529,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>Agent\&quot;s personal phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1391234****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -495,7 +540,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Nickname.
+             * <p>Agent nickname</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿云</p>
              */
             public Builder nickname(String nickname) {
                 this.nickname = nickname;
@@ -503,7 +551,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Role ID, in the format: role\@instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin@ccc-test</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -511,7 +562,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -519,7 +573,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -527,7 +584,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>Work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

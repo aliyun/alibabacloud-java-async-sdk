@@ -74,6 +74,7 @@ public class ListWaitingChatsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class ListWaitingChatsRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>Skill group ID list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test&quot;]</p>
          */
         public Builder skillGroupIdList(String skillGroupIdList) {
             this.putQueryParameter("SkillGroupIdList", skillGroupIdList);

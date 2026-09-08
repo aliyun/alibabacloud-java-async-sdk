@@ -90,6 +90,7 @@ public class ResetUserPasswordRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>New password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

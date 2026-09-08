@@ -105,6 +105,7 @@ public class ListAgentStateLogsRequest extends Request {
         } 
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,10 @@ public class ListAgentStateLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End UNIX timestamp. The default value is the current time. The time difference between EndTime and StartTime must not exceed 7 days. The format is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620273600000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -126,6 +130,7 @@ public class ListAgentStateLogsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +143,10 @@ public class ListAgentStateLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start UNIX timestamp. The default value is the start time of the current day. The earliest allowed value is 180 days before the current date. The format is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620230400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

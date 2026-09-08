@@ -106,7 +106,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +229,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Duration.
+             * <p>The event duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -225,7 +240,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Event.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dialing</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -233,7 +251,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -326,7 +347,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent@ccc-test</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -334,7 +358,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>坐席小王</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -342,7 +369,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventSequence.
+             * <p>The sequence of events.</p>
              */
             public Builder eventSequence(java.util.List<EventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
@@ -350,7 +377,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -1023,7 +1053,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Event.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Released</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -1031,7 +1064,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532458000000</p>
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -1098,7 +1134,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomerId.
+             * <p>The customer ID. This is usually the customer\&quot;s phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1332315****</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -1106,7 +1145,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventSequence.
+             * <p>The sequence of events.</p>
              */
             public Builder eventSequence(java.util.List<CustomerEventsEventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
@@ -1173,7 +1212,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Event.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Route2IVR</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -1181,7 +1223,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -1261,7 +1306,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * EventSequence.
+             * <p>The sequence of events.</p>
              */
             public Builder eventSequence(java.util.List<IvrEventsEventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
@@ -1269,7 +1314,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>The ID of the IVR contact flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -1277,7 +1325,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * FlowType.
+             * <p>The type of the contact flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN_FLOW</p>
              */
             public Builder flowType(String flowType) {
                 this.flowType = flowType;
@@ -1344,7 +1395,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Event.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enqueue</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -1352,7 +1406,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -1458,7 +1515,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * EventSequence.
+             * <p>The sequence of events.</p>
              */
             public Builder eventSequence(java.util.List<QueueEventsEventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
@@ -1466,7 +1523,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>The contact flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -1474,7 +1534,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * <p>The queue ID. If the call is routed to a skill group, this is the skill group ID. If the call is routed to an agent, this is the agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder queueId(String queueId) {
                 this.queueId = queueId;
@@ -1482,7 +1545,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1490,7 +1556,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * QueueType.
+             * <p>The queue type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder queueType(Integer queueType) {
                 this.queueType = queueType;
@@ -1921,7 +1990,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentEvents.
+             * <p>The list of agent events.</p>
              */
             public Builder agentEvents(java.util.List<AgentEvents> agentEvents) {
                 this.agentEvents = agentEvents;
@@ -1929,7 +1998,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * AgentIds.
+             * <p>The IDs of the agents who are involved in the call. Multiple IDs are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent1@ccc-test,agent2@ccc-test</p>
              */
             public Builder agentIds(String agentIds) {
                 this.agentIds = agentIds;
@@ -1937,7 +2009,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * AgentNames.
+             * <p>The names of the agents who are involved in the call. Multiple names are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent1,agent2</p>
              */
             public Builder agentNames(String agentNames) {
                 this.agentNames = agentNames;
@@ -1961,7 +2036,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CallDuration.
+             * <p>The call duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder callDuration(Long callDuration) {
                 this.callDuration = callDuration;
@@ -1969,7 +2047,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1332315****</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -1977,7 +2058,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CalleeLocation.
+             * <p>The location of the called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>河北省-唐山</p>
              */
             public Builder calleeLocation(String calleeLocation) {
                 this.calleeLocation = calleeLocation;
@@ -1985,7 +2069,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CallerLocation.
+             * <p>The location of the calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>山东省-淄博</p>
              */
             public Builder callerLocation(String callerLocation) {
                 this.callerLocation = callerLocation;
@@ -1993,7 +2080,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533128****</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -2001,7 +2091,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ContactDisposition.
+             * <p>The reason why the call ended. Note: The \<code>Voicemail\\</code>, \<code>QueuingFailed\\</code>, \<code>QueuingTimeout\\</code>, \<code>QueuingOverflow\\</code>, and \<code>IVRException\\</code> reasons are returned only if you configure the hang-up reason node. If you do not configure this node and the IVR flow does not include a module to transfer the call to an agent, the default reason is \<code>AbandonedInIVR\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder contactDisposition(String contactDisposition) {
                 this.contactDisposition = contactDisposition;
@@ -2009,7 +2102,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-10963442671187****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -2017,7 +2113,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ContactType.
+             * <p>The call type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder contactType(String contactType) {
                 this.contactType = contactType;
@@ -2025,7 +2124,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerEvents.
+             * <p>The list of customer events.</p>
              */
             public Builder customerEvents(java.util.List<CustomerEvents> customerEvents) {
                 this.customerEvents = customerEvents;
@@ -2033,7 +2132,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EarlyMediaState.
+             * <p>The state of the early media. An exception occurred during the early media phase, which is when the customer is being called. An exception at this stage can cause the call to fail. This parameter provides possible reasons for the connection failure based on an analysis of the early media state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotConnected</p>
              */
             public Builder earlyMediaState(String earlyMediaState) {
                 this.earlyMediaState = earlyMediaState;
@@ -2041,7 +2143,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EstablishedTime.
+             * <p>The time when the call was connected. This parameter is empty if the call was not connected. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532458000000</p>
              */
             public Builder establishedTime(Long establishedTime) {
                 this.establishedTime = establishedTime;
@@ -2049,7 +2154,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2057,7 +2165,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * IvrEvents.
+             * <p>The list of IVR events.</p>
              */
             public Builder ivrEvents(java.util.List<IvrEvents> ivrEvents) {
                 this.ivrEvents = ivrEvents;
@@ -2073,7 +2181,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * QueueEvents.
+             * <p>The list of queue events.</p>
              */
             public Builder queueEvents(java.util.List<QueueEvents> queueEvents) {
                 this.queueEvents = queueEvents;
@@ -2081,7 +2189,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingReady.
+             * <p>Indicates whether the recording was generated. A value of \<code>false\\</code> is returned if the call was not connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder recordingReady(Boolean recordingReady) {
                 this.recordingReady = recordingReady;
@@ -2089,7 +2200,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The release initiator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -2097,7 +2211,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The reason why the call ended. The value is usually the SIP code followed by a text description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200 - OK</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -2105,7 +2222,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The time when the call ended. This is the time when the last party of the call hangs up. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532458000000</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -2113,7 +2233,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Satisfaction.
+             * <p>The satisfaction score. The value and its meaning are defined by you.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder satisfaction(Integer satisfaction) {
                 this.satisfaction = satisfaction;
@@ -2121,7 +2244,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveyChannel.
+             * <p>The channel through which the satisfaction survey was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IVR</p>
              */
             public Builder satisfactionSurveyChannel(String satisfactionSurveyChannel) {
                 this.satisfactionSurveyChannel = satisfactionSurveyChannel;
@@ -2129,7 +2255,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SatisfactionSurveyOffered.
+             * <p>Indicates whether a satisfaction survey was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder satisfactionSurveyOffered(Boolean satisfactionSurveyOffered) {
                 this.satisfactionSurveyOffered = satisfactionSurveyOffered;
@@ -2137,7 +2266,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupIds.
+             * <p>The IDs of the skill groups to which the agents involved in the call belong. Multiple IDs are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup@ccc-test</p>
              */
             public Builder skillGroupIds(String skillGroupIds) {
                 this.skillGroupIds = skillGroupIds;
@@ -2145,7 +2277,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupNames.
+             * <p>The names of the skill groups to which the agents involved in the call belong. Multiple names are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder skillGroupNames(String skillGroupNames) {
                 this.skillGroupNames = skillGroupNames;
@@ -2153,7 +2288,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the call started. For an inbound call, this is the time when the call enters the IVR. For an outbound call, this is the time when the call is initiated. The value is a UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532458000000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

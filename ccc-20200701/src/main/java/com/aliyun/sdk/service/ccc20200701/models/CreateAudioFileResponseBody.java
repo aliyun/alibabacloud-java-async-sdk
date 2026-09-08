@@ -106,7 +106,10 @@ public class CreateAudioFileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data, which is the ID of the audio resource and uniquely identifies an audio resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2301b83f-1f9f-491e-9f97-2f832ed92f0b</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class CreateAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class CreateAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94E29B9B-DBC6-5951-B3DD-C85C1BDF20ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of statistical data points.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -373,7 +385,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakAgents.
+             * <p>Number of agents on break.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder breakAgents(Long breakAgents) {
                 this.breakAgents = breakAgents;
@@ -381,7 +396,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * BreakingAgents.
+             * <p>Number of agents in break status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder breakingAgents(Long breakingAgents) {
                 this.breakingAgents = breakingAgents;
@@ -389,7 +407,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency.
+             * <p>The concurrent call volume, which refers to the number of simultaneous outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder concurrency(Long concurrency) {
                 this.concurrency = concurrency;
@@ -397,7 +418,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * Datetime.
+             * <p>The timestamp for segmented statistics, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634037840000</p>
              */
             public Builder datetime(Long datetime) {
                 this.datetime = datetime;
@@ -405,7 +429,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * LoggedInAgents.
+             * <p>The number of published agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder loggedInAgents(Long loggedInAgents) {
                 this.loggedInAgents = loggedInAgents;
@@ -413,7 +440,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenarioBreakingAgents.
+             * <p>The number of agents in outbound-only mode who are on a break.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outboundScenarioBreakingAgents(Long outboundScenarioBreakingAgents) {
                 this.outboundScenarioBreakingAgents = outboundScenarioBreakingAgents;
@@ -421,7 +451,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenarioReadyAgents.
+             * <p>Number of agents in idle status under outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
                 this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
@@ -429,7 +462,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenarioTalkingAgents.
+             * <p>The number of agents in outbound-only mode who are currently on a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outboundScenarioTalkingAgents(Long outboundScenarioTalkingAgents) {
                 this.outboundScenarioTalkingAgents = outboundScenarioTalkingAgents;
@@ -437,7 +473,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenarioWorkingAgents.
+             * <p>Number of agents in post-processing status under outbound-only mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outboundScenarioWorkingAgents(Long outboundScenarioWorkingAgents) {
                 this.outboundScenarioWorkingAgents = outboundScenarioWorkingAgents;
@@ -445,7 +484,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReadyAgents.
+             * <p>Number of idle agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder readyAgents(Long readyAgents) {
                 this.readyAgents = readyAgents;
@@ -453,7 +495,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>Time of the statistical data point, formatted as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -461,7 +506,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TalkAgents.
+             * <p>Deprecated. Refer to TalkAgents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder talkAgents(Long talkAgents) {
                 this.talkAgents = talkAgents;
@@ -469,7 +517,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TalkingAgents.
+             * <p>The number of agents in a call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder talkingAgents(Long talkingAgents) {
                 this.talkingAgents = talkingAgents;
@@ -477,7 +528,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * WorkAgents.
+             * <p>Deprecated. Refer to WorkingAgents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder workAgents(Long workAgents) {
                 this.workAgents = workAgents;
@@ -485,7 +539,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingAgents.
+             * <p>Number of agents in post-processing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder workingAgents(Long workingAgents) {
                 this.workingAgents = workingAgents;

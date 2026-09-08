@@ -88,7 +88,10 @@ public class ListFlashSmsTemplatesRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>Flash SMS configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71b396fa-1*********-70b7c0</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -97,6 +100,7 @@ public class ListFlashSmsTemplatesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class ListFlashSmsTemplatesRequest extends Request {
         }
 
         /**
-         * ProviderId.
+         * <p>Flash SMS provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Uincall</p>
          */
         public Builder providerId(String providerId) {
             this.putQueryParameter("ProviderId", providerId);

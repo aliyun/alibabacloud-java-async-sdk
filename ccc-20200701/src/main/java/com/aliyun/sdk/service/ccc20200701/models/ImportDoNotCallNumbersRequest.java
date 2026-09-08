@@ -102,7 +102,10 @@ public class ImportDoNotCallNumbersRequest extends Request {
         } 
 
         /**
-         * FilePath.
+         * <p>The key of the OSS file. You can obtain the key from the response of the GetDoNotCallFileUploadParameters API. This parameter is required only for file uploads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/blacklist/import/15772471154xxxx/ccc-test/20220315100340/blacklist.xlsx</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -111,6 +114,7 @@ public class ImportDoNotCallNumbersRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ImportDoNotCallNumbersRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>A JSON string that represents an array of do-not-call numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1900000****&quot;,&quot;1312121****&quot;]</p>
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);
@@ -132,7 +139,10 @@ public class ImportDoNotCallNumbersRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remark for the do-not-call numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

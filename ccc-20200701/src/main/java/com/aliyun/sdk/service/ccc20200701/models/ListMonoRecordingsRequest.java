@@ -103,7 +103,10 @@ public class ListMonoRecordingsRequest extends Request {
         } 
 
         /**
-         * AgentChannelId.
+         * <p>The channel ID of the agent conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch-user-<strong><strong>-</strong></strong>-1772180844645-job-*****</p>
          */
         public Builder agentChannelId(String agentChannelId) {
             this.putQueryParameter("AgentChannelId", agentChannelId);
@@ -112,7 +115,10 @@ public class ListMonoRecordingsRequest extends Request {
         }
 
         /**
-         * AgentId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -121,6 +127,7 @@ public class ListMonoRecordingsRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class ListMonoRecordingsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

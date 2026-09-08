@@ -75,6 +75,7 @@ public class UpdateChatRoutingProfileRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UpdateChatRoutingProfileRequest extends Request {
         }
 
         /**
+         * <p>The session assignment/transfer configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

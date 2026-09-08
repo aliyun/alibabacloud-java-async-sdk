@@ -106,7 +106,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +268,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Indicates whether the number is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -264,7 +279,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city where the phone number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>乐山</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -272,7 +290,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * ContactFlowId.
+             * <p>ID of the IVR contact flow associated with this number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
              */
             public Builder contactFlowId(String contactFlowId) {
                 this.contactFlowId = contactFlowId;
@@ -280,7 +301,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -288,7 +312,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08330011****</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -296,7 +323,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province where the phone number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>四川</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -389,7 +419,7 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of numbers.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -397,7 +427,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -405,7 +438,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +449,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -134,6 +134,7 @@ public class ListPersonalNumbersOfUserRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ListPersonalNumbersOfUserRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether the phone numbers are associated with the agent. If true, the API queries the list of personal outbound phone numbers associated with the UserId. If false, it queries the list of personal outbound phone numbers that can be associated with but are not currently associated with the UserId. This parameter is typically used together with the AddPersonalNumbersToUser API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListPersonalNumbersOfUserRequest extends Request {
         }
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,7 @@ public class ListPersonalNumbersOfUserRequest extends Request {
         }
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +186,10 @@ public class ListPersonalNumbersOfUserRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Fuzzy matching based on phone number. Optional. Default value is empty if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0833</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
@@ -191,6 +198,7 @@ public class ListPersonalNumbersOfUserRequest extends Request {
         }
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

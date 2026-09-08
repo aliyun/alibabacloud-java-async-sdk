@@ -104,6 +104,7 @@ public class EnableSchemaPropertyRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class EnableSchemaPropertyRequest extends Request {
         }
 
         /**
+         * <p>Field name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class EnableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);

@@ -106,7 +106,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +281,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * CallsAbandonedInIVR.
+             * <p>Number of calls abandoned in the IVR, meaning calls that were abandoned during the IVR flow after entering it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInIVR(Long callsAbandonedInIVR) {
                 this.callsAbandonedInIVR = callsAbandonedInIVR;
@@ -277,7 +292,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandonedInQueue.
+             * <p>Number of calls abandoned in the queue, meaning calls that were abandoned while waiting in the skill group queue after entering it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInQueue(Long callsAbandonedInQueue) {
                 this.callsAbandonedInQueue = callsAbandonedInQueue;
@@ -285,7 +303,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsAbandonedInRing.
+             * <p>Number of calls abandoned during ringing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAbandonedInRing(Long callsAbandonedInRing) {
                 this.callsAbandonedInRing = callsAbandonedInRing;
@@ -293,7 +314,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsHandled.
+             * <p>Number of calls answered by agents. If a single call is distributed to multiple agents, it is counted as one call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -301,7 +325,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsQueued.
+             * <p>Number of calls that entered the queue. If a single call enters the queue multiple times, it is counted as one call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsQueued(Long callsQueued) {
                 this.callsQueued = callsQueued;
@@ -309,7 +336,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The start time of the segment statistics, in UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -317,7 +347,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCalls.
+             * <p>Total number of incoming calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;
@@ -397,7 +430,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * CallsAnswered.
+             * <p>Number of answered outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
@@ -405,7 +441,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>Start time of the segment, in UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -413,7 +452,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCalls.
+             * <p>Total number of outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;
@@ -480,7 +522,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxLoggedInAgents.
+             * <p>Maximum number of agents logged on simultaneously during this time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102</p>
              */
             public Builder maxLoggedInAgents(Long maxLoggedInAgents) {
                 this.maxLoggedInAgents = maxLoggedInAgents;
@@ -488,7 +533,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The start time of the segment statistics, in UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604639129000</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -568,7 +616,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Inbound.
+             * <p>Inbound metrics.</p>
              */
             public Builder inbound(java.util.List<Inbound> inbound) {
                 this.inbound = inbound;
@@ -576,7 +624,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * Outbound.
+             * <p>Outbound metrics.</p>
              */
             public Builder outbound(java.util.List<Outbound> outbound) {
                 this.outbound = outbound;
@@ -584,7 +632,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * Overall.
+             * <p>Overall metrics.</p>
              */
             public Builder overall(java.util.List<Overall> overall) {
                 this.overall = overall;

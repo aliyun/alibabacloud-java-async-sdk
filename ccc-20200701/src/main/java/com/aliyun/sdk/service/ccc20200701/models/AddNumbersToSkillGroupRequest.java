@@ -103,7 +103,10 @@ public class AddNumbersToSkillGroupRequest extends Request {
         } 
 
         /**
-         * InstNumberGroupIdList.
+         * <p>The list of phone number group IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;38f5b191-b764-45b8-bd93-4b65f839e13a&quot;]</p>
          */
         public Builder instNumberGroupIdList(String instNumberGroupIdList) {
             this.putQueryParameter("InstNumberGroupIdList", instNumberGroupIdList);
@@ -112,6 +115,7 @@ public class AddNumbersToSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class AddNumbersToSkillGroupRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>The list of phone numbers. Ensure that the phone numbers already exist in the current instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;0103182****&quot;,&quot;0102387****&quot;]</p>
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);
@@ -133,6 +140,7 @@ public class AddNumbersToSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>The skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
             } 
 
             /**
-             * LastCallingTime.
+             * <p>The UNIX timestamp (in milliseconds) of the most recent incoming call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646917200000</p>
              */
             public Builder lastCallingTime(Long lastCallingTime) {
                 this.lastCallingTime = lastCallingTime;
@@ -212,7 +227,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCalls.
+             * <p>Total number of incoming calls from this number during the query time period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCalls(Long totalCalls) {
                 this.totalCalls = totalCalls;

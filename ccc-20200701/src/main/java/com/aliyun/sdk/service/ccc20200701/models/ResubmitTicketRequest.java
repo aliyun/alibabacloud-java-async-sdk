@@ -89,7 +89,10 @@ public class ResubmitTicketRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The handling comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>信息已补充</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -98,6 +101,7 @@ public class ResubmitTicketRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class ResubmitTicketRequest extends Request {
         }
 
         /**
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

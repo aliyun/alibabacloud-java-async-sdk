@@ -119,7 +119,10 @@ public class DeleteTicketTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class DeleteTicketTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class DeleteTicketTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class DeleteTicketTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class DeleteTicketTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of incorrect parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,10 @@ public class DeleteTicketTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01B12EE4-6AF2-4730-8B78-EC15F4E5C025</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

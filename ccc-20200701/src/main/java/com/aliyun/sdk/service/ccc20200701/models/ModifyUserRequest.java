@@ -188,7 +188,10 @@ public class ModifyUserRequest extends Request {
         } 
 
         /**
-         * AvatarUrl.
+         * <p>Agent profile picture URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://abc.com/sam.jpb">http://abc.com/sam.jpb</a></p>
          */
         public Builder avatarUrl(String avatarUrl) {
             this.putQueryParameter("AvatarUrl", avatarUrl);
@@ -197,7 +200,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * DisplayId.
+         * <p>Agent ID (employee ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder displayId(String displayId) {
             this.putQueryParameter("DisplayId", displayId);
@@ -206,7 +212,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>User\&quot;s full name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三疯</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -215,7 +224,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Whether to force the modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -224,6 +236,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +249,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>Agent\&quot;s personal phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1382114****</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -245,7 +261,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * Nickname.
+         * <p>Agent nickname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>老王</p>
          */
         public Builder nickname(String nickname) {
             this.putQueryParameter("Nickname", nickname);
@@ -254,7 +273,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>Role ID, in the format: role\@instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Admin@ccc-test</p>
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -263,6 +285,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
+         * <p>Agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,6 +298,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
+         * <p>Work mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

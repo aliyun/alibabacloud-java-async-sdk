@@ -119,7 +119,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F69EBB0-63E9-5DDE-887F-9FC040ADF309</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -420,7 +435,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AverageWaitingTime.
+             * <p>The average waiting time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder averageWaitingTime(Long averageWaitingTime) {
                 this.averageWaitingTime = averageWaitingTime;
@@ -428,7 +446,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * BreakingAgents.
+             * <p>Number of agents in break status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder breakingAgents(Long breakingAgents) {
                 this.breakingAgents = breakingAgents;
@@ -436,7 +457,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * InboundTalkingAgents.
+             * <p>The number of agents on calls in the inbound scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inboundTalkingAgents(Long inboundTalkingAgents) {
                 this.inboundTalkingAgents = inboundTalkingAgents;
@@ -444,7 +468,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -452,7 +479,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * LoggedInAgents.
+             * <p>Number of logged-in agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder loggedInAgents(Long loggedInAgents) {
                 this.loggedInAgents = loggedInAgents;
@@ -460,7 +490,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * LongestCall.
+             * <p>Maximum waiting duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder longestCall(Long longestCall) {
                 this.longestCall = longestCall;
@@ -468,7 +501,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenarioReadyAgents.
+             * <p>The number of agents who are idle and in outbound-only status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
                 this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
@@ -476,7 +512,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundTalkingAgents.
+             * <p>Number of agents on outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outboundTalkingAgents(Long outboundTalkingAgents) {
                 this.outboundTalkingAgents = outboundTalkingAgents;
@@ -484,7 +523,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadyAgents.
+             * <p>The number of idle agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readyAgents(Long readyAgents) {
                 this.readyAgents = readyAgents;
@@ -492,7 +534,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skillgroup1@ccc-test</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -500,7 +545,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>Skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试技能组</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -508,7 +556,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TalkingAgents.
+             * <p>The number of agents on calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder talkingAgents(Long talkingAgents) {
                 this.talkingAgents = talkingAgents;
@@ -516,7 +567,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingCalls.
+             * <p>Number of calls currently in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder waitingCalls(Long waitingCalls) {
                 this.waitingCalls = waitingCalls;
@@ -524,7 +578,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingCallsLevel10.
+             * <p>The number of calls with a waiting duration of less than 10 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder waitingCallsLevel10(Long waitingCallsLevel10) {
                 this.waitingCallsLevel10 = waitingCallsLevel10;
@@ -532,7 +589,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingCallsLevel20.
+             * <p>Number of calls with waiting duration less than 20 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder waitingCallsLevel20(Long waitingCallsLevel20) {
                 this.waitingCallsLevel20 = waitingCallsLevel20;
@@ -540,7 +600,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingCallsLevel30.
+             * <p>The number of calls with a waiting duration of less than 30 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder waitingCallsLevel30(Long waitingCallsLevel30) {
                 this.waitingCallsLevel30 = waitingCallsLevel30;
@@ -548,7 +611,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingAgents.
+             * <p>The number of agents in post-processing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder workingAgents(Long workingAgents) {
                 this.workingAgents = workingAgents;
@@ -641,7 +707,7 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of skill group status data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -649,7 +715,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -657,7 +726,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size, ranging from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -665,7 +737,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

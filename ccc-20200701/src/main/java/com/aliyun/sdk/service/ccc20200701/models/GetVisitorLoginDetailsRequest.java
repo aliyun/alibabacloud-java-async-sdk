@@ -103,6 +103,7 @@ public class GetVisitorLoginDetailsRequest extends Request {
         } 
 
         /**
+         * <p>Chat device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class GetVisitorLoginDetailsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +128,10 @@ public class GetVisitorLoginDetailsRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>Channel token for network services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3b<em><strong>YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jgxzO</strong></em>**bHwej7WgWrmA</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -133,6 +140,7 @@ public class GetVisitorLoginDetailsRequest extends Request {
         }
 
         /**
+         * <p>Visitor ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

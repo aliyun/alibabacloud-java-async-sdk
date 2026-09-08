@@ -103,6 +103,7 @@ public class ListCampaignTrendingReportRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the predictive outbound calling Activity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ListCampaignTrendingReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. This parameter is optional. The default value is the end time of the predictive outbound dialing activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-14 20:59:59</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -124,6 +128,7 @@ public class ListCampaignTrendingReportRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class ListCampaignTrendingReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start Time. This parameter is optional. The default value is the Start Time of the predictive outbound calling Activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-14 00:00:00</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -102,7 +102,10 @@ public class CreateCallSummaryRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-522327189435260928</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -111,7 +114,10 @@ public class CreateCallSummaryRequest extends Request {
         }
 
         /**
-         * Context.
+         * <p>Summary information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;summaryTitle&quot;:&quot;标题&quot;,&quot;summaryContent&quot;:&quot;内容&quot;,&quot;keywords&quot;:&quot;关键信息&quot;}</p>
          */
         public Builder context(String context) {
             this.putQueryParameter("Context", context);
@@ -120,7 +126,10 @@ public class CreateCallSummaryRequest extends Request {
         }
 
         /**
-         * CustomerId.
+         * <p>Customer ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51e155ce-3747-*****-b402-13c69597b920</p>
          */
         public Builder customerId(String customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -129,6 +138,7 @@ public class CreateCallSummaryRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

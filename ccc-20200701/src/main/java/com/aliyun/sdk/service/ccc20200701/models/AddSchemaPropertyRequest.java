@@ -103,6 +103,7 @@ public class AddSchemaPropertyRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class AddSchemaPropertyRequest extends Request {
         }
 
         /**
-         * Property.
+         * <p>Field</p>
          */
         public Builder property(Property property) {
             String propertyShrink = shrink(property, "Property", "json");
@@ -125,7 +126,10 @@ public class AddSchemaPropertyRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -403,7 +407,10 @@ public class AddSchemaPropertyRequest extends Request {
             } 
 
             /**
-             * Array.
+             * <p>Is array</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -411,7 +418,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Attributes.
+             * <p>Extension attributes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;newName\&quot;:\&quot;小桔充电-demo\&quot;,\&quot;appId\&quot;:\&quot;69FRKB4193W8BYP0\&quot;}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -419,6 +429,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
+             * <p>Data type</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -430,7 +441,12 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -438,7 +454,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Disabled.
+             * <p>Is disabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -446,7 +465,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -454,7 +476,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * DisplayOrder.
+             * <p>List display order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -462,7 +487,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * EditorType.
+             * <p>Editor type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textbox</p>
              */
             public Builder editorType(String editorType) {
                 this.editorType = editorType;
@@ -470,7 +498,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * MaxLength.
+             * <p>Maximum length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -478,7 +509,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Maximum.
+             * <p>Maximum numeric value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maximum(Double maximum) {
                 this.maximum = maximum;
@@ -486,7 +520,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * MinLength.
+             * <p>Minimum length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minLength(Integer minLength) {
                 this.minLength = minLength;
@@ -494,7 +531,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Minimum.
+             * <p>Minimum numeric value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minimum(Double minimum) {
                 this.minimum = minimum;
@@ -502,6 +542,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
+             * <p>Name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -513,7 +554,12 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Pattern.
+             * <p>Regular expression validation rule</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -521,7 +567,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * PatternErrorMessage.
+             * <p>Regular expression validation error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>格式错误</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -529,7 +578,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * ReadOnly.
+             * <p>Is read-only</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -537,7 +589,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>Is required</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;

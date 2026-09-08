@@ -106,7 +106,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListVoicemailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -295,7 +307,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Callee.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0533128****</p>
              */
             public Builder callee(String callee) {
                 this.callee = callee;
@@ -303,7 +318,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>073xxxx7539</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -311,7 +329,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * CdrStartTime.
+             * <p>The start time of the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532448000000，已废弃，请使用StartTime。</p>
              */
             public Builder cdrStartTime(Long cdrStartTime) {
                 this.cdrStartTime = cdrStartTime;
@@ -319,7 +340,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-125152394144124921</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -327,7 +351,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the voicemail message in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -335,7 +362,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the CC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -343,7 +373,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the voicemail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>voicemail-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +384,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingDuration.
+             * <p>The duration of the voicemail message in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10，已废弃，请使用Duration</p>
              */
             public Builder recordingDuration(Long recordingDuration) {
                 this.recordingDuration = recordingDuration;
@@ -359,7 +395,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the voicemail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631440860000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -452,7 +491,7 @@ public class ListVoicemailsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of voicemail records.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -460,7 +499,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -468,7 +510,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +521,10 @@ public class ListVoicemailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries. This parameter is returned only when \<code>PageNumber\\</code> is set to 1. For other values of \<code>PageNumber\\</code>, this parameter returns 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

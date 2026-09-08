@@ -104,6 +104,7 @@ public class RegisterDevicesRequest extends Request {
         } 
 
         /**
+         * <p>The device ID. Any string can be used, and there are no specific format requirements.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class RegisterDevicesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class RegisterDevicesRequest extends Request {
         }
 
         /**
+         * <p>The device password. The SIP device uses this password for authentication during registration. Store this password securely.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class RegisterDevicesRequest extends Request {
         }
 
         /**
-         * UserIdListJson.
+         * <p>A JSON string that contains an array of agent IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;user-test@ccc-test&quot;]</p>
          */
         public Builder userIdListJson(String userIdListJson) {
             this.putQueryParameter("UserIdListJson", userIdListJson);

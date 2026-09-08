@@ -116,7 +116,12 @@ public class CreateSchemaRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -125,7 +130,7 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * <p>schema id</p>
+         * <p>The schema ID.</p>
          * 
          * <strong>example:</strong>
          * <p>profile</p>
@@ -137,6 +142,7 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +155,7 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * Properties.
+         * <p>The list of fields.</p>
          */
         public Builder properties(java.util.List<Properties> properties) {
             String propertiesShrink = shrink(properties, "Properties", "json");
@@ -159,7 +165,10 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -424,7 +433,10 @@ public class CreateSchemaRequest extends Request {
             } 
 
             /**
-             * Array.
+             * <p>Indicates whether the field is an array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -432,7 +444,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Attributes.
+             * <p>The extended properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Clusters\&quot;: {\&quot;Description\&quot;: \&quot;The list of clusters.\&quot;}, \&quot;ClusterIds\&quot;: {\&quot;Description\&quot;: \&quot;The list of cluster IDs.\&quot;}}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -440,6 +455,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
+             * <p>The data type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -451,7 +467,12 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -459,7 +480,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Disabled.
+             * <p>Indicates whether the field is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -467,7 +491,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name for agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>显示名称</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -475,7 +502,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * DisplayOrder.
+             * <p>The display order in the list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -483,7 +513,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * EditorType.
+             * <p>The editor type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textbox</p>
              */
             public Builder editorType(String editorType) {
                 this.editorType = editorType;
@@ -491,7 +524,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * MaxLength.
+             * <p>The maximum length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -499,7 +535,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Maximum.
+             * <p>The maximum value of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maximum(Double maximum) {
                 this.maximum = maximum;
@@ -507,7 +546,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * MinLength.
+             * <p>The minimum length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minLength(Integer minLength) {
                 this.minLength = minLength;
@@ -515,7 +557,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Minimum.
+             * <p>The minimum value of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minimum(Double minimum) {
                 this.minimum = minimum;
@@ -523,6 +568,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
+             * <p>The name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -534,7 +580,12 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Pattern.
+             * <p>The regular expression that is used for validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -542,7 +593,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * PatternErrorMessage.
+             * <p>The error message that is returned when the regular expression fails to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>错误的格式</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -550,7 +604,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the field is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -558,7 +615,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;

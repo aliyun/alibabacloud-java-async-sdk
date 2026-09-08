@@ -119,7 +119,10 @@ public class ClaimCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ClaimCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ClaimCallResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ClaimCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ClaimCallResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ClaimCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93CDC17E-3E8A-48F2-99E5-FA2E238DE8B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +367,10 @@ public class ClaimCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallType.
+             * <p>The call type of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -363,7 +378,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -371,7 +389,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelState.
+             * <p>The state of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANSWERED</p>
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
@@ -379,7 +400,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelVariables.
+             * <p>The channel variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a=b;c=d;</p>
              */
             public Builder channelVariables(String channelVariables) {
                 this.channelVariables = channelVariables;
@@ -387,7 +411,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>The destination of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -395,7 +422,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6573574060089****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -403,7 +433,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>The originator of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -411,7 +444,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party who initiated the channel release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390501****</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -419,7 +455,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReason.
+             * <p>The reason why the channel was released. This is a SIP response code. For more information, see the SIP protocol specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
@@ -427,7 +466,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The Unix timestamp that indicates the last time the channel state changed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1609225718295</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -435,7 +477,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>The agent extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8059****</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -443,7 +488,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invoker@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -523,7 +571,7 @@ public class ClaimCallResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelContexts.
+             * <p>The channel contexts.</p>
              */
             public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
@@ -531,7 +579,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -539,7 +590,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6538214103685****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -710,7 +764,10 @@ public class ClaimCallResponseBody extends TeaModel {
             } 
 
             /**
-             * BreakCode.
+             * <p>The break code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customized</p>
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
@@ -718,7 +775,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device-xxxx</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -726,7 +786,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The extension number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0830019****</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -734,7 +797,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -742,7 +808,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-6573574060089****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -750,7 +819,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundScenario.
+             * <p>Indicates whether this is an outbound scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outboundScenario(Boolean outboundScenario) {
                 this.outboundScenario = outboundScenario;
@@ -758,7 +830,7 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * SignedSkillGroupIdList.
+             * <p>The list of signed-in skill group IDs.</p>
              */
             public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
@@ -766,7 +838,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user@ccc-test</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -774,7 +849,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * <p>The agent state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dialing</p>
              */
             public Builder userState(String userState) {
                 this.userState = userState;
@@ -782,7 +860,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * <p>The work mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON_SITE</p>
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;
@@ -862,7 +943,7 @@ public class ClaimCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallContext.
+             * <p>The call context.</p>
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
@@ -870,7 +951,10 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * ContextId.
+             * <p>The context ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder contextId(Long contextId) {
                 this.contextId = contextId;
@@ -878,7 +962,7 @@ public class ClaimCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserContext.
+             * <p>The agent context.</p>
              */
             public Builder userContext(UserContext userContext) {
                 this.userContext = userContext;

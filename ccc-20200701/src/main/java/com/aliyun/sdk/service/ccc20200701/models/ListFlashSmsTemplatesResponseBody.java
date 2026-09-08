@@ -119,7 +119,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +258,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715*****38</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -254,7 +269,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>Template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试模板</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

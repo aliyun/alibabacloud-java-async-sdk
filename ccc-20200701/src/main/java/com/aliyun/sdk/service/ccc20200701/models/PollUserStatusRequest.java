@@ -88,7 +88,10 @@ public class PollUserStatusRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>The Device ID. This parameter is meaningless and can be filled with any value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -97,6 +100,7 @@ public class PollUserStatusRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class PollUserStatusRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
