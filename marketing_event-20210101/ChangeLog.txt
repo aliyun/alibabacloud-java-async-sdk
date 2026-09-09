@@ -1,3 +1,6 @@
+2026-09-09 Version: 1.0.7
+- Generated java-async 2021-01-01 for marketing_event.
+
 2026-09-08 Version: 1.0.6
 - Generated java-async 2021-01-01 for marketing_event.
 

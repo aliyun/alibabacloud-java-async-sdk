@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAgendaSumRecordFlowPop  AddAgendaSumRecordFlowPopRequest
+     * @return AddAgendaSumRecordFlowPopResponse
+     */
+    CompletableFuture<AddAgendaSumRecordFlowPopResponse> addAgendaSumRecordFlowPop(AddAgendaSumRecordFlowPopRequest request);
+
+    /**
      * @param request the request parameters of AddSumRecordFlowPop  AddSumRecordFlowPopRequest
      * @return AddSumRecordFlowPopResponse
      */

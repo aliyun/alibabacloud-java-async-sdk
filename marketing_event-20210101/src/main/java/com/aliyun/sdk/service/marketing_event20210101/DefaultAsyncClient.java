@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddAgendaSumRecordFlowPop  AddAgendaSumRecordFlowPopRequest
+     * @return AddAgendaSumRecordFlowPopResponse
+     */
+    @Override
+    public CompletableFuture<AddAgendaSumRecordFlowPopResponse> addAgendaSumRecordFlowPop(AddAgendaSumRecordFlowPopRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAgendaSumRecordFlowPop").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAgendaSumRecordFlowPopResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAgendaSumRecordFlowPopResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddSumRecordFlowPop  AddSumRecordFlowPopRequest
      * @return AddSumRecordFlowPopResponse
      */
