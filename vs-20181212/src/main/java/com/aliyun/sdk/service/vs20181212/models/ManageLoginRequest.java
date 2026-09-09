@@ -102,7 +102,16 @@ public class ManageLoginRequest extends Request {
         } 
 
         /**
-         * ActionName.
+         * <p>Name of the management action. Valid values:</p>
+         * <ol>
+         * <li><p>open — Activate the public key. This is the default value.</p>
+         * </li>
+         * <li><p>close — Deactivate the public key.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder actionName(String actionName) {
             this.putQueryParameter("ActionName", actionName);
@@ -111,7 +120,10 @@ public class ManageLoginRequest extends Request {
         }
 
         /**
-         * KeyGroup.
+         * <p>Name of the public key group. If you do not specify KeyName, all public keys in this group are applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygroup</p>
          */
         public Builder keyGroup(String keyGroup) {
             this.putQueryParameter("KeyGroup", keyGroup);
@@ -120,7 +132,10 @@ public class ManageLoginRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * <p>Name of the public key. You must specify either KeyName or KeyGroup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mykey</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -129,6 +144,7 @@ public class ManageLoginRequest extends Request {
         }
 
         /**
+         * <p>ID of the Cloud Application Service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

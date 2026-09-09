@@ -67,7 +67,10 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>Result list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -141,7 +144,10 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceId.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -149,7 +155,13 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>Error message.</p>
+             * <blockquote>
+             * <p>This field appears only when an error occurs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>some error</p>
              */
             public Builder error(String error) {
                 this.error = error;

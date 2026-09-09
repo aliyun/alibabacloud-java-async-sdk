@@ -74,6 +74,7 @@ public class BatchUnbindPurchasedDevicesRequest extends Request {
         } 
 
         /**
+         * <p>Device ID. Separate multiple IDs with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

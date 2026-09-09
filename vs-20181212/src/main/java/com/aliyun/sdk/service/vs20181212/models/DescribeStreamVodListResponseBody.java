@@ -67,7 +67,7 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
         } 
 
         /**
-         * Records.
+         * <p>VOD record list</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -75,7 +75,10 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID of this task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>VOD record end time (unix timestamp, unit: seconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634873413</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -149,7 +155,10 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>VOD record start time (unix timestamp, unit: seconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639077653</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

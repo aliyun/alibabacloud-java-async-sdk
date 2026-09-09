@@ -88,7 +88,10 @@ public class ModifyHiveAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gb-test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -110,7 +113,10 @@ public class ModifyHiveAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yy-test2</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

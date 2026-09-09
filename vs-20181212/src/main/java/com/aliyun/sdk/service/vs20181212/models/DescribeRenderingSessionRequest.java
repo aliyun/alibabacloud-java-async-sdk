@@ -88,7 +88,10 @@ public class DescribeRenderingSessionRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>Unique ID of the end client. Specify either SessionId or ClientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d27c89d6-4fe3-4855-a89c-ea721c708b0b</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -97,6 +100,7 @@ public class DescribeRenderingSessionRequest extends Request {
         }
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class DescribeRenderingSessionRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>Session ID. Specify either SessionId or ClientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-i205217481741918129226</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

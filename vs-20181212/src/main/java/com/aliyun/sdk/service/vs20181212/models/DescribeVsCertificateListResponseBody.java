@@ -67,7 +67,7 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         } 
 
         /**
-         * CertificateListModel.
+         * <p>Certificate ID.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -75,7 +75,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E310519-E035-51AB-80D4-C1CBECD39EB5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             } 
 
             /**
-             * CertId.
+             * <p>ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6338888</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -201,7 +207,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * <p>Name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-5391062</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -209,7 +218,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * <p>Common Name (CN) field in the certificate. Usually a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder common(String common) {
                 this.common = common;
@@ -217,7 +229,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * <p>Fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3EB2585309AE5C8F369****7CDA6A8F5CEC8B2D4</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -225,7 +240,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>Issuer of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxCert Inc</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -233,7 +251,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * <p>Timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632462708</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -300,7 +321,7 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             } 
 
             /**
-             * CertList.
+             * <p>List of certificates.</p>
              */
             public Builder certList(java.util.List<CertList> certList) {
                 this.certList = certList;
@@ -308,7 +329,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>Number of certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

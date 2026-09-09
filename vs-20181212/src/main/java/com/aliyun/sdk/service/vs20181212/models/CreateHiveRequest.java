@@ -74,7 +74,10 @@ public class CreateHiveRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>A description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G49单卡集群</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -83,6 +86,7 @@ public class CreateHiveRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,13 @@ public class VerifyVsDomainOwnerResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>校验内容。</p>
+         * <blockquote>
+         * </blockquote>
+         * <p>调用成功不返回该参数，调用失败返回校验内容。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_dffeb6610035dcb77b413a59c32c****</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -75,7 +81,10 @@ public class VerifyVsDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

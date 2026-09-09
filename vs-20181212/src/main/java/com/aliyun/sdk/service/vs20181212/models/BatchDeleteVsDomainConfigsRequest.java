@@ -89,6 +89,7 @@ public class BatchDeleteVsDomainConfigsRequest extends Request {
         } 
 
         /**
+         * <p>The accelerated domain names. Separate multiple domain names with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class BatchDeleteVsDomainConfigsRequest extends Request {
         }
 
         /**
+         * <p>The feature names. Separate multiple features with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

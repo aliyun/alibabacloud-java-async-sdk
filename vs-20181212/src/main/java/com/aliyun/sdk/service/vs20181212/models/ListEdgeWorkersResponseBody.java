@@ -106,7 +106,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>The list of loads.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -114,7 +114,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the query list. The value starts from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-14T15:20:37+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -277,7 +292,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-14T15:20:37+08:00</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -285,7 +303,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * HiveId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive-58mq6jynvgxxmlid3pt39x6gk-0</p>
              */
             public Builder hiveId(String hiveId) {
                 this.hiveId = hiveId;
@@ -293,7 +314,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The load ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as-d135ca4425c24b99b79cd0b6c552cac9</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +325,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * PlanId.
+             * <p>The plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pk-db3394401cc8403f85e4d72d99b52449</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -309,7 +336,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crs.xic.s1</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -317,7 +347,10 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Idle</p>
              */
             public Builder status(String status) {
                 this.status = status;

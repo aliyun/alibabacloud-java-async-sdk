@@ -74,6 +74,7 @@ public class BatchStartStreamsRequest extends Request {
         } 
 
         /**
+         * <p>Stream ID. Separate multiple IDs with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

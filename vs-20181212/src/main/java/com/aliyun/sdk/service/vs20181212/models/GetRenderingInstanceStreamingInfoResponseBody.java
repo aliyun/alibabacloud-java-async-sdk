@@ -119,7 +119,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * FlowId.
+         * <p>Token for this connection</p>
+         * 
+         * <strong>example:</strong>
+         * <p>792fy125-594c-4dde-ab35-9ff8hrf0a86f</p>
          */
         public Builder flowId(String flowId) {
             this.flowId = flowId;
@@ -127,7 +130,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Gateway.
+         * <p>Domain name of the cloud application service instance streaming gateway</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.178.208.22</p>
          */
         public Builder gateway(String gateway) {
             this.gateway = gateway;
@@ -135,7 +141,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>Hostname or IP address of the cloud application service instance stream</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.18.20.2</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -143,7 +152,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>Streaming connection port</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         public Builder port(String port) {
             this.port = port;
@@ -151,7 +163,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.renderingInstanceId = renderingInstanceId;
@@ -159,7 +174,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -119,7 +119,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * Channels.
+         * <p>The list of channels.</p>
          */
         public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
@@ -127,7 +127,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -135,7 +138,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -143,7 +149,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4641C72D-462E-4AEA-8485-FC267AF90B0A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -303,7 +318,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder channelId(Long channelId) {
                 this.channelId = channelId;
@@ -311,7 +329,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -319,7 +340,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceStatus.
+             * <p>The status of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder deviceStatus(String deviceStatus) {
                 this.deviceStatus = deviceStatus;
@@ -327,7 +351,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * GbId.
+             * <p>The GB ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3100000****000000002</p>
              */
             public Builder gbId(String gbId) {
                 this.gbId = gbId;
@@ -335,7 +362,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通道1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +373,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>Other configurations of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -351,7 +384,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamId.
+             * <p>The stream ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****997-cn-qingdao</p>
              */
             public Builder streamId(String streamId) {
                 this.streamId = streamId;
@@ -359,7 +395,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamStatus.
+             * <p>The status of the stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder streamStatus(String streamStatus) {
                 this.streamStatus = streamStatus;

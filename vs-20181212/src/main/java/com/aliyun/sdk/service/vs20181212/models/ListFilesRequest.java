@@ -130,7 +130,10 @@ public class ListFilesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter filters data by time range. It must conform to the ISO 8601 standard and use UTC time in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-31T06:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +142,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>File ID. Each ID corresponds to a unique active file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -148,7 +154,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>File name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myfile</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -157,7 +166,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to retrieve. Page numbering starts at 1.Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +178,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page for a paged query. The value must be in the range of 1 to 100. The default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +190,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time of the time range filter. Specify in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

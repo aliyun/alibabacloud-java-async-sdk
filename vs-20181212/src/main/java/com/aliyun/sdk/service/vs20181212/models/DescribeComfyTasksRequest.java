@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeComfyTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HiveId")
+    private String hiveId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -39,6 +43,7 @@ public class DescribeComfyTasksRequest extends Request {
 
     private DescribeComfyTasksRequest(Builder builder) {
         super(builder);
+        this.hiveId = builder.hiveId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.taskId = builder.taskId;
@@ -57,6 +62,13 @@ public class DescribeComfyTasksRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return hiveId
+     */
+    public String getHiveId() {
+        return this.hiveId;
     }
 
     /**
@@ -95,6 +107,7 @@ public class DescribeComfyTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeComfyTasksRequest, Builder> {
+        private String hiveId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String taskId; 
@@ -107,6 +120,7 @@ public class DescribeComfyTasksRequest extends Request {
 
         private Builder(DescribeComfyTasksRequest request) {
             super(request);
+            this.hiveId = request.hiveId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.taskId = request.taskId;
@@ -115,7 +129,22 @@ public class DescribeComfyTasksRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The HiveId used as a filter condition to query tasks executed under the specified HiveId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive-26cd567b35c04a0a90f0xxxxx</p>
+         */
+        public Builder hiveId(String hiveId) {
+            this.putQueryParameter("HiveId", hiveId);
+            this.hiveId = hiveId;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +153,10 @@ public class DescribeComfyTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,7 +165,7 @@ public class DescribeComfyTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The Comfy workflow ID used as a filter condition.</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -142,7 +174,10 @@ public class DescribeComfyTasksRequest extends Request {
         }
 
         /**
-         * TaskState.
+         * <p>The task status used as a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QUEUED</p>
          */
         public Builder taskState(String taskState) {
             this.putQueryParameter("TaskState", taskState);
@@ -151,7 +186,10 @@ public class DescribeComfyTasksRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The Comfy workflow ID used as a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
          */
         public Builder workflowId(String workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

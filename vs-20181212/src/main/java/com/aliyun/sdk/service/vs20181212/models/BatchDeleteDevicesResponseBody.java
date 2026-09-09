@@ -67,7 +67,10 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID of this task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>Result list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -141,7 +144,10 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>Device error message. (Only present if an error occurs)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Device not found</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -149,7 +155,10 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323884****9092996</p>
              */
             public Builder id(String id) {
                 this.id = id;

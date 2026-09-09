@@ -130,7 +130,10 @@ public class ListRenderingProjectsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>A parameter that specifies the time range to filter by. The time must be in UTC and follow the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-03T02:18:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +142,10 @@ public class ListRenderingProjectsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number. The first page is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +154,10 @@ public class ListRenderingProjectsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +166,10 @@ public class ListRenderingProjectsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>Project ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-422bc38dfgh5eb44149f135ef76304f63b</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -166,7 +178,10 @@ public class ListRenderingProjectsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>Project name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idata_content</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -175,7 +190,10 @@ public class ListRenderingProjectsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time of the time range filter. Use ISO 8601 format in UTC, such as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-29T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

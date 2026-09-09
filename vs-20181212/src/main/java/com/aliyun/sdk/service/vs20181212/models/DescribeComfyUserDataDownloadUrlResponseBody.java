@@ -106,7 +106,10 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * DownloadUrl.
+         * <p>The download URL for the application package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a>.</p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -122,7 +128,10 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The expiration time for the download link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752805579553</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -130,7 +139,10 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,7 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

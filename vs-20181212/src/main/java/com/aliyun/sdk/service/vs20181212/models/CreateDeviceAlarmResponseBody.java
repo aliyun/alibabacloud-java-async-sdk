@@ -106,7 +106,10 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         } 
 
         /**
-         * AlarmDelay.
+         * <p>下次相同告警的最小间隔。（单位：秒）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder alarmDelay(Long alarmDelay) {
             this.alarmDelay = alarmDelay;
@@ -114,7 +117,10 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * AlarmId.
+         * <p>告警ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0hyNgTdgv2D000195842</p>
          */
         public Builder alarmId(String alarmId) {
             this.alarmId = alarmId;
@@ -122,7 +128,10 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * Expire.
+         * <p>URL的过期时长。（单位：秒）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expire(Long expire) {
             this.expire = expire;
@@ -130,7 +139,10 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76E11E6A-4441-51C9-AF60-D354362257A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>媒体上传的URL，可使用PUT上传。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://demo.aliyundoc.com/live/310101<em><strong><strong>7542007?auth_key=1639130258-0-0-b2b04fe85ece6</strong></strong></em>a6b1a42bc7e</p>
          */
         public Builder url(String url) {
             this.url = url;

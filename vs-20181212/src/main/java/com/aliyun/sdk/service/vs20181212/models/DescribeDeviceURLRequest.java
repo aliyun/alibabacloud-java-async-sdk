@@ -169,7 +169,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * Expire.
+         * <p>Authentication validity period, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -178,6 +181,7 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,16 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>Stream mode. Valid values:</p>
+         * <ul>
+         * <li><p>play</p>
+         * </li>
+         * <li><p>push</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>push</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -199,6 +212,18 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
+         * <p>Stream protocol. Valid values:</p>
+         * <ul>
+         * <li><p>rtmp</p>
+         * </li>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>When Mode is set to push, only rtmp is supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +245,7 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
+         * <p>Stream name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

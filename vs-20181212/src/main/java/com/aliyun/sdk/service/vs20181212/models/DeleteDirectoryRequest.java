@@ -74,6 +74,7 @@ public class DeleteDirectoryRequest extends Request {
         } 
 
         /**
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -74,6 +74,7 @@ public class DescribeStreamRequest extends Request {
         } 
 
         /**
+         * <p>The stream ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

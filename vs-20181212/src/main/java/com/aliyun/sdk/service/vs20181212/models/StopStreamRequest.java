@@ -102,6 +102,7 @@ public class StopStreamRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class StopStreamRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31000000*****0000002</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -132,7 +136,10 @@ public class StopStreamRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time to restart the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-12T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

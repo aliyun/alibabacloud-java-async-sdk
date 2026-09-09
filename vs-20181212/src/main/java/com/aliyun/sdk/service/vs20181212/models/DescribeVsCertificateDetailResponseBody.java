@@ -106,7 +106,10 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Cert.
+         * <p>The certificate content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----xxxxx-----END CERTIFICATE-----</p>
          */
         public Builder cert(String cert) {
             this.cert = cert;
@@ -114,7 +117,10 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertId.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63000000</p>
          */
         public Builder certId(Long certId) {
             this.certId = certId;
@@ -122,7 +128,10 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertName.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-539xxxxx</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -130,7 +139,10 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -138,7 +150,10 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID for this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D94D0E1E-E71B-562D-8C18-969BB3653FBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

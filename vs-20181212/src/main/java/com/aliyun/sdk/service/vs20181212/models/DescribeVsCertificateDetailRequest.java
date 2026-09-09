@@ -74,6 +74,7 @@ public class DescribeVsCertificateDetailRequest extends Request {
         } 
 
         /**
+         * <p>The certificate name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

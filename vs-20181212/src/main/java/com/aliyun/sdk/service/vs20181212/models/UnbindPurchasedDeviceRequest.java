@@ -74,6 +74,7 @@ public class UnbindPurchasedDeviceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

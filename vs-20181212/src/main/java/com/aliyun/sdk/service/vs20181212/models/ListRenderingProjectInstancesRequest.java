@@ -145,7 +145,10 @@ public class ListRenderingProjectInstancesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>End time of the time range. Use ISO 8601 format in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-30T02:18:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -154,7 +157,10 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number. Start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,7 +169,10 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,6 +181,7 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +194,10 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -193,7 +206,10 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>A parameter for filtering by a time range. The time must be in UTC and formatted according to the ISO 8601 standard as \<code>yyyy-MM-ddTHH:mm:ssZ\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-27T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -202,7 +218,18 @@ public class ListRenderingProjectInstancesRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Instance status. Valid values:</p>
+         * <ol>
+         * <li><p>Idle</p>
+         * </li>
+         * <li><p>Locked</p>
+         * </li>
+         * <li><p>InUse</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>Idle</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

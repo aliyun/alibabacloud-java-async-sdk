@@ -158,6 +158,7 @@ public class DescribeDirectoriesRequest extends Request {
         } 
 
         /**
+         * <p>ID of the group to which the directory belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,10 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * NoPagination.
+         * <p>Disable paging. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder noPagination(Boolean noPagination) {
             this.putQueryParameter("NoPagination", noPagination);
@@ -188,7 +192,10 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -197,7 +204,10 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Default is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +216,10 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>Query by parent directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****774-cn-qingdao</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -215,7 +228,10 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Sort by the specified field. Default is by ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -224,7 +240,16 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>Sort order. Default is ascending. Values:</p>
+         * <ul>
+         * <li><p>asc (ascending)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);

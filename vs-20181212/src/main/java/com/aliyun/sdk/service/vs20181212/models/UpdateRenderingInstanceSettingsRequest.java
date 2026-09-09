@@ -73,7 +73,10 @@ public class UpdateRenderingInstanceSettingsRequest extends Request {
         } 
 
         /**
-         * RenderingInstanceId.
+         * <p>ID of the cloud application service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -82,7 +85,7 @@ public class UpdateRenderingInstanceSettingsRequest extends Request {
         }
 
         /**
-         * Settings.
+         * <p>List of instance settings.</p>
          */
         public Builder settings(java.util.List<Settings> settings) {
             String settingsShrink = shrink(settings, "Settings", "json");
@@ -151,7 +154,10 @@ public class UpdateRenderingInstanceSettingsRequest extends Request {
             } 
 
             /**
-             * AttributeName.
+             * <p>Name of the instance setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>navbar.hide</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -159,7 +165,10 @@ public class UpdateRenderingInstanceSettingsRequest extends Request {
             }
 
             /**
-             * AttributeValue.
+             * <p>Value of the instance setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;

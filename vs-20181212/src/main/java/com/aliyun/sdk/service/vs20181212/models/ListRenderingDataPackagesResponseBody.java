@@ -80,7 +80,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         } 
 
         /**
-         * DataPackages.
+         * <p>A list of data packages for the cloud application service.</p>
          */
         public Builder dataPackages(java.util.List<DataPackages> dataPackages) {
             this.dataPackages = dataPackages;
@@ -99,7 +99,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of Graphic Computing Service instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +246,16 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category. Valid values:</p>
+             * <ul>
+             * <li><p>Package</p>
+             * </li>
+             * <li><p>Baseline</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Package</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -251,7 +263,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time of the Graphic Computing Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-15T10:23:06+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -259,7 +274,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * DataPackageId.
+             * <p>The ID of the data pack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp-449ea3d16c0841b8bf33ec5bbc86a152</p>
              */
             public Builder dataPackageId(String dataPackageId) {
                 this.dataPackageId = dataPackageId;
@@ -267,7 +285,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -275,7 +296,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>The ID of the Graphic Computing Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-342012a227dc4ddf91f024639e43051a</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -283,7 +307,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the data pack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -291,7 +318,14 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the data pack. Valid values:
+             * available
+             * packing
+             * failed
+             * bonded</p>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +333,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-06T02:03:59Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

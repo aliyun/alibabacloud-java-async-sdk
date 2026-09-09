@@ -74,6 +74,7 @@ public class DescribeTemplateRequest extends Request {
         } 
 
         /**
+         * <p>Template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

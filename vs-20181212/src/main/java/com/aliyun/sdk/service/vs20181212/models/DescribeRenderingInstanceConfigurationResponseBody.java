@@ -67,7 +67,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         } 
 
         /**
-         * Configuration.
+         * <p>The configuration.</p>
          */
         public Builder configuration(java.util.List<Configuration> configuration) {
             this.configuration = configuration;
@@ -75,7 +75,10 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * Name.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lon</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +155,10 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * Value.
+             * <p>The value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -216,7 +225,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * Attributes.
+             * <p>The list of properties for the module.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -224,7 +233,30 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the device simulation feature module. Valid values:</p>
+             * <ol>
+             * <li><p>ctl: The control module.</p>
+             * </li>
+             * <li><p>prop: The property module.</p>
+             * </li>
+             * <li><p>location: The location module.</p>
+             * </li>
+             * <li><p>battery: The battery module.</p>
+             * </li>
+             * <li><p>network: The network module.</p>
+             * </li>
+             * <li><p>bluetooth: The Bluetooth module.</p>
+             * </li>
+             * <li><p>sim: The SIM card module.</p>
+             * </li>
+             * <li><p>display: The device module.</p>
+             * </li>
+             * <li><p>system: The basic module.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>location</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;

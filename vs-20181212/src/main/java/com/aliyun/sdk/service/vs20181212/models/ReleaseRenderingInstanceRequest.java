@@ -60,6 +60,7 @@ public class ReleaseRenderingInstanceRequest extends Request {
         } 
 
         /**
+         * <p>Graphic Computing Service application instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

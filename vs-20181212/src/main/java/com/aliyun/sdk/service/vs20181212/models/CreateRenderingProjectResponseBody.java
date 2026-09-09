@@ -67,7 +67,10 @@ public class CreateRenderingProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * ProjectId.
+         * <p>The project ID. Call ListRenderingProjects to view the project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-b93ea81de76f48609eed3cd420f0399f</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;

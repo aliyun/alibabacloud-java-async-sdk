@@ -74,7 +74,7 @@ public class RefreshRenderingInstanceStreamingRequest extends Request {
         } 
 
         /**
-         * ClientInfo.
+         * <p>Client information.</p>
          */
         public Builder clientInfo(ClientInfo clientInfo) {
             String clientInfoShrink = shrink(clientInfo, "ClientInfo", "json");
@@ -84,6 +84,7 @@ public class RefreshRenderingInstanceStreamingRequest extends Request {
         }
 
         /**
+         * <p>Cloud application service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +156,10 @@ public class RefreshRenderingInstanceStreamingRequest extends Request {
             } 
 
             /**
-             * ClientIp.
+             * <p>Client IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.21.128.110</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -163,7 +167,10 @@ public class RefreshRenderingInstanceStreamingRequest extends Request {
             }
 
             /**
-             * NewClient.
+             * <p>Indicates if the client is new.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder newClient(Boolean newClient) {
                 this.newClient = newClient;

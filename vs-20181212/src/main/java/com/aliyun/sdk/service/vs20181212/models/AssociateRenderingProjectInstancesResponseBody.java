@@ -106,7 +106,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedInstanceCount.
+         * <p>Number of failed cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedInstanceCount(String failedInstanceCount) {
             this.failedInstanceCount = failedInstanceCount;
@@ -114,7 +117,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * FailedInstances.
+         * <p>List of instances that failed to associate</p>
          */
         public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
             this.failedInstances = failedInstances;
@@ -122,7 +125,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstanceCount.
+         * <p>Number of successful cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder successInstanceCount(String successInstanceCount) {
             this.successInstanceCount = successInstanceCount;
@@ -138,7 +147,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstances.
+         * <p>List of successfully associated instances</p>
          */
         public Builder successInstances(java.util.List<SuccessInstances> successInstances) {
             this.successInstances = successInstances;
@@ -204,7 +213,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Failure reason</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid id</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -212,7 +224,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -279,7 +294,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -287,7 +305,10 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-5130e2feb23f442fb9456a3d977f03d4</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;

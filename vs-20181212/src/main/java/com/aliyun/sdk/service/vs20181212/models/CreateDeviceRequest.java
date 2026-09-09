@@ -369,7 +369,26 @@ public class CreateDeviceRequest extends Request {
         } 
 
         /**
-         * AlarmMethod.
+         * <p>GB-compliant alarm method to subscribe to. Valid values:</p>
+         * <ul>
+         * <li><p>0 (all)</p>
+         * </li>
+         * <li><p>5 (video alarm)</p>
+         * </li>
+         * <li><p>7 (other alarms)</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li><p>An empty value means no subscription.</p>
+         * </li>
+         * <li><p>You can specify multiple values, separated by commas (,).</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alarmMethod(String alarmMethod) {
             this.putQueryParameter("AlarmMethod", alarmMethod);
@@ -387,7 +406,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * AutoPos.
+         * <p>Whether to enable location subscription for the device. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPos(Boolean autoPos) {
             this.putQueryParameter("AutoPos", autoPos);
@@ -396,7 +418,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * AutoStart.
+         * <p>Whether to automatically start the stream. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoStart(Boolean autoStart) {
             this.putQueryParameter("AutoStart", autoStart);
@@ -405,7 +430,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Device description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx路口摄像头</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -414,7 +442,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>ID of the folder that contains the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****488-cn-qingdao</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -423,7 +454,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Dsn.
+         * <p>Device serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D0*****4C0</p>
          */
         public Builder dsn(String dsn) {
             this.putQueryParameter("Dsn", dsn);
@@ -432,7 +466,13 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * GbId.
+         * <p>GB-compliant device ID.</p>
+         * <blockquote>
+         * <p>This parameter applies only to GB-compliant protocols.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>31000000****00000002</p>
          */
         public Builder gbId(String gbId) {
             this.putQueryParameter("GbId", gbId);
@@ -441,6 +481,7 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
+         * <p>ID of the space that contains the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -453,7 +494,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>Device IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -462,7 +506,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Latitude.
+         * <p>The dimension of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>119.20</p>
          */
         public Builder latitude(String latitude) {
             this.putQueryParameter("Latitude", latitude);
@@ -471,7 +518,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Longitude.
+         * <p>Device longitude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45.00</p>
          */
         public Builder longitude(String longitude) {
             this.putQueryParameter("Longitude", longitude);
@@ -480,7 +530,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx路口摄像头</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -498,7 +551,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>Additional device parameters, formatted as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -507,7 +563,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>ID of the parent device. For example, the ID of the platform that hosts the camera.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****774-cn-qingdao</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -516,7 +575,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>Device password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -525,7 +587,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>Device port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Long port) {
             this.putQueryParameter("Port", port);
@@ -534,7 +599,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * PosInterval.
+         * <p>Location subscription interval, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder posInterval(Long posInterval) {
             this.putQueryParameter("PosInterval", posInterval);
@@ -543,6 +611,15 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
+         * <p>Device type. Valid values:</p>
+         * <ul>
+         * <li><p>ipc (camera)</p>
+         * </li>
+         * <li><p>platform (platform)</p>
+         * </li>
+         * <li><p>ied (intelligent device)</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -555,7 +632,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>Stream URL on the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://xxx/xxx</p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -564,7 +644,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>Device username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -573,7 +656,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * <p>Device vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公司A</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

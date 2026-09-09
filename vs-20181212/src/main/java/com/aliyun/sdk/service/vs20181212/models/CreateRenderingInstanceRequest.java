@@ -186,7 +186,10 @@ public class CreateRenderingInstanceRequest extends Request {
         } 
 
         /**
-         * Attributes.
+         * <blockquote>
+         * <p>Unless you have specific requirements, keep the default values. For customers with special requirements, fill in the relevant parameters after communication and confirmation.</p>
+         * </blockquote>
+         * <p>Attribute information.</p>
          */
         public Builder attributes(Attributes attributes) {
             String attributesShrink = shrink(attributes, "Attributes", "json");
@@ -196,7 +199,19 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <blockquote>
+         * <p>This value is valid only when <code>InstanceChargeType</code> is <code>PrePaid</code> (subscription).</p>
+         * </blockquote>
+         * <p>Enable or disable auto-renewal. Values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -205,7 +220,7 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * ClientInfo.
+         * <p>Client information.</p>
          */
         public Builder clientInfo(ClientInfo clientInfo) {
             String clientInfoShrink = shrink(clientInfo, "ClientInfo", "json");
@@ -215,7 +230,16 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * InstanceBillingCycle.
+         * <blockquote>
+         * <p>This value is valid only when <code>InstanceChargeType</code> is <code>PostPaid</code> (pay-as-you-go).</p>
+         * </blockquote>
+         * <p>Billing type. Valid values:</p>
+         * <ul>
+         * <li>Hour: Hourly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder instanceBillingCycle(String instanceBillingCycle) {
             this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
@@ -224,7 +248,16 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * <p>The billing method for the instance. Valid values:</p>
+         * <ul>
+         * <li><p>PrePaid (default): Subscription.</p>
+         * </li>
+         * <li><p>PostPaid: Pay-as-you-go.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -233,7 +266,16 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * <blockquote>
+         * <p>Only one billing method is allowed. If a billing method already exists, the new value is invalid by default, and the existing one prevails. Note that this field is required when a user makes the first purchase.</p>
+         * </blockquote>
+         * <p>Network billing type. Value:</p>
+         * <ul>
+         * <li>95BandwidthByMonth: Monthly 95th percentile bandwidth.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>95BandwidthByMonth</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -242,7 +284,10 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidth.
+         * <p>Maximum bandwidth, in Mbps. Default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidth(Long internetMaxBandwidth) {
             this.putQueryParameter("InternetMaxBandwidth", internetMaxBandwidth);
@@ -251,7 +296,35 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <blockquote>
+         * <p>This value is valid only when <code>InstanceChargeType</code> is <code>PrePaid</code> (subscription).</p>
+         * </blockquote>
+         * <p>The subscription period. Valid values (Note: 12 is converted to one year; other values are in months):</p>
+         * <ul>
+         * <li><p>1 (default)</p>
+         * </li>
+         * <li><p>2</p>
+         * </li>
+         * <li><p>3</p>
+         * </li>
+         * <li><p>4</p>
+         * </li>
+         * <li><p>5</p>
+         * </li>
+         * <li><p>6</p>
+         * </li>
+         * <li><p>7</p>
+         * </li>
+         * <li><p>8</p>
+         * </li>
+         * <li><p>9</p>
+         * </li>
+         * <li><p>12</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -260,6 +333,15 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
+         * <p>Cloud application service instance specifications.</p>
+         * <ul>
+         * <li><p>For crs.cp.\* series specifications, choose between subscription or pay-as-you-go billing.</p>
+         * </li>
+         * <li><p>For crs.vm.\* series specifications, choose between subscription or pay-as-you-go billing.</p>
+         * </li>
+         * <li><p>For other series, only subscription billing is supported.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +354,10 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * StorageSize.
+         * <p>The cloud storage capacity used by the cloud application service instance (Note: not local storage).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder storageSize(String storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -366,7 +451,10 @@ public class CreateRenderingInstanceRequest extends Request {
             } 
 
             /**
-             * EdgeMediaService.
+             * <p>Streaming service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder edgeMediaService(String edgeMediaService) {
                 this.edgeMediaService = edgeMediaService;
@@ -374,7 +462,10 @@ public class CreateRenderingInstanceRequest extends Request {
             }
 
             /**
-             * InAccess.
+             * <p>Inbound access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder inAccess(String inAccess) {
                 this.inAccess = inAccess;
@@ -382,7 +473,10 @@ public class CreateRenderingInstanceRequest extends Request {
             }
 
             /**
-             * OutAccess.
+             * <p>Outbound access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder outAccess(String outAccess) {
                 this.outAccess = outAccess;
@@ -390,7 +484,10 @@ public class CreateRenderingInstanceRequest extends Request {
             }
 
             /**
-             * Zone.
+             * <p>Resource domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -444,7 +541,10 @@ public class CreateRenderingInstanceRequest extends Request {
             } 
 
             /**
-             * ClientIp.
+             * <p>Client IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.21.128.110</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;

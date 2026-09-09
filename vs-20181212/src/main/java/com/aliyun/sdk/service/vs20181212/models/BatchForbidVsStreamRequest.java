@@ -146,6 +146,15 @@ public class BatchForbidVsStreamRequest extends Request {
         } 
 
         /**
+         * <p>The stream name.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p>Format: AppName/StreamName.</p>
+         * </li>
+         * <li><p>Specify multiple names, separated by commas (,).</p>
+         * </li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +176,7 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
+         * <p>Your accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +189,13 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the operation applies to stream ingest by a streamer or stream pulling by a client. Valid values:</p>
+         * <ul>
+         * <li>publisher (streamer ingest)</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only publisher is supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +208,16 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * Oneshot.
+         * <p>Specifies whether to stop ingest without adding the stream to the blacklist. Valid values:</p>
+         * <ul>
+         * <li><p>yes</p>
+         * </li>
+         * <li><p>no</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder oneshot(String oneshot) {
             this.putQueryParameter("Oneshot", oneshot);
@@ -209,7 +235,13 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * ResumeTime.
+         * <p>The time to resume ingest.</p>
+         * <blockquote>
+         * <p>Use UTC format. Example: 2015-12-01T17:37:00Z</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T17:37:00Z</p>
          */
         public Builder resumeTime(String resumeTime) {
             this.putQueryParameter("ResumeTime", resumeTime);

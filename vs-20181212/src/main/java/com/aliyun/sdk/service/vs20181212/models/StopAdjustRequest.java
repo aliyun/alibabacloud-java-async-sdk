@@ -102,7 +102,10 @@ public class StopAdjustRequest extends Request {
         } 
 
         /**
-         * Focus.
+         * <p>Stop adjusting the zoom. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder focus(Boolean focus) {
             this.putQueryParameter("Focus", focus);
@@ -111,6 +114,7 @@ public class StopAdjustRequest extends Request {
         }
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class StopAdjustRequest extends Request {
         }
 
         /**
-         * Iris.
+         * <p>Stop adjusting the aperture. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder iris(Boolean iris) {
             this.putQueryParameter("Iris", iris);

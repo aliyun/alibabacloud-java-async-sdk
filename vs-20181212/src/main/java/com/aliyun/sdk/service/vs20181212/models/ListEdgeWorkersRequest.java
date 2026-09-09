@@ -172,7 +172,10 @@ public class ListEdgeWorkersRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-14T15:20:37+08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -181,7 +184,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * HiveIds.
+         * <p>The list of cluster IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
          */
         public Builder hiveIds(java.util.List<String> hiveIds) {
             String hiveIdsShrink = shrink(hiveIds, "HiveIds", "json");
@@ -191,7 +197,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of load IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ew-xxxxxx</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -201,7 +210,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the query list. The value starts from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +222,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,7 +234,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * PlanIds.
+         * <p>The list of plan IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;pk-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
          */
         public Builder planIds(java.util.List<String> planIds) {
             String planIdsShrink = shrink(planIds, "PlanIds", "json");
@@ -229,7 +247,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>The specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ew.gn8t6xlarge-rb.x1p</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -238,7 +259,10 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time range filter parameter. The value is in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-25T06:35:26+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -247,7 +271,7 @@ public class ListEdgeWorkersRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The list of statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");

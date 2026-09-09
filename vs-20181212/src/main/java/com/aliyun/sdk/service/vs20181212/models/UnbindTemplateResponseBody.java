@@ -106,7 +106,10 @@ public class UnbindTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****994-cn-qingdao</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -114,7 +117,10 @@ public class UnbindTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -122,7 +128,10 @@ public class UnbindTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class UnbindTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -138,7 +150,10 @@ public class UnbindTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateType.
+         * <p>The type of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record</p>
          */
         public Builder templateType(String templateType) {
             this.templateType = templateType;

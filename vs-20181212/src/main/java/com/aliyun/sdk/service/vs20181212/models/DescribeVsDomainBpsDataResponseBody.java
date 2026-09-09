@@ -127,7 +127,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * <p>The time interval for each record. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2100</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -135,7 +138,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -143,7 +149,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>End time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-01T07:10:48Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -151,7 +160,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID for this operation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>Start time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-18T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -210,7 +210,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedTime.
+         * <p>Device creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-10T21:00:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -218,7 +221,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Device description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx路口摄像头</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -226,7 +232,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * <p>Space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -234,7 +243,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>Space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试空间</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -242,7 +254,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33763****77224964-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -250,7 +265,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -258,7 +276,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2117*****0447</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -266,7 +287,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>Region where the space belongs, also known as the service center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -274,7 +298,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RegisterCode.
+         * <p>Device registration code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345*****67890</p>
          */
         public Builder registerCode(String registerCode) {
             this.registerCode = registerCode;
@@ -282,7 +309,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +320,18 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * SubType.
+         * <p>Device child type. Valid values:</p>
+         * <ul>
+         * <li><p>bullet (bullet camera)</p>
+         * </li>
+         * <li><p>dome (dome camera)</p>
+         * </li>
+         * <li><p>ptz (PTZ)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dome</p>
          */
         public Builder subType(String subType) {
             this.subType = subType;
@@ -298,7 +339,18 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Device type. Valid values:</p>
+         * <ul>
+         * <li><p>ipc (camera)</p>
+         * </li>
+         * <li><p>platform</p>
+         * </li>
+         * <li><p>ied (intelligent device)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipc</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -306,7 +358,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Vendor.
+         * <p>Device vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8yd*****qem</p>
          */
         public Builder vendor(String vendor) {
             this.vendor = vendor;

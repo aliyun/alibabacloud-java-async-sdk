@@ -119,7 +119,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Directories.
+         * <p>List of directories.</p>
          */
         public Builder directories(java.util.List<Directories> directories) {
             this.directories = directories;
@@ -127,7 +127,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -135,7 +138,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -143,7 +149,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of directories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -277,7 +292,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>Directory creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-10T10:00:00Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -285,7 +303,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Directory description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>目录2</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +314,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>ID of the group to which the directory belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****174-cn-qingdao</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -301,7 +325,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>399*****488-cn-qingdao</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -309,7 +336,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Directory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>目录2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +347,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>Parent directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>399*****774-cn-qingdao</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

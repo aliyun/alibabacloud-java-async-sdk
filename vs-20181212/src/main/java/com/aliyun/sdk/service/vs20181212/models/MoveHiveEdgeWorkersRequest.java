@@ -75,6 +75,7 @@ public class MoveHiveEdgeWorkersRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class MoveHiveEdgeWorkersRequest extends Request {
         }
 
         /**
+         * <p>The list of workload IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

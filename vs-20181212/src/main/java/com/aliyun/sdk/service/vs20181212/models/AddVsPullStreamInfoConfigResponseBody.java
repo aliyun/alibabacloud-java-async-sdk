@@ -54,7 +54,10 @@ public class AddVsPullStreamInfoConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CB843A9-DD34-4881-B8D6-B0D539D111E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

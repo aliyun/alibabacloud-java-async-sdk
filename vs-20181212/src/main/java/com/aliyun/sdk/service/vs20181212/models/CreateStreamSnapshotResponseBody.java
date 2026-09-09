@@ -171,7 +171,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * Format.
+         * <p>Image format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jpg</p>
          */
         public Builder format(String format) {
             this.format = format;
@@ -179,7 +182,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Height.
+         * <p>Image height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder height(Long height) {
             this.height = height;
@@ -187,7 +193,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Stream ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -195,7 +204,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucket.
+         * <p>The OSS bucket of the snapshot file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examplebucket</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.ossBucket = ossBucket;
@@ -203,7 +215,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The OSS endpoint of the snapshot file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-qingdao.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.ossEndpoint = ossEndpoint;
@@ -211,7 +226,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * OssObject.
+         * <p>The OSS object of the snapshot file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>photos/live/340200*****100049/ondemand-1639126601767.jpg</p>
          */
         public Builder ossObject(String ossObject) {
             this.ossObject = ossObject;
@@ -219,7 +237,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +248,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The snapshot timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639126601767</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -235,7 +259,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The URL of the snapshot file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg">http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg</a></p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -243,7 +270,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Width.
+         * <p>Image width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         public Builder width(Long width) {
             this.width = width;

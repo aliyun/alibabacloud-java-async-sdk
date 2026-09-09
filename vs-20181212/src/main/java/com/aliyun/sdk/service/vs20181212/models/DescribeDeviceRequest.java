@@ -102,6 +102,7 @@ public class DescribeDeviceRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DescribeDeviceRequest extends Request {
         }
 
         /**
-         * IncludeDirectory.
+         * <p>Return directory information. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeDirectory(Boolean includeDirectory) {
             this.putQueryParameter("IncludeDirectory", includeDirectory);
@@ -123,7 +127,10 @@ public class DescribeDeviceRequest extends Request {
         }
 
         /**
-         * IncludeStats.
+         * <p>Return stream statistics. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeStats(Boolean includeStats) {
             this.putQueryParameter("IncludeStats", includeStats);

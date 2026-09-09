@@ -119,7 +119,10 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataInterval.
+         * <p>Time granularity of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -127,7 +130,10 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name of the Visual Edge Computing Service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -135,7 +141,10 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>End time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-22T03:40:41Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -151,7 +160,10 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>Start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-21T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

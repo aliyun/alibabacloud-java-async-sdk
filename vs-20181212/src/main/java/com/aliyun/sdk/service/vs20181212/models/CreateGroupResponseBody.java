@@ -106,7 +106,10 @@ public class CreateGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * GbId.
+         * <p>National standard ID associated with the workspace. (Applies only to workspaces using national standard ingest.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31000000****00000001</p>
          */
         public Builder gbId(String gbId) {
             this.gbId = gbId;
@@ -114,7 +117,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbIp.
+         * <p>IP address of the national standard signaling gateway server associated with the workspace. (Applies only to workspaces using national standard ingest.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         public Builder gbIp(String gbIp) {
             this.gbIp = gbIp;
@@ -122,7 +128,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbPort.
+         * <p>National standard signaling server port provided by the workspace. (Applies only to workspaces using national standard ingest.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5060</p>
          */
         public Builder gbPort(Long gbPort) {
             this.gbPort = gbPort;
@@ -130,7 +139,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33763****77224964-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -138,7 +150,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

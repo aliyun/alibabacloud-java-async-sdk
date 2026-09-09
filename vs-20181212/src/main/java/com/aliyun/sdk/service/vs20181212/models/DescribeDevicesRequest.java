@@ -283,7 +283,10 @@ public class DescribeDevicesRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The ID of the directory to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****488-cn-qingdao</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -292,7 +295,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * Dsn.
+         * <p>The serial number of the device. The value must be unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D0*****4C0</p>
          */
         public Builder dsn(String dsn) {
             this.putQueryParameter("Dsn", dsn);
@@ -301,7 +307,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * GbId.
+         * <p>You can query by device national standard ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310000000****0000002</p>
          */
         public Builder gbId(String gbId) {
             this.putQueryParameter("GbId", gbId);
@@ -310,7 +319,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>Query by device Space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -319,7 +331,13 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The device ID.</p>
+         * <blockquote>
+         * <p>Specify multiple IDs. Separate them with commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -328,7 +346,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * IncludeDirectory.
+         * <p>Specifies whether to return directory information. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeDirectory(Boolean includeDirectory) {
             this.putQueryParameter("IncludeDirectory", includeDirectory);
@@ -337,7 +358,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * IncludeStats.
+         * <p>Specifies whether to return stream statistics. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeStats(Boolean includeStats) {
             this.putQueryParameter("IncludeStats", includeStats);
@@ -346,7 +370,13 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The device name.</p>
+         * <blockquote>
+         * <p>Specify multiple names. Separate them with commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>摄像头A</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -364,7 +394,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -373,7 +406,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -382,7 +418,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The ID of the parent device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****774-cn-qingdao</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -391,7 +430,13 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results. Valid value:</p>
+         * <blockquote>
+         * <p>id (default)</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -400,7 +445,16 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p>asc (ascending) (default)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);
@@ -409,7 +463,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Query devices by status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -418,7 +475,18 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The device type. Valid values:</p>
+         * <ul>
+         * <li><p>ipc (camera)</p>
+         * </li>
+         * <li><p>platform</p>
+         * </li>
+         * <li><p>ied (intelligent edge device)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipc</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -427,7 +495,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * <p>Query by device manufacturer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8yd*****qem</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

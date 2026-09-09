@@ -106,7 +106,7 @@ public class ListFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Files.
+         * <p>List of file information.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.files = files;
@@ -114,7 +114,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of matching file records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class ListFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>File description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我的文件</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -290,7 +305,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>File ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -298,7 +316,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>File name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myfile</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -306,7 +327,20 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Upload status. Valid values:</p>
+             * <ol>
+             * <li><p>Created</p>
+             * </li>
+             * <li><p>Doing</p>
+             * </li>
+             * <li><p>Success (desired state)</p>
+             * </li>
+             * <li><p>Failed (desired state)</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +348,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescription.
+             * <p>Status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upload success</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -322,7 +359,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * <p>Destination path for pushing the file to the service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data/tmp/test/xxx.tar</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -330,7 +370,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Most recent status update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-28T14:15:08+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -338,7 +381,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * <p>Upload start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-28T14:10:12+08:00</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

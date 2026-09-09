@@ -162,6 +162,16 @@ public class UploadCloudAppRequest extends Request {
         } 
 
         /**
+         * <p>The application name. For Android apps, use the package name, such as com.aaa.bbb.</p>
+         * <p>Value requirements:</p>
+         * <ol>
+         * <li><p>Length: 4–50 characters</p>
+         * </li>
+         * <li><p>Allowed characters: lowercase letters, digits, underscores (_), hyphens (-), and dots (.)</p>
+         * </li>
+         * <li><p>The first and last characters must be a letter or digit</p>
+         * </li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +184,15 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
+         * <p>Value requirements:</p>
+         * <ol>
+         * <li><p>Length: 1–50 characters</p>
+         * </li>
+         * <li><p>Allowed characters: lowercase letters, digits, underscores (_), hyphens (-), and dots (.)</p>
+         * </li>
+         * <li><p>The first and last characters must be a letter or digit</p>
+         * </li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +205,10 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>A description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试应用包</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -195,6 +217,7 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
+         * <p>The download URL of the application package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +230,7 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
+         * <p>The MD5 hash of the application package, used to verify package integrity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +243,22 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * PkgFormat.
+         * <p>The package format. By default, this is inferred from the file extension in the DownloadUrl. Valid values:</p>
+         * <ol>
+         * <li><p>apk</p>
+         * </li>
+         * <li><p>tar.gz</p>
+         * </li>
+         * <li><p>tar</p>
+         * </li>
+         * <li><p>zip</p>
+         * </li>
+         * <li><p>rar</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>apk</p>
          */
         public Builder pkgFormat(String pkgFormat) {
             this.putQueryParameter("PkgFormat", pkgFormat);
@@ -228,7 +267,15 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * PkgLabels.
+         * <p>Cloud application labels. You can select multiple. Valid values:</p>
+         * <ol>
+         * <li><p>hot</p>
+         * </li>
+         * <li><p>game</p>
+         * </li>
+         * <li><p>app</p>
+         * </li>
+         * </ol>
          */
         public Builder pkgLabels(java.util.List<String> pkgLabels) {
             String pkgLabelsShrink = shrink(pkgLabels, "PkgLabels", "json");
@@ -238,7 +285,31 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * PkgType.
+         * <p>The package type.</p>
+         * <h2>Valid values:</h2>
+         * <ol>
+         * <li><p>android</p>
+         * </li>
+         * <li><p>win</p>
+         * </li>
+         * <li><p>android_appmarket: for Android app marketplace scenarios. This scenario enforces real APK PackageName restrictions:
+         * a. PackageNames must be unique across different AppNames.
+         * b. The same AppName with different AppVersions can map to different PackageNames.</p>
+         * </li>
+         * </ol>
+         * <h2>Default behavior:</h2>
+         * <p>If not specified, the system automatically maps the package type based on PkgFormat (or infers PkgFormat from the DownloadUrl file extension). The default mapping is:</p>
+         * <ol>
+         * <li><p>android: apk</p>
+         * </li>
+         * <li><p>win: tar.gz, tar, zip, rar</p>
+         * </li>
+         * <li><p>android_appmarket: apk</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         public Builder pkgType(String pkgType) {
             this.putQueryParameter("PkgType", pkgType);

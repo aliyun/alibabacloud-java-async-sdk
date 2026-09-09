@@ -119,7 +119,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         } 
 
         /**
-         * GroupLimit.
+         * <p>The maximum number of device spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder groupLimit(Long groupLimit) {
             this.groupLimit = groupLimit;
@@ -127,7 +130,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         }
 
         /**
-         * GroupNum.
+         * <p>Number of device groups in the current region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder groupNum(Long groupNum) {
             this.groupNum = groupNum;
@@ -135,10 +141,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID</p>
+         * <p>Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3238848****092996</p>
+         * <p>1165*****601</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -146,7 +152,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +163,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateLimit.
+         * <p>Maximum number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder templateLimit(Long templateLimit) {
             this.templateLimit = templateLimit;
@@ -162,7 +174,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateNum.
+         * <p>Current number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder templateNum(Long templateNum) {
             this.templateNum = templateNum;

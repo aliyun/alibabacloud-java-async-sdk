@@ -102,6 +102,7 @@ public class DescribeVsDomainUvDataRequest extends Request {
         } 
 
         /**
+         * <p>The domain name of Visual Edge Computing Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DescribeVsDomainUvDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-24T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -132,7 +136,10 @@ public class DescribeVsDomainUvDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.<br>The minimum data granularity is 1 hour.<br>If you do not set this parameter, data from the last 24 hours is queried.<br><br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-12T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

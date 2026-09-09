@@ -89,6 +89,7 @@ public class RecoverRenderingDataPackageRequest extends Request {
         } 
 
         /**
+         * <p>Cloud application service data pack ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class RecoverRenderingDataPackageRequest extends Request {
         }
 
         /**
-         * LoadMode.
+         * <p>Data loading mode. Valid values: System or Process. Default value: System. System indicates system-level loading, which offers high stability but takes longer. Process indicates process-level loading, which provides high timeliness but relatively lower stability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process</p>
          */
         public Builder loadMode(String loadMode) {
             this.putQueryParameter("LoadMode", loadMode);
@@ -110,6 +114,7 @@ public class RecoverRenderingDataPackageRequest extends Request {
         }
 
         /**
+         * <p>Cloud application service instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

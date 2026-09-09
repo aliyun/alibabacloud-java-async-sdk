@@ -132,7 +132,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +154,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of workflows on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of workflows that match the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -180,7 +198,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Workflows.
+         * <p>A list of Comfy workflows.</p>
          */
         public Builder workflows(java.util.List<Workflows> workflows) {
             this.workflows = workflows;
@@ -285,7 +303,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-03T07:31:45+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -293,7 +314,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The workflow description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个图生视频工作流</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +325,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>图生视频工作流</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +336,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the workflow was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778897586</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -317,7 +347,10 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
              */
             public Builder workflowId(String workflowId) {
                 this.workflowId = workflowId;

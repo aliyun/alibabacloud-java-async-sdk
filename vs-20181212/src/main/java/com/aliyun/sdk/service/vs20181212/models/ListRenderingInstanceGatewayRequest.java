@@ -129,7 +129,10 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The time range for filtering. The time must be in ISO 8601 format and in UTC, such as \<code>yyyy-MM-ddTHH:mm:ssZ\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-20T12:23:02Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +141,10 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * GatewayInstanceId.
+         * <p>The ID of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-xxx</p>
          */
         public Builder gatewayInstanceId(String gatewayInstanceId) {
             this.putQueryParameter("GatewayInstanceId", gatewayInstanceId);
@@ -147,7 +153,10 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +165,10 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +177,10 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>The ID of the cloud application service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -174,7 +189,10 @@ public class ListRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter specifies the time range filter. The time must be in ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-18T02:20:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

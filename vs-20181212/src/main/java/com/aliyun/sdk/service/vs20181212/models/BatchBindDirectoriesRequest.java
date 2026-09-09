@@ -89,6 +89,7 @@ public class BatchBindDirectoriesRequest extends Request {
         } 
 
         /**
+         * <p>Device ID. Separate multiple values with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class BatchBindDirectoriesRequest extends Request {
         }
 
         /**
+         * <p>Directory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

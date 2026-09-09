@@ -106,7 +106,7 @@ public class ListSpecificationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The result objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Class.
+             * <p>The specification family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4090CU</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -264,7 +279,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Cores.
+             * <p>The number of cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -272,7 +290,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -280,7 +301,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Shard.
+             * <p>The number of cards per single load.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder shard(Integer shard) {
                 this.shard = shard;
@@ -299,7 +323,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * <p>The maximum storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;

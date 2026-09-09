@@ -80,7 +80,11 @@ public class DescribeStreamURLResponseBody extends TeaModel {
         } 
 
         /**
-         * ExpireTime.
+         * <p>The time when the URL expires.<br>
+         * A UNIX timestamp. Unit: seconds.<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557977029</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -88,7 +92,10 @@ public class DescribeStreamURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +103,10 @@ public class DescribeStreamURLResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The URL of the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://demo.aliyundoc.com/live/310101<em><strong><strong>7542007?auth_key=1639130258-0-0-b2b04fe85ece6</strong></strong></em>a6b1a42bc7e</p>
          */
         public Builder url(String url) {
             this.url = url;

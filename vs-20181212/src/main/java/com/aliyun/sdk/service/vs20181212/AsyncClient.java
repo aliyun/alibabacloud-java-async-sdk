@@ -21,9 +21,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of instance IDs to add.</li>
+     * <li>Adding an instance that already exists in the target cluster returns an error message.</li>
+     * <li>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</li>
      * </ul>
      * 
      * @param request the request parameters of AddHiveEdgeWorkers  AddHiveEdgeWorkersRequest
@@ -39,9 +42,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li>This operation associates instances that meet specific conditions with a specified project.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateRenderingProjectInstances  AssociateRenderingProjectInstancesRequest
@@ -81,13 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>认证</strong>：请求需要携带 <code>AliUid</code> 参数进行身份验证。</li>
-     * <li><strong>实例指定方式</strong>：可以通过 <code>RenderingInstanceIds</code>、<code>ResourceIds</code> 或者结合 <code>ProjectId/ProjectName</code> 加上分页参数来指定要截图的实例。优先级依次为 <code>RenderingInstanceIds</code> &gt; <code>ResourceIds</code> &gt; <code>ProjectId/ProjectName</code>。</li>
-     * <li><strong>截图质量</strong>：通过 <code>Quality</code> 参数可以设置截图图片的质量，默认值为75（如果未配置），取值范围是1到100。</li>
-     * <li><strong>响应处理</strong>：返回结果中包含成功和失败的实例列表及其相关信息，包括截图文件的OSS存储路径、预签名下载链接以及截图完成时间等。</li>
-     * <li><strong>错误场景</strong>：当遇到如<code>Quality</code>超出有效范围、非AIC平台实例、OSS RamRoleArn未配置或VDM命令超时等情况时，API将根据具体情况给出相应的错误反馈。</li>
+     * <li><strong>Authentication</strong>: Requests must include the <code>AliUid</code> parameter for identity verification.</li>
+     * <li><strong>Instance specification</strong>: Use <code>RenderingInstanceIds</code> to specify the instances to capture screenshots from.</li>
+     * <li><strong>Screenshot quality</strong>: Use the <code>Quality</code> parameter to set the image quality of screenshots. The default value is 75 (if not configured). Valid values: 1 to 100.</li>
+     * <li><strong>Response handling</strong>: The response contains lists of successful and failed instances with related information, including download URLs and screenshot completion times.</li>
      * </ul>
      * 
      * @param request the request parameters of BatchCaptureRenderingInstanceScreenshot  BatchCaptureRenderingInstanceScreenshotRequest
@@ -168,6 +170,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUnbindPurchasedDevicesResponse> batchUnbindPurchasedDevices(BatchUnbindPurchasedDevicesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Specify at least one of TemplateId or TemplateType.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of BatchUnbindTemplate  BatchUnbindTemplateRequest
      * @return BatchUnbindTemplateResponse
      */
@@ -204,6 +211,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindTemplateResponse> bindTemplate(BindTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Stop the parent platform before canceling the task.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CancelComfyTask  CancelComfyTaskRequest
      * @return CancelComfyTaskResponse
      */
@@ -222,18 +234,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContinuousMoveResponse> continuousMove(ContinuousMoveRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must enable on-demand snapshot in the associated snapshot template in advance.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateComfyTask  CreateComfyTaskRequest
      * @return CreateComfyTaskResponse
      */
     CompletableFuture<CreateComfyTaskResponse> createComfyTask(CreateComfyTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must specify either a template ID or a template type.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateComfyUserDataDir  CreateComfyUserDataDirRequest
      * @return CreateComfyUserDataDirResponse
      */
     CompletableFuture<CreateComfyUserDataDirResponse> createComfyUserDataDir(CreateComfyUserDataDirRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must enable the on-demand screenshot feature in the associated screenshot template before calling this operation.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateComfyWorkflow  CreateComfyWorkflowRequest
      * @return CreateComfyWorkflowResponse
      */
@@ -265,9 +292,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li>This operation creates an empty cluster to manage workloads.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateHive  CreateHiveRequest
@@ -294,6 +321,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRenderingInstanceResponse> createRenderingInstance(CreateRenderingInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can specify a template ID or a template type.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateRenderingInstanceGateway  CreateRenderingInstanceGatewayRequest
      * @return CreateRenderingInstanceGatewayResponse
      */
@@ -306,6 +338,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRenderingProjectResponse> createRenderingProject(CreateRenderingProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must first enable the on-demand snapshot feature in the attached snapshot template.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateStreamSnapshot  CreateStreamSnapshotRequest
      * @return CreateStreamSnapshotResponse
      */
@@ -319,9 +356,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the cluster to operate on.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</li>
+     * <li>After the unbind operation is complete, the response returns lists of successful and failed workload instances along with related information.</li>
      * </ul>
      * 
      * @param request the request parameters of DelHiveEdgeWorkers  DelHiveEdgeWorkersRequest
@@ -336,18 +375,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCloudAppResponse> deleteCloudApp(DeleteCloudAppRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Stop the parent platform before you delete a production.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteComfyProduction  DeleteComfyProductionRequest
      * @return DeleteComfyProductionResponse
      */
     CompletableFuture<DeleteComfyProductionResponse> deleteComfyProduction(DeleteComfyProductionRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must stop the upper-level platform before performing this operation.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteComfyUserData  DeleteComfyUserDataRequest
      * @return DeleteComfyUserDataResponse
      */
     CompletableFuture<DeleteComfyUserDataResponse> deleteComfyUserData(DeleteComfyUserDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must stop the parent platform before you can delete the workflow.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteComfyWorkflow  DeleteComfyWorkflowRequest
      * @return DeleteComfyWorkflowResponse
      */
@@ -379,9 +433,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li>Ensure that all workloads in the cluster have been cleared. Otherwise, the delete operation cannot be performed.</li>
+     * <li>HiveId is a required parameter that identifies the cluster to be deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteHive  DeleteHiveRequest
@@ -390,6 +445,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHiveResponse> deleteHive(DeleteHiveRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You must stop the parent platform before you delete it.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteParentPlatform  DeleteParentPlatformRequest
      * @return DeleteParentPlatformResponse
      */
@@ -414,6 +474,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRenderingInstanceConfigurationResponse> deleteRenderingInstanceConfiguration(DeleteRenderingInstanceConfigurationRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Stop the parent platform before you delete the gateway.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteRenderingInstanceGateway  DeleteRenderingInstanceGatewayRequest
      * @return DeleteRenderingInstanceGatewayResponse
      */
@@ -456,18 +521,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountStatResponse> describeAccountStat(DescribeAccountStatRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Screenshot queries do not support pagination and must be performed iteratively. To fetch the next page, use the extStartTime value from the response as the StartTime for your subsequent request.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeComfyProductionDownloadUrl  DescribeComfyProductionDownloadUrlRequest
      * @return DescribeComfyProductionDownloadUrlResponse
      */
     CompletableFuture<DescribeComfyProductionDownloadUrlResponse> describeComfyProductionDownloadUrl(DescribeComfyProductionDownloadUrlRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This API uses pagination. Use the PageNumber and PageSize parameters to navigate through the results.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeComfyProductions  DescribeComfyProductionsRequest
      * @return DescribeComfyProductionsResponse
      */
     CompletableFuture<DescribeComfyProductionsResponse> describeComfyProductions(DescribeComfyProductionsRequest request);
 
     /**
+     * @param request the request parameters of DescribeComfyTaskWaitingQueue  DescribeComfyTaskWaitingQueueRequest
+     * @return DescribeComfyTaskWaitingQueueResponse
+     */
+    CompletableFuture<DescribeComfyTaskWaitingQueueResponse> describeComfyTaskWaitingQueue(DescribeComfyTaskWaitingQueueRequest request);
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Screenshot queries do not support pagination. Only iteration-based queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeComfyTasks  DescribeComfyTasksRequest
      * @return DescribeComfyTasksResponse
      */
@@ -480,18 +566,32 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeComfyUserDataDownloadUrlResponse> describeComfyUserDataDownloadUrl(DescribeComfyUserDataDownloadUrlRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can upload files using the retrieved URL and the Alibaba Cloud OSS software development kit (SDK).</p>
+     * 
      * @param request the request parameters of DescribeComfyUserDataUploadUrl  DescribeComfyUserDataUploadUrlRequest
      * @return DescribeComfyUserDataUploadUrlResponse
      */
     CompletableFuture<DescribeComfyUserDataUploadUrlResponse> describeComfyUserDataUploadUrl(DescribeComfyUserDataUploadUrlRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>If StartTime and EndTime are not specified, data from the last 24 hours is read by default. To query a specific time range, you must specify both StartTime and EndTime. The maximum time range for a query is 31 days.</p>
+     * <ul>
+     * <li>You can query multiple domain names in a batch. Separate the domain names with a comma (,).</li>
+     * <li>You can retrieve data from the last 90 days.</li>
+     * <li>The time granularity is one hour.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeComfyUserDatas  DescribeComfyUserDatasRequest
      * @return DescribeComfyUserDatasResponse
      */
     CompletableFuture<DescribeComfyUserDatasResponse> describeComfyUserDatas(DescribeComfyUserDatasRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</p>
+     * 
      * @param request the request parameters of DescribeComfyWorkflows  DescribeComfyWorkflowsRequest
      * @return DescribeComfyWorkflowsResponse
      */
@@ -594,6 +694,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePurchasedDevicesResponse> describePurchasedDevices(DescribePurchasedDevicesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Paging is not supported for snapshot queries. Only iteration is supported. To request the next page, use the NextStartTime value from the response as the StartTime for the new request.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeRecords  DescribeRecordsRequest
      * @return DescribeRecordsResponse
      */
@@ -678,6 +783,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVsCertificateListResponse> describeVsCertificateList(DescribeVsCertificateListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>If you do not specify \<code>StartTime\\</code> and \<code>EndTime\\</code>, the API retrieves data from the last 24 hours by default. To query data for a specific time range, you must specify both \<code>StartTime\\</code> and \<code>EndTime\\</code>. The maximum time range for a single query is 31 days.</p>
+     * <ul>
+     * <li>You can query multiple domain names at once. Separate the domain names with commas.</li>
+     * <li>You can retrieve data from the last 90 days.</li>
+     * <li>The time granularity is one hour.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeVsDevicesData  DescribeVsDevicesDataRequest
      * @return DescribeVsDevicesDataResponse
      */
@@ -858,6 +971,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloudAppInstallationsResponse> listCloudAppInstallations(ListCloudAppInstallationsRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Specify at least one of the template ID or the template type.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ListCloudAppPatches  ListCloudAppPatchesRequest
      * @return ListCloudAppPatchesResponse
      */
@@ -870,6 +988,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCloudAppsResponse> listCloudApps(ListCloudAppsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation queries load information. You can filter results by using various parameters and perform paged query operations.</li>
+     * <li>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</li>
+     * <li>For paged query operations, use the PageNumber and PageSize parameters to control the data volume of returned results. The default page size is 10 records, and the maximum is 100 records. Paging is supported.</li>
+     * <li>To query by time range, specify the StartTime and EndTime parameters.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListEdgeWorkers  ListEdgeWorkersRequest
      * @return ListEdgeWorkersResponse
      */
@@ -888,6 +1015,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation queries information about all clusters created by the user.</li>
+     * <li>You can use the <code>HiveId</code> and <code>Name</code> parameters to filter query results.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> pagination parameters control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</li>
+     * <li>The <code>StartTime</code> and <code>EndTime</code> parameters specify a time range for querying cluster information. These parameters are optional.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListHives  ListHivesRequest
      * @return ListHivesResponse
      */
@@ -906,6 +1042,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRenderingDataPackagesResponse> listRenderingDataPackages(ListRenderingDataPackagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Specify at least the template ID or the template type.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ListRenderingInstanceGateway  ListRenderingInstanceGatewayRequest
      * @return ListRenderingInstanceGatewayResponse
      */
@@ -919,9 +1060,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口支持通过多种筛选条件（如状态、实例ID等）来查询指定项目下的云应用服务实例。</li>
+     * <li>This operation enables you to query cloud application service instances in a project using multiple filter conditions, such as status and instance ID.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingProjectInstances  ListRenderingProjectInstancesRequest
@@ -931,10 +1072,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request details</h2>
      * <ul>
-     * <li>该接口用于分页查询指定用户下的渲染项目基本信息列表。</li>
-     * <li>可通过 <code>ProjectId</code> 和 <code>ProjectName</code> 进行过滤查询。</li>
+     * <li>This operation returns a paged list of basic information about rendering projects for a specified user.</li>
+     * <li>Filter results by <code>ProjectId</code> or <code>ProjectName</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingProjects  ListRenderingProjectsRequest
@@ -944,10 +1085,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口支持通过多种参数组合来过滤和分页查询用户的渲染会话列表。</li>
-     * <li><code>SessionId</code> 和 <code>ClientId</code> 参数至少需要提供一个，但两者都不是必选的。如果同时提供了两个参数，则将根据这两个参数进行更精确的匹配。</li>
+     * <li>This API supports filtering and paged query of user rendering session lists with various parameter combinations.</li>
+     * <li>You must provide at least one of the <code>SessionId</code> or <code>ClientId</code> parameters. Neither parameter is mandatory independently. If both parameters are provided, a more precise match is performed based on these two parameters.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRenderingSessions  ListRenderingSessionsRequest
@@ -956,6 +1097,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRenderingSessionsResponse> listRenderingSessions(ListRenderingSessionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation queries all active cloud application service specifications.</li>
+     * <li>You can use the <code>Specification</code> parameter to filter specific specifications.</li>
+     * <li>For paging, use the <code>PageNumber</code> and <code>PageSize</code> parameters to control the data volume returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListSpecifications  ListSpecificationsRequest
      * @return ListSpecificationsResponse
      */
@@ -968,6 +1117,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManageLoginResponse> manageLogin(ManageLoginRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</p>
+     * 
      * @param request the request parameters of ModifyComfyWorkflow  ModifyComfyWorkflowRequest
      * @return ModifyComfyWorkflowResponse
      */
@@ -1011,9 +1163,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li>This API operation modifies the basic attributes of an existing cluster, including the name and description.</li>
+     * <li>HiveId is a required parameter that identifies the cluster to modify.</li>
+     * <li>The Name and Description parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyHiveAttribute  ModifyHiveAttributeRequest
@@ -1059,9 +1213,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * <li><strong>HiveId</strong>: The ID of the target cluster. This parameter is required.</li>
+     * <li><strong>InstanceIds</strong>: The list of workload IDs to move. This parameter is required.</li>
+     * <li>This operation moves the specified workloads from the current cluster to the target cluster.</li>
+     * <li>Make sure the target cluster exists to accept the new workloads.</li>
      * </ul>
      * 
      * @param request the request parameters of MoveHiveEdgeWorkers  MoveHiveEdgeWorkersRequest
@@ -1100,6 +1257,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecoverRenderingDataPackageResponse> recoverRenderingDataPackage(RecoverRenderingDataPackageRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Specify at least one of the template ID or template type.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of RefreshRenderingInstanceStreaming  RefreshRenderingInstanceStreamingRequest
      * @return RefreshRenderingInstanceStreamingResponse
      */
@@ -1160,6 +1322,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetVsStreamsNotifyUrlConfigResponse> setVsStreamsNotifyUrlConfig(SetVsStreamsNotifyUrlConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Each device currently supports only one ingest endpoint. The effect is the same as StartStream.</p>
+     * 
      * @param request the request parameters of StartDevice  StartDeviceRequest
      * @return StartDeviceResponse
      */
@@ -1178,6 +1343,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartPublishStreamResponse> startPublishStream(StartPublishStreamRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li><p>An on-demand record template is required. You must first attach one to the space or stream.</p>
+     * </li>
+     * <li><p>You can specify a stream in two ways: using its ID or its PlayDomain/App/Name.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of StartRecordStream  StartRecordStreamRequest
      * @return StartRecordStreamResponse
      */
@@ -1208,6 +1383,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopAdjustResponse> stopAdjust(StopAdjustRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Stops stream pulling for a device. This operation terminates all streams on that device.</p>
+     * 
      * @param request the request parameters of StopDevice  StopDeviceRequest
      * @return StopDeviceResponse
      */
@@ -1226,6 +1404,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopPublishStreamResponse> stopPublishStream(StopPublishStreamRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can specify a stream by ID or by PlayDomain/App/Name.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of StopRecordStream  StopRecordStreamRequest
      * @return StopRecordStreamResponse
      */
@@ -1233,7 +1416,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request information</h2>
      * 
      * @param request the request parameters of StopRenderingSession  StopRenderingSessionRequest
      * @return StopRenderingSessionResponse
@@ -1277,6 +1460,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnbindPurchasedDeviceResponse> unbindPurchasedDevice(UnbindPurchasedDeviceRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Specify at least one of TemplateId or TemplateType.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of UnbindTemplate  UnbindTemplateRequest
      * @return UnbindTemplateResponse
      */

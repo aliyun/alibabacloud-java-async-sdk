@@ -88,7 +88,10 @@ public class ModifyComfyWorkflowRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new workflow description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个图生视频的工作流</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -97,6 +100,7 @@ public class ModifyComfyWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workflow to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class ModifyComfyWorkflowRequest extends Request {
         }
 
         /**
-         * WorkflowName.
+         * <p>The new workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图生视频工作流示例</p>
          */
         public Builder workflowName(String workflowName) {
             this.putQueryParameter("WorkflowName", workflowName);

@@ -88,6 +88,7 @@ public class BatchStopDevicesRequest extends Request {
         } 
 
         /**
+         * <p>Device ID. Separate multiple values with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class BatchStopDevicesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Stream restart trigger time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-14T23:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

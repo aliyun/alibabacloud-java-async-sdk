@@ -67,7 +67,7 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -78,7 +78,7 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Settings.
+         * <p>The list of instance configurations.</p>
          */
         public Builder settings(java.util.List<Settings> settings) {
             this.settings = settings;
@@ -144,7 +144,10 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeName.
+             * <p>The name of an instance configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>navbar.hide</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -152,7 +155,10 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeValue.
+             * <p>The value of an instance configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;

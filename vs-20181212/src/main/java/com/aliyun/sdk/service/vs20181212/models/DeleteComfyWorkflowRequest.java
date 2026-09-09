@@ -60,6 +60,7 @@ public class DeleteComfyWorkflowRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

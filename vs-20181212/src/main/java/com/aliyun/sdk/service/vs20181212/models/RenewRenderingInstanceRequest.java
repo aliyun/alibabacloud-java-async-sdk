@@ -88,7 +88,16 @@ public class RenewRenderingInstanceRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Enable or disable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -97,7 +106,10 @@ public class RenewRenderingInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The duration of the subscription. Valid values are 1 (default), 2, 3, 4, 5, 6, 7, 8, 9, 12. A value of 12 is converted to one year; other values are in months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -106,6 +118,7 @@ public class RenewRenderingInstanceRequest extends Request {
         }
 
         /**
+         * <p>Cloud application service instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

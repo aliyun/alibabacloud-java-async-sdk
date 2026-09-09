@@ -132,7 +132,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedTime.
+         * <p>The time when the directory was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-10T10:00:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -140,7 +143,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The directory description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录1</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -148,7 +154,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the group that owns the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -156,7 +165,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****488-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -164,7 +176,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The directory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -172,7 +187,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ParentId.
+         * <p>The parent directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****774-cn-qingdao</p>
          */
         public Builder parentId(String parentId) {
             this.parentId = parentId;
@@ -180,7 +198,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

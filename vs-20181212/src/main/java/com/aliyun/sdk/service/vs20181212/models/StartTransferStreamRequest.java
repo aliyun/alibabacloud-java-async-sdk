@@ -103,6 +103,7 @@ public class StartTransferStreamRequest extends Request {
         } 
 
         /**
+         * <p>Stream ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class StartTransferStreamRequest extends Request {
         }
 
         /**
-         * Transcode.
+         * <p>The name of the transcoding rule (a transcoding template must be bound first).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sd</p>
          */
         public Builder transcode(String transcode) {
             this.putQueryParameter("Transcode", transcode);
@@ -133,6 +137,7 @@ public class StartTransferStreamRequest extends Request {
         }
 
         /**
+         * <p>The destination address for stream forwarding.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

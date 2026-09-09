@@ -210,7 +210,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * AdditionalIngresses.
+         * <p>Additional optional ingress network information</p>
          */
         public Builder additionalIngresses(java.util.List<AdditionalIngresses> additionalIngresses) {
             this.additionalIngresses = additionalIngresses;
@@ -218,7 +218,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * AppId.
+         * <p>Cloud application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -226,7 +229,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ClientId.
+         * <p>End client ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c91263a0-f9ac-45bd-bbe9-6e293ad32d91</p>
          */
         public Builder clientId(String clientId) {
             this.clientId = clientId;
@@ -234,7 +240,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>Instance hostname. Defaults to the EIP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111.45.29.96</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -242,7 +251,18 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Isp.
+         * <p>Carrier code. Valid values:</p>
+         * <ol>
+         * <li><p>cmcc</p>
+         * </li>
+         * <li><p>unicom</p>
+         * </li>
+         * <li><p>telecom</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder isp(String isp) {
             this.isp = isp;
@@ -250,7 +270,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>Cloud application service instance location</p>
          */
         public Builder location(Location location) {
             this.location = location;
@@ -258,7 +278,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * PatchId.
+         * <p>Cloud application patch package ID. An empty value means the original version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
          */
         public Builder patchId(String patchId) {
             this.patchId = patchId;
@@ -266,7 +289,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * PortMappings.
+         * <p>Port mapping information</p>
          */
         public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
@@ -274,7 +297,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.renderingInstanceId = renderingInstanceId;
@@ -282,7 +308,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +319,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>Session ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-i205217481741918129226</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -298,7 +330,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>Start time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-18T02:20:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -306,7 +341,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * StateInfo.
+         * <p>Session state information</p>
          */
         public Builder stateInfo(StateInfo stateInfo) {
             this.stateInfo = stateInfo;
@@ -372,7 +407,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalPort.
+             * <p>Public port or port range, such as 22. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11060/11079</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -380,7 +418,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>Private port or port range. Each private port maps one-to-one with a public port. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11060/11079</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -460,7 +501,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Hostname.
+             * <p>Domain name or IP address of the cloud application service instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111.45.29.96</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -468,7 +512,18 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>Carrier code. Valid values:</p>
+             * <ol>
+             * <li><p>cmcc</p>
+             * </li>
+             * <li><p>unicom</p>
+             * </li>
+             * <li><p>telecom</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -476,7 +531,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * PortMappings.
+             * <p>List of port mappings</p>
              */
             public Builder portMappings(java.util.List<AdditionalIngressesPortMappings> portMappings) {
                 this.portMappings = portMappings;
@@ -530,7 +585,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * ProvinceCode.
+             * <p>Province code of the cloud application service instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>310000</p>
              */
             public Builder provinceCode(String provinceCode) {
                 this.provinceCode = provinceCode;
@@ -597,7 +655,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalPort.
+             * <p>Public port or port range, such as 22. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10013/10020</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -605,7 +666,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>Private port or port range. Each private port maps one-to-one with a public port. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49008/49015</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -685,7 +749,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>State description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已启动</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -693,7 +760,26 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Session state. Valid values:</p>
+             * <ol>
+             * <li><p>SessionStarting: Starting the session</p>
+             * </li>
+             * <li><p>SessionStartSuspended: Session start is suspended. Retry by calling Start again.</p>
+             * </li>
+             * <li><p>SessionStarted: Session started or in use</p>
+             * </li>
+             * <li><p>SessionStartFailed: Session failed to start</p>
+             * </li>
+             * <li><p>SessionAbnormal: Session became abnormal after starting successfully</p>
+             * </li>
+             * <li><p>SessionStopping: Stopping the session</p>
+             * </li>
+             * <li><p>SessionStopFailed: Session failed to stop</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionStarted</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -701,7 +787,10 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Time when the state was last updated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-15T10:05:20+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

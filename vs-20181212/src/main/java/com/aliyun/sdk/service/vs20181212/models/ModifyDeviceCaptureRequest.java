@@ -102,6 +102,7 @@ public class ModifyDeviceCaptureRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,16 @@ public class ModifyDeviceCaptureRequest extends Request {
         }
 
         /**
-         * Image.
+         * <p>Image capture control. Valid values:</p>
+         * <ul>
+         * <li><p>0 (shutdown)</p>
+         * </li>
+         * <li><p>1 (enable)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder image(Integer image) {
             this.putQueryParameter("Image", image);
@@ -132,7 +142,18 @@ public class ModifyDeviceCaptureRequest extends Request {
         }
 
         /**
-         * Video.
+         * <p>Video recording control. Valid values:</p>
+         * <ul>
+         * <li><p>0 (shutdown)</p>
+         * </li>
+         * <li><p>1 (enable short recording)</p>
+         * </li>
+         * <li><p>2 (enable long recording)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder video(Integer video) {
             this.putQueryParameter("Video", video);

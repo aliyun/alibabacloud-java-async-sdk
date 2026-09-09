@@ -80,7 +80,7 @@ public class ListHivesResponseBody extends TeaModel {
         } 
 
         /**
-         * Hives.
+         * <p>The list of clusters.</p>
          */
         public Builder hives(java.util.List<Hives> hives) {
             this.hives = hives;
@@ -88,7 +88,10 @@ public class ListHivesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListHivesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class ListHivesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-14T15:20:37+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -196,7 +205,10 @@ public class ListHivesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Basic S1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -204,7 +216,10 @@ public class ListHivesResponseBody extends TeaModel {
             }
 
             /**
-             * HiveId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive-3b506f0868a7451ba15e0e890706033a</p>
              */
             public Builder hiveId(String hiveId) {
                 this.hiveId = hiveId;
@@ -212,7 +227,10 @@ public class ListHivesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yy-test2</p>
              */
             public Builder name(String name) {
                 this.name = name;

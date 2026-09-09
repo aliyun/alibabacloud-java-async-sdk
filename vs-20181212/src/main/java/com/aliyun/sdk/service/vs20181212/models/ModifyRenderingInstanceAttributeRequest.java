@@ -75,6 +75,7 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
         } 
 
         /**
+         * <p>Password for the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModifyRenderingInstanceAttributeRequest extends Request {
         }
 
         /**
+         * <p>ID of the cloud application service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

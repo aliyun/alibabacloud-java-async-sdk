@@ -213,7 +213,10 @@ public class DescribeStreamsRequest extends Request {
         } 
 
         /**
-         * App.
+         * <p>Filter by application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live</p>
          */
         public Builder app(String app) {
             this.putQueryParameter("App", app);
@@ -222,7 +225,10 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>Filter by device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -231,7 +237,10 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>Filter by domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -240,7 +249,10 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the space to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -249,7 +261,13 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>Stream ID.</p>
+         * <blockquote>
+         * <p>Enter multiple IDs separated by commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -258,7 +276,13 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Filter by stream name.</p>
+         * <blockquote>
+         * <p>Enter multiple names separated by commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3100000*****00000002</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -276,7 +300,10 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -285,7 +312,10 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -294,7 +324,10 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>Parent device ID of the device that hosts this stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****774-cn-qingdao</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -303,7 +336,25 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Sort results by a field. Valid values:</p>
+         * <ul>
+         * <li><p>Id (default)</p>
+         * </li>
+         * <li><p>GroupId</p>
+         * </li>
+         * <li><p>Name</p>
+         * </li>
+         * <li><p>DeviceId</p>
+         * </li>
+         * <li><p>Protocol</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You can specify only one field.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -312,7 +363,16 @@ public class DescribeStreamsRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>Sort order. Valid values:</p>
+         * <ul>
+         * <li><p>asc (ascending, default)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);

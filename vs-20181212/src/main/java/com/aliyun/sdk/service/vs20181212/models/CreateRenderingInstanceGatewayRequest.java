@@ -75,6 +75,7 @@ public class CreateRenderingInstanceGatewayRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the custom gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateRenderingInstanceGatewayRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cloud application service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

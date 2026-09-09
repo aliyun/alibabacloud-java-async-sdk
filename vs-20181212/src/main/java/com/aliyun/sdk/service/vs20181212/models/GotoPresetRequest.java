@@ -89,6 +89,7 @@ public class GotoPresetRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GotoPresetRequest extends Request {
         }
 
         /**
+         * <p>Preset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

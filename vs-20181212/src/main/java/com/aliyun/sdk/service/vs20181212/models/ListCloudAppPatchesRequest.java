@@ -145,6 +145,7 @@ public class ListCloudAppPatchesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cloud application. This ID corresponds to a unique application package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The time range for filtering. The time must be in UTC and in the ISO 8601 standard format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -166,7 +170,11 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list to return. The value starts from 1.
+         * Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +183,11 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. The maximum value is 100.
+         * Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +196,10 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * <p>The ID of the patch package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
          */
         public Builder patchId(String patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -193,7 +208,10 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * PatchName.
+         * <p>The name of the patch package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>patch-1</p>
          */
         public Builder patchName(String patchName) {
             this.putQueryParameter("PatchName", patchName);
@@ -202,7 +220,10 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. The time is in UTC and follows the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-29T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

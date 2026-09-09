@@ -104,6 +104,7 @@ public class DescribeStreamVodListRequest extends Request {
         } 
 
         /**
+         * <p>VOD record end time (unix timestamp, unit: seconds)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DescribeStreamVodListRequest extends Request {
         }
 
         /**
+         * <p>Stream ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class DescribeStreamVodListRequest extends Request {
         }
 
         /**
+         * <p>VOD record start time (unix timestamp, unit: seconds)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

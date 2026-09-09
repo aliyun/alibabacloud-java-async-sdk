@@ -80,7 +80,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Projects.
+         * <p>Project list</p>
          */
         public Builder projects(java.util.List<Projects> projects) {
             this.projects = projects;
@@ -88,7 +88,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of matching projects</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -149,7 +155,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * StartMode.
+             * <p>Startup mode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sync</p>
              */
             public Builder startMode(String startMode) {
                 this.startMode = startMode;
@@ -268,7 +277,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>Project creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-09T18:44:49+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -276,7 +288,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Project description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +299,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>Project ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-422bc38dfgh5eb44149f135ef76304f63b</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -292,7 +310,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>Project name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -300,7 +321,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionAttribs.
+             * <p>Project session attributes</p>
              */
             public Builder sessionAttribs(SessionAttribs sessionAttribs) {
                 this.sessionAttribs = sessionAttribs;
@@ -308,7 +329,10 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Last update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-09T18:44:49+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

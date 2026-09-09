@@ -106,7 +106,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * PushStatuses.
+         * <p>The list of file push status records.</p>
          */
         public Builder pushStatuses(java.util.List<PushStatuses> pushStatuses) {
             this.pushStatuses = pushStatuses;
@@ -130,7 +136,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of matching file push records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -277,7 +292,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myfile</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -285,7 +303,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * PushTime.
+             * <p>The scheduled push start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-26T16:32:20+08:00</p>
              */
             public Builder pushTime(String pushTime) {
                 this.pushTime = pushTime;
@@ -293,7 +314,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>The cloud application service instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -301,7 +325,20 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file push status. Valid values:</p>
+             * <ol>
+             * <li><p>Created</p>
+             * </li>
+             * <li><p>Doing</p>
+             * </li>
+             * <li><p>Success: desired state</p>
+             * </li>
+             * <li><p>Failed: desired state</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +346,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescription.
+             * <p>The status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>push success</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -317,7 +357,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The latest update time of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-26T17:02:10+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -88,7 +88,10 @@ public class DescribeComfyWorkflowsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图生视频工作流</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -97,7 +100,10 @@ public class DescribeComfyWorkflowsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +112,10 @@ public class DescribeComfyWorkflowsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of Comfy workflows per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

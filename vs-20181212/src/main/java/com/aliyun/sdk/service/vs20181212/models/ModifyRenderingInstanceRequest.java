@@ -88,6 +88,7 @@ public class ModifyRenderingInstanceRequest extends Request {
         } 
 
         /**
+         * <p>ID of the cloud application service instance. You can only upgrade or downgrade to another instance type in the same series.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ModifyRenderingInstanceRequest extends Request {
         }
 
         /**
-         * RenderingSpec.
+         * <p>Instance type of the cloud application service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crs.cp.l1</p>
          */
         public Builder renderingSpec(String renderingSpec) {
             this.putQueryParameter("RenderingSpec", renderingSpec);
@@ -109,7 +113,10 @@ public class ModifyRenderingInstanceRequest extends Request {
         }
 
         /**
-         * StorageSize.
+         * <p>Cloud storage capacity used by the cloud application service instance. This is not local storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder storageSize(String storageSize) {
             this.putQueryParameter("StorageSize", storageSize);

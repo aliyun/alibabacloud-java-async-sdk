@@ -89,6 +89,7 @@ public class VerifyVsDomainOwnerRequest extends Request {
         } 
 
         /**
+         * <p>The domain name of Visual Edge Computing Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,11 @@ public class VerifyVsDomainOwnerRequest extends Request {
         }
 
         /**
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>dnsCheck</strong>: DNS verification.</li>
+         * <li><strong>fileCheck</strong>: File verification.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

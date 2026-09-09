@@ -67,7 +67,10 @@ public class UploadCloudAppResponseBody extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The cloud application ID, which uniquely identifies the application package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -75,7 +78,10 @@ public class UploadCloudAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

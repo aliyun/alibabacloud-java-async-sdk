@@ -60,6 +60,7 @@ public class RebootRenderingInstanceRequest extends Request {
         } 
 
         /**
+         * <p>ID of the cloud application service instance</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

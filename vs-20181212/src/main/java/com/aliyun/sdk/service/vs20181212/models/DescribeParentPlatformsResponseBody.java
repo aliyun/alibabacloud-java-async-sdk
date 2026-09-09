@@ -119,7 +119,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageCount.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -127,7 +130,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -135,7 +141,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +152,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * Platforms.
+         * <p>List of parent platforms.</p>
          */
         public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
@@ -151,7 +160,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of parent platforms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -407,7 +422,14 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoStart.
+             * <p>Whether to enable automatically. Valid values:</p>
+             * <ul>
+             * <li>false (default)</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoStart(Boolean autoStart) {
                 this.autoStart = autoStart;
@@ -415,7 +437,14 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientAuth.
+             * <p>Whether to enable local authentication. Valid values:</p>
+             * <ul>
+             * <li>true (default)</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder clientAuth(Boolean clientAuth) {
                 this.clientAuth = clientAuth;
@@ -423,7 +452,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientGbId.
+             * <p>Local GB ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31010*****317542006</p>
              */
             public Builder clientGbId(String clientGbId) {
                 this.clientGbId = clientGbId;
@@ -431,7 +463,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>Local SIP service IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -439,7 +474,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientPassword.
+             * <p>Local password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin123</p>
              */
             public Builder clientPassword(String clientPassword) {
                 this.clientPassword = clientPassword;
@@ -447,7 +485,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientPort.
+             * <p>Local SIP service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5160</p>
              */
             public Builder clientPort(Long clientPort) {
                 this.clientPort = clientPort;
@@ -455,7 +496,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientUsername.
+             * <p>Local username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder clientUsername(String clientUsername) {
                 this.clientUsername = clientUsername;
@@ -463,7 +507,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>Parent platform creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-10T21:00:00Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -471,7 +518,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Parent platform description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>国标级联平台描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -479,7 +529,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * GbId.
+             * <p>Parent platform GB ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31000*****2170123451</p>
              */
             public Builder gbId(String gbId) {
                 this.gbId = gbId;
@@ -487,7 +540,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Parent platform ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>359*****374-cn-qingdao</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -495,7 +551,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>Parent platform SIP service IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.10</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -503,7 +562,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Parent platform name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>国标级联平台测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -511,7 +573,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>Parent platform SIP service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5060</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -519,7 +584,13 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>Parent platform protocol. Valid values:</p>
+             * <ul>
+             * <li>gb28181 (GB standard)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gb28181</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -527,7 +598,15 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Parent platform status. Valid values:</p>
+             * <ul>
+             * <li>on (online)</li>
+             * <li>off (offline)</li>
+             * <li>failed (failed)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

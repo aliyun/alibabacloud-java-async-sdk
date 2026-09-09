@@ -60,6 +60,7 @@ public class DescribeRenderingInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the rendering instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

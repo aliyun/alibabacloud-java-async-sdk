@@ -130,7 +130,10 @@ public class ListHivesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The time range filter parameter. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-14T15:20:37+08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +142,10 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * HiveId.
+         * <p>The cloud application service group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-xxxx</p>
          */
         public Builder hiveId(String hiveId) {
             this.putQueryParameter("HiveId", hiveId);
@@ -148,7 +154,10 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test001</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -157,7 +166,10 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +178,10 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +190,10 @@ public class ListHivesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-14T15:20:37+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

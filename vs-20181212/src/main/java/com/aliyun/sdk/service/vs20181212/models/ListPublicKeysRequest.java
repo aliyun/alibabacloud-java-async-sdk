@@ -144,7 +144,10 @@ public class ListPublicKeysRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>A parameter for filtering by time range. The time must be in UTC and follow the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-22T02:23:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,7 +156,10 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * KeyGroup.
+         * <p>The name of the public key group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-test</p>
          */
         public Builder keyGroup(String keyGroup) {
             this.putQueryParameter("KeyGroup", keyGroup);
@@ -162,7 +168,10 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * <p>The name of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mykey</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -171,7 +180,16 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * KeyType.
+         * <p>The type of the public key. Valid values:</p>
+         * <ul>
+         * <li><p><strong>adb</strong>: ADB key</p>
+         * </li>
+         * <li><p><strong>ssh</strong>: SSH key</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh</p>
          */
         public Builder keyType(String keyType) {
             this.putQueryParameter("KeyType", keyType);
@@ -180,7 +198,11 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list to query. The value starts from 1.
+         * Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +211,11 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 100.
+         * Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +224,10 @@ public class ListPublicKeysRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>A parameter for filtering by time range. The time must be in UTC and follow the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-21T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

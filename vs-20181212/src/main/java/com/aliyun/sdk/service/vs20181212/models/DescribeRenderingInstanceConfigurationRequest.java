@@ -74,7 +74,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
         } 
 
         /**
-         * Configuration.
+         * <p>The configuration to query. By default, the configurations of all modules are returned.</p>
          */
         public Builder configuration(java.util.List<Configuration> configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
@@ -84,6 +84,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cloud application service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
             } 
 
             /**
-             * AttributeNames.
+             * <p>The list of attribute names to query. By default, all attributes are returned.</p>
              */
             public Builder attributeNames(java.util.List<String> attributeNames) {
                 this.attributeNames = attributeNames;
@@ -164,6 +165,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
+             * <p>The name of the module.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

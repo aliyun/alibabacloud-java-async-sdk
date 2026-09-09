@@ -89,6 +89,7 @@ public class BindDirectoryRequest extends Request {
         } 
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class BindDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

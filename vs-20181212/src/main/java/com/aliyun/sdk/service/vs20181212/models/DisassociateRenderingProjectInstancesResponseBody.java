@@ -106,7 +106,10 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
         } 
 
         /**
-         * FailedInstanceCount.
+         * <p>The number of cloud application service instances that failed to dissociate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedInstanceCount(String failedInstanceCount) {
             this.failedInstanceCount = failedInstanceCount;
@@ -114,7 +117,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * FailedInstances.
+         * <p>A list of instances that failed to dissociate.</p>
          */
         public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
             this.failedInstances = failedInstances;
@@ -122,7 +125,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -133,7 +136,10 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * SuccessInstanceCount.
+         * <p>The number of cloud application service instances that were successfully dissociated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder successInstanceCount(String successInstanceCount) {
             this.successInstanceCount = successInstanceCount;
@@ -141,7 +147,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
         }
 
         /**
-         * SuccessInstances.
+         * <p>A list of instances that were successfully dissociated.</p>
          */
         public Builder successInstances(java.util.List<SuccessInstances> successInstances) {
             this.successInstances = successInstances;
@@ -207,7 +213,10 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
             } 
 
             /**
-             * Message.
+             * <p>The reason for failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>会话中</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -215,7 +224,10 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>A cloud application service instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-421cd2a1125947c19fcd5c7dd2c7d31e</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -282,7 +294,10 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
             } 
 
             /**
-             * Message.
+             * <p>The result message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -290,7 +305,10 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>A cloud application service instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-e6cf423c787e4e43b460a788da254fe3</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;

@@ -132,7 +132,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +154,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * Productions.
+         * <p>A list of productions.</p>
          */
         public Builder productions(java.util.List<Productions> productions) {
             this.productions = productions;
@@ -172,7 +184,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -183,7 +195,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total count of productions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -301,7 +316,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ComfyTaskId.
+             * <p>The ID of the Comfy task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
              */
             public Builder comfyTaskId(String comfyTaskId) {
                 this.comfyTaskId = comfyTaskId;
@@ -309,7 +327,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time of the production, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-06T20:20:26+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -317,7 +338,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name of the production.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755051607877.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -325,7 +349,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionId.
+             * <p>The ID of the production.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3e5bda20-5cd4-4d55-8d23-88d624a18caa</p>
              */
             public Builder productionId(String productionId) {
                 this.productionId = productionId;
@@ -333,7 +360,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the production.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -341,7 +371,10 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The last modification time of the production, as a Unix timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773707865</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

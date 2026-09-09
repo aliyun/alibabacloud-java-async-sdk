@@ -67,7 +67,7 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * LiveStreamsNotifyConfig.
+         * <p>Configuration information.</p>
          */
         public Builder liveStreamsNotifyConfig(LiveStreamsNotifyConfig liveStreamsNotifyConfig) {
             this.liveStreamsNotifyConfig = liveStreamsNotifyConfig;
@@ -75,7 +75,10 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +186,10 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>Your ingest domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -191,7 +197,10 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyUrl.
+             * <p>Webhook address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;

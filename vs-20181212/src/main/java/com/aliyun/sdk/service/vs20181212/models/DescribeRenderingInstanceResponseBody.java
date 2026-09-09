@@ -262,7 +262,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AdditionalIngresses.
+         * <p>A list of optional ingress network information.</p>
          */
         public Builder additionalIngresses(java.util.List<AdditionalIngresses> additionalIngresses) {
             this.additionalIngresses = additionalIngresses;
@@ -270,7 +270,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigInfo.
+         * <p>The configuration information of the rendering instance.</p>
          */
         public Builder configInfo(ConfigInfo configInfo) {
             this.configInfo = configInfo;
@@ -278,7 +278,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The instance creation time, in UTC (ISO 8601).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-07T02:27:06Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -286,7 +289,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EgressIp.
+         * <p>The egress IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.8.8</p>
          */
         public Builder egressIp(String egressIp) {
             this.egressIp = egressIp;
@@ -294,7 +300,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>The domain name or access IP address of the rendering instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xxx.ecr.aliyuncs.com</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -302,7 +311,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceChargeType.
+         * <p>The billing method of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -310,7 +322,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InternalIp.
+         * <p>The internal IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.17.32</p>
          */
         public Builder internalIp(String internalIp) {
             this.internalIp = internalIp;
@@ -318,7 +333,18 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Isp.
+         * <p>The ISP code. Valid values:</p>
+         * <ol>
+         * <li><p><code>cmcc</code></p>
+         * </li>
+         * <li><p><code>unicom</code></p>
+         * </li>
+         * <li><p><code>telecom</code></p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder isp(String isp) {
             this.isp = isp;
@@ -326,7 +352,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PortMappings.
+         * <p>A list of port mappings.</p>
          */
         public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
@@ -334,7 +360,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>The ID of the rendering instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.renderingInstanceId = renderingInstanceId;
@@ -342,7 +371,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RenderingSpec.
+         * <p>The specification of the rendering instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crs.cp.l1</p>
          */
         public Builder renderingSpec(String renderingSpec) {
             this.renderingSpec = renderingSpec;
@@ -350,7 +382,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RenderingStatus.
+         * <p>The operational status of the rendering instance.</p>
          */
         public Builder renderingStatus(RenderingStatus renderingStatus) {
             this.renderingStatus = renderingStatus;
@@ -358,7 +390,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -366,7 +401,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceAttributes.
+         * <p>The attributes of the rendering instance.</p>
          */
         public Builder resourceAttributes(ResourceAttributes resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
@@ -374,7 +409,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceStatus.
+         * <p>The status of the underlying computing resource.</p>
          */
         public Builder resourceStatus(ResourceStatus resourceStatus) {
             this.resourceStatus = resourceStatus;
@@ -382,7 +417,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * StorageSize.
+         * <p>The storage capacity of the rendering instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder storageSize(Integer storageSize) {
             this.storageSize = storageSize;
@@ -390,7 +428,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SystemInfo.
+         * <p>The system information of the rendering instance, such as its resolution.</p>
          */
         public Builder systemInfo(SystemInfo systemInfo) {
             this.systemInfo = systemInfo;
@@ -456,7 +494,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalPort.
+             * <p>The external port or port range, such as <code>22</code>. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12500/12519</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -464,7 +505,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>The internal port or port range. The ports correspond one-to-one with the external ports. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11120/11139</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -544,7 +588,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Hostname.
+             * <p>The domain name or IP address of the rendering instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.66.165.213</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -552,7 +599,18 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The ISP code. Valid values:</p>
+             * <ol>
+             * <li><p><code>cmcc</code></p>
+             * </li>
+             * <li><p><code>unicom</code></p>
+             * </li>
+             * <li><p><code>telecom</code></p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -560,7 +618,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PortMappings.
+             * <p>A list of port mappings.</p>
              */
             public Builder portMappings(java.util.List<AdditionalIngressesPortMappings> portMappings) {
                 this.portMappings = portMappings;
@@ -627,7 +685,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lon</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -635,7 +696,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -702,7 +766,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Attributes.
+             * <p>A list of attributes.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -710,7 +774,30 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the physical device simulation module. Valid values:</p>
+             * <ol>
+             * <li><p><code>ctl</code>: Control module</p>
+             * </li>
+             * <li><p><code>prop</code>: Property module</p>
+             * </li>
+             * <li><p><code>location</code>: Location module</p>
+             * </li>
+             * <li><p><code>battery</code>: Battery module</p>
+             * </li>
+             * <li><p><code>network</code>: Network module</p>
+             * </li>
+             * <li><p><code>bluetooth</code>: Bluetooth module</p>
+             * </li>
+             * <li><p><code>sim</code>: SIM card module</p>
+             * </li>
+             * <li><p><code>display</code>: Display module</p>
+             * </li>
+             * <li><p><code>system</code>: System module</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>location</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -803,7 +890,18 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BandwidthStatus.
+             * <p>The status of the bandwidth configuration. Valid values:</p>
+             * <ol>
+             * <li><p><code>waiting</code>: The configuration is being applied.</p>
+             * </li>
+             * <li><p><code>success</code>: The configuration change is complete.</p>
+             * </li>
+             * <li><p><code>failed</code>: The configuration change failed.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder bandwidthStatus(String bandwidthStatus) {
                 this.bandwidthStatus = bandwidthStatus;
@@ -811,7 +909,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxEgressBandwidth.
+             * <p>The maximum egress bandwidth, in Mbps. A value of 0 indicates no limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxEgressBandwidth(Integer maxEgressBandwidth) {
                 this.maxEgressBandwidth = maxEgressBandwidth;
@@ -819,7 +920,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIngressBandwidth.
+             * <p>The maximum ingress bandwidth, in Mbps. A value of 0 indicates no limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxIngressBandwidth(Integer maxIngressBandwidth) {
                 this.maxIngressBandwidth = maxIngressBandwidth;
@@ -827,7 +931,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time the configuration was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-17T09:54:35Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -894,7 +1001,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Configuration.
+             * <p>A list of configured physical device simulation modules.</p>
              */
             public Builder configuration(java.util.List<Configuration> configuration) {
                 this.configuration = configuration;
@@ -902,7 +1009,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkConfig.
+             * <p>Ingress and egress bandwidth limits, in Mbps.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -969,7 +1076,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalPort.
+             * <p>The external port or port range, such as <code>22</code>. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10013/10020</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -977,7 +1087,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>The internal port or port range. The ports correspond one-to-one with the external ports. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49008/49015</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -1057,7 +1170,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Additional details about the current status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>工作中</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1065,7 +1181,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LatestAction.
+             * <p>The name of the last action performed on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MigrateLocalData</p>
              */
             public Builder latestAction(String latestAction) {
                 this.latestAction = latestAction;
@@ -1073,7 +1192,22 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The operational status of the instance. Valid values:</p>
+             * <ol>
+             * <li><p><code>Preparing</code>: The instance is being initialized.</p>
+             * </li>
+             * <li><p><code>Rebooting</code>: The instance is rebooting.</p>
+             * </li>
+             * <li><p><code>Resetting</code>: The instance is being reset.</p>
+             * </li>
+             * <li><p><code>Working</code>: The instance is running normally. This is a terminal state.</p>
+             * </li>
+             * <li><p><code>Failure</code>: The instance has failed to start or operate. This is a terminal state.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Working</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1166,7 +1300,16 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * EdgeMediaService.
+             * <p>The configuration of the edge media service. Valid values:</p>
+             * <ol>
+             * <li><p><code>ON</code>: Enabled.</p>
+             * </li>
+             * <li><p><code>OFF</code>: Disabled.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder edgeMediaService(String edgeMediaService) {
                 this.edgeMediaService = edgeMediaService;
@@ -1174,7 +1317,16 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InAccess.
+             * <p>The ingress network access configuration. Valid values:</p>
+             * <ol>
+             * <li><p><code>ON</code>: Enabled. The rendering instance can be accessed from the public internet.</p>
+             * </li>
+             * <li><p><code>OFF</code>: Disabled.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder inAccess(String inAccess) {
                 this.inAccess = inAccess;
@@ -1182,7 +1334,16 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OutAccess.
+             * <p>The egress network access configuration. Valid values:</p>
+             * <ol>
+             * <li><p><code>ON</code>: Enabled. The rendering instance can access the public internet.</p>
+             * </li>
+             * <li><p><code>OFF</code>: Disabled.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder outAccess(String outAccess) {
                 this.outAccess = outAccess;
@@ -1190,7 +1351,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * <p>The resource zone. Valid values: <code>Private</code> and <code>Public</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1244,7 +1408,18 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The running status of the computing resource. Valid values:</p>
+             * <ol>
+             * <li><p><code>running</code>: The edge instance is running normally.</p>
+             * </li>
+             * <li><p><code>operating</code>: The edge instance is under maintenance.</p>
+             * </li>
+             * <li><p><code>error</code>: An exception is detected on the edge instance.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1311,7 +1486,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Frequency.
+             * <p>The refresh rate of the instance, in Hz.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder frequency(Integer frequency) {
                 this.frequency = frequency;
@@ -1319,7 +1497,28 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The resolution. Valid values:</p>
+             * <ul>
+             * <li><p><code>1920*864</code></p>
+             * </li>
+             * <li><p><code>1080*1920</code></p>
+             * </li>
+             * <li><p><code>1920*1080</code></p>
+             * </li>
+             * <li><p><code>720*1280</code></p>
+             * </li>
+             * <li><p><code>2400*1080</code></p>
+             * </li>
+             * <li><p><code>1080*2400</code></p>
+             * </li>
+             * <li><p><code>1280*720</code></p>
+             * </li>
+             * <li><p><code>864*1920</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1920*1080</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;

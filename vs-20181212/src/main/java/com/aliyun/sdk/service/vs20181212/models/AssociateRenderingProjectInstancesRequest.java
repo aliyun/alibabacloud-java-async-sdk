@@ -75,6 +75,7 @@ public class AssociateRenderingProjectInstancesRequest extends Request {
         } 
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class AssociateRenderingProjectInstancesRequest extends Request {
         }
 
         /**
+         * <p>List of cloud application service instance IDs</p>
          * <p>This parameter is required.</p>
          */
         public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {

@@ -74,6 +74,7 @@ public class DescribeVsDomainDetailRequest extends Request {
         } 
 
         /**
+         * <p>Domain name for the Visual Edge Computing Service</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

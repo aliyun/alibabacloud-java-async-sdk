@@ -116,6 +116,7 @@ public class ContinuousMoveRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,11 @@ public class ContinuousMoveRequest extends Request {
         }
 
         /**
-         * Pan.
+         * <p>Pan speed. A positive value moves the camera left.<br>
+         * Valid values: -1.0 to 1.0<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder pan(String pan) {
             this.putQueryParameter("Pan", pan);
@@ -146,7 +151,11 @@ public class ContinuousMoveRequest extends Request {
         }
 
         /**
-         * Tilt.
+         * <p>Tilt speed. A positive value moves the camera up.<br>
+         * Valid values: -1.0 to 1.0<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder tilt(String tilt) {
             this.putQueryParameter("Tilt", tilt);
@@ -155,7 +164,11 @@ public class ContinuousMoveRequest extends Request {
         }
 
         /**
-         * Zoom.
+         * <p>Zoom speed. A positive value zooms in.<br>
+         * Valid values: -1.0 to 1.0<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder zoom(String zoom) {
             this.putQueryParameter("Zoom", zoom);

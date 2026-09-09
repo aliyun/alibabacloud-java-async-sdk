@@ -170,6 +170,7 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,13 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for stream pulling.</p>
+         * <blockquote>
+         * <p>The time must be in UTC format. The interval between StartTime and EndTime cannot exceed 7 days. EndTime must be later than the current time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-08-28T09:30:30Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,6 +220,10 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
+         * <p>The source URL of the live stream.</p>
+         * <blockquote>
+         * <p>Multiple source URLs are supported. Separate them with semicolons (;).</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +236,13 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for stream pulling.</p>
+         * <blockquote>
+         * <p>The time must be in UTC format. The interval between StartTime and EndTime cannot exceed 7 days.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-08-28T07:30:30Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -233,6 +251,7 @@ public class AddVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
+         * <p>The stream name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

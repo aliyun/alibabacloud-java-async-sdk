@@ -67,7 +67,10 @@ public class UploadFileResponseBody extends TeaModel {
         } 
 
         /**
-         * FileId.
+         * <p>The ID of the file. This ID is unique for each file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-1671330gr7934d4771813f7141d28db2f7</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -75,7 +78,10 @@ public class UploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -117,7 +117,11 @@ public class ModifyDeviceChannelsRequest extends Request {
         } 
 
         /**
+         * <p>An array of channels in a JSON-formatted string.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ChannelId&quot;:12333,&quot;Name&quot;:&quot;测试&quot;,&quot;DeviceStatus&quot;:&quot;on&quot;}]</p>
          */
         public Builder channels(String channels) {
             this.putQueryParameter("Channels", channels);
@@ -126,7 +130,16 @@ public class ModifyDeviceChannelsRequest extends Request {
         }
 
         /**
-         * DeviceStatus.
+         * <p>The status of the device. Valid values:</p>
+         * <ul>
+         * <li><p>on: online</p>
+         * </li>
+         * <li><p>off: offline</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder deviceStatus(String deviceStatus) {
             this.putQueryParameter("DeviceStatus", deviceStatus);
@@ -135,7 +148,10 @@ public class ModifyDeviceChannelsRequest extends Request {
         }
 
         /**
-         * Dsn.
+         * <p>The device serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210235C3GN32090008286cf17e130d</p>
          */
         public Builder dsn(String dsn) {
             this.putQueryParameter("Dsn", dsn);
@@ -144,6 +160,7 @@ public class ModifyDeviceChannelsRequest extends Request {
         }
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

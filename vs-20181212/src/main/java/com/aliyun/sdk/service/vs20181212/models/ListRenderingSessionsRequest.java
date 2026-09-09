@@ -201,7 +201,10 @@ public class ListRenderingSessionsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>Cloud application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -210,7 +213,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * ClientId.
+         * <p>Unique ID of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae7990f4-203d-494b-a5ea-e0babe9fa13d</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -219,7 +225,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Time range filter parameter. Represented in ISO8601 standard and must use UTC time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-31T22:20:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -228,7 +237,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, starting from 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -237,7 +249,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page set for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -246,7 +261,13 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * <p>Cloud application patch ID.</p>
+         * <ol>
+         * <li>When you enter origin, only sessions that started the original version of the app are filtered.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
          */
         public Builder patchId(String patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -255,6 +276,7 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +289,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -276,7 +301,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>Session ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-i205217481741918129226</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -285,7 +313,10 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Time range filter parameter. Represented in ISO8601 standard and must use UTC time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-25T02:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -294,7 +325,26 @@ public class ListRenderingSessionsRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>Session state. Valid values:</p>
+         * <ol>
+         * <li><p>SessionStarting: The session is starting.</p>
+         * </li>
+         * <li><p>SessionStartSuspended: Session startup is paused. Retry by initiating start again.</p>
+         * </li>
+         * <li><p>SessionStarted: The session has started/is in use.</p>
+         * </li>
+         * <li><p>SessionStartFailed: Session startup failed.</p>
+         * </li>
+         * <li><p>SessionAbnormal: The session is abnormal after successful startup.</p>
+         * </li>
+         * <li><p>SessionStopping: The session is stopping.</p>
+         * </li>
+         * <li><p>SessionStopFailed: Session stop failed.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionStarting</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

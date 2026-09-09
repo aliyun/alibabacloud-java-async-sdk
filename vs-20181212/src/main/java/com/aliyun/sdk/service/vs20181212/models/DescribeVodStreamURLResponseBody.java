@@ -93,7 +93,10 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         } 
 
         /**
-         * OutProtocol.
+         * <p>流播放协议</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtsp</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.outProtocol = outProtocol;
@@ -101,7 +104,10 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>流播放端口</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(Long port) {
             this.port = port;
@@ -109,7 +115,10 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>该条任务请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>流播放URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtsp://domain/live/stream?sign=xxxxxx</p>
          */
         public Builder url(String url) {
             this.url = url;

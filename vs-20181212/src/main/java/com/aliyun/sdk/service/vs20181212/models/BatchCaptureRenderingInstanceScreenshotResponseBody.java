@@ -119,7 +119,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         } 
 
         /**
-         * Datatest.
+         * <p>The dry run result.</p>
          */
         public Builder datatest(Datatest datatest) {
             this.datatest = datatest;
@@ -127,7 +127,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         }
 
         /**
-         * FailedCount.
+         * <p>The number of failed instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedCount(Long failedCount) {
             this.failedCount = failedCount;
@@ -135,7 +138,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         }
 
         /**
-         * FailedItems.
+         * <p>The list of instances for which screenshots failed.</p>
          */
         public Builder failedItems(java.util.List<FailedItems> failedItems) {
             this.failedItems = failedItems;
@@ -154,7 +157,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of successful instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successCount(Long successCount) {
             this.successCount = successCount;
@@ -162,7 +168,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         }
 
         /**
-         * SuccessItems.
+         * <p>The list of successful instances.</p>
          */
         public Builder successItems(java.util.List<SuccessItems> successItems) {
             this.successItems = successItems;
@@ -215,7 +221,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * SuccessCount.
+             * <p>The number of successful instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -269,7 +278,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * Result.
+             * <p>The dry run result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -349,7 +358,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * ErrCode.
+             * <p>The error code of the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errCode(String errCode) {
                 this.errCode = errCode;
@@ -357,7 +369,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * ErrMessage.
+             * <p>The error message of the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not Applied</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -365,7 +380,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>The instance ID of the cloud application service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-072da95539d3402da90353b244191722</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -445,7 +463,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the screenshot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-19T14:46:37+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -453,7 +474,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * DownloadUrl.
+             * <p>The download URL of the screenshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/test-zip-file.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/test-zip-file.zip</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -461,7 +485,10 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>The instance ID of the cloud application service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-1ada8cd82783407b99fa202826fc6447</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;

@@ -88,7 +88,10 @@ public class DescribeComfyProductionsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the results to return. Pages are 1-indexed. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -97,7 +100,10 @@ public class DescribeComfyProductionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -106,6 +112,7 @@ public class DescribeComfyProductionsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Comfy task whose productions you want to list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,6 +60,7 @@ public class CancelComfyTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Comfy task to cancel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

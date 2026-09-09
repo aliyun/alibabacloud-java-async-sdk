@@ -88,7 +88,10 @@ public class ListSpecificationsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -97,7 +100,10 @@ public class ListSpecificationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for paging. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -106,7 +112,10 @@ public class ListSpecificationsRequest extends Request {
         }
 
         /**
-         * Specification.
+         * <p>The specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ew.gn8t6xlarge-rb.x1p</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

@@ -89,6 +89,7 @@ public class UnbindParentPlatformDeviceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class UnbindParentPlatformDeviceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the parent platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

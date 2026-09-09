@@ -54,7 +54,10 @@ public class DeleteVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C747C97-7ECD-4C61-8A92-67AD806331FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

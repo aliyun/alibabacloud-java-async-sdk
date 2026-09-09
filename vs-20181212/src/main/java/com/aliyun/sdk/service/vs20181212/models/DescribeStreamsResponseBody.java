@@ -119,7 +119,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageCount.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -127,7 +130,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -135,7 +141,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +152,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * Streams.
+         * <p>List of streams.</p>
          */
         public Builder streams(java.util.List<Streams> streams) {
             this.streams = streams;
@@ -159,7 +171,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -368,7 +383,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * App.
+             * <p>Application that owns this stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>live</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -376,7 +394,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>Time when the stream was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-10T17:00:00Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -384,7 +405,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID of this stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -392,7 +416,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the stream is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -400,7 +427,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the group to which the stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****174-cn-qingdao</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -408,7 +438,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>Video stream height in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -416,7 +449,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Stream ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****997-cn-qingdao</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -424,7 +460,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Stream name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31000000*****0000002</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -432,7 +471,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * PlayDomain.
+             * <p>Streaming domain for this stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo.aliyundoc.com</p>
              */
             public Builder playDomain(String playDomain) {
                 this.playDomain = playDomain;
@@ -440,7 +482,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>Stream protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gb28181</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -448,7 +493,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * PushDomain.
+             * <p>Ingest domain for this stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder pushDomain(String pushDomain) {
                 this.pushDomain = pushDomain;
@@ -456,7 +504,16 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Stream status. Valid values:</p>
+             * <ul>
+             * <li><p>on (online)</p>
+             * </li>
+             * <li><p>off (offline)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -464,7 +521,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>Video stream width in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

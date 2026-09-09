@@ -89,6 +89,7 @@ public class DeletePresetRequest extends Request {
         } 
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeletePresetRequest extends Request {
         }
 
         /**
+         * <p>The preset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

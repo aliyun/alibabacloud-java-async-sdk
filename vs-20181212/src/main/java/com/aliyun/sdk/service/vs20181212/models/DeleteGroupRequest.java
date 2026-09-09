@@ -74,6 +74,7 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
+         * <p>Space ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

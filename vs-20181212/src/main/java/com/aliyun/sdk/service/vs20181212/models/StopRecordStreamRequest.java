@@ -115,7 +115,10 @@ public class StopRecordStreamRequest extends Request {
         } 
 
         /**
-         * App.
+         * <p>App name of the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live</p>
          */
         public Builder app(String app) {
             this.putQueryParameter("App", app);
@@ -124,7 +127,10 @@ public class StopRecordStreamRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>Stream ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -133,7 +139,10 @@ public class StopRecordStreamRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Stream name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -151,7 +160,10 @@ public class StopRecordStreamRequest extends Request {
         }
 
         /**
-         * PlayDomain.
+         * <p>Playback domain name of the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder playDomain(String playDomain) {
             this.putQueryParameter("PlayDomain", playDomain);

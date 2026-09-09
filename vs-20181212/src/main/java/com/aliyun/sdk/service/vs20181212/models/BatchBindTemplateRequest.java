@@ -132,7 +132,10 @@ public class BatchBindTemplateRequest extends Request {
         } 
 
         /**
-         * ApplyAll.
+         * <p>Apply to all streams within the scope. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder applyAll(Boolean applyAll) {
             this.putQueryParameter("ApplyAll", applyAll);
@@ -141,6 +144,7 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
+         * <p>Instance ID. Separate multiple values with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +157,13 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
+         * <p>Instance type. Valid values:</p>
+         * <ul>
+         * <li><p>group (space)</p>
+         * </li>
+         * <li><p>stream (stream)</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +185,10 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
-         * Replace.
+         * <p>Replace existing bindings. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder replace(Boolean replace) {
             this.putQueryParameter("Replace", replace);
@@ -183,6 +197,7 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
+         * <p>Template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

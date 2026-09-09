@@ -146,7 +146,10 @@ public class BatchBindTemplatesRequest extends Request {
         } 
 
         /**
-         * ApplyAll.
+         * <p>Specifies whether to apply the template to all streams in the scope. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder applyAll(Boolean applyAll) {
             this.putQueryParameter("ApplyAll", applyAll);
@@ -155,6 +158,7 @@ public class BatchBindTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +171,13 @@ public class BatchBindTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><p>group</p>
+         * </li>
+         * <li><p>stream</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +199,10 @@ public class BatchBindTemplatesRequest extends Request {
         }
 
         /**
-         * Replace.
+         * <p>Specifies whether to replace existing bindings. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder replace(Boolean replace) {
             this.putQueryParameter("Replace", replace);
@@ -197,6 +211,7 @@ public class BatchBindTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +224,16 @@ public class BatchBindTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The template type. Valid values:</p>
+         * <ul>
+         * <li><p>record (recording)</p>
+         * </li>
+         * <li><p>snapshot (snapshotting)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>timeshift</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

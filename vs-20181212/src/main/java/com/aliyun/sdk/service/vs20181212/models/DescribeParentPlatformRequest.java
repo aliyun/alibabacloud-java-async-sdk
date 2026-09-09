@@ -74,6 +74,7 @@ public class DescribeParentPlatformRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the parent platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

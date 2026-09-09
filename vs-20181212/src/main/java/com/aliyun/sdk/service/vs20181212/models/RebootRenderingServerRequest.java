@@ -60,6 +60,7 @@ public class RebootRenderingServerRequest extends Request {
         } 
 
         /**
+         * <p>List of cloud application service instance IDs</p>
          * <p>This parameter is required.</p>
          */
         public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {

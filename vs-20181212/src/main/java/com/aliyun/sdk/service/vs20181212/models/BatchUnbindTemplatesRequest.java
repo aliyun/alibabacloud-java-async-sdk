@@ -117,6 +117,7 @@ public class BatchUnbindTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,13 @@ public class BatchUnbindTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><p>group</p>
+         * </li>
+         * <li><p>stream</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +158,10 @@ public class BatchUnbindTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -159,7 +170,16 @@ public class BatchUnbindTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The template type. Valid values:</p>
+         * <ul>
+         * <li><p>record</p>
+         * </li>
+         * <li><p>snapshot</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>record</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

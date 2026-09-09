@@ -59,7 +59,10 @@ public class DeleteComfyProductionRequest extends Request {
         } 
 
         /**
-         * ProductionId.
+         * <p>The ID of the production.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e5bda20-5cd4-4d55-8d23-88d624a18caa</p>
          */
         public Builder productionId(String productionId) {
             this.putQueryParameter("ProductionId", productionId);

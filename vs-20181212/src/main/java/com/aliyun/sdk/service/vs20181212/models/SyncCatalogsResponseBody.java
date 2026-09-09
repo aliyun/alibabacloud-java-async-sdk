@@ -67,7 +67,10 @@ public class SyncCatalogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3238****739092996-cn-shenzhen</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class SyncCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

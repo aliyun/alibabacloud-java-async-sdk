@@ -102,7 +102,10 @@ public class ContinuousAdjustRequest extends Request {
         } 
 
         /**
-         * Focus.
+         * <p>Zoom speed parameter. A positive value increases the focal length.<br>Value range: -1.0 to 1.0<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder focus(String focus) {
             this.putQueryParameter("Focus", focus);
@@ -111,6 +114,7 @@ public class ContinuousAdjustRequest extends Request {
         }
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ContinuousAdjustRequest extends Request {
         }
 
         /**
-         * Iris.
+         * <p>Aperture speed parameter. A positive value increases the aperture.<br>Value range: -1.0 to 1.0<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder iris(String iris) {
             this.putQueryParameter("Iris", iris);

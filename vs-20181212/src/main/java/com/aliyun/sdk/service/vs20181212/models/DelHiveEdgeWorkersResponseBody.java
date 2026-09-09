@@ -106,7 +106,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedInstanceCount.
+         * <p>The number of workload instances that failed to be unbound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedInstanceCount(Integer failedInstanceCount) {
             this.failedInstanceCount = failedInstanceCount;
@@ -114,7 +117,7 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * FailedInstances.
+         * <p>The list of workload instances that failed to be unbound.</p>
          */
         public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
             this.failedInstances = failedInstances;
@@ -122,7 +125,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>The request ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstanceCount.
+         * <p>The number of workload instances that were successfully unbound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder successInstanceCount(Integer successInstanceCount) {
             this.successInstanceCount = successInstanceCount;
@@ -138,7 +147,7 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstances.
+         * <p>The list of workload instances that were successfully unbound.</p>
          */
         public Builder successInstances(java.util.List<SuccessInstances> successInstances) {
             this.successInstances = successInstances;
@@ -204,7 +213,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The workload ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ew-1226d588c69449209ee963161c067b04</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -212,7 +224,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error 1062 (23000): Duplicate entry \&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631\&quot; for key \&quot;PRIMARY\&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -279,7 +294,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The workload ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ew-1226d588c69449209ee963161c067b04</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -287,7 +305,10 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder message(String message) {
                 this.message = message;

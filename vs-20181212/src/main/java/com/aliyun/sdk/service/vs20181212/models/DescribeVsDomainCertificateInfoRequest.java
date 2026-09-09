@@ -74,6 +74,7 @@ public class DescribeVsDomainCertificateInfoRequest extends Request {
         } 
 
         /**
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

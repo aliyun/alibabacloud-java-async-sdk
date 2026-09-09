@@ -90,6 +90,7 @@ public class CreateComfyTaskRequest extends Request {
         } 
 
         /**
+         * <p>The resource pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class CreateComfyTaskRequest extends Request {
         }
 
         /**
+         * <p>The workflow parameters that the user wants to replace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class CreateComfyTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Comfy workflow to start.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainConfig.
+         * <p>Domain configuration details.</p>
          */
         public Builder domainConfig(DomainConfig domainConfig) {
             this.domainConfig = domainConfig;
@@ -75,7 +75,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Cname.
+             * <p>The CNAME assigned to the Visual Edge Computing Service domain. You must configure your DNS provider to point your domain to this CNAME.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com.*****.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -253,7 +259,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The domain description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试使用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +270,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The Visual Edge Computing Service domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -269,7 +281,18 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * <p>The status of the Visual Edge Computing Service accelerated domain. Valid values:</p>
+             * <ul>
+             * <li><p><strong>online</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>offline</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>configuring</strong>: Being configured.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -277,7 +300,13 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DomainType.
+             * <p>The domain type.</p>
+             * <blockquote>
+             * <p>Static value: vs</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vs</p>
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -285,7 +314,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-19T10:27:23Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -293,7 +325,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The most recent modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-19T10:27:23Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -301,7 +336,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the domain is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -309,7 +347,16 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SSLProtocol.
+             * <p>Indicates whether HTTPS is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>on</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>off</strong> (default): Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -317,7 +364,18 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The acceleration region. Valid values:</p>
+             * <ul>
+             * <li><p><strong>domestic</strong></p>
+             * </li>
+             * <li><p><strong>overseas</strong></p>
+             * </li>
+             * <li><p><strong>global</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domestic</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;

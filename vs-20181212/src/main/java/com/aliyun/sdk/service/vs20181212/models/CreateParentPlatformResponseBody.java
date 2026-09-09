@@ -67,7 +67,10 @@ public class CreateParentPlatformResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>上级平台ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>359*****374-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateParentPlatformResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,10 @@ public class DeletePresetResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class DeletePresetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F18FD685-B194-4489-9609-F80A9490A258</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,10 @@ public class DeleteComfyProductionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DeleteComfyProductionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

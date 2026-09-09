@@ -73,7 +73,10 @@ public class DescribeAccountStatRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1165*****601</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

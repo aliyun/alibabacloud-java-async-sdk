@@ -87,7 +87,10 @@ public class DescribeComfyUserDatasRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * <p>The name of the file to query, or the folder to query. For a folder, provide the path ending with a forward slash (/).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myfile</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -96,7 +99,10 @@ public class DescribeComfyUserDatasRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +111,10 @@ public class DescribeComfyUserDatasRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

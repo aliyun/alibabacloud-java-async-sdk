@@ -74,6 +74,7 @@ public class BatchDeleteDevicesRequest extends Request {
         } 
 
         /**
+         * <p>Device ID. Separate multiple values with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

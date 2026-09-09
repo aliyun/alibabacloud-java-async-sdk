@@ -102,6 +102,7 @@ public class DescribeVsDomainPvUvDataRequest extends Request {
         } 
 
         /**
+         * <p>Visual Edge Computing Service domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DescribeVsDomainPvUvDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time in UTC format. For example: 2016-06-30T19:00:00Z</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-24T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -132,7 +136,10 @@ public class DescribeVsDomainPvUvDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time in UTC format. For example: 2016-06-29T19:00:00Z</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-14T23:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

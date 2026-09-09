@@ -103,7 +103,16 @@ public class CreateRenderingDataPackageRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>Data type. Valid values:</p>
+         * <ul>
+         * <li><p>Package (default value).</p>
+         * </li>
+         * <li><p>Baseline.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Package</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -112,7 +121,10 @@ public class CreateRenderingDataPackageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -121,7 +133,13 @@ public class CreateRenderingDataPackageRequest extends Request {
         }
 
         /**
-         * InstanceBillingCycle.
+         * <p>Billing type. Valid values:</p>
+         * <ul>
+         * <li>Hour: Hour.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder instanceBillingCycle(String instanceBillingCycle) {
             this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
@@ -130,6 +148,7 @@ public class CreateRenderingDataPackageRequest extends Request {
         }
 
         /**
+         * <p>Cloud application service instance ID (Note: This operation is only for crs.cp.\* series instance types.)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

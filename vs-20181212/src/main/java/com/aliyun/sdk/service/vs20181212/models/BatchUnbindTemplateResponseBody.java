@@ -67,7 +67,7 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Bindings.
+         * <p>The list of results.</p>
          */
         public Builder bindings(java.util.List<Bindings> bindings) {
             this.bindings = bindings;
@@ -75,7 +75,10 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,13 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * <blockquote>
+             * <p>This field appears only when the operation fails.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>some error</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -175,7 +184,10 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****994-cn-qingdao</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -183,7 +195,10 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -191,7 +206,10 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****998-cn-qingdao</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

@@ -340,7 +340,10 @@ public class ModifyTemplateRequest extends Request {
         } 
 
         /**
-         * Callback.
+         * <p>The callback URL that is used after the template is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
         public Builder callback(String callback) {
             this.putQueryParameter("Callback", callback);
@@ -349,7 +352,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>录制模板</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -358,7 +364,21 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * FileFormat.
+         * <p>The file format for storage. Separate multiple values with commas. Valid values:</p>
+         * <ul>
+         * <li><p>mp4</p>
+         * </li>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Recording in FLV and MP4 formats is not supported in the China (Qingdao) region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hls</p>
          */
         public Builder fileFormat(String fileFormat) {
             this.putQueryParameter("FileFormat", fileFormat);
@@ -367,7 +387,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Flv.
+         * <p>The storage path for FLV files. For information about the format, see the description of the Mp4 parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         public Builder flv(String flv) {
             this.putQueryParameter("Flv", flv);
@@ -376,7 +399,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * HlsM3u8.
+         * <p>The storage path for HLS M3U8 files. For information about the format, see the description of the Mp4 parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         public Builder hlsM3u8(String hlsM3u8) {
             this.putQueryParameter("HlsM3u8", hlsM3u8);
@@ -385,7 +411,16 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * HlsTs.
+         * <p>The storage path for HLS TS files.</p>
+         * <ul>
+         * <li><p>The path supports variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}.</p>
+         * </li>
+         * <li><p>You must include the {UnixTimestamp} and {Sequence} variables.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{UnixTimestamp}_{Sequence}</p>
          */
         public Builder hlsTs(String hlsTs) {
             this.putQueryParameter("HlsTs", hlsTs);
@@ -394,6 +429,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -406,7 +442,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The operation interval, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -415,7 +454,18 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * JpgOnDemand.
+         * <p>The storage path for JPG files. This path is used for on-demand snapshots.</p>
+         * <ul>
+         * <li><p>Only JPG images are supported.</p>
+         * </li>
+         * <li><p>The path supports variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}.</p>
+         * </li>
+         * <li><p>You must include either {UnixTimestamp} or {Sequence}.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}_ondemand.jpg</p>
          */
         public Builder jpgOnDemand(String jpgOnDemand) {
             this.putQueryParameter("JpgOnDemand", jpgOnDemand);
@@ -424,7 +474,16 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * JpgOverwrite.
+         * <p>The storage path for JPG files. This path is used to overwrite snapshots.</p>
+         * <ul>
+         * <li><p>Only JPG images are supported.</p>
+         * </li>
+         * <li><p>The path supports variables such as {AppName} and {StreamName}.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/snapshot/{AppName}/{StreamName}.jpg</p>
          */
         public Builder jpgOverwrite(String jpgOverwrite) {
             this.putQueryParameter("JpgOverwrite", jpgOverwrite);
@@ -433,7 +492,18 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * JpgSequence.
+         * <p>The storage path for JPG files. This path is used for sequence snapshots.</p>
+         * <ul>
+         * <li><p>Only JPG images are supported.</p>
+         * </li>
+         * <li><p>The path supports variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}.</p>
+         * </li>
+         * <li><p>You must include either {UnixTimestamp} or {Sequence}.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
          */
         public Builder jpgSequence(String jpgSequence) {
             this.putQueryParameter("JpgSequence", jpgSequence);
@@ -442,7 +512,16 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Mp4.
+         * <p>The storage path for MP4 files.</p>
+         * <ul>
+         * <li><p>The path supports variables such as {AppName}, {StreamName}, {Sequence}, {EscapedStartTime}, and {EscapedEndTime}.</p>
+         * </li>
+         * <li><p>You must include {EscapedStartTime} and {EscapedEndTime}.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         public Builder mp4(String mp4) {
             this.putQueryParameter("Mp4", mp4);
@@ -451,7 +530,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>录制模板</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -460,7 +542,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>The OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucketname</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -469,7 +554,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The domain name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-qingdao.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -478,7 +566,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * OssFilePrefix.
+         * <p>The prefix of the OSS file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-prefix</p>
          */
         public Builder ossFilePrefix(String ossFilePrefix) {
             this.putQueryParameter("OssFilePrefix", ossFilePrefix);
@@ -496,7 +587,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region where the Object Storage Service (OSS) bucket is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -505,7 +599,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Retention.
+         * <p>The retention period for time shifting, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder retention(Long retention) {
             this.putQueryParameter("Retention", retention);
@@ -514,7 +611,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * TransConfigsJSON.
+         * <p>An array of transcoding configurations of the TransConfig type, in a JSON-formatted string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Fps&quot;:25,&quot;Gop&quot;:50,&quot;Height&quot;:720,&quot;VideoCodec&quot;:&quot;h264&quot;,&quot;Width&quot;:1280,&quot;Name&quot;:&quot;sd&quot;,&quot;VideoBitrate&quot;:800}]</p>
          */
         public Builder transConfigsJSON(String transConfigsJSON) {
             this.putQueryParameter("TransConfigsJSON", transConfigsJSON);
@@ -523,7 +623,16 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Trigger.
+         * <p>The trigger type of the template. The default value is auto. Valid values:</p>
+         * <ul>
+         * <li><p>auto (automatic)</p>
+         * </li>
+         * <li><p>ondemand (on-demand)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder trigger(String trigger) {
             this.putQueryParameter("Trigger", trigger);

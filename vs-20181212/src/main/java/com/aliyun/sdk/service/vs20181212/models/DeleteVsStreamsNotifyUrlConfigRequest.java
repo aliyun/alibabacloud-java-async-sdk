@@ -74,6 +74,7 @@ public class DeleteVsStreamsNotifyUrlConfigRequest extends Request {
         } 
 
         /**
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

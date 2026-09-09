@@ -106,7 +106,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         }
 
         /**
-         * Patches.
+         * <p>The list of cloud application patches.</p>
          */
         public Builder patches(java.util.List<Patches> patches) {
             this.patches = patches;
@@ -141,7 +147,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -259,7 +268,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             } 
 
             /**
-             * PatchId.
+             * <p>The ID of the patch package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
              */
             public Builder patchId(String patchId) {
                 this.patchId = patchId;
@@ -267,7 +279,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * PatchName.
+             * <p>The name of the patch package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>patch-1</p>
              */
             public Builder patchName(String patchName) {
                 this.patchName = patchName;
@@ -275,7 +290,24 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The upload status of the application. Valid values:</p>
+             * <ol>
+             * <li><p>Created</p>
+             * </li>
+             * <li><p>Doing</p>
+             * </li>
+             * <li><p>Success: A final state.</p>
+             * </li>
+             * <li><p>Failed: A final state.</p>
+             * </li>
+             * <li><p>Deleting</p>
+             * </li>
+             * <li><p>DeleteFailed: A final state.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Doing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -283,7 +315,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescription.
+             * <p>The description of the status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Uploading</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -291,7 +326,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-23T02:12:28</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -299,7 +337,10 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * <p>The time when the patch was uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-24T14:45:36+08:00</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

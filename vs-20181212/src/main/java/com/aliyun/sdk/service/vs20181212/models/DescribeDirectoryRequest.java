@@ -74,6 +74,7 @@ public class DescribeDirectoryRequest extends Request {
         } 
 
         /**
+         * <p>The directory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstallationInfos.
+         * <p>List of installation records.</p>
          */
         public Builder installationInfos(java.util.List<InstallationInfos> installationInfos) {
             this.installationInfos = installationInfos;
@@ -114,7 +114,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the returned list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of installation records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -295,7 +307,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -303,7 +318,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>Application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aaa.bbb</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -311,7 +329,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>Application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -319,7 +340,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstallationTime.
+             * <p>Installation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-28T14:48:34+08:00</p>
              */
             public Builder installationTime(String installationTime) {
                 this.installationTime = installationTime;
@@ -327,7 +351,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * PatchId.
+             * <p>Patch package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
              */
             public Builder patchId(String patchId) {
                 this.patchId = patchId;
@@ -335,7 +362,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -343,7 +373,16 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Cloud application installation status. Valid values:</p>
+             * <ol>
+             * <li><p>Intermediate states: install-init, installing</p>
+             * </li>
+             * <li><p>Final states: installed, install-failed</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>installed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +390,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescription.
+             * <p>Status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>install success</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -359,7 +401,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Time when the status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-28T14:50:04+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

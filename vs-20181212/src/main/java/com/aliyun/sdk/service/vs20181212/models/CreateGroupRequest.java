@@ -201,7 +201,10 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * App.
+         * <p>Application name used by the workspace. Default value: live</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live</p>
          */
         public Builder app(String app) {
             this.putQueryParameter("App", app);
@@ -210,7 +213,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Callback.
+         * <p>Callback URL triggered when device or stream status updates in the workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
         public Builder callback(String callback) {
             this.putQueryParameter("Callback", callback);
@@ -219,7 +225,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Workspace description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的视频监控</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -228,6 +237,13 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
+         * <p>Ingest protocol used by the workspace. Valid values:</p>
+         * <ul>
+         * <li><p>gb28181</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +256,16 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * LazyPull.
+         * <p>Whether to enable on-demand stream pulling. Valid values:</p>
+         * <ul>
+         * <li><p>false (default)</p>
+         * </li>
+         * <li><p>true</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lazyPull(Boolean lazyPull) {
             this.putQueryParameter("LazyPull", lazyPull);
@@ -249,7 +274,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的视频监控</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -258,7 +287,18 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * OutProtocol.
+         * <p>Playback protocols used by the workspace. Separate multiple values with commas. Valid values:</p>
+         * <ul>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>flv,rtmp</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.putQueryParameter("OutProtocol", outProtocol);
@@ -276,7 +316,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * PlayDomain.
+         * <p>Streaming domain used by the workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder playDomain(String playDomain) {
             this.putQueryParameter("PlayDomain", playDomain);
@@ -285,7 +328,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * PushDomain.
+         * <p>Ingest domain used by the workspace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder pushDomain(String pushDomain) {
             this.putQueryParameter("PushDomain", pushDomain);
@@ -294,7 +340,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>Region where the workspace is located, that is, the service center</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

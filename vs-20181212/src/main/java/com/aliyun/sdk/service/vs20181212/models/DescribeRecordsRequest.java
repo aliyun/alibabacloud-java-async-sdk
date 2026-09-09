@@ -189,6 +189,7 @@ public class DescribeRecordsRequest extends Request {
         } 
 
         /**
+         * <p>Specify the end time for the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +211,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -219,7 +223,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +235,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * PrivateBucket.
+         * <p>Specifies whether to use a private bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder privateBucket(Boolean privateBucket) {
             this.putQueryParameter("PrivateBucket", privateBucket);
@@ -237,7 +247,13 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the records by. Valid value:</p>
+         * <ul>
+         * <li>Id (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -246,7 +262,16 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>The sorting method. Valid values:</p>
+         * <ul>
+         * <li><p>asc (ascending, default)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);
@@ -255,6 +280,7 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
+         * <p>Query records by start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +293,7 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
+         * <p>Query by stream ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,6 +306,13 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
+         * <p>The type of the recording record to query. Valid values:</p>
+         * <ul>
+         * <li><p>record (Recording)</p>
+         * </li>
+         * <li><p>snapshot</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

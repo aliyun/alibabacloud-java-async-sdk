@@ -119,7 +119,10 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If <code>Status</code> is <code>Failed</code>, this parameter provides the reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn failed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +141,7 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * MissingNodes.
+         * <p>A list of missing nodes.</p>
          */
         public Builder missingNodes(java.util.List<String> missingNodes) {
             this.missingNodes = missingNodes;
@@ -143,7 +149,10 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The workflow status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -159,7 +171,10 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5c</p>
          */
         public Builder workflowId(String workflowId) {
             this.workflowId = workflowId;

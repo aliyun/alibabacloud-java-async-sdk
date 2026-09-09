@@ -119,7 +119,10 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainCount.
+         * <p>The total number of domain names under your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder domainCount(Long domainCount) {
             this.domainCount = domainCount;
@@ -127,7 +130,10 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * DomainOnlineCount.
+         * <p>The total number of <strong>running</strong> domain names under your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder domainOnlineCount(Long domainOnlineCount) {
             this.domainOnlineCount = domainOnlineCount;
@@ -135,7 +141,10 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-10T18:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -143,7 +152,10 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

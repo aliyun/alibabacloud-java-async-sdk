@@ -161,6 +161,7 @@ public class ForbidVsStreamRequest extends Request {
         } 
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +196,7 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
+         * <p>Only &quot;publisher&quot; is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +209,10 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * Oneshot.
+         * <p>Specifies whether to only interrupt the stream without adding it to the blacklist. A value of \<code>yes\\</code> indicates that the stream is only interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder oneshot(String oneshot) {
             this.putQueryParameter("Oneshot", oneshot);
@@ -224,7 +230,10 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * ResumeTime.
+         * <p>The time to resume the stream. The time is in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T17:37:00Z</p>
          */
         public Builder resumeTime(String resumeTime) {
             this.putQueryParameter("ResumeTime", resumeTime);
@@ -233,6 +242,7 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
+         * <p>The stream name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

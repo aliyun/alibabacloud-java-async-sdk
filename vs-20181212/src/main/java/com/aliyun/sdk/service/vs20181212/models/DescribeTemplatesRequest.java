@@ -157,7 +157,10 @@ public class DescribeTemplatesRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323434****83423432</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -166,7 +169,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Filter templates by the bound instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -184,7 +190,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -193,7 +202,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page. Default: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +214,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Sort results by the specified field. Default: sort by ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -211,7 +226,16 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>Sort order. Default: ascending. Valid values:</p>
+         * <ul>
+         * <li><p>asc (ascending)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);
@@ -220,7 +244,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Filter templates by template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

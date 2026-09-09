@@ -203,7 +203,14 @@ public class CreateParentPlatformRequest extends Request {
         } 
 
         /**
-         * AutoStart.
+         * <p>Specifies whether to automatically enable the parent platform. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoStart(Boolean autoStart) {
             this.putQueryParameter("AutoStart", autoStart);
@@ -212,7 +219,14 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * ClientAuth.
+         * <p>Specifies whether to enable local authentication. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder clientAuth(Boolean clientAuth) {
             this.putQueryParameter("ClientAuth", clientAuth);
@@ -221,7 +235,10 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * ClientPassword.
+         * <p>The local password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin123</p>
          */
         public Builder clientPassword(String clientPassword) {
             this.putQueryParameter("ClientPassword", clientPassword);
@@ -230,7 +247,10 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * ClientUsername.
+         * <p>The local username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder clientUsername(String clientUsername) {
             this.putQueryParameter("ClientUsername", clientUsername);
@@ -239,7 +259,10 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the parent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>级联平台测试</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -248,6 +271,7 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The national standard ID of the parent platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,6 +284,7 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The SIP service IP address of the parent platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +297,11 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The name of the parent platform.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>级联平台测试</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -290,6 +319,7 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The SIP service port of the parent platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +332,13 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol of the parent platform. Valid values:</p>
+         * <ul>
+         * <li>gb28181: Chinese National Standard (GB28181).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gb28181</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);

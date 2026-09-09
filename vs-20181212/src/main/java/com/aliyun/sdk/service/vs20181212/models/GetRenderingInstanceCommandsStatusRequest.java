@@ -75,6 +75,7 @@ public class GetRenderingInstanceCommandsStatusRequest extends Request {
         } 
 
         /**
+         * <p>Unique ID of the command delivery request</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetRenderingInstanceCommandsStatusRequest extends Request {
         }
 
         /**
+         * <p>Cloud application service instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -199,7 +199,10 @@ public class DescribeGroupsRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33763950877224964-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -208,7 +211,16 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * InProtocol.
+         * <p>Ingest protocol used by the group. Valid values:</p>
+         * <ul>
+         * <li><p>gb28181</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder inProtocol(String inProtocol) {
             this.putQueryParameter("InProtocol", inProtocol);
@@ -217,7 +229,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * IncludeStats.
+         * <p>Whether to return device statistics for the group. Default: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeStats(Boolean includeStats) {
             this.putQueryParameter("IncludeStats", includeStats);
@@ -226,7 +241,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的视频监控</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -244,7 +262,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -253,7 +274,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +286,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The service region where the group is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -271,7 +298,13 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Field to sort by. Valid values:</p>
+         * <ul>
+         * <li>Id (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -280,7 +313,16 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>Sort order. Valid values:</p>
+         * <ul>
+         * <li><p>asc (ascending, default)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);
@@ -289,7 +331,16 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Group status. Valid values:</p>
+         * <ul>
+         * <li><p>on (enabled)</p>
+         * </li>
+         * <li><p>off (disabled)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

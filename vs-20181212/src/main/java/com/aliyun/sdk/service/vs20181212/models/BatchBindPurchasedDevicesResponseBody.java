@@ -67,7 +67,10 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -167,7 +170,10 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceId.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -175,7 +181,10 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message for the device. This parameter is returned only when an error occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>some error</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -183,7 +192,10 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>Space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238*****380-cn-qingdao</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -191,7 +203,10 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder region(String region) {
                 this.region = region;

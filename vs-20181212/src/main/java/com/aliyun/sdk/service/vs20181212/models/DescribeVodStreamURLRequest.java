@@ -83,6 +83,7 @@ public class DescribeVodStreamURLRequest extends Request {
         }
 
         /**
+         * <p>The file URL of the VOD video.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

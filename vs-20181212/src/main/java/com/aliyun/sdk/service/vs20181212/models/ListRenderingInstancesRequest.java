@@ -144,7 +144,10 @@ public class ListRenderingInstancesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The time range for filtering. The time must be in UTC and specified in the ISO 8601 format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-31T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,7 +156,10 @@ public class ListRenderingInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number for the paged query. Minimum value: 1. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,7 +168,10 @@ public class ListRenderingInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page for the paged query. Valid values: 1 to 100. Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +180,10 @@ public class ListRenderingInstancesRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>ID of the cloud application service instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -180,7 +192,10 @@ public class ListRenderingInstancesRequest extends Request {
         }
 
         /**
-         * RenderingSpec.
+         * <p>Instance type of the cloud application service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crs.cp.l1</p>
          */
         public Builder renderingSpec(String renderingSpec) {
             this.putQueryParameter("RenderingSpec", renderingSpec);
@@ -189,7 +204,10 @@ public class ListRenderingInstancesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time of the time range filter. Specify the time in ISO 8601 format in UTC. Format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-31T07:59:59Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -198,7 +216,10 @@ public class ListRenderingInstancesRequest extends Request {
         }
 
         /**
-         * StorageSize.
+         * <p>Storage capacity of the cloud application service instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder storageSize(Integer storageSize) {
             this.putQueryParameter("StorageSize", storageSize);

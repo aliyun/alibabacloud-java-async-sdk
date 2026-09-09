@@ -75,6 +75,7 @@ public class DelHiveEdgeWorkersRequest extends Request {
         } 
 
         /**
+         * <p><strong>The cluster ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DelHiveEdgeWorkersRequest extends Request {
         }
 
         /**
+         * <p><strong>The list of workload IDs.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

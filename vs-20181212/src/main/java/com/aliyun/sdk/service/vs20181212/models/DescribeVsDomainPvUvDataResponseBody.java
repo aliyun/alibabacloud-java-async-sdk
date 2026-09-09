@@ -119,7 +119,10 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataInterval.
+         * <p>Time interval in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -127,7 +130,10 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>Visual Edge Computing Service domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -135,7 +141,10 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>End time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-24T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -151,7 +160,10 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID for this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>Start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-12T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

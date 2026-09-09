@@ -200,7 +200,10 @@ public class ListCloudAppsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the cloud application. This ID corresponds to a unique application package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -209,7 +212,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aaa.bbb</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -218,7 +224,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * <p>Application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -227,7 +236,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The time range filter parameter. Express it in ISO8601 standard format, using UTC time: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T02:23:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -236,7 +248,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * LatestVersionOnly.
+         * <p>Return only the latest submitted version of the application. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder latestVersionOnly(Boolean latestVersionOnly) {
             this.putQueryParameter("LatestVersionOnly", latestVersionOnly);
@@ -245,7 +260,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for the query list. The starting value is 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +272,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page for paged queries. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +284,19 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * PkgLabel.
+         * <p>Valid values:</p>
+         * <ol>
+         * <li><p>Valid values:
+         * a. hot
+         * b. game
+         * c. app</p>
+         * </li>
+         * <li><p>Special case:a. To list applications that have no tags, enter NULL.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         public Builder pkgLabel(String pkgLabel) {
             this.putQueryParameter("PkgLabel", pkgLabel);
@@ -272,7 +305,18 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * PkgType.
+         * <p>The package type. Valid values:</p>
+         * <ol>
+         * <li><p>android</p>
+         * </li>
+         * <li><p>win</p>
+         * </li>
+         * <li><p>android_appmarket</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         public Builder pkgType(String pkgType) {
             this.putQueryParameter("PkgType", pkgType);
@@ -281,7 +325,10 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time range filter parameter. Express it in ISO8601 standard format, using UTC time: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-29T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -290,7 +337,20 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The application upload status. Valid values:</p>
+         * <ol>
+         * <li><p>Success: The desired state, indicating success.</p>
+         * </li>
+         * <li><p>Failed: The desired state, indicating failure.</p>
+         * </li>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>Doing</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

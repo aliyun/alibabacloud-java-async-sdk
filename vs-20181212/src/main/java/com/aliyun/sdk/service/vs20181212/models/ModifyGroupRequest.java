@@ -214,7 +214,10 @@ public class ModifyGroupRequest extends Request {
         } 
 
         /**
-         * Callback.
+         * <p>Callback URL for device or stream status updates in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
         public Builder callback(String callback) {
             this.putQueryParameter("Callback", callback);
@@ -223,7 +226,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description of the space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用于测试使用</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -232,7 +238,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Indicates whether the space is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -241,6 +250,7 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the space.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +263,16 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * InProtocol.
+         * <p>Ingest protocol used by the group. Valid values:</p>
+         * <ul>
+         * <li><p>gb28181</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gb28181</p>
          */
         public Builder inProtocol(String inProtocol) {
             this.putQueryParameter("InProtocol", inProtocol);
@@ -262,7 +281,16 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * LazyPull.
+         * <p>Whether on-demand stream pulling is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>false (default)</p>
+         * </li>
+         * <li><p>true</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lazyPull(Boolean lazyPull) {
             this.putQueryParameter("LazyPull", lazyPull);
@@ -271,7 +299,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -280,7 +311,18 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * OutProtocol.
+         * <p>Playback protocols used by the group. Separate multiple values with commas. Valid values:</p>
+         * <ul>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>flv,rtmp,hls</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.putQueryParameter("OutProtocol", outProtocol);
@@ -298,7 +340,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * PlayDomain.
+         * <p>Streaming domain used by the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myplay.com</p>
          */
         public Builder playDomain(String playDomain) {
             this.putQueryParameter("PlayDomain", playDomain);
@@ -307,7 +352,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * PushDomain.
+         * <p>Ingest domain used by the group. Applies only to groups that use the RTMP ingest protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mypush.com</p>
          */
         public Builder pushDomain(String pushDomain) {
             this.putQueryParameter("PushDomain", pushDomain);
@@ -316,7 +364,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region where the space is located. This region serves as the service center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

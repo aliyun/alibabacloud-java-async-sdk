@@ -106,7 +106,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudApps.
+         * <p>List of cloud application information.</p>
          */
         public Builder cloudApps(java.util.List<CloudApps> cloudApps) {
             this.cloudApps = cloudApps;
@@ -114,7 +114,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the query list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of rows per page for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of matching cloud application entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -321,7 +333,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -329,7 +344,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>Application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aaa.bbb</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -337,7 +355,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>Application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -345,7 +366,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -353,7 +377,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PkgFormat.
+             * <p>Package format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apk</p>
              */
             public Builder pkgFormat(String pkgFormat) {
                 this.pkgFormat = pkgFormat;
@@ -361,7 +388,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PkgType.
+             * <p>Package type: android/win.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>android</p>
              */
             public Builder pkgType(String pkgType) {
                 this.pkgType = pkgType;
@@ -369,7 +399,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * StablePatchId.
+             * <p>Stable patch package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
              */
             public Builder stablePatchId(String stablePatchId) {
                 this.stablePatchId = stablePatchId;
@@ -377,7 +410,20 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The application upload status. Valid values:</p>
+             * <ol>
+             * <li><p>Created</p>
+             * </li>
+             * <li><p>Doing</p>
+             * </li>
+             * <li><p>Success: The desired state.</p>
+             * </li>
+             * <li><p>Failed: The desired state.</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,7 +431,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescription.
+             * <p>Status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upload success</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -393,7 +442,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Latest status update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-28T14:48:34+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -401,7 +453,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * <p>Application upload time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-28T14:28:14+08:00</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

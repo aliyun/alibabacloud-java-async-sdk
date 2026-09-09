@@ -93,7 +93,10 @@ public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>Description. When Status=Failed, this field contains the failure reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn failed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +115,10 @@ public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Command execution result string</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thu Jun 27 16:06:26 CST 2024</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -120,7 +126,18 @@ public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Command execution status. Valid values:</p>
+         * <ol>
+         * <li><p>Doing: Executing</p>
+         * </li>
+         * <li><p>Success: Succeeded</p>
+         * </li>
+         * <li><p>Failed: Failed. The system automatically retries within the timeout period. You can either wait or resend the request.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;

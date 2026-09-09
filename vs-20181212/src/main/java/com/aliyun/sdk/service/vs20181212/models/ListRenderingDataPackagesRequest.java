@@ -158,7 +158,16 @@ public class ListRenderingDataPackagesRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The category. Valid values:</p>
+         * <ul>
+         * <li><p>Package</p>
+         * </li>
+         * <li><p>Baseline</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -167,7 +176,10 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * DataPackageId.
+         * <p>The ID of the data pack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dp-449ea3d16c0841b8bf33ec5bbc86a152</p>
          */
         public Builder dataPackageId(String dataPackageId) {
             this.putQueryParameter("DataPackageId", dataPackageId);
@@ -176,7 +188,10 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The parameter for filtering by time range. Use UTC time in ISO8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-24T03:30:46Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -185,7 +200,10 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for the query list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -194,7 +212,10 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +224,10 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>The size of the data pack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -212,7 +236,10 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The parameter for filtering by time range. Use UTC time in ISO8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -221,7 +248,20 @@ public class ListRenderingDataPackagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the data pack. Valid values:</p>
+         * <ul>
+         * <li><p>available</p>
+         * </li>
+         * <li><p>packing</p>
+         * </li>
+         * <li><p>failed</p>
+         * </li>
+         * <li><p>bonded</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

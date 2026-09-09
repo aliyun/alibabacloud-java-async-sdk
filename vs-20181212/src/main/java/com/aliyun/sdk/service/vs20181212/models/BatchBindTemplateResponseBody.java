@@ -67,7 +67,7 @@ public class BatchBindTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Bindings.
+         * <p>Result list.</p>
          */
         public Builder bindings(java.util.List<Bindings> bindings) {
             this.bindings = bindings;
@@ -75,7 +75,10 @@ public class BatchBindTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,13 @@ public class BatchBindTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>Error message.</p>
+             * <blockquote>
+             * <p>This field exists only when the operation fails.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>some error</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -175,7 +184,10 @@ public class BatchBindTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****994-cn-qingdao</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -183,7 +195,10 @@ public class BatchBindTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>Instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -191,7 +206,10 @@ public class BatchBindTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****998-cn-qingdao</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

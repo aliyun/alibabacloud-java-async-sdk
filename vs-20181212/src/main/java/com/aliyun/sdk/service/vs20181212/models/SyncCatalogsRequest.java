@@ -74,10 +74,11 @@ public class SyncCatalogsRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3238****739092996</p>
+         * <p>3238****739092996-cn-shenzhen</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

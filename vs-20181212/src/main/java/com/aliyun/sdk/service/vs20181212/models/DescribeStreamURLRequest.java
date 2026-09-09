@@ -187,7 +187,16 @@ public class DescribeStreamURLRequest extends Request {
         } 
 
         /**
-         * Auth.
+         * <p>Specifies whether to generate a signed URL. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder auth(Boolean auth) {
             this.putQueryParameter("Auth", auth);
@@ -196,7 +205,13 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * AuthKey.
+         * <p>The primary key associated with the playback domain name. This key is used to generate the authentication URL.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeVsDomainConfigs">DescribeVsDomainConfigs</a> operation to query the \<code>AuthKey\\</code> information.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ocs*****ace</p>
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -205,7 +220,11 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. This parameter applies to \<code>vod\\</code> streams.<br>
+         * A UNIX timestamp. Unit: seconds.<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571649499</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -214,7 +233,10 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * Expire.
+         * <p>The time-to-live (TTL) of the URL. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -223,6 +245,7 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
+         * <p>The stream ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +258,15 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
+         * <p>The playback protocol for the stream. Valid values:</p>
+         * <ul>
+         * <li><p>rtmp</p>
+         * </li>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +288,11 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. This parameter applies to \<code>vod\\</code> streams.<br>
+         * A UNIX timestamp. Unit: seconds.<br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571639499</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -265,7 +301,10 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * Transcode.
+         * <p>The name of the transcoding rule. This parameter is valid only after a transcoding template is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sd</p>
          */
         public Builder transcode(String transcode) {
             this.putQueryParameter("Transcode", transcode);
@@ -274,7 +313,16 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the stream. The default value is \<code>live\\</code>. Valid values:</p>
+         * <ul>
+         * <li><p>\<code>live\\</code>: a live stream.</p>
+         * </li>
+         * <li><p>\<code>vod\\</code>: a video-on-demand (VOD) stream, such as a historical stream from a Network Video Recorder (NVR).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>live</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

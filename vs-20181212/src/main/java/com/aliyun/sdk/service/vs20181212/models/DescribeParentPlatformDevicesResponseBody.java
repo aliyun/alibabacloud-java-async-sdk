@@ -119,7 +119,7 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * Devices.
+         * <p>The list of devices.</p>
          */
         public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
@@ -127,7 +127,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -135,7 +138,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -143,7 +149,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -264,7 +279,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * GbId.
+             * <p>The GB ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>310101*****7542007</p>
              */
             public Builder gbId(String gbId) {
                 this.gbId = gbId;
@@ -272,7 +290,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the space to which the device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3484*****8732174-cn-qingdao</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -280,7 +301,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3487*****323380-cn-qingdao</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -288,7 +312,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试设备1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +323,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3614*****766212-cn-qingdao</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

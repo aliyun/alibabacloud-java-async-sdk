@@ -143,7 +143,10 @@ public class DescribeParentPlatformsRequest extends Request {
         } 
 
         /**
-         * GbId.
+         * <p>Query by the GB ID of the parent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31000*****2170123451</p>
          */
         public Builder gbId(String gbId) {
             this.putQueryParameter("GbId", gbId);
@@ -161,7 +164,10 @@ public class DescribeParentPlatformsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -170,7 +176,10 @@ public class DescribeParentPlatformsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +188,10 @@ public class DescribeParentPlatformsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Sort by the specified field. Sorted by id by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -188,7 +200,14 @@ public class DescribeParentPlatformsRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>Sort order. Ascending by default. Valid values:</p>
+         * <ul>
+         * <li>asc (ascending)</li>
+         * <li>desc (descending)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);
@@ -197,7 +216,10 @@ public class DescribeParentPlatformsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Query by the status of the parent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

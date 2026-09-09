@@ -59,7 +59,10 @@ public class CreateComfyUserDataDirRequest extends Request {
         } 
 
         /**
-         * Path.
+         * <p>The path of the directory to create. Use /dir1/ for a single-level directory, or /dir1/dir2/ for a multi-level directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/userdir1</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

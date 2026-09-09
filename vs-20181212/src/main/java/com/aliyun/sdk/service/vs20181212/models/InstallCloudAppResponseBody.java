@@ -106,7 +106,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedInstanceCount.
+         * <p>Number of failed cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedInstanceCount(Integer failedInstanceCount) {
             this.failedInstanceCount = failedInstanceCount;
@@ -114,7 +117,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
         }
 
         /**
-         * FailedInstances.
+         * <p>List of failed cloud application service instances</p>
          */
         public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
             this.failedInstances = failedInstances;
@@ -122,7 +125,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstanceCount.
+         * <p>Number of successful cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder successInstanceCount(Integer successInstanceCount) {
             this.successInstanceCount = successInstanceCount;
@@ -138,7 +147,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstances.
+         * <p>List of successful cloud application service instances</p>
          */
         public Builder successInstances(java.util.List<SuccessInstances> successInstances) {
             this.successInstances = successInstances;
@@ -217,7 +226,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrCode.
+             * <p>Failure error code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000</p>
              */
             public Builder errCode(Integer errCode) {
                 this.errCode = errCode;
@@ -225,7 +237,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>Failure reason message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rejected due to timeout</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -233,7 +248,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -287,7 +305,10 @@ public class InstallCloudAppResponseBody extends TeaModel {
             } 
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-5130e2feb23f442fb9456a3d977f03d4</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;

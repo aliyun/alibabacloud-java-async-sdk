@@ -80,7 +80,10 @@ public class StartStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Stream ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -88,7 +91,10 @@ public class StartStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Stream name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31000000000000000002</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -96,7 +102,10 @@ public class StartStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

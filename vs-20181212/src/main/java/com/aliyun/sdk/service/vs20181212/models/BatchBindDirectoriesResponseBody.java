@@ -67,7 +67,10 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>Results list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceId.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -162,7 +168,10 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>Directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>399*****488-cn-qingdao</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -170,7 +179,13 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>Error message for the binding.</p>
+             * <blockquote>
+             * <p>Appears only if an error occurs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>An error occurred while processing your request.</p>
              */
             public Builder error(String error) {
                 this.error = error;

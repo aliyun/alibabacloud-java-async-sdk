@@ -75,7 +75,10 @@ public class BatchCaptureRenderingInstanceScreenshotRequest extends Request {
         } 
 
         /**
-         * Quality.
+         * <p>The image quality. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder quality(Integer quality) {
             this.putQueryParameter("Quality", quality);
@@ -84,6 +87,7 @@ public class BatchCaptureRenderingInstanceScreenshotRequest extends Request {
         }
 
         /**
+         * <p>The list of instance IDs. A maximum of 100 instance IDs can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {

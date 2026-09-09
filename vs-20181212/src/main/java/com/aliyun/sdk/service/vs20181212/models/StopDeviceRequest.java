@@ -88,6 +88,7 @@ public class StopDeviceRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class StopDeviceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Time to restart the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

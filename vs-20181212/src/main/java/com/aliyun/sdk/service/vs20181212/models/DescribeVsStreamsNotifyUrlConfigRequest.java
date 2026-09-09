@@ -74,6 +74,7 @@ public class DescribeVsStreamsNotifyUrlConfigRequest extends Request {
         } 
 
         /**
+         * <p>Your accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

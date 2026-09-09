@@ -104,6 +104,7 @@ public class BatchBindPurchasedDevicesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class BatchBindPurchasedDevicesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the device group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class BatchBindPurchasedDevicesRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

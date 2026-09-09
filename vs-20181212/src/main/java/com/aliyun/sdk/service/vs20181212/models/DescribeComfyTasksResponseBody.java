@@ -132,7 +132,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +154,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,13 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * <blockquote>
+         * <p>Only available for recording queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +190,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The task list.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -183,7 +198,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -340,7 +358,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780387493000</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -348,7 +369,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The task end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780387494000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -356,7 +380,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * HiveId.
+             * <p>The resource pool ID used by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive-26cd567b35c04a0a90f017388207b2</p>
              */
             public Builder hiveId(String hiveId) {
                 this.hiveId = hiveId;
@@ -364,7 +391,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskErrorMessage.
+             * <p>The task status.</p>
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -372,7 +399,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -380,7 +410,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskState.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -388,7 +421,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStateMessage.
+             * <p>The task status.</p>
              */
             public Builder taskStateMessage(String taskStateMessage) {
                 this.taskStateMessage = taskStateMessage;
@@ -396,7 +429,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780387494000</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -404,7 +440,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The Comfy workflow ID used by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
              */
             public Builder workflowId(String workflowId) {
                 this.workflowId = workflowId;

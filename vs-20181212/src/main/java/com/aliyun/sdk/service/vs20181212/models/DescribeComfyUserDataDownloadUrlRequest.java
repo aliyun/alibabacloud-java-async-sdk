@@ -60,6 +60,7 @@ public class DescribeComfyUserDataDownloadUrlRequest extends Request {
         } 
 
         /**
+         * <p>The name of the file to download.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

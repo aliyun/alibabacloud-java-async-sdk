@@ -130,6 +130,7 @@ public class DescribeParentPlatformDevicesRequest extends Request {
         } 
 
         /**
+         * <p>Query by parent platform ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class DescribeParentPlatformDevicesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -160,7 +164,10 @@ public class DescribeParentPlatformDevicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +176,10 @@ public class DescribeParentPlatformDevicesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Sort by the specified field. Sorted by id by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -178,7 +188,14 @@ public class DescribeParentPlatformDevicesRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>Sort order. Ascending by default. Valid values:</p>
+         * <ul>
+         * <li>asc (ascending)</li>
+         * <li>desc (descending)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);

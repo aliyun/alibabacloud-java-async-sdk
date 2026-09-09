@@ -102,7 +102,10 @@ public class DescribeDeviceGatewayRequest extends Request {
         } 
 
         /**
-         * ClientIp.
+         * <p>Client IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -111,7 +114,10 @@ public class DescribeDeviceGatewayRequest extends Request {
         }
 
         /**
-         * Expire.
+         * <p>Time-to-live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -120,6 +126,7 @@ public class DescribeDeviceGatewayRequest extends Request {
         }
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

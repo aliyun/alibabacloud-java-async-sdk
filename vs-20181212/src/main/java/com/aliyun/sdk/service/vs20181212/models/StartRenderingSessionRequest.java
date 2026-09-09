@@ -117,7 +117,10 @@ public class StartRenderingSessionRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>Cloud application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -126,6 +129,7 @@ public class StartRenderingSessionRequest extends Request {
         }
 
         /**
+         * <p>Unique ID of the client</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,7 @@ public class StartRenderingSessionRequest extends Request {
         }
 
         /**
-         * ClientParams.
+         * <p>Client parameter information</p>
          */
         public Builder clientParams(ClientParams clientParams) {
             String clientParamsShrink = shrink(clientParams, "ClientParams", "json");
@@ -148,7 +152,16 @@ public class StartRenderingSessionRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * <p>Cloud application patch ID.</p>
+         * <ol>
+         * <li><p>By default, start the stable version of the AppId (if no stable patch version is set, the original version is used).</p>
+         * </li>
+         * <li><p>If you enter &quot;origin&quot;, start the original version.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>patch-03fa76e8e13a49b63456b063dgh309b4</p>
          */
         public Builder patchId(String patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -157,6 +170,7 @@ public class StartRenderingSessionRequest extends Request {
         }
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +229,10 @@ public class StartRenderingSessionRequest extends Request {
             } 
 
             /**
-             * ClientIp.
+             * <p>Client IP address. This IP address is used by default for scheduling instances based on proximity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.11.43.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;

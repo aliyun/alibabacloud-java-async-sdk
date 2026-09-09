@@ -119,7 +119,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         } 
 
         /**
-         * DataInterval.
+         * <p>The time interval between data records. Unit: seconds. This is a static field with a value of 3600, which indicates 1 hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -127,7 +130,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name of Visual Edge Computing Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -135,7 +141,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-30T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -143,7 +152,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-29T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

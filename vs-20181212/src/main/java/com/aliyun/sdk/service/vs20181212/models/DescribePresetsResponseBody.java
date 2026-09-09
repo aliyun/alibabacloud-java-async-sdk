@@ -80,7 +80,10 @@ public class DescribePresetsResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -88,7 +91,7 @@ public class DescribePresetsResponseBody extends TeaModel {
         }
 
         /**
-         * Presets.
+         * <p>List of presets.</p>
          */
         public Builder presets(java.util.List<Presets> presets) {
             this.presets = presets;
@@ -96,7 +99,10 @@ public class DescribePresetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FE0CA83-BFD3-4EBD-A429-FABB9B9AE772</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class DescribePresetsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Preset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -170,7 +179,10 @@ public class DescribePresetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Preset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>预置位2</p>
              */
             public Builder name(String name) {
                 this.name = name;

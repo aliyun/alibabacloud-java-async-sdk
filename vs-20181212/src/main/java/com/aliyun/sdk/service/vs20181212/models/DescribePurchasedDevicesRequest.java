@@ -199,7 +199,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>Queries by the ID of the group to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -208,7 +211,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>Queries by device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4070*****1132-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -217,7 +223,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Queries by device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx路口摄像头</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -235,7 +244,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. The default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -244,7 +256,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The default is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +268,13 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort by. Valid value:</p>
+         * <ul>
+         * <li>id (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -262,7 +283,16 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * SortDirection.
+         * <p>The sorting order. The default is ascending. Valid values:</p>
+         * <ul>
+         * <li><p>asc (ascending)</p>
+         * </li>
+         * <li><p>desc (descending)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortDirection(String sortDirection) {
             this.putQueryParameter("SortDirection", sortDirection);
@@ -271,7 +301,18 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * SubType.
+         * <p>Queries by device subtype. Valid values:</p>
+         * <ul>
+         * <li><p>bullet (bullet camera)</p>
+         * </li>
+         * <li><p>dome (dome camera)</p>
+         * </li>
+         * <li><p>ptz (PTZ camera)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dome</p>
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);
@@ -280,7 +321,18 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Queries by device type. Valid values:</p>
+         * <ul>
+         * <li><p>ipc (camera)</p>
+         * </li>
+         * <li><p>platform (platform)</p>
+         * </li>
+         * <li><p>ied (intelligent edge device)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipc</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -289,7 +341,10 @@ public class DescribePurchasedDevicesRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * <p>Queries by device vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公司A</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

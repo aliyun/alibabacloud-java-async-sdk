@@ -116,6 +116,7 @@ public class StopMoveRequest extends Request {
         } 
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class StopMoveRequest extends Request {
         }
 
         /**
-         * Pan.
+         * <p>Specifies whether to stop panning. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pan(Boolean pan) {
             this.putQueryParameter("Pan", pan);
@@ -146,7 +150,10 @@ public class StopMoveRequest extends Request {
         }
 
         /**
-         * Tilt.
+         * <p>Specifies whether to stop tilting. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tilt(Boolean tilt) {
             this.putQueryParameter("Tilt", tilt);
@@ -155,7 +162,10 @@ public class StopMoveRequest extends Request {
         }
 
         /**
-         * Zoom.
+         * <p>Specifies whether to stop zooming. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zoom(Boolean zoom) {
             this.putQueryParameter("Zoom", zoom);

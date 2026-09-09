@@ -118,7 +118,10 @@ public class CreateDirectoryRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Folder description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -127,6 +130,7 @@ public class CreateDirectoryRequest extends Request {
         }
 
         /**
+         * <p>Space ID to which the folder belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +143,11 @@ public class CreateDirectoryRequest extends Request {
         }
 
         /**
+         * <p>Folder name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -157,6 +165,10 @@ public class CreateDirectoryRequest extends Request {
         }
 
         /**
+         * <p>Parent folder ID.</p>
+         * <blockquote>
+         * <p>When you create a device space, the system automatically creates a root directory for that space. Use the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeDirectories">DescribeDirectories</a> API to query the corresponding root directory.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

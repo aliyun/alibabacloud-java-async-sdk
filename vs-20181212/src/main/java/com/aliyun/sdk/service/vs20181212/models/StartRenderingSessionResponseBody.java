@@ -145,7 +145,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Hostname.
+         * <p>Instance hostname. By default, this is the EIP used for access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xxx.ecr.aliyuncs.com</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -153,7 +156,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * IsRepeatedRequest.
+         * <p>Is this a repeated request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isRepeatedRequest(Boolean isRepeatedRequest) {
             this.isRepeatedRequest = isRepeatedRequest;
@@ -161,7 +167,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>Cloud application service instance location information</p>
          */
         public Builder location(Location location) {
             this.location = location;
@@ -169,7 +175,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * PortMappings.
+         * <p>Port mapping information</p>
          */
         public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
@@ -177,7 +183,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.renderingInstanceId = renderingInstanceId;
@@ -185,7 +194,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +205,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>Session ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-i205217481741918129226</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -201,7 +216,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         }
 
         /**
-         * StateInfo.
+         * <p>Session state information</p>
          */
         public Builder stateInfo(StateInfo stateInfo) {
             this.stateInfo = stateInfo;
@@ -254,7 +269,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * ProvinceCode.
+             * <p>Province code of the cloud application service instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>610000</p>
              */
             public Builder provinceCode(String provinceCode) {
                 this.provinceCode = provinceCode;
@@ -321,7 +339,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalPort.
+             * <p>External port or port range, such as 22. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10013/10020</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -329,7 +350,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>Internal port or port range. Ports correspond one-to-one with external ports. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49008/49015</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -409,7 +433,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>State description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>会话启动中</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -417,7 +444,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Session state</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionStarting</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -425,7 +455,10 @@ public class StartRenderingSessionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Last update time of the state</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-06T06:37Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

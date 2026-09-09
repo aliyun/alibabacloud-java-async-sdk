@@ -106,7 +106,7 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * GatewayConfigurationInfos.
+         * <p>A list of custom gateway information.</p>
          */
         public Builder gatewayConfigurationInfos(java.util.List<GatewayConfigurationInfos> gatewayConfigurationInfos) {
             this.gatewayConfigurationInfos = gatewayConfigurationInfos;
@@ -114,7 +114,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the query results list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the cloud application service instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-15 10:19:13</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -251,7 +266,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayInstanceId.
+             * <p>The ID of the custom gateway instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-xxx</p>
              */
             public Builder gatewayInstanceId(String gatewayInstanceId) {
                 this.gatewayInstanceId = gatewayInstanceId;
@@ -259,7 +277,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>The ID of the cloud application service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-342012a227dc4ddf91f024639e43051a</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -267,7 +288,16 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the custom gateway. Valid values:</p>
+             * <ol>
+             * <li><p>Transitional states: creating, deleting</p>
+             * </li>
+             * <li><p>Desired states: available, failed</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +305,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the information was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-02 12:08:26</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

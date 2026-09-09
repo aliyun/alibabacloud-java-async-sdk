@@ -200,7 +200,10 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -209,6 +212,7 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +225,18 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p>Specify the time in the UTC format. Example: 2016-06-30T19:00:00Z.</p>
+         * </li>
+         * <li><p>The time range between EndTime and StartTime cannot exceed 30 days.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-30T19:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -230,7 +245,20 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting method. Valid values:</p>
+         * <ul>
+         * <li><p>stream_name_desc: sorts by stream name in descending order.</p>
+         * </li>
+         * <li><p>stream_name_asc: sorts by stream name in ascending order.</p>
+         * </li>
+         * <li><p>publish_time_desc: sorts by ingest time in descending order.</p>
+         * </li>
+         * <li><p>publish_time_asc (default): sorts by ingest time in ascending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>publish_time_asc</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -248,7 +276,10 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -257,7 +288,11 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 3000.</p>
+         * <p>Valid values: 1 to 3000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +301,16 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * <p>Specifies whether to perform a fuzzy match for the stream name. Valid values:</p>
+         * <ul>
+         * <li><p>fuzzy: fuzzy match</p>
+         * </li>
+         * <li><p>strict: exact match</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -275,7 +319,13 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query.</p>
+         * <blockquote>
+         * <p>Specify the time in the UTC format. Example: 2016-06-29T19:00:00Z.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T19:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -284,7 +334,10 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>The stream name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxStream</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);
@@ -293,7 +346,18 @@ public class DescribeVsStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The stream type. Valid values:</p>
+         * <ul>
+         * <li><p>all (default): all streams</p>
+         * </li>
+         * <li><p>raw: raw streams</p>
+         * </li>
+         * <li><p>trans: transcoded streams</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder streamType(String streamType) {
             this.putQueryParameter("StreamType", streamType);

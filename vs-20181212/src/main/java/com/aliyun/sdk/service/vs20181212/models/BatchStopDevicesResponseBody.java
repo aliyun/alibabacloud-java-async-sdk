@@ -67,7 +67,10 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID for this task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>Result list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class BatchStopDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>Stream error message. (Appears only when an error occurs)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stream not found</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -162,7 +168,10 @@ public class BatchStopDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Stream ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323884****9092997</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -170,7 +179,10 @@ public class BatchStopDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32388*****39092997</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +249,10 @@ public class BatchStopDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32388487****92996</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -245,7 +260,7 @@ public class BatchStopDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Streams.
+             * <p>Device stream list.</p>
              */
             public Builder streams(java.util.List<Streams> streams) {
                 this.streams = streams;

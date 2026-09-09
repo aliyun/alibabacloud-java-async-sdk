@@ -106,7 +106,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PublicKeys.
+         * <p>A list of public keys.</p>
          */
         public Builder publicKeys(java.util.List<PublicKeys> publicKeys) {
             this.publicKeys = publicKeys;
@@ -130,7 +136,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the public key. The content is encoded in Base64 format by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>verify_30d89ccb0905c8c7882c1d14a991954b</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -264,7 +279,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试使用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +290,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyGroup.
+             * <p>The public key group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mygroup</p>
              */
             public Builder keyGroup(String keyGroup) {
                 this.keyGroup = keyGroup;
@@ -280,7 +301,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The name of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mykey</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -288,7 +312,16 @@ public class ListPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * <p>The type of the public key. Valid values:</p>
+             * <ul>
+             * <li><p><strong>adb</strong>: ADB key</p>
+             * </li>
+             * <li><p><strong>ssh</strong>: SSH key</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -296,7 +329,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * <p>The time when the public key was uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-11T14:26:48+08:00</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

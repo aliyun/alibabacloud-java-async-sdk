@@ -80,7 +80,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * RenderingInstances.
+         * <p>List of cloud application service instances</p>
          */
         public Builder renderingInstances(java.util.List<RenderingInstances> renderingInstances) {
             this.renderingInstances = renderingInstances;
@@ -88,7 +88,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -175,7 +181,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>Description of the current status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>正在会话中</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -183,7 +192,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Instance status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InUse</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -191,7 +203,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Time when the status was last updated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-11T18:19:04+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -271,7 +286,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AssociationTime.
+             * <p>Time when the instance was associated with the project</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-11T18:19:04+08:00</p>
              */
             public Builder associationTime(String associationTime) {
                 this.associationTime = associationTime;
@@ -279,7 +297,10 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -287,7 +308,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StateInfo.
+             * <p>Status information for the project instance</p>
              */
             public Builder stateInfo(StateInfo stateInfo) {
                 this.stateInfo = stateInfo;

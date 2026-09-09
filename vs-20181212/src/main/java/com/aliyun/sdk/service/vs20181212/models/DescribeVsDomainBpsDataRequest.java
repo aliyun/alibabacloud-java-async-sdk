@@ -143,7 +143,10 @@ public class DescribeVsDomainBpsDataRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>Domain Names. If this parameter is empty, the system returns merged data for all accelerated Domain Names. Enter the accelerated Domain Names to query. Separate multiple Domain Names with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -152,7 +155,10 @@ public class DescribeVsDomainBpsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time must be later than the start time. The date format follows ISO8601 notation and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-02T02:30:48Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +167,10 @@ public class DescribeVsDomainBpsDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity for query data. Supports 300, 3600, and 86400 seconds. If this parameter is not specified or the specified value is not supported, the system uses 300 seconds by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -170,7 +179,10 @@ public class DescribeVsDomainBpsDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * <p>The English name of the carrier (ISP). Obtain this from the DescribeCdnRegionAndIsp interface. If not specified, the system queries all carriers (ISPs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -179,7 +191,10 @@ public class DescribeVsDomainBpsDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * <p>The English name of the region. Obtain this from the DescribeCdnRegionAndIsp interface. If not specified, the system queries all regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guangdong</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -197,7 +212,10 @@ public class DescribeVsDomainBpsDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for data retrieval. The date format follows ISO8601 notation and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ. The minimum data granularity is 5 minutes. If not specified, the system reads data from the past 24 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-26T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

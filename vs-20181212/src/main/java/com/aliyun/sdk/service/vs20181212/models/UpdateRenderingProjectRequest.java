@@ -103,7 +103,10 @@ public class UpdateRenderingProjectRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Project description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -112,6 +115,7 @@ public class UpdateRenderingProjectRequest extends Request {
         }
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,18 @@ public class UpdateRenderingProjectRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>Default naming rules:</p>
+         * <ol>
+         * <li><p>Length 1-128</p>
+         * </li>
+         * <li><p>Lowercase letters, numbers, underscores (_), hyphens (-), and periods (.).</p>
+         * </li>
+         * <li><p>The first and last characters must be letters or digits. At least one of ProjectName, SessionAttribs, or Description must be specified.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>idata_content</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -133,7 +148,7 @@ public class UpdateRenderingProjectRequest extends Request {
         }
 
         /**
-         * SessionAttribs.
+         * <p>Session attributes</p>
          */
         public Builder sessionAttribs(SessionAttribs sessionAttribs) {
             String sessionAttribsShrink = shrink(sessionAttribs, "SessionAttribs", "json");
@@ -189,7 +204,16 @@ public class UpdateRenderingProjectRequest extends Request {
             } 
 
             /**
-             * StartMode.
+             * <p>The mode used to start cloud application services for the session. Valid values:</p>
+             * <ol>
+             * <li><p>Async: asynchronous</p>
+             * </li>
+             * <li><p>Sync: synchronization</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Async</p>
              */
             public Builder startMode(String startMode) {
                 this.startMode = startMode;

@@ -67,7 +67,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****735-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

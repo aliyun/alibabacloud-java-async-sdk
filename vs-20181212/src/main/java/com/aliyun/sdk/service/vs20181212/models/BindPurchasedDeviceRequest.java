@@ -104,6 +104,7 @@ public class BindPurchasedDeviceRequest extends Request {
         } 
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class BindPurchasedDeviceRequest extends Request {
         }
 
         /**
+         * <p>The space ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class BindPurchasedDeviceRequest extends Request {
         }
 
         /**
+         * <p>The region to which the space belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

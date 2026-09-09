@@ -67,7 +67,10 @@ public class DescribeVsVerifyContentResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>校验内容。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_dffeb6610035dcb77b413a59c3*****</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -75,7 +78,10 @@ public class DescribeVsVerifyContentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

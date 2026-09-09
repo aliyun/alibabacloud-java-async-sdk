@@ -132,7 +132,13 @@ public class DescribeRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextStartTime.
+         * <p>The start time to query the next record.</p>
+         * <blockquote>
+         * <p>Applies only to snapshot queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-10T11:00:00Z</p>
          */
         public Builder nextStartTime(String nextStartTime) {
             this.nextStartTime = nextStartTime;
@@ -140,7 +146,13 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * <blockquote>
+         * <p>Applies only to recording queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -148,7 +160,13 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * <blockquote>
+         * <p>Applies only to recording queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -156,7 +174,13 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * <blockquote>
+         * <p>Applies only to recording queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +188,7 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The list of stored records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -172,7 +196,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +207,13 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of stored records.</p>
+         * <blockquote>
+         * <p>Applies only to recording queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -389,7 +422,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the stored record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-23T18:33:48</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -397,7 +433,20 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FileFormat.
+             * <p>The format of the stored file. Valid values:</p>
+             * <ul>
+             * <li><p>mp4</p>
+             * </li>
+             * <li><p>flv</p>
+             * </li>
+             * <li><p>hls</p>
+             * </li>
+             * <li><p>jpg</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hls</p>
              */
             public Builder fileFormat(String fileFormat) {
                 this.fileFormat = fileFormat;
@@ -405,7 +454,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(Long height) {
                 this.height = height;
@@ -413,7 +465,13 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the stored record.</p>
+             * <blockquote>
+             * <p>Applies only to recording queries.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2be2a673-6033-4874-b6f2-f2bc0a1*****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -421,7 +479,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The bucket where the file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_oss_bucket</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -429,7 +490,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OssEndpoint.
+             * <p>The OSS endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-qingdao.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -437,7 +501,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OssObject.
+             * <p>The object of the stored file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</p>
              */
             public Builder ossObject(String ossObject) {
                 this.ossObject = ossObject;
@@ -445,7 +512,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the stored record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-23T18:19:32</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -453,7 +523,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamId.
+             * <p>The stream ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****997-cn-qingdao</p>
              */
             public Builder streamId(String streamId) {
                 this.streamId = streamId;
@@ -461,7 +534,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>388*****204-cn-qingdao</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -469,7 +545,16 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the stored record. Valid values:</p>
+             * <ul>
+             * <li><p>record</p>
+             * </li>
+             * <li><p>snapshot</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>record</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -477,7 +562,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the stored file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8">http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -485,7 +573,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(Long width) {
                 this.width = width;

@@ -80,7 +80,10 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 0 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request fails, this parameter contains the failure reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn failed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,7 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

@@ -102,6 +102,7 @@ public class DescribeDeviceChannelsRequest extends Request {
         } 
 
         /**
+         * <p>Query by device ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,10 @@ public class DescribeDeviceChannelsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -132,7 +136,10 @@ public class DescribeDeviceChannelsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

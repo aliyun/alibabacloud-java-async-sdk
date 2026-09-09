@@ -89,6 +89,7 @@ public class UnbindDirectoryRequest extends Request {
         } 
 
         /**
+         * <p>Device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UnbindDirectoryRequest extends Request {
         }
 
         /**
+         * <p>Folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

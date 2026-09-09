@@ -59,7 +59,10 @@ public class DeleteComfyUserDataRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * <p>The file or directory to delete. To specify a directory, provide a path that ends with a forward slash (/).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);

@@ -327,7 +327,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AliasId.
+         * <p>Alias for the space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>337639*****24964-cn-qingdao</p>
          */
         public Builder aliasId(String aliasId) {
             this.aliasId = aliasId;
@@ -335,7 +338,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * App.
+         * <p>The name of the application used by the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live</p>
          */
         public Builder app(String app) {
             this.app = app;
@@ -343,7 +349,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Callback.
+         * <p>The callback URL that is used to receive device status updates in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
         public Builder callback(String callback) {
             this.callback = callback;
@@ -351,7 +360,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The time when the group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-28T17:00:17Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -359,7 +371,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>A description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>上海高速监控</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -367,7 +382,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>Indicates whether the group is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -375,7 +393,13 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbId.
+         * <p>The GB/T 28181 ID that is associated with the group.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3100000*****0000001</p>
          */
         public Builder gbId(String gbId) {
             this.gbId = gbId;
@@ -383,7 +407,13 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbIp.
+         * <p>The IP address of the GB/T 28181 signaling server that is associated with the group.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         public Builder gbIp(String gbIp) {
             this.gbIp = gbIp;
@@ -391,7 +421,13 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbPort.
+         * <p>The port of the GB/T 28181 signaling server that is associated with the group.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5060</p>
          */
         public Builder gbPort(Long gbPort) {
             this.gbPort = gbPort;
@@ -399,7 +435,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbTcpPorts.
+         * <p>The TCP ports of the GB/T 28181 signaling server that are provided by the group.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+         * </blockquote>
          */
         public Builder gbTcpPorts(java.util.List<String> gbTcpPorts) {
             this.gbTcpPorts = gbTcpPorts;
@@ -407,7 +446,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GbUdpPorts.
+         * <p>The UDP ports of the GB/T 28181 signaling server that are provided by the group.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+         * </blockquote>
          */
         public Builder gbUdpPorts(java.util.List<String> gbUdpPorts) {
             this.gbUdpPorts = gbUdpPorts;
@@ -415,7 +457,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>337639****224964-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -423,7 +468,16 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * InProtocol.
+         * <p>The ingest protocol used by the group. Valid values:</p>
+         * <ul>
+         * <li><p>gb28181</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gb28181</p>
          */
         public Builder inProtocol(String inProtocol) {
             this.inProtocol = inProtocol;
@@ -431,7 +485,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * LazyPull.
+         * <p>Indicates whether on-demand stream pulling is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lazyPull(Boolean lazyPull) {
             this.lazyPull = lazyPull;
@@ -439,7 +496,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>上海高速监控</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -447,7 +507,21 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OutProtocol.
+         * <p>The streaming protocol used by the group. Valid values:</p>
+         * <ul>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * <li><p>rtmp</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You can specify multiple protocols. Separate them with commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>flv,hls,rtmp</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.outProtocol = outProtocol;
@@ -455,7 +529,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PlayDomain.
+         * <p>The streaming domain used by the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder playDomain(String playDomain) {
             this.playDomain = playDomain;
@@ -463,7 +540,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PushDomain.
+         * <p>The ingest domain used by the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder pushDomain(String pushDomain) {
             this.pushDomain = pushDomain;
@@ -471,7 +551,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The region where the space is located, which is the service center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -479,7 +562,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -487,7 +573,7 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Stats.
+         * <p>The statistics of devices in the group.</p>
          */
         public Builder stats(Stats stats) {
             this.stats = stats;
@@ -495,7 +581,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -587,7 +676,10 @@ public class DescribeGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceNum.
+             * <p>The total number of devices in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder deviceNum(Long deviceNum) {
                 this.deviceNum = deviceNum;
@@ -595,7 +687,10 @@ public class DescribeGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IedNum.
+             * <p>The number of intelligent electronic devices (IEDs) in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder iedNum(Long iedNum) {
                 this.iedNum = iedNum;
@@ -603,7 +698,10 @@ public class DescribeGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IpcNum.
+             * <p>The number of cameras in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ipcNum(Long ipcNum) {
                 this.ipcNum = ipcNum;
@@ -611,7 +709,10 @@ public class DescribeGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PlatformNum.
+             * <p>The number of platforms in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder platformNum(Long platformNum) {
                 this.platformNum = platformNum;

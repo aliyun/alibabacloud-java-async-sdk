@@ -146,7 +146,10 @@ public class BindTemplateRequest extends Request {
         } 
 
         /**
-         * ApplyAll.
+         * <p>Whether to apply the template to all streams in the scope. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder applyAll(Boolean applyAll) {
             this.putQueryParameter("ApplyAll", applyAll);
@@ -155,6 +158,7 @@ public class BindTemplateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +171,13 @@ public class BindTemplateRequest extends Request {
         }
 
         /**
+         * <p>The type of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>group</p>
+         * </li>
+         * <li><p>stream</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +199,10 @@ public class BindTemplateRequest extends Request {
         }
 
         /**
-         * Replace.
+         * <p>Whether to replace an existing binding. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder replace(Boolean replace) {
             this.putQueryParameter("Replace", replace);
@@ -197,6 +211,7 @@ public class BindTemplateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +224,16 @@ public class BindTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The type of the template. Valid values:</p>
+         * <ul>
+         * <li><p>record</p>
+         * </li>
+         * <li><p>snapshot</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>record</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

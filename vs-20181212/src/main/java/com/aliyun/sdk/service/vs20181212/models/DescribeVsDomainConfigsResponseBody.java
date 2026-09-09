@@ -67,7 +67,7 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainConfigs.
+         * <p>Domain name configurations.</p>
          */
         public Builder domainConfigs(java.util.List<DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -75,7 +75,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D94D0E1E-E71B-562D-8C18-969BB3653FBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * ArgName.
+             * <p>The name of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auth_type</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -149,7 +155,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * <p>The argument value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>req_auth</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -242,7 +251,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6295</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -250,7 +262,7 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * <p>Each function.</p>
              */
             public Builder functionArgs(java.util.List<FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
@@ -258,7 +270,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * <p>The function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliauth</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -266,7 +281,20 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status. Valid values:</p>
+             * <ul>
+             * <li><p>success</p>
+             * </li>
+             * <li><p>testing</p>
+             * </li>
+             * <li><p>failed</p>
+             * </li>
+             * <li><p>configuring</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

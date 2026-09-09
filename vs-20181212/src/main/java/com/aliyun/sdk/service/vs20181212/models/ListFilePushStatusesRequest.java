@@ -144,7 +144,10 @@ public class ListFilePushStatusesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>A time range filter parameter. Specify the value in ISO8601 format using UTC time: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-23T02:13:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,7 +156,10 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The file ID, which uniquely identifies a file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -162,7 +168,10 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myfile</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -171,7 +180,10 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the results to return. Pages start from 1.Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +192,10 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 100.Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +204,10 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>The cloud application service instance ID. Use this parameter to query files installed on a specific instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -198,7 +216,10 @@ public class ListFilePushStatusesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>A time range filter parameter. Specify the value in ISO8601 format using UTC time: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-17T12:16:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

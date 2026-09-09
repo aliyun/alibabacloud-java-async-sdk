@@ -106,7 +106,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedInstanceCount.
+         * <p>Number of cloud application service instances that failed to restart</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedInstanceCount(Integer failedInstanceCount) {
             this.failedInstanceCount = failedInstanceCount;
@@ -114,7 +117,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         }
 
         /**
-         * FailedInstances.
+         * <p>Cloud application service instance IDs and their failure details</p>
          */
         public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
             this.failedInstances = failedInstances;
@@ -122,7 +125,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstanceCount.
+         * <p>Number of successful cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder successInstanceCount(Integer successInstanceCount) {
             this.successInstanceCount = successInstanceCount;
@@ -138,7 +147,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInstances.
+         * <p>The instance ID of the cloud application service and the description of the result.</p>
          */
         public Builder successInstances(java.util.List<SuccessInstances> successInstances) {
             this.successInstances = successInstances;
@@ -217,7 +226,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrCode.
+             * <p>Error code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000</p>
              */
             public Builder errCode(Integer errCode) {
                 this.errCode = errCode;
@@ -225,7 +237,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>Reason for failure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rejected due to timeout</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -233,7 +248,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-421cd2a1125947c19fcd5c7dd2c7d31e</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -287,7 +305,10 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-e6cf423c787e4e43b460a788da254fe3</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;

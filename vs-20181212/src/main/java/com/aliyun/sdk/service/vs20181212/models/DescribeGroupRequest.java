@@ -88,7 +88,11 @@ public class DescribeGroupRequest extends Request {
         } 
 
         /**
+         * <p>Space ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>337639*****224964-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -97,7 +101,10 @@ public class DescribeGroupRequest extends Request {
         }
 
         /**
-         * IncludeStats.
+         * <p>Specifies whether to return the statistics of devices in the group. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeStats(Boolean includeStats) {
             this.putQueryParameter("IncludeStats", includeStats);

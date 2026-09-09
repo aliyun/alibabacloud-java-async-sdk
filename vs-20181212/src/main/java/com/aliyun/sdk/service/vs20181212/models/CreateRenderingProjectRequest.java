@@ -89,7 +89,10 @@ public class CreateRenderingProjectRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the project. The description can be 0 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>项目概述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -98,6 +101,16 @@ public class CreateRenderingProjectRequest extends Request {
         }
 
         /**
+         * <p>The custom name of the project. This name is the unique identifier for the project.
+         * The name must meet the following requirements:</p>
+         * <ol>
+         * <li><p>Be 1 to 128 characters in length.</p>
+         * </li>
+         * <li><p>Contain only lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
+         * </li>
+         * <li><p>Start and end with a letter or a digit.</p>
+         * </li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +123,7 @@ public class CreateRenderingProjectRequest extends Request {
         }
 
         /**
-         * SessionAttribs.
+         * <p>The session properties.</p>
          */
         public Builder sessionAttribs(SessionAttribs sessionAttribs) {
             String sessionAttribsShrink = shrink(sessionAttribs, "SessionAttribs", "json");
@@ -166,7 +179,16 @@ public class CreateRenderingProjectRequest extends Request {
             } 
 
             /**
-             * StartMode.
+             * <p>The mode to start the cloud application service for the session. Valid values:</p>
+             * <ol>
+             * <li><p>Async: asynchronous</p>
+             * </li>
+             * <li><p>Sync: synchronous</p>
+             * </li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Async</p>
              */
             public Builder startMode(String startMode) {
                 this.startMode = startMode;

@@ -67,7 +67,10 @@ public class BatchStartStreamsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchStartStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>Results list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,13 @@ public class BatchStartStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>Error message for the stream.</p>
+             * <blockquote>
+             * <p>This field appears only if the stream fails.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>stream not found</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -162,7 +171,10 @@ public class BatchStartStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Stream ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323*****997-cn-qingdao</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -170,7 +182,10 @@ public class BatchStartStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Stream name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31000000*****0000002</p>
              */
             public Builder name(String name) {
                 this.name = name;

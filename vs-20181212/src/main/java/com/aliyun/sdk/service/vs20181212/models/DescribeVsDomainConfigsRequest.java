@@ -89,6 +89,7 @@ public class DescribeVsDomainConfigsRequest extends Request {
         } 
 
         /**
+         * <p>Your accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,10 @@ public class DescribeVsDomainConfigsRequest extends Request {
         }
 
         /**
+         * <p>List of feature names.</p>
+         * <blockquote>
+         * <p>Supports multiple values separated by commas (,).</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,7 +102,10 @@ public class ModifyDirectoryRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录2</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -111,6 +114,7 @@ public class ModifyDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ModifyDirectoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录2</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

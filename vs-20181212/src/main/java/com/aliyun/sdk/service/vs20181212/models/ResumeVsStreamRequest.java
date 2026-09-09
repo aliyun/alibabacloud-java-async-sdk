@@ -133,6 +133,7 @@ public class ResumeVsStreamRequest extends Request {
         } 
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class ResumeVsStreamRequest extends Request {
         }
 
         /**
+         * <p>Your accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,10 @@ public class ResumeVsStreamRequest extends Request {
         }
 
         /**
+         * <p>The stream type.</p>
+         * <blockquote>
+         * <p>Only publisher is supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,7 @@ public class ResumeVsStreamRequest extends Request {
         }
 
         /**
+         * <p>The stream name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -132,7 +132,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +154,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +187,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -275,7 +290,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             } 
 
             /**
-             * FileName.
+             * <p>The name of the file or folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myfile</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -283,7 +301,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -291,7 +312,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The entry type. Valid values are \<code>file\\</code> and \<code>dir\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -299,7 +323,10 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776646928000</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

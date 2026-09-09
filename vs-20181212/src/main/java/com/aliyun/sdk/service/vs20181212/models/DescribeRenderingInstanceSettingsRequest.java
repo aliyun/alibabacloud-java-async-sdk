@@ -73,7 +73,7 @@ public class DescribeRenderingInstanceSettingsRequest extends Request {
         } 
 
         /**
-         * AttributeNames.
+         * <p>The list of instance configuration names.</p>
          */
         public Builder attributeNames(java.util.List<String> attributeNames) {
             String attributeNamesShrink = shrink(attributeNames, "AttributeNames", "json");
@@ -83,7 +83,10 @@ public class DescribeRenderingInstanceSettingsRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>The ID of the Cloud Application service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);

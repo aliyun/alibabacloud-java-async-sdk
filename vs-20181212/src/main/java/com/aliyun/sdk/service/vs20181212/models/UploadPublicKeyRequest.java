@@ -118,6 +118,7 @@ public class UploadPublicKeyRequest extends Request {
         } 
 
         /**
+         * <p>Base64-encoded public key content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class UploadPublicKeyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试使用</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -139,7 +143,18 @@ public class UploadPublicKeyRequest extends Request {
         }
 
         /**
-         * KeyGroup.
+         * <p>Group for the public key. Used for public key management.</p>
+         * <ol>
+         * <li><p>Length: 0 to 255 characters.</p>
+         * </li>
+         * <li><p>Valid characters: lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
+         * </li>
+         * <li><p>First character must be a letter or digit.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>g-test</p>
          */
         public Builder keyGroup(String keyGroup) {
             this.putQueryParameter("KeyGroup", keyGroup);
@@ -148,6 +163,17 @@ public class UploadPublicKeyRequest extends Request {
         }
 
         /**
+         * <p>Name of the public key. Must be unique.</p>
+         * <ol>
+         * <li><p>Length: 8 to 255 characters.</p>
+         * </li>
+         * <li><p>Valid characters: lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
+         * </li>
+         * <li><p>First character must be a letter or digit.</p>
+         * </li>
+         * <li><p>Prefix cannot be group-.</p>
+         * </li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +186,16 @@ public class UploadPublicKeyRequest extends Request {
         }
 
         /**
-         * KeyType.
+         * <p>Type of the public key. Valid values:</p>
+         * <ul>
+         * <li><p><strong>adb</strong>: ADB key.</p>
+         * </li>
+         * <li><p><strong>ssh</strong>: SSH key.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh</p>
          */
         public Builder keyType(String keyType) {
             this.putQueryParameter("KeyType", keyType);

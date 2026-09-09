@@ -67,7 +67,10 @@ public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -162,7 +168,13 @@ public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when an error occurs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>some error</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -170,7 +182,10 @@ public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentPlatformId.
+             * <p>The ID of the parent platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>361*****212-cn-qingdao</p>
              */
             public Builder parentPlatformId(String parentPlatformId) {
                 this.parentPlatformId = parentPlatformId;

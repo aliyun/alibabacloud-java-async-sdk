@@ -145,7 +145,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is returned only if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-07T02:27:06Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -161,7 +167,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The workflow description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个图生视频的工作流</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +178,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. This parameter provides error details if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn failed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +189,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图生视频工作流示例</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +200,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +211,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-07T02:27:06Z</p>
          */
         public Builder updatedTime(String updatedTime) {
             this.updatedTime = updatedTime;
@@ -201,7 +222,10 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
          */
         public Builder workflowId(String workflowId) {
             this.workflowId = workflowId;

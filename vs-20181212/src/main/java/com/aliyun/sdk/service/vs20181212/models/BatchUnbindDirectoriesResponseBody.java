@@ -67,7 +67,10 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64DB7F34-11A8-45DC-A421-40ACF446282C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceId.
+             * <p>Folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>348*****380-cn-qingdao</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -162,7 +168,10 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>399*****488-cn-qingdao</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -170,7 +179,13 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message for the detach operation.</p>
+             * <blockquote>
+             * <p>This field appears only if an error occurs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>An error occurred while processing your request.</p>
              */
             public Builder error(String error) {
                 this.error = error;

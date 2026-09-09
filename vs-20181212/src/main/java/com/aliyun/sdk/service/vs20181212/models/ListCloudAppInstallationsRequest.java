@@ -186,7 +186,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>Cloud application ID. Each ID maps to a unique application package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -195,7 +198,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aaa.bbb</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -204,7 +210,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * <p>Application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -213,7 +222,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Time range filter. Use ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-02T02:18:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -222,7 +234,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the returned list. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +246,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page for paged queries. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +258,13 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * PatchId.
+         * <p>Patch package ID. Supported only in Windows scenarios.</p>
+         * <ol>
+         * <li>Set to origin to return only original versions.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
          */
         public Builder patchId(String patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -249,7 +273,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>Project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-b93ea81de76f48609eed3cd420f0399f</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -258,7 +285,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>Cloud application service instance ID. Use this to list installations on a specific instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -267,7 +297,10 @@ public class ListCloudAppInstallationsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time of the time range filter. Specify in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-26T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

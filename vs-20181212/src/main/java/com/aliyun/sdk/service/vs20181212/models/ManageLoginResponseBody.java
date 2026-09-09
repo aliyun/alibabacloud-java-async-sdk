@@ -67,7 +67,7 @@ public class ManageLoginResponseBody extends TeaModel {
         } 
 
         /**
-         * LoginInfo.
+         * <p>Connection information.</p>
          */
         public Builder loginInfo(LoginInfo loginInfo) {
             this.loginInfo = loginInfo;
@@ -75,7 +75,10 @@ public class ManageLoginResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ManageLoginResponseBody extends TeaModel {
             } 
 
             /**
-             * AdbLoginPort.
+             * <p>Port for ADB connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10005</p>
              */
             public Builder adbLoginPort(Integer adbLoginPort) {
                 this.adbLoginPort = adbLoginPort;
@@ -162,7 +168,10 @@ public class ManageLoginResponseBody extends TeaModel {
             }
 
             /**
-             * LoginHostname.
+             * <p>Host for SSH connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.10.4.10</p>
              */
             public Builder loginHostname(String loginHostname) {
                 this.loginHostname = loginHostname;
@@ -170,7 +179,10 @@ public class ManageLoginResponseBody extends TeaModel {
             }
 
             /**
-             * LoginPort.
+             * <p>Port for SSH connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10004</p>
              */
             public Builder loginPort(Integer loginPort) {
                 this.loginPort = loginPort;

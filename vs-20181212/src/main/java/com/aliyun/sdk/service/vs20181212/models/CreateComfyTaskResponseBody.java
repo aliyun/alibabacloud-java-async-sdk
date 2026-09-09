@@ -93,7 +93,10 @@ public class CreateComfyTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateComfyTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,10 @@ public class CreateComfyTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

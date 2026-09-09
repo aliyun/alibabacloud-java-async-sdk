@@ -80,7 +80,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * Sessions.
+         * <p>Session list</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -96,7 +99,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of matching sessions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>Cloud application ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cap-4e1a6a425495458ba78693b8ac6600ea</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -222,7 +231,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * <p>Client ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd6b2134-7954-4754-8915-5fb8b0469622</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -230,7 +242,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * PatchId.
+             * <p>Cloud application patch ID. An empty value indicates the original version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
              */
             public Builder patchId(String patchId) {
                 this.patchId = patchId;
@@ -238,7 +253,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>Cloud application service instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-a10722fb84b243f6ba02a89a2e5c838d</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -246,7 +264,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>Session ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session-i205217481741918129226</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -254,7 +275,10 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-04T01:23:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

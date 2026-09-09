@@ -74,6 +74,7 @@ public class DescribeVsVerifyContentRequest extends Request {
         } 
 
         /**
+         * <p>The Visual Edge Computing Service domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

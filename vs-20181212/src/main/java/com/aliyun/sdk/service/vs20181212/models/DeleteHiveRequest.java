@@ -60,10 +60,11 @@ public class DeleteHiveRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>g-xxxx</p>
+         * <p>hive-xxxx</p>
          */
         public Builder hiveId(String hiveId) {
             this.putQueryParameter("HiveId", hiveId);

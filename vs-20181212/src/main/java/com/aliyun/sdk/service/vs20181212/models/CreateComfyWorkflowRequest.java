@@ -89,7 +89,10 @@ public class CreateComfyWorkflowRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The workflow description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个图生视频的工作流</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -98,7 +101,11 @@ public class CreateComfyWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The workflow name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图生视频的工作流示例</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -107,7 +114,11 @@ public class CreateComfyWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The JSON definition of the workflow.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder workflow(String workflow) {
             this.putQueryParameter("Workflow", workflow);

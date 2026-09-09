@@ -75,6 +75,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         } 
 
         /**
+         * <p>The configuration content.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configuration(java.util.List<Configuration> configuration) {
@@ -85,6 +86,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cloud application service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             } 
 
             /**
+             * <p>The name of the property.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -169,6 +172,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
+             * <p>The value of the property.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -241,6 +245,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             } 
 
             /**
+             * <p>The list of properties for the module.</p>
              * <p>This parameter is required.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
@@ -249,6 +254,27 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
+             * <p>The name of the real device simulation module. Valid values include the following:</p>
+             * <ol>
+             * <li><p>ctl: control module</p>
+             * </li>
+             * <li><p>prop: property module</p>
+             * </li>
+             * <li><p>location: location module</p>
+             * </li>
+             * <li><p>battery: battery module</p>
+             * </li>
+             * <li><p>network: network module</p>
+             * </li>
+             * <li><p>bluetooth: bluetooth module</p>
+             * </li>
+             * <li><p>sim: SIM card module</p>
+             * </li>
+             * <li><p>display: device module</p>
+             * </li>
+             * <li><p>system: basic module</p>
+             * </li>
+             * </ol>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

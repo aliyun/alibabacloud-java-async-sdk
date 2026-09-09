@@ -80,7 +80,7 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * RenderingInstances.
+         * <p>List of cloud application service instances</p>
          */
         public Builder renderingInstances(java.util.List<RenderingInstances> renderingInstances) {
             this.renderingInstances = renderingInstances;
@@ -88,7 +88,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of cloud application service instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>Creation time of the cloud application service instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-17T02:18:04Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -196,7 +205,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingInstanceId.
+             * <p>ID of the cloud application service instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
@@ -204,7 +216,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingSpec.
+             * <p>Instance type of the cloud application service</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crs.cp.l1</p>
              */
             public Builder renderingSpec(String renderingSpec) {
                 this.renderingSpec = renderingSpec;
@@ -212,7 +227,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>Storage capacity, in GB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;

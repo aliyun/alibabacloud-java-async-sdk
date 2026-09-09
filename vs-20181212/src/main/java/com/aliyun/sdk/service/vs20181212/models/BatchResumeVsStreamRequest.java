@@ -118,6 +118,7 @@ public class BatchResumeVsStreamRequest extends Request {
         } 
 
         /**
+         * <p>The name of the stream in the AppName/StreamName format. To specify multiple streams, separate the stream names with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class BatchResumeVsStreamRequest extends Request {
         }
 
         /**
+         * <p>The accelerated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +153,7 @@ public class BatchResumeVsStreamRequest extends Request {
         }
 
         /**
+         * <p>The type of live stream. Only publisher is supported, which indicates that the stream is ingested by a streamer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

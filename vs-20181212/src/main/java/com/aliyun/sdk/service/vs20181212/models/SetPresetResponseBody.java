@@ -67,7 +67,10 @@ public class SetPresetResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class SetPresetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30295DF1-1DC7-48BA-BE5A-D58E61EB2375</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

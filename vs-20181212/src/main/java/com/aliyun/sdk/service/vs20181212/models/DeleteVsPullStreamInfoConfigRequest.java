@@ -104,6 +104,7 @@ public class DeleteVsPullStreamInfoConfigRequest extends Request {
         } 
 
         /**
+         * <p>The application name for the live stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DeleteVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
+         * <p>Your stream pulling domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class DeleteVsPullStreamInfoConfigRequest extends Request {
         }
 
         /**
+         * <p>The name of the live stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
