@@ -184,7 +184,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * CanOriginalWithdrawAmount.
+         * <p>Amount withdrawable via original payment method</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder canOriginalWithdrawAmount(String canOriginalWithdrawAmount) {
             this.canOriginalWithdrawAmount = canOriginalWithdrawAmount;
@@ -192,7 +195,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CanWithdrawAmount.
+         * <p>Withdrawable amount = Cash balance - Transfer ledger amount - (Outstanding invoice amount + Historical months unsettled amount + Current month unsettled amount - Transfer ledger amount) - Pay-as-you-go reserved amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder canWithdrawAmount(String canWithdrawAmount) {
             this.canWithdrawAmount = canWithdrawAmount;
@@ -200,7 +206,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CannotOriginalWithdrawAmount.
+         * <p>Amount not withdrawable via original payment method</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder cannotOriginalWithdrawAmount(String cannotOriginalWithdrawAmount) {
             this.cannotOriginalWithdrawAmount = cannotOriginalWithdrawAmount;
@@ -208,7 +217,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CashAmount.
+         * <p>Cash balance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cashAmount(String cashAmount) {
             this.cashAmount = cashAmount;
@@ -216,7 +228,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CreditMemoAmount.
+         * <p>Outstanding invoice amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder creditMemoAmount(String creditMemoAmount) {
             this.creditMemoAmount = creditMemoAmount;
@@ -224,7 +239,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentMonthUnclearedAmount.
+         * <p>Current month unsettled amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder currentMonthUnclearedAmount(String currentMonthUnclearedAmount) {
             this.currentMonthUnclearedAmount = currentMonthUnclearedAmount;
@@ -232,7 +250,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * HistoryMonthUnclearedAmount.
+         * <p>Historical months unsettled amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder historyMonthUnclearedAmount(String historyMonthUnclearedAmount) {
             this.historyMonthUnclearedAmount = historyMonthUnclearedAmount;
@@ -240,7 +261,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response structure metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -248,7 +272,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * PayAsYouGoReversedAmount.
+         * <p>Pay-as-you-go reserved amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder payAsYouGoReversedAmount(String payAsYouGoReversedAmount) {
             this.payAsYouGoReversedAmount = payAsYouGoReversedAmount;
@@ -256,7 +283,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +294,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         }
 
         /**
-         * TransferAmount.
+         * <p>Transfer amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder transferAmount(String transferAmount) {
             this.transferAmount = transferAmount;

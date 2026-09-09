@@ -119,7 +119,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The response struct metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -143,7 +149,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -329,7 +344,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableRate.
+             * <p>The service availability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.9155</p>
              */
             public Builder availableRate(Double availableRate) {
                 this.availableRate = availableRate;
@@ -337,7 +355,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * DamagedId.
+             * <p>The unique ID of the damage record, used for targeted claims.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9b7***9413</p>
              */
             public Builder damagedId(String damagedId) {
                 this.damagedId = damagedId;
@@ -345,7 +366,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-0xl0n****003</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -353,7 +377,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * Month.
+             * <p>The month in yyyyMM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202603</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -361,7 +388,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyServiceCharge.
+             * <p>The monthly service fee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365.00</p>
              */
             public Builder monthlyServiceCharge(Double monthlyServiceCharge) {
                 this.monthlyServiceCharge = monthlyServiceCharge;
@@ -369,7 +399,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * PayDescription.
+             * <p>The compensation description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLA compensation</p>
              */
             public Builder payDescription(String payDescription) {
                 this.payDescription = payDescription;
@@ -377,7 +410,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * PayRate.
+             * <p>The compensation ratio, in percentage (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder payRate(Double payRate) {
                 this.payRate = payRate;
@@ -385,7 +421,15 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * PayStatus.
+             * <p>The compensation status. Valid values:</p>
+             * <ul>
+             * <li>0: not compensated.</li>
+             * <li>1: compensated.</li>
+             * <li>2: no compensation required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -393,7 +437,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -401,7 +448,10 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * ShouldPaySum.
+             * <p>The compensation amount that should be paid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36.5</p>
              */
             public Builder shouldPaySum(Double shouldPaySum) {
                 this.shouldPaySum = shouldPaySum;

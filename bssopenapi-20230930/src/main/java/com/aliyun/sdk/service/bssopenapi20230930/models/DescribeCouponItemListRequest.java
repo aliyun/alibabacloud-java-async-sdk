@@ -129,7 +129,10 @@ public class DescribeCouponItemListRequest extends Request {
         } 
 
         /**
-         * CouponId.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59104570</p>
          */
         public Builder couponId(Long couponId) {
             this.putQueryParameter("CouponId", couponId);
@@ -138,7 +141,10 @@ public class DescribeCouponItemListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +153,7 @@ public class DescribeCouponItemListRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -157,7 +163,10 @@ public class DescribeCouponItemListRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The product name. Fuzzy matching is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云服务器ECS</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -166,7 +175,10 @@ public class DescribeCouponItemListRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The level-1 sales channel ID. If this parameter is left empty, the channel ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -175,7 +187,10 @@ public class DescribeCouponItemListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +259,7 @@ public class DescribeCouponItemListRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -252,6 +267,7 @@ public class DescribeCouponItemListRequest extends Request {
             }
 
             /**
+             * <p>The enterprise entity ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

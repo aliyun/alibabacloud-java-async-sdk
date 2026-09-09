@@ -119,7 +119,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterDtoList.
+         * <p>The list of financial unit data.</p>
          */
         public Builder costCenterDtoList(java.util.List<CostCenterDtoList> costCenterDtoList) {
             this.costCenterDtoList = costCenterDtoList;
@@ -127,7 +127,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -135,7 +138,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -143,7 +149,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +171,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -306,7 +318,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             } 
 
             /**
-             * CostCenterCode.
+             * <p>The code of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15945703968#</p>
              */
             public Builder costCenterCode(String costCenterCode) {
                 this.costCenterCode = costCenterCode;
@@ -314,7 +329,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterId.
+             * <p>The ID of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>485938</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -322,7 +340,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterName.
+             * <p>The name of the financial unit. The name must be unique within the same account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>资源组</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -330,7 +351,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the financial unit node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loose</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -338,7 +362,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>The ID of the user who owns the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1314839403940987</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -346,7 +373,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCostCenterId.
+             * <p>The ID of the parent financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentCostCenterId(Long parentCostCenterId) {
                 this.parentCostCenterId = parentCostCenterId;
@@ -354,7 +384,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * PrevCostCenterId.
+             * <p>The ID of the previous financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>485996</p>
              */
             public Builder prevCostCenterId(Long prevCostCenterId) {
                 this.prevCostCenterId = prevCostCenterId;

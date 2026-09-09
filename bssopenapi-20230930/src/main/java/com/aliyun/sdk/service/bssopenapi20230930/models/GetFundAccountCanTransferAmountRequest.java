@@ -74,6 +74,7 @@ public class GetFundAccountCanTransferAmountRequest extends Request {
         } 
 
         /**
+         * <p>Currency</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetFundAccountCanTransferAmountRequest extends Request {
         }
 
         /**
-         * FundAccountId.
+         * <p>Transfer source account ID. If not specified, the account ID owned by the current account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123212</p>
          */
         public Builder fundAccountId(String fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);

@@ -106,7 +106,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -300,7 +312,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadlineAcc</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -308,7 +323,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total decrement</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +393,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb_albcubag_dp_cn</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -383,7 +404,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALB Resource Plan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -450,7 +474,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The commitment cycle code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -458,7 +485,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The commitment cycle name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hour</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -525,7 +555,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The deductible region code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -533,7 +566,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The deductible region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -600,7 +636,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -608,7 +647,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Server Load Balancer</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -675,7 +717,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -683,7 +728,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Valid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -750,7 +798,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb_cubag*******</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -758,7 +809,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chinese mainland regions</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1410,7 +1464,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -1418,7 +1475,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icloudtest</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1434,7 +1494,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CapacitiyTypeName.
+             * <p>The capacity type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total decrement</p>
              */
             public Builder capacitiyTypeName(String capacitiyTypeName) {
                 this.capacitiyTypeName = capacitiyTypeName;
@@ -1442,7 +1505,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityType.
+             * <p>The capacity type.</p>
              */
             public Builder capacityType(CapacityType capacityType) {
                 this.capacityType = capacityType;
@@ -1450,7 +1513,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityTypeCode.
+             * <p>The capacity type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadlineAcc</p>
              */
             public Builder capacityTypeCode(String capacityTypeCode) {
                 this.capacityTypeCode = capacityTypeCode;
@@ -1458,7 +1524,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Commodity.
+             * <p>The commodity.</p>
              */
             public Builder commodity(Commodity commodity) {
                 this.commodity = commodity;
@@ -1466,7 +1532,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -1474,7 +1543,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * <p>The commodity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Performance Testing</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -1482,7 +1554,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityBaseUnit.
+             * <p>The current capacity base unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CU</p>
              */
             public Builder currCapacityBaseUnit(String currCapacityBaseUnit) {
                 this.currCapacityBaseUnit = currCapacityBaseUnit;
@@ -1490,7 +1565,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityBaseValue.
+             * <p>The current capacity base value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000</p>
              */
             public Builder currCapacityBaseValue(String currCapacityBaseValue) {
                 this.currCapacityBaseValue = currCapacityBaseValue;
@@ -1498,7 +1576,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityViewUnit.
+             * <p>The current capacity display unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CU</p>
              */
             public Builder currCapacityViewUnit(String currCapacityViewUnit) {
                 this.currCapacityViewUnit = currCapacityViewUnit;
@@ -1506,7 +1587,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityViewValue.
+             * <p>The current capacity display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000</p>
              */
             public Builder currCapacityViewValue(String currCapacityViewValue) {
                 this.currCapacityViewValue = currCapacityViewValue;
@@ -1514,7 +1598,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * <p>The commitment cycle.</p>
              */
             public Builder cycleType(CycleType cycleType) {
                 this.cycleType = cycleType;
@@ -1522,7 +1606,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTypeCode.
+             * <p>The commitment cycle code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder cycleTypeCode(String cycleTypeCode) {
                 this.cycleTypeCode = cycleTypeCode;
@@ -1530,7 +1617,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTypeName.
+             * <p>The commitment cycle name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hour</p>
              */
             public Builder cycleTypeName(String cycleTypeName) {
                 this.cycleTypeName = cycleTypeName;
@@ -1538,7 +1628,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeductRegions.
+             * <p>The list of deductible regions.</p>
              */
             public Builder deductRegions(java.util.List<DeductRegions> deductRegions) {
                 this.deductRegions = deductRegions;
@@ -1554,7 +1644,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableExchange.
+             * <p>Indicates whether exchange is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableExchange(Boolean enableExchange) {
                 this.enableExchange = enableExchange;
@@ -1562,7 +1655,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRenew.
+             * <p>Indicates whether renewal is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableRenew(Boolean enableRenew) {
                 this.enableRenew = enableRenew;
@@ -1570,7 +1666,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableUpgrade.
+             * <p>Indicates whether upgrade is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableUpgrade(Boolean enableUpgrade) {
                 this.enableUpgrade = enableUpgrade;
@@ -1578,7 +1677,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710604800000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1586,7 +1688,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExchangeCommodityCode.
+             * <p>The exchange commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder exchangeCommodityCode(String exchangeCommodityCode) {
                 this.exchangeCommodityCode = exchangeCommodityCode;
@@ -1594,7 +1699,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityBaseUnit.
+             * <p>The initial capacity base unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CU</p>
              */
             public Builder initCapacityBaseUnit(String initCapacityBaseUnit) {
                 this.initCapacityBaseUnit = initCapacityBaseUnit;
@@ -1602,7 +1710,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityBaseValue.
+             * <p>The initial capacity base value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000</p>
              */
             public Builder initCapacityBaseValue(String initCapacityBaseValue) {
                 this.initCapacityBaseValue = initCapacityBaseValue;
@@ -1610,7 +1721,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityViewUnit.
+             * <p>The initial capacity display unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CU</p>
              */
             public Builder initCapacityViewUnit(String initCapacityViewUnit) {
                 this.initCapacityViewUnit = initCapacityViewUnit;
@@ -1618,7 +1732,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityViewValue.
+             * <p>The initial capacity display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000</p>
              */
             public Builder initCapacityViewValue(String initCapacityViewValue) {
                 this.initCapacityViewValue = initCapacityViewValue;
@@ -1626,7 +1743,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb_cubag*******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1634,7 +1754,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodCapacityViewUnit.
+             * <p>The period capacity display unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CU</p>
              */
             public Builder periodCapacityViewUnit(String periodCapacityViewUnit) {
                 this.periodCapacityViewUnit = periodCapacityViewUnit;
@@ -1642,7 +1765,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodCapacityViewValue.
+             * <p>The period capacity display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000</p>
              */
             public Builder periodCapacityViewValue(String periodCapacityViewValue) {
                 this.periodCapacityViewValue = periodCapacityViewValue;
@@ -1650,7 +1776,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodTime.
+             * <p>The period time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder periodTime(String periodTime) {
                 this.periodTime = periodTime;
@@ -1658,7 +1787,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * <p>The product.</p>
              */
             public Builder product(Product product) {
                 this.product = product;
@@ -1666,7 +1795,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1674,7 +1806,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Performance Testing</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1682,7 +1817,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PurchaseTime.
+             * <p>The purchase time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678939036000</p>
              */
             public Builder purchaseTime(Long purchaseTime) {
                 this.purchaseTime = purchaseTime;
@@ -1690,7 +1828,12 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1698,7 +1841,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -1706,7 +1852,12 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1714,7 +1865,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678939035000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1722,7 +1876,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
              */
             public Builder status(Status status) {
                 this.status = status;
@@ -1730,7 +1884,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The resource status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -1738,7 +1895,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusName.
+             * <p>The resource status name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Valid</p>
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -1746,7 +1906,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -1754,7 +1914,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_armsappbag_deadlineAcc_bj</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -1762,7 +1925,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new_test</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1770,7 +1936,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * periodCapacityBaseUnit.
+             * <p>The periodic capacity base unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CU</p>
              */
             public Builder periodCapacityBaseUnit(String periodCapacityBaseUnit) {
                 this.periodCapacityBaseUnit = periodCapacityBaseUnit;
@@ -1778,7 +1947,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * periodCapacityBaseValue.
+             * <p>The periodic capacity base value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000</p>
              */
             public Builder periodCapacityBaseValue(String periodCapacityBaseValue) {
                 this.periodCapacityBaseValue = periodCapacityBaseValue;

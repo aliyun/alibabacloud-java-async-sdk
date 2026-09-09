@@ -59,7 +59,10 @@ public class GetFundAccountAvailableAmountRequest extends Request {
         } 
 
         /**
-         * FundAccountId.
+         * <p>Account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12332112</p>
          */
         public Builder fundAccountId(String fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);

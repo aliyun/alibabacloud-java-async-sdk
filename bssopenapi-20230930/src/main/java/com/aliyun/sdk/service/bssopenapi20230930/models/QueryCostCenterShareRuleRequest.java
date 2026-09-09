@@ -115,7 +115,7 @@ public class QueryCostCenterShareRuleRequest extends Request {
         } 
 
         /**
-         * EcIdAccountIds.
+         * <p>The list of enterprises and accounts. If empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -124,7 +124,10 @@ public class QueryCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +136,10 @@ public class QueryCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The ID of the primary sales channel. If empty, the sales channel ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -142,7 +148,10 @@ public class QueryCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nYCisJwqt18pP5E9yb47iu</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +160,10 @@ public class QueryCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>The ID of the user to whom the financial unit belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529600453335198</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.putQueryParameter("OwnerAccountId", ownerAccountId);
@@ -220,7 +232,7 @@ public class QueryCostCenterShareRuleRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -228,6 +240,7 @@ public class QueryCostCenterShareRuleRequest extends Request {
             }
 
             /**
+             * <p>The ID of the enterprise entity.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

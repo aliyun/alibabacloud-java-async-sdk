@@ -80,7 +80,7 @@ public class ListFundAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Data list</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListFundAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +99,10 @@ public class ListFundAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -279,7 +285,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateDate.
+             * <p>Account creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-30 12:00:00</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -287,7 +296,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountAdminAccountId.
+             * <p>Account ID of the MA user associated with the account</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232121</p>
              */
             public Builder fundAccountAdminAccountId(String fundAccountAdminAccountId) {
                 this.fundAccountAdminAccountId = fundAccountAdminAccountId;
@@ -295,7 +307,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountAdminAccountName.
+             * <p>Name of the MA user associated with the account</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云某的账户</p>
              */
             public Builder fundAccountAdminAccountName(String fundAccountAdminAccountName) {
                 this.fundAccountAdminAccountName = fundAccountAdminAccountName;
@@ -303,7 +318,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountId.
+             * <p>Account ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1022231</p>
              */
             public Builder fundAccountId(String fundAccountId) {
                 this.fundAccountId = fundAccountId;
@@ -311,7 +329,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountName.
+             * <p>Account name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云某的账户</p>
              */
             public Builder fundAccountName(String fundAccountName) {
                 this.fundAccountName = fundAccountName;
@@ -319,7 +340,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountOwnerAccountId.
+             * <p>Account ID of the fund account owner</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132123211</p>
              */
             public Builder fundAccountOwnerAccountId(String fundAccountOwnerAccountId) {
                 this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -327,7 +351,13 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountStatus.
+             * <p>Account status.
+             * VALID: valid.
+             * FROZEN: frozen.
+             * CLOSED: closed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALID</p>
              */
             public Builder fundAccountStatus(String fundAccountStatus) {
                 this.fundAccountStatus = fundAccountStatus;
@@ -335,7 +365,12 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountType.
+             * <p>Account type.
+             * DIRECT_USER: Alibaba Cloud direct customer account.
+             * RESELLER_QUOTA: ecosystem account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DIRECT_USER</p>
              */
             public Builder fundAccountType(String fundAccountType) {
                 this.fundAccountType = fundAccountType;
@@ -343,7 +378,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Nbid.
+             * <p>Level-1 marketplace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2684210001</p>
              */
             public Builder nbid(String nbid) {
                 this.nbid = nbid;
@@ -351,7 +389,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Permissions.
+             * <p>Set of account permissions that the user has.
+             * using: use.
+             * manage: manage.
+             * owner: own.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
@@ -359,7 +400,10 @@ public class ListFundAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Site.
+             * <p>Site</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder site(String site) {
                 this.site = site;

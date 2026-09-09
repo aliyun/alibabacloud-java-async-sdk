@@ -89,6 +89,7 @@ public class CreateFundAccountPayRelationRequest extends Request {
         } 
 
         /**
+         * <p>List of enterprises and accounts.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
@@ -99,6 +100,7 @@ public class CreateFundAccountPayRelationRequest extends Request {
         }
 
         /**
+         * <p>Fund account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +113,10 @@ public class CreateFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -180,6 +185,7 @@ public class CreateFundAccountPayRelationRequest extends Request {
             } 
 
             /**
+             * <p>List of Alibaba Cloud accounts for delegated payment.</p>
              * <p>This parameter is required.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
@@ -188,7 +194,10 @@ public class CreateFundAccountPayRelationRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>Enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1501603440974415</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

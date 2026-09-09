@@ -177,7 +177,14 @@ public class CreateInvoiceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>Specifies the invoice amount. Supports up to two decimal places.</p>
+         * <ul>
+         * <li>If not specified, the invoice will be issued for the total invoiceable amount of all invoiceCandidateIds.</li>
+         * <li>If specified, the invoice will be issued for the specified amount. The specified amount cannot exceed the total invoiceable amount of all invoiceCandidateIds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -186,7 +193,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>Enterprise and account list. If empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -196,6 +203,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
+         * <p>List of invoice candidate IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder invoiceCandidateIds(java.util.List<String> invoiceCandidateIds) {
@@ -206,6 +214,12 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
+         * <p>Invoice mode.</p>
+         * <ul>
+         * <li>0: Independent invoicing. Expenses of multiple accounts under the enterprise are invoiced separately for each account.</li>
+         * <li>1: Consolidated invoicing. Expenses of multiple accounts under the enterprise are consolidated and invoiced under the invoicing entity.
+         * If only one account is passed in the AccountIds parameter, independent invoicing is applied.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +232,10 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceRemark.
+         * <p>Invoice remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注信息</p>
          */
         public Builder invoiceRemark(String invoiceRemark) {
             this.putQueryParameter("InvoiceRemark", invoiceRemark);
@@ -227,6 +244,10 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
+         * <p>Invoice title ID.</p>
+         * <ul>
+         * <li>The ID parameter returned by the ListInvoiceTitle API for the current logged-in account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +260,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
+         * <p>Invoice type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +273,10 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -260,6 +285,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
+         * <p>List of email addresses to receive the invoice. A maximum of 3 can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recipientEmails(java.util.List<String> recipientEmails) {
@@ -329,7 +355,7 @@ public class CreateInvoiceRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -337,7 +363,10 @@ public class CreateInvoiceRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>Enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

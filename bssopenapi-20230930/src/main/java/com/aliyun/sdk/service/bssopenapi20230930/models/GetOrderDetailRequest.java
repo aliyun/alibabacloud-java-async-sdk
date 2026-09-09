@@ -88,7 +88,10 @@ public class GetOrderDetailRequest extends Request {
         } 
 
         /**
-         * MemberUid.
+         * <p>The UID of the enterprise multi-account member managed by the current account. Leave this parameter empty if this scenario does not apply.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715322405372273</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -97,6 +100,7 @@ public class GetOrderDetailRequest extends Request {
         }
 
         /**
+         * <p>The order ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

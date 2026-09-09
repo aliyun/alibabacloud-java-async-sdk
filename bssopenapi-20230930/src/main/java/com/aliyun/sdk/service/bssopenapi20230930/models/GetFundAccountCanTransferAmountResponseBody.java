@@ -210,7 +210,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * AvailableAmount.
+         * <p>Available amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder availableAmount(String availableAmount) {
             this.availableAmount = availableAmount;
@@ -218,7 +221,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CashAmount.
+         * <p>Cash ledger balance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder cashAmount(String cashAmount) {
             this.cashAmount = cashAmount;
@@ -226,7 +232,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Currency.
+         * <p>Currency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -234,7 +243,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountEcid.
+         * <p>Enterprise entity ID of the account owner</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2032121324</p>
          */
         public Builder fundAccountEcid(String fundAccountEcid) {
             this.fundAccountEcid = fundAccountEcid;
@@ -242,7 +254,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountId.
+         * <p>Account ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12332112</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.fundAccountId = fundAccountId;
@@ -250,7 +265,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountName.
+         * <p>Account name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云某的账户</p>
          */
         public Builder fundAccountName(String fundAccountName) {
             this.fundAccountName = fundAccountName;
@@ -258,7 +276,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountOwnerAccountId.
+         * <p>Alibaba Cloud account ID of the fund account owner</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154738212323</p>
          */
         public Builder fundAccountOwnerAccountId(Long fundAccountOwnerAccountId) {
             this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -266,7 +287,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * MaxTransferableAmount.
+         * <p>Transferable amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxTransferableAmount(String maxTransferableAmount) {
             this.maxTransferableAmount = maxTransferableAmount;
@@ -274,7 +298,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -282,7 +309,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684210001</p>
          */
         public Builder nbid(String nbid) {
             this.nbid = nbid;
@@ -290,7 +320,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +331,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Site.
+         * <p>Site</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder site(String site) {
             this.site = site;
@@ -306,7 +342,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         }
 
         /**
-         * TransferAmount.
+         * <p>Transfer ledger balance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder transferAmount(String transferAmount) {
             this.transferAmount = transferAmount;

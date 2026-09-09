@@ -119,7 +119,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -135,7 +138,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The response struct metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -143,7 +149,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6NH0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,7 +160,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -316,7 +331,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * CostCenterCode.
+             * <p>The code of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>970354711219#</p>
              */
             public Builder costCenterCode(String costCenterCode) {
                 this.costCenterCode = costCenterCode;
@@ -324,7 +342,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterId.
+             * <p>The ID of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>637127</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -332,7 +353,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterName.
+             * <p>The name of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cost Plan</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -340,7 +364,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16 13:49:59</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -348,7 +375,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16 13:49:59</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -356,7 +386,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>The ID of the user to whom the financial unit belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529600453335198</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -364,7 +397,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCostCenterId.
+             * <p>The ID of the parent financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>637537</p>
              */
             public Builder parentCostCenterId(Long parentCostCenterId) {
                 this.parentCostCenterId = parentCostCenterId;
@@ -372,7 +408,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PrevCostCenterId.
+             * <p>The ID of the preceding financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>583059</p>
              */
             public Builder prevCostCenterId(Long prevCostCenterId) {
                 this.prevCostCenterId = prevCostCenterId;
@@ -380,7 +419,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RootCostCenterId.
+             * <p>The ID of the root financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>583050</p>
              */
             public Builder rootCostCenterId(Long rootCostCenterId) {
                 this.rootCostCenterId = rootCostCenterId;
@@ -551,7 +593,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * CostCenterCode.
+             * <p>The code of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>970354711215#</p>
              */
             public Builder costCenterCode(String costCenterCode) {
                 this.costCenterCode = costCenterCode;
@@ -559,7 +604,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterId.
+             * <p>The ID of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>637127</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -567,7 +615,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterName.
+             * <p>The name of the financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cost Allocation</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -575,7 +626,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16 13:49:59</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -583,7 +637,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16 13:49:59</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -591,7 +648,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>The ID of the user to whom the financial unit belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529600453335198</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -599,7 +659,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCostCenterId.
+             * <p>The ID of the parent financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>637537</p>
              */
             public Builder parentCostCenterId(Long parentCostCenterId) {
                 this.parentCostCenterId = parentCostCenterId;
@@ -607,7 +670,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PrevCostCenterId.
+             * <p>The ID of the preceding financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>583055</p>
              */
             public Builder prevCostCenterId(Long prevCostCenterId) {
                 this.prevCostCenterId = prevCostCenterId;
@@ -615,7 +681,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RootCostCenterId.
+             * <p>The ID of the root financial unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>583050</p>
              */
             public Builder rootCostCenterId(Long rootCostCenterId) {
                 this.rootCostCenterId = rootCostCenterId;
@@ -623,7 +692,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ShareRatio.
+             * <p>The cost allocation ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder shareRatio(Double shareRatio) {
                 this.shareRatio = shareRatio;
@@ -755,7 +827,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * FromCostCenterShareRuleDetails.
+             * <p>The rule information of the source financial unit.</p>
              */
             public Builder fromCostCenterShareRuleDetails(java.util.List<FromCostCenterShareRuleDetails> fromCostCenterShareRuleDetails) {
                 this.fromCostCenterShareRuleDetails = fromCostCenterShareRuleDetails;
@@ -763,7 +835,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 00:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -771,7 +846,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>The ID of the user to whom the financial unit belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529600453335198</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -779,7 +857,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ShareRuleId.
+             * <p>The ID of the cost allocation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1826</p>
              */
             public Builder shareRuleId(Long shareRuleId) {
                 this.shareRuleId = shareRuleId;
@@ -787,7 +868,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ShareRuleName.
+             * <p>The name of the cost allocation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder shareRuleName(String shareRuleName) {
                 this.shareRuleName = shareRuleName;
@@ -795,7 +879,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ShareRuleType.
+             * <p>The type of the cost allocation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVERAGE</p>
              */
             public Builder shareRuleType(String shareRuleType) {
                 this.shareRuleType = shareRuleType;
@@ -803,7 +890,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ToCostCenterShareRuleDetails.
+             * <p>The rule information of the destination financial unit.</p>
              */
             public Builder toCostCenterShareRuleDetails(java.util.List<ToCostCenterShareRuleDetails> toCostCenterShareRuleDetails) {
                 this.toCostCenterShareRuleDetails = toCostCenterShareRuleDetails;

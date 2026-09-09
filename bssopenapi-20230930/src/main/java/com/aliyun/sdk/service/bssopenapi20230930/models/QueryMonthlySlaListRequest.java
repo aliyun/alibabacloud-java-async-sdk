@@ -157,7 +157,10 @@ public class QueryMonthlySlaListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -166,7 +169,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The enterprise and account list. If this parameter is empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -175,7 +178,10 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>Optional. Filter by instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;instance_1&quot;,&quot;instance_2&quot;]</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);
@@ -184,7 +190,10 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * Months.
+         * <p>Optional. List of months in yyyyMM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[202602,202603]</p>
          */
         public Builder months(java.util.List<Integer> months) {
             this.putBodyParameter("Months", months);
@@ -193,7 +202,10 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -202,7 +214,10 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +226,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * PayStatuses.
+         * <p>Optional. Filter by compensation status. Valid values: 0 and 1.</p>
          */
         public Builder payStatuses(java.util.List<Integer> payStatuses) {
             this.putBodyParameter("PayStatuses", payStatuses);
@@ -220,7 +235,10 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * ProductCodes.
+         * <p>Optional. Filter by product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs&quot;,&quot;oss&quot;]</p>
          */
         public Builder productCodes(java.util.List<String> productCodes) {
             this.putBodyParameter("ProductCodes", productCodes);
@@ -288,7 +306,7 @@ public class QueryMonthlySlaListRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -296,7 +314,10 @@ public class QueryMonthlySlaListRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>The enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1501603440974415</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

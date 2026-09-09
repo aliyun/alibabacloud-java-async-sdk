@@ -74,6 +74,7 @@ public class DescribeBudgetRequest extends Request {
         } 
 
         /**
+         * <p>Budget name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeBudgetRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);

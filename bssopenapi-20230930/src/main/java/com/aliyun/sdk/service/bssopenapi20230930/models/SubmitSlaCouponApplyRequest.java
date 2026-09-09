@@ -102,7 +102,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
         } 
 
         /**
-         * DamagedIds.
+         * <p>Optional. Damaged record IDs.</p>
          */
         public Builder damagedIds(java.util.List<String> damagedIds) {
             this.putBodyParameter("DamagedIds", damagedIds);
@@ -111,7 +111,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>Enterprise and account list. If empty, the current account itself is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -120,6 +120,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
         }
 
         /**
+         * <p>Required. Application month in the yyyyMM format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +133,10 @@ public class SubmitSlaCouponApplyRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2084210001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -200,7 +204,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -208,7 +212,10 @@ public class SubmitSlaCouponApplyRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>Enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1501603440974415</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

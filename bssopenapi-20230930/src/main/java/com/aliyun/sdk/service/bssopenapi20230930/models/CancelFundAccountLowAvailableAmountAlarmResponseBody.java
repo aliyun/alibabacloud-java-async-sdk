@@ -80,7 +80,10 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -88,7 +91,10 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +102,10 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DFC1F7F9-3BA9-BA4D-2F2E653</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

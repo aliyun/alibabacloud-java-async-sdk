@@ -74,6 +74,7 @@ public class GetFundAccountCanRecycleAmountRequest extends Request {
         } 
 
         /**
+         * <p>The currency.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetFundAccountCanRecycleAmountRequest extends Request {
         }
 
         /**
-         * RecycleFromFundAccountId.
+         * <p>The ID of the source account (payer account) from which funds are reclaimed. If not specified, the account ID owned by the current account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122321223</p>
          */
         public Builder recycleFromFundAccountId(String recycleFromFundAccountId) {
             this.putBodyParameter("RecycleFromFundAccountId", recycleFromFundAccountId);

@@ -67,7 +67,10 @@ public class CreateBudgetResponseBody extends TeaModel {
         } 
 
         /**
-         * BudgetName.
+         * <p>The budget name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Department_dev_budget</p>
          */
         public Builder budgetName(String budgetName) {
             this.budgetName = budgetName;
@@ -75,7 +78,10 @@ public class CreateBudgetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39EDD65E-68C5-1B17-8440-C729C7591D74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -119,7 +119,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data list</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response structure metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -143,7 +149,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of records</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -446,7 +461,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Balance.
+             * <p>Balance after the operation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -454,7 +472,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * BillNumber.
+             * <p>Order number or bill number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323203243</p>
              */
             public Builder billNumber(String billNumber) {
                 this.billNumber = billNumber;
@@ -462,7 +483,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelTransactionNumber.
+             * <p>External transaction serial number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20244389232</p>
              */
             public Builder channelTransactionNumber(String channelTransactionNumber) {
                 this.channelTransactionNumber = channelTransactionNumber;
@@ -470,7 +494,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>Transaction amount currency</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -478,7 +505,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountEcid.
+             * <p>Enterprise entity ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23473943</p>
              */
             public Builder fundAccountEcid(String fundAccountEcid) {
                 this.fundAccountEcid = fundAccountEcid;
@@ -486,7 +516,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountId.
+             * <p>Account ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232121</p>
              */
             public Builder fundAccountId(Long fundAccountId) {
                 this.fundAccountId = fundAccountId;
@@ -494,7 +527,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountName.
+             * <p>Account name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云某的名称</p>
              */
             public Builder fundAccountName(String fundAccountName) {
                 this.fundAccountName = fundAccountName;
@@ -502,7 +538,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountOwnerAccountId.
+             * <p>Alibaba Cloud account ID of the account owner</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32343231</p>
              */
             public Builder fundAccountOwnerAccountId(Long fundAccountOwnerAccountId) {
                 this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -510,7 +549,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FundType.
+             * <p>Fund type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCT_BOOK</p>
              */
             public Builder fundType(String fundType) {
                 this.fundType = fundType;
@@ -518,7 +560,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Nbid.
+             * <p>Primary marketplace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2684210001</p>
              */
             public Builder nbid(String nbid) {
                 this.nbid = nbid;
@@ -526,7 +571,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks</p>
+             * 
+             * <strong>example:</strong>
+             * <p>订单备注</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -534,7 +582,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Site.
+             * <p>Site</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder site(String site) {
                 this.site = site;
@@ -542,7 +593,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionAccount.
+             * <p>Corresponding transaction account, such as the Alipay top-up account or the counterparty account for transfers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>186****3975</p>
              */
             public Builder transactionAccount(String transactionAccount) {
                 this.transactionAccount = transactionAccount;
@@ -550,7 +604,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionAmount.
+             * <p>Transaction amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder transactionAmount(String transactionAmount) {
                 this.transactionAmount = transactionAmount;
@@ -558,7 +615,18 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionChannel.
+             * <p>Transaction channel. If specified, the query filters by transaction channel. If not specified, all channels are queried by default.</p>
+             * <p>User balance: ACCT_CASH.</p>
+             * <p>Alipay: ALIPAY.</p>
+             * <p>Alipay Zhifutong: ALIPAY_ZHIFUTONG.</p>
+             * <p>Offline remittance: OFFLINE_REMIT.</p>
+             * <p>Credit control quota refund: REFUND.</p>
+             * <p>Online banking: UNION_PAY_BANK.</p>
+             * <p>Credit card: CREDIT_CARD. (International site only)</p>
+             * <p>PayPal: PAYPAL. (International site only)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIPAY</p>
              */
             public Builder transactionChannel(String transactionChannel) {
                 this.transactionChannel = transactionChannel;
@@ -566,7 +634,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionDirection.
+             * <p>Transaction direction: in/out (income/expenditure)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder transactionDirection(String transactionDirection) {
                 this.transactionDirection = transactionDirection;
@@ -574,7 +645,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionNumber.
+             * <p>Transaction serial number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5423121</p>
              */
             public Builder transactionNumber(Long transactionNumber) {
                 this.transactionNumber = transactionNumber;
@@ -582,7 +656,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionTime.
+             * <p>Formatted transaction time string</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-01 12:00:00</p>
              */
             public Builder transactionTime(String transactionTime) {
                 this.transactionTime = transactionTime;
@@ -590,7 +667,17 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionType.
+             * <p>Transaction type. If a transaction type is specified, only results of that type are returned. If the specified type does not exist, the result is empty. If not specified, all types are returned by default.</p>
+             * <p>Top-up: CHARGE.</p>
+             * <p>Withdrawal: WITHDRAW.</p>
+             * <p>Refund: REFUND.</p>
+             * <p>Payment: PAY.</p>
+             * <p>Transfer: TRANSFER.</p>
+             * <p>Adjustment: ADJUST.</p>
+             * <p>Order expiration refund: PAY_FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHARGE</p>
              */
             public Builder transactionType(String transactionType) {
                 this.transactionType = transactionType;

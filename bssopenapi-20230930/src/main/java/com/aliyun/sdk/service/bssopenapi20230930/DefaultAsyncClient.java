@@ -135,6 +135,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cancels the low balance alert for a fund account.</p>
+     * 
      * @param request the request parameters of CancelFundAccountLowAvailableAmountAlarm  CancelFundAccountLowAvailableAmountAlarmRequest
      * @return CancelFundAccountLowAvailableAmountAlarmResponse
      */
@@ -207,6 +210,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates one or more cost centers.</p>
+     * 
      * @param request the request parameters of CreateCostCenter  CreateCostCenterRequest
      * @return CreateCostCenterResponse
      */
@@ -297,6 +303,38 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When calling this operation, note the following:</p>
+     * <ul>
+     * <li>A user can subscribe to one type of bill file at a time.</li>
+     * <li>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
+     * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
+     * <li>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></p>
+     * </blockquote>
+     * </li>
+     * <li>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</li>
+     * <li>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<ul>
+     * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
+     * <li>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>Subdirectories named .. are not allowed.</li>
+     * <li>The total length must be 1 to 254 characters.</li>
+     * </ul>
+     * </li>
+     * <li>File names:<ul>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item bill details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * </li>
+     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateReportDefinition  CreateReportDefinitionRequest
      * @return CreateReportDefinitionResponse
      */
@@ -333,6 +371,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * 
      * @param request the request parameters of DeleteCostCenter  DeleteCostCenterRequest
      * @return DeleteCostCenterResponse
      */
@@ -351,6 +392,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * 
      * @param request the request parameters of DeleteCostCenterRule  DeleteCostCenterRuleRequest
      * @return DeleteCostCenterRuleResponse
      */
@@ -855,6 +899,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies one or more cost centers.</p>
+     * 
      * @param request the request parameters of ModifyCostCenter  ModifyCostCenterRequest
      * @return ModifyCostCenterResponse
      */
@@ -873,6 +920,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modify one or more financial units</p>
+     * 
      * @param request the request parameters of ModifyCostCenterRule  ModifyCostCenterRuleRequest
      * @return ModifyCostCenterRuleResponse
      */
@@ -909,6 +959,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query cost center expense overview results for a specified billing period</p>
+     * 
      * @param request the request parameters of QueryCostByCostCenter  QueryCostByCostCenterRequest
      * @return QueryCostByCostCenterResponse
      */
@@ -927,6 +980,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a parent financial unit and its child financial units.</p>
+     * 
      * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
      * @return QueryCostCenterResponse
      */
@@ -963,6 +1019,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query parent cost center and its child cost centers.</p>
+     * 
      * @param request the request parameters of QueryCostCenterRule  QueryCostCenterRuleRequest
      * @return QueryCostCenterRuleResponse
      */
@@ -981,6 +1040,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the cost allocation rules of a user\&quot;s financial units.</p>
+     * 
      * @param request the request parameters of QueryCostCenterShareRule  QueryCostCenterShareRuleRequest
      * @return QueryCostCenterShareRuleResponse
      */
@@ -999,6 +1061,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Provides the SLA compensation details list for a user. Only data from the last two months is available.</p>
+     * 
      * @param request the request parameters of QueryMonthlySlaList  QueryMonthlySlaListRequest
      * @return QueryMonthlySlaListResponse
      */
@@ -1089,6 +1154,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
+     * <li>Claim by month or by record.
+     * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
+     * </ol>
+     * 
      * @param request the request parameters of SubmitSlaCouponApply  SubmitSlaCouponApplyRequest
      * @return SubmitSlaCouponApplyResponse
      */

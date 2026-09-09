@@ -80,7 +80,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Invoice title list</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +99,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,7 +259,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountBankName.
+             * <p>Bank name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>招商银行</p>
              */
             public Builder accountBankName(String accountBankName) {
                 this.accountBankName = accountBankName;
@@ -261,7 +270,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * <p>Account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -269,7 +281,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * BankAccountNumber.
+             * <p>Basic bank account number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder bankAccountNumber(String bankAccountNumber) {
                 this.bankAccountNumber = bankAccountNumber;
@@ -277,7 +292,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the invoice title was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-01 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +303,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Invoice title ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -293,7 +314,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceTitle.
+             * <p>Invoice title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx公司</p>
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -301,7 +325,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * RegisteredAddress.
+             * <p>Registered address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京市朝阳区</p>
              */
             public Builder registeredAddress(String registeredAddress) {
                 this.registeredAddress = registeredAddress;
@@ -309,7 +336,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * RegisteredLandline.
+             * <p>Registered landline number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>010-12345678</p>
              */
             public Builder registeredLandline(String registeredLandline) {
                 this.registeredLandline = registeredLandline;
@@ -317,7 +347,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * UnifiedSocialCreditCode.
+             * <p>Unified social credit code. 15, 17, 18, or 20 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111111111</p>
              */
             public Builder unifiedSocialCreditCode(String unifiedSocialCreditCode) {
                 this.unifiedSocialCreditCode = unifiedSocialCreditCode;

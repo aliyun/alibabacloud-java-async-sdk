@@ -80,7 +80,10 @@ public class CheckBudgetNameExistsResponseBody extends TeaModel {
         } 
 
         /**
-         * BudgetName.
+         * <p>The budget name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department1</p>
          */
         public Builder budgetName(String budgetName) {
             this.budgetName = budgetName;
@@ -88,7 +91,10 @@ public class CheckBudgetNameExistsResponseBody extends TeaModel {
         }
 
         /**
-         * Exists.
+         * <p>Indicates whether the budget name already exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exists(Boolean exists) {
             this.exists = exists;
@@ -96,7 +102,10 @@ public class CheckBudgetNameExistsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1E2D3C4-B5A6-7890-1234-567890ABCDEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

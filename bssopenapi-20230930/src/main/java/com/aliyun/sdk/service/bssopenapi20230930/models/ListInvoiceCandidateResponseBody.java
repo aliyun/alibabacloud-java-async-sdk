@@ -119,7 +119,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of data entries.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -143,7 +149,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -472,7 +487,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             } 
 
             /**
-             * AcceptedOffsetAmount.
+             * <p>The accepted offset amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder acceptedOffsetAmount(String acceptedOffsetAmount) {
                 this.acceptedOffsetAmount = acceptedOffsetAmount;
@@ -480,7 +498,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -488,7 +509,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试账号</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -496,7 +520,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * <p>The billing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202506</p>
              */
             public Builder billingCycle(Integer billingCycle) {
                 this.billingCycle = billingCycle;
@@ -504,7 +531,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessId.
+             * <p>The business document number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202506</p>
              */
             public Builder businessId(String businessId) {
                 this.businessId = businessId;
@@ -512,7 +542,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessTime.
+             * <p>The time when the business event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-01 00:00:00</p>
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -520,7 +553,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -528,7 +564,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * <p>The commodity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>性能测试</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -536,7 +575,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-91 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -544,7 +586,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the invoice candidate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -552,7 +597,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceIssuer.
+             * <p>The invoice issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_SERVICE</p>
              */
             public Builder invoiceIssuer(String invoiceIssuer) {
                 this.invoiceIssuer = invoiceIssuer;
@@ -560,7 +608,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceableAmount.
+             * <p>The invoiceable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder invoiceableAmount(String invoiceableAmount) {
                 this.invoiceableAmount = invoiceableAmount;
@@ -568,7 +619,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * InvoicedAmount.
+             * <p>The invoiced amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoicedAmount(String invoicedAmount) {
                 this.invoicedAmount = invoicedAmount;
@@ -576,7 +630,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * OffsetAmount.
+             * <p>The offset amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder offsetAmount(String offsetAmount) {
                 this.offsetAmount = offsetAmount;
@@ -584,7 +641,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -592,7 +652,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>性能测试</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -600,7 +663,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerAccountId.
+             * <p>The ID of the resource owner account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder resourceOwnerAccountId(Long resourceOwnerAccountId) {
                 this.resourceOwnerAccountId = resourceOwnerAccountId;
@@ -608,7 +674,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerAccountName.
+             * <p>The name of the resource owner account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试账号</p>
              */
             public Builder resourceOwnerAccountName(String resourceOwnerAccountName) {
                 this.resourceOwnerAccountName = resourceOwnerAccountName;
@@ -616,7 +685,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the invoice candidate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -624,7 +696,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAmount.
+             * <p>The total amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder totalAmount(String totalAmount) {
                 this.totalAmount = totalAmount;
@@ -632,7 +707,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the invoice candidate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

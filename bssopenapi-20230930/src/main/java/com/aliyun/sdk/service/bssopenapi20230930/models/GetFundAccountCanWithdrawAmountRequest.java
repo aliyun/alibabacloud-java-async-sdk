@@ -59,7 +59,10 @@ public class GetFundAccountCanWithdrawAmountRequest extends Request {
         } 
 
         /**
-         * FundAccountId.
+         * <p>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123212232</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);

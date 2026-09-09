@@ -106,7 +106,10 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         } 
 
         /**
-         * Metadata.
+         * <p>Response structure metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -114,7 +117,10 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identifier used to tag a request for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +128,10 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * SumCoupon.
+         * <p>Total claimed amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.4</p>
          */
         public Builder sumCoupon(Double sumCoupon) {
             this.sumCoupon = sumCoupon;
@@ -130,7 +139,10 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * ValidEndTime.
+         * <p>End time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mon Apr 27 00:00:00 CST 2026</p>
          */
         public Builder validEndTime(String validEndTime) {
             this.validEndTime = validEndTime;
@@ -138,7 +150,10 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * ValidStartTime.
+         * <p>Start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tue Oct 27 13:15:58 CST 2026</p>
          */
         public Builder validStartTime(String validStartTime) {
             this.validStartTime = validStartTime;

@@ -242,7 +242,10 @@ public class CreateReportDefinitionRequest extends Request {
         } 
 
         /**
-         * BeginBillingCycle.
+         * <p>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05</p>
          */
         public Builder beginBillingCycle(String beginBillingCycle) {
             this.putQueryParameter("BeginBillingCycle", beginBillingCycle);
@@ -251,7 +254,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * IncludeMembers.
+         * <p>Email subscription configuration. Specifies whether to include enterprise multi-account members in the bill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeMembers(String includeMembers) {
             this.putQueryParameter("IncludeMembers", includeMembers);
@@ -260,7 +266,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * McProject.
+         * <p>The MaxCompute project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
          */
         public Builder mcProject(String mcProject) {
             this.putBodyParameter("McProject", mcProject);
@@ -269,7 +278,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * McTableName.
+         * <p>The MaxCompute subscription table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder mcTableName(String mcTableName) {
             this.putBodyParameter("McTableName", mcTableName);
@@ -278,7 +290,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary sales site ID. If left empty, the system uses the site ID of the current user by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -287,7 +302,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * NotSendOnNoData.
+         * <p>Email subscription configuration. Specifies whether to skip sending emails when no bills are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder notSendOnNoData(String notSendOnNoData) {
             this.putQueryParameter("NotSendOnNoData", notSendOnNoData);
@@ -296,7 +314,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * OssBucketName.
+         * <p>The name of the OSS bucket for file storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh-bill</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -305,7 +326,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * OssBucketOwnerAccountId.
+         * <p>The UID of the OSS owner that stores the files. If this is a Bid/Reseller subscription and you need to push to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567812345678</p>
          */
         public Builder ossBucketOwnerAccountId(Long ossBucketOwnerAccountId) {
             this.putQueryParameter("OssBucketOwnerAccountId", ossBucketOwnerAccountId);
@@ -314,7 +338,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * OssBucketPath.
+         * <p>The OSS bucket storage path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bill/</p>
          */
         public Builder ossBucketPath(String ossBucketPath) {
             this.putQueryParameter("OssBucketPath", ossBucketPath);
@@ -323,7 +350,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * ReportSourceType.
+         * <p>The subscription source. Valid values: OSS, MC, or MSC_EMAIL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder reportSourceType(String reportSourceType) {
             this.putBodyParameter("ReportSourceType", reportSourceType);
@@ -332,10 +362,18 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The subscription type. Valid values:</p>
+         * <ul>
+         * <li>consumeDetailBillV2: consumption details (supported only for OSS/MC subscriptions).</li>
+         * <li>splitDetailBillV2: split details (supported only for OSS/MC subscriptions).</li>
+         * <li>costDetailBillV2: cost details (supported only for OSS/MC subscriptions).</li>
+         * <li>monthBillOverview: monthly bill summary (supported only for OSS/MSC_EMAIL subscriptions).</li>
+         * <li>focus: FOCUS bill (supported only for OSS/MC subscriptions).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>BillingItemDetailForBillingPeriod</p>
+         * <p>consumeDetailBillV2</p>
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);
@@ -344,7 +382,7 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * SelectedFields.
+         * <p>The user-specified subscription fields.</p>
          */
         public Builder selectedFields(java.util.List<String> selectedFields) {
             String selectedFieldsShrink = shrink(selectedFields, "SelectedFields", "json");
@@ -354,7 +392,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * SendWithAttach.
+         * <p>Email subscription configuration. Specifies whether to include bill attachments in emails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sendWithAttach(String sendWithAttach) {
             this.putQueryParameter("SendWithAttach", sendWithAttach);
@@ -363,7 +404,10 @@ public class CreateReportDefinitionRequest extends Request {
         }
 
         /**
-         * SplitFileOnUserId.
+         * <p>Email subscription configuration. Specifies whether to split attachments by user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder splitFileOnUserId(String splitFileOnUserId) {
             this.putQueryParameter("SplitFileOnUserId", splitFileOnUserId);

@@ -285,7 +285,10 @@ public class DescribeCouponRequest extends Request {
         } 
 
         /**
-         * CouponId.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>351430260343</p>
          */
         public Builder couponId(Long couponId) {
             this.putQueryParameter("CouponId", couponId);
@@ -294,7 +297,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>554863270150</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -313,7 +319,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * CouponType.
+         * <p>The coupon type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CERTAIN</p>
          */
         public Builder couponType(String couponType) {
             this.putQueryParameter("CouponType", couponType);
@@ -322,6 +331,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +344,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The enterprise and account list. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -344,7 +354,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * EffectiveEndTime.
+         * <p>The effective end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708423156000</p>
          */
         public Builder effectiveEndTime(Long effectiveEndTime) {
             this.putQueryParameter("EffectiveEndTime", effectiveEndTime);
@@ -353,7 +366,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * EffectiveStartTime.
+         * <p>The effective start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684750028000</p>
          */
         public Builder effectiveStartTime(Long effectiveStartTime) {
             this.putQueryParameter("EffectiveStartTime", effectiveStartTime);
@@ -362,7 +378,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * ExpireEndDate.
+         * <p>The expiration end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708423156000</p>
          */
         public Builder expireEndDate(Long expireEndDate) {
             this.putQueryParameter("ExpireEndDate", expireEndDate);
@@ -371,7 +390,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * ExpireStartDate.
+         * <p>The expiration start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684750028000</p>
          */
         public Builder expireStartDate(Long expireStartDate) {
             this.putQueryParameter("ExpireStartDate", expireStartDate);
@@ -398,7 +420,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary campaign information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -416,6 +441,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +463,10 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -505,7 +534,7 @@ public class DescribeCouponRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -513,7 +542,10 @@ public class DescribeCouponRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>The enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1501603440974415</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

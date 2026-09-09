@@ -215,7 +215,10 @@ public class DescribeDeductLogsRequest extends Request {
         } 
 
         /**
-         * BillInstanceId.
+         * <p>The instance ID for billing deduction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-******</p>
          */
         public Builder billInstanceId(String billInstanceId) {
             this.putQueryParameter("BillInstanceId", billInstanceId);
@@ -224,7 +227,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * BillingCommodityCode.
+         * <p>The commodity code of the deducted item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot</p>
          */
         public Builder billingCommodityCode(String billingCommodityCode) {
             this.putBodyParameter("BillingCommodityCode", billingCommodityCode);
@@ -233,6 +239,7 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
+         * <p>The billing end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,6 +252,7 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
+         * <p>The billing start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +265,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossbag</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putBodyParameter("CommodityCode", commodityCode);
@@ -266,7 +277,7 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The enterprise and account list. If this parameter is empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -276,7 +287,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The resource dimension for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss_rc</p>
          */
         public Builder group(String group) {
             this.putBodyParameter("Group", group);
@@ -285,7 +299,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSSBAG-cn******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -294,7 +311,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -303,7 +323,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -312,7 +335,10 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -321,7 +347,7 @@ public class DescribeDeductLogsRequest extends Request {
         }
 
         /**
-         * RelationAccountIds.
+         * <p>The list of deduction accounts.</p>
          */
         public Builder relationAccountIds(java.util.List<Long> relationAccountIds) {
             String relationAccountIdsShrink = shrink(relationAccountIds, "RelationAccountIds", "json");
@@ -391,7 +417,7 @@ public class DescribeDeductLogsRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -399,6 +425,7 @@ public class DescribeDeductLogsRequest extends Request {
             }
 
             /**
+             * <p>The enterprise entity ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

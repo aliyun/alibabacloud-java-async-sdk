@@ -80,7 +80,10 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The ID of the financial unit allocation rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37404</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -88,7 +91,10 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +102,10 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

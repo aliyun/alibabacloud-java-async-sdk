@@ -93,7 +93,7 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         } 
 
         /**
-         * AlarmEnabled.
+         * <p>Whether the alert is enabled</p>
          */
         public Builder alarmEnabled(Boolean alarmEnabled) {
             this.alarmEnabled = alarmEnabled;
@@ -101,7 +101,10 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         }
 
         /**
-         * Metadata.
+         * <p>Response structure metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -109,7 +112,10 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         }
 
         /**
-         * ThresholdAmount.
+         * <p>Alert threshold</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder thresholdAmount(String thresholdAmount) {
             this.thresholdAmount = thresholdAmount;

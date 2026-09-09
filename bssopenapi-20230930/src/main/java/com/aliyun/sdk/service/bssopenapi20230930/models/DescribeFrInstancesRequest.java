@@ -297,7 +297,10 @@ public class DescribeFrInstancesRequest extends Request {
         } 
 
         /**
-         * CapacityType.
+         * <p>The capacity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadlineAcc</p>
          */
         public Builder capacityType(String capacityType) {
             this.putBodyParameter("CapacityType", capacityType);
@@ -306,7 +309,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb_albcubag_dp_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putBodyParameter("CommodityCode", commodityCode);
@@ -315,7 +321,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>The cycle type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamicMonth</p>
          */
         public Builder cycleType(String cycleType) {
             this.putBodyParameter("CycleType", cycleType);
@@ -324,7 +333,7 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The enterprise and account list. If empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -334,7 +343,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710604800000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -343,7 +355,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The resource dimension for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cu</p>
          */
         public Builder group(String group) {
             this.putBodyParameter("Group", group);
@@ -352,7 +367,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb_cubag*******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -361,7 +379,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * InstanceTag.
+         * <p>The instance tag label value of the resource plan instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FR-***</p>
          */
         public Builder instanceTag(String instanceTag) {
             this.putQueryParameter("InstanceTag", instanceTag);
@@ -370,7 +391,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684202000018</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -379,7 +403,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -388,7 +415,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -397,7 +427,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -406,7 +439,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * SortField.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>startTime</p>
          */
         public Builder sortField(String sortField) {
             this.putBodyParameter("SortField", sortField);
@@ -415,7 +451,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * SortRule.
+         * <p>The collation for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortRule(String sortRule) {
             this.putBodyParameter("SortRule", sortRule);
@@ -424,7 +463,12 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>The specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("Spec", spec);
@@ -433,7 +477,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678939035000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -442,7 +489,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The resource status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -451,7 +501,10 @@ public class DescribeFrInstancesRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb_albcubag*******</p>
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -520,7 +573,7 @@ public class DescribeFrInstancesRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The account list to access. If empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -528,6 +581,7 @@ public class DescribeFrInstancesRequest extends Request {
             }
 
             /**
+             * <p>The enterprise entity ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

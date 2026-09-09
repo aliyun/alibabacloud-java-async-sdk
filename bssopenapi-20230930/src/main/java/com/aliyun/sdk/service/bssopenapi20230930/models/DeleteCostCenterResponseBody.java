@@ -106,7 +106,10 @@ public class DeleteCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterId.
+         * <p>Cost center ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>485938</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.costCenterId = costCenterId;
@@ -114,7 +117,10 @@ public class DeleteCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -122,7 +128,10 @@ public class DeleteCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -130,7 +139,10 @@ public class DeleteCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>User ID of the cost center owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1314839403940987</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
@@ -138,7 +150,10 @@ public class DeleteCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1BD134E-D914-6AE0-1901-AEB2A99FA205</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

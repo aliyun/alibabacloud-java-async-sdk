@@ -87,7 +87,10 @@ public class DeleteCostCenterRuleRequest extends Request {
         } 
 
         /**
-         * CostCenterId.
+         * <p>Financial unit ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>637127</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.putBodyParameter("CostCenterId", costCenterId);
@@ -96,7 +99,8 @@ public class DeleteCostCenterRuleRequest extends Request {
         }
 
         /**
-         * FilterExpression.
+         * <p>Rule expression.
+         * <strong>This field does not need to be entered during the delete operation.</strong></p>
          */
         public Builder filterExpression(FilterExpression filterExpression) {
             String filterExpressionShrink = shrink(filterExpression, "FilterExpression", "json");
@@ -106,7 +110,10 @@ public class DeleteCostCenterRuleRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -200,7 +207,10 @@ public class DeleteCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The condition filter key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TAG-test-xxx-key</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -208,7 +218,10 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * CodeName.
+             * <p>The condition filter key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder codeName(String codeName) {
                 this.codeName = codeName;
@@ -216,7 +229,10 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The association between Code and value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -224,7 +240,7 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The condition filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -330,7 +346,10 @@ public class DeleteCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * ExpressionType.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NARY</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -338,7 +357,7 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * FilterValues.
+             * <p>The sub-expression filter conditions.</p>
              */
             public Builder filterValues(FilterValues filterValues) {
                 this.filterValues = filterValues;
@@ -346,7 +365,10 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * Operand.
+             * <p>The filter condition (no longer used).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder operand(Object operand) {
                 this.operand = operand;
@@ -354,7 +376,7 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * Operands.
+             * <p>The conditional expressions.</p>
              */
             public Builder operands(java.util.List<?> operands) {
                 this.operands = operands;
@@ -362,7 +384,10 @@ public class DeleteCostCenterRuleRequest extends Request {
             }
 
             /**
-             * OperatorType.
+             * <p>The relational expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;

@@ -80,7 +80,7 @@ public class CreateInvoiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +99,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +207,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>Account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -209,7 +218,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Amount.
+             * <p>Invoice amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -217,7 +229,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>Error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -225,7 +240,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceIssuer.
+             * <p>Invoice issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_SERVICE</p>
              */
             public Builder invoiceIssuer(String invoiceIssuer) {
                 this.invoiceIssuer = invoiceIssuer;
@@ -233,7 +251,10 @@ public class CreateInvoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>不可开票</p>
              */
             public Builder message(String message) {
                 this.message = message;

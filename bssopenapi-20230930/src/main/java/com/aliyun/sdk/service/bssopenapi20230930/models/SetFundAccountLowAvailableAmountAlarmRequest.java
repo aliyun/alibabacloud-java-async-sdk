@@ -74,7 +74,10 @@ public class SetFundAccountLowAvailableAmountAlarmRequest extends Request {
         } 
 
         /**
-         * FundAccountId.
+         * <p>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12321213</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);
@@ -83,6 +86,7 @@ public class SetFundAccountLowAvailableAmountAlarmRequest extends Request {
         }
 
         /**
+         * <p>Low balance alert threshold.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

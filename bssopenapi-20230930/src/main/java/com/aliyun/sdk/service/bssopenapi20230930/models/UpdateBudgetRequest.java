@@ -263,6 +263,7 @@ public class UpdateBudgetRequest extends Request {
         } 
 
         /**
+         * <p>The budget name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,6 +276,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The budget type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +289,10 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -296,6 +301,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The end period of the cycle.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,7 +314,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * CycleQuota.
+         * <p>The quota specified for each cycle.</p>
          */
         public Builder cycleQuota(java.util.List<CycleQuota> cycleQuota) {
             String cycleQuotaShrink = shrink(cycleQuota, "CycleQuota", "json");
@@ -318,6 +324,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The start period of the cycle.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +337,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The cycle type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +350,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -352,6 +360,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The budget metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +373,10 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary sales channel ID. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -373,6 +385,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The original budget name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -385,7 +398,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * QueryFilter.
+         * <p>The filter conditions.</p>
          */
         public Builder queryFilter(java.util.List<QueryFilter> queryFilter) {
             String queryFilterShrink = shrink(queryFilter, "QueryFilter", "json");
@@ -395,7 +408,10 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * Quota.
+         * <p>The fixed quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder quota(String quota) {
             this.putBodyParameter("Quota", quota);
@@ -404,6 +420,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
+         * <p>The quota type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +433,7 @@ public class UpdateBudgetRequest extends Request {
         }
 
         /**
-         * WarnConfs.
+         * <p>The alert configurations.</p>
          */
         public Builder warnConfs(java.util.List<WarnConfs> warnConfs) {
             String warnConfsShrink = shrink(warnConfs, "WarnConfs", "json");
@@ -485,7 +502,10 @@ public class UpdateBudgetRequest extends Request {
             } 
 
             /**
-             * CyclePeriod.
+             * <p>The cycle period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01</p>
              */
             public Builder cyclePeriod(String cyclePeriod) {
                 this.cyclePeriod = cyclePeriod;
@@ -493,7 +513,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * Quota.
+             * <p>The quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder quota(String quota) {
                 this.quota = quota;
@@ -560,7 +583,7 @@ public class UpdateBudgetRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -568,7 +591,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>The enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;
@@ -648,7 +674,10 @@ public class UpdateBudgetRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The parameter code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRODUCT</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -656,7 +685,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>The selection mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -664,7 +696,7 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -809,7 +841,10 @@ public class UpdateBudgetRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -817,7 +852,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * EventBridge.
+             * <p>Specifies whether to enable EventBridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder eventBridge(Boolean eventBridge) {
                 this.eventBridge = eventBridge;
@@ -825,7 +863,7 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * MscChannels.
+             * <p>The list of Message Center notification channels.</p>
              */
             public Builder mscChannels(java.util.List<String> mscChannels) {
                 this.mscChannels = mscChannels;
@@ -833,7 +871,7 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * MscContacts.
+             * <p>The list of Message Center contacts.</p>
              */
             public Builder mscContacts(java.util.List<String> mscContacts) {
                 this.mscContacts = mscContacts;
@@ -841,7 +879,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The alert name. This is user-defined and optional. If not specified, the backend automatically generates a name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warn1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -849,7 +890,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * ThresholdType.
+             * <p>The threshold type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FIXED</p>
              */
             public Builder thresholdType(String thresholdType) {
                 this.thresholdType = thresholdType;
@@ -857,7 +901,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * ThresholdValue.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder thresholdValue(String thresholdValue) {
                 this.thresholdValue = thresholdValue;
@@ -865,7 +912,10 @@ public class UpdateBudgetRequest extends Request {
             }
 
             /**
-             * WarnTarget.
+             * <p>The alert target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTUAL</p>
              */
             public Builder warnTarget(String warnTarget) {
                 this.warnTarget = warnTarget;

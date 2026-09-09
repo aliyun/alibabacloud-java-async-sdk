@@ -133,6 +133,7 @@ public class QueryCostCenterRequest extends Request {
         } 
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,7 @@ public class QueryCostCenterRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -155,7 +156,10 @@ public class QueryCostCenterRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The ID of the primary sales channel. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -164,6 +168,7 @@ public class QueryCostCenterRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user who owns the financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +181,7 @@ public class QueryCostCenterRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +194,7 @@ public class QueryCostCenterRequest extends Request {
         }
 
         /**
+         * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +267,7 @@ public class QueryCostCenterRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -268,6 +275,7 @@ public class QueryCostCenterRequest extends Request {
             }
 
             /**
+             * <p>The ID of the enterprise entity.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

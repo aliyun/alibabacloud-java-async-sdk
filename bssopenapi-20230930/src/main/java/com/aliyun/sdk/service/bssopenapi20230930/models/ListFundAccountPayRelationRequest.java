@@ -116,7 +116,10 @@ public class ListFundAccountPayRelationRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -125,6 +128,7 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
+         * <p>Fund account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +141,10 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -146,7 +153,10 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +165,12 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The relationship status.
+         * valid: valid.
+         * expired: invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

@@ -106,7 +106,10 @@ public class DescribeCouponResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class DescribeCouponResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeCouponResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeCouponResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C880B065-A781-4F19-B6DD-3E0E3B715C64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeCouponResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             } 
 
             /**
-             * Uid.
+             * <p>The Alibaba Cloud UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1902671110151254</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -212,7 +227,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * UserNick.
+             * <p>The Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云计算有限公司</p>
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -578,7 +596,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The face value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9929.750000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -594,7 +615,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * CouponId.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59243658</p>
              */
             public Builder couponId(Long couponId) {
                 this.couponId = couponId;
@@ -602,7 +626,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * CouponNo.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>731074910070</p>
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -610,7 +637,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * CouponType.
+             * <p>The coupon type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CERTAIN</p>
              */
             public Builder couponType(String couponType) {
                 this.couponType = couponType;
@@ -618,7 +648,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * CouponTypeName.
+             * <p>The coupon type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>满减券</p>
              */
             public Builder couponTypeName(String couponTypeName) {
                 this.couponTypeName = couponTypeName;
@@ -626,7 +659,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -634,7 +670,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-06T15:12Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -642,7 +681,7 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * FirstBuy.
+             * <p>Indicates whether there is a first purchase restriction.</p>
              */
             public Builder firstBuy(Boolean firstBuy) {
                 this.firstBuy = firstBuy;
@@ -650,7 +689,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The coupon issuance time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-02T15:12Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -658,7 +700,7 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * ItemNames.
+             * <p>The product code list.</p>
              */
             public Builder itemNames(java.util.List<String> itemNames) {
                 this.itemNames = itemNames;
@@ -666,7 +708,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * MoneyLimit.
+             * <p>The amount limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无订单金额限制</p>
              */
             public Builder moneyLimit(String moneyLimit) {
                 this.moneyLimit = moneyLimit;
@@ -674,7 +719,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * OrderTimeRule.
+             * <p>The order duration limit rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>预付费规则：购买订单时长大于3600s才能使用</p>
              */
             public Builder orderTimeRule(String orderTimeRule) {
                 this.orderTimeRule = orderTimeRule;
@@ -682,7 +730,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * RemainAmount.
+             * <p>The remaining amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder remainAmount(String remainAmount) {
                 this.remainAmount = remainAmount;
@@ -690,7 +741,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>新买28号</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -698,7 +752,7 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * ShareUidList.
+             * <p>The shared account list.</p>
              */
             public Builder shareUidList(java.util.List<ShareUidList> shareUidList) {
                 this.shareUidList = shareUidList;
@@ -706,7 +760,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * ShowSetDeductTagButton.
+             * <p>Indicates whether to display the tag deduction button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder showSetDeductTagButton(Boolean showSetDeductTagButton) {
                 this.showSetDeductTagButton = showSetDeductTagButton;
@@ -714,7 +771,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * Site.
+             * <p>The site.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHINA</p>
              */
             public Builder site(String site) {
                 this.site = site;
@@ -722,7 +782,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The site name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>官网自营</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -730,7 +793,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-02T15:12Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -738,7 +804,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -746,7 +815,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * SuitAccount.
+             * <p>The applicable account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1902671110151254</p>
              */
             public Builder suitAccount(String suitAccount) {
                 this.suitAccount = suitAccount;
@@ -754,7 +826,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * SuitItemType.
+             * <p>The applicable product type. Valid values: all, which indicates that the coupon is applicable to all products. white, which indicates that the coupon is applicable to specified products. black, which indicates that the coupon is not applicable to specified products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder suitItemType(String suitItemType) {
                 this.suitItemType = suitItemType;
@@ -762,7 +837,10 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * UniversalType.
+             * <p>The coupon applicable scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNIVERSAL</p>
              */
             public Builder universalType(String universalType) {
                 this.universalType = universalType;
@@ -770,7 +848,7 @@ public class DescribeCouponResponseBody extends TeaModel {
             }
 
             /**
-             * YhOrderTypes.
+             * <p>The list of order types applicable to the coupon.</p>
              */
             public Builder yhOrderTypes(java.util.List<String> yhOrderTypes) {
                 this.yhOrderTypes = yhOrderTypes;

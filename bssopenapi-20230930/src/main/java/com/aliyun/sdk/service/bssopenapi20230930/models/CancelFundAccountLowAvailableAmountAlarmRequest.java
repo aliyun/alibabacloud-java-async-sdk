@@ -59,7 +59,10 @@ public class CancelFundAccountLowAvailableAmountAlarmRequest extends Request {
         } 
 
         /**
-         * FundAccountId.
+         * <p>The ID of the fund account. If this parameter is not specified, the ID of the account owned by the current account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123321123</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);

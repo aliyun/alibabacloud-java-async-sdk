@@ -80,7 +80,7 @@ public class ModifyCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterOperateDto.
+         * <p>The list of data entries.</p>
          */
         public Builder costCenterOperateDto(java.util.List<CostCenterOperateDto> costCenterOperateDto) {
             this.costCenterOperateDto = costCenterOperateDto;
@@ -88,7 +88,10 @@ public class ModifyCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +99,10 @@ public class ModifyCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +181,10 @@ public class ModifyCostCenterResponseBody extends TeaModel {
             } 
 
             /**
-             * CostCenterId.
+             * <p>The ID of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>485938</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -183,7 +192,10 @@ public class ModifyCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * IsSuccess.
+             * <p>Indicates whether the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -191,7 +203,10 @@ public class ModifyCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>The ID of the owner to which the cost center belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1314839403940987</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;

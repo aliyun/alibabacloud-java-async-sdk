@@ -184,7 +184,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterId.
+         * <p>The cost center ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597745</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.costCenterId = costCenterId;
@@ -192,7 +195,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * FilterExpression.
+         * <p>The rule expression.</p>
          */
         public Builder filterExpression(FilterExpression filterExpression) {
             this.filterExpression = filterExpression;
@@ -200,7 +203,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tue Nov 12 14:49:43 CST 2024</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -208,7 +214,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wed Oct 16 10:15:37 CST 2024</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -216,7 +225,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the cost center auto-allocation rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32048</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -224,7 +236,14 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsDeleted.
+         * <p>The deletion status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: active.</li>
+         * <li><strong>1</strong>: inactive.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDeleted(Integer isDeleted) {
             this.isDeleted = isDeleted;
@@ -232,7 +251,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response structure metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -240,7 +262,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>The owner user of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1977800748053695</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
@@ -248,7 +273,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>UUID</p>
@@ -259,7 +284,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RootCostCenterId.
+         * <p>The root cost center ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder rootCostCenterId(Long rootCostCenterId) {
             this.rootCostCenterId = rootCostCenterId;
@@ -267,7 +295,14 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>on: active.</li>
+         * <li>off: inactive.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -359,7 +394,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The condition filter key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TAG-test-xxx-key</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -367,7 +405,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CodeName.
+             * <p>The condition filter key name (deprecated).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder codeName(String codeName) {
                 this.codeName = codeName;
@@ -375,7 +416,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SelectType.
+             * <p>The association between code and value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -383,7 +427,11 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The attribute value types corresponding to the module code. Valid values:</p>
+             * <ul>
+             * <li>single_float: single value type.</li>
+             * <li>range_float: range value type.</li>
+             * </ul>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -489,7 +537,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpressionType.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NARY</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -497,7 +548,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FilterValues.
+             * <p>The sub-condition filter.</p>
              */
             public Builder filterValues(FilterValues filterValues) {
                 this.filterValues = filterValues;
@@ -505,7 +556,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Operand.
+             * <p>The filter condition (deprecated).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder operand(Object operand) {
                 this.operand = operand;
@@ -513,7 +567,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Operands.
+             * <p>The condition expression.</p>
              */
             public Builder operands(java.util.List<?> operands) {
                 this.operands = operands;
@@ -521,7 +575,10 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>The relational expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;

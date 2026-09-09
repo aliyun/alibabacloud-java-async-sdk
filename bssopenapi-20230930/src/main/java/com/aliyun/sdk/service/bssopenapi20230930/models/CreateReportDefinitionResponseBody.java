@@ -184,7 +184,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         } 
 
         /**
-         * BeginBillingCycle.
+         * <p>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05</p>
          */
         public Builder beginBillingCycle(String beginBillingCycle) {
             this.beginBillingCycle = beginBillingCycle;
@@ -192,7 +195,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The response struct metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -200,7 +206,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucketName.
+         * <p>The name of the OSS bucket for file storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh-bill</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
@@ -208,7 +217,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucketOwnerAccountId.
+         * <p>The UID of the OSS owner that stores the files. If this is a Bid/Reseller subscription and you need to push to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567812345678</p>
          */
         public Builder ossBucketOwnerAccountId(Long ossBucketOwnerAccountId) {
             this.ossBucketOwnerAccountId = ossBucketOwnerAccountId;
@@ -216,7 +228,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucketPath.
+         * <p>The OSS bucket storage path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bill/</p>
          */
         public Builder ossBucketPath(String ossBucketPath) {
             this.ossBucketPath = ossBucketPath;
@@ -224,7 +239,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * ReportSourceName.
+         * <p>The subscription source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder reportSourceName(String reportSourceName) {
             this.reportSourceName = reportSourceName;
@@ -232,7 +250,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * ReportSourceType.
+         * <p>The subscription source. Valid values: OSS or MC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder reportSourceType(String reportSourceType) {
             this.reportSourceType = reportSourceType;
@@ -240,7 +261,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * ReportTaskId.
+         * <p>The bill subscription task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder reportTaskId(Long reportTaskId) {
             this.reportTaskId = reportTaskId;
@@ -248,7 +272,17 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * ReportType.
+         * <p>The subscription type. Valid values:</p>
+         * <ul>
+         * <li>consumeDetailBillV2: consumption details (supported only for OSS/MC subscriptions).</li>
+         * <li>splitDetailBillV2: split details (supported only for OSS/MC subscriptions).</li>
+         * <li>costDetailBillV2: cost details (supported only for OSS/MC subscriptions).</li>
+         * <li>monthBillOverview: monthly bill summary (supported only for OSS/MSC_EMAIL subscriptions).</li>
+         * <li>focus: FOCUS bill (supported only for OSS/MC subscriptions).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>consumeDetailBillV2</p>
          */
         public Builder reportType(String reportType) {
             this.reportType = reportType;
@@ -256,7 +290,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340CAB45-0637-5875-9BE4-EFD5750F6BA5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +301,10 @@ public class CreateReportDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * SubscribeCreateTime.
+         * <p>The subscription creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-21 10:36:31</p>
          */
         public Builder subscribeCreateTime(String subscribeCreateTime) {
             this.subscribeCreateTime = subscribeCreateTime;

@@ -214,7 +214,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         } 
 
         /**
-         * BillNumber.
+         * <p>Transaction order number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023212312321</p>
          */
         public Builder billNumber(String billNumber) {
             this.putBodyParameter("BillNumber", billNumber);
@@ -223,7 +226,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * ChannelTransactionNumber.
+         * <p>Transaction channel serial number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250312334312322</p>
          */
         public Builder channelTransactionNumber(String channelTransactionNumber) {
             this.putBodyParameter("ChannelTransactionNumber", channelTransactionNumber);
@@ -232,7 +238,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -241,7 +250,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Query end timestamp (milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735664561000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -250,7 +262,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * FundAccountId.
+         * <p>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123221232</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);
@@ -259,7 +274,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size (maximum 200)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +286,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Query start timestamp (milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735664461000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -277,7 +298,15 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionChannelList.
+         * <p>Transaction channel. If specified, the query filters by transaction channel. If not specified, all channels are queried by default.</p>
+         * <p>User balance: ACCT_CASH.</p>
+         * <p>Alipay: ALIPAY.</p>
+         * <p>Alipay Zhifutong: ALIPAY_ZHIFUTONG.</p>
+         * <p>Offline remittance: OFFLINE_REMIT.</p>
+         * <p>Credit control quota refund: REFUND.</p>
+         * <p>Online banking: UNION_PAY_BANK.</p>
+         * <p>Credit card: CREDIT_CARD. (International site only)</p>
+         * <p>PayPal: PAYPAL. (International site only)</p>
          */
         public Builder transactionChannelList(java.util.List<String> transactionChannelList) {
             String transactionChannelListShrink = shrink(transactionChannelList, "TransactionChannelList", "json");
@@ -287,7 +316,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionDirection.
+         * <p>Transaction direction: in/out (fund inflow/outflow)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
          */
         public Builder transactionDirection(String transactionDirection) {
             this.putBodyParameter("TransactionDirection", transactionDirection);
@@ -296,7 +328,10 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionNumber.
+         * <p>Transaction serial number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>543231231</p>
          */
         public Builder transactionNumber(Long transactionNumber) {
             this.putBodyParameter("TransactionNumber", transactionNumber);
@@ -305,7 +340,17 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionType.
+         * <p>Transaction type. If a transaction type is specified, only results of that type are returned. If the specified type does not exist, the result is empty. If not specified, all types are returned by default.</p>
+         * <p>Top-up: CHARGE.</p>
+         * <p>Withdrawal: WITHDRAW.</p>
+         * <p>Refund: REFUND.</p>
+         * <p>Payment: PAY.</p>
+         * <p>Transfer: TRANSFER.</p>
+         * <p>Adjustment: ADJUST.</p>
+         * <p>Order expiration refund: PAY_FAILED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHARGE</p>
          */
         public Builder transactionType(String transactionType) {
             this.putBodyParameter("TransactionType", transactionType);
@@ -314,7 +359,7 @@ public class GetFundAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionTypeList.
+         * <p>Transaction type list. Supports querying with multiple parameters.</p>
          */
         public Builder transactionTypeList(java.util.List<String> transactionTypeList) {
             String transactionTypeListShrink = shrink(transactionTypeList, "TransactionTypeList", "json");

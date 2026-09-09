@@ -120,7 +120,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterResourceDtoList.
+         * <p>The data list.</p>
          */
         public Builder costCenterResourceDtoList(java.util.List<CostCenterResourceDtoList> costCenterResourceDtoList) {
             this.costCenterResourceDtoList = costCenterResourceDtoList;
@@ -128,7 +128,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records per query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -136,7 +139,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -144,6 +150,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The token for the next query. An empty NextToken indicates that there are no more results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +162,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +173,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -682,7 +695,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ApportionItemCode.
+             * <p>The apportionment item code of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apportionItemCode(String apportionItemCode) {
                 this.apportionItemCode = apportionItemCode;
@@ -690,7 +706,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ApportionItemName.
+             * <p>The apportionment item name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apportionItemName(String apportionItemName) {
                 this.apportionItemName = apportionItemName;
@@ -698,7 +717,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>otsbag</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -706,7 +728,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * <p>The commodity name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云数据库</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -714,7 +739,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterCode.
+             * <p>The cost center code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder costCenterCode(String costCenterCode) {
                 this.costCenterCode = costCenterCode;
@@ -722,7 +750,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterCreateTime.
+             * <p>The creation time of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-18 12:12:25</p>
              */
             public Builder costCenterCreateTime(String costCenterCreateTime) {
                 this.costCenterCreateTime = costCenterCreateTime;
@@ -730,7 +761,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterId.
+             * <p>The cost center ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -738,7 +772,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterName.
+             * <p>The cost center name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -746,7 +783,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterUpdateTime.
+             * <p>The last update time of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-18 16:12:25</p>
              */
             public Builder costCenterUpdateTime(String costCenterUpdateTime) {
                 this.costCenterUpdateTime = costCenterUpdateTime;
@@ -762,7 +802,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The billing granularity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou;standard</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -786,7 +829,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>The customer ID to which the cost center belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567812345678</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -794,7 +840,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountName.
+             * <p>The customer name to which the cost center belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户A</p>
              */
             public Builder ownerAccountName(String ownerAccountName) {
                 this.ownerAccountName = ownerAccountName;
@@ -802,7 +851,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCostCenterId.
+             * <p>The parent cost center ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder parentCostCenterId(Long parentCostCenterId) {
                 this.parentCostCenterId = parentCostCenterId;
@@ -810,7 +862,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * PipCode.
+             * <p>The product code, which is the same as the product code in Cost Center bills.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -818,7 +873,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * PipName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云数据库</p>
              */
             public Builder pipName(String pipName) {
                 this.pipName = pipName;
@@ -850,7 +908,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The resource group to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认资源组</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -858,7 +919,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-v0h1s4hma018</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -866,7 +930,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceNick.
+             * <p>The custom alias of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testResource</p>
              */
             public Builder resourceNick(String resourceNick) {
                 this.resourceNick = resourceNick;
@@ -874,7 +941,14 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceSource.
+             * <p>The resource source. Valid values:</p>
+             * <ul>
+             * <li>AUTO_ALLOCATE: automatically allocated.</li>
+             * <li>MANUAL_ALLOCATE: manually allocated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL_ALLOCATE</p>
              */
             public Builder resourceSource(String resourceSource) {
                 this.resourceSource = resourceSource;
@@ -882,7 +956,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTag.
+             * <p>The tag of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder resourceTag(String resourceTag) {
                 this.resourceTag = resourceTag;
@@ -890,7 +967,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_ossbag_absolute_Storage_bj</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -898,7 +978,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUpdateTime.
+             * <p>The last update time of the cost center. This is a reserved field and is currently unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-18 16:12:25</p>
              */
             public Builder resourceUpdateTime(String resourceUpdateTime) {
                 this.resourceUpdateTime = resourceUpdateTime;
@@ -906,7 +989,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUserId.
+             * <p>The owner user ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567812345678</p>
              */
             public Builder resourceUserId(Long resourceUserId) {
                 this.resourceUserId = resourceUserId;
@@ -914,7 +1000,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUserName.
+             * <p>The owner username of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyun.com">test@test.aliyun.com</a></p>
              */
             public Builder resourceUserName(String resourceUserName) {
                 this.resourceUserName = resourceUserName;
@@ -922,7 +1011,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RootCostCenterId.
+             * <p>The root cost center ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder rootCostCenterId(Long rootCostCenterId) {
                 this.rootCostCenterId = rootCostCenterId;

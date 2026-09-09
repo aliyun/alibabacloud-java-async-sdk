@@ -87,7 +87,10 @@ public class QueryCostCenterRuleRequest extends Request {
         } 
 
         /**
-         * CostCenterId.
+         * <p>The ID of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597745</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.putBodyParameter("CostCenterId", costCenterId);
@@ -96,7 +99,7 @@ public class QueryCostCenterRuleRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>List of enterprises and accounts. If empty, queries the current account itself.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -105,7 +108,10 @@ public class QueryCostCenterRuleRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -174,7 +180,7 @@ public class QueryCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -182,6 +188,7 @@ public class QueryCostCenterRuleRequest extends Request {
             }
 
             /**
+             * <p>Enterprise entity ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

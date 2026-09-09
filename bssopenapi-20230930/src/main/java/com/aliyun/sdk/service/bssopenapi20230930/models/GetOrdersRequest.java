@@ -199,7 +199,10 @@ public class GetOrdersRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T12:00:00Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -208,7 +211,10 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T13:00:00Z</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -217,7 +223,10 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of a member account in an enterprise with multiple member accounts. Leave this parameter empty if this scenario does not apply.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1779628988149763</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -226,7 +235,24 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>New: new purchase.</li>
+         * <li>Renew: renewal.</li>
+         * <li>Upgrade: upgrade.</li>
+         * <li>TempUpgrade: temporary upgrade.</li>
+         * <li>Downgrade: downgrade.</li>
+         * <li>Refund: refund.</li>
+         * <li>Convert: billing method conversion.</li>
+         * <li>ResizeDisk: cloud disk resizing.</li>
+         * <li>CompensatoryRenew: compensatory renewal.</li>
+         * <li>IncreaseUpgrade: bandwidth upgrade.</li>
+         * <li>Exchange: exchange.</li>
+         * <li>ChangeOperatingSystem: operating system change.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>New</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -244,7 +270,10 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -253,7 +282,10 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +294,18 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * PaymentStatus.
+         * <p>The payment status. For non-refund orders, valid values:</p>
+         * <ul>
+         * <li>Unpaid: unpaid.</li>
+         * <li>Paid: paid.</li>
+         * <li>Cancelled: canceled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For refund orders, set this parameter to NULL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Paid</p>
          */
         public Builder paymentStatus(String paymentStatus) {
             this.putQueryParameter("PaymentStatus", paymentStatus);
@@ -271,7 +314,10 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -280,7 +326,10 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -289,7 +338,14 @@ public class GetOrdersRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * <p>The subscription type. Valid values:</p>
+         * <ul>
+         * <li>Subscription: upfront.</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

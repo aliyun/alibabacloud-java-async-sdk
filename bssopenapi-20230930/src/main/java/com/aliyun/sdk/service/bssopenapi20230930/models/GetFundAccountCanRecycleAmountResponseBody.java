@@ -132,7 +132,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * AvailableAmount.
+         * <p>The available balance of the account from which funds are reclaimed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder availableAmount(String availableAmount) {
             this.availableAmount = availableAmount;
@@ -140,7 +143,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Currency.
+         * <p>The currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -148,7 +154,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -156,7 +165,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RecycleFromFundAccountId.
+         * <p>The ID of the source account from which funds are reclaimed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232122132</p>
          */
         public Builder recycleFromFundAccountId(String recycleFromFundAccountId) {
             this.recycleFromFundAccountId = recycleFromFundAccountId;
@@ -164,7 +176,7 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RecycleToFundAccountList.
+         * <p>The list of accounts to which funds can be reclaimed.</p>
          */
         public Builder recycleToFundAccountList(java.util.List<RecycleToFundAccountList> recycleToFundAccountList) {
             this.recycleToFundAccountList = recycleToFundAccountList;
@@ -172,7 +184,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         }
 
         /**
-         * TransferAmount.
+         * <p>The transfer ledger balance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder transferAmount(String transferAmount) {
             this.transferAmount = transferAmount;
@@ -285,7 +303,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * FundAccountId.
+             * <p>The ID of the target account to which funds can be reclaimed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122323121</p>
              */
             public Builder fundAccountId(String fundAccountId) {
                 this.fundAccountId = fundAccountId;
@@ -293,7 +314,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountName.
+             * <p>The name of the target account to which funds can be reclaimed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云某的账户</p>
              */
             public Builder fundAccountName(String fundAccountName) {
                 this.fundAccountName = fundAccountName;
@@ -301,7 +325,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountOwnerAccountId.
+             * <p>The account ID that owns the target account to which funds can be reclaimed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183221321</p>
              */
             public Builder fundAccountOwnerAccountId(String fundAccountOwnerAccountId) {
                 this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -309,7 +336,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRecyclableAmount.
+             * <p>The maximum reclaimable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder maxRecyclableAmount(String maxRecyclableAmount) {
                 this.maxRecyclableAmount = maxRecyclableAmount;
@@ -317,7 +347,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalTransferRemainAmount.
+             * <p>The remaining transfer amount that can be reclaimed through the original transfer path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder originalTransferRemainAmount(String originalTransferRemainAmount) {
                 this.originalTransferRemainAmount = originalTransferRemainAmount;

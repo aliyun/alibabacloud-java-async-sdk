@@ -106,7 +106,10 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterId.
+         * <p>The cost center ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>640403</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.costCenterId = costCenterId;
@@ -114,7 +117,10 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -122,7 +128,10 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata of the response struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -130,7 +139,10 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>The owner of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529600453335198</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
@@ -138,7 +150,10 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -93,7 +93,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * ConsumeAmountList.
+         * <p>Cost center consumption amount details list</p>
          */
         public Builder consumeAmountList(java.util.List<ConsumeAmountList> consumeAmountList) {
             this.consumeAmountList = consumeAmountList;
@@ -101,7 +101,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response structure metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -109,7 +112,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAmount.
+         * <p>Sum of totalAllocatedAmount across all cost centers</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130296.64</p>
          */
         public Builder totalAmount(String totalAmount) {
             this.totalAmount = totalAmount;
@@ -313,7 +322,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocatedAmount.
+             * <p>Shared allocation amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder allocatedAmount(String allocatedAmount) {
                 this.allocatedAmount = allocatedAmount;
@@ -321,7 +333,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterCode.
+             * <p>Cost center code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15945703968#</p>
              */
             public Builder costCenterCode(String costCenterCode) {
                 this.costCenterCode = costCenterCode;
@@ -329,7 +344,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterId.
+             * <p>Cost center ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>530658</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -337,7 +355,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterName.
+             * <p>Cost center name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>项目组A</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -345,7 +366,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * DirectAmount.
+             * <p>Cost type amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder directAmount(String directAmount) {
                 this.directAmount = directAmount;
@@ -353,7 +377,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -361,7 +388,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>Account ID that owns the resource</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1857464601594004</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -369,7 +399,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountName.
+             * <p>Account name that owns the resource</p>
+             * 
+             * <strong>example:</strong>
+             * <p>研发团队测试账号</p>
              */
             public Builder ownerAccountName(String ownerAccountName) {
                 this.ownerAccountName = ownerAccountName;
@@ -377,7 +410,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCostCenterId.
+             * <p>Parent cost center ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>637537</p>
              */
             public Builder parentCostCenterId(Long parentCostCenterId) {
                 this.parentCostCenterId = parentCostCenterId;
@@ -385,7 +421,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * PreCostCenterId.
+             * <p>Previous cost center ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6375371</p>
              */
             public Builder preCostCenterId(Long preCostCenterId) {
                 this.preCostCenterId = preCostCenterId;
@@ -393,7 +432,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAllocatedAmount.
+             * <p>Total (sum of cost type amount and shared allocation amount)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalAllocatedAmount(String totalAllocatedAmount) {
                 this.totalAllocatedAmount = totalAllocatedAmount;
@@ -401,7 +443,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAllocatedAmountPercent.
+             * <p>Cost type amount percentage</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder totalAllocatedAmountPercent(String totalAllocatedAmountPercent) {
                 this.totalAllocatedAmountPercent = totalAllocatedAmountPercent;

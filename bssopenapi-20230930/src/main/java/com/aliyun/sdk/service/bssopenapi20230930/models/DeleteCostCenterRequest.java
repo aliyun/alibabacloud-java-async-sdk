@@ -89,6 +89,7 @@ public class DeleteCostCenterRequest extends Request {
         } 
 
         /**
+         * <p>Cost center ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DeleteCostCenterRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>First-level marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -110,6 +114,7 @@ public class DeleteCostCenterRequest extends Request {
         }
 
         /**
+         * <p>User ID of the cost center owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

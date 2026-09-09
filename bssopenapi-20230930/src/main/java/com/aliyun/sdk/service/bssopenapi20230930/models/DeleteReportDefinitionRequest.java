@@ -74,7 +74,10 @@ public class DeleteReportDefinitionRequest extends Request {
         } 
 
         /**
-         * Nbid.
+         * <p>The primary sales channel ID. If this parameter is left empty, the channel ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -83,6 +86,7 @@ public class DeleteReportDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The bill subscription task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

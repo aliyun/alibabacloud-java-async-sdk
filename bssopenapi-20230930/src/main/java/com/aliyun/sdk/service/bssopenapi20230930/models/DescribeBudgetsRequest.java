@@ -129,7 +129,10 @@ public class DescribeBudgetsRequest extends Request {
         } 
 
         /**
-         * BudgetName.
+         * <p>The budget name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department1</p>
          */
         public Builder budgetName(String budgetName) {
             this.putBodyParameter("BudgetName", budgetName);
@@ -138,7 +141,10 @@ public class DescribeBudgetsRequest extends Request {
         }
 
         /**
-         * BudgetType.
+         * <p>The budget type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSUME</p>
          */
         public Builder budgetType(String budgetType) {
             this.putBodyParameter("BudgetType", budgetType);
@@ -147,7 +153,10 @@ public class DescribeBudgetsRequest extends Request {
         }
 
         /**
-         * ExpireStatus.
+         * <p>The expiration status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_EXPIRED</p>
          */
         public Builder expireStatus(String expireStatus) {
             this.putBodyParameter("ExpireStatus", expireStatus);
@@ -156,7 +165,10 @@ public class DescribeBudgetsRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2688801000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -165,7 +177,10 @@ public class DescribeBudgetsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -174,7 +189,10 @@ public class DescribeBudgetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

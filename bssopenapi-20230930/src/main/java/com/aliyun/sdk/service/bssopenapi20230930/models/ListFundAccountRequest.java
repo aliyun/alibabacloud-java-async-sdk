@@ -87,7 +87,10 @@ public class ListFundAccountRequest extends Request {
         } 
 
         /**
-         * Nbid.
+         * <p>Level-1 marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2084210001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -96,7 +99,7 @@ public class ListFundAccountRequest extends Request {
         }
 
         /**
-         * QueryOnlyInUse.
+         * <p>Specifies whether to query only the active account list. Default value: false.</p>
          */
         public Builder queryOnlyInUse(Boolean queryOnlyInUse) {
             this.putBodyParameter("QueryOnlyInUse", queryOnlyInUse);
@@ -105,7 +108,7 @@ public class ListFundAccountRequest extends Request {
         }
 
         /**
-         * QueryOnlyManage.
+         * <p>Specifies whether to query only the managed account list. Default value: false.</p>
          */
         public Builder queryOnlyManage(Boolean queryOnlyManage) {
             this.putBodyParameter("QueryOnlyManage", queryOnlyManage);

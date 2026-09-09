@@ -119,7 +119,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -143,7 +149,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -381,7 +396,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID of the user associated with the payment relationship, that is, the account that uses this account for payment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32812132121</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -389,7 +407,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The user name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云某的名称</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -397,7 +418,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Ecid.
+             * <p>The enterprise entity ID of the user associated with the payment relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213231232</p>
              */
             public Builder ecid(String ecid) {
                 this.ecid = ecid;
@@ -405,7 +429,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * <p>The time when the payment relationship takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-01 12:00:10</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -413,7 +440,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123231213</p>
              */
             public Builder fundAccountId(String fundAccountId) {
                 this.fundAccountId = fundAccountId;
@@ -421,7 +451,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountOwnerAccountId.
+             * <p>The Alibaba Cloud account ID of the account owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>312328912</p>
              */
             public Builder fundAccountOwnerAccountId(String fundAccountOwnerAccountId) {
                 this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -429,7 +462,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * IneffectiveTime.
+             * <p>The time when the payment relationship expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 12:12:12</p>
              */
             public Builder ineffectiveTime(String ineffectiveTime) {
                 this.ineffectiveTime = ineffectiveTime;
@@ -437,7 +473,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Nbid.
+             * <p>The primary marketplace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2684210001</p>
              */
             public Builder nbid(String nbid) {
                 this.nbid = nbid;
@@ -445,7 +484,12 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The operator name.
+             * When the operator type is aliyun_pk, the operator name is the Alibaba Cloud nickname.
+             * When the operator type is system, the operator name is &quot;Alibaba Cloud assistant&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云某的名称</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -453,7 +497,11 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorNo.
+             * <p>The authorized operator.
+             * When the operator type is aliyun_pk, operatorNo is the Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232343423</p>
              */
             public Builder operatorNo(String operatorNo) {
                 this.operatorNo = operatorNo;
@@ -461,7 +509,12 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>The type of the authorized operator.
+             * aliyun_pk: user.
+             * system: Alibaba Cloud system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_pk</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -469,7 +522,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relationship type, which can be collection relationship or payment relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAYMENT</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -477,7 +533,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Site.
+             * <p>The site.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder site(String site) {
                 this.site = site;
@@ -485,7 +544,12 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The relationship status.
+             * valid: valid.
+             * expired: invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder status(String status) {
                 this.status = status;

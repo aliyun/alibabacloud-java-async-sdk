@@ -80,7 +80,7 @@ public class CreateCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * CostCenterDtoList.
+         * <p>Data list</p>
          */
         public Builder costCenterDtoList(java.util.List<CostCenterDtoList> costCenterDtoList) {
             this.costCenterDtoList = costCenterDtoList;
@@ -88,7 +88,10 @@ public class CreateCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +99,10 @@ public class CreateCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1BD134E-D914-6AE0-1901-AEB2A99FA205</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +194,10 @@ public class CreateCostCenterResponseBody extends TeaModel {
             } 
 
             /**
-             * CostCenterId.
+             * <p>Cost center ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>485938</p>
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -196,7 +205,10 @@ public class CreateCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * CostCenterName.
+             * <p>Cost center name (must be unique within the same account)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>资源组</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -204,7 +216,10 @@ public class CreateCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerAccountId.
+             * <p>Owner user ID of the cost center</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1314839403940987</p>
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -212,7 +227,10 @@ public class CreateCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCostCenterId.
+             * <p>Parent cost center ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentCostCenterId(Long parentCostCenterId) {
                 this.parentCostCenterId = parentCostCenterId;

@@ -59,7 +59,10 @@ public class GetFundAccountCanAllocateCreditAmountRequest extends Request {
         } 
 
         /**
-         * FundAccountId.
+         * <p>Fund account ID. If not specified, the account owned by the current account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1233231</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);

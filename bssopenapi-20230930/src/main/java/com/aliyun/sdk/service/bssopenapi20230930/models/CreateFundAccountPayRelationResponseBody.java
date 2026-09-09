@@ -80,7 +80,7 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +99,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +207,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>AccountId of the user who pays with the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1501603440974415</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -209,7 +218,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>Name of the user who pays with the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -217,7 +229,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * FundAccountId.
+             * <p>Account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12332112</p>
              */
             public Builder fundAccountId(String fundAccountId) {
                 this.fundAccountId = fundAccountId;
@@ -225,7 +240,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * <p>Result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -233,7 +251,10 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
             }
 
             /**
-             * ResultMessage.
+             * <p>Result message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder resultMessage(String resultMessage) {
                 this.resultMessage = resultMessage;

@@ -117,6 +117,7 @@ public class QueryCostByCostCenterRequest extends Request {
         } 
 
         /**
+         * <p>Billing month (format: YYYYMM)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class QueryCostByCostCenterRequest extends Request {
         }
 
         /**
-         * DisplayZeroAmountBills.
+         * <p>Whether to display data rows with zero payable amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder displayZeroAmountBills(Boolean displayZeroAmountBills) {
             this.putQueryParameter("DisplayZeroAmountBills", displayZeroAmountBills);
@@ -138,7 +142,10 @@ public class QueryCostByCostCenterRequest extends Request {
         }
 
         /**
-         * GroupByCostCenterLevel.
+         * <p>Whether to aggregate and display by cost center level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder groupByCostCenterLevel(Boolean groupByCostCenterLevel) {
             this.putQueryParameter("GroupByCostCenterLevel", groupByCostCenterLevel);
@@ -147,6 +154,7 @@ public class QueryCostByCostCenterRequest extends Request {
         }
 
         /**
+         * <p>Cost type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class QueryCostByCostCenterRequest extends Request {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>Account ID that owns the resource</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1374729705039203</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.putQueryParameter("OwnerAccountId", ownerAccountId);

@@ -327,7 +327,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * AvailableAmount.
+         * <p>Available amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder availableAmount(String availableAmount) {
             this.availableAmount = availableAmount;
@@ -335,7 +338,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * AvailableCreditAmount.
+         * <p>Available credit amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder availableCreditAmount(String availableCreditAmount) {
             this.availableCreditAmount = availableCreditAmount;
@@ -343,7 +349,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * BankAcceptanceAmount.
+         * <p>Bank acceptance bill amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bankAcceptanceAmount(String bankAcceptanceAmount) {
             this.bankAcceptanceAmount = bankAcceptanceAmount;
@@ -351,7 +360,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CashAmount.
+         * <p>Cash balance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder cashAmount(String cashAmount) {
             this.cashAmount = cashAmount;
@@ -359,7 +371,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CreditAmount.
+         * <p>Credit quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder creditAmount(String creditAmount) {
             this.creditAmount = creditAmount;
@@ -367,7 +382,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CreditRefundAmount.
+         * <p>Credit refund balance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder creditRefundAmount(String creditRefundAmount) {
             this.creditRefundAmount = creditRefundAmount;
@@ -375,7 +393,7 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CreditUser.
+         * <p>Indicates whether credit control is enabled</p>
          */
         public Builder creditUser(Boolean creditUser) {
             this.creditUser = creditUser;
@@ -383,7 +401,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Currency.
+         * <p>Currency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -391,7 +412,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentMonthUnclearedAmount.
+         * <p>Current month uncleared amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder currentMonthUnclearedAmount(String currentMonthUnclearedAmount) {
             this.currentMonthUnclearedAmount = currentMonthUnclearedAmount;
@@ -399,7 +423,7 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * ExtendLedgerList.
+         * <p>Extended ledger list</p>
          */
         public Builder extendLedgerList(java.util.List<ExtendLedgerList> extendLedgerList) {
             this.extendLedgerList = extendLedgerList;
@@ -407,7 +431,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountId.
+         * <p>Account ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12332112</p>
          */
         public Builder fundAccountId(String fundAccountId) {
             this.fundAccountId = fundAccountId;
@@ -415,7 +442,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountOwnerAccountId.
+         * <p>Account ID of the fund account owner</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1344312434</p>
          */
         public Builder fundAccountOwnerAccountId(String fundAccountOwnerAccountId) {
             this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -423,7 +453,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountStatus.
+         * <p>Account status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder fundAccountStatus(String fundAccountStatus) {
             this.fundAccountStatus = fundAccountStatus;
@@ -431,7 +464,12 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * FundAccountType.
+         * <p>Fund account type. Valid values:
+         * DIRECT_USER: Alibaba Cloud direct customer account.
+         * RESELLER_QUOTA: ecosystem account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REDIRECT_USER</p>
          */
         public Builder fundAccountType(String fundAccountType) {
             this.fundAccountType = fundAccountType;
@@ -439,7 +477,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * HistoryMonthUnclearedAmount.
+         * <p>Historical months uncleared amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder historyMonthUnclearedAmount(String historyMonthUnclearedAmount) {
             this.historyMonthUnclearedAmount = historyMonthUnclearedAmount;
@@ -447,7 +488,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>Response metadata</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -455,7 +499,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * NegativeBillAmount.
+         * <p>Negative bill amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder negativeBillAmount(String negativeBillAmount) {
             this.negativeBillAmount = negativeBillAmount;
@@ -463,7 +510,7 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * OriginalCashAmountList.
+         * <p>Original cash ledger list. International site users may have cash ledgers in multiple currencies.</p>
          */
         public Builder originalCashAmountList(java.util.List<OriginalCashAmountList> originalCashAmountList) {
             this.originalCashAmountList = originalCashAmountList;
@@ -471,7 +518,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaAmount.
+         * <p>Ecosystem end customer quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder quotaAmount(String quotaAmount) {
             this.quotaAmount = quotaAmount;
@@ -479,7 +529,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaConsumedAmount.
+         * <p>Consumed quota of ecosystem end customer</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder quotaConsumedAmount(String quotaConsumedAmount) {
             this.quotaConsumedAmount = quotaConsumedAmount;
@@ -487,7 +540,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F96A2D13-7509-5DF9-A60E-E7E3A3CB68E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -495,7 +551,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         }
 
         /**
-         * UnclearedAmount.
+         * <p>Uncleared amount (current month uncleared + historical months uncleared)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder unclearedAmount(String unclearedAmount) {
             this.unclearedAmount = unclearedAmount;
@@ -574,7 +633,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>Currency of the ledger amount, such as CNY and USD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -582,7 +644,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
             }
 
             /**
-             * LedgerName.
+             * <p>Ledger name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>应付对冲账本</p>
              */
             public Builder ledgerName(String ledgerName) {
                 this.ledgerName = ledgerName;
@@ -590,7 +655,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>Ledger balance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -657,7 +725,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>Amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -665,7 +736,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>Currency</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;

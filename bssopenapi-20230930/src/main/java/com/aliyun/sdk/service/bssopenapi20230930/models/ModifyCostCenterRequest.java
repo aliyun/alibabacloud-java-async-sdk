@@ -74,6 +74,7 @@ public class ModifyCostCenterRequest extends Request {
         } 
 
         /**
+         * <p>The list of cost center entities.</p>
          * <p>This parameter is required.</p>
          */
         public Builder costCenterEntityList(java.util.List<CostCenterEntityList> costCenterEntityList) {
@@ -84,7 +85,10 @@ public class ModifyCostCenterRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -168,6 +172,7 @@ public class ModifyCostCenterRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the cost center.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -179,7 +184,11 @@ public class ModifyCostCenterRequest extends Request {
             }
 
             /**
+             * <p>The new name of the cost center. The name must be unique within the same account.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>资源组</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -187,6 +196,7 @@ public class ModifyCostCenterRequest extends Request {
             }
 
             /**
+             * <p>The ID of the owner to which the cost center belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

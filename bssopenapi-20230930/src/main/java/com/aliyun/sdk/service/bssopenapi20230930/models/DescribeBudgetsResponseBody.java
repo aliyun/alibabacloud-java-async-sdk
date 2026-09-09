@@ -106,7 +106,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB2A9097-289C-11CE-AA74-235FCFD39204</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             } 
 
             /**
-             * CyclePeriod.
+             * <p>The cycle period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202601</p>
              */
             public Builder cyclePeriod(String cyclePeriod) {
                 this.cyclePeriod = cyclePeriod;
@@ -212,7 +227,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder quota(String quota) {
                 this.quota = quota;
@@ -279,7 +297,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountIds.
+             * <p>The IDs of the member accounts.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -287,7 +305,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * EcId.
+             * <p>The enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E2024112210463400001</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;
@@ -367,7 +388,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The parameter code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RESOURCE_OWNER_ACCOUNT</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -375,7 +399,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * SelectType.
+             * <p>The selection mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -383,7 +410,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The list of filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -541,7 +568,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment1</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -549,7 +579,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * EventBridge.
+             * <p>Specifies whether EventBridge is enabled.</p>
              */
             public Builder eventBridge(Boolean eventBridge) {
                 this.eventBridge = eventBridge;
@@ -557,7 +587,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * MscChannels.
+             * <p>The list of message center notification channels.</p>
              */
             public Builder mscChannels(java.util.List<String> mscChannels) {
                 this.mscChannels = mscChannels;
@@ -565,7 +595,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * MscContacts.
+             * <p>The list of message center contacts.</p>
              */
             public Builder mscContacts(java.util.List<String> mscContacts) {
                 this.mscContacts = mscContacts;
@@ -573,7 +603,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The alert name. This parameter is user-defined and optional. If not specified, the backend automatically generates a name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -581,7 +614,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The sequence number. This field is present only in responses and is numbered starting from 1 in ascending order of alert ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -589,7 +625,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdType.
+             * <p>The threshold type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FIXED</p>
              */
             public Builder thresholdType(String thresholdType) {
                 this.thresholdType = thresholdType;
@@ -597,7 +636,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdValue.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder thresholdValue(String thresholdValue) {
                 this.thresholdValue = thresholdValue;
@@ -605,7 +647,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnTarget.
+             * <p>The alert target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTUAL</p>
              */
             public Builder warnTarget(String warnTarget) {
                 this.warnTarget = warnTarget;
@@ -828,7 +873,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             } 
 
             /**
-             * BudgetName.
+             * <p>The budget name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department1-test</p>
              */
             public Builder budgetName(String budgetName) {
                 this.budgetName = budgetName;
@@ -836,7 +884,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetType.
+             * <p>The budget type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSUME</p>
              */
             public Builder budgetType(String budgetType) {
                 this.budgetType = budgetType;
@@ -844,7 +895,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>budget-1</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -852,7 +906,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleEndPeriod.
+             * <p>The end period of the budget cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-12</p>
              */
             public Builder cycleEndPeriod(String cycleEndPeriod) {
                 this.cycleEndPeriod = cycleEndPeriod;
@@ -860,7 +917,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleQuota.
+             * <p>The specified quota for each cycle.</p>
              */
             public Builder cycleQuota(java.util.List<CycleQuota> cycleQuota) {
                 this.cycleQuota = cycleQuota;
@@ -868,7 +925,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleStartPeriod.
+             * <p>The start period of the budget cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10</p>
              */
             public Builder cycleStartPeriod(String cycleStartPeriod) {
                 this.cycleStartPeriod = cycleStartPeriod;
@@ -876,7 +936,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * <p>The cycle type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MONTHLY</p>
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -884,7 +947,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * EcIdAccountIdsFilter.
+             * <p>The enterprise multi-account filter conditions.</p>
              */
             public Builder ecIdAccountIdsFilter(EcIdAccountIdsFilter ecIdAccountIdsFilter) {
                 this.ecIdAccountIdsFilter = ecIdAccountIdsFilter;
@@ -892,7 +955,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireStatus.
+             * <p>The expiration status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NOT_EXPIRED</p>
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
@@ -900,7 +966,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Metric.
+             * <p>The budget metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REQUIRE_AMOUNT</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -908,7 +977,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryFilter.
+             * <p>The filter conditions.</p>
              */
             public Builder queryFilter(java.util.List<QueryFilter> queryFilter) {
                 this.queryFilter = queryFilter;
@@ -916,7 +985,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The fixed quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder quota(String quota) {
                 this.quota = quota;
@@ -924,7 +996,10 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * <p>The quota type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FIXED</p>
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -932,7 +1007,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnConfs.
+             * <p>The alert configurations.</p>
              */
             public Builder warnConfs(java.util.List<WarnConfs> warnConfs) {
                 this.warnConfs = warnConfs;

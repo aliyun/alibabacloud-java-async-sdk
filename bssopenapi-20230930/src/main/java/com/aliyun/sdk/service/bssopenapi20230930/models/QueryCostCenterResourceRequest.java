@@ -129,7 +129,10 @@ public class QueryCostCenterResourceRequest extends Request {
         } 
 
         /**
-         * CostCenterId.
+         * <p>The ID of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.putBodyParameter("CostCenterId", costCenterId);
@@ -138,7 +141,7 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>The list of enterprises and accounts. An empty value indicates querying the current account.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -147,7 +150,10 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records per query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -156,7 +162,10 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The first-level marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -165,7 +174,10 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty NextToken indicates that there are no more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmd</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +186,10 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>The owner user ID of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567812345678</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.putBodyParameter("OwnerAccountId", ownerAccountId);
@@ -243,7 +258,7 @@ public class QueryCostCenterResourceRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>The list of accessed accounts. An empty value indicates that all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -251,6 +266,7 @@ public class QueryCostCenterResourceRequest extends Request {
             }
 
             /**
+             * <p>The enterprise entity ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

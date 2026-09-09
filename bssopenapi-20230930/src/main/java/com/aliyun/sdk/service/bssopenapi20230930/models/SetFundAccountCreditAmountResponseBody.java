@@ -67,7 +67,10 @@ public class SetFundAccountCreditAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * Metadata.
+         * <p>The response struct metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -75,7 +78,10 @@ public class SetFundAccountCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

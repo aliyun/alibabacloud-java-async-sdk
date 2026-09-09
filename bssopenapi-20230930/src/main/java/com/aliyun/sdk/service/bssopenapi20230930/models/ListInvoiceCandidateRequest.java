@@ -199,7 +199,7 @@ public class ListInvoiceCandidateRequest extends Request {
         } 
 
         /**
-         * BillingCycles.
+         * <p>List of billing cycles.</p>
          */
         public Builder billingCycles(java.util.List<Integer> billingCycles) {
             String billingCyclesShrink = shrink(billingCycles, "BillingCycles", "json");
@@ -209,7 +209,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * BusinessIds.
+         * <p>List of business document numbers.</p>
          */
         public Builder businessIds(java.util.List<String> businessIds) {
             String businessIdsShrink = shrink(businessIds, "BusinessIds", "json");
@@ -219,7 +219,10 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -228,7 +231,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * EcIdAccountIds.
+         * <p>List of enterprises and accounts. If empty, the current account itself is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -238,7 +241,10 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Format: yyyy-mm-dd hh:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-01 00:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -247,7 +253,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * InvoiceIssuers.
+         * <p>List of invoice issuers.</p>
          */
         public Builder invoiceIssuers(java.util.List<String> invoiceIssuers) {
             String invoiceIssuersShrink = shrink(invoiceIssuers, "InvoiceIssuers", "json");
@@ -257,7 +263,10 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -266,7 +275,10 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -275,7 +287,10 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Format: yyyy-mm-dd hh:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -284,7 +299,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>List of invoice candidate statuses.</p>
          */
         public Builder status(java.util.List<Integer> status) {
             String statusShrink = shrink(status, "Status", "json");
@@ -294,7 +309,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>List of invoice candidate types.</p>
          */
         public Builder types(java.util.List<Integer> types) {
             String typesShrink = shrink(types, "Types", "json");
@@ -363,7 +378,7 @@ public class ListInvoiceCandidateRequest extends Request {
             } 
 
             /**
-             * AccountIds.
+             * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -371,7 +386,10 @@ public class ListInvoiceCandidateRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>Enterprise entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

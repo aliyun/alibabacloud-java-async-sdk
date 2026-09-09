@@ -210,7 +210,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         } 
 
         /**
-         * Ecid.
+         * <p>The enterprise entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2032123221</p>
          */
         public Builder ecid(String ecid) {
             this.ecid = ecid;
@@ -218,7 +221,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * EcidAllocatedCreditAmount.
+         * <p>The allocated credit limit of the enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder ecidAllocatedCreditAmount(String ecidAllocatedCreditAmount) {
             this.ecidAllocatedCreditAmount = ecidAllocatedCreditAmount;
@@ -226,7 +232,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * EcidCreditAmount.
+         * <p>The enterprise credit quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder ecidCreditAmount(String ecidCreditAmount) {
             this.ecidCreditAmount = ecidCreditAmount;
@@ -234,7 +243,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * FundAccountEcid.
+         * <p>The account ECID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202321232</p>
          */
         public Builder fundAccountEcid(String fundAccountEcid) {
             this.fundAccountEcid = fundAccountEcid;
@@ -242,7 +254,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * FundAccountId.
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12332112</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.fundAccountId = fundAccountId;
@@ -250,7 +265,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * FundAccountName.
+         * <p>The account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云某的名称</p>
          */
         public Builder fundAccountName(String fundAccountName) {
             this.fundAccountName = fundAccountName;
@@ -258,7 +276,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * FundAccountOwnerAccountId.
+         * <p>The Alibaba Cloud account ID of the account owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123433121</p>
          */
         public Builder fundAccountOwnerAccountId(Long fundAccountOwnerAccountId) {
             this.fundAccountOwnerAccountId = fundAccountOwnerAccountId;
@@ -266,7 +287,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * MaxCanAllocateCreditAmount.
+         * <p>The maximum allocatable credit limit of the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         public Builder maxCanAllocateCreditAmount(String maxCanAllocateCreditAmount) {
             this.maxCanAllocateCreditAmount = maxCanAllocateCreditAmount;
@@ -274,7 +298,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * Metadata.
+         * <p>Response structure metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -282,7 +309,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * MinCanAllocateCreditAmount.
+         * <p>The minimum allocatable credit limit of the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder minCanAllocateCreditAmount(String minCanAllocateCreditAmount) {
             this.minCanAllocateCreditAmount = minCanAllocateCreditAmount;
@@ -290,7 +320,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * Nbid.
+         * <p>The primary marketplace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684210001</p>
          */
         public Builder nbid(String nbid) {
             this.nbid = nbid;
@@ -298,7 +331,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC706AAC-75A6-55B5-9AB7-7D171C6C7655</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +342,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         }
 
         /**
-         * Site.
+         * <p>The site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder site(String site) {
             this.site = site;

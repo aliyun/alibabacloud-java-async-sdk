@@ -101,7 +101,10 @@ public class ModifyCostCenterRuleRequest extends Request {
         } 
 
         /**
-         * CostCenterId.
+         * <p>Financial unit ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>485938</p>
          */
         public Builder costCenterId(Long costCenterId) {
             this.putBodyParameter("CostCenterId", costCenterId);
@@ -110,7 +113,7 @@ public class ModifyCostCenterRuleRequest extends Request {
         }
 
         /**
-         * FilterExpression.
+         * <p>Rule expression</p>
          */
         public Builder filterExpression(FilterExpression filterExpression) {
             String filterExpressionShrink = shrink(filterExpression, "FilterExpression", "json");
@@ -120,7 +123,10 @@ public class ModifyCostCenterRuleRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -129,7 +135,10 @@ public class ModifyCostCenterRuleRequest extends Request {
         }
 
         /**
-         * OwnerAccountId.
+         * <p>Owner of the financial unit (deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567812345678</p>
          */
         public Builder ownerAccountId(Long ownerAccountId) {
             this.putBodyParameter("OwnerAccountId", ownerAccountId);
@@ -223,7 +232,10 @@ public class ModifyCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>Condition filter key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TAG-test-xxx-key</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -231,7 +243,10 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * CodeName.
+             * <p>Condition filter key name (deprecated)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder codeName(String codeName) {
                 this.codeName = codeName;
@@ -239,7 +254,10 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * SelectType.
+             * <p>Association between code and value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -247,7 +265,7 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>Condition filter value list</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -353,7 +371,10 @@ public class ModifyCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * ExpressionType.
+             * <p>Operation type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NARY</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -361,7 +382,7 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * FilterValues.
+             * <p>Sub-condition filter</p>
              */
             public Builder filterValues(FilterValues filterValues) {
                 this.filterValues = filterValues;
@@ -369,7 +390,10 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * Operand.
+             * <p>Filter condition (deprecated)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder operand(Object operand) {
                 this.operand = operand;
@@ -377,7 +401,7 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * Operands.
+             * <p>Condition expression</p>
              */
             public Builder operands(java.util.List<?> operands) {
                 this.operands = operands;
@@ -385,7 +409,10 @@ public class ModifyCostCenterRuleRequest extends Request {
             }
 
             /**
-             * OperatorType.
+             * <p>Relational expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;

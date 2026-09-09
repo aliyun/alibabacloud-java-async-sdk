@@ -59,7 +59,10 @@ public class GetFundAccountLowAvailableAmountAlarmRequest extends Request {
         } 
 
         /**
-         * FundAccountId.
+         * <p>Fund account ID. If not specified, the account ID owned by the current account is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12332112</p>
          */
         public Builder fundAccountId(Long fundAccountId) {
             this.putBodyParameter("FundAccountId", fundAccountId);

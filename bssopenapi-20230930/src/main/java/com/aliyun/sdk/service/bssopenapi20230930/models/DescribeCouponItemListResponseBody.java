@@ -106,7 +106,10 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vm</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -212,7 +227,10 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云服务器ECS</p>
              */
             public Builder name(String name) {
                 this.name = name;

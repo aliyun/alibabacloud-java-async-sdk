@@ -80,7 +80,10 @@ public class SetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -88,7 +91,10 @@ public class SetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         }
 
         /**
-         * Metadata.
+         * <p>The response metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(Object metadata) {
             this.metadata = metadata;
@@ -96,7 +102,10 @@ public class SetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08108BF5-1AA3-518E-9986-95A3616E8DA9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

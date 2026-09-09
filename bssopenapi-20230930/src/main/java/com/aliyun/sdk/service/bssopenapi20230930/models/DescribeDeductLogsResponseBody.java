@@ -106,7 +106,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -212,7 +227,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云服务器ECS-快照</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -279,7 +297,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Storage</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -287,7 +308,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>零折使用容量</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,7 +378,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>absolute</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -362,7 +389,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>总量恒定型</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -429,7 +459,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ossbag</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -437,7 +470,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>对象存储OSS资源包(包月)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -504,7 +540,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The commitment cycle code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -512,7 +551,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The commitment cycle name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>小时</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -579,7 +621,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -587,7 +632,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>对象存储</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -654,7 +702,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_ossbag********</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -662,7 +713,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标准存储包</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1288,7 +1342,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1929817951466001</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -1296,7 +1353,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icloudtest</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1304,7 +1364,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCommodity.
+             * <p>The deducted commodity.</p>
              */
             public Builder billingCommodity(BillingCommodity billingCommodity) {
                 this.billingCommodity = billingCommodity;
@@ -1312,7 +1372,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCommodityCode.
+             * <p>The deducted commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot</p>
              */
             public Builder billingCommodityCode(String billingCommodityCode) {
                 this.billingCommodityCode = billingCommodityCode;
@@ -1320,7 +1383,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCommodityName.
+             * <p>The deducted commodity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云服务器ECS-快照</p>
              */
             public Builder billingCommodityName(String billingCommodityName) {
                 this.billingCommodityName = billingCommodityName;
@@ -1328,7 +1394,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingEndTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679036400000</p>
              */
             public Builder billingEndTime(Long billingEndTime) {
                 this.billingEndTime = billingEndTime;
@@ -1336,7 +1405,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingInstanceId.
+             * <p>The deduction instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder billingInstanceId(String billingInstanceId) {
                 this.billingInstanceId = billingInstanceId;
@@ -1344,7 +1416,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingPriceField.
+             * <p>The deduction billable item.</p>
              */
             public Builder billingPriceField(BillingPriceField billingPriceField) {
                 this.billingPriceField = billingPriceField;
@@ -1352,7 +1424,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingPriceFieldCode.
+             * <p>The deduction billable item code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Storage</p>
              */
             public Builder billingPriceFieldCode(String billingPriceFieldCode) {
                 this.billingPriceFieldCode = billingPriceFieldCode;
@@ -1360,7 +1435,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingPriceFieldName.
+             * <p>The deduction billable item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>零折使用容量</p>
              */
             public Builder billingPriceFieldName(String billingPriceFieldName) {
                 this.billingPriceFieldName = billingPriceFieldName;
@@ -1368,7 +1446,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingStartTime.
+             * <p>The effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679032800000</p>
              */
             public Builder billingStartTime(Long billingStartTime) {
                 this.billingStartTime = billingStartTime;
@@ -1376,7 +1457,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityAfterDeductViewUnit.
+             * <p>The display unit of the capacity after deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder capacityAfterDeductViewUnit(String capacityAfterDeductViewUnit) {
                 this.capacityAfterDeductViewUnit = capacityAfterDeductViewUnit;
@@ -1384,7 +1468,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityAfterDeductViewValue.
+             * <p>The display value of the capacity after deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23.896484</p>
              */
             public Builder capacityAfterDeductViewValue(String capacityAfterDeductViewValue) {
                 this.capacityAfterDeductViewValue = capacityAfterDeductViewValue;
@@ -1392,7 +1479,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityBeforeDeductViewUnit.
+             * <p>The display unit of the capacity before deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder capacityBeforeDeductViewUnit(String capacityBeforeDeductViewUnit) {
                 this.capacityBeforeDeductViewUnit = capacityBeforeDeductViewUnit;
@@ -1400,7 +1490,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityBeforeDeductViewValue.
+             * <p>The display value of the capacity before deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.000000</p>
              */
             public Builder capacityBeforeDeductViewValue(String capacityBeforeDeductViewValue) {
                 this.capacityBeforeDeductViewValue = capacityBeforeDeductViewValue;
@@ -1408,7 +1501,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityDeductedViewUnit.
+             * <p>The display unit of the deducted capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder capacityDeductedViewUnit(String capacityDeductedViewUnit) {
                 this.capacityDeductedViewUnit = capacityDeductedViewUnit;
@@ -1416,7 +1512,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityDeductedViewValue.
+             * <p>The display value of the deducted capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.103515</p>
              */
             public Builder capacityDeductedViewValue(String capacityDeductedViewValue) {
                 this.capacityDeductedViewValue = capacityDeductedViewValue;
@@ -1424,7 +1523,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityType.
+             * <p>The capacity type.</p>
              */
             public Builder capacityType(CapacityType capacityType) {
                 this.capacityType = capacityType;
@@ -1432,7 +1531,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityTypeCode.
+             * <p>The capacity type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>absolute</p>
              */
             public Builder capacityTypeCode(String capacityTypeCode) {
                 this.capacityTypeCode = capacityTypeCode;
@@ -1440,7 +1542,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityTypeName.
+             * <p>The capacity type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>总量恒定型</p>
              */
             public Builder capacityTypeName(String capacityTypeName) {
                 this.capacityTypeName = capacityTypeName;
@@ -1448,7 +1553,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Commodity.
+             * <p>The commodity.</p>
              */
             public Builder commodity(Commodity commodity) {
                 this.commodity = commodity;
@@ -1456,7 +1561,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ossbag</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -1464,7 +1572,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * <p>The commodity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>对象存储OSS资源包(包月)</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -1472,7 +1583,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * <p>The commitment cycle.</p>
              */
             public Builder cycleType(CycleType cycleType) {
                 this.cycleType = cycleType;
@@ -1480,7 +1591,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTypeCode.
+             * <p>The commitment cycle code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder cycleTypeCode(String cycleTypeCode) {
                 this.cycleTypeCode = cycleTypeCode;
@@ -1488,7 +1602,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTypeName.
+             * <p>The commitment cycle name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>小时</p>
              */
             public Builder cycleTypeName(String cycleTypeName) {
                 this.cycleTypeName = cycleTypeName;
@@ -1496,7 +1613,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DeductTime.
+             * <p>The deduction time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679039572000</p>
              */
             public Builder deductTime(Long deductTime) {
                 this.deductTime = deductTime;
@@ -1504,7 +1624,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Factor.
+             * <p>The deduction factor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder factor(String factor) {
                 this.factor = factor;
@@ -1512,7 +1635,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBelongAccountId.
+             * <p>The ID of the account to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder instanceBelongAccountId(Long instanceBelongAccountId) {
                 this.instanceBelongAccountId = instanceBelongAccountId;
@@ -1520,7 +1646,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBelongAccountName.
+             * <p>The name of the account to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icloudtest</p>
              */
             public Builder instanceBelongAccountName(String instanceBelongAccountName) {
                 this.instanceBelongAccountName = instanceBelongAccountName;
@@ -1528,7 +1657,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-****s</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1536,7 +1668,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureAfterDeductViewUnit.
+             * <p>The display unit of the metering amount after deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Byte</p>
              */
             public Builder measureAfterDeductViewUnit(String measureAfterDeductViewUnit) {
                 this.measureAfterDeductViewUnit = measureAfterDeductViewUnit;
@@ -1544,7 +1679,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureAfterDeductViewValue.
+             * <p>The display value of the metering amount after deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder measureAfterDeductViewValue(String measureAfterDeductViewValue) {
                 this.measureAfterDeductViewValue = measureAfterDeductViewValue;
@@ -1552,7 +1690,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureBeforeDeductViewUnit.
+             * <p>The display unit of the metering amount before deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder measureBeforeDeductViewUnit(String measureBeforeDeductViewUnit) {
                 this.measureBeforeDeductViewUnit = measureBeforeDeductViewUnit;
@@ -1560,7 +1701,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureBeforeDeductViewValue.
+             * <p>The display value of the metering amount before deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.103515</p>
              */
             public Builder measureBeforeDeductViewValue(String measureBeforeDeductViewValue) {
                 this.measureBeforeDeductViewValue = measureBeforeDeductViewValue;
@@ -1568,7 +1712,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureDeductedViewUnit.
+             * <p>The display unit of the deducted metering amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder measureDeductedViewUnit(String measureDeductedViewUnit) {
                 this.measureDeductedViewUnit = measureDeductedViewUnit;
@@ -1576,7 +1723,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureDeductedViewValue.
+             * <p>The display value of the deducted metering amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.103515</p>
              */
             public Builder measureDeductedViewValue(String measureDeductedViewValue) {
                 this.measureDeductedViewValue = measureDeductedViewValue;
@@ -1584,7 +1734,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * <p>The product.</p>
              */
             public Builder product(Product product) {
                 this.product = product;
@@ -1592,7 +1742,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1600,7 +1753,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>对象存储</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1608,7 +1764,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RelationAccountId.
+             * <p>The deduction account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1990699401005016</p>
              */
             public Builder relationAccountId(Long relationAccountId) {
                 this.relationAccountId = relationAccountId;
@@ -1616,7 +1775,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RelationAccountName.
+             * <p>The deduction account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icloudtest</p>
              */
             public Builder relationAccountName(String relationAccountName) {
                 this.relationAccountName = relationAccountName;
@@ -1624,7 +1786,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The template.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -1632,7 +1794,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_ossbag********</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -1640,7 +1805,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标准存储包</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

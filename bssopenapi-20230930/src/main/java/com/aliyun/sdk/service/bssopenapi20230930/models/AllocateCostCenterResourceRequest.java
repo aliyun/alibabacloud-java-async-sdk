@@ -116,7 +116,14 @@ public class AllocateCostCenterResourceRequest extends Request {
         } 
 
         /**
-         * FromCostCenterId.
+         * <p>The ID of the source cost center. This parameter is required.</p>
+         * <ul>
+         * <li>0 indicates that the cost center is unallocated.</li>
+         * <li>A value greater than 0 indicates an allocated cost center ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>637180</p>
          */
         public Builder fromCostCenterId(Long fromCostCenterId) {
             this.putBodyParameter("FromCostCenterId", fromCostCenterId);
@@ -125,7 +132,10 @@ public class AllocateCostCenterResourceRequest extends Request {
         }
 
         /**
-         * FromOwnerAccountId.
+         * <p>The ID of the owner of the source cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529600453335198</p>
          */
         public Builder fromOwnerAccountId(Long fromOwnerAccountId) {
             this.putBodyParameter("FromOwnerAccountId", fromOwnerAccountId);
@@ -134,7 +144,10 @@ public class AllocateCostCenterResourceRequest extends Request {
         }
 
         /**
-         * Nbid.
+         * <p>The primary sales channel ID. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2684201000001</p>
          */
         public Builder nbid(String nbid) {
             this.putQueryParameter("Nbid", nbid);
@@ -143,6 +156,7 @@ public class AllocateCostCenterResourceRequest extends Request {
         }
 
         /**
+         * <p>The list of resource instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceInstanceList(java.util.List<ResourceInstanceList> resourceInstanceList) {
@@ -153,7 +167,14 @@ public class AllocateCostCenterResourceRequest extends Request {
         }
 
         /**
-         * ToCostCenterId.
+         * <p>The ID of the destination cost center. Valid values:</p>
+         * <ul>
+         * <li>-1: moves the allocated resource to the unallocated state.</li>
+         * <li>A value greater than 0: allocates the resource to the specified cost center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>638288</p>
          */
         public Builder toCostCenterId(Long toCostCenterId) {
             this.putBodyParameter("ToCostCenterId", toCostCenterId);
@@ -403,7 +424,14 @@ public class AllocateCostCenterResourceRequest extends Request {
             } 
 
             /**
-             * ApportionCode.
+             * <p>The attached resource type of the attached-resource instance. This parameter is required only for attached-resource product instances.</p>
+             * <ul>
+             * <li>Currently, eight commodities support attached resources. The commodity codes are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</li>
+             * <li>You can call the QueryCostUnitResource operation to obtain all billing instances (including attached-resource instances with their attached resources) under a specific cost center (including the unallocated cost center) of a user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>qwer1-cn-beijing</p>
              */
             public Builder apportionCode(String apportionCode) {
                 this.apportionCode = apportionCode;
@@ -411,7 +439,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ApportionName.
+             * <p>The attached resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>split-item-test1</p>
              */
             public Builder apportionName(String apportionName) {
                 this.apportionName = apportionName;
@@ -419,7 +450,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code of the billing instance. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -427,7 +461,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * CommodityName.
+             * <p>The commodity name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RESOURCE_UDR</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -435,7 +472,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The billing granularity ID. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou;standard</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -443,7 +483,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * PipCode.
+             * <p>The product code, which is the same as the product code in User Center bills.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -451,7 +494,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * RelatedResources.
+             * <p>The resources related to the resource instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>related-resource</p>
              */
             public Builder relatedResources(String relatedResources) {
                 this.relatedResources = relatedResources;
@@ -459,7 +505,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xihe_mpp</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -467,7 +516,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou;standard:app</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -475,7 +527,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceNick.
+             * <p>The custom nickname of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-test-1</p>
              */
             public Builder resourceNick(String resourceNick) {
                 this.resourceNick = resourceNick;
@@ -483,7 +538,14 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceSource.
+             * <p>The resource source. Valid values:</p>
+             * <ul>
+             * <li>AUTO_ALLOCATE: automatic allocation.</li>
+             * <li>MANUAL_ALLOCATE: manual allocation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO_ALLOCATE</p>
              */
             public Builder resourceSource(String resourceSource) {
                 this.resourceSource = resourceSource;
@@ -491,7 +553,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceStatus.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -499,7 +564,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceTag.
+             * <p>The tag of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-test1</p>
              */
             public Builder resourceTag(String resourceTag) {
                 this.resourceTag = resourceTag;
@@ -507,7 +575,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCU</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -515,7 +586,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceUserId.
+             * <p>The ID of the owner of the billing instance. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>273394581313325532</p>
              */
             public Builder resourceUserId(Long resourceUserId) {
                 this.resourceUserId = resourceUserId;
@@ -523,7 +597,10 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * ResourceUserName.
+             * <p>The resource ownership username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceUserName(String resourceUserName) {
                 this.resourceUserName = resourceUserName;
